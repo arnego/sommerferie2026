@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sommerferie 2026 – Demo</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --sand: #f5efe6;
+    --cream: #fdf8f2;
+    --terracotta: #c9623f;
+    --olive: #6b7c52;
+    --navy: #1e2d40;
+    --gold: #d4a843;
+    --muted: #8a7f74;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--navy);
+    min-height: 100vh;
+  }
+
+  /* HEADER */
+  .hero {
+    background: var(--navy);
+    color: white;
+    padding: 60px 24px 48px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -80px; right: -80px;
+    width: 320px; height: 320px;
+    background: radial-gradient(circle, rgba(212,168,67,0.18) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -60px; left: -40px;
+    width: 240px; height: 240px;
+    background: radial-gradient(circle, rgba(201,98,63,0.14) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .hero-inner {
+    max-width: 720px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+  .hero-tag {
+    display: inline-block;
+    background: var(--terracotta);
+    color: white;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border-radius: 2px;
+    margin-bottom: 20px;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 6vw, 3.4rem);
+    line-height: 1.15;
+    margin-bottom: 14px;
+  }
+  .hero h1 span { color: var(--gold); }
+  .hero-sub {
+    font-size: 15px;
+    color: rgba(255,255,255,0.65);
+    font-weight: 300;
+    letter-spacing: 0.3px;
+  }
+
+  /* STATS BAR */
+  .stats {
+    background: var(--terracotta);
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    flex-wrap: wrap;
+  }
+  .stat {
+    padding: 18px 32px;
+    text-align: center;
+    color: white;
+    border-right: 1px solid rgba(255,255,255,0.2);
+    flex: 1;
+    min-width: 100px;
+  }
+  .stat:last-child { border-right: none; }
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    display: block;
+    line-height: 1;
+  }
+  .stat-lbl {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    opacity: 0.8;
+    margin-top: 4px;
+    display: block;
+  }
+
+  /* MAIN CONTENT */
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: var(--navy);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(0,0,0,0.1);
+  }
+
+  /* ROUTE MAP (visual) */
+  .route-visual {
+    background: var(--sand);
+    border-radius: 12px;
+    padding: 28px 24px;
+    margin-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+  }
+  .route-visual::before {
+    content: '🗺';
+    position: absolute;
+    right: 20px; top: 16px;
+    font-size: 2rem;
+    opacity: 0.15;
+  }
+  .route-stops {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    flex-wrap: wrap;
+    row-gap: 12px;
+  }
+  .stop {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--navy);
+  }
+  .stop-dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: var(--terracotta);
+    flex-shrink: 0;
+  }
+  .stop-dot.home { background: var(--olive); }
+  .stop-dot.end  { background: var(--gold); }
+  .stop-arrow {
+    color: var(--muted);
+    font-size: 12px;
+    padding: 0 4px;
+  }
+
+  /* WEEK CARDS */
+  .weeks { display: flex; flex-direction: column; gap: 16px; margin-bottom: 40px; }
+
+  .week-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.07);
+    transition: box-shadow 0.2s;
+    cursor: pointer;
+  }
+  .week-card:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.09); }
+
+  .week-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 22px;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+  }
+  .week-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: var(--terracotta);
+    line-height: 1;
+    min-width: 40px;
+  }
+  .week-info h3 {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 2px;
+  }
+  .week-info p {
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .week-flag {
+    margin-left: auto;
+    font-size: 1.6rem;
+  }
+  .week-body {
+    padding: 16px 22px;
+    display: none;
+  }
+  .week-body.open { display: block; }
+  .week-body p {
+    font-size: 13.5px;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 12px;
+  }
+  .highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .tag {
+    background: var(--sand);
+    color: var(--navy);
+    font-size: 11px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-weight: 500;
+  }
+  .tag.green { background: #e8f0e0; color: var(--olive); }
+  .tag.blue  { background: #e0e9f5; color: #2a5298; }
+
+  /* CHECKLIST */
+  .checklist {
+    background: white;
+    border-radius: 12px;
+    border: 1px solid rgba(0,0,0,0.07);
+    overflow: hidden;
+    margin-bottom: 40px;
+  }
+  .check-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 22px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    font-size: 13.5px;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .check-item:last-child { border-bottom: none; }
+  .check-item:hover { background: var(--sand); }
+  .check-item input[type="checkbox"] {
+    width: 17px; height: 17px;
+    accent-color: var(--terracotta);
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+  .check-item.done span {
+    text-decoration: line-through;
+    color: var(--muted);
+  }
+  .check-cat {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--muted);
+    margin-left: auto;
+  }
+
+  /* BUDGET */
+  .budget-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 40px;
+  }
+  @media (max-width: 480px) { .budget-grid { grid-template-columns: 1fr; } }
+  .budget-item {
+    background: white;
+    border-radius: 10px;
+    padding: 18px 20px;
+    border: 1px solid rgba(0,0,0,0.07);
+  }
+  .budget-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+  .budget-amount {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    color: var(--navy);
+  }
+  .budget-amount span { font-size: 0.85rem; color: var(--muted); font-family: 'DM Sans', sans-serif; }
+  .budget-bar {
+    margin-top: 8px;
+    height: 4px;
+    background: var(--sand);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  .budget-fill {
+    height: 100%;
+    background: var(--terracotta);
+    border-radius: 2px;
+    transition: width 1s ease;
+  }
+
+  /* NOTE BOX */
+  .note-box {
+    background: linear-gradient(135deg, var(--olive) 0%, #4a5c38 100%);
+    border-radius: 12px;
+    padding: 24px 28px;
+    color: white;
+  }
+  .note-box h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+  .note-box p {
+    font-size: 13px;
+    opacity: 0.85;
+    line-height: 1.7;
+  }
+  .note-box textarea {
+    width: 100%;
+    margin-top: 14px;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 8px;
+    padding: 12px;
+    color: white;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    resize: vertical;
+    min-height: 80px;
+    outline: none;
+  }
+  .note-box textarea::placeholder { color: rgba(255,255,255,0.45); }
+
+  /* FOOTER */
+  footer {
+    text-align: center;
+    padding: 24px;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.5px;
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .hero-inner, .stats, .container > * {
+    animation: fadeUp 0.5s ease both;
+  }
+  .stats { animation-delay: 0.1s; }
+  .container > *:nth-child(1) { animation-delay: 0.15s; }
+  .container > *:nth-child(2) { animation-delay: 0.2s; }
+  .container > *:nth-child(3) { animation-delay: 0.25s; }
+  .container > *:nth-child(4) { animation-delay: 0.3s; }
+  .container > *:nth-child(5) { animation-delay: 0.35s; }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-tag">Demo · Sommerferie 2026</div>
+    <h1>Fra <span>Kongsberg</span><br>til Alpene og tilbake</h1>
+    <p class="hero-sub">4 uker · Campingvogn · 2 voksne + 1 barn · Juli 2026</p>
+  </div>
+</div>
+
+<div class="stats">
+  <div class="stat"><span class="stat-num">4</span><span class="stat-lbl">Uker</span></div>
+  <div class="stat"><span class="stat-num">6</span><span class="stat-lbl">Land</span></div>
+  <div class="stat"><span class="stat-num">~4 200</span><span class="stat-lbl">Km total</span></div>
+  <div class="stat"><span class="stat-num">12+</span><span class="stat-lbl">Stopp</span></div>
+</div>
+
+<div class="container">
+
+  <!-- ROUTE -->
+  <div class="section-title">Ruten</div>
+  <div class="route-visual">
+    <div class="route-stops">
+      <div class="stop"><div class="stop-dot home"></div>Kongsberg</div>
+      <span class="stop-arrow">→</span>
+      <div class="stop"><div class="stop-dot"></div>Göteborg</div>
+      <span class="stop-arrow">→</span>
+      <div class="stop"><div class="stop-dot"></div>København</div>
+      <span class="stop-arrow">→</span>
+      <div class="stop"><div class="stop-dot"></div>Hamburg</div>
+      <span class="stop-arrow">→</span>
+      <div class="stop"><div class="stop-dot"></div>Amsterdam</div>
+      <span class="stop-arrow">→</span>
+      <div class="stop"><div class="stop-dot"></div>Schwarzwald</div>
+      <span class="stop-arrow">→</span>
+      <div class="stop"><div class="stop-dot end"></div>Østerrike / Alpene</div>
+    </div>
+  </div>
+
+  <!-- WEEKS -->
+  <div class="section-title">Ukeoversikt</div>
+  <div class="weeks">
+
+    <div class="week-card" onclick="toggleWeek(this)">
+      <div class="week-header">
+        <div class="week-num">1</div>
+        <div class="week-info">
+          <h3>Kongsberg → København</h3>
+          <p>1.–7. juli · Via Göteborg og Malmö</p>
+        </div>
+        <div class="week-flag">🇩🇰</div>
+      </div>
+      <div class="week-body">
+        <p>Avreise tidlig morgen fra Kongsberg. Kjør via E18 til Göteborg – stopp for lunsj og lek i byen. Fortsett over Øresundbroen til København. 2–3 netter i nærheten av Køge eller Roskilde.</p>
+        <div class="highlights">
+          <span class="tag">🎡 Tivoli</span>
+          <span class="tag green">🌳 Roskilde vikingskip</span>
+          <span class="tag blue">🏊 Strand ved Køge</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="week-card" onclick="toggleWeek(this)">
+      <div class="week-header">
+        <div class="week-num">2</div>
+        <div class="week-info">
+          <h3>Nord-Tyskland</h3>
+          <p>8.–14. juli · Hamburg og omegn</p>
+        </div>
+        <div class="week-flag">🇩🇪</div>
+      </div>
+      <div class="week-body">
+        <p>Kjør sørover gjennom Jylland og inn i Nord-Tyskland. Hamburg er et fantastisk stopp for barnefamilier – Miniatur Wunderland er et must! Campe i nærheten av Lüneburg eller Elbe.</p>
+        <div class="highlights">
+          <span class="tag">🚂 Miniatur Wunderland</span>
+          <span class="tag green">🌊 Elbestranden</span>
+          <span class="tag blue">⛵ Havnen i Hamburg</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="week-card" onclick="toggleWeek(this)">
+      <div class="week-header">
+        <div class="week-num">3</div>
+        <div class="week-info">
+          <h3>Nederland + Schwarzwald</h3>
+          <p>15.–21. juli · Amsterdam og Freiburg</p>
+        </div>
+        <div class="week-flag">🇳🇱🇩🇪</div>
+      </div>
+      <div class="week-body">
+        <p>Fra Hamburg ned gjennom Nederland – stop i Amsterdam 1–2 netter. Videre sørøstover inn i Schwarzwald. Kjør Schwarzwald Hochstrasse – en av Europas flotteste veier for campingvogn.</p>
+        <div class="highlights">
+          <span class="tag">🌷 Keukenhof (om åpent)</span>
+          <span class="tag green">🌲 Schwarzwald skoger</span>
+          <span class="tag">🧇 Ekte Schwarzwälder Kirschtorte</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="week-card" onclick="toggleWeek(this)">
+      <div class="week-header">
+        <div class="week-num">4</div>
+        <div class="week-info">
+          <h3>Østerrike / Alpene → Hjem</h3>
+          <p>22.–31. juli · Tirol og hjemreise</p>
+        </div>
+        <div class="week-flag">🇦🇹</div>
+      </div>
+      <div class="week-body">
+        <p>Krysser inn i Østerrike via Bregenzerwald. Campe i Tirol – Innsbruck er perfekt for barnefamilier. Badevann i alpesøer. Hjemreise via München og Danmark. Planlegg 2 kjøredager hjem.</p>
+        <div class="highlights">
+          <span class="tag green">🏔 Alpesøer og bading</span>
+          <span class="tag">🎢 Swarovski Kristallwelten</span>
+          <span class="tag blue">🚡 Nordkettenbahn, Innsbruck</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- CHECKLIST -->
+  <div class="section-title">Huskeliste</div>
+  <div class="checklist">
+    <label class="check-item"><input type="checkbox"> <span>Bestill ferge eller planlegg rute via Øresundbroen</span> <span class="check-cat">Booking</span></label>
+    <label class="check-item"><input type="checkbox"> <span>Sjekk campingpass / ACSI-kort</span> <span class="check-cat">Booking</span></label>
+    <label class="check-item"><input type="checkbox"> <span>Europeisk helsetrygdkort (EHIC)</span> <span class="check-cat">Helse</span></label>
+    <label class="check-item"><input type="checkbox"> <span>Vignetter: Østerrike (obligatorisk for campingvogn)</span> <span class="check-cat">Kjøring</span></label>
+    <label class="check-item"><input type="checkbox"> <span>Servicer campingvognen før avreise</span> <span class="check-cat">Vogn</span></label>
+    <label class="check-item"><input type="checkbox"> <span>Last ned offline-kart (Maps.me / OsmAnd)</span> <span class="check-cat">Navigasjon</span></label>
+    <label class="check-item"><input type="checkbox"> <span>Reiseforsikring med campingutstyr</span> <span class="check-cat">Forsikring</span></label>
+  </div>
+
+  <!-- BUDGET -->
+  <div class="section-title">Grovbudsjett</div>
+  <div class="budget-grid">
+    <div class="budget-item">
+      <div class="budget-label">Camping / overnatting</div>
+      <div class="budget-amount">12 000 <span>kr</span></div>
+      <div class="budget-bar"><div class="budget-fill" style="width:45%"></div></div>
+    </div>
+    <div class="budget-item">
+      <div class="budget-label">Drivstoff</div>
+      <div class="budget-amount">9 000 <span>kr</span></div>
+      <div class="budget-bar"><div class="budget-fill" style="width:34%"></div></div>
+    </div>
+    <div class="budget-item">
+      <div class="budget-label">Mat og dagligvarer</div>
+      <div class="budget-amount">8 000 <span>kr</span></div>
+      <div class="budget-bar"><div class="budget-fill" style="width:30%"></div></div>
+    </div>
+    <div class="budget-item">
+      <div class="budget-label">Opplevelser / innganger</div>
+      <div class="budget-amount">6 000 <span>kr</span></div>
+      <div class="budget-bar"><div class="budget-fill" style="width:23%"></div></div>
+    </div>
+  </div>
+
+  <!-- NOTES -->
+  <div class="note-box">
+    <h3>📝 Notater & nye ideer</h3>
+    <p>Skriv ned ideer og endringer her. Disse lagres mens siden er åpen.</p>
+    <textarea placeholder="F.eks: Husk å sjekke åpningstider for Tivoli · Vi vil gjerne stoppe i Lübeck · ..."></textarea>
+  </div>
+
+</div>
+
+<footer>Sommerferie 2026 · Laget med Claude · Demo-versjon</footer>
+
+<script>
+  function toggleWeek(card) {
+    const body = card.querySelector('.week-body');
+    body.classList.toggle('open');
+  }
+
+  // Animate budget bars on load
+  window.addEventListener('load', () => {
+    document.querySelectorAll('.check-item input').forEach(cb => {
+      cb.addEventListener('change', function() {
+        this.closest('.check-item').classList.toggle('done', this.checked);
+      });
+    });
+  });
+</script>
+</body>
+</html>
