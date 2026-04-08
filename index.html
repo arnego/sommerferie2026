@@ -176,6 +176,7 @@
   .stop-dot.home { background: var(--olive); }
   .stop-dot.end  { background: var(--gold); }
   .stop-dot.special { background: #7b2d8b; }
+  .stop-dot.beach { background: #2a8fbf; }
   .stop-arrow {
     color: var(--muted);
     font-size: 12px;
@@ -255,6 +256,7 @@
   .tag.green { background: #e8f0e0; color: var(--olive); }
   .tag.blue  { background: #e0e9f5; color: #2a5298; }
   .tag.purple { background: #f0e5f5; color: #7b2d8b; }
+  .tag.teal { background: #e0f2f5; color: #1a7a8a; }
 
   /* SUB-STOP CARD */
   .sub-stop {
@@ -263,6 +265,9 @@
     padding: 16px 18px;
     margin: 14px 0;
     border-left: 3px solid #7b2d8b;
+  }
+  .sub-stop.beach-stop {
+    border-left: 3px solid #2a8fbf;
   }
   .sub-stop-header {
     display: flex;
@@ -308,6 +313,9 @@
     left: 4px;
     color: #7b2d8b;
     font-weight: 700;
+  }
+  .beach-stop .tip-list li::before {
+    color: #2a8fbf;
   }
 
   /* CHECKLIST */
@@ -472,6 +480,8 @@
     <div class="route-stops">
       <div class="stop"><div class="stop-dot home"></div>Kongsberg</div>
       <span class="stop-arrow">→</span>
+      <div class="stop"><div class="stop-dot beach"></div>Løkken Strand</div>
+      <span class="stop-arrow">→</span>
       <div class="stop"><div class="stop-dot"></div>Göteborg</div>
       <span class="stop-arrow">→</span>
       <div class="stop"><div class="stop-dot"></div>København</div>
@@ -494,15 +504,86 @@
 
     <div class="week-card" onclick="toggleWeek(this)">
       <div class="week-header">
-        <div class="week-num">1</div>
+        <div class="week-num">28</div>
         <div class="week-info">
-          <h3>Kongsberg → København</h3>
-          <p>1.–7. juli · Via Göteborg og Malmö</p>
+          <h3>Løkken Strand – Første stopp</h3>
+          <p>6.–10. juli · 4 netter ved Vesterhavet, Danmark</p>
         </div>
         <div class="week-flag">🇩🇰</div>
       </div>
       <div class="week-body">
-        <p>Avreise tidlig morgen fra Kongsberg. Kjør via E18 til Göteborg – stopp for lunsj og lek i byen. Fortsett over Øresundbroen til København. 2–3 netter i nærheten av Køge eller Roskilde.</p>
+        <p>Avreise fra Kongsberg mandag 6. juli. Ruten går sørover gjennom Sverige og inn i Danmark via Göteborg og Frederikshavn (ferge) eller Øresundbroen, avhengig av ønsket kjørerute. Første stopp er Løkken Klit Camping og Hytteby i Løkken Strand – en populær dansk badeby ved Vesterhavet i Nordjylland.</p>
+
+        <div class="sub-stop beach-stop">
+          <div class="sub-stop-header">
+            <div class="sub-stop-icon">🏖️</div>
+            <div>
+              <div class="sub-stop-title">Løkken Klit Camping og Hytteby</div>
+              <div class="sub-stop-subtitle">Løkken Strand, Nordjylland, Danmark · 4 netter (6.–10. juli)</div>
+            </div>
+          </div>
+          <p>Løkken Klit Camping og Hytteby ligger idyllisk til ved Vesterhavet i Løkken – en av Danmarks mest sjarmerende badebyer med hvit sandstrand, klitter og tradisjonsrik kystkultur. Campingplassen er et perfekt første stopp for en barnefamilie, med strandnærhet og gode fasiliteter.</p>
+
+          <p><strong>Strand og badeliv:</strong></p>
+          <ul class="tip-list">
+            <li>Løkken har en bred, hvit sandstrand som er godt egnet for barn – grunt innløp og bølger som er fine for bading og brettleker.</li>
+            <li>Husk å sjekke flaggfargen ved badestranden – blått flagg betyr at det er trygt å bade, rødt flagg betyr badeforbud.</li>
+            <li>Vesterhavet har sterkere strøm enn Østersjøen – hold alltid øye med barna i vannet.</li>
+            <li>Ta med sandleker, solkrem og strandtelt – dagene kan bli lange og solrike i uke 28.</li>
+          </ul>
+
+          <p><strong>Løkken by:</strong></p>
+          <ul class="tip-list">
+            <li>Løkken sentrum er et trivelig lite bysamfunn med isbutikker, sjømatrestauranter og suvenirbutikker – perfekt for en kveldsspasertur.</li>
+            <li>Traktortrillene på stranden er et ikonisk syn i Løkken – de frakter fiskebåtene opp og ned fra vannet.</li>
+            <li>Løkken Vandtårn gir fin utsikt over kystlandskapet og er verdt et besøk.</li>
+          </ul>
+
+          <p><strong>Utflukter i området:</strong></p>
+          <ul class="tip-list">
+            <li><strong>Rubjerg Knude Fyr</strong> – det spektakulære vandrefyret som gradvis begraves av sanddynene, ca. 20 min nord for Løkken. Et unikt og minneverdig syn for hele familien.</li>
+            <li><strong>Fårup Sommerland</strong> – et av Danmarks beste fornøyelsesparker for barn, ca. 30 min fra Løkken. Passer perfekt for en hel familiedag.</li>
+            <li><strong>Blokhus</strong> – nærliggende badestad med bilkjøring på stranden – en populær dansk tradisjon som barna vil elske.</li>
+            <li><strong>Svinkløv Badehotel</strong> – sjarmerende historisk badehotell i vakre omgivelser, fint for en kaffepause med utsikt.</li>
+          </ul>
+
+          <p><strong>Praktiske tips:</strong></p>
+          <ul class="tip-list">
+            <li>Campingplassen er svært populær i høysesong – sørg for å ha reservasjon på plass i god tid.</li>
+            <li>Kjøretid fra Kongsberg til Løkken via Göteborg og Hirtshals er ca. 6–7 timer – plan for tidlig avreise mandag morgen.</li>
+            <li>Alternativ rute: Kongsberg → Oslo → Göteborg → Frederikshavn (ferge fra Göteborg) → Løkken.</li>
+            <li>Husk danske kroner eller Visa/Mastercard – de fleste steder i Danmark aksepterer kort, men noe småhandel krever kontanter.</li>
+            <li>Avreise fredag 10. juli – god tid til videre ferd mot Göteborg og neste stopp på ruten.</li>
+          </ul>
+
+          <div class="highlights" style="margin-top:4px;">
+            <span class="tag teal">🏖️ Vesterhavet-strand</span>
+            <span class="tag blue">🎢 Fårup Sommerland</span>
+            <span class="tag">🏔️ Rubjerg Knude Fyr</span>
+            <span class="tag teal">🚜 Traktortrille på stranden</span>
+            <span class="tag green">🌊 Blokhus – bil på stranden</span>
+          </div>
+        </div>
+
+        <div class="highlights">
+          <span class="tag teal">🏖️ 4 netter ved havet</span>
+          <span class="tag green">🇩🇰 Nordjylland, Danmark</span>
+          <span class="tag blue">🌅 Vesterhavet-solnedgang</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="week-card" onclick="toggleWeek(this)">
+      <div class="week-header">
+        <div class="week-num">1</div>
+        <div class="week-info">
+          <h3>Göteborg → København</h3>
+          <p>10.–14. juli · Via Malmö og Øresundbroen</p>
+        </div>
+        <div class="week-flag">🇩🇰</div>
+      </div>
+      <div class="week-body">
+        <p>Fra Løkken kjøres det sørover mot Göteborg for et kort stopp, deretter videre over Øresundbroen til København. 2–3 netter i nærheten av Køge eller Roskilde.</p>
         <div class="highlights">
           <span class="tag">🎡 Tivoli</span>
           <span class="tag green">🌳 Roskilde vikingskip</span>
@@ -516,7 +597,7 @@
         <div class="week-num">2</div>
         <div class="week-info">
           <h3>Nord-Tyskland</h3>
-          <p>8.–14. juli · Hamburg og omegn</p>
+          <p>15.–21. juli · Hamburg og omegn</p>
         </div>
         <div class="week-flag">🇩🇪</div>
       </div>
@@ -535,7 +616,7 @@
         <div class="week-num">3</div>
         <div class="week-info">
           <h3>Nederland + Nürburgring + Schwarzwald</h3>
-          <p>15.–21. juli · Amsterdam, Nürburg og Freiburg</p>
+          <p>22.–28. juli · Amsterdam, Nürburg og Freiburg</p>
         </div>
         <div class="week-flag">🇳🇱🇩🇪</div>
       </div>
@@ -558,85 +639,4 @@
             <li>Campingvogner og tilhengere er <em>ikke tillatt</em> på banen – koble fra vognen og parker den på campingplassen eller parkeringsområdet ved banen.</li>
             <li>Sjekk turistkjøringsdatoer nøye på forhånd – banen stenges ved motorsportarrangementer og ugunstige baneforhold.</li>
             <li>Obligatorisk: gyldig førerkort, bilen skal være forsikret og i god stand. Hjelm er ikke påkrevd, men anbefales.</li>
-            <li>Kjør defensivt og respekter banen – raskere biler overtaker til høyre. Hold til venstre om du er usikker på tempoet.</li>
-          </ul>
-
-          <p><strong>Ring°werk – museum og opplevelsessenter:</strong></p>
-          <ul class="tip-list">
-            <li>Ring°werk er Nürburgrings interaktive museum og opplevelsessenter, perfekt for hele familien.</li>
-            <li>Utforsk banens 100-årige historie gjennom utstillinger, historiske racerbiler og multimedieinstallasjoner.</li>
-            <li>Barna kan prøve racingsimulatorer og interaktive kjøreopplevelser – svært populært!</li>
-            <li>Fantastisk utsikt over banen og paddockområdet fra museets takterrasse.</li>
-            <li>Åpent hele året – ideelt om det er dårlig vær eller banen er stengt for turistkjøring akkurat den dagen.</li>
-          </ul>
-
-          <p><strong>Andre opplevelser i området:</strong></p>
-          <ul class="tip-list">
-            <li><strong>Nürburg slott</strong> – det historiske middelalderslottet tronende over landsbyen Nürburg er verdt en kort vandring opp – flott utsikt over Eifel-regionen.</li>
-            <li><strong>Laacher See</strong> – vakker vulkansjø ca. 30 min fra Nürburgring, ideell for bading, padling og piknik. Benediktinerklosteret Maria Laach ved sjøen er også imponerende.</li>
-            <li><strong>Erlebnis-Zoo Neuwied</strong> – familievennlig dyrepark ca. 45 min fra Nürburgring, med over 2 000 dyr og aktivitetsområder for barn.</li>
-            <li><strong>Eifel Nationalpark</strong> – vakker natur med fine turstier, perfekt for en aktiv familiedag i frisk luft.</li>
-          </ul>
-
-          <p><strong>Camping nær Nürburgring:</strong></p>
-          <ul class="tip-list">
-            <li><strong>Campingplatz am Nürburgring</strong> – offisiell campingplass rett ved banen, gangavstand til inngangspartiet. Tilbyr plass til campingvogn med strøm.</li>
-            <li><strong>Camping Laacher See</strong> – ca. 30 min fra Nürburgring, ved den vakre vulkansjøen Laacher See. Roligere alternativ med svømmemuligheter for familien.</li>
-            <li>Book plass i god tid om du besøker i høysesong (juli) – området er svært populært blant motorsportentusiaster fra hele Europa.</li>
-          </ul>
-
-          <p><strong>Praktiske tips:</strong></p>
-          <ul class="tip-list">
-            <li>Ankomst tidlig morgen gir kortere kø og bedre baneforhold ved turistkjøring.</li>
-            <li>Ta med egen mat og drikke – restaurantene ved banen kan ha lang kø i rushtiden.</li>
-            <li>Barn kan se på fra tribuneområdene og Brünnchen-svingen – et flott utsiktspunkt der bilene passerer nær nok til å oppleve farten på nært hold.</li>
-            <li>Kjøp gjerne en souvenir i den offisielle Nürburgring-butikken – populært blant motorsportfans i alle aldre.</li>
-            <li>Fra Amsterdam til Nürburgring er det ca. 3,5 timers kjøring – en fin dagstur med tidlig avreise.</li>
-          </ul>
-
-          <div class="highlights" style="margin-top:4px;">
-            <span class="tag purple">🏎️ Turistkjøring Nordschleife</span>
-            <span class="tag purple">🏆 Ring°werk museum</span>
-            <span class="tag green">🏰 Nürburg slott</span>
-            <span class="tag blue">🌊 Laacher See</span>
-            <span class="tag">🦁 Erlebnis-Zoo Neuwied</span>
-            <span class="tag green">🌲 Eifel Nationalpark</span>
-          </div>
-        </div>
-
-        <div class="highlights">
-          <span class="tag">🌷 Keukenhof (om åpent)</span>
-          <span class="tag green">🌲 Schwarzwald skoger</span>
-          <span class="tag">🧇 Ekte Schwarzwälder Kirschtorte</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="week-card" onclick="toggleWeek(this)">
-      <div class="week-header">
-        <div class="week-num">4</div>
-        <div class="week-info">
-          <h3>Østerrike / Alpene → Hjem</h3>
-          <p>22.–31. juli · Tirol og hjemreise</p>
-        </div>
-        <div class="week-flag">🇦🇹</div>
-      </div>
-      <div class="week-body">
-        <p>Krysser inn i Østerrike via Bregenzerwald. Campe i Tirol – Innsbruck er perfekt for barnefamilier. Badevann i alpesøer. Hjemreise via München og Danmark. Planlegg 2 kjøredager hjem.</p>
-        <div class="highlights">
-          <span class="tag green">🏔 Alpesøer og bading</span>
-          <span class="tag">🎢 Swarovski Kristallwelten</span>
-          <span class="tag blue">🚡 Nordkettenbahn, Innsbruck</span>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- CHECKLIST -->
-  <div class="section-title">Huskeliste</div>
-  <div class="checklist">
-    <label class="check-item"><input type="checkbox"> <span>Bestill ferge eller planlegg rute via Øresundbroen</span> <span class="check-cat">Booking</span></label>
-    <label class="check-item"><input type="checkbox"> <span>Sjekk campingpass / ACSI-kort</span> <span class="check-cat">Booking</span></label>
-    <label class="check-item"><input type="checkbox"> <span>Europeisk helsetrygdkort (EHIC)</span> <span class="check-cat">Helse</span></label>
-    <label class="check-item"><input type="checkbox"> <span>Vignetter: Østerrike (obligatorisk for campingvogn
+            <li>Kjør defensivt og respekter banen – raskere biler overtaker til høyre. Hold til venstre om du er usikker på tempoet
