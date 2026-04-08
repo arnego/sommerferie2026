@@ -175,6 +175,7 @@
   }
   .stop-dot.home { background: var(--olive); }
   .stop-dot.end  { background: var(--gold); }
+  .stop-dot.special { background: #7b2d8b; }
   .stop-arrow {
     color: var(--muted);
     font-size: 12px;
@@ -193,6 +194,12 @@
     cursor: pointer;
   }
   .week-card:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.09); }
+  .week-card.featured {
+    border: 1px solid rgba(123,45,139,0.25);
+  }
+  .week-card.featured .week-header {
+    border-bottom: 1px solid rgba(123,45,139,0.12);
+  }
 
   .week-header {
     display: flex;
@@ -247,6 +254,61 @@
   }
   .tag.green { background: #e8f0e0; color: var(--olive); }
   .tag.blue  { background: #e0e9f5; color: #2a5298; }
+  .tag.purple { background: #f0e5f5; color: #7b2d8b; }
+
+  /* SUB-STOP CARD */
+  .sub-stop {
+    background: var(--sand);
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin: 14px 0;
+    border-left: 3px solid #7b2d8b;
+  }
+  .sub-stop-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+  .sub-stop-icon {
+    font-size: 1.3rem;
+  }
+  .sub-stop-title {
+    font-size: 13.5px;
+    font-weight: 500;
+    color: var(--navy);
+  }
+  .sub-stop-subtitle {
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 1px;
+  }
+  .sub-stop p {
+    font-size: 13px;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 8px;
+  }
+  .sub-stop p:last-of-type { margin-bottom: 10px; }
+  .tip-list {
+    list-style: none;
+    padding: 0;
+    margin: 8px 0 10px;
+  }
+  .tip-list li {
+    font-size: 12.5px;
+    color: #555;
+    line-height: 1.65;
+    padding: 3px 0 3px 18px;
+    position: relative;
+  }
+  .tip-list li::before {
+    content: '›';
+    position: absolute;
+    left: 4px;
+    color: #7b2d8b;
+    font-weight: 700;
+  }
 
   /* CHECKLIST */
   .checklist {
@@ -398,8 +460,8 @@
 <div class="stats">
   <div class="stat"><span class="stat-num">4</span><span class="stat-lbl">Uker</span></div>
   <div class="stat"><span class="stat-num">6</span><span class="stat-lbl">Land</span></div>
-  <div class="stat"><span class="stat-num">~4 200</span><span class="stat-lbl">Km total</span></div>
-  <div class="stat"><span class="stat-num">12+</span><span class="stat-lbl">Stopp</span></div>
+  <div class="stat"><span class="stat-num">~4 500</span><span class="stat-lbl">Km total</span></div>
+  <div class="stat"><span class="stat-num">13+</span><span class="stat-lbl">Stopp</span></div>
 </div>
 
 <div class="container">
@@ -417,6 +479,8 @@
       <div class="stop"><div class="stop-dot"></div>Hamburg</div>
       <span class="stop-arrow">→</span>
       <div class="stop"><div class="stop-dot"></div>Amsterdam</div>
+      <span class="stop-arrow">→</span>
+      <div class="stop"><div class="stop-dot special"></div>Nürburgring</div>
       <span class="stop-arrow">→</span>
       <div class="stop"><div class="stop-dot"></div>Schwarzwald</div>
       <span class="stop-arrow">→</span>
@@ -466,17 +530,58 @@
       </div>
     </div>
 
-    <div class="week-card" onclick="toggleWeek(this)">
+    <div class="week-card featured" onclick="toggleWeek(this)">
       <div class="week-header">
         <div class="week-num">3</div>
         <div class="week-info">
-          <h3>Nederland + Schwarzwald</h3>
-          <p>15.–21. juli · Amsterdam og Freiburg</p>
+          <h3>Nederland + Nürburgring + Schwarzwald</h3>
+          <p>15.–21. juli · Amsterdam, Nürburg og Freiburg</p>
         </div>
         <div class="week-flag">🇳🇱🇩🇪</div>
       </div>
       <div class="week-body">
-        <p>Fra Hamburg ned gjennom Nederland – stop i Amsterdam 1–2 netter. Videre sørøstover inn i Schwarzwald. Kjør Schwarzwald Hochstrasse – en av Europas flotteste veier for campingvogn.</p>
+        <p>Fra Hamburg ned gjennom Nederland – stopp i Amsterdam 1–2 netter. Videre sørøstover via Rheinland-Pfalz med et spennende stopp på Nürburgring, før turen fortsetter inn i Schwarzwald. Kjør Schwarzwald Hochstrasse – en av Europas flotteste veier for campingvogn.</p>
+
+        <div class="sub-stop">
+          <div class="sub-stop-header">
+            <div class="sub-stop-icon">🏎️</div>
+            <div>
+              <div class="sub-stop-title">Nürburgring – Nordschleife</div>
+              <div class="sub-stop-subtitle">Nürburg, Rheinland-Pfalz · ca. 1 dag</div>
+            </div>
+          </div>
+          <p>Nürburgring i Nürburg, Rheinland-Pfalz er en av verdens mest legendariske motorsportbaner. Den 20,8 km lange Nordschleife – kjent som «Die Grüne Hölle» (Den grønne helvete) – er åpen for turistkjøring på utvalgte dager og tider. Dette er en unik mulighet til å kjøre en ekte racerbane med egen bil (ikke campingvognen!).</p>
+          <p><strong>Turistkjøring på Nordschleife:</strong></p>
+          <ul class="tip-list">
+            <li>Billetten kjøpes på stedet eller online via nürburgring.de – pris ca. €30–35 per runde per bil.</li>
+            <li>Campingvogner og tilhengere er <em>ikke tillatt</em> på banen – koble fra vognen og parker den på campingplassen eller parkeringsområdet ved banen.</li>
+            <li>Sjekk turistkjøringsdatoer nøye på forhånd – banen stenges ved motorsportarrangementer og ugunstige baneforhold.</li>
+            <li>Obligatorisk: gyldig førerkort, bilen skal være forsikret og i god stand. Hjelm er ikke påkrevd men anbefales.</li>
+            <li>Kjør defensivt og respekter banen – profesjonelle overtakinger skjer til høyre. Hold til venstre om du er usikker.</li>
+            <li>Besøk Ringwerk-museet og Nürburgring-utstillingen om du vil lære mer om banens 100-årige historie.</li>
+          </ul>
+          <p><strong>Camping nær Nürburgring:</strong></p>
+          <ul class="tip-list">
+            <li><strong>Campingplatz am Nürburgring</strong> – offisiell campingplass rett ved banen, gangavstand til inngangspartiet. Tilbyr plass til campingvogn med strøm.</li>
+            <li><strong>Camping Laacher See</strong> – ca. 30 min fra Nürburgring, ved den vakre vulkansjøen Laacher See. Roligere alternativ med svømmemuligheter for familien.</li>
+            <li>Book plass i god tid om du besøker i høysesong (juli) – området er populært blant motorsportentusiaster fra hele Europa.</li>
+          </ul>
+          <p><strong>Tips for besøket:</strong></p>
+          <ul class="tip-list">
+            <li>Ankomst tidlig morgen gir kortere kø og bedre baneforhold.</li>
+            <li>Ta med egen mat og drikke – restaurantene ved banen kan ha lang kø i rushtiden.</li>
+            <li>Barn kan se på fra tribuneområdene og Brünnchen-svingen – et flott utsiktspunkt der bilene går sakte nok til å se godt.</li>
+            <li>Kjøp gjerne en souvenir i den offisielle Nürburgring-butikken – populært blant motorsportfans.</li>
+            <li>Nürburgring-området er omgitt av vakker Eifel-natur – ta en kort vandring i Nürburg-landsbyen og se det historiske Nürburg-slottet.</li>
+          </ul>
+          <div class="highlights" style="margin-top:4px;">
+            <span class="tag purple">🏎️ Turistkjøring Nordschleife</span>
+            <span class="tag purple">🏆 Ringwerk-museet</span>
+            <span class="tag green">🏰 Nürburg slott</span>
+            <span class="tag blue">🌊 Laacher See</span>
+          </div>
+        </div>
+
         <div class="highlights">
           <span class="tag">🌷 Keukenhof (om åpent)</span>
           <span class="tag green">🌲 Schwarzwald skoger</span>
@@ -516,6 +621,8 @@
     <label class="check-item"><input type="checkbox"> <span>Servicer campingvognen før avreise</span> <span class="check-cat">Vogn</span></label>
     <label class="check-item"><input type="checkbox"> <span>Last ned offline-kart (Maps.me / OsmAnd)</span> <span class="check-cat">Navigasjon</span></label>
     <label class="check-item"><input type="checkbox"> <span>Reiseforsikring med campingutstyr</span> <span class="check-cat">Forsikring</span></label>
+    <label class="check-item"><input type="checkbox"> <span>Sjekk turistkjøringsdatoer på nürburgring.de og kjøp billett</span> <span class="check-cat">Nürburgring</span></label>
+    <label class="check-item"><input type="checkbox"> <span>Bestill campingplass nær Nürburgring (book tidlig – populært i juli!)</span> <span class="check-cat">Nürburgring</span></label>
   </div>
 
   <!-- BUDGET -->
@@ -528,46 +635,9 @@
     </div>
     <div class="budget-item">
       <div class="budget-label">Drivstoff</div>
-      <div class="budget-amount">9 000 <span>kr</span></div>
-      <div class="budget-bar"><div class="budget-fill" style="width:34%"></div></div>
+      <div class="budget-amount">9 500 <span>kr</span></div>
+      <div class="budget-bar"><div class="budget-fill" style="width:36%"></div></div>
     </div>
     <div class="budget-item">
       <div class="budget-label">Mat og dagligvarer</div>
-      <div class="budget-amount">8 000 <span>kr</span></div>
-      <div class="budget-bar"><div class="budget-fill" style="width:30%"></div></div>
-    </div>
-    <div class="budget-item">
-      <div class="budget-label">Opplevelser / innganger</div>
-      <div class="budget-amount">6 000 <span>kr</span></div>
-      <div class="budget-bar"><div class="budget-fill" style="width:23%"></div></div>
-    </div>
-  </div>
-
-  <!-- NOTES -->
-  <div class="note-box">
-    <h3>📝 Notater & nye ideer</h3>
-    <p>Skriv ned ideer og endringer her. Disse lagres mens siden er åpen.</p>
-    <textarea placeholder="F.eks: Husk å sjekke åpningstider for Tivoli · Vi vil gjerne stoppe i Lübeck · ..."></textarea>
-  </div>
-
-</div>
-
-<footer>Sommerferie 2026 · Laget med Claude · Demo-versjon</footer>
-
-<script>
-  function toggleWeek(card) {
-    const body = card.querySelector('.week-body');
-    body.classList.toggle('open');
-  }
-
-  // Animate budget bars on load
-  window.addEventListener('load', () => {
-    document.querySelectorAll('.check-item input').forEach(cb => {
-      cb.addEventListener('change', function() {
-        this.closest('.check-item').classList.toggle('done', this.checked);
-      });
-    });
-  });
-</script>
-</body>
-</html>
+      <div class="budget-amount">8 000 <span>kr</span
