@@ -177,6 +177,7 @@
   .stop-dot.end  { background: var(--gold); }
   .stop-dot.special { background: #7b2d8b; }
   .stop-dot.beach { background: #2a8fbf; }
+  .stop-dot.cologne { background: #b8860b; }
   .stop-arrow {
     color: var(--muted);
     font-size: 12px;
@@ -200,6 +201,12 @@
   }
   .week-card.featured .week-header {
     border-bottom: 1px solid rgba(123,45,139,0.12);
+  }
+  .week-card.cologne-card {
+    border: 1px solid rgba(184,134,11,0.25);
+  }
+  .week-card.cologne-card .week-header {
+    border-bottom: 1px solid rgba(184,134,11,0.12);
   }
 
   .week-header {
@@ -257,6 +264,7 @@
   .tag.blue  { background: #e0e9f5; color: #2a5298; }
   .tag.purple { background: #f0e5f5; color: #7b2d8b; }
   .tag.teal { background: #e0f2f5; color: #1a7a8a; }
+  .tag.gold { background: #fdf3d9; color: #7a5c00; }
 
   /* SUB-STOP CARD */
   .sub-stop {
@@ -268,6 +276,9 @@
   }
   .sub-stop.beach-stop {
     border-left: 3px solid #2a8fbf;
+  }
+  .sub-stop.cologne-stop {
+    border-left: 3px solid #b8860b;
   }
   .sub-stop-header {
     display: flex;
@@ -316,6 +327,9 @@
   }
   .beach-stop .tip-list li::before {
     color: #2a8fbf;
+  }
+  .cologne-stop .tip-list li::before {
+    color: #b8860b;
   }
 
   /* CHECKLIST */
@@ -469,7 +483,7 @@
   <div class="stat"><span class="stat-num">4</span><span class="stat-lbl">Uker</span></div>
   <div class="stat"><span class="stat-num">6</span><span class="stat-lbl">Land</span></div>
   <div class="stat"><span class="stat-num">~4 500</span><span class="stat-lbl">Km total</span></div>
-  <div class="stat"><span class="stat-num">14+</span><span class="stat-lbl">Stopp</span></div>
+  <div class="stat"><span class="stat-num">15+</span><span class="stat-lbl">Stopp</span></div>
 </div>
 
 <div class="container">
@@ -487,6 +501,8 @@
       <div class="stop"><div class="stop-dot"></div>København</div>
       <span class="stop-arrow">→</span>
       <div class="stop"><div class="stop-dot"></div>Hamburg</div>
+      <span class="stop-arrow">→</span>
+      <div class="stop"><div class="stop-dot cologne"></div>Køln</div>
       <span class="stop-arrow">→</span>
       <div class="stop"><div class="stop-dot"></div>Amsterdam</div>
       <span class="stop-arrow">→</span>
@@ -611,32 +627,30 @@
       </div>
     </div>
 
-    <div class="week-card featured" onclick="toggleWeek(this)">
+    <!-- KÖLN WEEK CARD -->
+    <div class="week-card cologne-card" onclick="toggleWeek(this)">
       <div class="week-header">
-        <div class="week-num">3</div>
+        <div class="week-num">29</div>
         <div class="week-info">
-          <h3>Nederland + Nürburgring + Schwarzwald</h3>
-          <p>22.–28. juli · Amsterdam, Nürburg og Freiburg</p>
+          <h3>Køln – Rhinen og Kölner Dom</h3>
+          <p>13.–16. juli · 3 netter ved Rhinen, Tyskland</p>
         </div>
-        <div class="week-flag">🇳🇱🇩🇪</div>
+        <div class="week-flag">🇩🇪</div>
       </div>
       <div class="week-body">
-        <p>Fra Hamburg ned gjennom Nederland – stopp i Amsterdam 1–2 netter. Videre sørøstover via Rheinland-Pfalz med et spennende stopp på det legendariske Nürburgring-komplekset i Eifel-regionen, før turen fortsetter inn i den vakre Schwarzwald. Kjør Schwarzwald Hochstrasse – en av Europas flotteste veier for campingvogn.</p>
+        <p>Fra Hamburg kjøres det sørover mot Köln – en av Tysklands mest fascinerende byer, kjent for sin mektige gotiske domkirke, levende Altstadt og den vakre Rhinen. Ankomst ca. 13. juli, avreise ca. 16. juli.</p>
 
-        <div class="sub-stop">
+        <div class="sub-stop cologne-stop">
           <div class="sub-stop-header">
-            <div class="sub-stop-icon">🏎️</div>
+            <div class="sub-stop-icon">⛪</div>
             <div>
-              <div class="sub-stop-title">Nürburgring – Die Grüne Hölle</div>
-              <div class="sub-stop-subtitle">Nürburg, Eifel, Rheinland-Pfalz · ca. 1–2 dager</div>
+              <div class="sub-stop-title">Camping Berger</div>
+              <div class="sub-stop-subtitle">Uferstraße 71, 51149 Köln-Porz · 3 netter (13.–16. juli)</div>
             </div>
           </div>
-          <p>Nürburgring i Nürburg, Eifel-regionen i Tyskland, er et av verdens mest berømte og legendariske motorsportkomplekser. Den 20,8 km lange Nordschleife – kjent som «Die Grüne Hölle» (Den grønne helvete) – har vært arena for F1, Le Mans og utallige rekordkjøringer siden 1927. Banen er omgitt av frodig Eifel-skog og byr på en helt unik opplevelse for hele familien, enten man er motorsportentusiast eller ikke.</p>
+          <p>Camping Berger er en populær og godt anmeldt campingplass beliggende ved Rhinen i bydelen Köln-Porz, ca. 15 km fra Köln sentrum. Campingplassen har en fin beliggenhet nær elven og er et utmerket utgangspunkt for å utforske Köln. Det er enkel tilgang til sentrum med tog og buss.</p>
 
-          <p><strong>Turistkjøring på Nordschleife:</strong></p>
+          <p><strong>Attraksjoner i Køln:</strong></p>
           <ul class="tip-list">
-            <li>Billetten kjøpes på stedet eller online via nürburgring.de – pris ca. €30–35 per runde per bil.</li>
-            <li>Campingvogner og tilhengere er <em>ikke tillatt</em> på banen – koble fra vognen og parker den på campingplassen eller parkeringsområdet ved banen.</li>
-            <li>Sjekk turistkjøringsdatoer nøye på forhånd – banen stenges ved motorsportarrangementer og ugunstige baneforhold.</li>
-            <li>Obligatorisk: gyldig førerkort, bilen skal være forsikret og i god stand. Hjelm er ikke påkrevd, men anbefales.</li>
-            <li>Kjør defensivt og respekter banen – raskere biler overtaker til høyre. Hold til venstre om du er usikker på tempo
+            <li><strong>Kölner Dom (UNESCO-verdensarv)</strong> – Den imponerende gotiske katedralen er byens hjerte og et av Tysklands mest besøkte landemerker. Klatring opp til tårnet (533 trinn) gir fantastisk utsikt over byen og Rhinen.</li>
+            <li><strong>Schokoladenmuseum (Sjokolademuseet)</strong
