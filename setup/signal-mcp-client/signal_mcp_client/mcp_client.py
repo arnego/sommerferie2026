@@ -143,6 +143,10 @@ async def process_conversation_turn(session_id, args, tools, tool_name_to_sessio
                 else:
                     yield {}  # send empty message to trigger typing indicator
 
+        elif message.content:
+            # Claude responded with plain text (no tool calls) – send it directly
+            yield {"text": message.content}
+
     except AuthenticationError as e:
         error_message = (
             f"AuthenticationError: Please check your API key for the model: {settings['model_name']}, error: {e}"

@@ -3,194 +3,195 @@
 ## Sommerferie 2026 — Familie-roadtrip med campingvogn
 
 > **Formål med dette dokumentet:** Komplett spesifikasjon for en statisk webside som skal bygges med Claude Code og hostes på GitHub Pages. Websiden skal hjelpe familien med å planlegge, forberede og gjennomføre en fire ukers sommerferie med campingvogn i juli 2026.
+> Claude skal til enhver tid holde denne spesifikasjonen oppdatert med all informasjon om reiseplan og ønsker for websiden slik at websiden kan genereres på nytt utfra denne uten å miste for mye informasjon. 
 
 ---
 
 ## 1. Prosjektoversikt
 
 ### 1.1 Bakgrunn
-<!-- Kort beskrivelse av ferien og hvorfor vi lager en webside for den -->
+Familien Goderstad ønsker en flott sommerferie i år! For reisen ønsker vi en  god plan med flotte overnattingssteder, aktiviteter og severdigheter som er tilpasset familiens behov og ønsker. 
 
 ### 1.2 Målgruppe
 Websiden er kun for familien — ingen ekstern deling. Den skal fungere som et felles oppslagsverk og verktøy under hele planleggings- og reisefasen.
 
 ### 1.3 Bruksscenarier
-<!-- Beskriv typiske situasjoner der websiden brukes, f.eks.: -->
-<!-- - Planlegging hjemme på PC i ukene før avreise -->
-<!-- - Sjekke neste stopp fra mobilen mens man er underveis -->
-<!-- - Slå opp aktiviteter og reservasjoner for dagen -->
-<!-- - Pakkeliste-gjennomgang kvelden før avreise -->
+- Planlegging hjemme på PC i ukene før avreise
+- Sjekke neste stopp fra mobilen mens man er underveis
+- Slå opp aktiviteter og reservasjoner for dagen
+- Pakkeliste-gjennomgang kvelden før avreise
 
 ### 1.4 Mål og suksesskriterier
-<!-- Hva betyr det at websiden er "vellykket"? F.eks.: -->
-<!-- - All relevant ferieinfo samlet på ett sted -->
-<!-- - Fungerer godt på mobil uten nettilgang (offline) -->
-<!-- - Enkel å oppdatere underveis -->
+- All relevant ferieinfo samlet på ett sted
+- Enkel å tilpasse for Claude underveis med nye ønsker fra familien
+- Presenterer informasjon om lokale aktiviteter og severdigheter tilpasset familien i forbindelse med overnattingssteder
+- Gir godt overblikk over reiseruten
+- Viser ikke alt for mye informasjon på én gang, men gir mulighet for å grave dypere i detaljene
 
 ---
 
 ## 2. Reiseoversikt
 
 ### 2.1 Fakta om turen
-<!-- Fyll inn når kjent: -->
-- **Avreisedato:** <!-- TBD -->
-- **Returdato:** <!-- TBD -->
+- **Avreisedato:** Tidligst 4 juli
+- **Returdato:** Senest 1 august
 - **Varighet:** ca. 4 uker
 - **Startpunkt:** Kongsberg, Norge
-- **Kjøretøy:** Personbil med campingvogn
-- **Deltakere:** <!-- Antall voksne og barn, barnas alder -->
+- **Kjøretøy:** Campingvogn Knaus Sport 400 LK, trukket av en bil type Land Rover Discovery 4
+- **Deltakere:** Ann Kristin (42 år), Arne (40 år) og William (5 år)
 
-### 2.2 Ruteplan (overordnet)
-<!-- Hovedruten med stoppesteder, f.eks.: -->
-<!-- Kongsberg → Danmark → Nord-Tyskland → Nederland → Schwarzwald → Østerrike/Alpene → retur -->
+### 2.2 Kriterier for reiseplan
+- Start og slutt i Kongsberg, Norge.
+- Et besøk til familie (André og Lucia) i Tyskland i løpet av ferien på adresse: Fischerinsel 9, 10179 Berlin, Tyskland.
+- Ingen overnattinger kortere enn 3 netter med mindre vi eksplisitt har kommet med ønske om det for spesifikke destinasjoner.
+- Kjøreetapper må være under 6 timer per dag med minimum ett stopp underveis.
 
-### 2.3 Ukeoversikt
-<!-- Grov fordeling av ruten på 4 uker: -->
-<!-- Uke 1: ... -->
-<!-- Uke 2: ... -->
-<!-- Uke 3: ... -->
-<!-- Uke 4: ... -->
+#### William-hensyn (5 år)
+William er 5 år og er en viktig del av planleggingen:
+- Prioriter campingplasser med lekeplass og sandstrand/bademuligheter i nærhet.
+- Kjøreetapper brytes opp med barnevennlige stopp underveis (rasteplasser, lekeplasser).
+- Aktivitetsforslag inkluderer barnevennlige attraksjoner og opplevelser tilpasset 5-åring.
+- Dagsetapper tilpasses barnets rytme — tidlig ankomst til campingplass er å foretrekke.
+
+### 2.3 Detaljplan
+Dette er en initiell grov fordeling av ruten på 4 uker:
+Uke 1: Danmark: Strand, Bading, Legoland
+Uke 2: Tyskland: Berlin, Kultur
+Uke 3: Tyskland: Bohemian Switzerland National Park, Slott
+Uke 4: Danmark: Strand, Bading, Copenhagen
+
+Dette kapittelet oppdateres underveis i planleggingen etterhvert som detaljene for ønskede destinasjoner, severdigheter og overnattingssteder faller på plass, og legges detaljert ut i tid.
+
+**Plassholdersstrategi:** Websiden bygges med plassholdere for destinasjoner og campingplasser. Spesifikke steder, bookinger og aktiviteter legges til etterhvert som de bestemmes. Claude foreslår konkrete campingplasser og aktiviteter for godkjenning av Arne og Ann Kristin.
 
 ---
 
 ## 3. Funksjonelle krav
 
 ### 3.1 Rutekart
-<!-- Krav til kartvisning av reiseruten. Vurder: -->
-<!-- - Interaktivt kart vs. statisk bilde -->
-<!-- - Markører for overnattingssteder, severdigheter, etc. -->
-<!-- - Kartleverandør (Leaflet/OpenStreetMap, Google Maps, etc.) -->
+Krav til kartvisning av reiseruten:
+- Interaktivt kart 
+- Markører for overnattingssteder, severdigheter, etc.
+- Klikk på markørene gir mer informasjon og lenker til de offisielle websidene for disse.
+- Siden burde be om GPS posisjon fra enheten og markere posisjonen til bruekren på kartet.
+
 
 ### 3.2 Dag-for-dag / uke-for-uke plan
-<!-- Hvordan skal den detaljerte planen presenteres? -->
-<!-- - Kjøretider og avstander mellom stopp -->
-<!-- - Planlagte aktiviteter og severdigheter -->
-<!-- - Overnattingsinfo (campingplasser, reservasjoner) -->
-<!-- - Fleksibilitet: "must-do" vs. "nice-to-have" -->
+- Dagens plan burde fremheves og vises i en egen seksjon basert på datoen til enheten når websiden lastes. 
+- Kjøretider og avstander mellom stopp.
+- Planlagte aktiviteter og severdigheter
+- Overnattingsinfo (campingplasser, reservasjoner)
+- Fleksibilitet: "must-do" vs. "nice-to-have"
 
 ### 3.3 Sjekklister
-<!-- Hvilke sjekklister trengs? F.eks.: -->
-<!-- - Pakkeliste (klær, utstyr, dokumenter, mat, underholdning for barna) -->
-<!-- - Campingvogn-klargjøring -->
-<!-- - Bil-klargjøring -->
-<!-- - Før-avreise (stoppe post, vanne planter, etc.) -->
-<!-- - Daglig sjekkliste for av- og påstigning campingplass -->
+- Pakkeliste (klær, utstyr, dokumenter, mat, underholdning for barna)
+- Klargjøring av bil og campingvogn
+- Før-avreise (stoppe post, vanne planter, etc.)
+- Daglig sjekkliste for av- og påstigning campingplass
 
 ### 3.4 Budsjett og økonomi
-<!-- Hvordan skal budsjettet presenteres? -->
-<!-- - Budsjettramme per kategori (drivstoff, overnatting, mat, aktiviteter) -->
-<!-- - Forhåndsbetalt vs. løpende kostnader -->
-<!-- - Valutainformasjon for ulike land -->
+- Estimert kostnad per kategori (drivstoff, overnatting, mat, aktiviteter)
+- Valutainformasjon for ulike land med vekslingskurs mot NOK, 
+- Big mac index resultat for ulike land (fra worldpopulationreview.com) for å lettere forstå kostnadsnivået i landet.
 
 ### 3.5 Praktisk informasjon
-<!-- Referanseinformasjon som er nyttig underveis: -->
-<!-- - Nødnumre per land -->
-<!-- - Viktige adresser og telefonnumre -->
-<!-- - Forsikringsinformasjon -->
-<!-- - Bompenger, vignetter, miljøsoner -->
-<!-- - Fartsbegrensninger med henger per land -->
-<!-- - Campingplass-regler og sjekk-inn/ut-tider -->
-
-### 3.6 Notater og logg
-<!-- Mulighet for å skrive notater? -->
-<!-- - Reisedagbok -->
-<!-- - Endringer i planen underveis -->
-<!-- - Tips og erfaringer for neste tur -->
-
-### 3.7 Offline-tilgang
-<!-- Krav til bruk uten internett: -->
-<!-- - Service worker for offline caching -->
-<!-- - Nedlastbart innhold -->
-<!-- - Hva MÅ fungere offline? -->
+Referanseinformasjon som er nyttig underveis:
+- Nødnumre per land
+- Viktige adresser og telefonnumre
+- Forsikringsinformasjon
+- Bompenger, vignetter, miljøsoner
+- Fartsbegrensninger med henger per land
+- Campingplass-regler og sjekk-inn/ut-tider
 
 ---
 
 ## 4. Innholdsstruktur (Informasjonsarkitektur)
 
-### 4.1 Sidestruktur
-<!-- Skal det være én lang side (SPA) eller flere sider? -->
-<!-- Foreslått navigasjonsstruktur: -->
+Toppmeny med fire seksjoner i rekkefølge:
 
-### 4.2 Navigasjon
-<!-- Hvordan finner brukeren frem? -->
-<!-- - Toppmeny / hamburgermeny på mobil -->
-<!-- - Hurtignavigasjon til "i dag" / neste stopp -->
-<!-- - Breadcrumbs eller tilbake-knapp -->
-
-### 4.3 Innholdshierarki
-<!-- Prioritering av informasjon — hva er viktigst å se først? -->
-<!-- F.eks.: Dagens plan > Neste kjøreetappe > Kart > Sjekklister > Budsjett -->
+1. **Kart** — interaktivt rutekart (Leaflet + OpenStreetMap) med markører for alle stopp. Klikk på markør gir info-popup. GPS-posisjon vises på kartet.
+2. **Reiseplan** — dag/uke-plan der dagens plan fremheves basert på enhetens dato. Ukevis visning med etapper, kjøretid/avstand, aktiviteter og campingplass per uke.
+3. **Pakkelister** — fire sjekklister (pakking, campingvogn, før avreise, daglig). Avkryssinger lagres i localStorage. Nullstill-knapp per liste.
+4. **Budsjett & Praktisk** — kostnadsestimater per kategori, valutatabell (NOK → EUR/DKK/CZK) med Big Mac Index, fartsgrenser med henger, nødnumre, bompenger/vignetter, miljøsoner.
 
 ---
 
 ## 5. Interaktivitet og datalagring
 
 ### 5.1 Interaktive elementer
-<!-- Hvilke UI-elementer skal være interaktive? F.eks.: -->
-<!-- - Ekspanderbare/sammenklappbare seksjoner -->
-<!-- - Faner (tabs) for å bytte mellom uker/dager -->
-<!-- - Avhukbare sjekklister -->
-<!-- - Filtrering (f.eks. vis kun "must-do" aktiviteter) -->
-<!-- - Søkefunksjon -->
+- Ekspanderbare/sammenklappbare seksjoner
 
 ### 5.2 Datalagring (localStorage)
-**Viktig teknisk begrensning:** Websiden hostes på GitHub Pages (statisk), så det finnes ingen server-side lagring. Klientside-lagring via `localStorage` kan brukes, men synkroniserer **ikke** mellom enheter.
-
-<!-- Avgjørelser som må tas: -->
-<!-- - Hvilke data skal lagres i localStorage? (sjekklistestatus, notater, preferanser) -->
-<!-- - Skal det bygges eksport/import-funksjon (JSON) for manuell synk mellom enheter? -->
-<!-- - Skal det være en "nullstill"-knapp? -->
-<!-- - Hvordan håndteres tap av data (tømming av nettleserdata)? -->
+Websiden hostes på GitHub Pages (statisk), så det finnes ingen server-side lagring. Klientside-lagring via `localStorage` skal brukes for sjekklister, men synkroniserer ikke mellom enheter.
+Vi lager ingen eksport/import-funksjon for manuell synk mellom enheter foreløpig.
+Vi ønsker en diskre "nullstill"-knapp per sjekkliste.
+Hvis nettleserdata tømmes er de lokale dataene tapt.
 
 ### 5.3 Oppdateringsflyt
-<!-- Hvordan oppdateres websiden med nytt innhold? -->
-<!-- - GitHub-repo: arnego/sommerferie2026 -->
-<!-- - Prosess for å pushe oppdateringer (Claude in Chrome, manuell Git, etc.) -->
-<!-- - Versjonering av innhold -->
+- Claude oppdaterer spesifikasjonen og endringsloggen i spesifikasjonen. 
+- Claude oppdaterer reiseplanen og websiden i henhold til de ny ønskene og spesifikasjonen.
+- I det lokale repoet så gjør Claude git commit med med beskrivelse av endringene som ble utført inklusive det nye tillegget i endringsloggen i spesifikasjonen
+- Claude gjør git push på det lokale repoet for å publisere endringene til Github pages i github-repo: arnego/sommerferie2026
+
 
 ---
 
 ## 6. Designkrav
 
 ### 6.1 Designprinsipper
-<!-- Overordnede prinsipper for det visuelle uttrykket, f.eks.: -->
-<!-- - Enkelt og ryddig — lett å skanne raskt -->
-<!-- - Ferie- og naturstil — varm og innbydende -->
-<!-- - Mobil-først — touch-vennlige elementer -->
-<!-- - Godt lesbart i sterkt sollys -->
+Overordnede prinsipper for det visuelle uttrykket:
+- Enkelt og ryddig — lett å skanne raskt
+- Ferie- og naturstil — sommerlig og innbydende
+- Mobil-vennlig — touch-vennlige elementer
+- Lett å lese i sollys
 
-### 6.2 Fargepalett
-<!-- Definer farger. Vurder: -->
-<!-- - Primærfarge, sekundærfarge, aksentfarge -->
-<!-- - Bakgrunnsfarger (lys og mørk modus?) -->
-<!-- - Farger for statusindikatorer (fullført, pågående, ikke startet) -->
+### 6.2 Sidestruktur
+Én lang side (SPA)
 
-### 6.3 Typografi
-<!-- Skriftvalg: -->
-<!-- - Overskrifter -->
-<!-- - Brødtekst -->
-<!-- - Web-safe fonter eller Google Fonts? -->
-<!-- - Minimumsstørrelse for lesbarhet på mobil -->
+### 6.3 Navigasjon
+Toppmeny / hamburgermeny på mobil
 
-### 6.4 Ikoner og grafikk
-<!-- Bruk av ikoner (emoji, SVG-ikoner, ikonbibliotek?) -->
-<!-- Illustrasjoner eller fotografier? -->
-<!-- Flagg for landoversikt? -->
+### 6.4 Innholdshierarki
+Kart > Dagens plan > Neste kjøreetappe > Sjekklister > Budsjett
 
-### 6.5 Responsivt design
-<!-- Krav til ulike skjermstørrelser: -->
-<!-- - Mobil (primær bruksenhet underveis) -->
-<!-- - Nettbrett -->
-<!-- - Desktop (planleggingsfasen) -->
-<!-- - Breakpoints -->
+### 6.5 Fargepalett
+Stemning: kart-sentrert, ferie- og naturstil, lett å lese i sollys. Kun lys modus.
 
-### 6.6 Mørk modus
-<!-- Skal websiden støtte mørk modus? -->
-<!-- - Automatisk basert på systeminnstillinger? -->
-<!-- - Manuell veksling? -->
+| Rolle | Farge | Hex |
+| --- | --- | --- |
+| Primær (kart/navigasjon) | Dyp petrol/havblå | `#1B4F72` |
+| Sekundær (bakgrunn) | Varm sand | `#F5DEB3` |
+| Bakgrunn (lysere) | Kremhvit sand | `#FBF5E6` |
+| Aksent / «i dag»-markør | Solskinnsgult | `#F4A621` |
+| Tekst | Mørk koksgrå | `#2C3E50` |
+| Status: fullført | Grønn | `#27AE60` |
+| Status: ikke startet | Grå | `#95A5A6` |
 
-### 6.7 Referansedesign / inspirasjon
-<!-- Lenker til eksempler eller skjermbilder av nettsider som har en stil vi liker -->
+### 6.6 Typografi
+Fonter lastes via Google Fonts CDN.
+
+- **Overskrifter:** Playfair Display (serif) — gir ferie- og reisestemning
+- **Brødtekst:** Inter (sans-serif) — god lesbarhet på skjerm og i sollys
+- **Minimumsstørrelser mobil:** 16px brødtekst, 14px metainfo og etiketter
+
+### 6.7 Ikoner og grafikk
+- Unngå bruk av emoji
+- Bruk fotografier fra de aktuelle destinasjonene i presentasjonen av disse. Fotografiene burde gi oversikt over overnattingssted eller et godt bilde av attraksjonen.
+- Flagg kan brukes for landoversikt
+- Bruk logoer fra de aktuelle attraksjonene eller overnattingsstedene der de er tilgjengelig 
+
+### 6.8 Responsivt design
+Krav til ulike skjermstørrelser:
+- Mobil (primær bruksenhet underveis og ved gjennomgang av sjekklister)
+- Nettbrett
+- Desktop (planleggingsfasen)
+
+### 6.9 Referansedesign / inspirasjon
+Lenker til eksempler nettsider som har en stil vi liker:
+https://www.hotelcanferrereta.com/es/
+https://maps.roadtrippers.com/trips/30411788
+https://thedyrt.com/
+
 
 ---
 
@@ -202,83 +203,47 @@ Websiden er kun for familien — ingen ekstern deling. Den skal fungere som et f
 - **Domene:** `https://arnego.github.io/sommerferie2026/`
 
 ### 7.2 Teknologivalg
-<!-- Avgjørelser som må tas: -->
-<!-- - Ren HTML/CSS/JS, eller rammeverk (React, Vue, Svelte, Astro, etc.)? -->
-<!-- - CSS-rammeverk (Tailwind, Bootstrap, etc.)? -->
-<!-- - Bundler/build-steg, eller direkte i nettleseren? -->
-<!-- - Skal Claude Code kunne bygge og deploye direkte? -->
-
-### 7.3 Ytelse
-<!-- Krav til lastetid og størrelse: -->
-<!-- - Maks buntstørrelse -->
-<!-- - Bildeoptimalisering -->
-<!-- - Lazy loading -->
-
-### 7.4 Nettleserkompatibilitet
-<!-- Hvilke nettlesere og versjoner skal støttes? -->
-<!-- - Chrome (Android/desktop) -->
-<!-- - Safari (iOS/macOS) -->
-<!-- - Firefox -->
-
-### 7.5 PWA (Progressive Web App)
-<!-- Skal websiden kunne installeres som en app? -->
-<!-- - Web App Manifest -->
-<!-- - Service Worker for offline-bruk -->
-<!-- - Ikon for hjemskjerm -->
-
-### 7.6 Tilgjengelighet
-<!-- Grunnleggende tilgjengelighetskrav: -->
-<!-- - Semantisk HTML -->
-<!-- - ARIA-labels der nødvendig -->
-<!-- - Tastaturnavigasjon -->
+- **Stack:** Ren HTML-fil med CDN-baserte biblioteker — ingen build-steg, ingen npm
+- **Kart:** Leaflet.js + OpenStreetMap — gratis, ingen API-nøkkel nødvendig
+- **CSS-rammeverk:** Tailwind CSS via CDN (play-cdn)
+- **Reaktivitet:** Alpine.js via CDN — trekkspill, tabs, sjekklister, mobilmeny
+- **Fonter:** Google Fonts via CDN (Playfair Display + Inter)
+- **Ingen PWA** — kun Chrome (iOS + desktop)
+- **Nettleserkompatibilitet:** Chrome på iOS og desktop
 
 ### 7.7 Sikkerhet og personvern
-<!-- Websiden inneholder personlig reiseinformasjon: -->
-<!-- - Skal repoet være privat eller offentlig? -->
-<!-- - Ingen sensitiv info i koden (passord, bookingref, etc.) -->
+Websiden inneholder personlig reiseinformasjon så repoet skal være privat.
+Websiden kan få inneholde sensitiv info i koden (passord, bookingref, etc.).
 
----
+#### Sensitive data — tillatt direkte i koden
+Repoet er privat. Følgende kan ligge direkte i `index.html` uten hashing eller kryptering:
+- Adresser og kontaktinformasjon (f.eks. familiebesøk)
+- Booking-referanser og reservasjonsnumre
+- Passord og PIN-koder (campingplass-porter, safe-koder, Wi-Fi-passord)
 
-## 8. Innholdsplan og tidslinje
-
-### 8.1 Innhold som må produseres
-<!-- Liste over alt innhold som skal lages, f.eks.: -->
-<!-- - Detaljert ruteplan med koordinater -->
-<!-- - Campingplassinformasjon per stopp -->
-<!-- - Aktivitetsliste per destinasjon -->
-<!-- - Pakkelister -->
-<!-- - Budsjettoversikt -->
-<!-- - Praktisk info per land -->
-
-### 8.2 Tidslinje
-<!-- Milepæler fra nå til avreise: -->
-<!-- - Spesifikasjon ferdig: [dato] -->
-<!-- - Første versjon av websiden: [dato] -->
-<!-- - Rute og campingplasser booket: [dato] -->
-<!-- - Innhold komplett: [dato] -->
-<!-- - Avreise: [dato] -->
-
-### 8.3 Vedlikehold underveis
-<!-- Hvordan oppdateres websiden under ferien? -->
-<!-- - Hvem oppdaterer? -->
-<!-- - Hvor ofte? -->
-<!-- - Hva slags endringer er typiske? -->
+### 7.8 Sjekkliste-innhold
+Claude genererer komplette sjekklister tilpasset campingvogn-tur med 5-åring:
+- **Pakkeliste** — klær per person, utstyr, dokumenter, underholdning for William
+- **Campingvogn-sjekkliste** — teknisk klargjøring (koblinger, lys, gass, vann, sikkerhet), nødvendige vignetter og plaketter
+- **Før avreise** — post, planter, hus, strøm, alarm
+- **Daglig sjekkliste** — av-/påstigning campingplass (ankomst og avreise)
 
 ---
 
 ## 9. Fremtidige muligheter (utenfor scope)
+Her kan vi legge idéer som kan vurderes senere, men som foreløpig ikke skal inkluderes i implementasjonen.
 
-<!-- Idéer som kan vurderes senere, men som ikke er del av første versjon: -->
-<!-- - Bildegalleri / reisedagbok med bilder -->
-<!-- - Integrasjon med værdata (API) -->
-<!-- - GPS-sporing av ruten -->
-<!-- - Deling med familie/venner -->
-<!-- - Flerspråklig innhold -->
+- **Offline-støtte** — service worker / PWA for bruk uten internett underveis
+- **Eksport/import av sjekklistestatus** — manuell synkronisering mellom enheter (f.eks. JSON-fil)
+- **Værvarsel-widget** — automatisk værvarsel for neste destinasjon
+
 
 ---
 
 ## Endringslogg
 
 | Dato | Endring | Av |
-|------|---------|-----|
+| --- | --- | --- |
 | 2026-04-09 | Dokumentet opprettet — struktur og tomme seksjoner | Claude + Arne |
+| 2026-04-10 | Teknologivalg, navigasjonsstruktur, designprinsipper, sjekkliste-strategi avklart via intervju | Claude + Arne |
+| 2026-04-10 | Ny index.html bygget med Leaflet, Tailwind, Alpine.js og plassholder-rute | Claude |

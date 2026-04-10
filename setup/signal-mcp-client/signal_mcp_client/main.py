@@ -46,6 +46,21 @@ if not SIGNAL_PHONE_NUMBER:
     sys.exit(1)
 
 
+def get_group_id_for_sending(internal_id: str) -> str:
+    """Look up the correct group.* ID for sending, using internal_id as key."""
+    try:
+        url = f"{SIGNAL_HTTP_BASE_URL}/v1/groups/{SIGNAL_PHONE_NUMBER}"
+        response = requests.get(url, timeout=5)
+        response.raise_for_status()
+        for group in response.json():
+            if group.get("internal_id") == internal_id:
+                return group["id"]  # already contains "group." prefix
+    except Exception as e:
+        client_logger.warning(f"Failed to look up group ID for {internal_id}: {e}")
+    # Fallback: construct it manually
+    return f"group.{internal_id}"
+
+
 def send_message(recipient, content):
     """Send a text message using the Signal API (Synchronous)"""
     if not content or not content.strip():
@@ -54,6 +69,8 @@ def send_message(recipient, content):
     url = f"{SIGNAL_HTTP_BASE_URL}/v2/send"
     payload = {"number": SIGNAL_PHONE_NUMBER, "recipients": [recipient], "message": content}
     response = requests.post(url, json=payload, timeout=20)
+    if not response.ok:
+        client_logger.error(f"Send failed ({response.status_code}): {response.text}")
     response.raise_for_status()
     client_logger.info(f"Successfully sent text message to {recipient}")
 
@@ -198,16 +215,32 @@ async def process_signal_message(websocket, args, tools, tool_name_to_session):
         data = json.loads(message)
         envelope = data.get("envelope", {})
         session_id = envelope.get("source")
+        source_number = envelope.get("sourceNumber", "")
+
+        # Ignore messages sent by the bot itself
+        if source_number == SIGNAL_PHONE_NUMBER:
+            client_logger.debug(f"Ignoring message from self ({source_number})")
+            continue
+
         data_message = envelope.get("dataMessage", {})
         user_message = data_message.get("message", "")
         attachments = data_message.get("attachments", [])
         quote = data_message.get("quote")
 
-        # Extract group_name if this is a group message
+        # Extract group info if this is a group message
         group_info = data_message.get("groupInfo", {})
         group_name = group_info.get("groupName") if group_info else None
+        group_id = group_info.get("groupId") if group_info else None
         if group_name:
             client_logger.debug(f"[{session_id}] Group message from: {group_name}")
+
+        # For group messages, replies must go to the correct group ID (with group. prefix)
+        # groupInfo.groupId is the internal_id – we need to look up the full id from the API
+        if group_id:
+            recipient = get_group_id_for_sending(group_id)
+            client_logger.debug(f"[{session_id}] Resolved group recipient: {recipient}")
+        else:
+            recipient = session_id
 
         image_file_paths = save_image_attachments(args.session_save_dir, session_id, attachments)
         success, transcribed_text = await asyncio.to_thread(transcribe_voice_message, attachments)
@@ -238,7 +271,7 @@ async def process_signal_message(websocket, args, tools, tool_name_to_session):
             f"[{session_id}] Processing message for MCP: {user_message[:100]}{'...' if len(user_message) > 100 else ''}"
         )
 
-        await asyncio.to_thread(send_typing_indicator, session_id)
+        await asyncio.to_thread(send_typing_indicator, recipient)
         try:
             async for response in mcp_client.process_conversation_turn(
                 session_id, args, tools, tool_name_to_session, user_message, group_name=group_name
@@ -254,18 +287,18 @@ async def process_signal_message(websocket, args, tools, tool_name_to_session):
                         f"[{session_id}] Sending attachment: {len(response['media_file_paths'])} media files"
                     )
                     await asyncio.to_thread(
-                        send_attachment, session_id, session_id, response["text"], response["media_file_paths"]
+                        send_attachment, session_id, recipient, response["text"], response["media_file_paths"]
                     )
                 elif "text" in response:
                     client_logger.info(
                         f"[{session_id}] Sending text response: {response['text'][:100]}{'...' if len(response['text']) > 100 else ''}"
                     )
-                    await asyncio.to_thread(send_message, session_id, response["text"])
+                    await asyncio.to_thread(send_message, recipient, response["text"])
                 else:
-                    await asyncio.to_thread(send_typing_indicator, session_id)
+                    await asyncio.to_thread(send_typing_indicator, recipient)
 
         except Exception as e:
-            await asyncio.to_thread(clear_typing_indicator, session_id)
+            await asyncio.to_thread(clear_typing_indicator, recipient)
             client_logger.error(f"[{session_id}] Error during MCP processing: {e}")
             traceback.print_exc()
 

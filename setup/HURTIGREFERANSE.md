@@ -5,10 +5,10 @@
 systemctl --user status signal-cli-rest-api signal-mcp-client
 
 # Se live-logger fra boten
-journalctl --user -u signal-mcp-client -f
+journalctl --user -u signal-mcp-client.service -f
 
 # Restart begge tjenester
-systemctl --user restart signal-cli-rest-api signal-mcp-client
+systemctl --user restart signal-cli-rest-api signal-mcp-client.service
 
 ### Signal-registrering (kjør én gang)
 # 1. Start containeren manuelt første gang
@@ -19,7 +19,7 @@ podman run --name signal-cli-api --replace -p 8080:8080 \
 # 2. Koble til QR-kode (åpne i Windows-nettleser)
 #    http://localhost:8080/v1/qrcodelink?device_name=signal-bot
 
-# 3. Registrer Lycamobile-nummer
+# 3. Registrer telefon-nummer
 curl -X POST http://localhost:8080/v1/register/+47DITT-NUMMER
 
 # 4. Verifiser med SMS-kode
@@ -39,3 +39,9 @@ claude
 # Signal-data:           $HOME/.local/share/signal-api/
 # Systemd-tjenester:     $HOME/.config/systemd/user/
 # Repo:                  ~/projects/sommerferie2026/
+
+### Signal chat command reference
+# Set model through signal chat by sending /model <model name>
+# Available models: claude-opus-4-6, claude-sonnet-4-6, claude-haiku-4-5 
+# Default: claude-sonnet-4-6 
+
