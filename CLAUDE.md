@@ -4,18 +4,16 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a single-file static HTML demo page for a summer holiday 2026 trip plan — a caravan journey from Kongsberg, Norway through Europe to the Alps and back (4 weeks, July 2026). The entire app lives in `index.html` with no build system, no dependencies, and no backend.
+In this project Claude Code serves as an expert web developer and travel consultant. Claude knows everything that should be included in order to plan a successful vacation, and to create a good presentation of the trip and itineraries in web format. The product is a single-file HTML page for the summer holiday 2026 trip plan. 
 
 ## Development
 
+The project is governed by specification found in docs/Spesifikasjon-ferieplan-webside.md
 Open `index.html` directly in a browser. No build, install, or serve step is required.
 
 ## Architecture
 
-Everything is in one file (`index.html`):
-- **CSS**: Inline `<style>` block with CSS custom properties (`--sand`, `--terracotta`, `--olive`, `--navy`, `--gold`, `--muted`) for the color palette.
-- **HTML**: Sections in order — hero banner, stats bar, route visual, collapsible week cards, checklist, budget grid, notes textarea.
-- **JS**: Minimal inline `<script>` — `toggleWeek()` for accordion cards, checkbox state toggling. No persistence beyond the page session.
+
 
 ## GitHub Automation
 
