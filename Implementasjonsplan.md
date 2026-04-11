@@ -353,12 +353,12 @@ Claude kjører i WSL og kan ikke åpne nettleser direkte. Verifisering deles i t
 | Oppgave | Status | Notater |
 |---------|--------|---------|
 | **Fase 1: Ferieplanlegging** | | |
-| 1.1 Planlegg ruten (dag-for-dag) | Ikke startet | |
-| 1.2 Finn campingplasser | Ikke startet | |
-| 1.3 Finn aktiviteter og severdigheter | Ikke startet | |
-| 1.4 Beregn kjøretider og avstander | Ikke startet | |
-| 1.5 Oppdater spesifikasjonen (seksjon 2.3) | Ikke startet | |
-| 1.6 Commit | Ikke startet | |
+| 1.1 Planlegg ruten (dag-for-dag) | Fullfort | 8 stopp, 26 netter, hjemme 30. juli |
+| 1.2 Finn campingplasser | Fullfort | 8 campingplasser identifisert |
+| 1.3 Finn aktiviteter og severdigheter | Fullfort | 3-7 aktiviteter per stopp |
+| 1.4 Beregn kjøretider og avstander | Fullfort | ~2455 km + 3 ferger |
+| 1.5 Oppdater spesifikasjonen (seksjon 2.3) | Fullfort | Komplett ruteforslag i spec |
+| 1.6 Commit | Fullfort | |
 | **Fase 2: Sideskall og navigasjon** | | |
 | 2.1 Opprett index.html med boilerplate + CDN | Ikke startet | |
 | 2.2 Tailwind config (farger, fonter) | Ikke startet | |
