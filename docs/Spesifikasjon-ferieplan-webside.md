@@ -14,6 +14,7 @@ Familien Goderstad ønsker en flott sommerferie i år! For reisen ønsker vi en 
 
 ### 1.2 Målgruppe
 Websiden er kun for familien — ingen ekstern deling. Den skal fungere som et felles oppslagsverk og verktøy under hele planleggings- og reisefasen.
+Websiden må være på Norsk men lokale navn kan benyttes.
 
 ### 1.3 Bruksscenarier
 - Planlegging hjemme på PC i ukene før avreise
