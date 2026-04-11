@@ -404,10 +404,10 @@ Claude kjører i WSL og kan ikke åpne nettleser direkte. Verifisering deles i t
 | 6.8 Verifiser i nettleser | Fullfort | Preview-plugin: alt rendres OK |
 | 6.9 Commit | Fullfort | |
 | **Fase 7: Finpuss** | | |
-| 7.1 Responsiv testing | Ikke startet | |
-| 7.2 Kontrast og lesbarhet | Ikke startet | |
-| 7.3 Fjern emojier | Ikke startet | |
-| 7.4 Smooth scroll | Ikke startet | |
-| 7.5 Kodeorganisering (seksjonkommentarer) | Ikke startet | |
-| 7.6 Oppdater spesifikasjonen (endringslogg) | Ikke startet | |
-| 7.7 Endelig commit og push | Ikke startet | |
+| 7.1 Responsiv testing | Fullfort | 375px, 768px, 1280px — alle OK. Nav breakpoint lg:, overflow-x fix |
+| 7.2 Kontrast og lesbarhet | Fullfort | Muted #95A5A6 darknet til #607080 (4.68:1 pa cream, 5.09:1 pa hvit) |
+| 7.3 Fjern emojier | Fullfort | Ingen emojier funnet |
+| 7.4 Smooth scroll | Fullfort | scroll-behavior: smooth i CSS |
+| 7.5 Kodeorganisering (seksjonkommentarer) | Fullfort | 9 seksjonkommentarer allerede pa plass |
+| 7.6 Oppdater spesifikasjonen (endringslogg) | Fullfort | Endringslogg oppdatert |
+| 7.7 Endelig commit og push | Pagar | |

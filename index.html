@@ -26,7 +26,7 @@ tailwind.config = {
         sunshine: '#F4A621',
         charcoal: '#2C3E50',
         success: '#27AE60',
-        muted: '#95A5A6',
+        muted: '#607080',
       },
       fontFamily: {
         heading: ['Playfair Display', 'serif'],
@@ -50,7 +50,7 @@ tailwind.config = {
 </style>
 </head>
 
-<body class="bg-cream text-charcoal min-h-screen">
+<body class="bg-cream text-charcoal min-h-screen overflow-x-hidden">
 
 <!-- ===== ALPINE.JS APP ROOT ===== -->
 <div x-data="ferieApp()" x-init="init()">
@@ -63,7 +63,7 @@ tailwind.config = {
         <a href="#" class="font-heading text-white text-lg font-bold tracking-wide">Sommerferie 2026</a>
 
         <!-- Desktop-meny -->
-        <div class="hidden md:flex items-center gap-1">
+        <div class="hidden lg:flex items-center gap-1">
           <template x-for="section in sections" :key="section.id">
             <a :href="'#' + section.id"
                @click.prevent="scrollTo(section.id)"
@@ -78,7 +78,7 @@ tailwind.config = {
 
         <!-- Hamburgermeny-knapp (mobil) -->
         <button @click="mobileMenuOpen = !mobileMenuOpen"
-                class="md:hidden text-white p-2 -mr-2"
+                class="lg:hidden text-white p-2 -mr-2"
                 :aria-expanded="mobileMenuOpen"
                 aria-label="Meny">
           <svg x-show="!mobileMenuOpen" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -98,7 +98,7 @@ tailwind.config = {
            x-transition:leave="transition ease-in duration-150"
            x-transition:leave-start="opacity-100 translate-y-0"
            x-transition:leave-end="opacity-0 -translate-y-2"
-           class="md:hidden pb-3 border-t border-white/10">
+           class="lg:hidden pb-3 border-t border-white/10">
         <template x-for="section in sections" :key="section.id">
           <a :href="'#' + section.id"
              @click.prevent="scrollTo(section.id); mobileMenuOpen = false"
