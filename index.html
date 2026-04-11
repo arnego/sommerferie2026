@@ -315,10 +315,65 @@ tailwind.config = {
   <section id="pakkelister" class="py-12 sm:py-16">
     <div class="max-w-3xl mx-auto px-4 sm:px-6">
       <h2 class="font-heading text-2xl sm:text-3xl text-petrol mb-8">Pakkelister</h2>
-      <!-- Fase 5: Fylles med sjekklister og localStorage -->
-      <div class="bg-white rounded-xl p-8 text-center text-muted border border-sand/50">
-        <p class="text-sm">Pakkelister bygges i neste fase</p>
+
+      <!-- Tab-navigasjon -->
+      <div class="flex flex-wrap gap-1 mb-6 bg-white rounded-xl p-1.5 border border-sand/50">
+        <template x-for="tab in checklistTabs" :key="tab.id">
+          <button @click="activeChecklist = tab.id"
+                  class="flex-1 min-w-[100px] px-3 py-2.5 text-xs sm:text-sm font-medium rounded-lg transition-colors"
+                  :class="activeChecklist === tab.id ? 'bg-petrol text-white shadow-sm' : 'text-charcoal/60 hover:bg-cream'"
+                  x-text="tab.label"></button>
+        </template>
       </div>
+
+      <!-- Sjekkliste-innhold -->
+      <template x-for="tab in checklistTabs" :key="tab.id">
+        <div x-show="activeChecklist === tab.id" x-transition.opacity>
+
+          <!-- Fremgangsindikator -->
+          <div class="flex items-center gap-3 mb-4 px-1">
+            <div class="flex-1 h-2 bg-sand/60 rounded-full overflow-hidden">
+              <div class="h-full bg-success rounded-full transition-all duration-300"
+                   :style="'width:' + checklistProgress(tab.id) + '%'"></div>
+            </div>
+            <span class="text-xs text-muted font-medium whitespace-nowrap"
+                  x-text="checklistDoneCount(tab.id) + ' av ' + checklists[tab.id].length + ' fullfort'"></span>
+          </div>
+
+          <!-- Sjekkliste-items -->
+          <div class="bg-white rounded-xl border border-sand/50 overflow-hidden divide-y divide-sand/30">
+            <template x-for="(item, idx) in checklists[tab.id]" :key="idx">
+              <div>
+                <!-- Kategori-header (vises kun ved forste item i ny kategori) -->
+                <div x-show="idx === 0 || item.category !== checklists[tab.id][idx-1].category"
+                     class="px-5 py-2.5 bg-cream/70 text-xs font-semibold text-petrol uppercase tracking-wider"
+                     x-text="item.category"></div>
+                <!-- Item -->
+                <label class="flex items-center gap-3 px-5 py-3 cursor-pointer hover:bg-cream/30 transition-colors">
+                  <input type="checkbox"
+                         x-model="checklists[tab.id][idx].done"
+                         @change="saveChecklists()"
+                         class="w-4.5 h-4.5 rounded border-muted/40 text-success focus:ring-success/30 cursor-pointer flex-shrink-0">
+                  <span class="text-sm transition-all"
+                        :class="checklists[tab.id][idx].done ? 'line-through text-muted' : 'text-charcoal'"
+                        x-text="item.label"></span>
+                </label>
+              </div>
+            </template>
+          </div>
+
+          <!-- Nullstill-knapp -->
+          <div class="mt-4 flex justify-end">
+            <button @click="confirmReset = confirmReset === tab.id ? null : tab.id"
+                    class="text-xs text-muted hover:text-red-500 transition-colors px-3 py-1.5 rounded-lg hover:bg-red-50">
+              <span x-show="confirmReset !== tab.id">Nullstill liste</span>
+              <span x-show="confirmReset === tab.id" class="text-red-500 font-medium"
+                    @click.stop="resetChecklist(tab.id); confirmReset = null">Bekreft nullstilling</span>
+            </button>
+          </div>
+
+        </div>
+      </template>
     </div>
   </section>
 
@@ -360,7 +415,150 @@ function ferieApp() {
 
     // Sjekklister
     activeChecklist: 'pakkeliste',
-    checklists: {},
+    confirmReset: null,
+    checklistTabs: [
+      { id: 'pakkeliste', label: 'Pakkeliste' },
+      { id: 'campingvogn', label: 'Campingvogn' },
+      { id: 'foravreise', label: 'For avreise' },
+      { id: 'daglig', label: 'Daglig' },
+    ],
+    checklists: {
+      pakkeliste: [
+        // Klaer Ann Kristin
+        { label: 'Klaer Ann Kristin: Shorts og t-skjorter (5-6 stk)', done: false, category: 'Klaer Ann Kristin' },
+        { label: 'Klaer Ann Kristin: Langbukse og genser (2 stk)', done: false, category: 'Klaer Ann Kristin' },
+        { label: 'Klaer Ann Kristin: Badetoy og strandklaer', done: false, category: 'Klaer Ann Kristin' },
+        { label: 'Klaer Ann Kristin: Regnjakke', done: false, category: 'Klaer Ann Kristin' },
+        { label: 'Klaer Ann Kristin: Undertoy og sokker (7+ stk)', done: false, category: 'Klaer Ann Kristin' },
+        { label: 'Klaer Ann Kristin: Komfortable sko + sandaler', done: false, category: 'Klaer Ann Kristin' },
+        // Klaer Arne
+        { label: 'Klaer Arne: Shorts og t-skjorter (5-6 stk)', done: false, category: 'Klaer Arne' },
+        { label: 'Klaer Arne: Langbukse og genser (2 stk)', done: false, category: 'Klaer Arne' },
+        { label: 'Klaer Arne: Badetoy og strandklaer', done: false, category: 'Klaer Arne' },
+        { label: 'Klaer Arne: Regnjakke', done: false, category: 'Klaer Arne' },
+        { label: 'Klaer Arne: Undertoy og sokker (7+ stk)', done: false, category: 'Klaer Arne' },
+        { label: 'Klaer Arne: Komfortable sko + sandaler', done: false, category: 'Klaer Arne' },
+        // Klaer William
+        { label: 'Klaer William: Shorts og t-skjorter (6-7 stk)', done: false, category: 'Klaer William' },
+        { label: 'Klaer William: Langbukse og genser (2-3 stk)', done: false, category: 'Klaer William' },
+        { label: 'Klaer William: Badetoy og badeshorts (2 stk)', done: false, category: 'Klaer William' },
+        { label: 'Klaer William: Regnjakke og regntoy', done: false, category: 'Klaer William' },
+        { label: 'Klaer William: Undertoy og sokker (8+ stk)', done: false, category: 'Klaer William' },
+        { label: 'Klaer William: Gummistoevler + sandaler + sko', done: false, category: 'Klaer William' },
+        { label: 'Klaer William: Pysjamas (2 stk)', done: false, category: 'Klaer William' },
+        // Dokumenter
+        { label: 'Pass (alle 3)', done: false, category: 'Dokumenter' },
+        { label: 'Forerkort', done: false, category: 'Dokumenter' },
+        { label: 'Forsikringspapirer (reise + bil + vogn)', done: false, category: 'Dokumenter' },
+        { label: 'Vognkort campingvogn', done: false, category: 'Dokumenter' },
+        { label: 'CampingKey Europe-kort', done: false, category: 'Dokumenter' },
+        { label: 'Fergebilletter (utskrift/app)', done: false, category: 'Dokumenter' },
+        { label: 'Booking-bekreftelser campingplasser', done: false, category: 'Dokumenter' },
+        { label: 'Umweltplakette (gron miljoplakett, Tyskland)', done: false, category: 'Dokumenter' },
+        // Toalettsaker
+        { label: 'Tannborster, tannkrem, tanntrad', done: false, category: 'Toalettsaker' },
+        { label: 'Sjampo, balsam, dusjsape', done: false, category: 'Toalettsaker' },
+        { label: 'Deodorant', done: false, category: 'Toalettsaker' },
+        { label: 'Solkrem (hoy faktor, barne-solkrem)', done: false, category: 'Toalettsaker' },
+        { label: 'Aftersun / aloe vera', done: false, category: 'Toalettsaker' },
+        { label: 'Insektmiddel', done: false, category: 'Toalettsaker' },
+        { label: 'Handkleer (strand + bad)', done: false, category: 'Toalettsaker' },
+        // Medisin
+        { label: 'Forstehjelpsskrinn', done: false, category: 'Medisin og forstehjelp' },
+        { label: 'Smertestillende (voksne + barn)', done: false, category: 'Medisin og forstehjelp' },
+        { label: 'Kvalmestillende (for ferge/biltur)', done: false, category: 'Medisin og forstehjelp' },
+        { label: 'Plaster og bandasjer', done: false, category: 'Medisin og forstehjelp' },
+        { label: 'Allergimedisiner', done: false, category: 'Medisin og forstehjelp' },
+        { label: 'Flattbittsalve', done: false, category: 'Medisin og forstehjelp' },
+        // Elektronikk
+        { label: 'Mobilladere (minst 2 stk)', done: false, category: 'Elektronikk' },
+        { label: 'Nettbrett + lader (William)', done: false, category: 'Elektronikk' },
+        { label: 'Kamera + minnekort + lader', done: false, category: 'Elektronikk' },
+        { label: 'Powerbank', done: false, category: 'Elektronikk' },
+        { label: 'Hodetelefonene (bil + fly)', done: false, category: 'Elektronikk' },
+        { label: 'Reiseadapter (EU-plugg)', done: false, category: 'Elektronikk' },
+        // Underholdning William
+        { label: 'Tegnesaker (fargeblyanter, tegnebok)', done: false, category: 'Underholdning William' },
+        { label: 'Boeker (3-4 stk bildekoeker/lettlestboeker)', done: false, category: 'Underholdning William' },
+        { label: 'Smaa leker for bilturen', done: false, category: 'Underholdning William' },
+        { label: 'Sandleker (botte, spade, former)', done: false, category: 'Underholdning William' },
+        { label: 'Badering / svommevinger', done: false, category: 'Underholdning William' },
+        { label: 'Fotball', done: false, category: 'Underholdning William' },
+        // Uteutstyr
+        { label: 'Paraply', done: false, category: 'Uteutstyr' },
+        { label: 'Strandtelt / solskjerm', done: false, category: 'Uteutstyr' },
+        { label: 'Campingstoler (3 stk)', done: false, category: 'Uteutstyr' },
+        { label: 'Campingbord', done: false, category: 'Uteutstyr' },
+        { label: 'Lommelykt / hodelykt', done: false, category: 'Uteutstyr' },
+      ],
+      campingvogn: [
+        // Teknisk sjekk
+        { label: 'Sjekk hjulbolter og dekktrykk (vogn)', done: false, category: 'Teknisk sjekk' },
+        { label: 'Sjekk lys og bremser', done: false, category: 'Teknisk sjekk' },
+        { label: 'Kontroller bremsevaeskeniva', done: false, category: 'Teknisk sjekk' },
+        { label: 'Sjekk tilhengerfeste og kule', done: false, category: 'Teknisk sjekk' },
+        { label: 'Sjekk stabiliseringsstag', done: false, category: 'Teknisk sjekk' },
+        // Koblinger
+        { label: 'Stromkabel (CEE 16A, bla plugg)', done: false, category: 'Koblinger' },
+        { label: 'Adapter for strom (10A til 16A)', done: false, category: 'Koblinger' },
+        { label: 'Vannslange og kobling', done: false, category: 'Koblinger' },
+        { label: 'Forlengerledning (vanlig stikkontakt)', done: false, category: 'Koblinger' },
+        // Gass
+        { label: 'Gassflaske full (sjekk vekt)', done: false, category: 'Gass' },
+        { label: 'Gassregulator kontrollert', done: false, category: 'Gass' },
+        { label: 'Reservegassflaske', done: false, category: 'Gass' },
+        // Sikkerhet
+        { label: 'Brannslukker (kontrollert dato)', done: false, category: 'Sikkerhet' },
+        { label: 'Roeykvarsler (sjekk batteri)', done: false, category: 'Sikkerhet' },
+        { label: 'Refleksvest (2 stk, pabudt i DE)', done: false, category: 'Sikkerhet' },
+        { label: 'Varseltrekant', done: false, category: 'Sikkerhet' },
+        // Vignetter og plaketter
+        { label: 'Umweltplakette bestilt/montert', done: false, category: 'Vignetter og plaketter' },
+        { label: 'BroBizz / fergebrikke', done: false, category: 'Vignetter og plaketter' },
+        // Annet vogn
+        { label: 'Nivellerklosser / oppkjoringsrampe', done: false, category: 'Annet utstyr' },
+        { label: 'Markisekroker og fortelt', done: false, category: 'Annet utstyr' },
+        { label: 'Doermatte (ute)', done: false, category: 'Annet utstyr' },
+        { label: 'Oppvaskmiddel og svamp', done: false, category: 'Annet utstyr' },
+        { label: 'Kjokkenutstyr (gryte, panne, bestikk)', done: false, category: 'Annet utstyr' },
+      ],
+      foravreise: [
+        { label: 'Stoppe post / omadressere', done: false, category: 'Hus og hjem' },
+        { label: 'Vanne planter / avtale med nabo', done: false, category: 'Hus og hjem' },
+        { label: 'Sikre hus (vinduer, doerer, laaser)', done: false, category: 'Hus og hjem' },
+        { label: 'Sla av unodvendig strom', done: false, category: 'Hus og hjem' },
+        { label: 'Tomme kjoeleskap og fryser', done: false, category: 'Hus og hjem' },
+        { label: 'Sett pa alarm', done: false, category: 'Hus og hjem' },
+        { label: 'Levere nokler til nabo', done: false, category: 'Hus og hjem' },
+        { label: 'Ta ut sopla', done: false, category: 'Hus og hjem' },
+        { label: 'Sjekk reiseforsikring er aktiv', done: false, category: 'Forberedelser' },
+        { label: 'Last ned offline kart (Google Maps)', done: false, category: 'Forberedelser' },
+        { label: 'Sjekk veistatus og eventuelle sperringer', done: false, category: 'Forberedelser' },
+        { label: 'Fyll drivstoff kvelden for', done: false, category: 'Forberedelser' },
+        { label: 'Lad alle enheter (telefon, nettbrett, kamera)', done: false, category: 'Forberedelser' },
+        { label: 'Pakk kjolebag til fergen', done: false, category: 'Forberedelser' },
+      ],
+      daglig: [
+        // Ankomst
+        { label: 'Niveller campingvognen', done: false, category: 'Ankomst campingplass' },
+        { label: 'Koble til strom (sjekk spenning)', done: false, category: 'Ankomst campingplass' },
+        { label: 'Koble til vann', done: false, category: 'Ankomst campingplass' },
+        { label: 'Sjekk gassanlegg', done: false, category: 'Ankomst campingplass' },
+        { label: 'Apne markise', done: false, category: 'Ankomst campingplass' },
+        { label: 'Sett ut campingstoler og bord', done: false, category: 'Ankomst campingplass' },
+        { label: 'Registrer dere i resepsjonen', done: false, category: 'Ankomst campingplass' },
+        // Avreise
+        { label: 'Steng vanntilkobling', done: false, category: 'Avreise campingplass' },
+        { label: 'Sikre skap og skuffer (laaas doerer)', done: false, category: 'Avreise campingplass' },
+        { label: 'Lukk alle vinduer og takluke', done: false, category: 'Avreise campingplass' },
+        { label: 'Koble fra strom', done: false, category: 'Avreise campingplass' },
+        { label: 'Lukk markise og fest', done: false, category: 'Avreise campingplass' },
+        { label: 'Ta inn alt uteutstyr', done: false, category: 'Avreise campingplass' },
+        { label: 'Sjekk at ingenting er gjenglemt ute', done: false, category: 'Avreise campingplass' },
+        { label: 'Tom graa-/sortvannstank', done: false, category: 'Avreise campingplass' },
+        { label: 'Sjekk lys og bremser for kjoring', done: false, category: 'Avreise campingplass' },
+      ],
+    },
 
     // Kart
     map: null,
@@ -703,6 +901,9 @@ function ferieApp() {
     },
 
     init() {
+      // Last sjekklister fra localStorage
+      this.loadChecklists();
+
       // Initialiser kartet etter DOM er klar
       this.$nextTick(() => {
         this.initMap();
@@ -802,15 +1003,41 @@ function ferieApp() {
       }
     },
 
-    // Sjekkliste-metoder (fase 5)
+    // Sjekkliste-metoder
+    checklistDoneCount(listId) {
+      return (this.checklists[listId] || []).filter(i => i.done).length;
+    },
+    checklistProgress(listId) {
+      const list = this.checklists[listId] || [];
+      if (list.length === 0) return 0;
+      return Math.round((list.filter(i => i.done).length / list.length) * 100);
+    },
+    resetChecklist(listId) {
+      this.checklists[listId].forEach(item => item.done = false);
+      this.saveChecklists();
+    },
     saveChecklists() {
-      localStorage.setItem('sommerferie2026-checklists', JSON.stringify(this.checklists));
+      const data = {};
+      Object.keys(this.checklists).forEach(key => {
+        data[key] = this.checklists[key].map(item => item.done);
+      });
+      localStorage.setItem('sommerferie2026-checklists', JSON.stringify(data));
     },
     loadChecklists() {
       const saved = localStorage.getItem('sommerferie2026-checklists');
-      if (saved) {
-        try { this.checklists = JSON.parse(saved); } catch(e) {}
-      }
+      if (!saved) return;
+      try {
+        const data = JSON.parse(saved);
+        Object.keys(data).forEach(key => {
+          if (this.checklists[key]) {
+            data[key].forEach((done, i) => {
+              if (i < this.checklists[key].length) {
+                this.checklists[key][i].done = done;
+              }
+            });
+          }
+        });
+      } catch(e) {}
     },
   };
 }

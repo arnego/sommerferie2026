@@ -385,14 +385,14 @@ Claude kjører i WSL og kan ikke åpne nettleser direkte. Verifisering deles i t
 | 4.5 Verifiser i nettleser | Fullfort | Preview-plugin: expand OK, innhold OK |
 | 4.6 Commit | Fullfort | |
 | **Fase 5: Pakkelister** | | |
-| 5.1 Tab-navigasjon (4 faner) | Ikke startet | |
-| 5.2 Generer sjekklisteinnhold | Ikke startet | |
-| 5.3 Checkbox-logikk | Ikke startet | |
-| 5.4 localStorage-persistering | Ikke startet | |
-| 5.5 Fremgangsindikator | Ikke startet | |
-| 5.6 Nullstill-knapp | Ikke startet | |
-| 5.7 Verifiser i nettleser | Ikke startet | |
-| 5.8 Commit | Ikke startet | |
+| 5.1 Tab-navigasjon (4 faner) | Fullfort | Pakkeliste, Campingvogn, For avreise, Daglig |
+| 5.2 Generer sjekklisteinnhold | Fullfort | 110 items totalt (57+23+14+16) |
+| 5.3 Checkbox-logikk | Fullfort | x-model med gjennomstreking |
+| 5.4 localStorage-persistering | Fullfort | Overlever reload, merger nye items |
+| 5.5 Fremgangsindikator | Fullfort | Progress-bar + "X av Y fullfort" |
+| 5.6 Nullstill-knapp | Fullfort | Med bekreftelsestekst |
+| 5.7 Verifiser i nettleser | Fullfort | Preview-plugin: toggle+reload OK |
+| 5.8 Commit | Fullfort | |
 | **Fase 6: Budsjett & Praktisk** | | |
 | 6.1 Budsjett-grid | Ikke startet | |
 | 6.2 Valutatabell | Ikke startet | |
