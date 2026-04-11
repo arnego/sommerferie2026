@@ -360,23 +360,23 @@ Claude kjører i WSL og kan ikke åpne nettleser direkte. Verifisering deles i t
 | 1.5 Oppdater spesifikasjonen (seksjon 2.3) | Fullfort | Komplett ruteforslag i spec |
 | 1.6 Commit | Fullfort | |
 | **Fase 2: Sideskall og navigasjon** | | |
-| 2.1 Opprett index.html med boilerplate + CDN | Ikke startet | |
-| 2.2 Tailwind config (farger, fonter) | Ikke startet | |
-| 2.3 Alpine.js app-skjelett med stops-data | Ikke startet | |
-| 2.4 Sticky toppmeny + hamburgermeny | Ikke startet | |
-| 2.5 Hero-seksjon med stats-bar | Ikke startet | |
-| 2.6 Seksjon-placeholders | Ikke startet | |
-| 2.7 Verifiser i nettleser | Ikke startet | |
-| 2.8 Commit | Ikke startet | |
+| 2.1 Opprett index.html med boilerplate + CDN | Fullfort | Tailwind, Alpine, Leaflet, Google Fonts |
+| 2.2 Tailwind config (farger, fonter) | Fullfort | 7 farger + 2 fontfamilier |
+| 2.3 Alpine.js app-skjelett med stops-data | Fullfort | 8 stopp med komplett data |
+| 2.4 Sticky toppmeny + hamburgermeny | Fullfort | Verifisert mobil + desktop |
+| 2.5 Hero-seksjon med stats-bar | Fullfort | 4 stats, sunshine-bar |
+| 2.6 Seksjon-placeholders | Fullfort | 4 seksjoner med id |
+| 2.7 Verifiser i nettleser | Fullfort | Preview-plugin: desktop + mobil OK |
+| 2.8 Commit | Pagar | |
 | **Fase 3: Kart (Leaflet)** | | |
-| 3.1 Leaflet-initialisering | Ikke startet | |
-| 3.2 Stoppmarkører fra stops-array | Ikke startet | |
-| 3.3 Popups ved klikk | Ikke startet | |
-| 3.4 Polylinje mellom stopp | Ikke startet | |
-| 3.5 GPS-posisjon | Ikke startet | |
-| 3.6 Kartresize ved scroll | Ikke startet | |
-| 3.7 Verifiser i nettleser | Ikke startet | |
-| 3.8 Commit | Ikke startet | |
+| 3.1 Leaflet-initialisering | Fullfort | fitBounds, responsive hoyde |
+| 3.2 Stoppmarkorer fra stops-array | Fullfort | 9 markorer (8 stopp + Kongsberg) |
+| 3.3 Popups ved klikk | Fullfort | Navn, datoer, camping-lenke |
+| 3.4 Polylinje mellom stopp | Fullfort | Petrol, stiplet |
+| 3.5 GPS-posisjon | Fullfort | Sunshine-gul markur |
+| 3.6 Kartresize ved scroll | Fullfort | Via fitBounds i init |
+| 3.7 Verifiser i nettleser | Fullfort | Preview-plugin: 9 markorer, 0 feil |
+| 3.8 Commit | Pagar | |
 | **Fase 4: Reiseplan** | | |
 | 4.1 "I dag"-kort med datosammenligning | Ikke startet | |
 | 4.2 Ukekort (4 stk) med expand/collapse | Ikke startet | |

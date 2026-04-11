@@ -3,654 +3,626 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sommerferie 2026 – Demo</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<title>Sommerferie 2026 - Familie-roadtrip</title>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<!-- Leaflet CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+<!-- Tailwind CSS play-cdn -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        petrol: '#1B4F72',
+        sand: '#F5DEB3',
+        cream: '#FBF5E6',
+        sunshine: '#F4A621',
+        charcoal: '#2C3E50',
+        success: '#27AE60',
+        muted: '#95A5A6',
+      },
+      fontFamily: {
+        heading: ['Playfair Display', 'serif'],
+        body: ['Inter', 'sans-serif'],
+      },
+    },
+  },
+}
+</script>
+
+<!-- Alpine.js -->
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
 <style>
-  :root {
-    --sand: #f5efe6;
-    --cream: #fdf8f2;
-    --terracotta: #c9623f;
-    --olive: #6b7c52;
-    --navy: #1e2d40;
-    --gold: #d4a843;
-    --muted: #8a7f74;
-  }
-
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-
-  body {
-    font-family: 'DM Sans', sans-serif;
-    background: var(--cream);
-    color: var(--navy);
-    min-height: 100vh;
-  }
-
-  /* HEADER */
-  .hero {
-    background: var(--navy);
-    color: white;
-    padding: 60px 24px 48px;
-    position: relative;
-    overflow: hidden;
-  }
-  .hero::before {
-    content: '';
-    position: absolute;
-    top: -80px; right: -80px;
-    width: 320px; height: 320px;
-    background: radial-gradient(circle, rgba(212,168,67,0.18) 0%, transparent 70%);
-    border-radius: 50%;
-  }
-  .hero::after {
-    content: '';
-    position: absolute;
-    bottom: -60px; left: -40px;
-    width: 240px; height: 240px;
-    background: radial-gradient(circle, rgba(201,98,63,0.14) 0%, transparent 70%);
-    border-radius: 50%;
-  }
-  .hero-inner {
-    max-width: 720px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 1;
-  }
-  .hero-tag {
-    display: inline-block;
-    background: var(--terracotta);
-    color: white;
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    padding: 5px 14px;
-    border-radius: 2px;
-    margin-bottom: 20px;
-  }
-  .hero h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(2rem, 6vw, 3.4rem);
-    line-height: 1.15;
-    margin-bottom: 14px;
-  }
-  .hero h1 span { color: var(--gold); }
-  .hero-sub {
-    font-size: 15px;
-    color: rgba(255,255,255,0.65);
-    font-weight: 300;
-    letter-spacing: 0.3px;
-  }
-
-  /* STATS BAR */
-  .stats {
-    background: var(--terracotta);
-    display: flex;
-    justify-content: center;
-    gap: 0;
-    flex-wrap: wrap;
-  }
-  .stat {
-    padding: 18px 32px;
-    text-align: center;
-    color: white;
-    border-right: 1px solid rgba(255,255,255,0.2);
-    flex: 1;
-    min-width: 100px;
-  }
-  .stat:last-child { border-right: none; }
-  .stat-num {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.6rem;
-    display: block;
-    line-height: 1;
-  }
-  .stat-lbl {
-    font-size: 10px;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    opacity: 0.8;
-    margin-top: 4px;
-    display: block;
-  }
-
-  /* MAIN CONTENT */
-  .container {
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 40px 24px 80px;
-  }
-
-  .section-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.3rem;
-    color: var(--navy);
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  .section-title::after {
-    content: '';
-    flex: 1;
-    height: 1px;
-    background: rgba(0,0,0,0.1);
-  }
-
-  /* ROUTE MAP (visual) */
-  .route-visual {
-    background: var(--sand);
-    border-radius: 12px;
-    padding: 28px 24px;
-    margin-bottom: 40px;
-    position: relative;
-    overflow: hidden;
-  }
-  .route-visual::before {
-    content: '🗺';
-    position: absolute;
-    right: 20px; top: 16px;
-    font-size: 2rem;
-    opacity: 0.15;
-  }
-  .route-stops {
-    display: flex;
-    align-items: center;
-    gap: 0;
-    flex-wrap: wrap;
-    row-gap: 12px;
-  }
-  .stop {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 13px;
-    font-weight: 500;
-    color: var(--navy);
-  }
-  .stop-dot {
-    width: 10px; height: 10px;
-    border-radius: 50%;
-    background: var(--terracotta);
-    flex-shrink: 0;
-  }
-  .stop-dot.home { background: var(--olive); }
-  .stop-dot.end  { background: var(--gold); }
-  .stop-dot.special { background: #7b2d8b; }
-  .stop-dot.beach { background: #2a8fbf; }
-  .stop-dot.cologne { background: #b8860b; }
-  .stop-arrow {
-    color: var(--muted);
-    font-size: 12px;
-    padding: 0 4px;
-  }
-
-  /* WEEK CARDS */
-  .weeks { display: flex; flex-direction: column; gap: 16px; margin-bottom: 40px; }
-
-  .week-card {
-    background: white;
-    border-radius: 12px;
-    overflow: hidden;
-    border: 1px solid rgba(0,0,0,0.07);
-    transition: box-shadow 0.2s;
-    cursor: pointer;
-  }
-  .week-card:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.09); }
-  .week-card.featured {
-    border: 1px solid rgba(123,45,139,0.25);
-  }
-  .week-card.featured .week-header {
-    border-bottom: 1px solid rgba(123,45,139,0.12);
-  }
-  .week-card.cologne-card {
-    border: 1px solid rgba(184,134,11,0.25);
-  }
-  .week-card.cologne-card .week-header {
-    border-bottom: 1px solid rgba(184,134,11,0.12);
-  }
-
-  .week-header {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    padding: 18px 22px;
-    border-bottom: 1px solid rgba(0,0,0,0.06);
-  }
-  .week-num {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.8rem;
-    color: var(--terracotta);
-    line-height: 1;
-    min-width: 40px;
-  }
-  .week-info h3 {
-    font-size: 14px;
-    font-weight: 500;
-    margin-bottom: 2px;
-  }
-  .week-info p {
-    font-size: 12px;
-    color: var(--muted);
-  }
-  .week-flag {
-    margin-left: auto;
-    font-size: 1.6rem;
-  }
-  .week-body {
-    padding: 16px 22px;
-    display: none;
-  }
-  .week-body.open { display: block; }
-  .week-body p {
-    font-size: 13.5px;
-    color: #555;
-    line-height: 1.7;
-    margin-bottom: 12px;
-  }
-  .highlights {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-  .tag {
-    background: var(--sand);
-    color: var(--navy);
-    font-size: 11px;
-    padding: 5px 12px;
-    border-radius: 20px;
-    font-weight: 500;
-  }
-  .tag.green { background: #e8f0e0; color: var(--olive); }
-  .tag.blue  { background: #e0e9f5; color: #2a5298; }
-  .tag.purple { background: #f0e5f5; color: #7b2d8b; }
-  .tag.teal { background: #e0f2f5; color: #1a7a8a; }
-  .tag.gold { background: #fdf3d9; color: #7a5c00; }
-
-  /* SUB-STOP CARD */
-  .sub-stop {
-    background: var(--sand);
-    border-radius: 10px;
-    padding: 16px 18px;
-    margin: 14px 0;
-    border-left: 3px solid #7b2d8b;
-  }
-  .sub-stop.beach-stop {
-    border-left: 3px solid #2a8fbf;
-  }
-  .sub-stop.cologne-stop {
-    border-left: 3px solid #b8860b;
-  }
-  .sub-stop-header {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 8px;
-  }
-  .sub-stop-icon {
-    font-size: 1.3rem;
-  }
-  .sub-stop-title {
-    font-size: 13.5px;
-    font-weight: 500;
-    color: var(--navy);
-  }
-  .sub-stop-subtitle {
-    font-size: 11px;
-    color: var(--muted);
-    margin-top: 1px;
-  }
-  .sub-stop p {
-    font-size: 13px;
-    color: #555;
-    line-height: 1.7;
-    margin-bottom: 8px;
-  }
-  .sub-stop p:last-of-type { margin-bottom: 10px; }
-  .tip-list {
-    list-style: none;
-    padding: 0;
-    margin: 8px 0 10px;
-  }
-  .tip-list li {
-    font-size: 12.5px;
-    color: #555;
-    line-height: 1.65;
-    padding: 3px 0 3px 18px;
-    position: relative;
-  }
-  .tip-list li::before {
-    content: '›';
-    position: absolute;
-    left: 4px;
-    color: #7b2d8b;
-    font-weight: 700;
-  }
-  .beach-stop .tip-list li::before {
-    color: #2a8fbf;
-  }
-  .cologne-stop .tip-list li::before {
-    color: #b8860b;
-  }
-
-  /* CHECKLIST */
-  .checklist {
-    background: white;
-    border-radius: 12px;
-    border: 1px solid rgba(0,0,0,0.07);
-    overflow: hidden;
-    margin-bottom: 40px;
-  }
-  .check-item {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    padding: 14px 22px;
-    border-bottom: 1px solid rgba(0,0,0,0.05);
-    font-size: 13.5px;
-    cursor: pointer;
-    transition: background 0.15s;
-  }
-  .check-item:last-child { border-bottom: none; }
-  .check-item:hover { background: var(--sand); }
-  .check-item input[type="checkbox"] {
-    width: 17px; height: 17px;
-    accent-color: var(--terracotta);
-    cursor: pointer;
-    flex-shrink: 0;
-  }
-  .check-item.done span {
-    text-decoration: line-through;
-    color: var(--muted);
-  }
-  .check-cat {
-    font-size: 10px;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: var(--muted);
-    margin-left: auto;
-  }
-
-  /* BUDGET */
-  .budget-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-    margin-bottom: 40px;
-  }
-  @media (max-width: 480px) { .budget-grid { grid-template-columns: 1fr; } }
-  .budget-item {
-    background: white;
-    border-radius: 10px;
-    padding: 18px 20px;
-    border: 1px solid rgba(0,0,0,0.07);
-  }
-  .budget-label {
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-    color: var(--muted);
-    margin-bottom: 6px;
-  }
-  .budget-amount {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.4rem;
-    color: var(--navy);
-  }
-  .budget-amount span { font-size: 0.85rem; color: var(--muted); font-family: 'DM Sans', sans-serif; }
-  .budget-bar {
-    margin-top: 8px;
-    height: 4px;
-    background: var(--sand);
-    border-radius: 2px;
-    overflow: hidden;
-  }
-  .budget-fill {
-    height: 100%;
-    background: var(--terracotta);
-    border-radius: 2px;
-    transition: width 1s ease;
-  }
-
-  /* NOTE BOX */
-  .note-box {
-    background: linear-gradient(135deg, var(--olive) 0%, #4a5c38 100%);
-    border-radius: 12px;
-    padding: 24px 28px;
-    color: white;
-  }
-  .note-box h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-  }
-  .note-box p {
-    font-size: 13px;
-    opacity: 0.85;
-    line-height: 1.7;
-  }
-  .note-box textarea {
-    width: 100%;
-    margin-top: 14px;
-    background: rgba(255,255,255,0.12);
-    border: 1px solid rgba(255,255,255,0.25);
-    border-radius: 8px;
-    padding: 12px;
-    color: white;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 13px;
-    resize: vertical;
-    min-height: 80px;
-    outline: none;
-  }
-  .note-box textarea::placeholder { color: rgba(255,255,255,0.45); }
-
-  /* FOOTER */
-  footer {
-    text-align: center;
-    padding: 24px;
-    font-size: 11px;
-    color: var(--muted);
-    letter-spacing: 0.5px;
-  }
-
-  /* ANIMATIONS */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(18px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-  .hero-inner, .stats, .container > * {
-    animation: fadeUp 0.5s ease both;
-  }
-  .stats { animation-delay: 0.1s; }
-  .container > *:nth-child(1) { animation-delay: 0.15s; }
-  .container > *:nth-child(2) { animation-delay: 0.2s; }
-  .container > *:nth-child(3) { animation-delay: 0.25s; }
-  .container > *:nth-child(4) { animation-delay: 0.3s; }
-  .container > *:nth-child(5) { animation-delay: 0.35s; }
+  [x-cloak] { display: none !important; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; }
 </style>
 </head>
-<body>
 
-<div class="hero">
-  <div class="hero-inner">
-    <div class="hero-tag">Demo · Sommerferie 2026</div>
-    <h1>Fra <span>Kongsberg</span><br>til Alpene og tilbake</h1>
-    <p class="hero-sub">4 uker · Campingvogn · 2 voksne + 1 barn · Juli 2026</p>
-  </div>
+<body class="bg-cream text-charcoal min-h-screen">
+
+<!-- ===== ALPINE.JS APP ROOT ===== -->
+<div x-data="ferieApp()" x-init="init()">
+
+  <!-- ===== SEKSJON: NAVIGASJON ===== -->
+  <nav class="sticky top-0 z-50 bg-petrol/95 backdrop-blur-sm shadow-md">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center justify-between h-14">
+        <!-- Logo -->
+        <a href="#" class="font-heading text-white text-lg font-bold tracking-wide">Sommerferie 2026</a>
+
+        <!-- Desktop-meny -->
+        <div class="hidden md:flex items-center gap-1">
+          <template x-for="section in sections" :key="section.id">
+            <a :href="'#' + section.id"
+               @click.prevent="scrollTo(section.id)"
+               class="px-4 py-2 text-sm text-white/80 hover:text-white transition-colors relative"
+               :class="activeSection === section.id && 'text-white font-medium'">
+              <span x-text="section.label"></span>
+              <span x-show="activeSection === section.id"
+                    class="absolute bottom-0 left-2 right-2 h-0.5 bg-sunshine rounded-full"></span>
+            </a>
+          </template>
+        </div>
+
+        <!-- Hamburgermeny-knapp (mobil) -->
+        <button @click="mobileMenuOpen = !mobileMenuOpen"
+                class="md:hidden text-white p-2 -mr-2"
+                :aria-expanded="mobileMenuOpen"
+                aria-label="Meny">
+          <svg x-show="!mobileMenuOpen" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+          <svg x-show="mobileMenuOpen" x-cloak class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobilmeny -->
+      <div x-show="mobileMenuOpen" x-cloak
+           x-transition:enter="transition ease-out duration-200"
+           x-transition:enter-start="opacity-0 -translate-y-2"
+           x-transition:enter-end="opacity-100 translate-y-0"
+           x-transition:leave="transition ease-in duration-150"
+           x-transition:leave-start="opacity-100 translate-y-0"
+           x-transition:leave-end="opacity-0 -translate-y-2"
+           class="md:hidden pb-3 border-t border-white/10">
+        <template x-for="section in sections" :key="section.id">
+          <a :href="'#' + section.id"
+             @click.prevent="scrollTo(section.id); mobileMenuOpen = false"
+             class="block px-4 py-3 text-sm text-white/80 hover:text-white hover:bg-white/5 transition-colors"
+             :class="activeSection === section.id && 'text-white font-medium border-l-2 border-sunshine'">
+            <span x-text="section.label"></span>
+          </a>
+        </template>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== SEKSJON: HERO ===== -->
+  <header class="bg-petrol text-white relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-96 h-96 bg-sunshine/10 rounded-full -translate-y-1/2 translate-x-1/3 blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 w-72 h-72 bg-petrol/50 rounded-full translate-y-1/2 -translate-x-1/4 blur-3xl"></div>
+
+    <div class="relative max-w-3xl mx-auto px-6 pt-16 pb-12">
+      <p class="inline-block bg-sunshine/20 text-sunshine text-xs font-semibold tracking-widest uppercase px-3 py-1.5 rounded mb-6">Sommerferie 2026</p>
+      <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-4">
+        Fra <span class="text-sunshine">Kongsberg</span><br class="sm:hidden"> til Europa og tilbake
+      </h1>
+      <p class="text-white/60 text-base sm:text-lg font-light">4 uker &middot; Campingvogn &middot; 2 voksne + 1 barn &middot; Juli 2026</p>
+    </div>
+
+    <!-- Stats-bar -->
+    <div class="bg-sunshine/90 text-petrol">
+      <div class="max-w-3xl mx-auto grid grid-cols-4 divide-x divide-petrol/10">
+        <div class="py-4 text-center">
+          <span class="font-heading text-2xl sm:text-3xl font-bold block" x-text="totalWeeks">4</span>
+          <span class="text-[10px] sm:text-xs uppercase tracking-wider font-medium opacity-80">Uker</span>
+        </div>
+        <div class="py-4 text-center">
+          <span class="font-heading text-2xl sm:text-3xl font-bold block" x-text="totalCountries">4</span>
+          <span class="text-[10px] sm:text-xs uppercase tracking-wider font-medium opacity-80">Land</span>
+        </div>
+        <div class="py-4 text-center">
+          <span class="font-heading text-2xl sm:text-3xl font-bold block">~2 500</span>
+          <span class="text-[10px] sm:text-xs uppercase tracking-wider font-medium opacity-80">Km</span>
+        </div>
+        <div class="py-4 text-center">
+          <span class="font-heading text-2xl sm:text-3xl font-bold block" x-text="stops.length">8</span>
+          <span class="text-[10px] sm:text-xs uppercase tracking-wider font-medium opacity-80">Stopp</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== SEKSJON: KART ===== -->
+  <section id="kart" class="py-12 sm:py-16">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <h2 class="font-heading text-2xl sm:text-3xl text-petrol mb-6">Rutekart</h2>
+      <div id="map" class="w-full h-[40vh] sm:h-[55vh] lg:h-[60vh] rounded-xl shadow-lg border border-sand/50 z-0"></div>
+    </div>
+  </section>
+
+  <!-- ===== SEKSJON: REISEPLAN ===== -->
+  <section id="reiseplan" class="py-12 sm:py-16 bg-sand/30">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <h2 class="font-heading text-2xl sm:text-3xl text-petrol mb-8">Reiseplan</h2>
+      <!-- Fase 4: Fylles med "i dag"-kort og ukekort -->
+      <div class="bg-white rounded-xl p-8 text-center text-muted border border-sand/50">
+        <p class="text-sm">Reiseplan bygges i neste fase</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SEKSJON: PAKKELISTER ===== -->
+  <section id="pakkelister" class="py-12 sm:py-16">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <h2 class="font-heading text-2xl sm:text-3xl text-petrol mb-8">Pakkelister</h2>
+      <!-- Fase 5: Fylles med sjekklister og localStorage -->
+      <div class="bg-white rounded-xl p-8 text-center text-muted border border-sand/50">
+        <p class="text-sm">Pakkelister bygges i neste fase</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SEKSJON: BUDSJETT & PRAKTISK ===== -->
+  <section id="budsjett" class="py-12 sm:py-16 bg-sand/30">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <h2 class="font-heading text-2xl sm:text-3xl text-petrol mb-8">Budsjett & Praktisk</h2>
+      <!-- Fase 6: Fylles med budsjett, valuta, fartsgrenser etc. -->
+      <div class="bg-white rounded-xl p-8 text-center text-muted border border-sand/50">
+        <p class="text-sm">Budsjett og praktisk info bygges i neste fase</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="bg-petrol text-white/50 text-center py-8 text-xs tracking-wide">
+    <p>Sommerferie 2026 &middot; Familien Goderstad</p>
+  </footer>
+
 </div>
+<!-- END Alpine.js app root -->
 
-<div class="stats">
-  <div class="stat"><span class="stat-num">4</span><span class="stat-lbl">Uker</span></div>
-  <div class="stat"><span class="stat-num">6</span><span class="stat-lbl">Land</span></div>
-  <div class="stat"><span class="stat-num">~4 500</span><span class="stat-lbl">Km total</span></div>
-  <div class="stat"><span class="stat-num">15+</span><span class="stat-lbl">Stopp</span></div>
-</div>
+<!-- ===== ALPINE.JS APP ===== -->
+<script>
+function ferieApp() {
+  return {
+    // Navigasjon
+    activeSection: 'kart',
+    mobileMenuOpen: false,
+    sections: [
+      { id: 'kart', label: 'Kart' },
+      { id: 'reiseplan', label: 'Reiseplan' },
+      { id: 'pakkelister', label: 'Pakkelister' },
+      { id: 'budsjett', label: 'Budsjett & Praktisk' },
+    ],
 
-<div class="container">
+    // Reiseplan
+    expandedWeek: null,
 
-  <!-- ROUTE -->
-  <div class="section-title">Ruten</div>
-  <div class="route-visual">
-    <div class="route-stops">
-      <div class="stop"><div class="stop-dot home"></div>Kongsberg</div>
-      <span class="stop-arrow">→</span>
-      <div class="stop"><div class="stop-dot beach"></div>Løkken Strand</div>
-      <span class="stop-arrow">→</span>
-      <div class="stop"><div class="stop-dot"></div>Göteborg</div>
-      <span class="stop-arrow">→</span>
-      <div class="stop"><div class="stop-dot"></div>København</div>
-      <span class="stop-arrow">→</span>
-      <div class="stop"><div class="stop-dot"></div>Hamburg</div>
-      <span class="stop-arrow">→</span>
-      <div class="stop"><div class="stop-dot cologne"></div>Køln</div>
-      <span class="stop-arrow">→</span>
-      <div class="stop"><div class="stop-dot"></div>Amsterdam</div>
-      <span class="stop-arrow">→</span>
-      <div class="stop"><div class="stop-dot special"></div>Nürburgring</div>
-      <span class="stop-arrow">→</span>
-      <div class="stop"><div class="stop-dot"></div>Schwarzwald</div>
-      <span class="stop-arrow">→</span>
-      <div class="stop"><div class="stop-dot end"></div>Østerrike / Alpene</div>
-    </div>
-  </div>
+    // Sjekklister
+    activeChecklist: 'pakkeliste',
+    checklists: {},
 
-  <!-- WEEKS -->
-  <div class="section-title">Ukeoversikt</div>
-  <div class="weeks">
+    // Kart
+    map: null,
 
-    <div class="week-card" onclick="toggleWeek(this)">
-      <div class="week-header">
-        <div class="week-num">28</div>
-        <div class="week-info">
-          <h3>Løkken Strand – Første stopp</h3>
-          <p>6.–11. juli · 5 netter ved Vesterhavet, Danmark</p>
-        </div>
-        <div class="week-flag">🇩🇰</div>
-      </div>
-      <div class="week-body">
-        <p>Avreise fra Kongsberg mandag 6. juli. Ruten går sørover gjennom Sverige og inn i Danmark via Göteborg og Frederikshavn (ferge) eller Øresundbroen, avhengig av ønsket kjørerute. Første stopp er Løkken Klit Camping og Hytteby i Løkken Strand – en populær dansk badeby ved Vesterhavet i Nordjylland.</p>
+    // Beregnet
+    get totalWeeks() { return 4; },
+    get totalCountries() {
+      const countries = new Set(this.stops.map(s => s.country));
+      return countries.size;
+    },
 
-        <div class="sub-stop beach-stop">
-          <div class="sub-stop-header">
-            <div class="sub-stop-icon">🏖️</div>
-            <div>
-              <div class="sub-stop-title">Løkken Klit Camping og Hytteby</div>
-              <div class="sub-stop-subtitle">Løkken Strand, Nordjylland, Danmark · 5 netter (6.–11. juli)</div>
-            </div>
-          </div>
-          <p>Løkken Klit Camping og Hytteby ligger idyllisk til ved Vesterhavet i Løkken – en av Danmarks mest sjarmerende badebyer med hvit sandstrand, klitter og tradisjonsrik kystkultur. Campingplassen er et perfekt første stopp for en barnefamilie, med strandnærhet og gode fasiliteter.</p>
+    // Sentral datastruktur: stops
+    stops: [
+      {
+        id: 1,
+        name: 'Lokken Strand',
+        country: 'Danmark',
+        countryCode: 'DK',
+        lat: 57.37,
+        lng: 9.72,
+        arrivalDate: '2026-07-04',
+        departureDate: '2026-07-08',
+        nights: 4,
+        week: 28,
+        camping: {
+          name: 'Lokken Klit Camping',
+          address: 'Furreby Kirkevej 97, 9480 Lokken',
+          url: 'https://www.loekkenklit.dk/',
+          booked: false,
+          bookingRef: '',
+        },
+        driveFromPrevious: {
+          km: 140,
+          hours: '1t 10min + 3t 45min ferge',
+          route: 'Kongsberg - Larvik (E18), ferge til Hirtshals (Color Line), Rute 55 til Lokken',
+        },
+        description: 'Bred, hvit sandstrand pa den danske vestkysten. Perfekt for strandliv, sandslottbygging og lek i bolgene. Campingplassen har innendors svommebasseng.',
+        activities: [
+          { name: 'Lokken Strand', type: 'strand', priority: 'must-do', description: 'En av Danmarks bredeste sandstrender med ikoniske hvite badehus.', url: '' },
+          { name: 'Rubjerg Knude Fyr', type: 'severdighet', priority: 'must-do', description: 'Beromt fyrtarn omgitt av sandklitter. 15 min kjoring.', url: '' },
+          { name: 'Dagstur til Skagen / Grenen', type: 'severdighet', priority: 'must-do', description: 'Der to hav moetes. Sandormen kjorer til spissen. 1t 15min.', url: '' },
+          { name: 'Faarup Sommerland', type: 'forlystelsespark', priority: 'nice-to-have', description: 'Danmarks storste forlystelsespark med vannpark. 25 min kjoring.', url: '' },
+          { name: 'Nordsoen Oceanarium', type: 'akvarium', priority: 'nice-to-have', description: 'Nordeuropas storste akvarium i Hirtshals. 40 min kjoring.', url: '' },
+        ],
+        tips: ['Juli er hoysesong - book tidlig', 'CampingKey Europe anbefales', 'Husk vindjakke - vestkysten kan vaere blasende'],
+        imageUrl: '',
+      },
+      {
+        id: 2,
+        name: 'Billund',
+        country: 'Danmark',
+        countryCode: 'DK',
+        lat: 55.73,
+        lng: 9.11,
+        arrivalDate: '2026-07-08',
+        departureDate: '2026-07-11',
+        nights: 3,
+        week: 28,
+        camping: {
+          name: 'Billund Camping',
+          address: 'Ellehammers Alle 2, 7190 Billund',
+          url: 'https://www.billund-camping.dk/',
+          booked: false,
+          bookingRef: '',
+        },
+        driveFromPrevious: {
+          km: 185,
+          hours: '2t 30min',
+          route: 'Via Viborg sorover gjennom Jylland',
+        },
+        description: 'LEGO-hovedstaden! Gangavstand til LEGOLAND. Perfekt basecamp for 3 dager med forlystelser og dyrepark.',
+        activities: [
+          { name: 'LEGOLAND Billund', type: 'forlystelsespark', priority: 'must-do', description: 'DUPLO Land, LEGO City, Miniland. Planlegg en hel dag.', url: 'https://www.legoland.dk/' },
+          { name: 'LEGO House', type: 'museum', priority: 'must-do', description: '"Home of the Brick" med interaktive byggesoner. 3-4 timer.', url: 'https://www.legohouse.com/' },
+          { name: 'Givskud Zoo', type: 'dyrepark', priority: 'must-do', description: 'Safari-park med lover, giraffer, elefanter. 25 min kjoring.', url: 'https://www.givskudzoo.dk/' },
+          { name: 'Lalandia Aquadome', type: 'badeland', priority: 'nice-to-have', description: 'Tropisk badeland med vannrutsjebaner. Dagsbillett mulig.', url: '' },
+          { name: 'Kongernes Jelling', type: 'historie', priority: 'nice-to-have', description: 'UNESCO vikinghistorie. 20 min kjoring. Gratis.', url: '' },
+        ],
+        tips: ['Vurder 2-dagers billett til LEGOLAND', 'LEGOLAND apner kl. 10:00 - vaer tidlig'],
+        imageUrl: '',
+      },
+      {
+        id: 3,
+        name: 'Hamburg',
+        country: 'Tyskland',
+        countryCode: 'DE',
+        lat: 53.55,
+        lng: 9.99,
+        arrivalDate: '2026-07-11',
+        departureDate: '2026-07-14',
+        nights: 3,
+        week: 29,
+        camping: {
+          name: 'Campingplatz Stover Strand International',
+          address: 'Stover Strand 10, 21423 Drage',
+          url: 'https://www.stfreizeit.de/',
+          booked: false,
+          bookingRef: '',
+        },
+        driveFromPrevious: {
+          km: 340,
+          hours: '4t 30min',
+          route: 'E45 gjennom Jylland, A7 i Tyskland',
+        },
+        description: 'Stor havneby med fantastiske attraksjoner for barn. Miniatur Wunderland er et absolutt must!',
+        activities: [
+          { name: 'Miniatur Wunderland', type: 'attraksjon', priority: 'must-do', description: 'Verdens storste modelljernbaneutstilling. Bestill billetter online! 3-4 timer.', url: 'https://www.miniatur-wunderland.com/' },
+          { name: 'Tierpark Hagenbeck', type: 'dyrepark', priority: 'must-do', description: 'Dyrepark med tropisk akvarium og strykedyr-omrade. Halv dag.', url: 'https://www.hagenbeck.de/' },
+          { name: 'Hafenrundfahrt', type: 'batkjoring', priority: 'must-do', description: 'Barkas-tur i havnen fra Landungsbrucken. Ca. 1 time.', url: '' },
+          { name: 'Planten un Blomen', type: 'park', priority: 'nice-to-have', description: 'Gratis bypark med vannlekeplass og vannlysspill om kvelden.', url: '' },
+        ],
+        tips: ['Umweltplakette (gron miljoplakett) kreves - bestill fra umwelt-plakette.de', 'Bestill Miniatur Wunderland-billetter i god tid!'],
+        imageUrl: '',
+      },
+      {
+        id: 4,
+        name: 'Berlin',
+        country: 'Tyskland',
+        countryCode: 'DE',
+        lat: 52.52,
+        lng: 13.40,
+        arrivalDate: '2026-07-14',
+        departureDate: '2026-07-19',
+        nights: 5,
+        week: 29,
+        camping: {
+          name: 'DCC-Campingplatz Berlin-Gatow',
+          address: 'Kladower Damm 213-217, 14089 Berlin',
+          url: 'https://www.dccberlin.de/',
+          booked: false,
+          bookingRef: '',
+        },
+        driveFromPrevious: {
+          km: 290,
+          hours: '3t 45min',
+          route: 'A24 motorvei',
+        },
+        description: 'Tysklands hovedstad med familiebesok hos Andre og Lucia. Campingplass ved Havel med sandstrand.',
+        activities: [
+          { name: 'Besok Andre og Lucia', type: 'familiebesok', priority: 'must-do', description: 'Fischerinsel 9, 10179 Berlin. Sentralt i Mitte ved Spree.', url: '' },
+          { name: 'Berlin Zoo', type: 'dyrehage', priority: 'must-do', description: 'En av Europas mest artsrike. Akvarium inkludert.', url: 'https://www.zoo-berlin.de/' },
+          { name: 'LEGOLAND Discovery Centre', type: 'opplevelse', priority: 'must-do', description: 'Byggeverksteder, 4D-kino, MINILAND Berlin. 2-3 timer.', url: 'https://www.legolanddiscoverycentre.com/berlin/' },
+          { name: 'Tropical Islands', type: 'badeland', priority: 'must-do', description: 'Verdens storste innendors tropeanlegg. Ca. 60 km sor. Hel dag.', url: 'https://www.tropical-islands.de/' },
+          { name: 'Naturkundemuseum', type: 'museum', priority: 'nice-to-have', description: 'Verdens storste dinosaurskjelett. 2-3 timer.', url: 'https://www.museumfuernaturkunde.berlin/' },
+          { name: 'Tempelhofer Feld', type: 'park', priority: 'nice-to-have', description: 'Gammel flyplass, naa bypark. Sykling og drageflying. Gratis.', url: '' },
+        ],
+        tips: ['Umweltplakette kreves i Berlin', 'Vurder Berlin WelcomeCard for 5 dager', 'Campingplassen ved Havel er fin for bading'],
+        imageUrl: '',
+      },
+      {
+        id: 5,
+        name: 'Bad Schandau',
+        country: 'Tyskland',
+        countryCode: 'DE',
+        lat: 50.92,
+        lng: 14.15,
+        arrivalDate: '2026-07-19',
+        departureDate: '2026-07-22',
+        nights: 3,
+        week: 30,
+        camping: {
+          name: 'Campingplatz Ostrauer Muhle',
+          address: 'Ostrauer Muhle 15, 01814 Bad Schandau',
+          url: 'https://www.ostrauer-muehle.de/',
+          booked: false,
+          bookingRef: '',
+        },
+        driveFromPrevious: {
+          km: 250,
+          hours: '3t 15min',
+          route: 'A13/A17 soroever mot Sachsische Schweiz',
+        },
+        description: 'Saksisk Sveits nasjonalpark med dramatiske sandsteinsformasjoner, festninger og historiske trikker.',
+        activities: [
+          { name: 'Basteibroen', type: 'natur', priority: 'must-do', description: 'Ikonisk steinbro 194m over Elben. Kort sti fra parkering (15-20 min).', url: '' },
+          { name: 'Festung Konigstein', type: 'festning', priority: 'must-do', description: 'En av Europas storste fjellsfestninger. Kanoner, tunneler, utsikt.', url: 'https://www.festung-koenigstein.de/' },
+          { name: 'Kirnitzschtalbahn', type: 'tog', priority: 'must-do', description: 'Historisk sporvogn til Lichtenhainer Wasserfall.', url: '' },
+          { name: 'Amselsee i Rathen', type: 'natur', priority: 'nice-to-have', description: 'Rolig innsjovandring med robatutleie.', url: '' },
+          { name: 'Elbeskipsfart', type: 'batkjoring', priority: 'nice-to-have', description: 'Historiske hjuldampere pa Elben.', url: 'https://www.saechsische-dampfschiffahrt.de/' },
+        ],
+        tips: ['Ga til Bastei tidlig pa morgenen', 'Ingen Umweltzone i Bad Schandau', 'Historisk personheis i Bad Schandau'],
+        imageUrl: '',
+      },
+      {
+        id: 6,
+        name: 'Warnemunde',
+        country: 'Tyskland',
+        countryCode: 'DE',
+        lat: 54.18,
+        lng: 12.09,
+        arrivalDate: '2026-07-22',
+        departureDate: '2026-07-23',
+        nights: 1,
+        week: 30,
+        camping: {
+          name: 'Campingpark Warnemunde',
+          address: 'Parkstrasse 1, 18119 Rostock-Warnemunde',
+          url: 'https://www.campingpark-warnemuende.de/',
+          booked: false,
+          bookingRef: '',
+        },
+        driveFromPrevious: {
+          km: 400,
+          hours: '5t 15min',
+          route: 'Via Dresden-Leipzig-Rostock (A13/A14/A19)',
+        },
+        description: 'Transitstopp ved Ostersjoeen med bred sandstrand. Stranddag for fergen til Danmark neste morgen.',
+        activities: [
+          { name: 'Warnemunde Strand', type: 'strand', priority: 'must-do', description: 'Bred sandstrand med grunt, barnevennlig vann. Strandkurver kan leies.', url: '' },
+          { name: 'Warnemunde fyrtarn', type: 'severdighet', priority: 'nice-to-have', description: 'Utsikt fra fyrtarnet ved stranden.', url: '' },
+        ],
+        tips: ['Scandlines-fergen gar fra Rostock fergeterminal (ca. 20 min kjoring)', 'Ingen Umweltzone i Warnemunde'],
+        imageUrl: '',
+      },
+      {
+        id: 7,
+        name: 'Kobenhavn',
+        country: 'Danmark',
+        countryCode: 'DK',
+        lat: 55.68,
+        lng: 12.57,
+        arrivalDate: '2026-07-23',
+        departureDate: '2026-07-27',
+        nights: 4,
+        week: 30,
+        camping: {
+          name: 'DCU-Camping Charlottenlund Fort',
+          address: 'Strandvejen 144B, 2920 Charlottenlund',
+          url: 'https://www.dcu.dk/campingpladser/charlottenlund-fort',
+          booked: false,
+          bookingRef: '',
+        },
+        driveFromPrevious: {
+          km: 170,
+          hours: '2t 15min + 2t ferge',
+          route: 'Ferge Rostock-Gedser (Scandlines), E47/E55 til Kobenhavn',
+        },
+        description: 'Danmarks hovedstad med verdensklasse-attraksjoner for barn. Campingplass pa historisk festning ved Oresund.',
+        activities: [
+          { name: 'Tivoli Gardens', type: 'forlystelsespark', priority: 'must-do', description: 'Verdens nest eldste forlystelsespark. Barn under 8 gratis m/voksen.', url: 'https://www.tivoli.dk/' },
+          { name: 'Bakken', type: 'forlystelsespark', priority: 'must-do', description: 'Verdens eldste forlystelsespark, gratis inngang! I Dyrehaven.', url: 'https://www.bakken.dk/' },
+          { name: 'Den Bla Planet', type: 'akvarium', priority: 'must-do', description: 'Nordeuropas storste akvarium med haier og havskildpadder.', url: 'https://denblaaplanet.dk/' },
+          { name: 'Kobenhavns Zoo', type: 'dyrehage', priority: 'nice-to-have', description: 'Elefanter, isbjorn, barne-zoo. Halv dag.', url: 'https://www.zoo.dk/' },
+          { name: 'Amager Strandpark', type: 'strand', priority: 'nice-to-have', description: 'Sandstrand med grunt barnevennlig vann og lekeplasser. Gratis.', url: '' },
+          { name: 'Nyhavn + kanalbat', type: 'sightseeing', priority: 'nice-to-have', description: 'Fargerike hus, batkjoring pa kanalene. Ca. 30 min.', url: '' },
+        ],
+        tips: ['Book Charlottenlund Fort tidlig - ekstremt populaer i juli', 'Kombiner Bakken med tur i Dyrehaven (tamme hjorter)', 'Stopp ved Kronborg i Helsingor pa vei til Goteborg'],
+        imageUrl: '',
+      },
+      {
+        id: 8,
+        name: 'Goteborg',
+        country: 'Sverige',
+        countryCode: 'SE',
+        lat: 57.71,
+        lng: 11.97,
+        arrivalDate: '2026-07-27',
+        departureDate: '2026-07-30',
+        nights: 3,
+        week: 31,
+        camping: {
+          name: 'Lisebergs Camping & Stugby - Karralund',
+          address: 'Olbersgatan 11, 416 55 Goteborg',
+          url: 'https://www.liseberg.se/boende/karralund/',
+          booked: false,
+          bookingRef: '',
+        },
+        driveFromPrevious: {
+          km: 330,
+          hours: '4t 30min + 20min ferge',
+          route: 'Via Helsingor-Helsingborg (ForSea), E6 nordover',
+        },
+        description: 'Siste stopp for ferien. Liseberg, Universeum og avslappede dager for hjemreisen.',
+        activities: [
+          { name: 'Liseberg', type: 'forlystelsespark', priority: 'must-do', description: 'Skandinavias storste forlystelsespark. Kaniner-omradet for sma barn.', url: 'https://www.liseberg.se/' },
+          { name: 'Universeum', type: 'vitensenter', priority: 'must-do', description: 'Regnskogavdeling, haier, vannlek. Fantastisk for 5-aringer.', url: 'https://www.universeum.se/' },
+          { name: 'Slottsskogen', type: 'park', priority: 'must-do', description: 'Gratis dyrepark med seler, pingviner, elger. Flotte lekeplasser.', url: '' },
+          { name: 'Maritiman', type: 'museum', priority: 'nice-to-have', description: 'Verdens storste flytende skipsmuseum. Utforsk u-bater.', url: 'https://www.maritiman.se/' },
+          { name: 'Paddan-batene', type: 'batkjoring', priority: 'nice-to-have', description: 'Sightseeing gjennom kanalene. Lav brohoyde - morsomt for barn!', url: '' },
+        ],
+        tips: ['30. juli: Kjor hjem via E6/E18 (ca. 350 km, 4,5 timer)', 'Siste stopp - ta det rolig og nyt byen'],
+        imageUrl: '',
+      },
+    ],
 
-          <p><strong>Strand og badeliv:</strong></p>
-          <ul class="tip-list">
-            <li>Løkken har en bred, hvit sandstrand som er godt egnet for barn – grunt innløp og bølger som er fine for bading og brettleker.</li>
-            <li>Husk å sjekke flaggfargen ved badestranden – blått flagg betyr at det er trygt å bade, rødt flagg betyr badeforbud.</li>
-            <li>Vesterhavet har sterkere strøm enn Østersjøen – hold alltid øye med barna i vannet.</li>
-            <li>Ta med sandleker, solkrem og strandtelt – dagene kan bli lange og solrike i uke 28.</li>
-          </ul>
+    // Startpunkt (Kongsberg) for kartet
+    homeBase: { lat: 59.67, lng: 9.65, name: 'Kongsberg' },
 
-          <p><strong>Løkken by:</strong></p>
-          <ul class="tip-list">
-            <li>Løkken sentrum er et trivelig lite bysamfunn med isbutikker, sjømatrestauranter og suvenirbutikker – perfekt for en kveldsspasertur.</li>
-            <li>Traktortrillene på stranden er et ikonisk syn i Løkken – de frakter fiskebåtene opp og ned fra vannet.</li>
-            <li>Løkken Vandtårn gir fin utsikt over kystlandskapet og er verdt et besøk.</li>
-          </ul>
+    // Metoder
+    scrollTo(id) {
+      this.activeSection = id;
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    },
 
-          <p><strong>Utflukter i området:</strong></p>
-          <ul class="tip-list">
-            <li><strong>Rubjerg Knude Fyr</strong> – det spektakulære vandrefyret som gradvis begraves av sanddynene, ca. 20 min nord for Løkken. Et unikt og minneverdig syn for hele familien.</li>
-            <li><strong>Fårup Sommerland</strong> – et av Danmarks beste fornøyelsesparker for barn, ca. 30 min fra Løkken. Passer perfekt for en hel familiedag.</li>
-            <li><strong>Blokhus</strong> – nærliggende badestad med bilkjøring på stranden – en populær dansk tradisjon som barna vil elske.</li>
-            <li><strong>Svinkløv Badehotel</strong> – sjarmerende historisk badehotell i vakre omgivelser, fint for en kaffepause med utsikt.</li>
-          </ul>
+    init() {
+      // Initialiser kartet etter DOM er klar
+      this.$nextTick(() => {
+        this.initMap();
+      });
 
-          <p><strong>Praktiske tips:</strong></p>
-          <ul class="tip-list">
-            <li>Campingplassen er svært populær i høysesong – sørg for å ha reservasjon på plass i god tid.</li>
-            <li>Kjøretid fra Kongsberg til Løkken via Göteborg og Hirtshals er ca. 6–7 timer – plan for tidlig avreise mandag morgen.</li>
-            <li>Alternativ rute: Kongsberg → Oslo → Göteborg → Frederikshavn (ferge fra Göteborg) → Løkken.</li>
-            <li>Husk danske kroner eller Visa/Mastercard – de fleste steder i Danmark aksepterer kort, men noe småhandel krever kontanter.</li>
-            <li>Avreise lørdag 11. juli – god tid til videre ferd mot Göteborg og neste stopp på ruten.</li>
-          </ul>
+      // Observer hvilken seksjon som er synlig
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            this.activeSection = entry.target.id;
+          }
+        });
+      }, { threshold: 0.3 });
 
-          <div class="highlights" style="margin-top:4px;">
-            <span class="tag teal">🏖️ Vesterhavet-strand</span>
-            <span class="tag blue">🎢 Fårup Sommerland</span>
-            <span class="tag">🏔️ Rubjerg Knude Fyr</span>
-            <span class="tag teal">🚜 Traktortrille på stranden</span>
-            <span class="tag green">🌊 Blokhus – bil på stranden</span>
-          </div>
-        </div>
+      this.sections.forEach(s => {
+        const el = document.getElementById(s.id);
+        if (el) observer.observe(el);
+      });
+    },
 
-        <div class="highlights">
-          <span class="tag teal">🏖️ 5 netter ved havet</span>
-          <span class="tag green">🇩🇰 Nordjylland, Danmark</span>
-          <span class="tag blue">🌅 Vesterhavet-solnedgang</span>
-        </div>
-      </div>
-    </div>
+    initMap() {
+      const mapEl = document.getElementById('map');
+      if (!mapEl || this.map) return;
 
-    <div class="week-card" onclick="toggleWeek(this)">
-      <div class="week-header">
-        <div class="week-num">1</div>
-        <div class="week-info">
-          <h3>Göteborg → København</h3>
-          <p>10.–14. juli · Via Malmö og Øresundbroen</p>
-        </div>
-        <div class="week-flag">🇩🇰</div>
-      </div>
-      <div class="week-body">
-        <p>Fra Løkken kjøres det sørover mot Göteborg for et kort stopp, deretter videre over Øresundbroen til København. 2–3 netter i nærheten av Køge eller Roskilde.</p>
-        <div class="highlights">
-          <span class="tag">🎡 Tivoli</span>
-          <span class="tag green">🌳 Roskilde vikingskip</span>
-          <span class="tag blue">🏊 Strand ved Køge</span>
-        </div>
-      </div>
-    </div>
+      // Sentrer pa omtrentlig rutemidtpunkt
+      this.map = L.map('map').setView([54.5, 11.5], 5);
 
-    <div class="week-card" onclick="toggleWeek(this)">
-      <div class="week-header">
-        <div class="week-num">2</div>
-        <div class="week-info">
-          <h3>Nord-Tyskland</h3>
-          <p>15.–21. juli · Hamburg og omegn</p>
-        </div>
-        <div class="week-flag">🇩🇪</div>
-      </div>
-      <div class="week-body">
-        <p>Kjør sørover gjennom Jylland og inn i Nord-Tyskland. Hamburg er et fantastisk stopp for barnefamilier – Miniatur Wunderland er et must! Campe i nærheten av Lüneburg eller Elbe.</p>
-        <div class="highlights">
-          <span class="tag">🚂 Miniatur Wunderland</span>
-          <span class="tag green">🌊 Elbestranden</span>
-          <span class="tag blue">⛵ Havnen i Hamburg</span>
-        </div>
-      </div>
-    </div>
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors',
+        maxZoom: 18,
+      }).addTo(this.map);
 
-    <!-- KÖLN WEEK CARD -->
-    <div class="week-card cologne-card" onclick="toggleWeek(this)">
-      <div class="week-header">
-        <div class="week-num">29</div>
-        <div class="week-info">
-          <h3>Køln – Rhinen og Kölner Dom</h3>
-          <p>13.–16. juli · 3 netter ved Rhinen, Tyskland</p>
-        </div>
-        <div class="week-flag">🇩🇪</div>
-      </div>
-      <div class="week-body">
-        <p>Fra Hamburg kjøres det sørover mot Köln – en av Tysklands mest fascinerende byer, kjent for sin mektige gotiske domkirke, levende Altstadt og den vakre Rhinen. Ankomst ca. 13. juli, avreise ca. 16. juli.</p>
+      // Stoppmarkorer
+      const allPoints = [];
 
-        <div class="sub-stop cologne-stop">
-          <div class="sub-stop-header">
-            <div class="sub-stop-icon">⛪</div>
-            <div>
-              <div class="sub-stop-title">Camping Berger</div>
-              <div class="sub-stop-subtitle">Uferstraße 71, 51149 Köln-Porz · 3 netter (13.–16. juli)</div>
-            </div>
-          </div>
-          <p>Camping Berger er en populær og godt anmeldt campingplass beliggende ved Rhinen i bydelen Köln-Porz, ca. 15 km fra Köln sentrum. Campingplassen har en fin beliggenhet nær elven og er et utmerket utgangspunkt for å utforske Köln. Det er enkel tilgang til sentrum med tog og buss.</p>
+      // Kongsberg (start/slutt)
+      const homeIcon = L.divIcon({
+        html: '<div style="background:#27AE60;color:white;border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:bold;border:2px solid white;box-shadow:0 2px 6px rgba(0,0,0,0.3);">H</div>',
+        className: '',
+        iconSize: [28, 28],
+        iconAnchor: [14, 14],
+      });
+      L.marker([this.homeBase.lat, this.homeBase.lng], { icon: homeIcon })
+        .addTo(this.map)
+        .bindPopup('<strong>Kongsberg</strong><br>Start og slutt');
+      allPoints.push([this.homeBase.lat, this.homeBase.lng]);
 
-          <p><strong>Attraksjoner i Køln:</strong></p>
-          <ul class="tip-list">
-            <li><strong>Kölner Dom (UNESCO-verdensarv)</strong> – Den imponerende gotiske katedralen er byens hjerte og et av Tysklands mest besøkte landemerker. Klatring opp til tårnet (533 trinn) gir fantastisk utsikt over byen og Rhinen.</li>
-            <li><strong>Schokoladenmuseum (Sjokolademuseet)</strong
+      // Stopp-markorer
+      this.stops.forEach((stop, i) => {
+        const icon = L.divIcon({
+          html: `<div style="background:#1B4F72;color:white;border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:bold;border:2px solid white;box-shadow:0 2px 6px rgba(0,0,0,0.3);">${i + 1}</div>`,
+          className: '',
+          iconSize: [28, 28],
+          iconAnchor: [14, 14],
+        });
+
+        const campingLink = stop.camping.url
+          ? `<a href="${stop.camping.url}" target="_blank" rel="noopener" style="color:#1B4F72;">${stop.camping.name}</a>`
+          : stop.camping.name;
+
+        L.marker([stop.lat, stop.lng], { icon })
+          .addTo(this.map)
+          .bindPopup(`
+            <strong>${stop.name}</strong> (${stop.countryCode})<br>
+            ${stop.arrivalDate.slice(5)} - ${stop.departureDate.slice(5)} &middot; ${stop.nights} netter<br>
+            <small>${campingLink}</small><br>
+            <small style="color:#666;">${stop.description.substring(0, 100)}...</small>
+          `);
+
+        allPoints.push([stop.lat, stop.lng]);
+      });
+
+      // Polylinje
+      L.polyline(allPoints, {
+        color: '#1B4F72',
+        weight: 2.5,
+        opacity: 0.7,
+        dashArray: '8, 8',
+      }).addTo(this.map);
+
+      // Tilpass kart til alle punkter
+      this.map.fitBounds(allPoints, { padding: [30, 30] });
+
+      // GPS-posisjon
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition((pos) => {
+          const gpsIcon = L.divIcon({
+            html: '<div style="background:#F4A621;border-radius:50%;width:16px;height:16px;border:3px solid white;box-shadow:0 0 0 2px #F4A621, 0 2px 6px rgba(0,0,0,0.3);"></div>',
+            className: '',
+            iconSize: [16, 16],
+            iconAnchor: [8, 8],
+          });
+          L.marker([pos.coords.latitude, pos.coords.longitude], { icon: gpsIcon })
+            .addTo(this.map)
+            .bindPopup('Du er her');
+        }, () => { /* Ignorer avslag */ });
+      }
+    },
+
+    // Sjekkliste-metoder (fase 5)
+    saveChecklists() {
+      localStorage.setItem('sommerferie2026-checklists', JSON.stringify(this.checklists));
+    },
+    loadChecklists() {
+      const saved = localStorage.getItem('sommerferie2026-checklists');
+      if (saved) {
+        try { this.checklists = JSON.parse(saved); } catch(e) {}
+      }
+    },
+  };
+}
+</script>
+
+</body>
+</html>
