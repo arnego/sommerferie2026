@@ -378,12 +378,12 @@ Claude kjører i WSL og kan ikke åpne nettleser direkte. Verifisering deles i t
 | 3.7 Verifiser i nettleser | Fullfort | Preview-plugin: 9 markorer, 0 feil |
 | 3.8 Commit | Pagar | |
 | **Fase 4: Reiseplan** | | |
-| 4.1 "I dag"-kort med datosammenligning | Ikke startet | |
-| 4.2 Ukekort (4 stk) med expand/collapse | Ikke startet | |
-| 4.3 Stoppdetaljer inne i ukekort | Ikke startet | |
-| 4.4 Kjøreetappe-visning | Ikke startet | |
-| 4.5 Verifiser i nettleser | Ikke startet | |
-| 4.6 Commit | Ikke startet | |
+| 4.1 "I dag"-kort med datosammenligning | Fullfort | Nedtelling 85 dager, under tur, etter tur |
+| 4.2 Ukekort (4 stk) med expand/collapse | Fullfort | Alpine.js x-show + transition |
+| 4.3 Stoppdetaljer inne i ukekort | Fullfort | Camping, aktiviteter, tips |
+| 4.4 Kjoreetappe-visning | Fullfort | km, timer, rute per etappe |
+| 4.5 Verifiser i nettleser | Fullfort | Preview-plugin: expand OK, innhold OK |
+| 4.6 Commit | Fullfort | |
 | **Fase 5: Pakkelister** | | |
 | 5.1 Tab-navigasjon (4 faner) | Ikke startet | |
 | 5.2 Generer sjekklisteinnhold | Ikke startet | |
