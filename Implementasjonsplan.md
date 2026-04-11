@@ -394,15 +394,15 @@ Claude kjører i WSL og kan ikke åpne nettleser direkte. Verifisering deles i t
 | 5.7 Verifiser i nettleser | Fullfort | Preview-plugin: toggle+reload OK |
 | 5.8 Commit | Fullfort | |
 | **Fase 6: Budsjett & Praktisk** | | |
-| 6.1 Budsjett-grid | Ikke startet | |
-| 6.2 Valutatabell | Ikke startet | |
-| 6.3 Big Mac Index | Ikke startet | |
-| 6.4 Fartsgrenser med henger | Ikke startet | |
-| 6.5 Nødnumre per land | Ikke startet | |
-| 6.6 Bompenger/vignetter/miljøsoner | Ikke startet | |
-| 6.7 Viktige adresser | Ikke startet | |
-| 6.8 Verifiser i nettleser | Ikke startet | |
-| 6.9 Commit | Ikke startet | |
+| 6.1 Budsjett-grid | Fullfort | 6 kategorier, 71 500 NOK totalt |
+| 6.2 Valutatabell | Fullfort | EUR, DKK, SEK, CZK |
+| 6.3 Big Mac Index | Fullfort | NO, DK, DE, SE med %-sammenligning |
+| 6.4 Fartsgrenser med henger | Fullfort | NO, SE, DK, DE |
+| 6.5 Nodnumre per land | Fullfort | 4 land med lokale numre |
+| 6.6 Bompenger/vignetter/miljosoner | Fullfort | AutoPASS, BroBizz, Umweltplakette |
+| 6.7 Viktige adresser | Fullfort | Andre og Lucia, Fischerinsel 9 |
+| 6.8 Verifiser i nettleser | Fullfort | Preview-plugin: alt rendres OK |
+| 6.9 Commit | Fullfort | |
 | **Fase 7: Finpuss** | | |
 | 7.1 Responsiv testing | Ikke startet | |
 | 7.2 Kontrast og lesbarhet | Ikke startet | |

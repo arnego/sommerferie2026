@@ -381,9 +381,203 @@ tailwind.config = {
   <section id="budsjett" class="py-12 sm:py-16 bg-sand/30">
     <div class="max-w-3xl mx-auto px-4 sm:px-6">
       <h2 class="font-heading text-2xl sm:text-3xl text-petrol mb-8">Budsjett & Praktisk</h2>
-      <!-- Fase 6: Fylles med budsjett, valuta, fartsgrenser etc. -->
-      <div class="bg-white rounded-xl p-8 text-center text-muted border border-sand/50">
-        <p class="text-sm">Budsjett og praktisk info bygges i neste fase</p>
+
+      <!-- Budsjett-grid -->
+      <h3 class="font-heading text-lg text-petrol mb-4">Estimert budsjett</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+        <template x-for="item in budget" :key="item.category">
+          <div class="bg-white rounded-xl p-5 border border-sand/50">
+            <p class="text-xs text-muted uppercase tracking-wider font-medium mb-1" x-text="item.category"></p>
+            <p class="font-heading text-2xl text-charcoal">
+              <span x-text="item.amount.toLocaleString('no-NO')"></span>
+              <span class="text-sm text-muted font-body ml-1">NOK</span>
+            </p>
+            <div class="mt-3 h-1.5 bg-sand/50 rounded-full overflow-hidden">
+              <div class="h-full rounded-full transition-all duration-500"
+                   :class="item.color"
+                   :style="'width:' + Math.round(item.amount / budgetTotal * 100) + '%'"></div>
+            </div>
+          </div>
+        </template>
+      </div>
+      <div class="bg-petrol text-white rounded-xl p-5 mb-10 flex items-center justify-between">
+        <span class="font-medium">Totalt estimert</span>
+        <span class="font-heading text-2xl" x-text="budgetTotal.toLocaleString('no-NO') + ' NOK'"></span>
+      </div>
+
+      <!-- Valutatabell -->
+      <h3 class="font-heading text-lg text-petrol mb-4">Valutakurser</h3>
+      <div class="bg-white rounded-xl border border-sand/50 overflow-hidden mb-8">
+        <table class="w-full text-sm">
+          <thead class="bg-cream/70">
+            <tr>
+              <th class="text-left px-5 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Valuta</th>
+              <th class="text-right px-5 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Kurs</th>
+              <th class="text-right px-5 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">100 NOK =</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-sand/30">
+            <tr class="hover:bg-cream/30">
+              <td class="px-5 py-3 font-medium">EUR (Euro)</td>
+              <td class="px-5 py-3 text-right text-muted">1 EUR = ~11,50 NOK</td>
+              <td class="px-5 py-3 text-right font-medium">~8,70 EUR</td>
+            </tr>
+            <tr class="hover:bg-cream/30">
+              <td class="px-5 py-3 font-medium">DKK (Danske kroner)</td>
+              <td class="px-5 py-3 text-right text-muted">1 DKK = ~1,55 NOK</td>
+              <td class="px-5 py-3 text-right font-medium">~64,50 DKK</td>
+            </tr>
+            <tr class="hover:bg-cream/30">
+              <td class="px-5 py-3 font-medium">SEK (Svenske kroner)</td>
+              <td class="px-5 py-3 text-right text-muted">1 SEK = ~1,05 NOK</td>
+              <td class="px-5 py-3 text-right font-medium">~95 SEK</td>
+            </tr>
+            <tr class="hover:bg-cream/30">
+              <td class="px-5 py-3 font-medium">CZK (Tsjekkiske koruna)</td>
+              <td class="px-5 py-3 text-right text-muted">1 CZK = ~0,47 NOK</td>
+              <td class="px-5 py-3 text-right font-medium">~213 CZK</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="px-5 py-2.5 bg-cream/50 text-xs text-muted">Omtrentlige kurser. Sjekk oppdaterte kurser for avreise.</div>
+      </div>
+
+      <!-- Big Mac Index -->
+      <h3 class="font-heading text-lg text-petrol mb-4">Big Mac Index - kostnadsniva</h3>
+      <div class="bg-white rounded-xl border border-sand/50 overflow-hidden mb-8">
+        <table class="w-full text-sm">
+          <thead class="bg-cream/70">
+            <tr>
+              <th class="text-left px-5 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Land</th>
+              <th class="text-right px-5 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Lokal pris</th>
+              <th class="text-right px-5 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">I NOK</th>
+              <th class="text-right px-5 py-3 text-xs text-petrol uppercase tracking-wider font-semibold hidden sm:table-cell">vs. Norge</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-sand/30">
+            <tr class="hover:bg-cream/30">
+              <td class="px-5 py-3 font-medium">Norge</td>
+              <td class="px-5 py-3 text-right text-muted">~75 NOK</td>
+              <td class="px-5 py-3 text-right font-medium">75 NOK</td>
+              <td class="px-5 py-3 text-right text-muted hidden sm:table-cell">-</td>
+            </tr>
+            <tr class="hover:bg-cream/30">
+              <td class="px-5 py-3 font-medium">Danmark</td>
+              <td class="px-5 py-3 text-right text-muted">~35 DKK</td>
+              <td class="px-5 py-3 text-right font-medium">~54 NOK</td>
+              <td class="px-5 py-3 text-right text-success hidden sm:table-cell">28% billigere</td>
+            </tr>
+            <tr class="hover:bg-cream/30">
+              <td class="px-5 py-3 font-medium">Tyskland</td>
+              <td class="px-5 py-3 text-right text-muted">~5,30 EUR</td>
+              <td class="px-5 py-3 text-right font-medium">~61 NOK</td>
+              <td class="px-5 py-3 text-right text-success hidden sm:table-cell">19% billigere</td>
+            </tr>
+            <tr class="hover:bg-cream/30">
+              <td class="px-5 py-3 font-medium">Sverige</td>
+              <td class="px-5 py-3 text-right text-muted">~62 SEK</td>
+              <td class="px-5 py-3 text-right font-medium">~65 NOK</td>
+              <td class="px-5 py-3 text-right text-success hidden sm:table-cell">13% billigere</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="px-5 py-2.5 bg-cream/50 text-xs text-muted">Big Mac Index gir et omtrentlig bilde av kostnadsniva. Mat og dagligvarer er generelt billigere i Danmark, Tyskland og Sverige enn i Norge.</div>
+      </div>
+
+      <!-- Fartsgrenser med henger -->
+      <h3 class="font-heading text-lg text-petrol mb-4">Fartsgrenser med campingvogn</h3>
+      <div class="bg-white rounded-xl border border-sand/50 overflow-hidden mb-8">
+        <table class="w-full text-sm">
+          <thead class="bg-cream/70">
+            <tr>
+              <th class="text-left px-5 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Land</th>
+              <th class="text-center px-3 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Tettbygd</th>
+              <th class="text-center px-3 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Landevei</th>
+              <th class="text-center px-3 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Motorvei</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-sand/30">
+            <tr class="hover:bg-cream/30">
+              <td class="px-5 py-3 font-medium">Norge</td>
+              <td class="px-3 py-3 text-center">50</td>
+              <td class="px-3 py-3 text-center">80</td>
+              <td class="px-3 py-3 text-center">80</td>
+            </tr>
+            <tr class="hover:bg-cream/30">
+              <td class="px-5 py-3 font-medium">Sverige</td>
+              <td class="px-3 py-3 text-center">50</td>
+              <td class="px-3 py-3 text-center">70</td>
+              <td class="px-3 py-3 text-center">80</td>
+            </tr>
+            <tr class="hover:bg-cream/30">
+              <td class="px-5 py-3 font-medium">Danmark</td>
+              <td class="px-3 py-3 text-center">50</td>
+              <td class="px-3 py-3 text-center">70</td>
+              <td class="px-3 py-3 text-center">80</td>
+            </tr>
+            <tr class="hover:bg-cream/30">
+              <td class="px-5 py-3 font-medium">Tyskland</td>
+              <td class="px-3 py-3 text-center">50</td>
+              <td class="px-3 py-3 text-center">80</td>
+              <td class="px-3 py-3 text-center">80*</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="px-5 py-2.5 bg-cream/50 text-xs text-muted">Alle hastigheter i km/t. *Tyskland: Ingen generell fartsgrense pa Autobahn for biler uten henger, men 80 km/t med campingvogn. Totalvekt bil+vogn over 3,5t: 60 km/t landevei.</div>
+      </div>
+
+      <!-- Nodnumre -->
+      <h3 class="font-heading text-lg text-petrol mb-4">Nodnumre</h3>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+        <div class="bg-white rounded-xl p-4 border border-sand/50 text-center">
+          <p class="text-xs text-muted uppercase tracking-wider font-medium mb-1">Norge</p>
+          <p class="font-heading text-xl text-petrol">113</p>
+          <p class="text-xs text-muted mt-0.5">Politi: 112</p>
+        </div>
+        <div class="bg-white rounded-xl p-4 border border-sand/50 text-center">
+          <p class="text-xs text-muted uppercase tracking-wider font-medium mb-1">Danmark</p>
+          <p class="font-heading text-xl text-petrol">112</p>
+          <p class="text-xs text-muted mt-0.5">Felles nodnummer</p>
+        </div>
+        <div class="bg-white rounded-xl p-4 border border-sand/50 text-center">
+          <p class="text-xs text-muted uppercase tracking-wider font-medium mb-1">Tyskland</p>
+          <p class="font-heading text-xl text-petrol">112</p>
+          <p class="text-xs text-muted mt-0.5">Politi: 110</p>
+        </div>
+        <div class="bg-white rounded-xl p-4 border border-sand/50 text-center">
+          <p class="text-xs text-muted uppercase tracking-wider font-medium mb-1">Sverige</p>
+          <p class="font-heading text-xl text-petrol">112</p>
+          <p class="text-xs text-muted mt-0.5">Felles nodnummer</p>
+        </div>
+      </div>
+
+      <!-- Bompenger / Vignetter / Miljosoner -->
+      <h3 class="font-heading text-lg text-petrol mb-4">Bompenger, vignetter og miljosoner</h3>
+      <div class="space-y-3 mb-8">
+        <div class="bg-white rounded-xl p-5 border border-sand/50">
+          <h4 class="font-semibold text-sm text-charcoal mb-2">Norge</h4>
+          <p class="text-sm text-charcoal/70">AutoPASS-brikke anbefales. Bomstasjoner registrerer automatisk. Uten brikke faktureres via nummerskiltregistrering.</p>
+        </div>
+        <div class="bg-white rounded-xl p-5 border border-sand/50">
+          <h4 class="font-semibold text-sm text-charcoal mb-2">Danmark</h4>
+          <p class="text-sm text-charcoal/70">Storebaltbroen: BroBizz eller betal ved bomstasjon. Oresundbroen: BroBizz eller online forhandsbetaling. Ingen vignetter.</p>
+        </div>
+        <div class="bg-white rounded-xl p-5 border border-sand/50">
+          <h4 class="font-semibold text-sm text-charcoal mb-2">Tyskland - Umweltplakette</h4>
+          <p class="text-sm text-charcoal/70">Gron Umweltplakette (miljoplakett) er <strong>pabudt</strong> i alle tyske byer med Umweltzoner (inkl. Hamburg og Berlin). Bestill fra <a href="https://www.umwelt-plakette.de" target="_blank" class="text-petrol underline">umwelt-plakette.de</a> (15-30 EUR). Kun trekkvognen trenger plakett, ikke campingvognen. Bot uten plakett: ca. 100 EUR.</p>
+        </div>
+        <div class="bg-white rounded-xl p-5 border border-sand/50">
+          <h4 class="font-semibold text-sm text-charcoal mb-2">Sverige</h4>
+          <p class="text-sm text-charcoal/70">Ingen vignetter eller miljosoner paakrevd. Bompenger pa noen broer/tunneler (faktureres automatisk via nummerskilt).</p>
+        </div>
+      </div>
+
+      <!-- Viktige adresser -->
+      <h3 class="font-heading text-lg text-petrol mb-4">Viktige adresser</h3>
+      <div class="bg-white rounded-xl p-5 border border-sand/50 mb-4">
+        <h4 class="font-semibold text-sm text-charcoal mb-1">Andre og Lucia</h4>
+        <p class="text-sm text-charcoal/70">Fischerinsel 9, 10179 Berlin, Tyskland</p>
+        <p class="text-xs text-muted mt-1">Sentralt i Berlin Mitte, ved Spree-elven</p>
       </div>
     </div>
   </section>
@@ -562,6 +756,19 @@ function ferieApp() {
 
     // Kart
     map: null,
+
+    // Budsjett
+    budget: [
+      { category: 'Drivstoff', amount: 12000, color: 'bg-petrol' },
+      { category: 'Overnatting (camping)', amount: 15000, color: 'bg-success' },
+      { category: 'Mat og dagligvarer', amount: 20000, color: 'bg-sunshine' },
+      { category: 'Aktiviteter og inngang', amount: 10000, color: 'bg-petrol/70' },
+      { category: 'Ferger og bompenger', amount: 8000, color: 'bg-charcoal/60' },
+      { category: 'Buffer (10%)', amount: 6500, color: 'bg-muted' },
+    ],
+    get budgetTotal() {
+      return this.budget.reduce((sum, item) => sum + item.amount, 0);
+    },
 
     // Beregnet
     get totalWeeks() { return 4; },
