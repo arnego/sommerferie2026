@@ -26,6 +26,8 @@ Etter hver endring i `index.html` eller dokumentene i `docs/` skal Claude:
 3. Gjøre `git commit` med en beskrivende melding om hva som ble endret
 4. Gjøre `git push` for å publisere til GitHub Pages
 
+Claude har tillatelse til å gjøre `git pull --rebase`, `git commit` og `git push` uten å spørre først.
+
 Websiden er tilgjengelig på: `https://arnego.github.io/sommerferie2026/`
 
 ## GitHub Automation
