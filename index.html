@@ -121,7 +121,7 @@ tailwind.config = {
       <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-4">
         Fra <span class="text-sunshine">Kongsberg</span><br class="sm:hidden"> til Europa og tilbake
       </h1>
-      <p class="text-white/60 text-base sm:text-lg font-light">4 uker &middot; Campingvogn &middot; 2 voksne + 1 barn &middot; Juli 2026</p>
+      <p class="text-white/60 text-base sm:text-lg font-light">3,5 uker &middot; Campingvogn &middot; 2 voksne + 1 barn &middot; Juli 2026</p>
     </div>
 
     <!-- Stats-bar -->
@@ -136,7 +136,7 @@ tailwind.config = {
           <span class="text-[10px] sm:text-xs uppercase tracking-wider font-medium opacity-80">Land</span>
         </div>
         <div class="py-4 text-center">
-          <span class="font-heading text-2xl sm:text-3xl font-bold block">~2 500</span>
+          <span class="font-heading text-2xl sm:text-3xl font-bold block">~1 870</span>
           <span class="text-[10px] sm:text-xs uppercase tracking-wider font-medium opacity-80">Km</span>
         </div>
         <div class="py-4 text-center">
@@ -259,7 +259,7 @@ tailwind.config = {
 
                   <!-- Camping-info -->
                   <div class="ml-11 mb-3 px-3 py-2 bg-cream rounded-lg">
-                    <p class="text-xs text-muted uppercase tracking-wider font-medium mb-1">Campingplass</p>
+                    <p class="text-xs text-muted uppercase tracking-wider font-medium mb-1" x-text="stop.camping.label || 'Campingplass'"></p>
                     <p class="text-sm font-medium">
                       <a :href="stop.camping.url" target="_blank" rel="noopener"
                          class="text-petrol hover:underline" x-text="stop.camping.name"></a>
@@ -337,7 +337,7 @@ tailwind.config = {
                    :style="'width:' + checklistProgress(tab.id) + '%'"></div>
             </div>
             <span class="text-xs text-muted font-medium whitespace-nowrap"
-                  x-text="checklistDoneCount(tab.id) + ' av ' + checklists[tab.id].length + ' fullfort'"></span>
+                  x-text="checklistDoneCount(tab.id) + ' av ' + checklists[tab.id].length + ' fullført'"></span>
           </div>
 
           <!-- Sjekkliste-items -->
@@ -443,7 +443,7 @@ tailwind.config = {
       </div>
 
       <!-- Big Mac Index -->
-      <h3 class="font-heading text-lg text-petrol mb-4">Big Mac Index - kostnadsniva</h3>
+      <h3 class="font-heading text-lg text-petrol mb-4">Big Mac Index - kostnadsnivå</h3>
       <div class="bg-white rounded-xl border border-sand/50 overflow-hidden mb-8">
         <table class="w-full text-sm">
           <thead class="bg-cream/70">
@@ -523,7 +523,7 @@ tailwind.config = {
             </tr>
           </tbody>
         </table>
-        <div class="px-5 py-2.5 bg-cream/50 text-xs text-muted">Alle hastigheter i km/t. *Tyskland: Ingen generell fartsgrense pa Autobahn for biler uten henger, men 80 km/t med campingvogn. Totalvekt bil+vogn over 3,5t: 60 km/t landevei.</div>
+        <div class="px-5 py-2.5 bg-cream/50 text-xs text-muted">Alle hastigheter i km/t. *Tyskland: Ingen generell fartsgrense på Autobahn for biler uten henger, men 80 km/t med campingvogn. Totalvekt bil+vogn over 3,5t: 60 km/t landevei.</div>
       </div>
 
       <!-- Nodnumre -->
@@ -808,10 +808,10 @@ function ferieApp() {
     // Ukekort-data
     get weeks() {
       return [
-        { num: 28, title: 'Danmark - Strand og Legoland', subtitle: '4.-11. juli', flags: 'DK' },
-        { num: 29, title: 'Tyskland - Hamburg og Berlin', subtitle: '11.-19. juli', flags: 'DE' },
-        { num: 30, title: 'Saksisk Sveits og København', subtitle: '19.-27. juli', flags: 'DE / DK' },
-        { num: 31, title: 'Göteborg og hjemreise', subtitle: '27.-30. juli', flags: 'SE' },
+        { num: 28, title: 'Danmark — Strand og LEGOLAND', subtitle: '4.–10. juli', flags: 'DK' },
+        { num: 29, title: 'Tyskland — Hamburg og Berlin', subtitle: '10.–18. juli', flags: 'DE' },
+        { num: 30, title: 'Saksisk Sveits og København', subtitle: '18.–26. juli', flags: 'DE / DK' },
+        { num: 31, title: 'Hjemreise med DFDS', subtitle: '26.–27. juli', flags: 'DK/NO' },
       ];
     },
 
@@ -834,8 +834,8 @@ function ferieApp() {
         lat: 57.37,
         lng: 9.72,
         arrivalDate: '2026-07-04',
-        departureDate: '2026-07-08',
-        nights: 4,
+        departureDate: '2026-07-07',
+        nights: 3,
         week: 28,
         camping: {
           name: 'Løkken Klit Camping',
@@ -847,17 +847,18 @@ function ferieApp() {
         driveFromPrevious: {
           km: 140,
           hours: '1t 10min + 3t 45min ferge',
-          route: 'Kongsberg - Larvik (E18), ferge til Hirtshals (Color Line), Rute 55 til Løkken',
+          route: 'Kongsberg–Larvik (E18), ferge til Hirtshals (Color Line), Rute 55 til Løkken',
         },
-        description: 'Bred, hvit sandstrand på den danske vestkysten. Perfekt for strandliv, sandslottbygging og lek i bølgene. Campingplassen har innendørs svømmebasseng.',
+        description: 'Bred, hvit sandstrand på den danske vestkysten. Innendørs svømmebasseng, trampoliner og stor lekeplass på campingplassen. Ca. 800 m til stranden.',
         activities: [
-          { name: 'Løkken Strand', type: 'strand', priority: 'must-do', description: 'En av Danmarks bredeste sandstrender med ikoniske hvite badehus.', url: '' },
-          { name: 'Rubjerg Knude Fyr', type: 'severdighet', priority: 'must-do', description: 'Berømt fyrtårn omgitt av sandklitter. 15 min kjøring.', url: '' },
-          { name: 'Dagstur til Skagen / Grenen', type: 'severdighet', priority: 'must-do', description: 'Der to hav møtes. Sandormen kjører til spissen. 1t 15min.', url: '' },
-          { name: 'Faarup Sommerland', type: 'forlystelsespark', priority: 'nice-to-have', description: 'Danmarks største forlystelsespark med vannpark. 25 min kjøring.', url: '' },
-          { name: 'Nordsøen Oceanarium', type: 'akvarium', priority: 'nice-to-have', description: 'Nordeuropas største akvarium i Hirtshals. 40 min kjøring.', url: '' },
+          { name: 'Løkken Strand', type: 'strand', priority: 'must-do', description: 'En av Danmarks bredeste sandstrender. Sandslottbygging og lek i bølgene. Ikoniske hvite badehus.', url: 'https://www.visitnordjylland.dk/nordjylland/loekken-strand' },
+          { name: 'Rubjerg Knude Fyr', type: 'severdighet', priority: 'must-do', description: 'Berømt fyrtårn omgitt av sandklitter. 15 min kjøring. Lett turvei opp.', url: 'https://www.visitnordjylland.dk/nordjylland/rubjerg-knude-fyr' },
+          { name: 'Dagstur til Skagen / Grenen', type: 'severdighet', priority: 'must-do', description: '1 t 15 min kjøring. Grenen der to hav møtes — William kan stå i to hav samtidig. Sandormen kjører ut til spissen.', url: 'https://www.skagen-tourist.dk/' },
+          { name: 'Faarup Sommerland', type: 'forlystelsespark', priority: 'nice-to-have', description: 'Danmarks største forlystelsespark med vannpark og barneland. 25 min kjøring.', url: 'https://www.faarupsommerland.dk/' },
+          { name: 'Nordsøen Oceanarium', type: 'akvarium', priority: 'nice-to-have', description: 'Nordeuropas største akvarium med havsealer og haier. Hirtshals, 40 min kjøring.', url: 'https://nordsoenoceanarium.dk/' },
+          { name: 'Råbjerg Mile', type: 'natur', priority: 'nice-to-have', description: 'Danmarks største vandresandklit — unikt landskap som minner om en ørken.', url: 'https://www.visitnordjylland.dk/nordjylland/raabjerg-mile' },
         ],
-        tips: ['Juli er høysesong - book tidlig', 'CampingKey Europe anbefales', 'Husk vindjakke - vestkysten kan være blåsende'],
+        tips: ['Juli er høysesong — book campingplass tidlig', 'CampingKey Europe anbefales for rabatter på danske campingplasser', 'Husk solkrem og vindjakke — vestkysten kan være blåsende'],
         imageUrl: '',
       },
       {
@@ -867,14 +868,14 @@ function ferieApp() {
         countryCode: 'DK',
         lat: 55.73,
         lng: 9.11,
-        arrivalDate: '2026-07-08',
-        departureDate: '2026-07-11',
+        arrivalDate: '2026-07-07',
+        departureDate: '2026-07-10',
         nights: 3,
         week: 28,
         camping: {
-          name: 'Billund Camping',
-          address: 'Ellehammers Alle 2, 7190 Billund',
-          url: 'https://www.billund-camping.dk/',
+          name: 'LEGOLAND® Holiday Village Camping',
+          address: 'Ellehammers Allé, 7190 Billund',
+          url: 'https://www.legoland.dk/en/stay/legoland-holiday-village/camping/',
           booked: false,
           bookingRef: '',
         },
@@ -883,15 +884,15 @@ function ferieApp() {
           hours: '2t 30min',
           route: 'Via Viborg sørover gjennom Jylland',
         },
-        description: 'LEGO-hovedstaden! Gangavstand til LEGOLAND. Perfekt basecamp for 3 dager med forlystelser og dyrepark.',
+        description: 'LEGO-hovedstaden! Gangavstand til LEGOLAND. Beboere på Holiday Village har tidlig parkadgang. Perfekt basecamp for 3 dager med forlystelser og dyrepark.',
         activities: [
-          { name: 'LEGOLAND Billund', type: 'forlystelsespark', priority: 'must-do', description: 'DUPLO Land, LEGO City, Miniland. Planlegg en hel dag.', url: 'https://www.legoland.dk/' },
-          { name: 'LEGO House', type: 'museum', priority: 'must-do', description: '"Home of the Brick" med interaktive byggesoner. 3-4 timer.', url: 'https://www.legohouse.com/' },
-          { name: 'Givskud Zoo', type: 'dyrepark', priority: 'must-do', description: 'Safari-park med løver, giraffer, elefanter. 25 min kjøring.', url: 'https://www.givskudzoo.dk/' },
-          { name: 'Lalandia Aquadome', type: 'badeland', priority: 'nice-to-have', description: 'Tropisk badeland med vannrutsjebaner. Dagsbillett mulig.', url: '' },
-          { name: 'Kongernes Jelling', type: 'historie', priority: 'nice-to-have', description: 'UNESCO vikinghistorie. 20 min kjøring. Gratis.', url: '' },
+          { name: 'LEGOLAND Billund', type: 'forlystelsespark', priority: 'must-do', description: 'Hovedattraksjonen. DUPLO Land og LEGO City for 5-åringer. Miniland. Planlegg en hel dag.', url: 'https://www.legoland.dk/' },
+          { name: 'LEGO House', type: 'museum', priority: 'must-do', description: '"Home of the Brick" i Billund sentrum. Interaktive byggesoner. 3–4 timer.', url: 'https://www.legohouse.com/' },
+          { name: 'Givskud Zoo (LEGOLAND Wildlife Park)', type: 'dyrepark', priority: 'must-do', description: 'Safari-park med løver, giraffer, elefanter. 25 min kjøring.', url: 'https://www.givskudzoo.dk/' },
+          { name: 'Lalandia Billund (Aquadome)', type: 'badeland', priority: 'nice-to-have', description: 'Tropisk badeland med vannrutsjebaner. Dagsbillett mulig. Perfekt på regnværsdager.', url: 'https://www.lalandia.dk/billund' },
+          { name: 'Kongernes Jelling', type: 'historie', priority: 'nice-to-have', description: 'UNESCO vikinghistorie med interaktivt opplevelsessenter. 20 min kjøring. Gratis inngang.', url: 'https://natmus.dk/museer-og-slotte/kongernes-jelling/' },
         ],
-        tips: ['Vurder 2-dagers billett til LEGOLAND', 'LEGOLAND åpner kl. 10:00 - vær tidlig'],
+        tips: ['Book campingplass + park-pakke via legoland.dk/en/bookings/ (2-dagers billett anbefales)', 'LEGOLAND åpner kl. 10:00 — vær tidlig for å unngå køer', 'Beboere på Holiday Village har tilgang til parken 30 min før offisiell åpning'],
         imageUrl: '',
       },
       {
@@ -901,13 +902,13 @@ function ferieApp() {
         countryCode: 'DE',
         lat: 53.55,
         lng: 9.99,
-        arrivalDate: '2026-07-11',
-        departureDate: '2026-07-14',
+        arrivalDate: '2026-07-10',
+        departureDate: '2026-07-13',
         nights: 3,
         week: 29,
         camping: {
           name: 'Campingplatz Stover Strand International',
-          address: 'Stover Strand 10, 21423 Drage',
+          address: 'Stover Strand 10, 21423 Drage (Elbmarsch)',
           url: 'https://www.stfreizeit.de/',
           booked: false,
           bookingRef: '',
@@ -915,16 +916,16 @@ function ferieApp() {
         driveFromPrevious: {
           km: 340,
           hours: '4t 30min',
-          route: 'E45 gjennom Jylland, A7 i Tyskland',
+          route: 'E45/A7',
         },
-        description: 'Stor havneby med fantastiske attraksjoner for barn. Miniatur Wunderland er et absolutt must!',
+        description: 'Stor havneby med fantastiske attraksjoner for barn. Miniatur Wunderland er et absolutt must! Campingplass med sandstrand ved Elben, ca. 35 km fra sentrum.',
         activities: [
-          { name: 'Miniatur Wunderland', type: 'attraksjon', priority: 'must-do', description: 'Verdens største modelljernbaneutstilling. Bestill billetter online! 3-4 timer.', url: 'https://www.miniatur-wunderland.com/' },
-          { name: 'Tierpark Hagenbeck', type: 'dyrepark', priority: 'must-do', description: 'Dyrepark med tropisk akvarium og strykedyr-område. Halv dag.', url: 'https://www.hagenbeck.de/' },
-          { name: 'Hafenrundfahrt', type: 'batkjøring', priority: 'must-do', description: 'Barkas-tur i havnen fra Landungsbrucken. Ca. 1 time.', url: '' },
-          { name: 'Planten un Blomen', type: 'park', priority: 'nice-to-have', description: 'Gratis bypark med vannlekeplass og vannlysspill om kvelden.', url: '' },
+          { name: 'Miniatur Wunderland', type: 'attraksjon', priority: 'must-do', description: 'Verdens største modelljernbaneutstilling i Speicherstadt. Bestill billetter online på forhånd! 3–4 timer.', url: 'https://www.miniatur-wunderland.com/' },
+          { name: 'Tierpark Hagenbeck', type: 'dyrepark', priority: 'must-do', description: 'Hamburgs dyrepark med tropisk akvarium og strykedyr-område for barn. Halv dag.', url: 'https://www.hagenbeck.de/' },
+          { name: 'Hafenrundfahrt (havnecruise)', type: 'båtkjøring', priority: 'must-do', description: 'Barkastur i Hamburgs havn fra Landungsbrücken. Ca. 1 time. Store containerskip.', url: 'https://www.barkassen-meyer.de/' },
+          { name: 'Planten un Blomen', type: 'park', priority: 'nice-to-have', description: 'Gratis bypark med stor lekeplass og vannlekeplass om sommeren. Vannlysspill om kvelden.', url: 'https://plantenunblomen.hamburg.de/' },
         ],
-        tips: ['Umweltplakette (grønn miljøplakett) kreves - bestill fra umwelt-plakette.de', 'Bestill Miniatur Wunderland-billetter i god tid!'],
+        tips: ['Umweltplakette (grønn miljøplakett) kreves for kjøring i Hamburg — bestill fra umwelt-plakette.de', 'Miniatur Wunderland er alltid utsolgt i høysesong — bestill billetter i god tid!'],
         imageUrl: '',
       },
       {
@@ -934,13 +935,13 @@ function ferieApp() {
         countryCode: 'DE',
         lat: 52.52,
         lng: 13.40,
-        arrivalDate: '2026-07-14',
-        departureDate: '2026-07-19',
+        arrivalDate: '2026-07-13',
+        departureDate: '2026-07-18',
         nights: 5,
         week: 29,
         camping: {
           name: 'DCC-Campingplatz Berlin-Gatow',
-          address: 'Kladower Damm 213-217, 14089 Berlin',
+          address: 'Kladower Damm 213–217, 14089 Berlin-Gatow',
           url: 'https://www.dccberlin.de/',
           booked: false,
           bookingRef: '',
@@ -950,16 +951,16 @@ function ferieApp() {
           hours: '3t 45min',
           route: 'A24 motorvei',
         },
-        description: 'Tysklands hovedstad med familiebesok hos Andre og Lucia. Campingplass ved Havel med sandstrand.',
+        description: 'Tysklands hovedstad med familiebesøk hos André og Lucia. Campingplass med sandstrand ved Havel, ca. 22 km fra Fischerinsel.',
         activities: [
-          { name: 'Besok Andre og Lucia', type: 'familiebesok', priority: 'must-do', description: 'Fischerinsel 9, 10179 Berlin. Sentralt i Mitte ved Spree.', url: '' },
-          { name: 'Berlin Zoo', type: 'dyrehage', priority: 'must-do', description: 'En av Europas mest artsrike. Akvarium inkludert.', url: 'https://www.zoo-berlin.de/' },
-          { name: 'LEGOLAND Discovery Centre', type: 'opplevelse', priority: 'must-do', description: 'Byggeverksteder, 4D-kino, MINILAND Berlin. 2-3 timer.', url: 'https://www.legolanddiscoverycentre.com/berlin/' },
-          { name: 'Tropical Islands', type: 'badeland', priority: 'must-do', description: 'Verdens største innendørs tropeanlegg. Ca. 60 km sør. Hel dag.', url: 'https://www.tropical-islands.de/' },
-          { name: 'Naturkundemuseum', type: 'museum', priority: 'nice-to-have', description: 'Verdens største dinosaurskjelett. 2-3 timer.', url: 'https://www.museumfuernaturkunde.berlin/' },
-          { name: 'Tempelhofer Feld', type: 'park', priority: 'nice-to-have', description: 'Gammel flyplass, nå bypark. Sykling og drageflying. Gratis.', url: '' },
+          { name: 'Besøk André og Lucia', type: 'familiebesøk', priority: 'must-do', description: 'Fischerinsel 9, 10179 Berlin. Sentralt i Mitte ved Spree-elven.', url: '' },
+          { name: 'Berlin Zoo', type: 'dyrehage', priority: 'must-do', description: 'En av Europas mest artsrike. Akvarium inkludert. Halv til hel dag.', url: 'https://www.zoo-berlin.de/' },
+          { name: 'LEGOLAND Discovery Centre', type: 'opplevelse', priority: 'must-do', description: 'LEGO-opplevelsessenter med byggeverksteder og 4D-kino. Bestill online. 2–3 timer.', url: 'https://www.legolanddiscoverycentre.com/berlin/' },
+          { name: 'Tropical Islands', type: 'badeland', priority: 'must-do', description: 'Verdens største innendørs tropiske badeanlegg. Ca. 60 km sør for Berlin. Hel dag.', url: 'https://www.tropical-islands.de/' },
+          { name: 'Naturkundemuseum', type: 'museum', priority: 'nice-to-have', description: 'Verdens største monterte dinosaurskjelett. Barn elsker dinosauravdelingen. 2–3 timer.', url: 'https://www.museumfuernaturkunde.berlin/' },
+          { name: 'Tempelhofer Feld', type: 'park', priority: 'nice-to-have', description: 'Gammel flyplass omgjort til enorm bypark. Sykling og drageflying med William. Gratis.', url: 'https://gruen-berlin.de/projekt/tempelhofer-feld' },
         ],
-        tips: ['Umweltplakette kreves i Berlin', 'Vurder Berlin WelcomeCard for 5 dager', 'Campingplassen ved Havel er fin for bading'],
+        tips: ['Umweltplakette kreves også i Berlin', 'Vurder Berlin WelcomeCard for 5 dager (dekker kollektivtransport + rabatter)', 'Campingplassen ved Havel er fin for bading på varme dager'],
         imageUrl: '',
       },
       {
@@ -969,13 +970,13 @@ function ferieApp() {
         countryCode: 'DE',
         lat: 50.92,
         lng: 14.15,
-        arrivalDate: '2026-07-19',
-        departureDate: '2026-07-22',
+        arrivalDate: '2026-07-18',
+        departureDate: '2026-07-21',
         nights: 3,
         week: 30,
         camping: {
-          name: 'Campingplatz Ostrauer Muhle',
-          address: 'Ostrauer Muhle 15, 01814 Bad Schandau',
+          name: 'Campingplatz Ostrauer Mühle',
+          address: 'Ostrauer Mühle 15, 01814 Bad Schandau',
           url: 'https://www.ostrauer-muehle.de/',
           booked: false,
           bookingRef: '',
@@ -983,33 +984,34 @@ function ferieApp() {
         driveFromPrevious: {
           km: 250,
           hours: '3t 15min',
-          route: 'A13/A17 sørover mot Sachsische Schweiz',
+          route: 'A13/A17 sørover mot Sächsische Schweiz',
         },
-        description: 'Saksisk Sveits nasjonalpark med dramatiske sandsteinsformasjoner, festninger og historiske trikker.',
+        description: 'Saksisk Sveits nasjonalpark med dramatiske sandsteinsformasjoner, festninger og historiske trikker. Campingplass direkte ved Bad Schandau ved foten av nasjonalparken.',
         activities: [
-          { name: 'Basteibroen', type: 'natur', priority: 'must-do', description: 'Ikonisk steinbro 194m over Elben. Kort sti fra parkering (15-20 min).', url: '' },
-          { name: 'Festung Konigstein', type: 'festning', priority: 'must-do', description: 'En av Europas største fjellsfestninger. Kanoner, tunneler, utsikt.', url: 'https://www.festung-koenigstein.de/' },
-          { name: 'Kirnitzschtalbahn', type: 'tog', priority: 'must-do', description: 'Historisk sporvogn til Lichtenhainer Wasserfall.', url: '' },
-          { name: 'Amselsee i Rathen', type: 'natur', priority: 'nice-to-have', description: 'Rolig innsjøvandring med robåtutleie.', url: '' },
-          { name: 'Elbeskipsfart', type: 'batkjøring', priority: 'nice-to-have', description: 'Historiske hjuldampere på Elben.', url: 'https://www.saechsische-dampfschiffahrt.de/' },
+          { name: 'Basteibroen (Basteibrücke)', type: 'natur', priority: 'must-do', description: 'Ikonisk steinbro 194 m over Elben. Kort sti fra parkering (15–20 min). Hold godt i William — bratte stup!', url: 'https://www.saechsische-schweiz.de/bastei-basteibruecke.html' },
+          { name: 'Festung Königstein', type: 'festning', priority: 'must-do', description: 'En av Europas største fjellfestninger. Kanoner, tunneler, utsikt. Halv dag.', url: 'https://www.festung-koenigstein.de/' },
+          { name: 'Kirnitzschtalbahn', type: 'tog', priority: 'must-do', description: 'Historisk sporvogn fra Bad Schandau til Lichtenhainer Wasserfall. William vil elske trikketuren!', url: 'https://www.ovps.de/kirnitzschtalbahn/' },
+          { name: 'Amselsee i Rathen', type: 'natur', priority: 'nice-to-have', description: 'Rolig innsjøvandring med robåtutleie.', url: 'https://www.saechsische-schweiz.de/amselsee-kurort-rathen.html' },
+          { name: 'Elbeskipsfart (hjuldampere)', type: 'båtkjøring', priority: 'nice-to-have', description: 'Historiske hjuldampere på Elben. Fantastisk utsikt fra vannet.', url: 'https://www.saechsische-dampfschiffahrt.de/' },
+          { name: 'Pirna gammelby', type: 'by', priority: 'nice-to-have', description: 'Sjarmerende gammelby med fargerike hus. 15 min kjøring. Is og spasertur.', url: 'https://www.pirna.de/tourismus' },
         ],
-        tips: ['Ga til Bastei tidlig på morgenen', 'Ingen Umweltzone i Bad Schandau', 'Historisk personheis i Bad Schandau'],
+        tips: ['Ingen Umweltzone i Bad Schandau (men unngå Dresden sentrum)', 'Gå til Bastei tidlig på morgenen for å unngå folkemengder', 'Bad Schandau har historisk personheis opp til utsiktspunkt'],
         imageUrl: '',
       },
       {
         id: 6,
-        name: 'Warnemunde',
+        name: 'Warnemünde',
         country: 'Tyskland',
         countryCode: 'DE',
         lat: 54.18,
         lng: 12.09,
-        arrivalDate: '2026-07-22',
-        departureDate: '2026-07-23',
+        arrivalDate: '2026-07-21',
+        departureDate: '2026-07-22',
         nights: 1,
         week: 30,
         camping: {
-          name: 'Campingpark Warnemunde',
-          address: 'Parkstrasse 1, 18119 Rostock-Warnemunde',
+          name: 'Campingpark Warnemünde',
+          address: 'Parkstrasse 1, 18119 Rostock-Warnemünde',
           url: 'https://www.campingpark-warnemuende.de/',
           booked: false,
           bookingRef: '',
@@ -1017,14 +1019,15 @@ function ferieApp() {
         driveFromPrevious: {
           km: 400,
           hours: '5t 15min',
-          route: 'Via Dresden-Leipzig-Rostock (A13/A14/A19)',
+          route: 'Via Dresden–Leipzig–Rostock (A13/A14/A19)',
         },
-        description: 'Transitstopp ved Østersjøen med bred sandstrand. Stranddag før fergen til Danmark neste morgen.',
+        description: 'Transitstopp ved Østersjøen med bred sandstrand. Stranddag før Scandlines-fergen til Gedser (Danmark) neste morgen.',
         activities: [
-          { name: 'Warnemunde Strand', type: 'strand', priority: 'must-do', description: 'Bred sandstrand med grunt, barnevennlig vann. Strandkurver kan leies.', url: '' },
-          { name: 'Warnemunde fyrtårn', type: 'severdighet', priority: 'nice-to-have', description: 'Utsikt fra fyrtårnet ved stranden.', url: '' },
+          { name: 'Warnemünde Strand', type: 'strand', priority: 'must-do', description: 'Bred sandstrand med grunt, barnevennlig vann. Strandkurver (Strandkorb) kan leies.', url: 'https://www.rostock.de/tourismus/aktivitaeten/strand-und-meer.html' },
+          { name: 'Warnemünde fyrtårn', type: 'severdighet', priority: 'nice-to-have', description: 'Utsikt fra fyrtårnet like ved strand og havn.', url: 'https://www.leuchtturm-warnemuende.de/' },
+          { name: 'Se på ferger i havnen', type: 'underholdning', priority: 'nice-to-have', description: 'Store Scandlines-ferger — spennende for William.', url: 'https://www.scandlines.com/' },
         ],
-        tips: ['Scandlines-fergen gar fra Rostock fergeterminal (ca. 20 min kjøring)', 'Ingen Umweltzone i Warnemunde'],
+        tips: ['Ingen Umweltzone i Warnemünde/Rostock', 'Scandlines-fergen til Gedser går fra Rostock fergeterminal (ikke Warnemünde) — ca. 20 min kjøring'],
         imageUrl: '',
       },
       {
@@ -1034,8 +1037,8 @@ function ferieApp() {
         countryCode: 'DK',
         lat: 55.68,
         lng: 12.57,
-        arrivalDate: '2026-07-23',
-        departureDate: '2026-07-27',
+        arrivalDate: '2026-07-22',
+        departureDate: '2026-07-26',
         nights: 4,
         week: 30,
         camping: {
@@ -1048,54 +1051,56 @@ function ferieApp() {
         driveFromPrevious: {
           km: 170,
           hours: '2t 15min + 2t ferge',
-          route: 'Ferge Rostock-Gedser (Scandlines), E47/E55 til København',
+          route: 'Ferge Rostock–Gedser (Scandlines), E47/E55 til København',
         },
-        description: 'Danmarks hovedstad med verdensklasse-attraksjoner for barn. Campingplass på historisk festning ved Øresund.',
+        description: 'Danmarks hovedstad med verdensklasse-attraksjoner for barn. Historisk festningsområde ved Øresund, ca. 8 km nord for sentrum.',
         activities: [
-          { name: 'Tivoli Gardens', type: 'forlystelsespark', priority: 'must-do', description: 'Verdens nest eldste forlystelsespark. Barn under 8 gratis m/voksen.', url: 'https://www.tivoli.dk/' },
-          { name: 'Bakken', type: 'forlystelsespark', priority: 'must-do', description: 'Verdens eldste forlystelsespark, gratis inngang! I Dyrehaven.', url: 'https://www.bakken.dk/' },
-          { name: 'Den Blå Planet', type: 'akvarium', priority: 'must-do', description: 'Nordeuropas største akvarium med haier og havskildpadder.', url: 'https://denblaaplanet.dk/' },
-          { name: 'Københavns Zoo', type: 'dyrehage', priority: 'nice-to-have', description: 'Elefanter, isbjørn, barne-zoo. Halv dag.', url: 'https://www.zoo.dk/' },
-          { name: 'Amager Strandpark', type: 'strand', priority: 'nice-to-have', description: 'Sandstrand med grunt barnevennlig vann og lekeplasser. Gratis.', url: '' },
-          { name: 'Nyhavn + kanalbåt', type: 'sightseeing', priority: 'nice-to-have', description: 'Fargerike hus, batkjøring på kanalene. Ca. 30 min.', url: '' },
+          { name: 'Tivoli Gardens', type: 'forlystelsespark', priority: 'must-do', description: 'Verdens nest eldste forlystelsespark (1843). Mange karuseller for små barn. Barn under 8 gratis m/voksen.', url: 'https://www.tivoli.dk/' },
+          { name: 'Bakken (Dyrehavsbakken)', type: 'forlystelsespark', priority: 'must-do', description: 'Verdens eldste forlystelsespark, gratis inngang! Ligger i Dyrehaven med tamme hjorter.', url: 'https://www.bakken.dk/' },
+          { name: 'Den Blå Planet', type: 'akvarium', priority: 'must-do', description: 'Nordeuropas største akvarium. Haier, havskildpadder, interaktive utstillinger.', url: 'https://denblaaplanet.dk/' },
+          { name: 'Københavns Zoo', type: 'dyrehage', priority: 'nice-to-have', description: 'Elefanter, isbjørn, løver. Eget barne-zoo der William kan klappe dyr.', url: 'https://www.zoo.dk/' },
+          { name: 'Amager Strandpark', type: 'strand', priority: 'nice-to-have', description: 'Kunstig sandstrand med grunt barnevennlig vann og lekeplasser. Gratis.', url: 'https://amager-strand.dk/' },
+          { name: 'Nyhavn + kanalbåt', type: 'sightseeing', priority: 'nice-to-have', description: 'Fargerike hus, is og båtkjøring på kanalene (ca. 1 time).', url: 'https://www.stromma.com/da-dk/copenhagen/' },
+          { name: 'Experimentarium', type: 'vitensenter', priority: 'nice-to-have', description: 'Interaktivt vitensenter med hands-on utstillinger for barn.', url: 'https://www.experimentarium.dk/' },
         ],
-        tips: ['Book Charlottenlund Fort tidlig - ekstremt populær i juli', 'Kombiner Bakken med tur i Dyrehaven (tamme hjorter)', 'Stopp ved Kronborg i Helsingør på vei til Göteborg'],
+        tips: ['Charlottenlund Fort er ekstremt populær i juli — book så tidlig som mulig!', 'Kombiner Bakken med tur i Dyrehaven (tamme hjorter)', 'Dagstur til Kronborg slott i Helsingør (Hamlets slott) — ca. 45 min kjøring nord for København', 'DFDS-terminalen i Nordhavn: innsjekk fra kl. 14:00 på avreisedagen (26. juli)'],
         imageUrl: '',
       },
       {
         id: 8,
-        name: 'Göteborg',
-        country: 'Sverige',
-        countryCode: 'SE',
-        lat: 57.71,
-        lng: 11.97,
-        arrivalDate: '2026-07-27',
-        departureDate: '2026-07-30',
-        nights: 3,
+        name: 'DFDS Mini-cruise',
+        country: 'Danmark / Norge',
+        countryCode: 'DK/NO',
+        lat: 55.69,
+        lng: 12.60,
+        arrivalDate: '2026-07-26',
+        departureDate: '2026-07-27',
+        nights: 1,
         week: 31,
         camping: {
-          name: 'Lisebergs Camping & Stugby - Karralund',
-          address: 'Olbersgatan 11, 416 55 Göteborg',
-          url: 'https://www.liseberg.se/boende/karralund/',
+          label: 'Ferge',
+          name: 'DFDS Pearl Seaways / Crown Seaways',
+          address: 'DFDS Nordhavn terminal, København — avgang kl. 16:30',
+          url: 'https://www.dfds.com/no-no/minicruise/oslo-kobenhavn',
           booked: false,
           bookingRef: '',
         },
         driveFromPrevious: {
-          km: 330,
-          hours: '4t 30min + 20min ferge',
-          route: 'Via Helsingør-Helsingborg (ForSea), E6 nordover',
+          km: 5,
+          hours: '15 min + 17t ferge',
+          route: 'Kjør til DFDS Nordhavn terminal (5 km). Innsjekk fra kl. 14:00. Avgang kl. 16:30',
         },
-        description: 'Siste stopp før ferien. Liseberg, Universeum og avslappede dager for hjemreisen.',
+        description: 'Hjemreise med DFDS mini-cruise København → Oslo. Overnatting i familielugar. Barnedisco, lekerom og bufferestaurant ombord. Ankomst Oslo ca. kl. 09:45 — deretter 85 km til Kongsberg.',
         activities: [
-          { name: 'Liseberg', type: 'forlystelsespark', priority: 'must-do', description: 'Skandinavias største forlystelsespark. Kaniner-området for små barn.', url: 'https://www.liseberg.se/' },
-          { name: 'Universeum', type: 'vitensenter', priority: 'must-do', description: 'Regnskogavdeling, haier, vannlek. Fantastisk for 5-åringer.', url: 'https://www.universeum.se/' },
-          { name: 'Slottsskogen', type: 'park', priority: 'must-do', description: 'Gratis dyrepark med seler, pingviner, elger. Flotte lekeplasser.', url: '' },
-          { name: 'Maritiman', type: 'museum', priority: 'nice-to-have', description: 'Verdens største flytende skipsmuseum. Utforsk u-båter.', url: 'https://www.maritiman.se/' },
-          { name: 'Paddan-båtene', type: 'batkjøring', priority: 'nice-to-have', description: 'Sightseeing gjennom kanalene. Lav brohøyde - morsomt for barn!', url: '' },
+          { name: 'Barnas lekeland', type: 'lek', priority: 'must-do', description: 'Dedikert lekerom for småbarn, barnedisco om kvelden.', url: '' },
+          { name: 'Sjøutsikt fra dekk', type: 'opplevelse', priority: 'must-do', description: 'Seiling gjennom Øresund og inn Oslofjorden — William ser fyrtårn, skip og øyer.', url: '' },
+          { name: 'Familiebuffé', type: 'mat', priority: 'must-do', description: 'Middagsbuffé med dansk/norsk mat — populært med barnefamilier.', url: '' },
+          { name: 'Frokostbuffé', type: 'mat', priority: 'nice-to-have', description: '7 Seas frokostbuffé før ankomst Oslo ca. kl. 09:45.', url: '' },
         ],
-        tips: ['30. juli: Kjor hjem via E6/E18 (ca. 350 km, 4,5 timer)', 'Siste stopp - ta det rolig og nyt byen'],
+        tips: ['Campingvogn må oppgis ved booking (ekstra lengdegebyr inngår i prisen)', 'Book familielugar med vindu — William vil nyte utsikten', 'Innsjekk starter kl. 14:00 — bruk formiddagen til en siste København-aktivitet', 'Hjemreise: Oslo → Kongsberg 85 km, ca. 1 t 15 min via E18/E134. Hjemme til lunsj!'],
         imageUrl: '',
       },
+    
     ],
 
     // Startpunkt (Kongsberg) for kartet
@@ -1135,7 +1140,7 @@ function ferieApp() {
       const mapEl = document.getElementById('map');
       if (!mapEl || this.map) return;
 
-      // Sentrer pa omtrentlig rutemidtpunkt
+      // Sentrer på omtrentlig rutemidtpunkt
       this.map = L.map('map').setView([54.5, 11.5], 5);
 
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -1143,7 +1148,7 @@ function ferieApp() {
         maxZoom: 18,
       }).addTo(this.map);
 
-      // Stoppmarkorer
+      // Stoppmarkører
       const allPoints = [];
 
       // Kongsberg (start/slutt)

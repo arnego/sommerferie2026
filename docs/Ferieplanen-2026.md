@@ -361,6 +361,7 @@ DFDS mini-cruise København → Oslo (1 natt om bord). Hjemkjøring fra Oslo til
 
 | Dato | Endring | Av |
 | --- | --- | --- |
+| 2026-04-12 | index.html synkronisert med spesifikasjonen: korrekte datoer (4–27 juli), Billund → LEGOLAND® Holiday Village Camping, Göteborg erstattet med DFDS mini-cruise, lagt til Råbjerg Mile/Experimentarium/Pirna/Se på ferger, URLs på alle aktiviteter, norske tegn fikset gjennomgående | Claude |
 | 2026-04-12 | Lagt til offisielle lenker for alle aktiviteter og severdigheter | Claude |
 | 2026-04-12 | Løkken redusert til 3 netter; Sverige fjernet som kriterie; Göteborg-stoppet erstattet med DFDS mini-cruise København → Oslo; Billund Camping byttet til LEGOLAND® Holiday Village Camping | Claude |
 | 2026-04-11 | Komplett ruteforslag utarbeidet: 8 stopp, 26 netter, campingplasser, aktiviteter, kjøreetapper og ferger | Claude |
