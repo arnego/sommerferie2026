@@ -3,9 +3,14 @@ sommerferie2026_server.py  –  WSL-versjon
 ==========================================
 MCP-server for familie Goderstad sin campingvognferie juli 2026.
 
-Oppdaterer index.html i GitHub-repo arnego/sommerferie2026 via
+Oppdaterer docs/ og index.html i GitHub-repo arnego/sommerferie2026 via
 git commit + push. Siden publiseres automatisk på GitHub Pages:
 https://arnego.github.io/sommerferie2026/
+
+Arbeidsflyt for innholdsendringer:
+  1. Oppdater relevant spec i docs/ (Ferieplanen-2026.md eller Teknisk-spesifikasjon.md)
+  2. Oppdater index.html basert på den oppdaterte spec-en
+  3. Commit + push begge filer i én operasjon
 
 Plassering i WSL:
   ~/projects/mcp-servers/sommerferie2026/sommerferie2026_server.py
@@ -27,82 +32,141 @@ from mcp.server.stdio import stdio_server
 from mcp import types
 
 # ── KONFIGURASJON ─────────────────────────────────────────────────
-REPO_PATH  = Path("/home/arne/projects/sommerferie2026")
-INDEX_FILE = REPO_PATH / "index.html"
-PAGES_URL  = "https://arnego.github.io/sommerferie2026/"
-GITHUB_REPO = "https://github.com/arnego/sommerferie2026"
-MODEL      = "claude-sonnet-4-6"
+REPO_PATH        = Path("/home/arne/projects/sommerferie2026")
+INDEX_FILE       = REPO_PATH / "index.html"
+FERIEPLAN_FILE   = REPO_PATH / "docs" / "Ferieplanen-2026.md"
+TEKNISK_SPEC_FILE = REPO_PATH / "docs" / "Teknisk-spesifikasjon.md"
+PAGES_URL        = "https://arnego.github.io/sommerferie2026/"
+GITHUB_REPO      = "https://github.com/arnego/sommerferie2026"
+MODEL            = "claude-sonnet-4-6"
 # ──────────────────────────────────────────────────────────────────
 
 server = Server("sommerferie2026")
 
-UPDATE_SYSTEM_PROMPT = """Du vedlikeholder en HTML-reiseplan for en campingvognferie i juli 2026.
-Ruten: Kongsberg → Göteborg → København → Hamburg → Amsterdam → Schwarzwald → Østerrike/Alpene
+EXPERT_ROLE = """Du er ekspert webutvikler og reisekonsulent for familie Goderstad sin campingvognferie juli 2026.
+Du vet alt som bør være med for å planlegge en vellykket ferie, og for å lage en god presentasjon
+av turen og reiserutene i nettformat.
 
-Du mottar en oppdateringsforespørsel og den nåværende index.html.
+Familien: Ann Kristin (42), Arne (40) og William (5 år).
+Kjøretøy: Campingvogn Knaus Sport 400 LK, trukket av Land Rover Discovery 4.
+Rute: Kongsberg → Løkken Strand → Billund → Hamburg → Berlin → Bad Schandau → Warnemünde → København → DFDS-cruise til Oslo → Kongsberg.
+Publisert på: https://arnego.github.io/sommerferie2026/
+"""
+
+SPEC_UPDATE_SYSTEM_PROMPT = EXPERT_ROLE + """
+Du mottar en oppdateringsforespørsel og den nåværende spec-filen (Markdown).
+Returner KUN den oppdaterte, komplette Markdown-filen – ingenting annet.
+Ingen forklaring, ingen kodeblokk-wrapper, bare ren Markdown.
+
+Regler:
+- Bevar all eksisterende struktur og formattering
+- Gjør kun de forespurte endringene
+- Oppdater endringsloggen nederst i dokumentet med dagens dato og en kort beskrivelse
+"""
+
+HTML_UPDATE_SYSTEM_PROMPT = EXPERT_ROLE + """
+Du mottar en oppdateringsforespørsel, den relevante spec-filen og den nåværende index.html.
 Returner KUN den oppdaterte, komplette index.html – ingenting annet.
 Ingen forklaring, ingen markdown, bare ren HTML fra <!DOCTYPE html> til </html>.
 
 Regler:
-- Bevar all design og funksjonalitet
+- Bevar all design, fargepalett og funksjonalitet (Tailwind, Alpine.js, Leaflet)
 - Gjør kun de forespurte endringene
-- Oppdater "Sist oppdatert" i footer med dagens dato
+- Hold data i index.html konsistent med spec-filen
+- Oppdater "Sist oppdatert" i footer med dagens dato hvis den finnes
 """
 
 
-def read_html() -> str:
-    if not INDEX_FILE.exists():
-        raise FileNotFoundError(
-            f"Finner ikke {INDEX_FILE}\n"
-            f"Sjekk at repoet ligger på ~/projects/sommerferie2026/"
-        )
-    return INDEX_FILE.read_text(encoding="utf-8")
+# ── FILHJELP ──────────────────────────────────────────────────────
+
+def read_file(path: Path) -> str:
+    if not path.exists():
+        raise FileNotFoundError(f"Finner ikke {path}")
+    return path.read_text(encoding="utf-8")
+
+def write_file(path: Path, content: str):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(content, encoding="utf-8")
 
 
-def write_html(content: str):
-    INDEX_FILE.write_text(content, encoding="utf-8")
+# ── GIT ───────────────────────────────────────────────────────────
 
-
-def git_push(commit_message: str) -> tuple[bool, str]:
-    """Committer og pusher til GitHub via git i WSL."""
+def git_push(commit_message: str, files: list[str]) -> tuple[bool, str]:
+    """Committer og pusher gitte filer til GitHub via git i WSL."""
     try:
-        cmds = [
-            ["git", "-C", str(REPO_PATH), "add", "index.html"],
+        output = []
+
+        # git add for hver fil
+        for f in files:
+            result = subprocess.run(
+                ["git", "-C", str(REPO_PATH), "add", f],
+                capture_output=True, text=True,
+                env={**os.environ, "GIT_TERMINAL_PROMPT": "0"}
+            )
+            output.append(result.stdout + result.stderr)
+            if result.returncode != 0:
+                return False, "\n".join(output)
+
+        # git commit
+        result = subprocess.run(
             ["git", "-C", str(REPO_PATH), "commit", "-m",
              f"Signal: {commit_message[:72]}"],
+            capture_output=True, text=True,
+            env={**os.environ, "GIT_TERMINAL_PROMPT": "0"}
+        )
+        combined = result.stdout + result.stderr
+        output.append(combined)
+        if result.returncode != 0 and "nothing to commit" not in combined:
+            return False, "\n".join(output)
+
+        # git pull --rebase + push
+        for cmd in [
+            ["git", "-C", str(REPO_PATH), "pull", "--rebase"],
             ["git", "-C", str(REPO_PATH), "push"],
-        ]
-        output = []
-        for cmd in cmds:
+        ]:
             result = subprocess.run(
                 cmd, capture_output=True, text=True,
                 env={**os.environ, "GIT_TERMINAL_PROMPT": "0"}
             )
-            combined = result.stdout + result.stderr
-            output.append(combined)
-            if result.returncode != 0 and "nothing to commit" not in combined:
+            output.append(result.stdout + result.stderr)
+            if result.returncode != 0:
                 return False, "\n".join(output)
+
         return True, "\n".join(output)
     except Exception as e:
         return False, str(e)
 
 
-def call_claude_for_update(instruction: str, current_html: str) -> str:
+# ── CLAUDE-KALL ───────────────────────────────────────────────────
+
+def call_claude(system: str, user: str, max_tokens: int = 8000) -> str:
     client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
     response = client.messages.create(
         model=MODEL,
-        max_tokens=8000,
-        system=UPDATE_SYSTEM_PROMPT,
-        messages=[{
-            "role": "user",
-            "content": (
-                f"Oppdateringsforespørsel: {instruction}\n\n"
-                f"---\nNåværende index.html:\n{current_html}"
-            )
-        }]
+        max_tokens=max_tokens,
+        system=system,
+        messages=[{"role": "user", "content": user}]
     )
     return response.content[0].text
 
+def update_spec_with_claude(instruction: str, current_spec: str) -> str:
+    return call_claude(
+        system=SPEC_UPDATE_SYSTEM_PROMPT,
+        user=f"Oppdateringsforespørsel: {instruction}\n\n---\nNåværende spec:\n{current_spec}"
+    )
+
+def update_html_with_claude(instruction: str, updated_spec: str, current_html: str) -> str:
+    return call_claude(
+        system=HTML_UPDATE_SYSTEM_PROMPT,
+        user=(
+            f"Oppdateringsforespørsel: {instruction}\n\n"
+            f"---\nOppdatert spec (Ferieplanen-2026.md):\n{updated_spec}\n\n"
+            f"---\nNåværende index.html:\n{current_html}"
+        )
+    )
+
+
+# ── VERKTØY ───────────────────────────────────────────────────────
 
 @server.list_tools()
 async def list_tools() -> list[types.Tool]:
@@ -111,13 +175,13 @@ async def list_tools() -> list[types.Tool]:
             name="update_travel_plan",
             description=(
                 "Oppdaterer reiseplanen for familie Goderstad sin campingvognferie juli 2026. "
-                "Endrer index.html, committer til git og pusher til "
-                "https://github.com/arnego/sommerferie2026 (main branch). "
+                "Oppdaterer først Ferieplanen-2026.md (spec), deretter index.html basert på "
+                "den oppdaterte spec-en, og committer + pusher begge filer til "
+                "https://github.com/arnego/sommerferie2026. "
                 "GitHub Pages publiserer siden automatisk på "
                 "https://arnego.github.io/sommerferie2026/ etter ~30 sekunder. "
-                "Brukes når noen vil endre rute, stopp, budsjett, huskeliste, "
-                "datoer eller annet innhold i reiseplanen. "
-                "Commit og push gjøres direkte uten å be om bekreftelse."
+                "Brukes når noen vil endre rute, stopp, campingplasser, aktiviteter, "
+                "budsjett, huskeliste, datoer eller annet innhold i reiseplanen."
             ),
             inputSchema={
                 "type": "object",
@@ -138,10 +202,32 @@ async def list_tools() -> list[types.Tool]:
             }
         ),
         types.Tool(
+            name="update_technical_spec",
+            description=(
+                "Oppdaterer kun den tekniske spesifikasjonen (Teknisk-spesifikasjon.md) "
+                "uten å endre index.html. Brukes for endringer i designkrav, tekniske krav, "
+                "funksjonelle krav, verifiseringsprosedyre eller fremtidige muligheter."
+            ),
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "instruction": {
+                        "type": "string",
+                        "description": "Hva som skal endres i den tekniske spesifikasjonen."
+                    },
+                    "commit_message": {
+                        "type": "string",
+                        "description": "Valgfri git commit-melding."
+                    }
+                },
+                "required": ["instruction"]
+            }
+        ),
+        types.Tool(
             name="read_travel_plan",
             description=(
-                "Leser og returnerer en oppsummering av den nåværende reiseplanen "
-                "fra ~/projects/sommerferie2026/index.html."
+                "Leser og returnerer metadata om den nåværende reiseplanen: "
+                "index.html og Ferieplanen-2026.md fra ~/projects/sommerferie2026/."
             ),
             inputSchema={"type": "object", "properties": {}, "required": []}
         ),
@@ -162,25 +248,22 @@ async def call_tool(name: str, arguments: dict) -> list[types.TextContent]:
     if name == "get_travel_plan_url":
         return [types.TextContent(
             type="text",
-            text=(
-                f"🌐 GitHub Pages: {PAGES_URL}\n"
-                f"📦 GitHub repo: {GITHUB_REPO}"
-            )
+            text=f"GitHub Pages: {PAGES_URL}\nGitHub repo: {GITHUB_REPO}"
         )]
 
     if name == "read_travel_plan":
         try:
-            html = read_html()
-            mtime = datetime.fromtimestamp(
-                INDEX_FILE.stat().st_mtime
-            ).strftime("%d.%m.%Y %H:%M")
+            html = read_file(INDEX_FILE)
+            spec = read_file(FERIEPLAN_FILE)
+            html_mtime = datetime.fromtimestamp(INDEX_FILE.stat().st_mtime).strftime("%d.%m.%Y %H:%M")
+            spec_mtime = datetime.fromtimestamp(FERIEPLAN_FILE.stat().st_mtime).strftime("%d.%m.%Y %H:%M")
             return [types.TextContent(
                 type="text",
                 text=(
-                    f"Reiseplanen er lastet ({len(html)} tegn). "
-                    f"Sist endret: {mtime}.\n"
-                    f"🌐 {PAGES_URL}\n"
-                    f"📦 {GITHUB_REPO}"
+                    f"index.html: {len(html)} tegn, sist endret {html_mtime}\n"
+                    f"Ferieplanen-2026.md: {len(spec)} tegn, sist endret {spec_mtime}\n"
+                    f"GitHub Pages: {PAGES_URL}\n"
+                    f"GitHub repo: {GITHUB_REPO}"
                 )
             )]
         except Exception as e:
@@ -189,47 +272,92 @@ async def call_tool(name: str, arguments: dict) -> list[types.TextContent]:
     if name == "update_travel_plan":
         instruction = arguments.get("instruction", "").strip()
         if not instruction:
-            return [types.TextContent(
-                type="text", text="Mangler instruksjon."
-            )]
+            return [types.TextContent(type="text", text="Mangler instruksjon.")]
 
-        # Bruk oppgitt commit-melding eller generer automatisk
         commit_message = arguments.get("commit_message", "").strip() or instruction
 
         try:
-            current_html = read_html()
-            updated_html = call_claude_for_update(instruction, current_html)
+            # Steg 1: Oppdater Ferieplanen-2026.md
+            current_spec = read_file(FERIEPLAN_FILE)
+            updated_spec = update_spec_with_claude(instruction, current_spec)
+            write_file(FERIEPLAN_FILE, updated_spec)
+
+            # Steg 2: Oppdater index.html basert på oppdatert spec
+            current_html = read_file(INDEX_FILE)
+            updated_html = update_html_with_claude(instruction, updated_spec, current_html)
 
             if not updated_html.strip().startswith("<!"):
+                # Rull tilbake spec-endringen
+                write_file(FERIEPLAN_FILE, current_spec)
                 return [types.TextContent(
                     type="text",
-                    text="Feil: Fikk ikke gyldig HTML tilbake. Prøv igjen."
+                    text="Feil: Fikk ikke gyldig HTML tilbake. Spec-endringen er rullet tilbake."
                 )]
 
-            write_html(updated_html)
-            success, git_output = git_push(commit_message)
+            write_file(INDEX_FILE, updated_html)
+
+            # Steg 3: Commit + push begge filer
+            success, git_output = git_push(
+                commit_message,
+                files=["docs/Ferieplanen-2026.md", "index.html"]
+            )
 
             if success:
                 return [types.TextContent(
                     type="text",
                     text=(
-                        f"✅ Reiseplanen er oppdatert og pushet til GitHub!\n"
-                        f"📝 Commit: \"{commit_message[:72]}\"\n"
-                        f"⏳ GitHub Pages oppdateres om ~30 sekunder.\n"
-                        f"🌐 {PAGES_URL}"
+                        f"Reiseplanen er oppdatert og pushet til GitHub!\n"
+                        f"Commit: \"{commit_message[:72]}\"\n"
+                        f"Endret: Ferieplanen-2026.md + index.html\n"
+                        f"GitHub Pages oppdateres om ~30 sekunder.\n"
+                        f"{PAGES_URL}"
                     )
                 )]
             else:
                 return [types.TextContent(
                     type="text",
                     text=(
-                        f"⚠️ index.html er oppdatert lokalt, men git push feilet:\n"
-                        f"{git_output[:300]}"
+                        f"Filene er oppdatert lokalt, men git push feilet:\n"
+                        f"{git_output[:400]}"
                     )
                 )]
 
         except Exception as e:
-            return [types.TextContent(type="text", text=f"❌ Feil: {e}")]
+            return [types.TextContent(type="text", text=f"Feil: {e}")]
+
+    if name == "update_technical_spec":
+        instruction = arguments.get("instruction", "").strip()
+        if not instruction:
+            return [types.TextContent(type="text", text="Mangler instruksjon.")]
+
+        commit_message = arguments.get("commit_message", "").strip() or instruction
+
+        try:
+            current_spec = read_file(TEKNISK_SPEC_FILE)
+            updated_spec = update_spec_with_claude(instruction, current_spec)
+            write_file(TEKNISK_SPEC_FILE, updated_spec)
+
+            success, git_output = git_push(
+                commit_message,
+                files=["docs/Teknisk-spesifikasjon.md"]
+            )
+
+            if success:
+                return [types.TextContent(
+                    type="text",
+                    text=(
+                        f"Teknisk-spesifikasjon.md er oppdatert og pushet!\n"
+                        f"Commit: \"{commit_message[:72]}\""
+                    )
+                )]
+            else:
+                return [types.TextContent(
+                    type="text",
+                    text=f"Spec oppdatert lokalt, men git push feilet:\n{git_output[:400]}"
+                )]
+
+        except Exception as e:
+            return [types.TextContent(type="text", text=f"Feil: {e}")]
 
     return [types.TextContent(type="text", text=f"Ukjent verktøy: {name}")]
 
