@@ -8,8 +8,15 @@ In this project Claude Code serves as an expert web developer and travel consult
 
 ## Development
 
-The project is governed by specification found in docs/Spesifikasjon-ferieplan-webside.md
-Open `index.html` directly in a browser. No build, install, or serve step is required.
+The project is governed by two specification documents in `docs/`:
+- `docs/Ferieplanen-2026.md` — reiseplan med alle stopp, aktiviteter og praktisk info
+- `docs/Teknisk-spesifikasjon.md` — tekniske krav, design, funksjonalitet og verifisering
+
+For local testing, use the HTTPS server:
+```
+python setup/test-server/https_server.py
+```
+Open `https://localhost:3000/index.html` in Chrome.
 
 ## Architecture
 
