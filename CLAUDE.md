@@ -18,9 +18,15 @@ python setup/test-server/https_server.py
 ```
 Open `https://localhost:3000/index.html` in Chrome.
 
-## Architecture
+## Publisering av endringer
 
+Etter hver endring i `index.html` eller dokumentene i `docs/` skal Claude:
+1. Oppdatere endringsloggen i det relevante dokumentet (`Ferieplanen-2026.md` eller `Teknisk-spesifikasjon.md`)
+2. Gjøre `git add` på endrede filer
+3. Gjøre `git commit` med en beskrivende melding om hva som ble endret
+4. Gjøre `git push` for å publisere til GitHub Pages
 
+Websiden er tilgjengelig på: `https://arnego.github.io/sommerferie2026/`
 
 ## GitHub Automation
 
