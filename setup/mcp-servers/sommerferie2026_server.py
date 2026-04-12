@@ -13,10 +13,10 @@ Arbeidsflyt for innholdsendringer:
   3. Commit + push begge filer i én operasjon
 
 Plassering i WSL:
-  ~/projects/mcp-servers/sommerferie2026/sommerferie2026_server.py
+  /mnt/e/Git/sommerferie2026/setup/mcp-servers/sommerferie2026_server.py
 
 Repo:
-  ~/projects/sommerferie2026/
+  /mnt/e/Git/sommerferie2026/
 
 Krav:
   pip3 install mcp anthropic --break-system-packages
@@ -32,7 +32,7 @@ from mcp.server.stdio import stdio_server
 from mcp import types
 
 # ── KONFIGURASJON ─────────────────────────────────────────────────
-REPO_PATH        = Path("/home/arne/projects/sommerferie2026")
+REPO_PATH        = Path("/mnt/e/Git/sommerferie2026")
 INDEX_FILE       = REPO_PATH / "index.html"
 FERIEPLAN_FILE   = REPO_PATH / "docs" / "Ferieplanen-2026.md"
 TEKNISK_SPEC_FILE = REPO_PATH / "docs" / "Teknisk-spesifikasjon.md"
