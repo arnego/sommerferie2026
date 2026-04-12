@@ -3,7 +3,7 @@
         {
             "name": "sommerferie2026",
             "description": "Oppdaterer reiseplanen på arnego.github.io/sommerferie2026. Bruk til alt som handler om campingvognferien i juli 2026.",
-            "command": "uv",
+            "command": "/home/arne/.local/bin/uv",
             "args": [
                 "run",
                 "--with",
