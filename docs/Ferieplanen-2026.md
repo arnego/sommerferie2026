@@ -327,13 +327,13 @@ Alle kjøretider er beregnet med campingvogn (ca. 80 km/t snitt).
 
 ### Stopp 8: København, Danmark (4 netter: 26.–30. juli)
 
-**Campingplass: DCU-Camping Charlottenlund Fort**
-- Adresse: Strandvejen 144B, 2920 Charlottenlund, Danmark
-- Nettside: https://www.dcu.dk/campingpladser/charlottenlund-fort
-- Fasiliteter: Lekeplass, direkte strandtilgang (badestrand), minimarked, vaskerom, grillplasser, Wi-Fi
-- Ca. 8 km nord for Københavns sentrum, buss 14 til sentrum
-- Historisk festningsområde ved Øresund
-- Tar imot campingvogn med strømtilkobling
+**Campingplass: DCU-Camping København - Absalon**
+- Adresse: Korsdalsvej 132, 2610 Rødovre, Danmark
+- Nettside: https://www.dcu.dk/da/dcu-camping/koebenhavn-absalon
+- Fasiliteter: Stor legeplass (miniby, hoppepude, legetårn, kæmpeskak), el-stik for campingvogn, brusere, tøjvask, opholdsrom, internett, naturområdet Vestvolden rett utenfor
+- Ca. 30 min fra Rådhuspladsen med bil, buss eller tog (S-tog fra Rødovre st., 5 min fra campingen)
+- Åpen hele året. DCU-medlemmer får 30–50 % rabatt
+- Tar imot campingvogn med strømtilkobling (220V)
 - Booket: Nei
 - Bookingref: -
 
@@ -350,7 +350,8 @@ Alle kjøretider er beregnet med campingvogn (ca. 80 km/t snitt).
 | Experimentarium | Vitensenter | Nice-to-have | Interaktivt vitensenter med hands-on utstillinger for barn. https://www.experimentarium.dk/ |
 
 **Tips:**
-- Charlottenlund Fort er ekstremt populær i juli — book så tidlig som mulig!
+- DCU-Camping Absalon er populær i juli — book tidlig. DCU-medlemmer får 30–50 % rabatt
+- S-tog fra Rødovre station (5 min gange) til sentrum: ca. 30 min til Rådhuspladsen
 - Kombiner Bakken med tur i Dyrehaven (tamme hjorter)
 - Dagstur til Kronborg slott i Helsingør (Hamlets slott) — ca. 45 min kjøring nord for København
 - Go Nordic-terminalen ligger i Nordhavn, ca. 10 min fra sentrum. Innsjekk starter ca. kl. 14:00 på avreisedagen (30. juli)
@@ -412,6 +413,7 @@ København (4 netter) + DFDS mini-cruise (1 natt). Tivoli, Bakken og Den Blå Pl
 
 | Dato | Endring | Av |
 | --- | --- | --- |
+| 2026-04-14 | København campingplass byttet fra DCU-Camping Charlottenlund Fort til DCU-Camping København - Absalon (Korsdalsvej 132, Rødovre). 30 min fra sentrum med S-tog. | Claude |
 | 2026-04-14 | DFDS erstattet med Go Nordic Cruiseline (https://www.gonordiccruiseline.no/minicruise/) — DFDS kjører ikke lenger ruta København–Oslo. | Claude |
 | 2026-04-14 | Warnemünde-stoppet droppes. Bad Schandau utvides fra 3 til 4 netter (20.–24. juli). Møns Klint reiser direkte fra Bad Schandau via Scandlines Rostock→Gedser. Stopp 7–10 renummerert. | Claude |
 | 2026-04-13 | Nytt stopp 2: Silkeborg (Skyttehusets Outdoor Camp, 7.–10. juli, 3 netter). MTB-aktivitet lagt til i Bad Schandau. Google Maps-navigasjonsikoner lagt til for alle stopp og aktiviteter i websiden. Alle datoer for stopp 3–11 forskyves +3 dager; hjemkomst 31. juli. Varighet oppdatert til 28 netter. | Claude |

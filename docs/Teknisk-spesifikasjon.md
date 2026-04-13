@@ -251,6 +251,7 @@ Her kan vi legge idéer som kan vurderes senere, men som foreløpig ikke skal in
 | --- | --- | --- |
 | 2026-04-09 | Dokumentet opprettet — struktur og tomme seksjoner | Claude + Arne |
 | 2026-04-10 | Teknologivalg, navigasjonsstruktur, designprinsipper, sjekkliste-strategi avklart via intervju | Claude + Arne |
+| 2026-04-14 | København campingplass byttet til DCU-Camping København - Absalon, Korsdalsvej 132, Rødovre | Claude |
 | 2026-04-14 | DFDS erstattet med Go Nordic Cruiseline gjennomgående i index.html og docs | Claude |
 | 2026-04-14 | Warnemünde droppes; Bad Schandau 4 netter; Møns Klint reiser direkte fra Bad Schandau via Scandlines Rostock→Gedser; stops renummerert id:7–10 | Claude |
 | 2026-04-13 | Løkken campingplass korrigert: Løkken Klit Camping og Hytteby, Jørgen Jensensvej 2, 9480 Løkken. Kartnavigasjon peker nå til riktig adresse. | Claude |
