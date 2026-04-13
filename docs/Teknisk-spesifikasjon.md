@@ -251,6 +251,7 @@ Her kan vi legge idéer som kan vurderes senere, men som foreløpig ikke skal in
 | --- | --- | --- |
 | 2026-04-09 | Dokumentet opprettet — struktur og tomme seksjoner | Claude + Arne |
 | 2026-04-10 | Teknologivalg, navigasjonsstruktur, designprinsipper, sjekkliste-strategi avklart via intervju | Claude + Arne |
+| 2026-04-14 | DFDS erstattet med Go Nordic Cruiseline gjennomgående i index.html og docs | Claude |
 | 2026-04-14 | Warnemünde droppes; Bad Schandau 4 netter; Møns Klint reiser direkte fra Bad Schandau via Scandlines Rostock→Gedser; stops renummerert id:7–10 | Claude |
 | 2026-04-13 | Løkken campingplass korrigert: Løkken Klit Camping og Hytteby, Jørgen Jensensvej 2, 9480 Løkken. Kartnavigasjon peker nå til riktig adresse. | Claude |
 | 2026-04-13 | Nytt stopp 2 Silkeborg (id:2, 7.–10. juli). 11 stopp totalt. mapsQuery-felt på alle aktiviteter. getMapsUrl/getActivityMapsUrl hjelpefunksjoner. Stop-header endret fra button til div for gyldig a-nesting. Kartikon (SVG pin) i stop-header og aktivitetstemplate åpner Google Maps navigasjon. MTB-aktivitet i Bad Schandau. Alle datoer for stopp 3–11 +3 dager. | Claude |
