@@ -113,8 +113,8 @@ Alle kjøretider er beregnet med campingvogn (ca. 80 km/t snitt).
 
 ### Stopp 1: Løkken Strand, Danmark (3 netter: 4.–7. juli)
 
-**Campingplass: Løkken Klit Camping**
-- Adresse: Furreby Kirkevej 97, 9480 Løkken, Danmark
+**Campingplass: Løkken Klit Camping og Hytteby**
+- Adresse: Jørgen Jensensvej 2, 9480 Løkken, Danmark
 - Nettside: https://www.loekkenklit.dk/
 - Fasiliteter: Innendørs svømmebasseng med barnebasseng, stor lekeplass, trampoliner, minigolf, butikk, moderne sanitæranlegg med familierom
 - Ca. 800 meter til Løkken Strand
