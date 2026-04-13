@@ -10,7 +10,7 @@
 
 - **Avreisedato:** Tidligst 4. juli
 - **Returdato:** Senest 1. august
-- **Varighet:** ca. 3,5 uker (25 netter)
+- **Varighet:** ca. 4 uker (28 netter)
 - **Startpunkt:** Kongsberg, Norge
 - **Kjøretøy:** Campingvogn Knaus Sport 400 LK, trukket av Land Rover Discovery 4
 - **Deltakere:** Ann Kristin (42 år), Arne (40 år) og William (5 år)
@@ -41,20 +41,21 @@ William er 5 år og er en viktig del av planleggingen:
 | # | Sted | Land | Ankomst | Avreise | Netter | Uke |
 |---|------|------|---------|---------|--------|-----|
 | 1 | Løkken Strand | DK | 4. juli | 7. juli | 3 | 28 |
-| 2 | Billund (LEGOLAND) | DK | 7. juli | 10. juli | 3 | 28 |
-| 3 | Lübeck | DE | 10. juli | 13. juli | 3 | 29 |
-| 4 | Berlin | DE | 13. juli | 17. juli | 4 | 29 |
-| 5 | Bad Schandau (Saksisk Sveits) | DE | 17. juli | 20. juli | 3 | 29 |
-| 6 | Warnemünde (transit) | DE | 20. juli | 21. juli | 1* | 30 |
-| 7 | Møns Klint | DK | 21. juli | 23. juli | 2* | 30 |
-| 8 | København | DK | 23. juli | 27. juli | 4 | 30 |
-| 9 | DFDS mini-cruise København → Oslo | DK/NO | 27. juli | 28. juli | 1** | 31 |
-| 10 | Kongsberg | NO | 28. juli | - | Hjemme | 31 |
+| 2 | Silkeborg | DK | 7. juli | 10. juli | 3 | 28 |
+| 3 | Billund (LEGOLAND) | DK | 10. juli | 13. juli | 3 | 28/29 |
+| 4 | Lübeck | DE | 13. juli | 16. juli | 3 | 29 |
+| 5 | Berlin | DE | 16. juli | 20. juli | 4 | 29/30 |
+| 6 | Bad Schandau (Saksisk Sveits) | DE | 20. juli | 23. juli | 3 | 30 |
+| 7 | Warnemünde (transit) | DE | 23. juli | 24. juli | 1* | 30 |
+| 8 | Møns Klint | DK | 24. juli | 26. juli | 2* | 30 |
+| 9 | København | DK | 26. juli | 30. juli | 4 | 30/31 |
+| 10 | DFDS mini-cruise København → Oslo | DK/NO | 30. juli | 31. juli | 1** | 31 |
+| 11 | Kongsberg | NO | 31. juli | - | Hjemme | 31 |
 
 *Kortstopp — unntak fra 3-netter-regelen.
 **Overnatting i lugar om bord — unntak fra 3-netter-regelen (hjemreise uten Sverige).
 
-**Totalt:** 25 overnattinger (24 på land + 1 om bord), ca. 2 000 km kjøring + 3 fergestrekninger. Hjemme 28. juli.
+**Totalt:** 28 overnattinger (27 på land + 1 om bord), ca. 2 150 km kjøring + 3 fergestrekninger. Hjemme 31. juli.
 
 ---
 
@@ -65,7 +66,8 @@ William er 5 år og er en viktig del av planleggingen:
 | Kongsberg | Larvik (ferge) | 85 km | 1 t 10 min | E18 sør |
 | Larvik | Hirtshals (ferge) | - | 3 t 45 min | Color Line SuperSpeed |
 | Hirtshals | Løkken | 55 km | 45 min | Rute 55 |
-| Løkken | Billund | 185 km | 2 t 30 min | Via Viborg |
+| Løkken | Silkeborg | 130 km | 1 t 40 min | Rute 55 sørover fra Løkken, E39/rute 11 sør, rute 12 øst til Silkeborg |
+| Silkeborg | Billund | 40 km | 35 min | Rute 52/A13 |
 | Billund | Lübeck | 330 km | 4 t 15 min | E45/A7 sørover, A1 øst mot Lübeck |
 | Lübeck | Hamburg (dagstur) | 65 km | 45 min | A1 vest |
 | Lübeck | Berlin | 330 km | 3 t 45 min | A20 øst mot Rostock, A19/A24 sør mot Berlin |
@@ -138,7 +140,41 @@ Alle kjøretider er beregnet med campingvogn (ca. 80 km/t snitt).
 
 ---
 
-### Stopp 2: Billund, Danmark (3 netter: 7.–10. juli)
+### Stopp 2: Silkeborg, Danmark (3 netter: 7.–10. juli)
+
+**Campingplass: Skyttehusets Outdoor Camp**
+- Adresse: Svejbækvej 3, 8600 Silkeborg, Danmark
+- Nettside: https://skyttehusetscamping.dk/
+- Fasiliteter: Beliggende i praktfull bøkeskog ved Gudenåen og Svejbæksøen, direkte tilgang til MTB-løypenettet i Vesterskoven og Nordskoven, sykkelutleie (200 DKK/dag inkl. hjelm), kano- og kajakklutleie, brygge med el-solferge over sjøen til Nordskoven, lekeplass, moderne sanitæranlegg
+- Prisvinner «Best Danish Camp Site – outdoor category» (2020)
+- Åpent 20/03–18/10 2026
+- Tar imot campingvogn med strømtilkobling
+- Booket: Nei
+- Bookingref: -
+
+**Aktiviteter:**
+
+| Aktivitet | Type | Prioritet | Beskrivelse |
+|-----------|------|-----------|-------------|
+| MTB — Vesterskoven og Nordskoven | Sport/friluft | Must-do | Danmarks beste bynære MTB-løypenett. Vesterskoven: 17 km blå løype med noen av Danmarks lengste nedkjøringer, rett fra campingen. Nordskoven nås via el-solferge over innsjøen — blå/rød/svart løyper. Sykkelutleie på campingen (200 DKK/dag, inkl. hjelm). https://skyttehusetscamping.dk/en/rental/bike-mtb/ |
+| AQUA Akvarium & Dyrepark | Akvarium/dyrepark | Must-do | Nord-Europas eneste ferskvannsakvarium — 4 etasjer med fisk, amfibier, reptiler og lek. William kan klappe stor fisk i klappebassenget og se otertreningene. Utendørs vannlekeplass og daglige dyrestellinger i sommer. https://visitaqua.dk/ |
+| Padling på Gudenåen | Aktivitet | Nice-to-have | Kano og kajakk-utleie direkte fra campingen. Rolig elvepadling gjennom bøkeskogen langs Gudenåen — tilpasset barnefamilier. https://skyttehusetscamping.dk/en/ |
+| Himmelbjerget og Hjejlen dampbåt | Natur/kultur | Nice-to-have | Hjejlen er verdens eldste kullkjørte hjulbåt i drift (1861) og seiler fra Silkeborg havn til Himmelbjerget (147 m) om sommeren. Kombinerer historisk båttur med utsiktsvandring. https://www.hjejlen.com/ |
+| Labyrinthia | Aktivitet | Nice-to-have | 9 ulike labyrinter inkl. Europas største 3D-labyrint, 50+ spill og aktiviteter. 20 min fra campingen i Them. Passer alle aldre. https://www.labyrinthia.dk/ |
+| Silkeborg Bikepark | Sport/friluft | Nice-to-have | Dedikert bikepark med flow trails, berms og drops. Bygget av Europas ledende trailbyggere. Klassifisert blå/rød/svart. https://www.trailforks.com/region/silkeborg-bikepark/ |
+| Silkeborg Ørnereservat og Bisonpark | Natur | Nice-to-have | Rovfuglshow med ugler, falker og ørner som flyr tett forbi, bisongsafari og burgerbar. Barnevennlig og spennende for William. https://www.visitsilkeborg.dk/ |
+
+**Tips:**
+- MTB-utleie på campingen: kun 4 sykler — bestill på forhånd i høysesong (ring +45 86 84 51 11)
+- Nordskoven: ta el-solfergen over Svejbæksnævringen fra campingens brygge
+- Over 250 km merkede MTB-løyper i Søhøjlandet — kart fås i resepsjonen
+- AQUA: daglige dyrestellinger og ottershow i sommersesongen — sjekk programmet på visitaqua.dk
+- William kan bade i Slåensø (15 min gange fra campingen) mens én av de voksne sykler
+- Hjejlen avgår fra Silkeborg havn — ta båten til Himmelbjerget og sykkel tilbake langs sjøen
+
+---
+
+### Stopp 3: Billund, Danmark (3 netter: 10.–13. juli)
 
 **Campingplass: LEGOLAND® Holiday Village Camping**
 - Adresse: Ellehammers Allé, 7190 Billund, Danmark (tilknyttet LEGOLAND Holiday Village)
@@ -168,7 +204,7 @@ Alle kjøretider er beregnet med campingvogn (ca. 80 km/t snitt).
 
 ---
 
-### Stopp 3: Lübeck, Tyskland (3 netter: 10.–13. juli)
+### Stopp 4: Lübeck, Tyskland (3 netter: 13.–16. juli)
 
 **Campingplass: Strandcamping Priwall**
 - Adresse: Dünenweg 3, 23570 Lübeck-Travemünde, Tyskland
@@ -201,7 +237,7 @@ Alle kjøretider er beregnet med campingvogn (ca. 80 km/t snitt).
 
 ---
 
-### Stopp 4: Berlin, Tyskland (4 netter: 13.–17. juli)
+### Stopp 5: Berlin, Tyskland (4 netter: 16.–20. juli)
 
 **Campingplass: DCC-Campingplatz Berlin-Gatow**
 - Adresse: Kladower Damm 213–217, 14089 Berlin-Gatow, Tyskland
@@ -234,7 +270,7 @@ Alle kjøretider er beregnet med campingvogn (ca. 80 km/t snitt).
 
 ---
 
-### Stopp 5: Bad Schandau / Saksisk Sveits, Tyskland (3 netter: 17.–20. juli)
+### Stopp 6: Bad Schandau / Saksisk Sveits, Tyskland (3 netter: 20.–23. juli)
 
 **Campingplass: Campingplatz Ostrauer Mühle**
 - Adresse: Ostrauer Mühle 15, 01814 Bad Schandau, Tyskland
@@ -255,15 +291,17 @@ Alle kjøretider er beregnet med campingvogn (ca. 80 km/t snitt).
 | Amselsee i Rathen | Natur/båt | Nice-to-have | Rolig innsjøvandring med robåtutleie. https://www.saechsische-schweiz.de/amselsee-kurort-rathen.html |
 | Elbeskipsfart (hjuldampere) | Båtkjøring | Nice-to-have | Historiske hjuldampere på Elben. Fantastisk utsikt fra vannet. https://www.saechsische-dampfschiffahrt.de/ |
 | Pirna gammelby | By/kultur | Nice-to-have | Sjarmerende gammelby med fargerike hus. 15 min kjøring. Is og spasertur. https://www.pirna.de/tourismus |
+| MTB — Elbsandsteingebirge | Sport/friluft | Nice-to-have | Merkede MTB-ruter gjennom sandsteinlandskapet. Kirnitzschtal-dalen er en naturlig trasé langs elven. OBS: kun kjøring på merkede «Nationalpark Fahrradroute»-stier tillatt innenfor nasjonalparken. Krysser gjerne grensa til tsjekkisk side (Bohemian Switzerland) for mer terrengsykling. https://www.komoot.com/guide/2052/mtb-trails-around-bad-schandau |
 
 **Tips:**
 - Ingen Umweltzone i Bad Schandau (men Dresden har — unngå å kjøre inn i sentrum)
 - Gå til Bastei tidlig på morgenen for å unngå folkemengder
 - Bad Schandau har historisk personheis opp til utsiktspunkt
+- MTB: Sykkelutleie i Bad Schandau sentrum og Königstein — forhåndsbooking anbefales i juli
 
 ---
 
-### Stopp 6: Warnemünde, Tyskland (1 natt transit: 20.–21. juli)
+### Stopp 7: Warnemünde, Tyskland (1 natt transit: 23.–24. juli)
 
 **Campingplass: Campingpark Warnemünde**
 - Adresse: Parkstrasse 1, 18119 Rostock-Warnemünde, Tyskland
@@ -287,7 +325,7 @@ Alle kjøretider er beregnet med campingvogn (ca. 80 km/t snitt).
 
 ---
 
-### Stopp 7: Møns Klint, Danmark (2 netter: 21.–23. juli)
+### Stopp 8: Møns Klint, Danmark (2 netter: 24.–26. juli)
 
 **Campingplass: Møns Klint Resort**
 - Adresse: Klintevej 544, 4791 Borre, Danmark
@@ -315,7 +353,7 @@ Alle kjøretider er beregnet med campingvogn (ca. 80 km/t snitt).
 
 ---
 
-### Stopp 8: København, Danmark (4 netter: 23.–27. juli)
+### Stopp 9: København, Danmark (4 netter: 26.–30. juli)
 
 **Campingplass: DCU-Camping Charlottenlund Fort**
 - Adresse: Strandvejen 144B, 2920 Charlottenlund, Danmark
@@ -343,11 +381,11 @@ Alle kjøretider er beregnet med campingvogn (ca. 80 km/t snitt).
 - Charlottenlund Fort er ekstremt populær i juli — book så tidlig som mulig!
 - Kombiner Bakken med tur i Dyrehaven (tamme hjorter)
 - Dagstur til Kronborg slott i Helsingør (Hamlets slott) — ca. 45 min kjøring nord for København
-- DFDS-terminalen ligger i Nordhavn, ca. 10 min fra sentrum. Innsjekk starter ca. kl. 14:00 på avreisedagen (27. juli)
+- DFDS-terminalen ligger i Nordhavn, ca. 10 min fra sentrum. Innsjekk starter ca. kl. 14:00 på avreisedagen (30. juli)
 
 ---
 
-### Stopp 9: DFDS Mini-cruise København → Oslo (1 natt om bord: 27.–28. juli)
+### Stopp 10: DFDS Mini-cruise København → Oslo (1 natt om bord: 30.–31. juli)
 
 **Ferge: DFDS Pearl Seaways / Crown Seaways**
 - Avgang: København (Nordhavn terminal), typisk kl. 16:30
@@ -366,7 +404,7 @@ Alle kjøretider er beregnet med campingvogn (ca. 80 km/t snitt).
 | Familiebuffé | Mat | Must-do | Middagsbuffé med dansk/norsk mat — populært med barn |
 | 7 Seas bufférestaurant | Mat | Nice-to-have | Frokostbuffé før ankomst Oslo |
 
-**Hjemreise 28. juli:**
+**Hjemreise 31. juli:**
 - Ankomst Oslo ca. kl. 09:45
 - Kjøretur Oslo → Kongsberg: 85 km, ca. 1 t 15 min via E18/E134
 - Hjemme i Kongsberg til lunsj
@@ -375,26 +413,26 @@ Alle kjøretider er beregnet med campingvogn (ca. 80 km/t snitt).
 - Campingvogn må oppgis ved booking (ekstra lengdegebyr inngår i prisen)
 - Book familielugar med vindu hvis budsjettet tillater — William vil nyte utsikten
 - Kjøretøy med campingvogn parkeres på bildekk; husk å låse vognen
-- Innsjekk i København starter kl. 14:00 — bruk formiddagen til en siste København-aktivitet
+- Innsjekk i København (30. juli) starter kl. 14:00 — bruk formiddagen til en siste København-aktivitet
 
 ---
 
 ### Ukeoversikt
 
-**Uke 28 (4.–10. juli): Danmark — strand og LEGOLAND**
-Løkken Strand (3 netter) + Billund/LEGOLAND (3 netter). Strandliv på den danske vestkysten med mulig dagstur til Rubjerg Knude og Skagen, deretter tre dager med LEGOLAND Holiday Village, LEGO House og Givskud Zoo.
+**Uke 28 (4.–10. juli): Danmark — strand, MTB og Søhøjlandet**
+Løkken Strand (3 netter) + Silkeborg (3 netter). Strandliv på den danske vestkysten med mulig dagstur til Rubjerg Knude og Skagen, deretter tre dager i Søhøjlandet med MTB i Vesterskoven, AQUA Akvarium og padling på Gudenåen fra Skyttehusets Outdoor Camp.
 
-**Uke 29 (10.–17. juli): Tyskland — Lübeck og Berlin**
+**Uke 28–29 (10.–16. juli): Danmark → LEGOLAND og Tyskland**
+Billund/LEGOLAND (3 netter) + start Lübeck. Tre dager med LEGOLAND Holiday Village, LEGO House og Givskud Zoo, deretter kjøring til Lübeck.
+
+**Uke 29 (13.–20. juli): Tyskland — Lübeck og Berlin**
 Lübeck (3 netter) + Berlin (4 netter). Holstentor og Niederegger marzipan i Lübeck, dagstur til Hamburgs Miniatur Wunderland og Hafenrundfahrt. Deretter Berlin med familiebesøk hos André og Lucia, Berlin Zoo, LEGOLAND Discovery Centre, Tropical Islands og Naturkundemuseum.
 
-**Uke 29–30 (17.–21. juli): Saksisk Sveits og Warnemünde**
-Bad Schandau (3 netter) + Warnemünde transit (1 natt). Basteibroen, Königstein festning og Kirnitzschtalbahn i nasjonalparken, deretter stranddag i Warnemünde før Scandlines-ferge.
+**Uke 30 (20.–26. juli): Saksisk Sveits, Warnemünde og Møns Klint**
+Bad Schandau (3 netter) + Warnemünde transit (1 natt) + Møns Klint (2 netter). Basteibroen, Königstein festning og Kirnitzschtalbahn i nasjonalparken, stranddag i Warnemünde, deretter GeoCenter og krittklipper på Møn.
 
-**Uke 30 (21.–27. juli): Danmark — Møns Klint og København**
-Møns Klint (2 netter) + København (4 netter). GeoCenter og krittklipper på Møn, deretter København med Tivoli, Bakken og Den Blå Planet.
-
-**Uke 31 (27.–28. juli): Hjemreise med DFDS**
-DFDS mini-cruise København → Oslo (1 natt om bord). Hjemkjøring fra Oslo til Kongsberg 28. juli (85 km).
+**Uke 30–31 (26.–31. juli): København og hjemreise**
+København (4 netter) + DFDS mini-cruise (1 natt). Tivoli, Bakken og Den Blå Planet i København, deretter DFDS mini-cruise København → Oslo 30. juli. Hjemkjøring fra Oslo til Kongsberg 31. juli (85 km).
 
 ---
 
@@ -402,6 +440,7 @@ DFDS mini-cruise København → Oslo (1 natt om bord). Hjemkjøring fra Oslo til
 
 | Dato | Endring | Av |
 | --- | --- | --- |
+| 2026-04-13 | Nytt stopp 2: Silkeborg (Skyttehusets Outdoor Camp, 7.–10. juli, 3 netter). MTB-aktivitet lagt til i Bad Schandau. Google Maps-navigasjonsikoner lagt til for alle stopp og aktiviteter i websiden. Alle datoer for stopp 3–11 forskyves +3 dager; hjemkomst 31. juli. Varighet oppdatert til 28 netter. | Claude |
 | 2026-04-13 | Hamburg erstattet med Lübeck (3 netter, Strandcamping Priwall). Berlin redusert til 4 netter (avreise 17. juli). Naturkundemuseum Berlin oppgradert til must-do. Nytt stopp: Møns Klint (2 netter, Møns Klint Resort). Kongsberg lagt til som siste stopp med retur-kjøreinfo. Alle påfølgende datoer oppdatert (hjemme 28. juli). Kart viser nå linje tilbake til Kongsberg. | Claude |
 | 2026-04-12 | index.html synkronisert med spesifikasjonen: korrekte datoer (4–27 juli), Billund → LEGOLAND® Holiday Village Camping, Göteborg erstattet med DFDS mini-cruise, lagt til Råbjerg Mile/Experimentarium/Pirna/Se på ferger, URLs på alle aktiviteter, norske tegn fikset gjennomgående | Claude |
 | 2026-04-12 | Lagt til offisielle lenker for alle aktiviteter og severdigheter | Claude |
