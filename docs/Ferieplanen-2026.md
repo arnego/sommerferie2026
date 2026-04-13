@@ -45,12 +45,11 @@ William er 5 år og er en viktig del av planleggingen:
 | 3 | Billund (LEGOLAND) | DK | 10. juli | 13. juli | 3 | 28/29 |
 | 4 | Lübeck | DE | 13. juli | 16. juli | 3 | 29 |
 | 5 | Berlin | DE | 16. juli | 20. juli | 4 | 29/30 |
-| 6 | Bad Schandau (Saksisk Sveits) | DE | 20. juli | 23. juli | 3 | 30 |
-| 7 | Warnemünde (transit) | DE | 23. juli | 24. juli | 1* | 30 |
-| 8 | Møns Klint | DK | 24. juli | 26. juli | 2* | 30 |
-| 9 | København | DK | 26. juli | 30. juli | 4 | 30/31 |
-| 10 | DFDS mini-cruise København → Oslo | DK/NO | 30. juli | 31. juli | 1** | 31 |
-| 11 | Kongsberg | NO | 31. juli | - | Hjemme | 31 |
+| 6 | Bad Schandau (Saksisk Sveits) | DE | 20. juli | 24. juli | 4 | 30 |
+| 7 | Møns Klint | DK | 24. juli | 26. juli | 2* | 30 |
+| 8 | København | DK | 26. juli | 30. juli | 4 | 30/31 |
+| 9 | DFDS mini-cruise København → Oslo | DK/NO | 30. juli | 31. juli | 1** | 31 |
+| 10 | Kongsberg | NO | 31. juli | - | Hjemme | 31 |
 
 *Kortstopp — unntak fra 3-netter-regelen.
 **Overnatting i lugar om bord — unntak fra 3-netter-regelen (hjemreise uten Sverige).
@@ -72,9 +71,7 @@ William er 5 år og er en viktig del av planleggingen:
 | Lübeck | Hamburg (dagstur) | 65 km | 45 min | A1 vest |
 | Lübeck | Berlin | 330 km | 3 t 45 min | A20 øst mot Rostock, A19/A24 sør mot Berlin |
 | Berlin | Bad Schandau | 250 km | 3 t 15 min | A13/A17 |
-| Bad Schandau | Warnemünde | 400 km | 5 t 15 min | Via Dresden–Leipzig (A13/A14/A19) |
-| Warnemünde/Rostock | Gedser (ferge) | - | 2 t | Scandlines |
-| Gedser | Møns Klint | 65 km | 50 min | E55 nord, Rute 59 vest til Møn |
+| Bad Schandau | Møns Klint (via Rostock/Scandlines) | 445 km | 5t 15min + 2t ferge + 50min | A13/A14/A19 Dresden–Leipzig–Rostock (ca. 380 km), Scandlines ferge Rostock→Gedser (2t), E55 nord, Rute 59 vest til Møn |
 | Møns Klint | København | 120 km | 1 t 30 min | Rute 59 nord fra Møn, E47/E55 |
 | København | DFDS-terminalen (Nordhavn) | 5 km | 15 min | Innkjøring kl. 14:00–15:30 |
 | København | Oslo (ferge) | - | ca. 17 t | DFDS Pearl/Crown Seaways (overnatting) |
@@ -270,7 +267,7 @@ Alle kjøretider er beregnet med campingvogn (ca. 80 km/t snitt).
 
 ---
 
-### Stopp 6: Bad Schandau / Saksisk Sveits, Tyskland (3 netter: 20.–23. juli)
+### Stopp 6: Bad Schandau / Saksisk Sveits, Tyskland (4 netter: 20.–24. juli)
 
 **Campingplass: Campingplatz Ostrauer Mühle**
 - Adresse: Ostrauer Mühle 15, 01814 Bad Schandau, Tyskland
@@ -301,31 +298,7 @@ Alle kjøretider er beregnet med campingvogn (ca. 80 km/t snitt).
 
 ---
 
-### Stopp 7: Warnemünde, Tyskland (1 natt transit: 23.–24. juli)
-
-**Campingplass: Campingpark Warnemünde**
-- Adresse: Parkstrasse 1, 18119 Rostock-Warnemünde, Tyskland
-- Nettside: https://www.campingpark-warnemuende.de/
-- Fasiliteter: Gangavstand til sandstrand (ca. 800 m), lekeplass, sanitæranlegg, Wi-Fi
-- Tar imot campingvogn med strømtilkobling (16A)
-- Booket: Nei
-- Bookingref: -
-
-**Aktiviteter:**
-
-| Aktivitet | Type | Prioritet | Beskrivelse |
-|-----------|------|-----------|-------------|
-| Warnemünde Strand | Strand/bading | Must-do | Bred sandstrand med grunt, barnevennlig vann. Strandkurver (Strandkorb) kan leies. https://www.rostock.de/tourismus/aktivitaeten/strand-und-meer.html |
-| Warnemünde fyrtårn | Severdighet | Nice-to-have | Utsikt fra fyrtårnet. Like ved strand og havn. https://www.leuchtturm-warnemuende.de/ |
-| Se på ferger i havnen | Underholdning | Nice-to-have | Store Scandlines-ferger — spennende for William. https://www.scandlines.com/ |
-
-**Tips:**
-- Ingen Umweltzone i Warnemünde/Rostock
-- Scandlines-fergen til Gedser går fra Rostock fergeterminal (ikke Warnemünde) — ca. 20 min kjøring
-
----
-
-### Stopp 8: Møns Klint, Danmark (2 netter: 24.–26. juli)
+### Stopp 7: Møns Klint, Danmark (2 netter: 24.–26. juli)
 
 **Campingplass: Møns Klint Resort**
 - Adresse: Klintevej 544, 4791 Borre, Danmark
@@ -353,7 +326,7 @@ Alle kjøretider er beregnet med campingvogn (ca. 80 km/t snitt).
 
 ---
 
-### Stopp 9: København, Danmark (4 netter: 26.–30. juli)
+### Stopp 8: København, Danmark (4 netter: 26.–30. juli)
 
 **Campingplass: DCU-Camping Charlottenlund Fort**
 - Adresse: Strandvejen 144B, 2920 Charlottenlund, Danmark
@@ -385,7 +358,7 @@ Alle kjøretider er beregnet med campingvogn (ca. 80 km/t snitt).
 
 ---
 
-### Stopp 10: DFDS Mini-cruise København → Oslo (1 natt om bord: 30.–31. juli)
+### Stopp 9: DFDS Mini-cruise København → Oslo (1 natt om bord: 30.–31. juli)
 
 **Ferge: DFDS Pearl Seaways / Crown Seaways**
 - Avgang: København (Nordhavn terminal), typisk kl. 16:30
@@ -428,8 +401,8 @@ Billund/LEGOLAND (3 netter) + start Lübeck. Tre dager med LEGOLAND Holiday Vill
 **Uke 29 (13.–20. juli): Tyskland — Lübeck og Berlin**
 Lübeck (3 netter) + Berlin (4 netter). Holstentor og Niederegger marzipan i Lübeck, dagstur til Hamburgs Miniatur Wunderland og Hafenrundfahrt. Deretter Berlin med familiebesøk hos André og Lucia, Berlin Zoo, LEGOLAND Discovery Centre, Tropical Islands og Naturkundemuseum.
 
-**Uke 30 (20.–26. juli): Saksisk Sveits, Warnemünde og Møns Klint**
-Bad Schandau (3 netter) + Warnemünde transit (1 natt) + Møns Klint (2 netter). Basteibroen, Königstein festning og Kirnitzschtalbahn i nasjonalparken, stranddag i Warnemünde, deretter GeoCenter og krittklipper på Møn.
+**Uke 30 (20.–26. juli): Saksisk Sveits og Møns Klint**
+Bad Schandau (4 netter) + Møns Klint (2 netter). Fire dager i Saksisk Sveits nasjonalpark med Basteibroen, Königstein festning, Kirnitzschtalbahn og MTB — deretter lang kjøredag via Rostock og Scandlines-ferge (2 timer på sjøen) direkte til Møns Klint. GeoCenter og krittklipper på Møn.
 
 **Uke 30–31 (26.–31. juli): København og hjemreise**
 København (4 netter) + DFDS mini-cruise (1 natt). Tivoli, Bakken og Den Blå Planet i København, deretter DFDS mini-cruise København → Oslo 30. juli. Hjemkjøring fra Oslo til Kongsberg 31. juli (85 km).
@@ -440,6 +413,7 @@ København (4 netter) + DFDS mini-cruise (1 natt). Tivoli, Bakken og Den Blå Pl
 
 | Dato | Endring | Av |
 | --- | --- | --- |
+| 2026-04-14 | Warnemünde-stoppet droppes. Bad Schandau utvides fra 3 til 4 netter (20.–24. juli). Møns Klint reiser direkte fra Bad Schandau via Scandlines Rostock→Gedser. Stopp 7–10 renummerert. | Claude |
 | 2026-04-13 | Nytt stopp 2: Silkeborg (Skyttehusets Outdoor Camp, 7.–10. juli, 3 netter). MTB-aktivitet lagt til i Bad Schandau. Google Maps-navigasjonsikoner lagt til for alle stopp og aktiviteter i websiden. Alle datoer for stopp 3–11 forskyves +3 dager; hjemkomst 31. juli. Varighet oppdatert til 28 netter. | Claude |
 | 2026-04-13 | Hamburg erstattet med Lübeck (3 netter, Strandcamping Priwall). Berlin redusert til 4 netter (avreise 17. juli). Naturkundemuseum Berlin oppgradert til must-do. Nytt stopp: Møns Klint (2 netter, Møns Klint Resort). Kongsberg lagt til som siste stopp med retur-kjøreinfo. Alle påfølgende datoer oppdatert (hjemme 28. juli). Kart viser nå linje tilbake til Kongsberg. | Claude |
 | 2026-04-12 | index.html synkronisert med spesifikasjonen: korrekte datoer (4–27 juli), Billund → LEGOLAND® Holiday Village Camping, Göteborg erstattet med DFDS mini-cruise, lagt til Råbjerg Mile/Experimentarium/Pirna/Se på ferger, URLs på alle aktiviteter, norske tegn fikset gjennomgående | Claude |
