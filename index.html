@@ -224,7 +224,7 @@ tailwind.config = {
                 <div class="flex-1 min-w-0">
                   <h3 class="font-semibold text-sm sm:text-base text-charcoal" x-text="stop.name"></h3>
                   <p class="text-xs text-muted mt-0.5"
-                     x-text="formatDate(stop.arrivalDate) + ' – ' + formatDate(stop.departureDate) + ' \u00b7 ' + stop.nights + (stop.nights === 1 ? ' natt' : ' netter')"></p>
+                     x-text="stop.isHome ? formatDate(stop.arrivalDate) + ' \u00b7 Hjemme\u0021' : formatDate(stop.arrivalDate) + ' \u2013 ' + formatDate(stop.departureDate) + ' \u00b7 ' + stop.nights + (stop.nights === 1 ? ' natt' : ' netter')"></p>
                 </div>
                 <div class="flex items-center gap-2 flex-shrink-0">
                   <span class="text-xs font-medium text-muted hidden sm:inline" x-text="stop.countryCode"></span>
@@ -247,14 +247,16 @@ tailwind.config = {
                    class="border-t border-sand/50 px-5 py-4 space-y-4">
 
                 <!-- Camping-info -->
-                <div class="px-3 py-2 bg-cream rounded-lg">
-                  <p class="text-xs text-muted uppercase tracking-wider font-medium mb-1" x-text="stop.camping.label || 'Campingplass'"></p>
-                  <p class="text-sm font-medium">
-                    <a :href="stop.camping.url" target="_blank" rel="noopener"
-                       class="text-petrol hover:underline" x-text="stop.camping.name"></a>
-                  </p>
-                  <p class="text-xs text-charcoal/60 mt-0.5" x-text="stop.camping.address"></p>
-                </div>
+                <template x-if="stop.camping">
+                  <div class="px-3 py-2 bg-cream rounded-lg">
+                    <p class="text-xs text-muted uppercase tracking-wider font-medium mb-1" x-text="stop.camping.label || 'Campingplass'"></p>
+                    <p class="text-sm font-medium">
+                      <a :href="stop.camping.url" target="_blank" rel="noopener"
+                         class="text-petrol hover:underline" x-text="stop.camping.name"></a>
+                    </p>
+                    <p class="text-xs text-charcoal/60 mt-0.5" x-text="stop.camping.address"></p>
+                  </div>
+                </template>
 
                 <!-- Beskrivelse -->
                 <p class="text-sm text-charcoal/80" x-text="stop.description"></p>
@@ -881,35 +883,45 @@ function ferieApp() {
       },
       {
         id: 3,
-        name: 'Hamburg',
+        name: 'Lübeck',
         country: 'Tyskland',
         countryCode: 'DE',
-        lat: 53.55,
-        lng: 9.99,
+        lat: 53.87,
+        lng: 10.69,
         arrivalDate: '2026-07-10',
         departureDate: '2026-07-13',
         nights: 3,
         week: 29,
         camping: {
-          name: 'Campingplatz Stover Strand International',
-          address: 'Stover Strand 10, 21423 Drage (Elbmarsch)',
-          url: 'https://www.stfreizeit.de/',
+          name: 'Strandcamping Priwall',
+          address: 'Dünenweg 3, 23570 Lübeck-Travemünde',
+          url: 'http://www.strandcamping-priwall.de',
           booked: false,
           bookingRef: '',
         },
         driveFromPrevious: {
-          km: 340,
-          hours: '4t 30min',
-          route: 'E45/A7',
+          km: 330,
+          hours: '4t 15min',
+          route: 'E45/A7 sørover, A1 øst mot Lübeck',
         },
-        description: 'Stor havneby med fantastiske attraksjoner for barn. Miniatur Wunderland er et absolutt must! Campingplass med sandstrand ved Elben, ca. 35 km fra sentrum.',
+        description: 'UNESCO-listet hanseatisk gammelby med ikonisk Holstentor — middelalderport fra 1464. Dagstur til Hamburgs Miniatur Wunderland (~65 km). Campingplass med strand ved Østersjøen i Travemünde.',
         activities: [
-          { name: 'Miniatur Wunderland', type: 'attraksjon', priority: 'must-do', description: 'Verdens største modelljernbaneutstilling i Speicherstadt. Bestill billetter online på forhånd! 3–4 timer.', url: 'https://www.miniatur-wunderland.com/' },
-          { name: 'Tierpark Hagenbeck', type: 'dyrepark', priority: 'must-do', description: 'Hamburgs dyrepark med tropisk akvarium og strykedyr-område for barn. Halv dag.', url: 'https://www.hagenbeck.de/' },
-          { name: 'Hafenrundfahrt (havnecruise)', type: 'båtkjøring', priority: 'must-do', description: 'Barkastur i Hamburgs havn fra Landungsbrücken. Ca. 1 time. Store containerskip.', url: 'https://www.barkassen-meyer.de/' },
-          { name: 'Planten un Blomen', type: 'park', priority: 'nice-to-have', description: 'Gratis bypark med stor lekeplass og vannlekeplass om sommeren. Vannlysspill om kvelden.', url: 'https://plantenunblomen.hamburg.de/' },
+          { name: 'Holstentor + Altstadt (UNESCO)', type: 'kultur', priority: 'must-do', description: 'Ikonisk middelalderport fra 1464. Sentrum av hansebyen — middelalderske gater og kjøpmannshus. Museum i Holstentor.', url: 'https://www.luebeck-tourismus.de/sehenswuerdigkeiten/holstentor.html' },
+          { name: 'Niederegger Marzipan', type: 'attraksjon', priority: 'must-do', description: 'Lübecks verdensberømte marzipan siden 1806. Café + lite marzipanmuseum i 2. etasje. William kan dekorere marzipan.', url: 'https://www.niederegger.de/' },
+          { name: 'Dagstur: Miniatur Wunderland Hamburg', type: 'attraksjon', priority: 'must-do', description: 'Verdens største modelljernbaneutstilling i Hamburgs Speicherstadt. Bestill billetter på forhånd! 3–4 timer. ~65 km fra Lübeck.', url: 'https://www.miniatur-wunderland.com/' },
+          { name: 'Dagstur: Hafenrundfahrt Hamburg', type: 'båtkjøring', priority: 'must-do', description: 'Barkastur i Hamburgs havn fra Landungsbrücken. Store containerskip. Ca. 1 time.', url: 'https://www.barkassen-meyer.de/' },
+          { name: 'Strandbad Travemünde', type: 'strand', priority: 'nice-to-have', description: 'Bred sandstrand ved Østersjøen rett ved campingplassen. Grunt og barnevennlig vann.', url: 'https://www.luebeck-tourismus.de/das-reiseziel/regioner/travemuende.html' },
+          { name: 'Europäisches Hansemuseum', type: 'museum', priority: 'nice-to-have', description: 'Interaktivt museum om hanseatenes handelsnettverk. Moderne og engasjerende for alle aldre.', url: 'https://www.hansemuseum.eu/' },
+          { name: 'Marienkirche', type: 'severdighet', priority: 'nice-to-have', description: 'Verdens høyeste murkirke (1351). To bombesprengde klokker på gulvet som krigsminnesmerke.', url: 'https://www.st-marien-luebeck.de/' },
+          { name: 'Bootsrundfahrt Trave', type: 'båtkjøring', priority: 'nice-to-have', description: 'Elvecruise gjennom gamlebyen langs Trave. Ser Holstentor og saltlagrene fra vannet.', url: 'https://www.quandt-linienschifffahrt.de/' },
         ],
-        tips: ['Umweltplakette (grønn miljøplakett) kreves for kjøring i Hamburg — bestill fra umwelt-plakette.de', 'Miniatur Wunderland er alltid utsolgt i høysesong — bestill billetter i god tid!'],
+        tips: [
+          'Lübeck Altstadt er kompakt og lett å gå — parkér ved Holstentor og gå resten',
+          'Hamburg dagstur: Umweltplakette kreves (samme plakett som for Berlin)',
+          'Miniatur Wunderland: bestill billetter minimum 2–3 uker i forveien i juli',
+          'Skandinavienkai fergehavn er synlig fra campingplassen — store Finnlines/Stena-skip spennende for William',
+          'Lübeck selv har ingen Umweltzone',
+        ],
         imageUrl: '',
       },
       {
@@ -920,8 +932,8 @@ function ferieApp() {
         lat: 52.52,
         lng: 13.40,
         arrivalDate: '2026-07-13',
-        departureDate: '2026-07-18',
-        nights: 5,
+        departureDate: '2026-07-17',
+        nights: 4,
         week: 29,
         camping: {
           name: 'DCC-Campingplatz Berlin-Gatow',
@@ -931,9 +943,9 @@ function ferieApp() {
           bookingRef: '',
         },
         driveFromPrevious: {
-          km: 290,
+          km: 330,
           hours: '3t 45min',
-          route: 'A24 motorvei',
+          route: 'A20 øst mot Rostock, A19/A24 sør mot Berlin',
         },
         description: 'Tysklands hovedstad med familiebesøk hos André og Lucia. Campingplass med sandstrand ved Havel, ca. 22 km fra Fischerinsel.',
         activities: [
@@ -941,10 +953,10 @@ function ferieApp() {
           { name: 'Berlin Zoo', type: 'dyrehage', priority: 'must-do', description: 'En av Europas mest artsrike. Akvarium inkludert. Halv til hel dag.', url: 'https://www.zoo-berlin.de/' },
           { name: 'LEGOLAND Discovery Centre', type: 'opplevelse', priority: 'must-do', description: 'LEGO-opplevelsessenter med byggeverksteder og 4D-kino. Bestill online. 2–3 timer.', url: 'https://www.legolanddiscoverycentre.com/berlin/' },
           { name: 'Tropical Islands', type: 'badeland', priority: 'must-do', description: 'Verdens største innendørs tropiske badeanlegg. Ca. 60 km sør for Berlin. Hel dag.', url: 'https://www.tropical-islands.de/' },
-          { name: 'Naturkundemuseum', type: 'museum', priority: 'nice-to-have', description: 'Verdens største monterte dinosaurskjelett. Barn elsker dinosauravdelingen. 2–3 timer.', url: 'https://www.museumfuernaturkunde.berlin/' },
+          { name: 'Naturkundemuseum', type: 'museum', priority: 'must-do', description: 'Verdens største monterte dinosaurskjelett. Barn elsker dinosauravdelingen. 2–3 timer.', url: 'https://www.museumfuernaturkunde.berlin/' },
           { name: 'Tempelhofer Feld', type: 'park', priority: 'nice-to-have', description: 'Gammel flyplass omgjort til enorm bypark. Sykling og drageflying med William. Gratis.', url: 'https://gruen-berlin.de/projekt/tempelhofer-feld' },
         ],
-        tips: ['Umweltplakette kreves også i Berlin', 'Vurder Berlin WelcomeCard for 5 dager (dekker kollektivtransport + rabatter)', 'Campingplassen ved Havel er fin for bading på varme dager'],
+        tips: ['Umweltplakette kreves også i Berlin', 'Vurder Berlin WelcomeCard for 4 dager (dekker kollektivtransport + rabatter)', 'Campingplassen ved Havel er fin for bading på varme dager'],
         imageUrl: '',
       },
       {
@@ -954,10 +966,10 @@ function ferieApp() {
         countryCode: 'DE',
         lat: 50.92,
         lng: 14.15,
-        arrivalDate: '2026-07-18',
-        departureDate: '2026-07-21',
+        arrivalDate: '2026-07-17',
+        departureDate: '2026-07-20',
         nights: 3,
-        week: 30,
+        week: 29,
         camping: {
           name: 'Campingplatz Ostrauer Mühle',
           address: 'Ostrauer Mühle 15, 01814 Bad Schandau',
@@ -989,8 +1001,8 @@ function ferieApp() {
         countryCode: 'DE',
         lat: 54.18,
         lng: 12.09,
-        arrivalDate: '2026-07-21',
-        departureDate: '2026-07-22',
+        arrivalDate: '2026-07-20',
+        departureDate: '2026-07-21',
         nights: 1,
         week: 30,
         camping: {
@@ -1007,7 +1019,7 @@ function ferieApp() {
         },
         description: 'Transitstopp ved Østersjøen med bred sandstrand. Stranddag før Scandlines-fergen til Gedser (Danmark) neste morgen.',
         activities: [
-          { name: 'Warnemünde Strand', type: 'strand', priority: 'must-do', description: 'Bred sandstrand med grunt, barnevennlig vann. Strandkurver (Strandkorb) kan leies.', url: 'https://www.rostock.de/tourismus/aktivitaeten/strand-und-meer.html' },
+          { name: 'Warnemünde Strand', type: 'strand', priority: 'must-do', description: 'Bred sandstrand med grunt, barnevennlig vann. Strandkurver (Strandkorb) kan leies.', url: 'https://www.rostock.de/tourismus/aktivitaeter/strand-und-meer.html' },
           { name: 'Warnemünde fyrtårn', type: 'severdighet', priority: 'nice-to-have', description: 'Utsikt fra fyrtårnet like ved strand og havn.', url: 'https://www.leuchtturm-warnemuende.de/' },
           { name: 'Se på ferger i havnen', type: 'underholdning', priority: 'nice-to-have', description: 'Store Scandlines-ferger — spennende for William.', url: 'https://www.scandlines.com/' },
         ],
@@ -1016,13 +1028,52 @@ function ferieApp() {
       },
       {
         id: 7,
+        name: 'Møns Klint',
+        country: 'Danmark',
+        countryCode: 'DK',
+        lat: 54.97,
+        lng: 12.54,
+        arrivalDate: '2026-07-21',
+        departureDate: '2026-07-23',
+        nights: 2,
+        week: 30,
+        camping: {
+          name: 'Møns Klint Resort',
+          address: 'Klintevej 544, 4791 Borre',
+          url: 'https://www.moensklintresort.dk/',
+          booked: false,
+          bookingRef: '',
+        },
+        driveFromPrevious: {
+          km: 65,
+          hours: '2t ferge + 50min',
+          route: 'Scandlines ferge Rostock→Gedser (2t), E55 nord, Rute 59 vest til Møn',
+        },
+        description: 'Danmarks mest spektakulære naturlandskap — 128 m høye krittklipper over Østersjøen. UNESCO Geopark med interaktivt GeoCenter, Dark Sky Park og strandvandring langs klintene.',
+        activities: [
+          { name: 'GeoCenter Møns Klint', type: 'museum', priority: 'must-do', description: 'Interaktivt museum om krittklintenes geologi og klimahistorie. Dinosaurspor! Populær med barnefamilier. 2–3 timer.', url: 'https://www.geocenter.dk/' },
+          { name: 'Vandring langs klintestien', type: 'natur', priority: 'must-do', description: 'Sti langs toppen av de 128 m høye krittklinterne. Spektakulær utsikt over Østersjøen.', url: 'https://www.visitmoensklint.dk/' },
+          { name: 'Klintholm Havn', type: 'by', priority: 'nice-to-have', description: 'Sjarmerende fiskerihavn. Fersk fisk og krabbe direkte fra fiskerne. Is og sjømat.', url: 'https://klintholm-havn.dk/' },
+          { name: 'Liselund Slot', type: 'severdighet', priority: 'nice-to-have', description: 'Romantisk stråtekt slott fra 1700-tallet i vakker park. 10 min kjøring fra campingen.', url: 'https://natmus.dk/museer-og-slotte/liselund/' },
+        ],
+        tips: [
+          'Klintestien har bratte partier — ta med bæresele til William på de krevende partiene',
+          'GeoCenter: kjøp billetter online for å unngå kø i høysesong',
+          'Klintholm Havn: fersk krabbe og fisk fra fiskerne om morgenen',
+          'Danmarks første Dark Sky Park — perfekt for kveldsstjerner fra campingen',
+          'Ingen Umweltzone på Møn',
+        ],
+        imageUrl: '',
+      },
+      {
+        id: 8,
         name: 'København',
         country: 'Danmark',
         countryCode: 'DK',
         lat: 55.68,
         lng: 12.57,
-        arrivalDate: '2026-07-22',
-        departureDate: '2026-07-26',
+        arrivalDate: '2026-07-23',
+        departureDate: '2026-07-27',
         nights: 4,
         week: 30,
         camping: {
@@ -1033,9 +1084,9 @@ function ferieApp() {
           bookingRef: '',
         },
         driveFromPrevious: {
-          km: 170,
-          hours: '2t 15min + 2t ferge',
-          route: 'Ferge Rostock–Gedser (Scandlines), E47/E55 til København',
+          km: 120,
+          hours: '1t 30min',
+          route: 'Rute 59 nord fra Møn, E47/E55 til København',
         },
         description: 'Danmarks hovedstad med verdensklasse-attraksjoner for barn. Historisk festningsområde ved Øresund, ca. 8 km nord for sentrum.',
         activities: [
@@ -1047,18 +1098,18 @@ function ferieApp() {
           { name: 'Nyhavn + kanalbåt', type: 'sightseeing', priority: 'nice-to-have', description: 'Fargerike hus, is og båtkjøring på kanalene (ca. 1 time).', url: 'https://www.stromma.com/da-dk/copenhagen/' },
           { name: 'Experimentarium', type: 'vitensenter', priority: 'nice-to-have', description: 'Interaktivt vitensenter med hands-on utstillinger for barn.', url: 'https://www.experimentarium.dk/' },
         ],
-        tips: ['Charlottenlund Fort er ekstremt populær i juli — book så tidlig som mulig!', 'Kombiner Bakken med tur i Dyrehaven (tamme hjorter)', 'Dagstur til Kronborg slott i Helsingør (Hamlets slott) — ca. 45 min kjøring nord for København', 'DFDS-terminalen i Nordhavn: innsjekk fra kl. 14:00 på avreisedagen (26. juli)'],
+        tips: ['Charlottenlund Fort er ekstremt populær i juli — book så tidlig som mulig!', 'Kombiner Bakken med tur i Dyrehaven (tamme hjorter)', 'Dagstur til Kronborg slott i Helsingør (Hamlets slott) — ca. 45 min kjøring nord for København', 'DFDS-terminalen i Nordhavn: innsjekk fra kl. 14:00 på avreisedagen (27. juli)'],
         imageUrl: '',
       },
       {
-        id: 8,
+        id: 9,
         name: 'DFDS Mini-cruise',
         country: 'Danmark / Norge',
         countryCode: 'DK/NO',
         lat: 55.69,
         lng: 12.60,
-        arrivalDate: '2026-07-26',
-        departureDate: '2026-07-27',
+        arrivalDate: '2026-07-27',
+        departureDate: '2026-07-28',
         nights: 1,
         week: 31,
         camping: {
@@ -1074,16 +1125,40 @@ function ferieApp() {
           hours: '15 min + 17t ferge',
           route: 'Kjør til DFDS Nordhavn terminal (5 km). Innsjekk fra kl. 14:00. Avgang kl. 16:30',
         },
-        description: 'Hjemreise med DFDS mini-cruise København → Oslo. Overnatting i familielugar. Barnedisco, lekerom og bufferestaurant ombord. Ankomst Oslo ca. kl. 09:45 — deretter 85 km til Kongsberg.',
+        description: 'Hjemreise med DFDS mini-cruise København → Oslo. Overnatting i familielugar. Barnedisco, lekerom og bufferestaurant ombord. Ankomst Oslo Havneterminal ca. kl. 09:45.',
         activities: [
           { name: 'Barnas lekeland', type: 'lek', priority: 'must-do', description: 'Dedikert lekerom for småbarn, barnedisco om kvelden.', url: '' },
           { name: 'Sjøutsikt fra dekk', type: 'opplevelse', priority: 'must-do', description: 'Seiling gjennom Øresund og inn Oslofjorden — William ser fyrtårn, skip og øyer.', url: '' },
           { name: 'Familiebuffé', type: 'mat', priority: 'must-do', description: 'Middagsbuffé med dansk/norsk mat — populært med barnefamilier.', url: '' },
           { name: 'Frokostbuffé', type: 'mat', priority: 'nice-to-have', description: '7 Seas frokostbuffé før ankomst Oslo ca. kl. 09:45.', url: '' },
         ],
-        tips: ['Campingvogn må oppgis ved booking (ekstra lengdegebyr inngår i prisen)', 'Book familielugar med vindu — William vil nyte utsikten', 'Innsjekk starter kl. 14:00 — bruk formiddagen til en siste København-aktivitet', 'Hjemreise: Oslo → Kongsberg 85 km, ca. 1 t 15 min via E18/E134. Hjemme til lunsj!'],
+        tips: ['Campingvogn må oppgis ved booking (ekstra lengdegebyr inngår i prisen)', 'Book familielugar med vindu — William vil nyte utsikten', 'Innsjekk starter kl. 14:00 — bruk formiddagen til en siste København-aktivitet'],
         imageUrl: '',
       },
+      {
+        id: 10,
+        name: 'Kongsberg',
+        country: 'Norge',
+        countryCode: 'NO',
+        lat: 59.67,
+        lng: 9.65,
+        isHome: true,
+        arrivalDate: '2026-07-28',
+        departureDate: null,
+        nights: 0,
+        week: 31,
+        camping: null,
+        driveFromPrevious: {
+          km: 85,
+          hours: '1t 15min',
+          route: 'DFDS ankommer Oslo kl. 09:45 → E18/E134 til Kongsberg. Hjemme til lunsj!',
+        },
+        description: 'Hjemkomst etter 3,5 uker og over 4 000 km med campingvogn gjennom 4 land.',
+        activities: [],
+        tips: [],
+        imageUrl: '',
+      },
+
     
     ],
 
@@ -1149,26 +1224,33 @@ function ferieApp() {
 
       // Stopp-markorer
       this.stops.forEach((stop, i) => {
-        const icon = L.divIcon({
-          html: `<div style="background:#1B4F72;color:white;border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:bold;border:2px solid white;box-shadow:0 2px 6px rgba(0,0,0,0.3);">${i + 1}</div>`,
-          className: '',
-          iconSize: [28, 28],
-          iconAnchor: [14, 14],
-        });
+        if (!stop.isHome) {
+          const icon = L.divIcon({
+            html: `<div style="background:#1B4F72;color:white;border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:bold;border:2px solid white;box-shadow:0 2px 6px rgba(0,0,0,0.3);">${i + 1}</div>`,
+            className: '',
+            iconSize: [28, 28],
+            iconAnchor: [14, 14],
+          });
 
-        const campingLink = stop.camping.url
-          ? `<a href="${stop.camping.url}" target="_blank" rel="noopener" style="color:#1B4F72;">${stop.camping.name}</a>`
-          : stop.camping.name;
+          const campingLink = stop.camping
+            ? (stop.camping.url
+              ? `<a href="${stop.camping.url}" target="_blank" rel="noopener" style="color:#1B4F72;">${stop.camping.name}</a>`
+              : stop.camping.name)
+            : '';
 
-        L.marker([stop.lat, stop.lng], { icon })
-          .addTo(this.map)
-          .bindPopup(`
-            <strong>${stop.name}</strong> (${stop.countryCode})<br>
-            ${stop.arrivalDate.slice(5)} - ${stop.departureDate.slice(5)} &middot; ${stop.nights} netter<br>
-            <small>${campingLink}</small><br>
-            <small style="color:#666;">${stop.description.substring(0, 100)}...</small>
-          `);
+          const dateInfo = stop.departureDate
+            ? `${stop.arrivalDate.slice(5)} - ${stop.departureDate.slice(5)} &middot; ${stop.nights} netter`
+            : stop.arrivalDate.slice(5);
 
+          L.marker([stop.lat, stop.lng], { icon })
+            .addTo(this.map)
+            .bindPopup(`
+              <strong>${stop.name}</strong> (${stop.countryCode})<br>
+              ${dateInfo}<br>
+              <small>${campingLink}</small><br>
+              <small style="color:#666;">${stop.description.substring(0, 100)}...</small>
+            `);
+        }
         allPoints.push([stop.lat, stop.lng]);
       });
 

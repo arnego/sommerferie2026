@@ -10,7 +10,7 @@
 
 - **Avreisedato:** Tidligst 4. juli
 - **Returdato:** Senest 1. august
-- **Varighet:** ca. 3,5 uker (23 netter)
+- **Varighet:** ca. 3,5 uker (25 netter)
 - **Startpunkt:** Kongsberg, Norge
 - **Kjøretøy:** Campingvogn Knaus Sport 400 LK, trukket av Land Rover Discovery 4
 - **Deltakere:** Ann Kristin (42 år), Arne (40 år) og William (5 år)
@@ -42,18 +42,19 @@ William er 5 år og er en viktig del av planleggingen:
 |---|------|------|---------|---------|--------|-----|
 | 1 | Løkken Strand | DK | 4. juli | 7. juli | 3 | 28 |
 | 2 | Billund (LEGOLAND) | DK | 7. juli | 10. juli | 3 | 28 |
-| 3 | Hamburg | DE | 10. juli | 13. juli | 3 | 28-29 |
-| 4 | Berlin | DE | 13. juli | 18. juli | 5 | 29 |
-| 5 | Bad Schandau (Saksisk Sveits) | DE | 18. juli | 21. juli | 3 | 29-30 |
-| 6 | Warnemünde (transit) | DE | 21. juli | 22. juli | 1* | 30 |
-| 7 | København | DK | 22. juli | 26. juli | 4 | 30 |
-| 8 | DFDS mini-cruise København → Oslo | DK/NO | 26. juli | 27. juli | 1** | 30-31 |
-| 9 | Kongsberg | NO | 27. juli | - | Hjemme | 31 |
+| 3 | Lübeck | DE | 10. juli | 13. juli | 3 | 29 |
+| 4 | Berlin | DE | 13. juli | 17. juli | 4 | 29 |
+| 5 | Bad Schandau (Saksisk Sveits) | DE | 17. juli | 20. juli | 3 | 29 |
+| 6 | Warnemünde (transit) | DE | 20. juli | 21. juli | 1* | 30 |
+| 7 | Møns Klint | DK | 21. juli | 23. juli | 2* | 30 |
+| 8 | København | DK | 23. juli | 27. juli | 4 | 30 |
+| 9 | DFDS mini-cruise København → Oslo | DK/NO | 27. juli | 28. juli | 1** | 31 |
+| 10 | Kongsberg | NO | 28. juli | - | Hjemme | 31 |
 
-*Transitstopp med stranddag — unntak fra 3-netter-regelen.
+*Kortstopp — unntak fra 3-netter-regelen.
 **Overnatting i lugar om bord — unntak fra 3-netter-regelen (hjemreise uten Sverige).
 
-**Totalt:** 23 overnattinger (22 på land + 1 om bord), ca. 1 870 km kjøring + 3 fergestrekninger. Hjemme 27. juli.
+**Totalt:** 25 overnattinger (24 på land + 1 om bord), ca. 2 000 km kjøring + 3 fergestrekninger. Hjemme 28. juli.
 
 ---
 
@@ -65,12 +66,14 @@ William er 5 år og er en viktig del av planleggingen:
 | Larvik | Hirtshals (ferge) | - | 3 t 45 min | Color Line SuperSpeed |
 | Hirtshals | Løkken | 55 km | 45 min | Rute 55 |
 | Løkken | Billund | 185 km | 2 t 30 min | Via Viborg |
-| Billund | Hamburg | 340 km | 4 t 30 min | E45/A7 |
-| Hamburg | Berlin | 290 km | 3 t 45 min | A24 |
+| Billund | Lübeck | 330 km | 4 t 15 min | E45/A7 sørover, A1 øst mot Lübeck |
+| Lübeck | Hamburg (dagstur) | 65 km | 45 min | A1 vest |
+| Lübeck | Berlin | 330 km | 3 t 45 min | A20 øst mot Rostock, A19/A24 sør mot Berlin |
 | Berlin | Bad Schandau | 250 km | 3 t 15 min | A13/A17 |
-| Bad Schandau | Warnemünde | 400 km | 5 t 15 min | Via Dresden-Leipzig (A13/A14/A19) |
+| Bad Schandau | Warnemünde | 400 km | 5 t 15 min | Via Dresden–Leipzig (A13/A14/A19) |
 | Warnemünde/Rostock | Gedser (ferge) | - | 2 t | Scandlines |
-| Gedser | København | 170 km | 2 t 15 min | E47/E55 |
+| Gedser | Møns Klint | 65 km | 50 min | E55 nord, Rute 59 vest til Møn |
+| Møns Klint | København | 120 km | 1 t 30 min | Rute 59 nord fra Møn, E47/E55 |
 | København | DFDS-terminalen (Nordhavn) | 5 km | 15 min | Innkjøring kl. 14:00–15:30 |
 | København | Oslo (ferge) | - | ca. 17 t | DFDS Pearl/Crown Seaways (overnatting) |
 | Oslo | Kongsberg | 85 km | 1 t 15 min | E18/E134 |
@@ -165,14 +168,14 @@ Alle kjøretider er beregnet med campingvogn (ca. 80 km/t snitt).
 
 ---
 
-### Stopp 3: Hamburg, Tyskland (3 netter: 10.–13. juli)
+### Stopp 3: Lübeck, Tyskland (3 netter: 10.–13. juli)
 
-**Campingplass: Campingplatz Stover Strand International**
-- Adresse: Stover Strand 10, 21423 Drage (Elbmarsch), Tyskland
-- Nettside: https://www.stfreizeit.de/
-- Fasiliteter: Stor lekeplass, sandstrand ved Elben med bademuligheter, innendørs svømmebasseng, minimarked, restaurant, sportsaktiviteter, Wi-Fi
-- Ca. 35 km sørøst for Hamburg sentrum (ca. 40 min med bil)
-- Tar imot campingvogn med strømtilkobling (16A)
+**Campingplass: Strandcamping Priwall**
+- Adresse: Dünenweg 3, 23570 Lübeck-Travemünde, Tyskland
+- Nettside: http://www.strandcamping-priwall.de (kun HTTP)
+- Familieid siden 1958. Strand ved Østersjøen, nær Skandinavienkai fergeterminal
+- Ca. 15 km fra Lübeck sentrum
+- Tar imot campingvogn med strømtilkobling
 - Booket: Nei
 - Bookingref: -
 
@@ -180,18 +183,25 @@ Alle kjøretider er beregnet med campingvogn (ca. 80 km/t snitt).
 
 | Aktivitet | Type | Prioritet | Beskrivelse |
 |-----------|------|-----------|-------------|
-| Miniatur Wunderland | Museum/attraksjon | Must-do | Verdens største modelljernbaneutstilling i Speicherstadt. Bestill billetter online på forhånd! 3–4 timer. https://www.miniatur-wunderland.com/ |
-| Tierpark Hagenbeck | Dyrepark | Must-do | Hamburgs dyrepark med tropisk akvarium, strykedyr-område for barn. Halv dag. https://www.hagenbeck.de/ |
-| Hafenrundfahrt (havnecruise) | Båtkjøring | Must-do | Barkastur i Hamburgs havn fra Landungsbrücken. Ca. 1 time. Store containerskip. https://www.barkassen-meyer.de/ |
-| Planten un Blomen | Park/lek | Nice-to-have | Gratis bypark med stor lekeplass og vannlekeplass om sommeren. Vannlysspill om kvelden. https://plantenunblomen.hamburg.de/ |
+| Holstentor + Altstadt (UNESCO) | Kultur/historie | Must-do | Ikonisk middelalderport fra 1464. Sentrum av hansebyen — middelalderske gater og kjøpmannshus. Museum i Holstentor. https://www.luebeck-tourismus.de/sehenswuerdigkeiten/holstentor.html |
+| Niederegger Marzipan | Attraksjon | Must-do | Lübecks verdensberømte marzipan siden 1806. Café + lite marzipanmuseum i 2. etasje. William kan dekorere marzipan. https://www.niederegger.de/ |
+| Dagstur: Miniatur Wunderland Hamburg | Museum/attraksjon | Must-do | Verdens største modelljernbaneutstilling i Hamburgs Speicherstadt. Bestill billetter på forhånd! ~65 km fra Lübeck. https://www.miniatur-wunderland.com/ |
+| Dagstur: Hafenrundfahrt Hamburg | Båtkjøring | Must-do | Barkastur i Hamburgs havn fra Landungsbrücken. Ca. 1 time. Store containerskip. https://www.barkassen-meyer.de/ |
+| Strandbad Travemünde | Strand | Nice-to-have | Bred sandstrand ved Østersjøen rett ved campingplassen. Grunt og barnevennlig vann. https://www.luebeck-tourismus.de/ |
+| Europäisches Hansemuseum | Museum | Nice-to-have | Interaktivt museum om hanseatenes handelsnettverk. Moderne og engasjerende for alle aldre. https://www.hansemuseum.eu/ |
+| Marienkirche | Severdighet | Nice-to-have | Verdens høyeste murkirke (1351). To bombesprengde klokker på gulvet som krigsminnesmerke. https://www.st-marien-luebeck.de/ |
+| Bootsrundfahrt Trave | Båtkjøring | Nice-to-have | Elvecruise gjennom gamlebyen langs Trave. Ser Holstentor og saltlagrene fra vannet. https://www.quandt-linienschifffahrt.de/ |
 
 **Tips:**
-- Umweltplakette (grønn miljøplakett) kreves for kjøring i Hamburg — bestill fra umwelt-plakette.de (15–30 EUR)
-- Miniatur Wunderland er alltid utsolgt i høysesong — bestill billetter i god tid!
+- Lübeck Altstadt er kompakt og lett å gå — parkér ved Holstentor og gå resten
+- Hamburg dagstur: Umweltplakette kreves (samme plakett som for Berlin-stoppet)
+- Miniatur Wunderland: bestill billetter minimum 2–3 uker i forveien i juli
+- Skandinavienkai fergehavn er synlig fra campingplassen — store Finnlines/Stena-skip spennende for William
+- Lübeck selv har ingen Umweltzone
 
 ---
 
-### Stopp 4: Berlin, Tyskland (5 netter: 13.–18. juli)
+### Stopp 4: Berlin, Tyskland (4 netter: 13.–17. juli)
 
 **Campingplass: DCC-Campingplatz Berlin-Gatow**
 - Adresse: Kladower Damm 213–217, 14089 Berlin-Gatow, Tyskland
@@ -214,17 +224,17 @@ Alle kjøretider er beregnet med campingvogn (ca. 80 km/t snitt).
 | Berlin Zoo | Dyrehage | Must-do | En av Europas mest artsrike. Akvarium inkludert. Halv til hel dag. https://www.zoo-berlin.de/ |
 | LEGOLAND Discovery Centre | Innendørs opplevelse | Must-do | LEGO-opplevelsessenter med byggeverksteder og 4D-kino. Bestill online. 2–3 timer. https://www.legolanddiscoverycentre.com/berlin/ |
 | Tropical Islands | Badeland/tropisk | Must-do | Verdens største innendørs tropiske badeanlegg. Ca. 60 km sør for Berlin (dagstur). Hel dag. https://www.tropical-islands.de/ |
-| Naturkundemuseum | Museum | Nice-to-have | Verdens største monterte dinosaurskjelett. Barn elsker dinosauravdelingen. 2–3 timer. https://www.museumfuernaturkunde.berlin/ |
+| Naturkundemuseum | Museum | Must-do | Verdens største monterte dinosaurskjelett. Barn elsker dinosauravdelingen. 2–3 timer. https://www.museumfuernaturkunde.berlin/ |
 | Tempelhofer Feld | Park/friluft | Nice-to-have | Gammel flyplass omgjort til enorm bypark. Sykling, drageflying med William. Gratis. https://gruen-berlin.de/projekt/tempelhofer-feld |
 
 **Tips:**
 - Umweltplakette kreves også i Berlin
-- Vurder Berlin WelcomeCard for 5 dager (dekker kollektivtransport + rabatter)
+- Vurder Berlin WelcomeCard for 4 dager (dekker kollektivtransport + rabatter)
 - Campingplassen ved Havel er fin for bading på varme dager
 
 ---
 
-### Stopp 5: Bad Schandau / Saksisk Sveits, Tyskland (3 netter: 18.–21. juli)
+### Stopp 5: Bad Schandau / Saksisk Sveits, Tyskland (3 netter: 17.–20. juli)
 
 **Campingplass: Campingplatz Ostrauer Mühle**
 - Adresse: Ostrauer Mühle 15, 01814 Bad Schandau, Tyskland
@@ -253,7 +263,7 @@ Alle kjøretider er beregnet med campingvogn (ca. 80 km/t snitt).
 
 ---
 
-### Stopp 6: Warnemünde, Tyskland (1 natt transit: 21.–22. juli)
+### Stopp 6: Warnemünde, Tyskland (1 natt transit: 20.–21. juli)
 
 **Campingplass: Campingpark Warnemünde**
 - Adresse: Parkstrasse 1, 18119 Rostock-Warnemünde, Tyskland
@@ -277,7 +287,35 @@ Alle kjøretider er beregnet med campingvogn (ca. 80 km/t snitt).
 
 ---
 
-### Stopp 7: København, Danmark (4 netter: 22.–26. juli)
+### Stopp 7: Møns Klint, Danmark (2 netter: 21.–23. juli)
+
+**Campingplass: Møns Klint Resort**
+- Adresse: Klintevej 544, 4791 Borre, Danmark
+- Nettside: https://www.moensklintresort.dk/
+- Fasiliteter: ~400 plasser, utendørs basseng, lekeplass, kiosk, ca. 3 km fra GeoCenter Møns Klint
+- Tar imot campingvogn med strømtilkobling
+- Booket: Nei
+- Bookingref: -
+
+**Aktiviteter:**
+
+| Aktivitet | Type | Prioritet | Beskrivelse |
+|-----------|------|-----------|-------------|
+| GeoCenter Møns Klint | Museum/opplevelse | Must-do | Interaktivt museum om krittklintenes geologi og klimahistorie. Dinosaurspor! Populær med barnefamilier. 2–3 timer. https://www.geocenter.dk/ |
+| Vandring langs klintestien | Natur/friluft | Must-do | Sti langs toppen av de 128 m høye krittklinterne. Spektakulær utsikt over Østersjøen. https://www.visitmoensklint.dk/ |
+| Klintholm Havn | By/sjømat | Nice-to-have | Sjarmerende fiskerihavn. Fersk fisk og krabbe direkte fra fiskerne. Is og sjømat. https://klintholm-havn.dk/ |
+| Liselund Slot | Severdighet | Nice-to-have | Romantisk stråtekt slott fra 1700-tallet i vakker park. 10 min kjøring fra campingen. https://natmus.dk/museer-og-slotte/liselund/ |
+
+**Tips:**
+- Klintestien har bratte partier — ta med bæresele til William på de krevende partiene
+- GeoCenter: kjøp billetter online for å unngå kø i høysesong
+- Klintholm Havn: fersk krabbe og fisk fra fiskerne om morgenen
+- Danmarks første Dark Sky Park — perfekt for kveldsstjerner fra campingen
+- Ingen Umweltzone på Møn
+
+---
+
+### Stopp 8: København, Danmark (4 netter: 23.–27. juli)
 
 **Campingplass: DCU-Camping Charlottenlund Fort**
 - Adresse: Strandvejen 144B, 2920 Charlottenlund, Danmark
@@ -305,11 +343,11 @@ Alle kjøretider er beregnet med campingvogn (ca. 80 km/t snitt).
 - Charlottenlund Fort er ekstremt populær i juli — book så tidlig som mulig!
 - Kombiner Bakken med tur i Dyrehaven (tamme hjorter)
 - Dagstur til Kronborg slott i Helsingør (Hamlets slott) — ca. 45 min kjøring nord for København
-- DFDS-terminalen ligger i Nordhavn, ca. 10 min fra sentrum. Innsjekk starter ca. kl. 14:00 på avreisedagen (26. juli)
+- DFDS-terminalen ligger i Nordhavn, ca. 10 min fra sentrum. Innsjekk starter ca. kl. 14:00 på avreisedagen (27. juli)
 
 ---
 
-### Stopp 8: DFDS Mini-cruise København → Oslo (1 natt om bord: 26.–27. juli)
+### Stopp 9: DFDS Mini-cruise København → Oslo (1 natt om bord: 27.–28. juli)
 
 **Ferge: DFDS Pearl Seaways / Crown Seaways**
 - Avgang: København (Nordhavn terminal), typisk kl. 16:30
@@ -328,7 +366,7 @@ Alle kjøretider er beregnet med campingvogn (ca. 80 km/t snitt).
 | Familiebuffé | Mat | Must-do | Middagsbuffé med dansk/norsk mat — populært med barn |
 | 7 Seas bufférestaurant | Mat | Nice-to-have | Frokostbuffé før ankomst Oslo |
 
-**Hjemreise 27. juli:**
+**Hjemreise 28. juli:**
 - Ankomst Oslo ca. kl. 09:45
 - Kjøretur Oslo → Kongsberg: 85 km, ca. 1 t 15 min via E18/E134
 - Hjemme i Kongsberg til lunsj
@@ -346,14 +384,17 @@ Alle kjøretider er beregnet med campingvogn (ca. 80 km/t snitt).
 **Uke 28 (4.–10. juli): Danmark — strand og LEGOLAND**
 Løkken Strand (3 netter) + Billund/LEGOLAND (3 netter). Strandliv på den danske vestkysten med mulig dagstur til Rubjerg Knude og Skagen, deretter tre dager med LEGOLAND Holiday Village, LEGO House og Givskud Zoo.
 
-**Uke 29 (10.–18. juli): Tyskland — Hamburg og Berlin**
-Hamburg (3 netter) + Berlin (5 netter). Miniatur Wunderland og Hagenbeck i Hamburg, deretter Berlin med familiebesøk hos André og Lucia, Berlin Zoo, LEGOLAND Discovery Centre og Tropical Islands.
+**Uke 29 (10.–17. juli): Tyskland — Lübeck og Berlin**
+Lübeck (3 netter) + Berlin (4 netter). Holstentor og Niederegger marzipan i Lübeck, dagstur til Hamburgs Miniatur Wunderland og Hafenrundfahrt. Deretter Berlin med familiebesøk hos André og Lucia, Berlin Zoo, LEGOLAND Discovery Centre, Tropical Islands og Naturkundemuseum.
 
-**Uke 30 (18.–26. juli): Saksisk Sveits og København**
-Bad Schandau (3 netter) + Warnemünde transit (1 natt) + København (4 netter). Basteibroen, Königstein festning og naturopplevelser i nasjonalparken, deretter stranddag i Warnemünde og Scandlines-ferge til Danmark. København med Tivoli, Bakken og Den Blå Planet.
+**Uke 29–30 (17.–21. juli): Saksisk Sveits og Warnemünde**
+Bad Schandau (3 netter) + Warnemünde transit (1 natt). Basteibroen, Königstein festning og Kirnitzschtalbahn i nasjonalparken, deretter stranddag i Warnemünde før Scandlines-ferge.
 
-**Uke 30–31 (26.–27. juli): Hjemreise med DFDS**
-DFDS mini-cruise København → Oslo (1 natt om bord). Hjemkjøring fra Oslo til Kongsberg 27. juli (85 km).
+**Uke 30 (21.–27. juli): Danmark — Møns Klint og København**
+Møns Klint (2 netter) + København (4 netter). GeoCenter og krittklipper på Møn, deretter København med Tivoli, Bakken og Den Blå Planet.
+
+**Uke 31 (27.–28. juli): Hjemreise med DFDS**
+DFDS mini-cruise København → Oslo (1 natt om bord). Hjemkjøring fra Oslo til Kongsberg 28. juli (85 km).
 
 ---
 
@@ -361,6 +402,7 @@ DFDS mini-cruise København → Oslo (1 natt om bord). Hjemkjøring fra Oslo til
 
 | Dato | Endring | Av |
 | --- | --- | --- |
+| 2026-04-13 | Hamburg erstattet med Lübeck (3 netter, Strandcamping Priwall). Berlin redusert til 4 netter (avreise 17. juli). Naturkundemuseum Berlin oppgradert til must-do. Nytt stopp: Møns Klint (2 netter, Møns Klint Resort). Kongsberg lagt til som siste stopp med retur-kjøreinfo. Alle påfølgende datoer oppdatert (hjemme 28. juli). Kart viser nå linje tilbake til Kongsberg. | Claude |
 | 2026-04-12 | index.html synkronisert med spesifikasjonen: korrekte datoer (4–27 juli), Billund → LEGOLAND® Holiday Village Camping, Göteborg erstattet med DFDS mini-cruise, lagt til Råbjerg Mile/Experimentarium/Pirna/Se på ferger, URLs på alle aktiviteter, norske tegn fikset gjennomgående | Claude |
 | 2026-04-12 | Lagt til offisielle lenker for alle aktiviteter og severdigheter | Claude |
 | 2026-04-12 | Løkken redusert til 3 netter; Sverige fjernet som kriterie; Göteborg-stoppet erstattet med DFDS mini-cruise København → Oslo; Billund Camping byttet til LEGOLAND® Holiday Village Camping | Claude |

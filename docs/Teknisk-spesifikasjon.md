@@ -251,5 +251,6 @@ Her kan vi legge idéer som kan vurderes senere, men som foreløpig ikke skal in
 | --- | --- | --- |
 | 2026-04-09 | Dokumentet opprettet — struktur og tomme seksjoner | Claude + Arne |
 | 2026-04-10 | Teknologivalg, navigasjonsstruktur, designprinsipper, sjekkliste-strategi avklart via intervju | Claude + Arne |
+| 2026-04-13 | 10 stopp i stops-arrayet: Lübeck (nytt), Møns Klint (nytt), Kongsberg hjemkomst (nytt, isHome:true). Berlin 4 netter, Naturkundemuseum must-do. Datoer for alle stopp 4–9 oppdatert. Kart lukker polylinjen tilbake til Kongsberg. Template og kart håndterer camping:null og isHome. | Claude |
 | 2026-04-11 | Fullstendig implementasjon av index.html: kart (Leaflet), reiseplan med ukekort, pakkelister med localStorage, budsjett og praktisk info. Responsiv testing (375/768/1280px), kontrastforbedring (muted #95A5A6 oppjustert til #607080 for WCAG AA). | Claude |
 | 2026-04-11 | Dokument opprettet ved splitting av Spesifikasjon-ferieplan-webside.md. Testserver-krav presisert til https_server.py. | Claude |
