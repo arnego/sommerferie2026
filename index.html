@@ -59,10 +59,8 @@ tailwind.config = {
   <nav class="sticky top-0 z-50 bg-petrol/95 backdrop-blur-sm shadow-md">
     <div class="max-w-5xl mx-auto px-4 sm:px-6">
       <div class="flex items-center justify-between h-14">
-        <!-- Logo -->
         <a href="#" class="font-heading text-white text-lg font-bold tracking-wide">Sommerferie 2026</a>
 
-        <!-- Desktop-meny -->
         <div class="hidden lg:flex items-center gap-1">
           <template x-for="section in sections" :key="section.id">
             <a :href="'#' + section.id"
@@ -76,7 +74,6 @@ tailwind.config = {
           </template>
         </div>
 
-        <!-- Hamburgermeny-knapp (mobil) -->
         <button @click="mobileMenuOpen = !mobileMenuOpen"
                 class="lg:hidden text-white p-2 -mr-2"
                 :aria-expanded="mobileMenuOpen"
@@ -90,7 +87,6 @@ tailwind.config = {
         </button>
       </div>
 
-      <!-- Mobilmeny -->
       <div x-show="mobileMenuOpen" x-cloak
            x-transition:enter="transition ease-out duration-200"
            x-transition:enter-start="opacity-0 -translate-y-2"
@@ -124,7 +120,6 @@ tailwind.config = {
       <p class="text-white/60 text-base sm:text-lg font-light">3,5 uker &middot; Campingvogn &middot; 2 voksne + 1 barn &middot; Juli 2026</p>
     </div>
 
-    <!-- Stats-bar -->
     <div class="bg-sunshine/90 text-petrol">
       <div class="max-w-3xl mx-auto grid grid-cols-4 divide-x divide-petrol/10">
         <div class="py-4 text-center">
@@ -160,11 +155,9 @@ tailwind.config = {
     <div class="max-w-3xl mx-auto px-4 sm:px-6">
       <h2 class="font-heading text-2xl sm:text-3xl text-petrol mb-8">Reiseplan</h2>
 
-      <!-- "I dag"-kort -->
       <div class="mb-8 rounded-xl overflow-hidden shadow-md border-2 border-sunshine/50"
            :class="todayStatus === 'during' ? 'bg-sunshine/10' : 'bg-white'">
         <div class="px-6 py-5">
-          <!-- For avreise -->
           <template x-if="todayStatus === 'before'">
             <div class="text-center">
               <p class="text-sm text-muted uppercase tracking-wider font-medium mb-1">Nedtelling</p>
@@ -172,7 +165,6 @@ tailwind.config = {
               <p class="text-sm text-charcoal/70 mt-1">til avreise fra Kongsberg</p>
             </div>
           </template>
-          <!-- Under tur -->
           <template x-if="todayStatus === 'during'">
             <div>
               <p class="text-xs text-sunshine font-semibold uppercase tracking-wider mb-2">I dag</p>
@@ -186,7 +178,6 @@ tailwind.config = {
               </div>
             </div>
           </template>
-          <!-- Etter tur -->
           <template x-if="todayStatus === 'after'">
             <div class="text-center">
               <p class="text-sm text-muted uppercase tracking-wider font-medium mb-1">Status</p>
@@ -197,11 +188,9 @@ tailwind.config = {
         </div>
       </div>
 
-      <!-- Stoppkort -->
       <div class="space-y-1">
         <template x-for="stop in stops" :key="stop.id">
           <div>
-            <!-- Kjøreetappe (mellom stopp) -->
             <div x-show="stop.driveFromPrevious && stop.driveFromPrevious.km > 0"
                  class="flex items-center gap-2 px-4 py-2 text-xs text-petrol/60">
               <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -214,9 +203,7 @@ tailwind.config = {
               <span class="hidden sm:inline truncate" x-text="stop.driveFromPrevious.route"></span>
             </div>
 
-            <!-- Stopp-kort -->
             <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-sand/50 transition-shadow hover:shadow-md">
-              <!-- Header (klikkbar) -->
               <div @click="expandedStop = expandedStop === stop.id ? null : stop.id"
                    class="w-full flex items-center gap-4 px-5 py-4 text-left transition-colors hover:bg-cream/50 cursor-pointer">
                 <div class="w-8 h-8 rounded-full bg-petrol text-white flex items-center justify-center text-sm font-bold flex-shrink-0"
@@ -246,7 +233,6 @@ tailwind.config = {
                 </div>
               </div>
 
-              <!-- Innhold (ekspanderbart) -->
               <div x-show="expandedStop === stop.id"
                    x-transition:enter="transition ease-out duration-200"
                    x-transition:enter-start="opacity-0 -translate-y-2"
@@ -256,7 +242,6 @@ tailwind.config = {
                    x-transition:leave-end="opacity-0"
                    class="border-t border-sand/50 px-5 py-4 space-y-4">
 
-                <!-- Camping-info -->
                 <template x-if="stop.camping">
                   <div class="px-3 py-2 bg-cream rounded-lg">
                     <p class="text-xs text-muted uppercase tracking-wider font-medium mb-1" x-text="stop.camping.label || 'Campingplass'"></p>
@@ -268,10 +253,8 @@ tailwind.config = {
                   </div>
                 </template>
 
-                <!-- Beskrivelse -->
                 <p class="text-sm text-charcoal/80" x-text="stop.description"></p>
 
-                <!-- Aktiviteter -->
                 <div>
                   <p class="text-xs text-muted uppercase tracking-wider font-medium mb-2">Aktiviteter</p>
                   <div class="space-y-2">
@@ -314,8 +297,7 @@ tailwind.config = {
                   </div>
                 </div>
 
-                <!-- Tips -->
-                <div x-show="stop.tips.length > 0">
+                <div x-show="stop.tips && stop.tips.length > 0">
                   <p class="text-xs text-muted uppercase tracking-wider font-medium mb-1.5">Tips</p>
                   <ul class="space-y-1">
                     <template x-for="tip in stop.tips" :key="tip">
@@ -338,7 +320,6 @@ tailwind.config = {
     <div class="max-w-3xl mx-auto px-4 sm:px-6">
       <h2 class="font-heading text-2xl sm:text-3xl text-petrol mb-8">Pakkelister</h2>
 
-      <!-- Tab-navigasjon -->
       <div class="flex flex-wrap gap-1 mb-6 bg-white rounded-xl p-1.5 border border-sand/50">
         <template x-for="tab in checklistTabs" :key="tab.id">
           <button @click="activeChecklist = tab.id"
@@ -348,34 +329,29 @@ tailwind.config = {
         </template>
       </div>
 
-      <!-- Sjekkliste-innhold -->
       <template x-for="tab in checklistTabs" :key="tab.id">
         <div x-show="activeChecklist === tab.id" x-transition.opacity>
 
-          <!-- Fremgangsindikator -->
           <div class="flex items-center gap-3 mb-4 px-1">
             <div class="flex-1 h-2 bg-sand/60 rounded-full overflow-hidden">
               <div class="h-full bg-success rounded-full transition-all duration-300"
                    :style="'width:' + checklistProgress(tab.id) + '%'"></div>
             </div>
             <span class="text-xs text-muted font-medium whitespace-nowrap"
-                  x-text="checklistDoneCount(tab.id) + ' av ' + checklists[tab.id].length + ' fullført'"></span>
+                  x-text="checklistDoneCount(tab.id) + ' av ' + checklists[tab.id].length + ' fullfort'"></span>
           </div>
 
-          <!-- Sjekkliste-items -->
           <div class="bg-white rounded-xl border border-sand/50 overflow-hidden divide-y divide-sand/30">
             <template x-for="(item, idx) in checklists[tab.id]" :key="idx">
               <div>
-                <!-- Kategori-header -->
                 <div x-show="idx === 0 || item.category !== checklists[tab.id][idx-1].category"
                      class="px-5 py-2.5 bg-cream/70 text-xs font-semibold text-petrol uppercase tracking-wider"
                      x-text="item.category"></div>
-                <!-- Item -->
                 <label class="flex items-center gap-3 px-5 py-3 cursor-pointer hover:bg-cream/30 transition-colors">
                   <input type="checkbox"
                          x-model="checklists[tab.id][idx].done"
                          @change="saveChecklists()"
-                         class="w-4.5 h-4.5 rounded border-muted/40 text-success focus:ring-success/30 cursor-pointer flex-shrink-0">
+                         class="w-4 h-4 rounded border-muted/40 text-success focus:ring-success/30 cursor-pointer flex-shrink-0">
                   <span class="text-sm transition-all"
                         :class="checklists[tab.id][idx].done ? 'line-through text-muted' : 'text-charcoal'"
                         x-text="item.label"></span>
@@ -384,7 +360,6 @@ tailwind.config = {
             </template>
           </div>
 
-          <!-- Nullstill-knapp -->
           <div class="mt-4 flex justify-end">
             <button @click="confirmReset = confirmReset === tab.id ? null : tab.id"
                     class="text-xs text-muted hover:text-red-500 transition-colors px-3 py-1.5 rounded-lg hover:bg-red-50">
@@ -404,7 +379,6 @@ tailwind.config = {
     <div class="max-w-3xl mx-auto px-4 sm:px-6">
       <h2 class="font-heading text-2xl sm:text-3xl text-petrol mb-8">Budsjett &amp; Praktisk</h2>
 
-      <!-- Budsjett-grid -->
       <h3 class="font-heading text-lg text-petrol mb-4">Estimert budsjett</h3>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
         <template x-for="item in budget" :key="item.category">
@@ -427,7 +401,6 @@ tailwind.config = {
         <span class="font-heading text-2xl" x-text="budgetTotal.toLocaleString('no-NO') + ' NOK'"></span>
       </div>
 
-      <!-- Valutatabell -->
       <h3 class="font-heading text-lg text-petrol mb-4">Valutakurser</h3>
       <div class="bg-white rounded-xl border border-sand/50 overflow-hidden mb-8">
         <table class="w-full text-sm">
@@ -438,4 +411,17 @@ tailwind.config = {
               <th class="text-right px-5 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">100 NOK =</th>
             </tr>
           </thead>
-          
+          <tbody class="divide-y divide-sand/30">
+            <template x-for="currency in currencies" :key="currency.code">
+              <tr class="hover:bg-cream/30 transition-colors">
+                <td class="px-5 py-3 font-medium" x-text="currency.name + ' (' + currency.code + ')'"></td>
+                <td class="px-5 py-3 text-right text-muted" x-text="currency.rate + ' NOK'"></td>
+                <td class="px-5 py-3 text-right font-semibold text-petrol" x-text="(100 / currency.rate).toFixed(2) + ' ' + currency.code"></td>
+              </tr>
+            </template>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="font-heading text-lg text-petrol mb-4">Praktisk informasjon</h3>
+      <div class="grid grid-cols-1 

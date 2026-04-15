@@ -284,15 +284,15 @@ Alle kjøretider er beregnet med campingvogn (ca. 80 km/t snitt).
 | Basteibroen (Basteibrücke) | Natur/utsiktspunkt | Must-do | Ikonisk steinbro 194 meter over Elben. Kort sti fra parkering (15–20 min). Hold godt i William — bratte stup! Gå tidlig. https://www.saechsische-schweiz.de/bastei-basteibruecke.html |
 | Festung Königstein | Festning/historie | Must-do | En av Europas største fjellfestninger. Kanoner, tunneler, utsikt. Halv dag. https://www.festung-koenigstein.de/ |
 | Kirnitzschtalbahn | Historisk trikk | Must-do | Historisk sporvogn fra Bad Schandau til Lichtenhainer Wasserfall. William vil elske trikketuren! https://www.ovps.de/kirnitzschtalbahn/ |
-| Dagstur: Kamenice Gorge (Tsjekkia) | Natur/båttur | Must-do | Vakker elvekløft i Böhmisk Sveits nasjonalpark (Böhmische Schweiz) på tsjekkisk side av grensen. Ca. 10–15 km fra Bad Schandau via grenseovergangen ved Hřensko. Båttur gjennom trange juv med opptil 30 m høye sandsteinsvegger på begge sider — dramatisk og stemningsfullt. Perfekt for hele familien inkludert William. Hřensko er en pittoresk liten grenseby ved Elben med fargerike hus. https://www.npbohemianswitzerlandpark.cz/ |
+| Dagstur: Kamenice Gorge (Tsjekkia) | Natur/båttur | Must-do | Vakker elvekløft i Böhmisk Sveits nasjonalpark (Böhmische Schweiz) på tsjekkisk side av grensen. Ca. 10–15 km fra Bad Schandau via grenseovergangen ved Hrensko. Båttur gjennom trange juv med opptil 30 m høye sandsteinsvegger på begge sider — dramatisk og stemningsfullt. Perfekt for hele familien inkludert William. Hrensko er en pittoresk liten grenseby ved Elben med fargerike hus. https://www.npbohemianswitzerlandpark.cz/ |
 | Amselsee i Rathen | Natur/båt | Nice-to-have | Rolig innsjøvandring med robåtutleie. https://www.saechsische-schweiz.de/amselsee-kurort-rathen.html |
 | Elbeskipsfart (hjuldampere) | Båtkjøring | Nice-to-have | Historiske hjuldampere på Elben. Fantastisk utsikt fra vannet. https://www.saechsische-dampfschiffahrt.de/ |
 | Pirna gammelby | By/kultur | Nice-to-have | Sjarmerende gammelby med fargerike hus. 15 min kjøring. Is og spasertur. https://www.pirna.de/tourismus |
-| MTB — Elbsandsteingebirge | Sport/friluft | Nice-to-have | Merkede MTB-ruter gjennom sandsteinlandskapet. Kirnitzschtal-dalen er en naturlig trasé langs elven. OBS: kun kjøring på merkede «Nationalpark Fahrradroute»-stier tillatt innenfor nasjonalparken. Krysser gjerne grensa til tsjekkisk side (Bohemian Switzerland) for mer terrengsykling. https://www.komoot.com/guide/2052/mtb-trails-around-bad-schandau |
+| MTB — Elbsandsteingebirge | Sport/friluft | Nice-to-have | Merkede MTB-ruter gjennom sandsteinlandskapet. Kirnitzschtal-dalen er en naturlig trasé langs elven. OBS: kun kjøring på merkede stier tillatt innenfor nasjonalparken. Krysser gjerne grensa til tsjekkisk side (Bohemian Switzerland) for mer terrengsykling. https://www.komoot.com/guide/2052/mtb-trails-around-bad-schandau |
 
 **Tips:**
 - Ingen Umweltzone i Bad Schandau (men Dresden har — unngå å kjøre inn i sentrum)
 - Gå til Bastei tidlig på morgenen for å unngå folkemengder
 - Bad Schandau har historisk personheis opp til utsiktspunkt
 - MTB: Sykkelutleie i Bad Schandau sentrum og Königstein — forhåndsbooking anbefales i juli
-- Kamenice Gorge: Kjør til Hřensko (ca. 15 min) og gå ned til båtutleien i kløften. Båtturene opereres av lokale båtmenn og er tilpasset alle aldre. Ta med kontanter (tsjekkiske kroner eller euro). Parkeringen i Hřen
+- Kamenice Gorge: Kjør til Hrensko (ca. 15 min) og gå ned til båtutleien i kløften. Båtturene opereres av lokale båtmenn og er tilpasset alle aldre. Ta med kontanter (tsjekkiske kroner eller euro). Parkeringen i Hrensko kan bli full tidlig om morgenen i høysesong — an
