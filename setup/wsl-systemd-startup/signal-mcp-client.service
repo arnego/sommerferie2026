@@ -1,0 +1,18 @@
+[Unit]
+Description=Signal MCP Client
+After=network.target signal-cli-rest-api.service
+Wants=signal-cli-rest-api.service
+
+[Service]
+Environment="ANTHROPIC_API_KEY=<your-key>"
+Environment="SIGNAL_PHONE_NUMBER=<your-phone-number>"
+Environment="SIGNAL_WS_BASE_URL=ws://localhost:8080"
+Environment="SIGNAL_HTTP_BASE_URL=http://localhost:8080"
+Environment="CLIENT_LOG_LEVEL=INFO"
+WorkingDirectory=<path-to>/signal-mcp-client
+ExecStart=<path-to>uv run signal_mcp_client/main.py --config config.json --session-save-dir <path-to>/signal-mcp-client/sessions --available-models claude-sonnet-4-6 claude-haiku-4-5 claude-opus-4-6 --default-model-name claude-sonnet-4-6 --default-system-prompt "You are a helpful assistant." --default-llm-chat-message-context-limit 50
+Restart=on-failure
+RestartSec=30
+
+[Install]
+WantedBy=default.target
