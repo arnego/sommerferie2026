@@ -49,7 +49,7 @@ av turen og reiserutene i nettformat.
 
 Familien: Ann Kristin (42), Arne (40) og William (5 år).
 Kjøretøy: Campingvogn Knaus Sport 400 LK, trukket av Land Rover Discovery 4.
-Rute: Kongsberg → Løkken Strand → Billund → Hamburg → Berlin → Bad Schandau → Warnemünde → København → DFDS-cruise til Oslo → Kongsberg.
+Rute: Kongsberg → Løkken → Silkeborg → Lübeck → Billund → Berlin → Bad Schandau → Møns Klint → København → Go Nordic Cruiseline til Oslo → Kongsberg.
 Publisert på: https://arnego.github.io/sommerferie2026/
 """
 
@@ -139,7 +139,7 @@ def git_push(commit_message: str, files: list[str]) -> tuple[bool, str]:
 
 # ── CLAUDE-KALL ───────────────────────────────────────────────────
 
-def call_claude(system: str, user: str, max_tokens: int = 8000) -> str:
+def call_claude(system: str, user: str, max_tokens: int = 32000) -> str:
     client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
     response = client.messages.create(
         model=MODEL,
@@ -286,12 +286,18 @@ async def call_tool(name: str, arguments: dict) -> list[types.TextContent]:
             current_html = read_file(INDEX_FILE)
             updated_html = update_html_with_claude(instruction, updated_spec, current_html)
 
-            if not updated_html.strip().startswith("<!"):
+            stripped_html = updated_html.strip()
+            if not stripped_html.startswith("<!") or not stripped_html.endswith("</html>"):
                 # Rull tilbake spec-endringen
                 write_file(FERIEPLAN_FILE, current_spec)
+                tail = stripped_html[-120:] if len(stripped_html) > 120 else stripped_html
                 return [types.TextContent(
                     type="text",
-                    text="Feil: Fikk ikke gyldig HTML tilbake. Spec-endringen er rullet tilbake."
+                    text=(
+                        f"Feil: Fikk ikke komplett HTML tilbake (trolig avkuttet av max_tokens).\n"
+                        f"Generert: {len(stripped_html)} tegn. Siste 120 tegn: ...{tail}\n"
+                        f"Spec-endringen er rullet tilbake."
+                    )
                 )]
 
             write_file(INDEX_FILE, updated_html)
