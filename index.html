@@ -136,7 +136,7 @@ tailwind.config = {
           <span class="text-[10px] sm:text-xs uppercase tracking-wider font-medium opacity-80">Land</span>
         </div>
         <div class="py-4 text-center">
-          <span class="font-heading text-2xl sm:text-3xl font-bold block">~1 870</span>
+          <span class="font-heading text-2xl sm:text-3xl font-bold block">~2 150</span>
           <span class="text-[10px] sm:text-xs uppercase tracking-wider font-medium opacity-80">Km</span>
         </div>
         <div class="py-4 text-center">
@@ -366,7 +366,7 @@ tailwind.config = {
           <div class="bg-white rounded-xl border border-sand/50 overflow-hidden divide-y divide-sand/30">
             <template x-for="(item, idx) in checklists[tab.id]" :key="idx">
               <div>
-                <!-- Kategori-header (vises kun ved forste item i ny kategori) -->
+                <!-- Kategori-header -->
                 <div x-show="idx === 0 || item.category !== checklists[tab.id][idx-1].category"
                      class="px-5 py-2.5 bg-cream/70 text-xs font-semibold text-petrol uppercase tracking-wider"
                      x-text="item.category"></div>
@@ -402,7 +402,7 @@ tailwind.config = {
   <!-- ===== SEKSJON: BUDSJETT & PRAKTISK ===== -->
   <section id="budsjett" class="py-12 sm:py-16 bg-sand/30">
     <div class="max-w-3xl mx-auto px-4 sm:px-6">
-      <h2 class="font-heading text-2xl sm:text-3xl text-petrol mb-8">Budsjett & Praktisk</h2>
+      <h2 class="font-heading text-2xl sm:text-3xl text-petrol mb-8">Budsjett &amp; Praktisk</h2>
 
       <!-- Budsjett-grid -->
       <h3 class="font-heading text-lg text-petrol mb-4">Estimert budsjett</h3>
@@ -436,3 +436,6 @@ tailwind.config = {
               <th class="text-left px-5 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Valuta</th>
               <th class="text-right px-5 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Kurs</th>
               <th class="text-right px-5 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">100 NOK =</th>
+            </tr>
+          </thead>
+          
