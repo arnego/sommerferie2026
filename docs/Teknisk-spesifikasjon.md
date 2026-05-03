@@ -66,14 +66,35 @@ Referanseinformasjon som er nyttig underveis:
 - Fartsbegrensninger med henger per land
 - Campingplass-regler og sjekk-inn/ut-tider
 
+### 2.6 Værvarsel
+Værvarsel for hvert overnattingssted, hentet ved sideåpning fra **Open-Meteo** (`https://api.open-meteo.com/v1/forecast`) — gratis, krever ingen API-nøkkel, full CORS-støtte og dekker hele ruten (DK/DE/NO).
+
+**Tre visningssteder:**
+1. **Kart-popup** — når man klikker en stopp-markør vises en kompakt rad med ett værsymbol per overnattingsdag (basert på prognose kl. 12:00).
+2. **Reiseplan, kollapset bar** — samme kompakte rad under datolinjen i den klikkbare overskriften.
+3. **Reiseplan, utvidet detaljvisning** — egen «Værvarsel»-seksjon med tabell: én rad per overnattingsdag, kolonner for dato/ukedag og symbol for kl. 09 / 12 / 15 / 18 / 21.
+
+**Manglende data:** Hvis forecast er utilgjengelig for et tidspunkt (utenfor prognosehorisont, nettverksfeil osv.), vises et diskret «ikke tilgjengelig»-symbol (kort vannrett strek). Den kompakte raden i popup og kollapset bar skjules helt når ingen data er tilgjengelig for stoppet (unngå støy av kun streker); tabellen vises alltid og fyller cellene med streker der data mangler.
+
+**Ikoner:** Inline SVG i samme flate stil som øvrige ikoner i fila — ingen ekstern ikonpakke. 10 kategorier dekker WMO weather interpretation codes: klart, stort sett klart, delvis skyet, overskyet, tåke, yr, regn, snø, tordenvær, ikke tilgjengelig. Sol-elementer i `#F4A621` (sunshine), nedbør/sky-elementer i `#1B4F72` (petrol) eller `#607080` (muted).
+
+**Hentestrategi:**
+- Henting skjer ved sideåpning. Resultater lagres i `localStorage` (nøkkel `sommerferie2026-weather`) med 1 times TTL — ny henting kun hvis cache er eldre.
+- Open-Meteo støtter prognose ~16 dager fram. Stopp som ligger lengre fram enn dette hopper over fetch-kallet (returnerer tom dataliste); cellene viser «ikke tilgjengelig» til turen nærmer seg.
+- Ved nettverksfeil eller API-feil brukes eventuell eldre cache uavhengig av alder. Hvis ingen cache finnes, vises «ikke tilgjengelig» overalt. Ingen feilmelding vises til bruker.
+
+**Mock-modus:** En `weatherMock`-flagg på Alpine-komponenten kan settes til `true` for å bygge deterministisk mock-data som dekker alle 10 visningskategorier — brukes ved utvikling/UI-verifisering uten å treffe API-et.
+
+**Kreditering:** Datakilde nevnes diskret i tabellseksjonen («Værdata: Open-Meteo»).
+
 ---
 
 ## 3. Innholdsstruktur (Informasjonsarkitektur)
 
 Toppmeny med fire seksjoner i rekkefølge:
 
-1. **Kart** — interaktivt rutekart (Leaflet + OpenStreetMap) med markører for alle stopp. Klikk på markør gir info-popup. GPS-posisjon vises på kartet.
-2. **Reiseplan** — dag/uke-plan der dagens plan fremheves basert på enhetens dato. Ukevis visning med etapper, kjøretid/avstand, aktiviteter og campingplass per uke.
+1. **Kart** — interaktivt rutekart (Leaflet + OpenStreetMap) med markører for alle stopp. Klikk på markør gir info-popup med kompakt værstrip per dag. GPS-posisjon vises på kartet.
+2. **Reiseplan** — dag/uke-plan der dagens plan fremheves basert på enhetens dato. Ukevis visning med etapper, kjøretid/avstand, aktiviteter, campingplass og værvarsel (kompakt strip i kollapset bar, full tabell i utvidet visning).
 3. **Pakkelister** — fire sjekklister (pakking, campingvogn, før avreise, daglig). Avkryssinger lagres i localStorage. Nullstill-knapp per liste.
 4. **Budsjett & Praktisk** — kostnadsestimater per kategori, valutatabell (NOK → EUR/DKK/CZK) med Big Mac Index, fartsgrenser med henger, nødnumre, bompenger/vignetter, miljøsoner.
 
@@ -166,6 +187,7 @@ Lenker til eksempler på nettsider som har en stil vi liker:
 ### 6.2 Teknologivalg
 - **Stack:** Ren HTML-fil med CDN-baserte biblioteker — ingen build-steg, ingen npm
 - **Kart:** Leaflet.js + OpenStreetMap — gratis, ingen API-nøkkel nødvendig
+- **Værvarsel:** Open-Meteo (`api.open-meteo.com`) — gratis, ingen API-nøkkel, full CORS, opptil 16-dagers prognose
 - **CSS-rammeverk:** Tailwind CSS via CDN (play-cdn)
 - **Reaktivitet:** Alpine.js via CDN — trekkspill, tabs, sjekklister, mobilmeny
 - **Fonter:** Google Fonts via CDN (Playfair Display + Inter)
@@ -241,7 +263,6 @@ Her kan vi legge idéer som kan vurderes senere, men som foreløpig ikke skal in
 
 - **Offline-støtte** — service worker / PWA for bruk uten internett underveis
 - **Eksport/import av sjekklistestatus** — manuell synkronisering mellom enheter (f.eks. JSON-fil)
-- **Værvarsel-widget** — automatisk værvarsel for neste destinasjon
 
 ---
 
@@ -249,6 +270,7 @@ Her kan vi legge idéer som kan vurderes senere, men som foreløpig ikke skal in
 
 | Dato | Endring | Av |
 | --- | --- | --- |
+| 2026-05-03 | §2.6 Værvarsel lagt til. Open-Meteo (gratis, ingen API-nøkkel) henter prognose ved sideåpning og cacher 1 time i localStorage. Tre visningssteder: kart-popup, kollapset Reiseplan-bar (kompakt strip med ett midday-symbol per dag) og utvidet detaljvisning (tabell med 5 tidspunkt per dag). Inline SVG-ikoner i 10 kategorier inkl. «ikke tilgjengelig». «Værvarsel-widget» fjernet fra §8 Fremtidige muligheter. | Claude |
 | 2026-04-09 | Dokumentet opprettet — struktur og tomme seksjoner | Claude + Arne |
 | 2026-04-10 | Teknologivalg, navigasjonsstruktur, designprinsipper, sjekkliste-strategi avklart via intervju | Claude + Arne |
 | 2026-04-14 | København campingplass byttet til DCU-Camping København - Absalon, Korsdalsvej 132, Rødovre | Claude |

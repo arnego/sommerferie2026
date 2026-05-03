@@ -225,6 +225,10 @@ tailwind.config = {
                   <h3 class="font-semibold text-sm sm:text-base text-charcoal" x-text="stop.name"></h3>
                   <p class="text-xs text-muted mt-0.5"
                      x-text="stop.isHome ? formatDate(stop.arrivalDate) + ' \u00b7 Hjemme\u0021' : formatDate(stop.arrivalDate) + ' \u2013 ' + formatDate(stop.departureDate) + ' \u00b7 ' + stop.nights + (stop.nights === 1 ? ' natt' : ' netter')"></p>
+                  <div x-show="!stop.isHome && hasAnyForecast(stop.id)"
+                       class="flex flex-wrap items-center gap-1 mt-1.5"
+                       :aria-label="'Værvarsel kl. 12 for ' + stop.name"
+                       x-html="dayStripHtml(stop, 18)"></div>
                 </div>
                 <div class="flex items-center gap-2 flex-shrink-0">
                   <span class="text-xs font-medium text-muted hidden sm:inline" x-text="stop.countryCode"></span>
@@ -312,6 +316,34 @@ tailwind.config = {
                       </div>
                     </template>
                   </div>
+                </div>
+
+                <!-- Værvarsel -->
+                <div x-show="!stop.isHome && weather[stop.id]">
+                  <p class="text-xs text-muted uppercase tracking-wider font-medium mb-2">Værvarsel</p>
+                  <div class="overflow-x-auto -mx-1">
+                    <table class="w-full text-xs border-collapse">
+                      <thead>
+                        <tr class="text-muted border-b border-sand/50">
+                          <th class="text-left py-1.5 px-2 font-medium">Dato</th>
+                          <template x-for="h in weatherHours" :key="h">
+                            <th class="text-center py-1.5 px-1 font-medium" x-text="h + ':00'"></th>
+                          </template>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <template x-for="date in datesForStop(stop)" :key="date">
+                          <tr class="border-b border-sand/30 last:border-b-0">
+                            <td class="py-1.5 px-2 text-charcoal/80 whitespace-nowrap" x-text="formatDateWithWeekday(date)"></td>
+                            <template x-for="h in weatherHours" :key="h">
+                              <td class="py-1 px-1 text-center" x-html="weatherIconSvg(getHourCode(stop.id, date, h), 26)"></td>
+                            </template>
+                          </tr>
+                        </template>
+                      </tbody>
+                    </table>
+                  </div>
+                  <p class="text-[10px] text-muted/70 mt-1.5">Værdata: Open-Meteo (oppdatert ved sideåpning)</p>
                 </div>
 
                 <!-- Tips -->
@@ -844,6 +876,286 @@ function ferieApp() {
       return `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(mapsQuery)}&travelmode=driving`;
     },
 
+    // ===== VÆRVARSEL =====
+    weather: {},
+    weatherMock: false,
+    weatherTtlMs: 60 * 60 * 1000,
+    weatherStorageKey: 'sommerferie2026-weather',
+    weatherHours: ['09', '12', '15', '18', '21'],
+
+    datesForStop(stop) {
+      // Overnattingsdager: arrivalDate t.o.m. departureDate - 1
+      const out = [];
+      if (!stop || !stop.arrivalDate) return out;
+      const start = new Date(stop.arrivalDate + 'T00:00:00');
+      const end = stop.departureDate
+        ? new Date(stop.departureDate + 'T00:00:00')
+        : new Date(stop.arrivalDate + 'T00:00:00');
+      const last = stop.departureDate ? end : new Date(start.getTime() + 24*3600*1000);
+      const pad = n => String(n).padStart(2, '0');
+      for (let d = new Date(start); d < last; d.setDate(d.getDate() + 1)) {
+        out.push(`${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`);
+      }
+      return out;
+    },
+
+    formatDateWithWeekday(dateStr) {
+      const d = new Date(dateStr + 'T00:00:00');
+      const wd = ['søn','man','tir','ons','tor','fre','lør'][d.getDay()];
+      return `${d.getDate()}. ${['jan','feb','mar','apr','mai','jun','jul','aug','sep','okt','nov','des'][d.getMonth()]} (${wd})`;
+    },
+
+    weatherCodeCategory(code) {
+      if (code === null || code === undefined || Number.isNaN(code)) return 'na';
+      if (code === 0) return 'sun';
+      if (code === 1) return 'sun-cloud';
+      if (code === 2) return 'sun-behind-cloud';
+      if (code === 3) return 'cloud';
+      if (code === 45 || code === 48) return 'fog';
+      if ([51,53,55,56,57].includes(code)) return 'drizzle';
+      if ([61,63,65,66,67,80,81,82].includes(code)) return 'rain';
+      if ([71,73,75,77,85,86].includes(code)) return 'snow';
+      if ([95,96,99].includes(code)) return 'thunder';
+      return 'na';
+    },
+
+    weatherIconSvg(code, px) {
+      const cat = this.weatherCodeCategory(code);
+      const size = px || 20;
+      const titleMap = {
+        'sun': 'Klart', 'sun-cloud': 'Stort sett klart', 'sun-behind-cloud': 'Delvis skyet',
+        'cloud': 'Overskyet', 'fog': 'Tåke', 'drizzle': 'Yr',
+        'rain': 'Regn', 'snow': 'Snø', 'thunder': 'Tordenvær', 'na': 'Ikke tilgjengelig',
+      };
+      const title = titleMap[cat] || '';
+      const inner = {
+        'sun': `<circle cx="12" cy="12" r="4.5" fill="#F4A621"/>`
+             + `<g stroke="#F4A621" stroke-width="2" stroke-linecap="round">`
+             + `<path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5 5l1.4 1.4M17.6 17.6L19 19M5 19l1.4-1.4M17.6 6.4L19 5"/></g>`,
+        'sun-cloud': `<circle cx="9" cy="9" r="3.2" fill="#F4A621"/>`
+             + `<g stroke="#F4A621" stroke-width="1.5" stroke-linecap="round">`
+             + `<path d="M9 2v1.4M2.4 9h1.4M4.4 4.4l1 1M13.6 4.4l-1 1M4.4 13.6l1-1"/></g>`
+             + `<path d="M11 19a3.5 3.5 0 013.3-3.5 3.7 3.7 0 017.2 1.2A2.6 2.6 0 0119 21h-5.5A2.5 2.5 0 0111 19z" fill="#1B4F72"/>`,
+        'sun-behind-cloud': `<circle cx="8" cy="8" r="3" fill="#F4A621"/>`
+             + `<g stroke="#F4A621" stroke-width="1.4" stroke-linecap="round">`
+             + `<path d="M8 1.5v1.4M1.5 8h1.4M3.5 3.5l1 1M12.5 3.5l-1 1"/></g>`
+             + `<path d="M7 18a4 4 0 014-4 4.2 4.2 0 018.2 1.2A2.8 2.8 0 0117 20H9.5A2.6 2.6 0 017 18z" fill="#1B4F72"/>`,
+        'cloud': `<path d="M6 18a4.2 4.2 0 014-4.2 4.5 4.5 0 018.7 1.4A3 3 0 0117 20H8.5A2.7 2.7 0 016 18z" fill="#607080"/>`
+             + `<path d="M4 13.5a3.5 3.5 0 013.4-3.5 3.8 3.8 0 017.3 1.1" fill="none" stroke="#607080" stroke-width="1.4" stroke-linecap="round"/>`,
+        'fog': `<path d="M6 14a4.2 4.2 0 014-4.2 4.5 4.5 0 018.7 1.4A3 3 0 0117 16H8.5A2.7 2.7 0 016 14z" fill="#607080"/>`
+             + `<g stroke="#607080" stroke-width="1.5" stroke-linecap="round">`
+             + `<path d="M3 19h18M5 22h14"/></g>`,
+        'drizzle': `<path d="M6 13a4.2 4.2 0 014-4.2 4.5 4.5 0 018.7 1.4A3 3 0 0117 15H8.5A2.7 2.7 0 016 13z" fill="#1B4F72"/>`
+             + `<g stroke="#1B4F72" stroke-width="1.6" stroke-linecap="round">`
+             + `<path d="M9 18l-1 2.5M13 18l-1 2.5M17 18l-1 2.5"/></g>`,
+        'rain': `<path d="M6 12a4.2 4.2 0 014-4.2 4.5 4.5 0 018.7 1.4A3 3 0 0117 14H8.5A2.7 2.7 0 016 12z" fill="#1B4F72"/>`
+             + `<g stroke="#1B4F72" stroke-width="2" stroke-linecap="round">`
+             + `<path d="M9 17l-1.5 4M13 17l-1.5 4M17 17l-1.5 4"/></g>`,
+        'snow': `<path d="M6 12a4.2 4.2 0 014-4.2 4.5 4.5 0 018.7 1.4A3 3 0 0117 14H8.5A2.7 2.7 0 016 12z" fill="#607080"/>`
+             + `<g stroke="#1B4F72" stroke-width="1.4" stroke-linecap="round">`
+             + `<path d="M9 17v4M7.3 18l3.4 2M7.3 20l3.4-2"/>`
+             + `<path d="M16 17v4M14.3 18l3.4 2M14.3 20l3.4-2"/></g>`,
+        'thunder': `<path d="M6 12a4.2 4.2 0 014-4.2 4.5 4.5 0 018.7 1.4A3 3 0 0117 14H8.5A2.7 2.7 0 016 12z" fill="#607080"/>`
+             + `<path d="M12 14l-2.5 4.5h2.5L11 22l3.5-5h-2.5L13 14z" fill="#F4A621" stroke="#F4A621" stroke-width="0.5" stroke-linejoin="round"/>`,
+        'na': `<line x1="6" y1="12" x2="18" y2="12" stroke="#607080" stroke-width="2" stroke-linecap="round" opacity="0.5"/>`,
+      };
+      return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="${size}" height="${size}" style="display:inline-block;vertical-align:middle;flex-shrink:0;" role="img" aria-label="${title}"><title>${title}</title>${inner[cat]}</svg>`;
+    },
+
+    getHourCode(stopId, dateStr, hour) {
+      const w = this.weather[stopId];
+      if (!w || !w.days) return null;
+      const day = w.days.find(d => d.date === dateStr);
+      if (!day) return null;
+      const v = day.hours[hour];
+      return (v === null || v === undefined) ? null : v;
+    },
+
+    getMiddayCode(stopId, dateStr) {
+      return this.getHourCode(stopId, dateStr, '12');
+    },
+
+    dayStripHtml(stop, px) {
+      const dates = this.datesForStop(stop);
+      if (dates.length === 0) return '';
+      return dates.map(d => this.weatherIconSvg(this.getMiddayCode(stop.id, d), px || 18)).join('');
+    },
+
+    hasAnyForecast(stopId) {
+      const w = this.weather[stopId];
+      if (!w || !w.days || w.days.length === 0) return false;
+      return w.days.some(day => Object.values(day.hours).some(v => v !== null && v !== undefined));
+    },
+
+    buildMockWeather() {
+      // Deterministisk mock som dekker alle 10 visningskategorier
+      const samplePatterns = [
+        // [09, 12, 15, 18, 21]
+        [0, 0, 1, 2, 3],          // Klar dag, blir gradvis skyet
+        [3, 61, 63, 80, 3],       // Regnvær
+        [2, 2, 1, 0, 0],          // Klarner opp
+        [45, 3, 3, 51, 51],       // Tåke morgen, yr kveld
+        [3, 95, 80, 3, 1],        // Tordenvær midt på dagen
+        [null, 71, 73, null, null], // Snø + manglende data (n/a)
+        [0, 1, 2, 3, 3],          // Solrik morgen, skyet kveld
+        [1, 0, 0, 1, 2],          // Sol hele dagen
+      ];
+      const out = {};
+      this.stops.forEach((stop, idx) => {
+        if (stop.isHome) return;
+        const dates = this.datesForStop(stop);
+        out[stop.id] = {
+          fetchedAt: Date.now(),
+          days: dates.map((date, di) => {
+            const pattern = samplePatterns[(idx + di) % samplePatterns.length];
+            return {
+              date,
+              hours: {
+                '09': pattern[0],
+                '12': pattern[1],
+                '15': pattern[2],
+                '18': pattern[3],
+                '21': pattern[4],
+              },
+            };
+          }),
+        };
+      });
+      return out;
+    },
+
+    async fetchWeatherForAllStops() {
+      const out = {};
+      const targets = this.stops.filter(s => !s.isHome && s.lat && s.lng);
+      const results = await Promise.allSettled(
+        targets.map(stop => this.fetchWeatherForStop(stop))
+      );
+      results.forEach((res, i) => {
+        const stop = targets[i];
+        if (res.status === 'fulfilled' && res.value) {
+          out[stop.id] = res.value;
+        } else {
+          console.warn('Værdata feilet for', stop.name, res.reason);
+          out[stop.id] = { fetchedAt: Date.now(), days: [] };
+        }
+      });
+      return out;
+    },
+
+    async fetchWeatherForStop(stop) {
+      const dates = this.datesForStop(stop);
+      if (dates.length === 0) return { fetchedAt: Date.now(), days: [] };
+
+      // Open-Meteo støtter prognose ~16 dager fram. Hopp over kall som ligger utenfor.
+      const now = new Date();
+      const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+      const horizonEnd = new Date(today.getTime() + 16 * 86400000);
+      const stopStart = new Date(dates[0] + 'T00:00:00');
+      const stopEnd = new Date(dates[dates.length - 1] + 'T00:00:00');
+      if (stopStart > horizonEnd) {
+        return { fetchedAt: Date.now(), days: [] };
+      }
+      const pad = n => String(n).padStart(2, '0');
+      const fmt = d => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+      const startDate = stopStart < today ? fmt(today) : fmt(stopStart);
+      const endDate = stopEnd > horizonEnd ? fmt(horizonEnd) : fmt(stopEnd);
+
+      const url = new URL('https://api.open-meteo.com/v1/forecast');
+      url.searchParams.set('latitude', stop.lat);
+      url.searchParams.set('longitude', stop.lng);
+      url.searchParams.set('hourly', 'weathercode');
+      url.searchParams.set('timezone', 'auto');
+      url.searchParams.set('start_date', startDate);
+      url.searchParams.set('end_date', endDate);
+
+      const res = await fetch(url.toString());
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const json = await res.json();
+      const times = (json.hourly && json.hourly.time) || [];
+      const codes = (json.hourly && json.hourly.weathercode) || [];
+
+      const byDate = {};
+      dates.forEach(d => {
+        byDate[d] = { date: d, hours: { '09': null, '12': null, '15': null, '18': null, '21': null } };
+      });
+      times.forEach((t, i) => {
+        const date = t.slice(0, 10);
+        const hour = t.slice(11, 13);
+        if (byDate[date] && this.weatherHours.includes(hour)) {
+          byDate[date].hours[hour] = codes[i];
+        }
+      });
+      return { fetchedAt: Date.now(), days: dates.map(d => byDate[d]) };
+    },
+
+    saveWeatherCache(data) {
+      try {
+        localStorage.setItem(this.weatherStorageKey, JSON.stringify({
+          fetchedAt: Date.now(), data,
+        }));
+      } catch (e) { /* ignorer kvotefeil */ }
+    },
+
+    loadWeatherCache() {
+      try {
+        const raw = localStorage.getItem(this.weatherStorageKey);
+        if (!raw) return null;
+        return JSON.parse(raw);
+      } catch (e) { return null; }
+    },
+
+    async loadWeather() {
+      if (this.weatherMock) {
+        this.weather = this.buildMockWeather();
+        return;
+      }
+      const cached = this.loadWeatherCache();
+      const fresh = cached && (Date.now() - cached.fetchedAt) < this.weatherTtlMs;
+      if (fresh) {
+        this.weather = cached.data;
+        return;
+      }
+      try {
+        const data = await this.fetchWeatherForAllStops();
+        this.weather = data;
+        this.saveWeatherCache(data);
+        // Oppdater popups så strip vises uten reload
+        this.refreshMapPopups();
+      } catch (e) {
+        console.warn('Værhenting feilet, bruker eventuell gammel cache', e);
+        if (cached) this.weather = cached.data;
+      }
+    },
+
+    refreshMapPopups() {
+      // Re-bind popup-innhold etter at vær-data er lastet
+      if (!this.map || !this._stopMarkers) return;
+      this._stopMarkers.forEach(({ marker, stop }) => {
+        marker.setPopupContent(this.buildStopPopupHtml(stop));
+      });
+    },
+
+    buildStopPopupHtml(stop) {
+      const campingLink = stop.camping
+        ? (stop.camping.url
+          ? `<a href="${stop.camping.url}" target="_blank" rel="noopener" style="color:#1B4F72;">${stop.camping.name}</a>`
+          : stop.camping.name)
+        : '';
+      const dateInfo = stop.departureDate
+        ? `${stop.arrivalDate.slice(5)} - ${stop.departureDate.slice(5)} &middot; ${stop.nights} netter`
+        : stop.arrivalDate.slice(5);
+      const strip = this.hasAnyForecast(stop.id)
+        ? `<div style="display:flex;flex-wrap:wrap;gap:3px;margin:4px 0 2px;">${this.dayStripHtml(stop, 18)}</div>`
+        : '';
+      return `
+        <strong>${stop.name}</strong> (${stop.countryCode})<br>
+        ${dateInfo}
+        ${strip}
+        <small>${campingLink}</small><br>
+        <small style="color:#666;">${stop.description.substring(0, 100)}...</small>
+      `;
+    },
+
     // Sentral datastruktur: stops
     stops: [
       {
@@ -1229,6 +1541,9 @@ function ferieApp() {
       // Last sjekklister fra localStorage
       this.loadChecklists();
 
+      // Last værvarsel (cache eller fetch)
+      this.loadWeather();
+
       // Initialiser kartet etter DOM er klar
       this.$nextTick(() => {
         this.initMap();
@@ -1263,6 +1578,7 @@ function ferieApp() {
 
       // Stoppmarkører
       const allPoints = [];
+      this._stopMarkers = [];
 
       // Kongsberg (start/slutt)
       const homeIcon = L.divIcon({
@@ -1286,24 +1602,10 @@ function ferieApp() {
             iconAnchor: [14, 14],
           });
 
-          const campingLink = stop.camping
-            ? (stop.camping.url
-              ? `<a href="${stop.camping.url}" target="_blank" rel="noopener" style="color:#1B4F72;">${stop.camping.name}</a>`
-              : stop.camping.name)
-            : '';
-
-          const dateInfo = stop.departureDate
-            ? `${stop.arrivalDate.slice(5)} - ${stop.departureDate.slice(5)} &middot; ${stop.nights} netter`
-            : stop.arrivalDate.slice(5);
-
-          L.marker([stop.lat, stop.lng], { icon })
+          const marker = L.marker([stop.lat, stop.lng], { icon })
             .addTo(this.map)
-            .bindPopup(`
-              <strong>${stop.name}</strong> (${stop.countryCode})<br>
-              ${dateInfo}<br>
-              <small>${campingLink}</small><br>
-              <small style="color:#666;">${stop.description.substring(0, 100)}...</small>
-            `);
+            .bindPopup(this.buildStopPopupHtml(stop));
+          this._stopMarkers.push({ marker, stop });
         }
         allPoints.push([stop.lat, stop.lng]);
       });
