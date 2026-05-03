@@ -49,10 +49,9 @@ William er 5 år og er en viktig del av planleggingen:
 | — | Brno, Tsjekkia (transit) | CZ | 11. juli | 12. juli | 1* | 28 |
 | — | Graz, Østerrike (transit) | AT | 12. juli | 13. juli | 1* | 28 |
 | 3 | Plitvice Lakes NP | HR | 13. juli | 16. juli | 3 | 29 |
-| 4 | Šibenik / Krka NP | HR | 16. juli | 19. juli | 3 | 30 |
-| 5 | Split / Trogir | HR | 19. juli | 24. juli | 5 | 30 |
-| 6 | Poreč / Rovinj, Istria | HR | 24. juli | 28. juli | 4 | 30/31 |
-| — | Zugspitze / Garmisch-Partenkirchen | DE | 28. juli | 30. juli | 2 | 31 |
+| 4 | Split | HR | 16. juli | 23. juli | 7 | 29/30 |
+| 5 | Poreč / Rovinj, Istria | HR | 23. juli | 27. juli | 4 | 30 |
+| — | Zugspitze / Garmisch-Partenkirchen | DE | 27. juli | 30. juli | 3 | 31 |
 | — | Bamberg | DE | 30. juli | 31. juli | 1* | 31 |
 | — | Lübeck | DE | 31. juli | 1. aug | 1* | 31 |
 | — | Hirtshals → Larvik (Color Line ferge) | DK/NO | 1. aug | 1. aug | — | 31 |
@@ -60,7 +59,7 @@ William er 5 år og er en viktig del av planleggingen:
 
 *Kortstopp — unntak fra 3-netter-regelen (transit eller prioritert destinasjon).
 
-**Totalt:** 28 netter borte — 15 i Kroatia, 6 i Berlin/Bad Schandau, 6 transittnetter, 1 fergenatt. Hjemme 1. august (innenfor «senest 1. august»-grensen).
+**Totalt:** 28 netter borte — 14 i Kroatia, 6 i Berlin/Bad Schandau, 6 transittnetter, 1 fergenatt, 1 ekstra natt Zugspitze. Hjemme 1. august (innenfor «senest 1. august»-grensen).
 
 ---
 
@@ -75,8 +74,7 @@ William er 5 år og er en viktig del av planleggingen:
 | Bad Schandau | Brno | 385 km | 4 t 30 min | E55/D8 sør → Prague-ring → D1/E50 øst mot Brno |
 | Brno | Graz | 330 km | 3 t 20 min | D1/E65 sørøst → Wien beltevei → A2/E59 sørøst mot Graz |
 | Graz | Plitvice Lakes | 320 km | 3 t 30 min | A9/E57 sør → Spielfeld/Šentilj grense → A1 Slovenia (Ljubljana) → A1 Kroatia → D429 → D1 inn mot nasjonalparken |
-| Plitvice | Šibenik | 185 km | 2 t 19 min | D1/D33 sørover mot kysten |
-| Šibenik | Split | 86 km | 1 t 04 min | D8 Jadranska magistrala sør |
+| Plitvice | Split | 271 km | 3 t 30 min | D1/D33 sørover mot kysten → D8 Jadranska magistrala sør |
 | Split | Poreč/Rovinj (via Rijeka) | 310 km | 3 t 30 min | A1 nord → Rijeka → Y-motorvei vest mot Istria |
 | Poreč/Rovinj | Zugspitze/Garmisch | 570 km | 6 t 30 min | A9/E751 nord → Ljubljana → Karawanken → A10 Tauern → **stopp Liechtensteinklamm** (Werfen/St. Johann im Pongau) → Salzburg → A8 øst → A95 sør. Lang dag — tidlig start. |
 | Zugspitze/Garmisch | Bamberg | 315 km | 3 t 15 min | A95/A8 nord → München → A9 nord → A73 mot Bamberg |
@@ -194,11 +192,10 @@ Alle kjøretider er beregnet med campingvogn (ca. 80–90 km/t snitt på motorve
 
 **Kjøring:** Graz → Plitvice Lakes, 320 km, 3 t 30 min via A9/E57 sør → Spielfeld/Šentilj grense → A1 Slovenia (Ljubljana) → A1 Kroatia → D429 → D1 inn mot nasjonalparken. Slovenisk vignett brukes her.
 
-**Anbefalt campingplass: Camp Korana**
-- Adresse: Korana bb, 47246 Drežnik Grad (Slunj), Kroatia — 6 km fra Plitvice inngang 1
-- Nettside: https://np-plitvicka-jezera.hr/en/plan-your-visit/hotels-and-camps/camp-korana/
-- Fasiliteter: 35 hektar i elvegorge langs Korana-elva, egnet for campingvogn, strømtilkobling, restaurant, stille og autentisk naturomgivelse
-- Alternativ: Camping Plitvice (3 km fra inngangen, 5-stjerns med bassenger): https://campingplitvice.hr/
+**Campingplass: Camping Plitvice**
+- Adresse: Mukinje, 53231 Plitvička Jezera, Kroatia — 3 km fra Plitvice inngang
+- Nettside: https://campingplitvice.hr/
+- Fasiliteter: 5-stjerns resort med 2 bassenger inkl. barnerutsjebane, kajakkutleie, e-sykkelutleie, restaurant, moderne sanitæranlegg
 - Booket: Nei
 - Bookingref: —
 
@@ -208,7 +205,7 @@ Alle kjøretider er beregnet med campingvogn (ca. 80–90 km/t snitt på motorve
 |-----------|------|-----------|-------------|
 | Store runde (Rute C/K) | Natur/UNESCO | Must-do | De 16 sjøene med Veliki Slap (78 m — Kroatias høyeste foss). Elektrisk båttur over Kozjak-sjøen. Spektakulære trebroer over fossene. UNESCO-verdensarv. Bestill billett online! https://np-plitvicka-jezera.hr |
 | Galovačke bukara-fossefall | Natur | Must-do | Spektakulær serie med turkisblå fosser i øvre innsjøsystem. Nær inngang 1. https://np-plitvicka-jezera.hr |
-| Rastoke, Slunj | Natur/kultur | Must-do | «Lille Plitvice» — pittoresk landsby der Slunjčica-elva renner som fosser mellom husene. 6 km fra Camp Korana. Perfekt etter-middag-utflukt. https://slunj-rastoke.hr/en/homepage-en/ |
+| Rastoke, Slunj | Natur/kultur | Must-do | «Lille Plitvice» — pittoresk landsby der Slunjčica-elva renner som fosser mellom husene. Perfekt ettermiddagsutflukt fra Camping Plitvice. https://slunj-rastoke.hr/en/homepage-en/ |
 | Nikola Tesla-senteret (Smiljan) | Museum | Nice-to-have | 75 km fra Plitvice. Fødested og interaktivt museum for Nikola Tesla. https://mnt.hr/ |
 | Kayakk på Gacka-elven | Aktivitet | Nice-to-have | Krystallklart vann gjennom bøkeskog. Tilbys av lokale operatører nær parken. |
 
@@ -220,43 +217,14 @@ Alle kjøretider er beregnet med campingvogn (ca. 80–90 km/t snitt på motorve
 
 ---
 
-### Stopp 4: Šibenik / Krka NP, Kroatia (3 netter: 16.–19. juli)
+### Stopp 4: Split, Kroatia (7 netter: 16.–23. juli)
 
-**Kjøring:** Plitvice → Šibenik, 185 km, 2 t 19 min via D1/D33 sørover mot kysten.
+**Kjøring:** Plitvice → Split, 271 km, 3 t 30 min via D1/D33 sørover mot kysten → D8 Jadranska magistrala sør.
 
-**Anbefalt campingplass: Camp Krka**
-- Adresse: Lozovac, 22211 Lozovac, Šibenik-Knin County, Kroatia — 1 km fra Krka NP inngang
-- Nettside: https://www.camp-krka.hr/
-- Fasiliteter: 40 plasser i stille skogssetting, egnet for campingvogn, strøm og vann, basseng, restaurant, ferskt brød daglig
-- Booket: Nei
-- Bookingref: —
-
-**Aktiviteter:**
-
-| Aktivitet | Type | Prioritet | Beskrivelse |
-|-----------|------|-----------|-------------|
-| Skradinski buk (Krka NP) | Natur | Must-do | Sju travertinfosser over 800 m med turkisblå badebassenger. Badesesong juni–okt. Unikt og spektakulært. https://npkrka.hr/en_us/ |
-| Visovac-kloster (Krka NP) | Kultur/båttur | Must-do | Fransiskanerkloster fra 1400-tallet på liten øy i Visovac-sjøen. Nås kun med båt inkludert i parkbillett. https://npkrka.hr/en_us/ |
-| Šibenik gamlebyen + St. Jakobs katedrale | Kultur/UNESCO | Must-do | Verdens eneste katedral utelukkende bygget av hugget stein (1431–1535), UNESCO-verdensarv. Sjarmerende gamlebyen langs fjorden. https://www.sibenik-tourism.hr/lokacije/katedrala-sv-jakova/1/en.html |
-| Rošlji-fossefall (Krka NP) | Natur/båttur | Nice-to-have | Vakre fossefall lenger inn i parken. Færre turister enn Skradinski buk. Nås med elvebåt. https://npkrka.hr/en_us/ |
-| Kornati nasjonalpark (dagstur) | Natur/sjø | Nice-to-have | 89 ubebodde øyer og holmer — Middelhavet i sin reneste form. Dagstur med båt fra Šibenik eller Murter. https://kornati.hr |
-
-**Tips:**
-- Krka NP-billett kjøpes online (https://npkrka.hr/) — skip kø
-- Bading i Skradinski buk kun tillatt i merket sone — ta med badegreier!
-- Šibenik gamlebyen er kompakt; parkér ved havna og gå resten
-
----
-
-### Stopp 5: Split / Trogir, Kroatia (5 netter: 19.–24. juli)
-
-**Kjøring:** Šibenik → Split, 86 km, 1 t 04 min via D8 Jadranska magistrala sør.
-
-**Anbefalt campingplass: Camping Stobreč Split**
+**Campingplass: Camping Stobreč Split**
 - Adresse: Stobreč bb, 21311 Stobreč, Kroatia — 6 km fra Diokletians palass, rett ved sandstrand
 - Nettside: https://www.campingsplit.com/
-- Fasiliteter: Sandstrand, bademuligheter, servicebygning, strømtilkobling. Godt utgangspunkt for Split sentrum og Trogir.
-- Alternativ: Amadria Park Camping Trogir (500 m strandpromenade, miniklub for barn): https://www.amadriapark.com/trogir/camping/
+- Fasiliteter: Sandstrand, bademuligheter, servicebygning, strømtilkobling. Godt utgangspunkt for Split sentrum, Trogir og Krka NP.
 - Booket: Nei
 - Bookingref: —
 
@@ -265,20 +233,25 @@ Alle kjøretider er beregnet med campingvogn (ca. 80–90 km/t snitt på motorve
 | Aktivitet | Type | Prioritet | Beskrivelse |
 |-----------|------|-----------|-------------|
 | Diokletians palass, Split | Kultur/UNESCO | Must-do | 2 000 år gammel romersk keiserpalass der 3 000 mennesker bor i dag. Gå gjennom kjelleranleggene, Peristyl-plassen og Katedralen Sv. Duje (keiserens mausoleum!). https://visitsplit.com |
-| Trogir gamlebyen | Kultur/UNESCO | Must-do | Mellomalderby på liten øy (UNESCO). Romansk-gotisk katedrale St. Lovro med Radovanporten (1240). 5 km fra campingplassen — perfekt kveldstur. https://www.trogir.hr |
+| Trogir gamlebyen | Kultur/UNESCO | Must-do | Mellomalderby på liten øy (UNESCO). Romansk-gotisk katedrale St. Lovro med Radovanporten (1240). 30 km vest for Stobreč — perfekt kveldstur. https://www.trogir.hr |
+| Skradinski buk (Krka NP) | Natur | Must-do | Sju travertinfosser over 800 m med turkisblå badebassenger. Badesesong juni–okt. Unikt og spektakulært. Dagstur fra Split (~86 km). https://npkrka.hr/en_us/ |
+| Visovac-kloster (Krka NP) | Kultur/båttur | Must-do | Fransiskanerkloster fra 1400-tallet på liten øy i Visovac-sjøen. Nås kun med båt inkludert i parkbillett. https://npkrka.hr/en_us/ |
+| Šibenik gamlebyen + St. Jakobs katedrale | Kultur/UNESCO | Must-do | Verdens eneste katedral utelukkende bygget av hugget stein (1431–1535), UNESCO-verdensarv. Kombiner med Krka NP-dagstur. https://www.sibenik-tourism.hr/lokacije/katedrala-sv-jakova/1/en.html |
 | Klis festning | Severdighet | Nice-to-have | Middelalderborg på klippen nord for Split. Panoramautsikt over Adriaterhavet. Game of Thrones-lokasjon (Meereen). https://www.tvrdavaklis.com/ |
 | Marjan-parken, Split | Friluft/strand | Nice-to-have | Skogspark på halvøy med sjøbading, sykkelstier og utsikt. William kan sykle. https://www.marjan-parksuma.hr/ |
-| Kajakktur langs kystlinjen | Aktivitet | Nice-to-have | Kajakktur langs Split-kystlinjen med guide — 2–3 timer. Starter fra Bačvice-stranden. |
+| Kornati nasjonalpark (dagstur) | Natur/sjø | Nice-to-have | 89 ubebodde øyer og holmer — Middelhavet i sin reneste form. Dagstur med båt fra Šibenik. https://kornati.hr |
 
 **Tips:**
 - Camping Stobreč Split: reserver i mai/juni for julibooking
+- Krka NP-billett kjøpes online (https://npkrka.hr/) — skip kø
+- Bading i Skradinski buk kun tillatt i merket sone — ta med badegreier!
 - Split sentrum: parkér utenfor (Zenta eller North parkering) og ta buss inn
 - Klis festning: åpner kl. 09:00 — gå tidlig for best utsikt og minst varme
 - Trogir er en 5-minutters bro-spasertur fra fastlandet — 30 km vest for Stobreč
 
 ---
 
-### Stopp 6: Poreč / Rovinj, Istria, Kroatia (4 netter: 24.–28. juli)
+### Stopp 5: Poreč / Rovinj, Istria, Kroatia (4 netter: 23.–27. juli)
 
 **Kjøring:** Split → Poreč/Rovinj, 310 km, 3 t 30 min via A1 nord → Rijeka → Y-motorvei vest mot Istria. Naturlig siste stopp i Kroatia på hjemveien.
 
@@ -307,23 +280,24 @@ Alle kjøretider er beregnet med campingvogn (ca. 80–90 km/t snitt på motorve
 
 ---
 
-### Hjemreise — stopp og transittdager (28. juli – 1. august)
+### Hjemreise — stopp og transittdager (27. juli – 1. august)
 
 Hjemreisen inkluderer to opplevelsesstopp — Zugspitze og Lübeck — i tillegg til en kulturnat i Bamberg.
 
-**Zugspitze / Garmisch-Partenkirchen, Bayern (2 netter: 28.–30. juli)**
+**Zugspitze / Garmisch-Partenkirchen, Bayern (3 netter: 27.–30. juli)**
 - Kjøring: Poreč/Rovinj → Garmisch-Partenkirchen, 570 km, 6 t 30 min via A9/E751 → Ljubljana → Karawanken → A10 Tauern → **Liechtensteinklamm-stopp** → Salzburg → A8 øst → A95 sør. **Lang dag — tidlig start anbefales.**
 - **Liechtensteinklamm (stoppested underveis):** Spektakulær 270 m dyp juv nær Werfen/St. Johann im Pongau i Salzburg-regionen, rett ved A10. Trebroer over fossende elv, dramatisk berglandskap. 1–2 t. William vil elske det. Parkering ved Pfarrwerfen: https://www.liechtensteinklamm.at/
 - Campingplass: DCC Campingpark Grainau, Zugspitzstraße 76, 82491 Grainau
 - Nettside: https://www.dcc-campingpark-grainau.de/
-- Aktiviteter dag 1 (29. juli): **Zugspitzbahn** — tannhjulsbane og gondolbane til Tysklands høyeste topp (2 962 m). Book billett på forhånd: https://www.zugspitze.de/
-- Aktiviteter dag 2 (30. juli): **Neuschwanstein Castle** (~75 km øst via B2/B17) — Kong Ludvig IIs eventyrslott. Obligatorisk forhåndsbooking: https://www.neuschwanstein.de/
+- Aktiviteter dag 1 (28. juli): **Zugspitzbahn** — tannhjulsbane og gondolbane til Tysklands høyeste topp (2 962 m). Book billett på forhånd: https://www.zugspitze.de/
+- Aktiviteter dag 2 (29. juli): **Neuschwanstein Castle** (~75 km øst via B2/B17) — Kong Ludvig IIs eventyrslott. Obligatorisk forhåndsbooking: https://www.neuschwanstein.de/
+- Aktiviteter dag 3 (30. juli): Eibsee og Garmisch-Partenkirchen by — rolig dag før avreise mot Bamberg.
 - Tips: Østerriksk vignett fra utreisen dekker eventuell tollstrekning. Ingen Umweltzone i Grainau/Garmisch.
 
 **Bamberg (1 natt: 30.–31. juli)**
 - Kjøring: Garmisch-Partenkirchen → Bamberg, 315 km, 3 t 15 min via A95/A8 nord → München → A9 nord → A73
-- Campingplass: Campingplatz am Herd, Campingstraße 1, 96052 Bamberg
-- Nettside: https://www.camping-bamberg.de/
+- Campingplass: Camping Island Bamberg, Campinginsel, 96052 Bamberg
+- Nettside: http://www.campinginsel.de/
 - Aktiviteter: Bamberg Altstadt (UNESCO) — over 2 400 fredede bygninger, romansk-gotisk katedral med "Bamberger Reiter", Altes Rathaus på elveøy. Kveldsspasertur.
 - Tips: Ingen Umweltzone. Kompakt gamlebyen — parkér ved campingplassen og gå inn.
 
@@ -411,6 +385,7 @@ Disse 10 campingplassene dekker ulike reisestiler langs hele den kroatiske ruten
 
 | Dato | Endring | Av |
 | --- | --- | --- |
+| 2026-05-04 | Fire endringer: (1) Campingplass ved Plitvice (stopp 3) byttet fra Camp Korana til Camping Plitvice (campingplitvice.hr). (2) Stopp 4 (Šibenik/Krka NP) fjernet — alle aktiviteter (Skradinski buk, Visovac-kloster, Šibenik UNESCO, Kornati) overført til Split-stoppen. Split utvidet fra 5 til 7 netter (16.–23. juli), direkte kjøring fra Plitvice (271 km, 3t 30min). (3) Zugspitze utvidet fra 2 til 3 netter (27.–30. juli). (4) Campingplass i Bamberg byttet til Camping Island Bamberg (campinginsel.de). Totalt 28 netter uendret, 14 netter i Kroatia. | Claude |
 | 2026-05-04 | Seks endringer: (1) Moravian Karst lagt til i Brno-aktiviteter. (2) Liechtensteinklamm lagt til som stoppested på kjøredagen mellom Poreč/Rovinj og Zugspitze. (3) Campingplass i Split byttet til Camping Stobreč Split. (4) Zagreb droppes — kjøring direkte Graz→Plitvice (320 km, 3t 30min). (5) Plitvice redusert fra 4 til 3 netter (13.–16. juli). (6) Split utvidet fra 3 til 5 netter (19.–24. juli). Totalt 15 netter i Kroatia, uendret totalt 28 netter. | Claude |
 | 2026-05-03 | Hjemrute endret: stopp 11 Salzburg → Zugspitze/Garmisch (2 netter, Zugspitzbahn + Neuschwanstein), stopp 12 Frankfurt → Bamberg (UNESCO), stopp 13 Hamburg → Lübeck (UNESCO). Hjemkomst justert til 1. august (innenfor grensen). Oppdatert i index.html og Ferieplanen-2026.md. | Claude |
 | 2026-05-03 | Rute justert: stopp 4 endret Regensburg → Brno (Tsjekkia), stopp 5 endret Salzburg → Graz (lenger øst i Østerrike), stopp 6 endret Poreč/Rovinj → Zagreb (1 natt, inngang til Kroatia), stopp 7–9 datoer 3 dager fremskutt (Plitvice 14–18. juli, Šibenik 18–21. juli, Split 21–24. juli), stopp 7 ny = Poreč/Rovinj (4 netter 24–28. juli, på hjemveien via Rijeka). Oppdatert i både index.html og Ferieplanen-2026.md. | Claude |
