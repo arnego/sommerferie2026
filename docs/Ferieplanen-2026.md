@@ -409,6 +409,7 @@ Disse 10 campingplassene dekker ulike reisestiler langs hele den kroatiske ruten
 
 | Dato | Endring | Av |
 | --- | --- | --- |
+| 2026-05-03 | index.html oppdatert for Kroatia-ruten: 15 nye stopp (Color Magic ferry, Berlin, Bad Schandau, transittdager, 4 kroatiske stopp, hjemreise via Zagreb/Salzburg/Frankfurt/Hamburg, Color Line ferry, Kongsberg). Budsjett, valutatabell (SEK fjernet), Big Mac-index (Kroatia+Østerrike), fartsgrenser (Østerrike/Slovenia/Kroatia), nødnumre (Kroatia) og bompenger/vignetter oppdatert. | Claude |
 | 2026-05-03 | Komplett reskriving for Kroatia-alternativet på branch Ferieplan-Kroatia. Ny ruteplan Oslo→Kiel (Color Magic) → Berlin → Bad Schandau → Regensburg → Salzburg → Poreč/Rovinj (Istria) → Plitvice Lakes NP → Šibenik/Krka NP → Split/Trogir → hjemreise via Zagreb/Salzburg/Frankfurt/Hamburg → Hirtshals→Larvik (Color Line). 14 netter i Kroatia. Ny seksjon §4 med 10 kroatiske campingplasser tematisk organisert. | Claude |
 | 2026-05-03 | §2.6 Værvarsel lagt til. Open-Meteo (gratis, ingen API-nøkkel) henter prognose ved sideåpning og cacher 1 time i localStorage. | Claude |
 | 2026-04-09 | Dokumentet opprettet — struktur og tomme seksjoner | Claude + Arne |
