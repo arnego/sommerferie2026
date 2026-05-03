@@ -46,18 +46,18 @@ William er 5 år og er en viktig del av planleggingen:
 | — | Oslo → Kiel (Color Magic ferge) | NO/DE | 4. juli kv. | 5. juli | 1 (ferge) | 27 |
 | 1 | Berlin | DE | 5. juli | 9. juli | 4 | 27/28 |
 | 2 | Bad Schandau (Bohemian Switzerland) | DE | 9. juli | 11. juli | 2* | 28 |
-| — | Regensburg, Bayern (transit) | DE | 11. juli | 12. juli | 1* | 28 |
-| — | Salzburg, Østerrike (transit) | AT | 12. juli | 13. juli | 1* | 28 |
-| 3 | Poreč / Rovinj, Istria | HR | 13. juli | 17. juli | 4 | 28/29 |
-| 4 | Plitvice Lakes NP | HR | 17. juli | 21. juli | 4 | 29/30 |
-| 5 | Šibenik / Krka NP | HR | 21. juli | 24. juli | 3 | 30 |
-| 6 | Split / Trogir | HR | 24. juli | 27. juli | 3 | 30/31 |
-| — | Zagreb (transit) | HR | 27. juli | 28. juli | 1* | 31 |
+| — | Brno, Tsjekkia (transit) | CZ | 11. juli | 12. juli | 1* | 28 |
+| — | Graz, Østerrike (transit) | AT | 12. juli | 13. juli | 1* | 28 |
+| 3 | Zagreb | HR | 13. juli | 14. juli | 1* | 29 |
+| 4 | Plitvice Lakes NP | HR | 14. juli | 18. juli | 4 | 29 |
+| 5 | Šibenik / Krka NP | HR | 18. juli | 21. juli | 3 | 30 |
+| 6 | Split / Trogir | HR | 21. juli | 24. juli | 3 | 30 |
+| 7 | Poreč / Rovinj, Istria | HR | 24. juli | 28. juli | 4 | 30/31 |
 | — | Salzburg, Østerrike (transit) | AT | 28. juli | 29. juli | 1* | 31 |
 | — | Frankfurt-området (transit) | DE | 29. juli | 30. juli | 1* | 31 |
 | — | Hamburg-området (transit) | DE | 30. juli | 31. juli | 1* | 31 |
 | — | Hirtshals → Larvik (Color Line ferge) | DK/NO | 31. juli | 31. juli | — | 31 |
-| 7 | Kongsberg | NO | 31. juli | — | Hjemme | 31 |
+| 8 | Kongsberg | NO | 31. juli | — | Hjemme | 31 |
 
 *Kortstopp — unntak fra 3-netter-regelen (transit eller prioritert Kroatia-tid).
 
@@ -73,14 +73,14 @@ William er 5 år og er en viktig del av planleggingen:
 | Oslo | Kiel (ferge) | — | 20 t | Color Magic avganger daglig kl. 14:00 fra Oslo |
 | Kiel | Berlin | 354 km | 4 t 25 min | A21/A24 øst mot Berlin |
 | Berlin | Bad Schandau | 224 km | 2 t 48 min | A13/A17 sørøst |
-| Bad Schandau | Regensburg | 326 km | 4 t 05 min | A4 vest → A9 sør |
-| Regensburg | Salzburg | 269 km | 3 t 23 min | A93 sør mot Inntal |
-| Salzburg | Rovinj (via Ljubljana) | 463 km | 5 t 48 min | A10 Tauern → A11 Karawanken → A1/H6 Slovenia → Istria |
-| Rovinj | Plitvice Lakes | 260 km | 3 t 15 min | D75 øst → A1 → D1 inn mot nasjonalparken |
+| Bad Schandau | Brno | 385 km | 4 t 30 min | E55/D8 sør → Prague-ring → D1/E50 øst mot Brno |
+| Brno | Graz | 330 km | 3 t 20 min | D1/E65 sørøst → Wien beltevei → A2/E59 sørøst mot Graz |
+| Graz | Zagreb | 190 km | 2 t 00 min | A9/E57 sør → Spielfeld/Šentilj grense → A1 Slovenia → A2/A3 Kroatia |
+| Zagreb | Plitvice Lakes | 130 km | 1 t 35 min | A1 sørøst → D1 inn mot nasjonalparken |
 | Plitvice | Šibenik | 185 km | 2 t 19 min | D1/D33 sørover mot kysten |
 | Šibenik | Split | 86 km | 1 t 04 min | D8 Jadranska magistrala sør |
-| Split | Zagreb | 379 km | 4 t 44 min | A1 Dalmatina motorvei nord |
-| Zagreb | Salzburg (via Ljubljana) | 430 km | 5 t 22 min | A2 vest → Karawanken → A10 Tauern nord |
+| Split | Poreč/Rovinj (via Rijeka) | 310 km | 3 t 30 min | A1 nord → Rijeka → Y-motorvei vest mot Istria |
+| Poreč/Rovinj | Salzburg | 440 km | 5 t 00 min | A9/E751 nord → Ljubljana → Karawanken → A10 Tauern nord |
 | Salzburg | Frankfurt | 534 km | 5 t 56 min | A8 nord → A3 nord; lang dag, anbefal tidlig start |
 | Frankfurt | Hamburg | 490 km | 5 t 27 min | A5/A7 nord |
 | Hamburg | Hirtshals | 360 km | 4 t 30 min | A7/E45 gjennom Danmark |
@@ -173,29 +173,28 @@ Alle kjøretider er beregnet med campingvogn (ca. 80–90 km/t snitt på motorve
 
 ### Transittdager på vei til Kroatia (11.–13. juli)
 
-**Regensburg, Bayern (1 natt: 11.–12. juli)**
-- Kjøring: Bad Schandau → Regensburg, 326 km, 4 t 05 min via A4 vest → A9 sør
-- Campingplass: Camping Azur an der Donau, Weinweg 40, 93059 Regensburg
-- Nettside: https://www.azur-camping.com/en/regensburg
-- Tips: Rask overnatting ved Donau. Regensburg gamlebyen (UNESCO) kan besøkes på kvelden.
+**Brno, Tsjekkia (1 natt: 11.–12. juli)**
+- Kjøring: Bad Schandau → Brno, 385 km, 4 t 30 min via E55/D8 sør → Prague-ring → D1/E50 øst
+- Campingplass: Autocamp Příbramská, Příbramská 1, 635 00 Brno-Bystrc (ved Brno-reservoaret)
+- Nettside: https://www.campingbrno.cz/
+- Tips: Rask overnatting. Brno sentrum (Špilberk-slottet, Náměstí Svobody) passer for en kveldsspasertur. Tsjekkisk motorvei-vinjett kreves på D-merkede veier (~500 CZK).
 
-**Salzburg, Østerrike (1 natt: 12.–13. juli)**
-- Kjøring: Regensburg → Salzburg, 269 km, 3 t 23 min via A93 sør
-- Campingplass: Camping Schloss Aigen, Aigner Str. 99, 5026 Salzburg
-- Nettside: https://www.camping-salzburg.at/
-- Tips: Rask overnatting — Salzburg Altstadt (UNESCO) på kvelden. **Kjøp østerriksk motorvei-vignett ved grensen** (10-dagersvignett ~9,90 EUR per kjøretøy — bil og campingvogn regnes separat over 3,5 t). Tilsvarende trengs **slovenisk vignett** (7 dager ~15 EUR per kjøretøy) på veien inn i Slovenia neste dag.
+**Graz, Østerrike (1 natt: 12.–13. juli)**
+- Kjøring: Brno → Graz, 330 km, 3 t 20 min via D1/E65 sørøst → Wien beltevei → A2/E59 sørøst
+- Campingplass: Camping Central Graz, Martinhofstraße 3, 8054 Graz
+- Nettside: https://www.camping-graz.at/
+- Tips: Rask overnatting — Graz Altstadt (UNESCO, Schlossberg, Hauptplatz) er verdt en kveldsspasertur. **Kjøp østerriksk motorvei-vignett her** (10-dagersvignett ~9,90 EUR per kjøretøy — bil og campingvogn regnes separat). **Slovenisk vignett** (7 dager ~15 EUR) kjøpes online eller ved grensen neste dag.
 
 ---
 
-### Stopp 3: Poreč / Rovinj, Istria, Kroatia (4 netter: 13.–17. juli)
+### Stopp 3: Zagreb, Kroatia (1 natt: 13.–14. juli)
 
-**Kjøring:** Salzburg → Rovinj, 463 km, 5 t 48 min via A10 Tauern → A11 Karawanken → A1/H6 Slovenia → istrisk halvøy. Lang dag — tidlig start anbefales.
+**Kjøring:** Graz → Zagreb, 190 km, 2 t 00 min via A9/E57 sør → Spielfeld/Šentilj grense → A1 Slovenia → A2/A3 Kroatia. Slovenisk vignett brukes her.
 
-**Anbefalt campingplass: Maistra Camping Veštar**
-- Adresse: Veštar bb, 52210 Rovinj, Kroatia
-- Nettside: https://www.maistra.com/properties/campsite-vestar/
-- Fasiliteter: 3 bassenger (inkl. barnebasseng med sklier), familieunderholdningsprogram, elektrisk tilkobling, direkte gangavstand til Rovinj gamlebyen (~20 min), parkering for campingvogn. Krever forhåndsbooking i juli.
-- Alternativ: Camping Bi Village (Fažana, nær Pula) — sandbukt, Brijuni-utsikt: https://www.bivillage.com/
+**Campingplass: Camp Zagreb (Camping Jarun)**
+- Adresse: Jarunska cesta 2, 10000 Zagreb — ved Jarun-sjøen i parkområde
+- Nettside: https://www.campzagreb.com/
+- Fasiliteter: Sjøbading i Jarun-sjøen, strandrestaurant, lekeplass, sykkelstier
 - Booket: Nei
 - Bookingref: —
 
@@ -203,24 +202,19 @@ Alle kjøretider er beregnet med campingvogn (ca. 80–90 km/t snitt på motorve
 
 | Aktivitet | Type | Prioritet | Beskrivelse |
 |-----------|------|-----------|-------------|
-| Rovinj gamlebyen | Kultur/by | Must-do | Veneziansk gamlebyen på halvøy. Klatre til St. Euphemia-basilika (barokk, 1736) for panoramautsikt over Adriaterhavet. Sjarmerende gater og fiskerhavn. https://www.rovinj-tourism.com |
-| Pula amfiteater | Kultur/severdighet | Must-do | Verdens best bevarte gladiatorarena fra 27 f.Kr. (UNESCO). William kan gå i gladiatorenes fotspor gjennom underjordiske ganger. Ca. 1 t kjøring sør for Rovinj. https://www.ami-pula.hr |
-| Poreč Eufrasius-basilika | Kultur/UNESCO | Must-do | 1 600 år gammel basilika med gullmosaik i bysantinsk stil (UNESCO). Lett å kombinere med is og strandtur i Poreč sentrum. https://www.myporec.com/ |
-| Lim-fjorden (Limski kanal) | Natur/båttur | Nice-to-have | Dramatisk fjordarm mellom Poreč og Rovinj — unikt for Kroatia. Østers, fisk og pittoresk natur. Båtturer fra Rovinj havn. https://www.istra.hr |
-| Kamenjak nasjonalpark | Natur/strand | Nice-to-have | Uberørt halvøy sør for Pula med krystallklart vann og villmark. Barnevennlige strender og klipper. https://www.kamenjak.hr |
+| Zagreb Gornji Grad | Kultur/by | Must-do | Gamlebyen med Lotrščak-tårnet, katedralen og Strossmayerov trg. Funicular opp fra Ilica-gaten. Kveldsspasertur etter innsjekk. https://www.infozagreb.hr |
+| Dolac-markedet | Kultur | Nice-to-have | Zagribs ikoniske utendørsmarked med fersk frukt og lokal mat — åpent tidlig om morgenen. https://www.dolac.hr/ |
 
 **Tips:**
-- Juli er høysesong i Istria — reserver Maistra Veštar senest mai
-- Pula amfiteater: gå tidlig på morgenen for å unngå folkemengder og sommerheten
-- Kroatia bruker EUR siden januar 2023 — ingen valutaveksling nødvendig
-- Hastighetsbegrensning med campingvogn: 90 km/t motorvei, 70 km/t landevei i Kroatia
-- Bompenger på kroatisk motorvei betales med kort eller kontanter ved tollstasjoner
+- Slovenisk vignett dekker motorveien gjennom Slovenia — kjøp i Graz eller online
+- Jarun-sjøen er fin for en kveldsstur og bading for William
+- Tidlig avreise neste morgen mot Plitvice (130 km, 1 t 35 min)
 
 ---
 
-### Stopp 4: Plitvice Lakes NP, Kroatia (4 netter: 17.–21. juli)
+### Stopp 4: Plitvice Lakes NP, Kroatia (4 netter: 14.–18. juli)
 
-**Kjøring:** Rovinj → Plitvice Lakes, 260 km, 3 t 15 min via D75 øst → A1 → D1 inn mot nasjonalparken.
+**Kjøring:** Zagreb → Plitvice Lakes, 130 km, 1 t 35 min via A1 sørøst → D1 inn mot nasjonalparken.
 
 **Anbefalt campingplass: Camp Korana**
 - Adresse: Korana bb, 47246 Drežnik Grad (Slunj), Kroatia — 6 km fra Plitvice inngang 1
@@ -248,7 +242,7 @@ Alle kjøretider er beregnet med campingvogn (ca. 80–90 km/t snitt på motorve
 
 ---
 
-### Stopp 5: Šibenik / Krka NP, Kroatia (3 netter: 21.–24. juli)
+### Stopp 5: Šibenik / Krka NP, Kroatia (3 netter: 18.–21. juli)
 
 **Kjøring:** Plitvice → Šibenik, 185 km, 2 t 19 min via D1/D33 sørover mot kysten.
 
@@ -276,7 +270,7 @@ Alle kjøretider er beregnet med campingvogn (ca. 80–90 km/t snitt på motorve
 
 ---
 
-### Stopp 6: Split / Trogir, Kroatia (3 netter: 24.–27. juli)
+### Stopp 6: Split / Trogir, Kroatia (3 netter: 21.–24. juli)
 
 **Kjøring:** Šibenik → Split, 86 km, 1 t 04 min via D8 Jadranska magistrala sør.
 
@@ -306,17 +300,41 @@ Alle kjøretider er beregnet med campingvogn (ca. 80–90 km/t snitt på motorve
 
 ---
 
-### Hjemreise — transittdager (27.–31. juli)
+### Stopp 7: Poreč / Rovinj, Istria, Kroatia (4 netter: 24.–28. juli)
 
-Hjemreisen går raskt gjennom Sentral-Europa uten lange opphold. Under er praktisk info for de fire transittnettene.
+**Kjøring:** Split → Poreč/Rovinj, 310 km, 3 t 30 min via A1 nord → Rijeka → Y-motorvei vest mot Istria. Naturlig siste stopp i Kroatia på hjemveien.
 
-**Zagreb, Kroatia (1 natt: 27.–28. juli)**
-- Kjøring: Split → Zagreb, 379 km, 4 t 44 min via A1 Dalmatina
-- Campingplass: Camping Jarun, Jarunska cesta 2, 10000 Zagreb (ved Jarun-sjøen i parkområde)
-- Nettside: https://www.campzagreb.com/
+**Campingplass: Maistra Camping Veštar**
+- Adresse: Veštar bb, 52210 Rovinj, Kroatia
+- Nettside: https://www.maistra.com/properties/campsite-vestar/
+- Fasiliteter: 3 bassenger (inkl. barnebasseng med sklier), familieunderholdningsprogram, elektrisk tilkobling, direkte gangavstand til Rovinj gamlebyen (~20 min), parkering for campingvogn. Krever forhåndsbooking i juli.
+- Alternativ: Camping Bi Village (Fažana, nær Pula) — sandbukt, Brijuni-utsikt: https://www.bivillage.com/
+- Booket: Nei
+- Bookingref: —
+
+**Aktiviteter:**
+
+| Aktivitet | Type | Prioritet | Beskrivelse |
+|-----------|------|-----------|-------------|
+| Rovinj gamlebyen | Kultur/by | Must-do | Veneziansk gamlebyen på halvøy. Klatre til St. Euphemia-basilika (barokk, 1736) for panoramautsikt over Adriaterhavet. Sjarmerende gater og fiskerhavn. https://www.rovinj-tourism.com |
+| Pula amfiteater | Kultur/severdighet | Must-do | Verdens best bevarte gladiatorarena fra 27 f.Kr. (UNESCO). William kan gå i gladiatorenes fotspor gjennom underjordiske ganger. Ca. 1 t kjøring sør for Rovinj. https://www.ami-pula.hr |
+| Poreč Eufrasius-basilika | Kultur/UNESCO | Must-do | 1 600 år gammel basilika med gullmosaik i bysantinsk stil (UNESCO). Lett å kombinere med is og strandtur i Poreč sentrum. https://www.myporec.com/ |
+| Lim-fjorden (Limski kanal) | Natur/båttur | Nice-to-have | Dramatisk fjordarm mellom Poreč og Rovinj — unikt for Kroatia. Østers, fisk og pittoresk natur. Båtturer fra Rovinj havn. https://www.istra.hr |
+| Kamenjak nasjonalpark | Natur/strand | Nice-to-have | Uberørt halvøy sør for Pula med krystallklart vann og villmark. Barnevennlige strender og klipper. https://www.kamenjak.hr |
+
+**Tips:**
+- Juli er høysesong i Istria — reserver Maistra Veštar senest mai
+- Pula amfiteater: gå tidlig på morgenen for å unngå folkemengder og sommerheten
+- Kroatia bruker EUR siden januar 2023 — ingen valutaveksling nødvendig
+
+---
+
+### Hjemreise — transittdager (28.–31. juli)
+
+Hjemreisen går raskt gjennom Sentral-Europa uten lange opphold. Under er praktisk info for de tre transittnettene.
 
 **Salzburg, Østerrike (1 natt: 28.–29. juli)**
-- Kjøring: Zagreb → Salzburg, 430 km, 5 t 22 min via A2 vest → Karawanken-tunnelen → A10 Tauern nord
+- Kjøring: Poreč/Rovinj → Salzburg, 440 km, 5 t 00 min via A9/E751 nord → Ljubljana → Karawanken → A10 Tauern nord
 - Campingplass: Camping Schloss Aigen, Aigner Str. 99, 5026 Salzburg (samme som utreise)
 - Nettside: https://www.camping-salzburg.at/
 
@@ -409,6 +427,7 @@ Disse 10 campingplassene dekker ulike reisestiler langs hele den kroatiske ruten
 
 | Dato | Endring | Av |
 | --- | --- | --- |
+| 2026-05-03 | Rute justert: stopp 4 endret Regensburg → Brno (Tsjekkia), stopp 5 endret Salzburg → Graz (lenger øst i Østerrike), stopp 6 endret Poreč/Rovinj → Zagreb (1 natt, inngang til Kroatia), stopp 7–9 datoer 3 dager fremskutt (Plitvice 14–18. juli, Šibenik 18–21. juli, Split 21–24. juli), stopp 7 ny = Poreč/Rovinj (4 netter 24–28. juli, på hjemveien via Rijeka). Oppdatert i både index.html og Ferieplanen-2026.md. | Claude |
 | 2026-05-03 | index.html oppdatert for Kroatia-ruten: 15 nye stopp (Color Magic ferry, Berlin, Bad Schandau, transittdager, 4 kroatiske stopp, hjemreise via Zagreb/Salzburg/Frankfurt/Hamburg, Color Line ferry, Kongsberg). Budsjett, valutatabell (SEK fjernet), Big Mac-index (Kroatia+Østerrike), fartsgrenser (Østerrike/Slovenia/Kroatia), nødnumre (Kroatia) og bompenger/vignetter oppdatert. | Claude |
 | 2026-05-03 | Komplett reskriving for Kroatia-alternativet på branch Ferieplan-Kroatia. Ny ruteplan Oslo→Kiel (Color Magic) → Berlin → Bad Schandau → Regensburg → Salzburg → Poreč/Rovinj (Istria) → Plitvice Lakes NP → Šibenik/Krka NP → Split/Trogir → hjemreise via Zagreb/Salzburg/Frankfurt/Hamburg → Hirtshals→Larvik (Color Line). 14 netter i Kroatia. Ny seksjon §4 med 10 kroatiske campingplasser tematisk organisert. | Claude |
 | 2026-05-03 | §2.6 Værvarsel lagt til. Open-Meteo (gratis, ingen API-nøkkel) henter prognose ved sideåpning og cacher 1 time i localStorage. | Claude |
