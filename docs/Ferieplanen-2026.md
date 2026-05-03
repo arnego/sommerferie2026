@@ -158,11 +158,11 @@ Alle kjøretider er beregnet med campingvogn (ca. 80–90 km/t snitt på motorve
 
 | Aktivitet | Type | Prioritet | Beskrivelse |
 |-----------|------|-----------|-------------|
-| Basteibroen (Basteibrücke) | Natur/utsiktspunkt | Must-do | Ikonisk steinbro 194 meter over Elben. Kort sti fra parkering (15–20 min). Gå tidlig! https://www.saechsische-schweiz.de/bastei-basteibruecke.html |
-| Dagstur: Kamenice Gorge (Tsjekkia) | Natur/båttur | Must-do | Vakker elvekløft i Böhmisk Sveits nasjonalpark. Ca. 10–15 km fra Bad Schandau. Båttur gjennom trange juv med 30 m høye sandsteinsvegger. Ta med kontanter (tsjekkiske kroner eller euro). https://www.npbohemianswitzerlandpark.cz/ |
-| Kirnitzschtalbahn | Historisk trikk | Must-do | Historisk sporvogn fra Bad Schandau til Lichtenhainer Wasserfall. William vil elske trikketuren! https://www.ovps.de/kirnitzschtalbahn/ |
+| Basteibroen (Basteibrücke) | Natur/utsiktspunkt | Must-do | Ikonisk steinbro 194 meter over Elben. Kort sti fra parkering (15–20 min). Gå tidlig! https://www.saechsische-schweiz.de/region/highlights/bastei |
+| Dagstur: Kamenice Gorge (Tsjekkia) | Natur/båttur | Must-do | Vakker elvekløft i Böhmisk Sveits nasjonalpark. Ca. 10–15 km fra Bad Schandau. Båttur gjennom trange juv med 30 m høye sandsteinsvegger. Ta med kontanter (tsjekkiske kroner eller euro). https://npcs.cz/en/ |
+| Kirnitzschtalbahn | Historisk trikk | Must-do | Historisk sporvogn fra Bad Schandau til Lichtenhainer Wasserfall. William vil elske trikketuren! https://www.rvsoe.de/verkehrsmittel/kirnitzschtalbahn/ |
 | Festung Königstein | Festning/historie | Nice-to-have | En av Europas største fjellfestninger. Kanoner, tunneler, utsikt. https://www.festung-koenigstein.de/ |
-| Amselsee i Rathen | Natur/båt | Nice-to-have | Rolig innsjøvandring med robåtutleie. https://www.saechsische-schweiz.de/amselsee-kurort-rathen.html |
+| Amselsee i Rathen | Natur/båt | Nice-to-have | Rolig innsjøvandring med robåtutleie. https://www.saechsische-schweiz.de/ausflugsziele/amselsee-kurort-rathen |
 
 **Tips:**
 - Gå til Bastei tidlig på morgenen for å unngå folkemengder
@@ -176,7 +176,7 @@ Alle kjøretider er beregnet med campingvogn (ca. 80–90 km/t snitt på motorve
 **Regensburg, Bayern (1 natt: 11.–12. juli)**
 - Kjøring: Bad Schandau → Regensburg, 326 km, 4 t 05 min via A4 vest → A9 sør
 - Campingplass: Camping Azur an der Donau, Weinweg 40, 93059 Regensburg
-- Nettside: https://camping-regensburg.azur-camping.de/
+- Nettside: https://www.azur-camping.com/en/regensburg
 - Tips: Rask overnatting ved Donau. Regensburg gamlebyen (UNESCO) kan besøkes på kvelden.
 
 **Salzburg, Østerrike (1 natt: 12.–13. juli)**
@@ -205,7 +205,7 @@ Alle kjøretider er beregnet med campingvogn (ca. 80–90 km/t snitt på motorve
 |-----------|------|-----------|-------------|
 | Rovinj gamlebyen | Kultur/by | Must-do | Veneziansk gamlebyen på halvøy. Klatre til St. Euphemia-basilika (barokk, 1736) for panoramautsikt over Adriaterhavet. Sjarmerende gater og fiskerhavn. https://www.rovinj-tourism.com |
 | Pula amfiteater | Kultur/severdighet | Must-do | Verdens best bevarte gladiatorarena fra 27 f.Kr. (UNESCO). William kan gå i gladiatorenes fotspor gjennom underjordiske ganger. Ca. 1 t kjøring sør for Rovinj. https://www.ami-pula.hr |
-| Poreč Eufrasius-basilika | Kultur/UNESCO | Must-do | 1 600 år gammel basilika med gullmosaik i bysantinsk stil (UNESCO). Lett å kombinere med is og strandtur i Poreč sentrum. https://www.tzpg.hr |
+| Poreč Eufrasius-basilika | Kultur/UNESCO | Must-do | 1 600 år gammel basilika med gullmosaik i bysantinsk stil (UNESCO). Lett å kombinere med is og strandtur i Poreč sentrum. https://www.myporec.com/ |
 | Lim-fjorden (Limski kanal) | Natur/båttur | Nice-to-have | Dramatisk fjordarm mellom Poreč og Rovinj — unikt for Kroatia. Østers, fisk og pittoresk natur. Båtturer fra Rovinj havn. https://www.istra.hr |
 | Kamenjak nasjonalpark | Natur/strand | Nice-to-have | Uberørt halvøy sør for Pula med krystallklart vann og villmark. Barnevennlige strender og klipper. https://www.kamenjak.hr |
 
@@ -226,7 +226,7 @@ Alle kjøretider er beregnet med campingvogn (ca. 80–90 km/t snitt på motorve
 - Adresse: Korana bb, 47246 Drežnik Grad (Slunj), Kroatia — 6 km fra Plitvice inngang 1
 - Nettside: https://np-plitvicka-jezera.hr/en/plan-your-visit/hotels-and-camps/camp-korana/
 - Fasiliteter: 35 hektar i elvegorge langs Korana-elva, egnet for campingvogn, strømtilkobling, restaurant, stille og autentisk naturomgivelse
-- Alternativ: Camping Plitvice (3 km fra inngangen, 5-stjerns med bassenger): https://www.campingplitvice.com/
+- Alternativ: Camping Plitvice (3 km fra inngangen, 5-stjerns med bassenger): https://campingplitvice.hr/
 - Booket: Nei
 - Bookingref: —
 
@@ -236,8 +236,8 @@ Alle kjøretider er beregnet med campingvogn (ca. 80–90 km/t snitt på motorve
 |-----------|------|-----------|-------------|
 | Store runde (Rute C/K) | Natur/UNESCO | Must-do | De 16 sjøene med Veliki Slap (78 m — Kroatias høyeste foss). Elektrisk båttur over Kozjak-sjøen. Spektakulære trebroer over fossene. UNESCO-verdensarv. Bestill billett online! https://np-plitvicka-jezera.hr |
 | Galovačke bukara-fossefall | Natur | Must-do | Spektakulær serie med turkisblå fosser i øvre innsjøsystem. Nær inngang 1. https://np-plitvicka-jezera.hr |
-| Rastoke, Slunj | Natur/kultur | Must-do | «Lille Plitvice» — pittoresk landsby der Slunjčica-elva renner som fosser mellom husene. 6 km fra Camp Korana. Perfekt etter-middag-utflukt. https://www.rastoke.hr |
-| Nikola Tesla-senteret (Smiljan) | Museum | Nice-to-have | 75 km fra Plitvice. Fødested og interaktivt museum for Nikola Tesla. https://www.mnt.hr |
+| Rastoke, Slunj | Natur/kultur | Must-do | «Lille Plitvice» — pittoresk landsby der Slunjčica-elva renner som fosser mellom husene. 6 km fra Camp Korana. Perfekt etter-middag-utflukt. https://slunj-rastoke.hr/en/homepage-en/ |
+| Nikola Tesla-senteret (Smiljan) | Museum | Nice-to-have | 75 km fra Plitvice. Fødested og interaktivt museum for Nikola Tesla. https://mnt.hr/ |
 | Kayakk på Gacka-elven | Aktivitet | Nice-to-have | Krystallklart vann gjennom bøkeskog. Tilbys av lokale operatører nær parken. |
 
 **Tips:**
@@ -254,7 +254,7 @@ Alle kjøretider er beregnet med campingvogn (ca. 80–90 km/t snitt på motorve
 
 **Anbefalt campingplass: Camp Krka**
 - Adresse: Lozovac, 22211 Lozovac, Šibenik-Knin County, Kroatia — 1 km fra Krka NP inngang
-- Nettside: http://www.camp-krka.hr/
+- Nettside: https://www.camp-krka.hr/
 - Fasiliteter: 40 plasser i stille skogssetting, egnet for campingvogn, strøm og vann, basseng, restaurant, ferskt brød daglig
 - Booket: Nei
 - Bookingref: —
@@ -265,7 +265,7 @@ Alle kjøretider er beregnet med campingvogn (ca. 80–90 km/t snitt på motorve
 |-----------|------|-----------|-------------|
 | Skradinski buk (Krka NP) | Natur | Must-do | Sju travertinfosser over 800 m med turkisblå badebassenger. Badesesong juni–okt. Unikt og spektakulært. https://npkrka.hr/en_us/ |
 | Visovac-kloster (Krka NP) | Kultur/båttur | Must-do | Fransiskanerkloster fra 1400-tallet på liten øy i Visovac-sjøen. Nås kun med båt inkludert i parkbillett. https://npkrka.hr/en_us/ |
-| Šibenik gamlebyen + St. Jakobs katedrale | Kultur/UNESCO | Must-do | Verdens eneste katedral utelukkende bygget av hugget stein (1431–1535), UNESCO-verdensarv. Sjarmerende gamlebyen langs fjorden. https://katedrala-sibenik.hr |
+| Šibenik gamlebyen + St. Jakobs katedrale | Kultur/UNESCO | Must-do | Verdens eneste katedral utelukkende bygget av hugget stein (1431–1535), UNESCO-verdensarv. Sjarmerende gamlebyen langs fjorden. https://www.sibenik-tourism.hr/lokacije/katedrala-sv-jakova/1/en.html |
 | Rošlji-fossefall (Krka NP) | Natur/båttur | Nice-to-have | Vakre fossefall lenger inn i parken. Færre turister enn Skradinski buk. Nås med elvebåt. https://npkrka.hr/en_us/ |
 | Kornati nasjonalpark (dagstur) | Natur/sjø | Nice-to-have | 89 ubebodde øyer og holmer — Middelhavet i sin reneste form. Dagstur med båt fra Šibenik eller Murter. https://kornati.hr |
 
@@ -284,7 +284,7 @@ Alle kjøretider er beregnet med campingvogn (ca. 80–90 km/t snitt på motorve
 - Adresse: Seget Vranjica bb, 21218 Seget Vranjica, Kroatia — 5 km fra Trogir, 30 km fra Split
 - Nettside: https://www.amadriapark.com/trogir/camping/
 - Fasiliteter: 500 m strandpromenade, miniklub for barn (mai–sept), barnetilpasset sanitæranlegg, restaurant, ping-pong. Campingvogn-vennlig med egne oppstillingsplasser.
-- Alternativ: Camping Stobreč Split (6 km fra Diocletians palass, sandstrand): https://www.campingstobrec.com/
+- Alternativ: Camping Stobreč Split (6 km fra Diocletians palass, sandstrand): https://www.campingsplit.com/
 - Booket: Nei
 - Bookingref: —
 
@@ -294,8 +294,8 @@ Alle kjøretider er beregnet med campingvogn (ca. 80–90 km/t snitt på motorve
 |-----------|------|-----------|-------------|
 | Diokletians palass, Split | Kultur/UNESCO | Must-do | 2 000 år gammel romersk keiserpalass der 3 000 mennesker bor i dag. Gå gjennom kjelleranleggene, Peristyl-plassen og Katedralen Sv. Duje (keiserens mausoleum!). https://visitsplit.com |
 | Trogir gamlebyen | Kultur/UNESCO | Must-do | Mellomalderby på liten øy (UNESCO). Romansk-gotisk katedrale St. Lovro med Radovanporten (1240). 5 km fra campingplassen — perfekt kveldstur. https://www.trogir.hr |
-| Klis festning | Severdighet | Nice-to-have | Middelalderborg på klippen nord for Split. Panoramautsikt over Adriaterhavet. Game of Thrones-lokasjon (Meereen). https://www.tvrdjava-klis.com |
-| Marjan-parken, Split | Friluft/strand | Nice-to-have | Skogspark på halvøy med sjøbading, sykkelstier og utsikt. William kan sykle. https://park-suma-marjan.hr |
+| Klis festning | Severdighet | Nice-to-have | Middelalderborg på klippen nord for Split. Panoramautsikt over Adriaterhavet. Game of Thrones-lokasjon (Meereen). https://www.tvrdavaklis.com/ |
+| Marjan-parken, Split | Friluft/strand | Nice-to-have | Skogspark på halvøy med sjøbading, sykkelstier og utsikt. William kan sykle. https://www.marjan-parksuma.hr/ |
 | Kajakktur langs kystlinjen | Aktivitet | Nice-to-have | Kajakktur langs Split-kystlinjen med guide — 2–3 timer. Starter fra Bačvice-stranden. |
 
 **Tips:**
@@ -313,7 +313,7 @@ Hjemreisen går raskt gjennom Sentral-Europa uten lange opphold. Under er prakti
 **Zagreb, Kroatia (1 natt: 27.–28. juli)**
 - Kjøring: Split → Zagreb, 379 km, 4 t 44 min via A1 Dalmatina
 - Campingplass: Camping Jarun, Jarunska cesta 2, 10000 Zagreb (ved Jarun-sjøen i parkområde)
-- Nettside: https://www.camping-jarun.hr/
+- Nettside: https://www.campzagreb.com/
 
 **Salzburg, Østerrike (1 natt: 28.–29. juli)**
 - Kjøring: Zagreb → Salzburg, 430 km, 5 t 22 min via A2 vest → Karawanken-tunnelen → A10 Tauern nord
@@ -323,13 +323,13 @@ Hjemreisen går raskt gjennom Sentral-Europa uten lange opphold. Under er prakti
 **Frankfurt-området (1 natt: 29.–30. juli)**
 - Kjøring: Salzburg → Frankfurt, 534 km, 5 t 56 min via A8 nord → A3 nord. Lang dag — tidlig start.
 - Campingplass: Camping Bad Vilbel, Am Strandbad 40, 61118 Bad Vilbel
-- Nettside: https://www.campingplatz-bad-vilbel.de/
+- Nettside: https://campingplatz-mainkur.de/
 - NB: Frankfurt Umweltzone — grønn Umweltplakette kreves (trolig allerede hengt opp fra Berlinoppholdet)
 
 **Hamburg-området (1 natt: 30.–31. juli)**
 - Kjøring: Frankfurt → Hamburg, 490 km, 5 t 27 min via A5/A7 nord
 - Campingplass: Camping Stover Strand, Stover Strand 10, 21423 Winsen (Luhe) (sør for Hamburg)
-- Nettside: https://www.stoversrand.de/
+- Nettside: https://www.camping-stover-strand.de/
 - NB: Hamburg Umweltzone — grønn Umweltplakette kreves
 
 **31. juli: Hamburg → Hirtshals → Larvik → Kongsberg**
@@ -349,8 +349,8 @@ Disse 10 campingplassene dekker ulike reisestiler langs hele den kroatiske ruten
 | # | Navn | Beliggenhet | Hvorfor spesiell | Nettside |
 |---|------|-------------|-----------------|---------|
 | 1 ★ | **Camp Korana** | Slunj, 6 km fra Plitvice inngang 1 | I elvegorgen langs Korana-elva. Stille, autentisk og vakker. 35 hektar bøkeskog. Drevet av nasjonalparken. | https://np-plitvicka-jezera.hr/en/plan-your-visit/hotels-and-camps/camp-korana/ |
-| 2 | **Camping Plitvice** | Mukinje, 3 km fra Plitvice | 5-stjerns resort med 2 bassenger inkl. barnerutsjebane, kajakkutleie, e-sykkelutleie, restaturant. Nærmest parkinngangen. | https://www.campingplitvice.com/ |
-| 3 ★ | **Camp Krka** | Lozovac, 1 km fra Krka NP inngang | Familieid skogsidyll. Ferskt brød daglig, basseng, moderne sanitær. Beste base for Krka-fossene og Šibenik. | http://www.camp-krka.hr/ |
+| 2 | **Camping Plitvice** | Mukinje, 3 km fra Plitvice | 5-stjerns resort med 2 bassenger inkl. barnerutsjebane, kajakkutleie, e-sykkelutleie, restaturant. Nærmest parkinngangen. | https://campingplitvice.hr/ |
+| 3 ★ | **Camp Krka** | Lozovac, 1 km fra Krka NP inngang | Familieid skogsidyll. Ferskt brød daglig, basseng, moderne sanitær. Beste base for Krka-fossene og Šibenik. | https://www.camp-krka.hr/ |
 | 4 | **Camping Biokovo** | Zagvozd, 10 min fra Makarska | Fjellside-camping under Biokovo-toppene. Kombinerer eventyrlig fjellvandring i NP med Adriaterstrand 10 min unna. | https://www.campingbiokovo.hr/ |
 
 ### Strandliv
@@ -365,14 +365,14 @@ Disse 10 campingplassene dekker ulike reisestiler langs hele den kroatiske ruten
 
 | # | Navn | Beliggenhet | Hvorfor spesiell | Nettside |
 |---|------|-------------|-----------------|---------|
-| 8 | **Arena Camping Stoja** | Stoja-halvøya, Pula | Adriater-klipper 3 km fra Pulas UNESCO-amfiteater. Dykking og vannski tilbys. Dramatisk naturomgivelse. | https://www.arenacampsites.com/en/campsites-istria/camping-arena-stoja |
+| 8 | **Arena Camping Stoja** | Stoja-halvøya, Pula | Adriater-klipper 3 km fra Pulas UNESCO-amfiteater. Dykking og vannski tilbys. Dramatisk naturomgivelse. | https://www.arenacollection.com/en/destinations/pula/campsites/arena-stoja-campsite |
 | 9 ★ | **Amadria Park Camping Trogir** | Seget Vranjica, 5 km fra Trogir | Perfekt base for Trogir UNESCO + Split UNESCO dagsturer. 500 m strand, miniklub for barn, restaurant. | https://www.amadriapark.com/trogir/camping/ |
 
 ### Kombinert — natur, strand og kultur
 
 | # | Navn | Beliggenhet | Hvorfor spesiell | Nettside |
 |---|------|-------------|-----------------|---------|
-| 10 | **Camping Park Soline** | Biograd na Moru, mellom Zadar og Šibenik | Furuskog + naturlig strandlagune + pittoresk dalmatinsk kystby. Ideell base for dagsturer til Kornati nasjonalpark (89 øyer). | https://www.biograd-camping.com/ |
+| 10 | **Camping Park Soline** | Biograd na Moru, mellom Zadar og Šibenik | Furuskog + naturlig strandlagune + pittoresk dalmatinsk kystby. Ideell base for dagsturer til Kornati nasjonalpark (89 øyer). | https://www.camping-biograd.com/en/home/ |
 
 ---
 
