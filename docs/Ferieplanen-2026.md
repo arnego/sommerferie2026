@@ -53,15 +53,15 @@ William er 5 år og er en viktig del av planleggingen:
 | 5 | Šibenik / Krka NP | HR | 18. juli | 21. juli | 3 | 30 |
 | 6 | Split / Trogir | HR | 21. juli | 24. juli | 3 | 30 |
 | 7 | Poreč / Rovinj, Istria | HR | 24. juli | 28. juli | 4 | 30/31 |
-| — | Salzburg, Østerrike (transit) | AT | 28. juli | 29. juli | 1* | 31 |
-| — | Frankfurt-området (transit) | DE | 29. juli | 30. juli | 1* | 31 |
-| — | Hamburg-området (transit) | DE | 30. juli | 31. juli | 1* | 31 |
-| — | Hirtshals → Larvik (Color Line ferge) | DK/NO | 31. juli | 31. juli | — | 31 |
-| 8 | Kongsberg | NO | 31. juli | — | Hjemme | 31 |
+| — | Zugspitze / Garmisch-Partenkirchen | DE | 28. juli | 30. juli | 2 | 31 |
+| — | Bamberg | DE | 30. juli | 31. juli | 1* | 31 |
+| — | Lübeck | DE | 31. juli | 1. aug | 1* | 31 |
+| — | Hirtshals → Larvik (Color Line ferge) | DK/NO | 1. aug | 1. aug | — | 31 |
+| 8 | Kongsberg | NO | 1. aug | — | Hjemme | 31 |
 
-*Kortstopp — unntak fra 3-netter-regelen (transit eller prioritert Kroatia-tid).
+*Kortstopp — unntak fra 3-netter-regelen (transit eller prioritert destinasjon).
 
-**Totalt:** 27 netter borte — 14 i Kroatia, 4 i Berlin/Bad Schandau, 6 transittnetter, 2 fergenetter. Hjemme 31. juli.
+**Totalt:** 28 netter borte — 14 i Kroatia, 4 i Berlin/Bad Schandau, 7 transittnetter, 2 fergenetter. Hjemme 1. august (innenfor «senest 1. august»-grensen).
 
 ---
 
@@ -80,10 +80,10 @@ William er 5 år og er en viktig del av planleggingen:
 | Plitvice | Šibenik | 185 km | 2 t 19 min | D1/D33 sørover mot kysten |
 | Šibenik | Split | 86 km | 1 t 04 min | D8 Jadranska magistrala sør |
 | Split | Poreč/Rovinj (via Rijeka) | 310 km | 3 t 30 min | A1 nord → Rijeka → Y-motorvei vest mot Istria |
-| Poreč/Rovinj | Salzburg | 440 km | 5 t 00 min | A9/E751 nord → Ljubljana → Karawanken → A10 Tauern nord |
-| Salzburg | Frankfurt | 534 km | 5 t 56 min | A8 nord → A3 nord; lang dag, anbefal tidlig start |
-| Frankfurt | Hamburg | 490 km | 5 t 27 min | A5/A7 nord |
-| Hamburg | Hirtshals | 360 km | 4 t 30 min | A7/E45 gjennom Danmark |
+| Poreč/Rovinj | Zugspitze/Garmisch | 570 km | 6 t 30 min | A9/E751 nord → Ljubljana → Karawanken → A10 Tauern → Salzburg → A8 øst → A95 sør. Lang dag — tidlig start. |
+| Zugspitze/Garmisch | Bamberg | 315 km | 3 t 15 min | A95/A8 nord → München → A9 nord → A73 mot Bamberg |
+| Bamberg | Lübeck | 545 km | 5 t 30 min | A73 nord → A9 → A14 → Hamburg → A1 øst mot Lübeck |
+| Lübeck | Hirtshals | 400 km | 4 t 30 min | A1/E47 gjennom Danmark (Flensburg-kryssing) |
 | Hirtshals | Larvik (ferge) | — | 3 t 45 min | Color Line SuperSpeed |
 | Larvik | Kongsberg | 85 km | 1 t 15 min | E18/E134 |
 
@@ -329,32 +329,37 @@ Alle kjøretider er beregnet med campingvogn (ca. 80–90 km/t snitt på motorve
 
 ---
 
-### Hjemreise — transittdager (28.–31. juli)
+### Hjemreise — stopp og transittdager (28. juli – 1. august)
 
-Hjemreisen går raskt gjennom Sentral-Europa uten lange opphold. Under er praktisk info for de tre transittnettene.
+Hjemreisen inkluderer to opplevelsesstopp — Zugspitze og Lübeck — i tillegg til en kulturnat i Bamberg.
 
-**Salzburg, Østerrike (1 natt: 28.–29. juli)**
-- Kjøring: Poreč/Rovinj → Salzburg, 440 km, 5 t 00 min via A9/E751 nord → Ljubljana → Karawanken → A10 Tauern nord
-- Campingplass: Camping Schloss Aigen, Aigner Str. 99, 5026 Salzburg (samme som utreise)
-- Nettside: https://www.camping-salzburg.at/
+**Zugspitze / Garmisch-Partenkirchen, Bayern (2 netter: 28.–30. juli)**
+- Kjøring: Poreč/Rovinj → Garmisch-Partenkirchen, 570 km, 6 t 30 min via A9/E751 → Ljubljana → Karawanken → A10 Tauern → Salzburg → A8 øst → A95 sør. **Lang dag — tidlig start anbefales.**
+- Campingplass: DCC Campingpark Grainau, Zugspitzstraße 76, 82491 Grainau
+- Nettside: https://www.dcc-campingpark-grainau.de/
+- Aktiviteter dag 1 (29. juli): **Zugspitzbahn** — tannhjulsbane og gondolbane til Tysklands høyeste topp (2 962 m). Book billett på forhånd: https://www.zugspitze.de/
+- Aktiviteter dag 2 (30. juli): **Neuschwanstein Castle** (~75 km øst via B2/B17) — Kong Ludvig IIs eventyrslott. Obligatorisk forhåndsbooking: https://www.neuschwanstein.de/
+- Tips: Østerriksk vignett fra utreisen dekker eventuell tollstrekning. Ingen Umweltzone i Grainau/Garmisch.
 
-**Frankfurt-området (1 natt: 29.–30. juli)**
-- Kjøring: Salzburg → Frankfurt, 534 km, 5 t 56 min via A8 nord → A3 nord. Lang dag — tidlig start.
-- Campingplass: Camping Bad Vilbel, Am Strandbad 40, 61118 Bad Vilbel
-- Nettside: https://campingplatz-mainkur.de/
-- NB: Frankfurt Umweltzone — grønn Umweltplakette kreves (trolig allerede hengt opp fra Berlinoppholdet)
+**Bamberg (1 natt: 30.–31. juli)**
+- Kjøring: Garmisch-Partenkirchen → Bamberg, 315 km, 3 t 15 min via A95/A8 nord → München → A9 nord → A73
+- Campingplass: Campingplatz am Herd, Campingstraße 1, 96052 Bamberg
+- Nettside: https://www.camping-bamberg.de/
+- Aktiviteter: Bamberg Altstadt (UNESCO) — over 2 400 fredede bygninger, romansk-gotisk katedral med "Bamberger Reiter", Altes Rathaus på elveøy. Kveldsspasertur.
+- Tips: Ingen Umweltzone. Kompakt gamlebyen — parkér ved campingplassen og gå inn.
 
-**Hamburg-området (1 natt: 30.–31. juli)**
-- Kjøring: Frankfurt → Hamburg, 490 km, 5 t 27 min via A5/A7 nord
-- Campingplass: Camping Stover Strand, Stover Strand 10, 21423 Winsen (Luhe) (sør for Hamburg)
-- Nettside: https://www.camping-stover-strand.de/
-- NB: Hamburg Umweltzone — grønn Umweltplakette kreves
+**Lübeck (1 natt: 31. juli–1. august)**
+- Kjøring: Bamberg → Lübeck, 545 km, 5 t 30 min via A73 nord → A9 → A14 → Hamburg → A1 øst
+- Campingplass: Naturcamping Brodten, Brodtener Ufer 37, 23570 Lübeck-Travemünde (på klipper ved Østersjøen)
+- Nettside: https://www.naturcamping-brodten.de/
+- Aktiviteter: Holstenporten og UNESCO-gamlebyen, Niederegger Marzipan (siden 1806), badestrand i Travemünde
+- Tips: Ingen Umweltzone. Lübeck → Hirtshals: 400 km, 4 t 30 min via A1/E47 gjennom Danmark.
 
-**31. juli: Hamburg → Hirtshals → Larvik → Kongsberg**
-- Hamburg → Hirtshals: 360 km, 4 t 30 min via A7/E45 gjennom Danmark
+**1. august: Lübeck → Hirtshals → Larvik → Kongsberg**
+- Lübeck → Hirtshals: 400 km, 4 t 30 min via A1/E47 gjennom Danmark (Flensburg-kryssing)
 - Color Line SuperSpeed: anbefalt avgang kl. 14:30 fra Hirtshals, ankommer Larvik ~18:15
 - Larvik → Kongsberg: 85 km, 1 t 15 min via E18/E134
-- **HJEMME 31. juli!** ✓
+- **HJEMME 1. august!** ✓
 
 ---
 
@@ -427,6 +432,7 @@ Disse 10 campingplassene dekker ulike reisestiler langs hele den kroatiske ruten
 
 | Dato | Endring | Av |
 | --- | --- | --- |
+| 2026-05-03 | Hjemrute endret: stopp 11 Salzburg → Zugspitze/Garmisch (2 netter, Zugspitzbahn + Neuschwanstein), stopp 12 Frankfurt → Bamberg (UNESCO), stopp 13 Hamburg → Lübeck (UNESCO). Hjemkomst justert til 1. august (innenfor grensen). Oppdatert i index.html og Ferieplanen-2026.md. | Claude |
 | 2026-05-03 | Rute justert: stopp 4 endret Regensburg → Brno (Tsjekkia), stopp 5 endret Salzburg → Graz (lenger øst i Østerrike), stopp 6 endret Poreč/Rovinj → Zagreb (1 natt, inngang til Kroatia), stopp 7–9 datoer 3 dager fremskutt (Plitvice 14–18. juli, Šibenik 18–21. juli, Split 21–24. juli), stopp 7 ny = Poreč/Rovinj (4 netter 24–28. juli, på hjemveien via Rijeka). Oppdatert i både index.html og Ferieplanen-2026.md. | Claude |
 | 2026-05-03 | index.html oppdatert for Kroatia-ruten: 15 nye stopp (Color Magic ferry, Berlin, Bad Schandau, transittdager, 4 kroatiske stopp, hjemreise via Zagreb/Salzburg/Frankfurt/Hamburg, Color Line ferry, Kongsberg). Budsjett, valutatabell (SEK fjernet), Big Mac-index (Kroatia+Østerrike), fartsgrenser (Østerrike/Slovenia/Kroatia), nødnumre (Kroatia) og bompenger/vignetter oppdatert. | Claude |
 | 2026-05-03 | Komplett reskriving for Kroatia-alternativet på branch Ferieplan-Kroatia. Ny ruteplan Oslo→Kiel (Color Magic) → Berlin → Bad Schandau → Regensburg → Salzburg → Poreč/Rovinj (Istria) → Plitvice Lakes NP → Šibenik/Krka NP → Split/Trogir → hjemreise via Zagreb/Salzburg/Frankfurt/Hamburg → Hirtshals→Larvik (Color Line). 14 netter i Kroatia. Ny seksjon §4 med 10 kroatiske campingplasser tematisk organisert. | Claude |
