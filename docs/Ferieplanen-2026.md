@@ -43,23 +43,23 @@ William er 5 år og er en viktig del av planleggingen:
 
 | # | Sted | Land | Ankomst | Avreise | Netter | Uke |
 |---|------|------|---------|---------|--------|-----|
-| — | Oslo → Kiel (Color Magic ferge) | NO/DE | 4. juli kv. | 5. juli | 1 (ferge) | 27 |
-| 1 | Berlin | DE | 5. juli | 9. juli | 4 | 27/28 |
-| 2 | Bad Schandau (Bohemian Switzerland) | DE | 9. juli | 11. juli | 2* | 28 |
-| — | Brno, Tsjekkia (transit) | CZ | 11. juli | 12. juli | 1* | 28 |
-| — | Graz, Østerrike (transit) | AT | 12. juli | 13. juli | 1* | 28 |
-| 3 | Plitvice Lakes NP | HR | 13. juli | 16. juli | 3 | 29 |
-| 4 | Split | HR | 16. juli | 23. juli | 7 | 29/30 |
-| 5 | Poreč / Rovinj, Istria | HR | 23. juli | 27. juli | 4 | 30 |
-| — | Zugspitze / Garmisch-Partenkirchen | DE | 27. juli | 30. juli | 3 | 31 |
-| — | Bamberg | DE | 30. juli | 31. juli | 1* | 31 |
-| — | Lübeck | DE | 31. juli | 1. aug | 1* | 31 |
-| — | Hirtshals → Larvik (Color Line ferge) | DK/NO | 1. aug | 1. aug | — | 31 |
-| 7 | Kongsberg | NO | 1. aug | — | Hjemme | 31 |
+| 1 | Oslo → Kiel (Color Magic ferge) | NO/DE | 4. juli kv. | 5. juli | 1 (ferge) | 27 |
+| 2 | Berlin | DE | 5. juli | 9. juli | 4 | 27/28 |
+| 3 | Bad Schandau (Bohemian Switzerland) | DE | 9. juli | 11. juli | 2* | 28 |
+| 4 | Wien-området (Tulln an der Donau) | AT | 11. juli | 12. juli | 1* | 28 |
+| 5 | Plitvice Lakes NP | HR | 12. juli | 14. juli | 2 | 28/29 |
+| 6 | Split | HR | 14. juli | 21. juli | 7 | 29/30 |
+| 7 | Poreč / Rovinj, Istria | HR | 21. juli | 25. juli | 4 | 30 |
+| 8 | Zugspitze / Garmisch-Partenkirchen | DE | 25. juli | 28. juli | 3 | 31 |
+| 9 | Bamberg | DE | 28. juli | 29. juli | 1* | 31 |
+| 10 | Lübeck | DE | 29. juli | 30. juli | 1* | 31 |
+| 11 | Billund (Legoland) | DK | 30. juli | 1. aug | 2 | 31 |
+| 12 | Hirtshals → Larvik (Color Line ferge) | DK/NO | 1. aug | 1. aug | — | 31 |
+| 13 | Kongsberg | NO | 1. aug | — | Hjemme | 31 |
 
 *Kortstopp — unntak fra 3-netter-regelen (transit eller prioritert destinasjon).
 
-**Totalt:** 28 netter borte — 14 i Kroatia, 6 i Berlin/Bad Schandau, 6 transittnetter, 1 fergenatt, 1 ekstra natt Zugspitze. Hjemme 1. august (innenfor «senest 1. august»-grensen).
+**Totalt:** 28 netter borte — 13 i Kroatia, 6 i Berlin/Bad Schandau, 3 transittnetter (Wien, Bamberg, Lübeck), 2 i Billund, 1 fergenatt, 3 netter Zugspitze. Hjemme 1. august (innenfor «senest 1. august»-grensen).
 
 ---
 
@@ -71,15 +71,15 @@ William er 5 år og er en viktig del av planleggingen:
 | Oslo | Kiel (ferge) | — | 20 t | Color Magic avganger daglig kl. 14:00 fra Oslo |
 | Kiel | Berlin | 354 km | 4 t 25 min | A21/A24 øst mot Berlin |
 | Berlin | Bad Schandau | 224 km | 2 t 48 min | A13/A17 sørøst |
-| Bad Schandau | Brno | 385 km | 4 t 30 min | E55/D8 sør → Prague-ring → D1/E50 øst mot Brno |
-| Brno | Graz | 330 km | 3 t 20 min | D1/E65 sørøst → Wien beltevei → A2/E59 sørøst mot Graz |
-| Graz | Plitvice Lakes | 320 km | 3 t 30 min | A9/E57 sør → Spielfeld/Šentilj grense → A1 Slovenia (Ljubljana) → A1 Kroatia → D429 → D1 inn mot nasjonalparken |
+| Bad Schandau | Wien-området (Tulln) | 420 km | 4 t 45 min | E55/D8 sørover → Prague-ring → D1/E65 sørøst → Wien → B14/A1 nordvest til Tulln an der Donau |
+| Tulln (Wien-området) | Plitvice Lakes | 420 km | 4 t 30 min | A21/A2 sørøst → Spielfeld/Šentilj grense → A1 Slovenia (Ljubljana) → A1 Kroatia → D429 → D1 inn mot nasjonalparken |
 | Plitvice | Split | 271 km | 3 t 30 min | D1/D33 sørover mot kysten → D8 Jadranska magistrala sør |
 | Split | Poreč/Rovinj (via Rijeka) | 310 km | 3 t 30 min | A1 nord → Rijeka → Y-motorvei vest mot Istria |
 | Poreč/Rovinj | Zugspitze/Garmisch | 570 km | 6 t 30 min | A9/E751 nord → Ljubljana → Karawanken → A10 Tauern → **stopp Liechtensteinklamm** (Werfen/St. Johann im Pongau) → Salzburg → A8 øst → A95 sør. Lang dag — tidlig start. |
 | Zugspitze/Garmisch | Bamberg | 315 km | 3 t 15 min | A95/A8 nord → München → A9 nord → A73 mot Bamberg |
 | Bamberg | Lübeck | 545 km | 5 t 30 min | A73 nord → A9 → A14 → Hamburg → A1 øst mot Lübeck |
-| Lübeck | Hirtshals | 400 km | 4 t 30 min | A1/E47 gjennom Danmark (Flensburg-kryssing) |
+| Lübeck | Billund | 285 km | 3 t 15 min | A1 vest → Hamburg → A7 nord → Flensburg-grensa → E45 nord inn i Danmark mot Billund |
+| Billund | Hirtshals | 250 km | 3 t | E45 nord gjennom Jutland til Hirtshals |
 | Hirtshals | Larvik (ferge) | — | 3 t 45 min | Color Line SuperSpeed |
 | Larvik | Kongsberg | 85 km | 1 t 15 min | E18/E134 |
 
@@ -167,30 +167,32 @@ Alle kjøretider er beregnet med campingvogn (ca. 80–90 km/t snitt på motorve
 
 ---
 
-### Transittdager på vei til Kroatia (11.–13. juli)
+### Stopp 4: Wien-området (Tulln an der Donau), Østerrike (1 natt: 11.–12. juli)
 
-**Brno, Tsjekkia (1 natt: 11.–12. juli)**
-- Kjøring: Bad Schandau → Brno, 385 km, 4 t 30 min via E55/D8 sør → Prague-ring → D1/E50 øst
-- Campingplass: Autocamp Příbramská, Příbramská 1, 635 00 Brno-Bystrc (ved Brno-reservoaret)
-- Nettside: https://www.campingbrno.cz/
-- Tips: Rask overnatting. Brno sentrum (Špilberk-slottet, Náměstí Svobody) passer for en kveldsspasertur. Tsjekkisk motorvei-vinjett kreves på D-merkede veier (~500 CZK).
+**Kjøring:** Bad Schandau → Tulln, 420 km, 4 t 45 min via E55/D8 sørover → Prague-ring → D1/E65 sørøst → Wien → B14/A1 nordvest til Tulln an der Donau.
+
+**Campingplass: Donaupark Camping Tulln**
+- Adresse: Donaupark, 3430 Tulln an der Donau, Niederösterreich, Østerrike
+- Nettside: https://www.donaupark-camping.at/
+- Fasiliteter: Familievennlig campingplass rett ved Donau-elven, tilgang til Donau-sykkelsti, servicebygning, strømtilkobling
+- Booket: Nei
+- Bookingref: —
 
 | Aktivitet | Type | Prioritet | Beskrivelse |
 |-----------|------|-----------|-------------|
-| Moravian Karst (Moravský kras) | Natur/grotter | Must-do | Europas lengste aktive grottsystem nord for Brno. Ikonisk Macocha-avgrunn (138 m dyp), Punkevní-grottene med undergrunnselv og båttur. 40 km nord for Brno — perfekt dagstur. https://www.cavemk.cz/ |
-| Brno sentrum (kveldsspasertur) | Kultur | Nice-to-have | Náměstí Svobody (Frihetsplassen), Špilberk-slottet og katedralen Petrov. Behagelig tsjekkisk byatmosfære. https://www.gotobrno.cz/ |
+| Kveldsspasertur langs Donau | Friluft | Must-do | Vakker spasertur langs Donaupromenaden i Tulln. Den berømte Donau-sykkelstien er flatt og barnevennlig. https://www.tulln.at/ |
+| Tulln gamlebyen | Kultur | Nice-to-have | Sjarmerende by langs Donau med romansk Karner-kirke og historisk bykjerne. Tulln er fødebyen til kunstneren Egon Schiele. https://www.tulln.at/ |
 
-**Graz, Østerrike (1 natt: 12.–13. juli)**
-- Kjøring: Brno → Graz, 330 km, 3 t 20 min via D1/E65 sørøst → Wien beltevei → A2/E59 sørøst
-- Campingplass: Camping Central Graz, Martinhofstraße 3, 8054 Graz
-- Nettside: https://www.camping-graz.at/
-- Tips: Rask overnatting — Graz Altstadt (UNESCO, Schlossberg, Hauptplatz) er verdt en kveldsspasertur. **Kjøp østerriksk motorvei-vignett her** (10-dagersvignett ~9,90 EUR per kjøretøy — bil og campingvogn regnes separat). **Slovenisk vignett** (7 dager ~15 EUR) kjøpes online eller ved grensen neste dag.
+**Tips:**
+- **Kjøp østerriksk motorvei-vignett** ved grenseovergangen (10-dagersvignett ~9,90 EUR per kjøretøy — bil og campingvogn regnes separat)
+- **Slovenisk vignett** (7 dager ~15 EUR) kjøpes online eller ved grensen neste dag
+- Tidlig avreise anbefales — ~420 km til Plitvice neste dag
 
 ---
 
-### Stopp 3: Plitvice Lakes NP, Kroatia (3 netter: 13.–16. juli)
+### Stopp 5: Plitvice Lakes NP, Kroatia (2 netter: 12.–14. juli)
 
-**Kjøring:** Graz → Plitvice Lakes, 320 km, 3 t 30 min via A9/E57 sør → Spielfeld/Šentilj grense → A1 Slovenia (Ljubljana) → A1 Kroatia → D429 → D1 inn mot nasjonalparken. Slovenisk vignett brukes her.
+**Kjøring:** Tulln (Wien-området) → Plitvice Lakes, 420 km, 4 t 30 min via A21/A2 sørøst → Spielfeld/Šentilj grense → A1 Slovenia (Ljubljana) → A1 Kroatia → D429 → D1 inn mot nasjonalparken. Slovenisk vignett brukes her.
 
 **Campingplass: Camping Plitvice**
 - Adresse: Mukinje, 53231 Plitvička Jezera, Kroatia — 3 km fra Plitvice inngang
@@ -217,7 +219,7 @@ Alle kjøretider er beregnet med campingvogn (ca. 80–90 km/t snitt på motorve
 
 ---
 
-### Stopp 4: Split, Kroatia (7 netter: 16.–23. juli)
+### Stopp 6: Split, Kroatia (7 netter: 14.–21. juli)
 
 **Kjøring:** Plitvice → Split, 271 km, 3 t 30 min via D1/D33 sørover mot kysten → D8 Jadranska magistrala sør.
 
@@ -251,7 +253,7 @@ Alle kjøretider er beregnet med campingvogn (ca. 80–90 km/t snitt på motorve
 
 ---
 
-### Stopp 5: Poreč / Rovinj, Istria, Kroatia (4 netter: 23.–27. juli)
+### Stopp 7: Poreč / Rovinj, Istria, Kroatia (4 netter: 21.–25. juli)
 
 **Kjøring:** Split → Poreč/Rovinj, 310 km, 3 t 30 min via A1 nord → Rijeka → Y-motorvei vest mot Istria. Naturlig siste stopp i Kroatia på hjemveien.
 
@@ -280,36 +282,44 @@ Alle kjøretider er beregnet med campingvogn (ca. 80–90 km/t snitt på motorve
 
 ---
 
-### Hjemreise — stopp og transittdager (27. juli – 1. august)
+### Hjemreise — stopp og transittdager (25. juli – 1. august)
 
-Hjemreisen inkluderer to opplevelsesstopp — Zugspitze og Lübeck — i tillegg til en kulturnat i Bamberg.
+Hjemreisen inkluderer tre opplevelsesstopp — Zugspitze, Lübeck og Billund (Legoland) — i tillegg til en kulturnat i Bamberg.
 
-**Zugspitze / Garmisch-Partenkirchen, Bayern (3 netter: 27.–30. juli)**
+**Zugspitze / Garmisch-Partenkirchen, Bayern (3 netter: 25.–28. juli)**
 - Kjøring: Poreč/Rovinj → Garmisch-Partenkirchen, 570 km, 6 t 30 min via A9/E751 → Ljubljana → Karawanken → A10 Tauern → **Liechtensteinklamm-stopp** → Salzburg → A8 øst → A95 sør. **Lang dag — tidlig start anbefales.**
 - **Liechtensteinklamm (stoppested underveis):** Spektakulær 270 m dyp juv nær Werfen/St. Johann im Pongau i Salzburg-regionen, rett ved A10. Trebroer over fossende elv, dramatisk berglandskap. 1–2 t. William vil elske det. Parkering ved Pfarrwerfen: https://www.liechtensteinklamm.at/
 - Campingplass: DCC Campingpark Grainau, Zugspitzstraße 76, 82491 Grainau
 - Nettside: https://www.dcc-campingpark-grainau.de/
-- Aktiviteter dag 1 (28. juli): **Zugspitzbahn** — tannhjulsbane og gondolbane til Tysklands høyeste topp (2 962 m). Book billett på forhånd: https://www.zugspitze.de/
-- Aktiviteter dag 2 (29. juli): **Neuschwanstein Castle** (~75 km øst via B2/B17) — Kong Ludvig IIs eventyrslott. Obligatorisk forhåndsbooking: https://www.neuschwanstein.de/
-- Aktiviteter dag 3 (30. juli): Eibsee og Garmisch-Partenkirchen by — rolig dag før avreise mot Bamberg.
+- Aktiviteter dag 1 (26. juli): **Zugspitzbahn** — tannhjulsbane og gondolbane til Tysklands høyeste topp (2 962 m). Book billett på forhånd: https://www.zugspitze.de/
+- Aktiviteter dag 2 (27. juli): **Neuschwanstein Castle** (~75 km øst via B2/B17) — Kong Ludvig IIs eventyrslott. Obligatorisk forhåndsbooking: https://www.neuschwanstein.de/
+- Aktiviteter dag 3 (28. juli): Eibsee og Garmisch-Partenkirchen by — rolig dag før avreise mot Bamberg.
 - Tips: Østerriksk vignett fra utreisen dekker eventuell tollstrekning. Ingen Umweltzone i Grainau/Garmisch.
 
-**Bamberg (1 natt: 30.–31. juli)**
+**Bamberg (1 natt: 28.–29. juli)**
 - Kjøring: Garmisch-Partenkirchen → Bamberg, 315 km, 3 t 15 min via A95/A8 nord → München → A9 nord → A73
 - Campingplass: Camping Island Bamberg, Campinginsel, 96052 Bamberg
 - Nettside: http://www.campinginsel.de/
 - Aktiviteter: Bamberg Altstadt (UNESCO) — over 2 400 fredede bygninger, romansk-gotisk katedral med "Bamberger Reiter", Altes Rathaus på elveøy. Kveldsspasertur.
 - Tips: Ingen Umweltzone. Kompakt gamlebyen — parkér ved campingplassen og gå inn.
 
-**Lübeck (1 natt: 31. juli–1. august)**
+**Lübeck (1 natt: 29.–30. juli)**
 - Kjøring: Bamberg → Lübeck, 545 km, 5 t 30 min via A73 nord → A9 → A14 → Hamburg → A1 øst
 - Campingplass: Naturcamping Brodten, Brodtener Ufer 37, 23570 Lübeck-Travemünde (på klipper ved Østersjøen)
 - Nettside: https://www.naturcamping-brodten.de/
 - Aktiviteter: Holstenporten og UNESCO-gamlebyen, Niederegger Marzipan (siden 1806), badestrand i Travemünde
-- Tips: Ingen Umweltzone. Lübeck → Hirtshals: 400 km, 4 t 30 min via A1/E47 gjennom Danmark.
+- Tips: Ingen Umweltzone. Neste dag: Lübeck → Billund via A1/A7 nord → Flensburg → E45, ca. 285 km, 3 t 15 min.
 
-**1. august: Lübeck → Hirtshals → Larvik → Kongsberg**
-- Lübeck → Hirtshals: 400 km, 4 t 30 min via A1/E47 gjennom Danmark (Flensburg-kryssing)
+**Billund, Danmark (2 netter: 30. juli–1. august)**
+- Kjøring: Lübeck → Billund, 285 km, 3 t 15 min via A1 vest → Hamburg → A7 nord → Flensburg-grensa → E45 nord inn i Danmark → Billund
+- Campingplass: Legoland® Campingarea, Ellehammervej 2, 7190 Billund
+- Nettside: https://www.legoland.dk/feriepark/overnatning/camping/
+- Aktiviteter dag 1 (31. juli): **Legoland® Billund** — verdens første Legoland (åpnet 1968), 8 tematiske verdener, Miniland og rides. Heldagsopplevelse. Bestill billett online: https://www.legoland.dk/
+- Aktiviteter dag 2 (1. august formiddag): **LEGO House** — ikonisk opplevelseshus i Billund sentrum (2017). Interaktive soner og kreative verksteder. https://www.legohouse.com/
+- Tips: Bestill Legoland-billett online — spar tid og penger. Legoland® Campingarea er veldig populær i juli — bestill senest i mai. Start hjemreise mot Hirtshals senest kl. 11:00.
+
+**1. august: Billund → Hirtshals → Larvik → Kongsberg**
+- Billund → Hirtshals: 250 km, 3 t via E45 nord gjennom Jutland
 - Color Line SuperSpeed: anbefalt avgang kl. 14:30 fra Hirtshals, ankommer Larvik ~18:15
 - Larvik → Kongsberg: 85 km, 1 t 15 min via E18/E134
 - **HJEMME 1. august!** ✓
@@ -385,6 +395,7 @@ Disse 10 campingplassene dekker ulike reisestiler langs hele den kroatiske ruten
 
 | Dato | Endring | Av |
 | --- | --- | --- |
+| 2026-05-04 | Fem endringer: (1) Plitvice redusert fra 3 til 2 netter (12.–14. juli). (2) Brno og Graz fjernet som transitt — erstattet med ett stopp ved Wien-området: Donaupark Camping Tulln (11.–12. juli). (3) Billund lagt til med 2 netter (30. juli–1. august) for Legoland — Legoland® Campingarea, mellom Lübeck og Hirtshals. (4) Alle påfølgende datoer fra Plitvice til Lübeck fremskutt 2 dager. (5) Hero-tittel oppdatert til «Fra Kongsberg til Kroatia og tilbake». Stopp renummerert 1–13 uten hull. Totalt 28 netter uendret. | Claude |
 | 2026-05-04 | Fire endringer: (1) Campingplass ved Plitvice (stopp 3) byttet fra Camp Korana til Camping Plitvice (campingplitvice.hr). (2) Stopp 4 (Šibenik/Krka NP) fjernet — alle aktiviteter (Skradinski buk, Visovac-kloster, Šibenik UNESCO, Kornati) overført til Split-stoppen. Split utvidet fra 5 til 7 netter (16.–23. juli), direkte kjøring fra Plitvice (271 km, 3t 30min). (3) Zugspitze utvidet fra 2 til 3 netter (27.–30. juli). (4) Campingplass i Bamberg byttet til Camping Island Bamberg (campinginsel.de). Totalt 28 netter uendret, 14 netter i Kroatia. | Claude |
 | 2026-05-04 | Seks endringer: (1) Moravian Karst lagt til i Brno-aktiviteter. (2) Liechtensteinklamm lagt til som stoppested på kjøredagen mellom Poreč/Rovinj og Zugspitze. (3) Campingplass i Split byttet til Camping Stobreč Split. (4) Zagreb droppes — kjøring direkte Graz→Plitvice (320 km, 3t 30min). (5) Plitvice redusert fra 4 til 3 netter (13.–16. juli). (6) Split utvidet fra 3 til 5 netter (19.–24. juli). Totalt 15 netter i Kroatia, uendret totalt 28 netter. | Claude |
 | 2026-05-03 | Hjemrute endret: stopp 11 Salzburg → Zugspitze/Garmisch (2 netter, Zugspitzbahn + Neuschwanstein), stopp 12 Frankfurt → Bamberg (UNESCO), stopp 13 Hamburg → Lübeck (UNESCO). Hjemkomst justert til 1. august (innenfor grensen). Oppdatert i index.html og Ferieplanen-2026.md. | Claude |
