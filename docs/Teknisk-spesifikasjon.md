@@ -270,6 +270,7 @@ Her kan vi legge idéer som kan vurderes senere, men som foreløpig ikke skal in
 
 | Dato | Endring | Av |
 | --- | --- | --- |
+| 2026-05-05 | Budsjett-template oppdatert: lagt til `note`-felt per budsjett-post som vises diskret under beløpet. Drivstoffpost oppdatert til 11 500 NOK med forklarende note (5 500 km × 11 L/100 km × ~19 NOK/L). Alle budsjettpostene har nå kortforklaringer. | Claude |
 | 2026-05-03 | §2.6 Værvarsel lagt til. Open-Meteo (gratis, ingen API-nøkkel) henter prognose ved sideåpning og cacher 1 time i localStorage. Tre visningssteder: kart-popup, kollapset Reiseplan-bar (kompakt strip med ett midday-symbol per dag) og utvidet detaljvisning (tabell med 5 tidspunkt per dag). Inline SVG-ikoner i 10 kategorier inkl. «ikke tilgjengelig». «Værvarsel-widget» fjernet fra §8 Fremtidige muligheter. | Claude |
 | 2026-04-09 | Dokumentet opprettet — struktur og tomme seksjoner | Claude + Arne |
 | 2026-04-10 | Teknologivalg, navigasjonsstruktur, designprinsipper, sjekkliste-strategi avklart via intervju | Claude + Arne |
