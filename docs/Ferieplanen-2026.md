@@ -44,22 +44,22 @@ William er 5 år og er en viktig del av planleggingen:
 | # | Sted | Land | Ankomst | Avreise | Netter | Uke |
 |---|------|------|---------|---------|--------|-----|
 | 1 | Oslo → Kiel (Color Magic ferge) | NO/DE | 4. juli kv. | 5. juli | 1 (ferge) | 27 |
-| 2 | Berlin | DE | 5. juli | 9. juli | 4 | 27/28 |
-| 3 | Bad Schandau (Bohemian Switzerland) | DE | 9. juli | 11. juli | 2* | 28 |
-| 4 | Wien-området (Tulln an der Donau) | AT | 11. juli | 12. juli | 1* | 28 |
-| 5 | Plitvice Lakes NP | HR | 12. juli | 14. juli | 2 | 28/29 |
-| 6 | Split | HR | 14. juli | 21. juli | 7 | 29/30 |
-| 7 | Poreč / Rovinj, Istria | HR | 21. juli | 25. juli | 4 | 30 |
-| 8 | Zugspitze / Garmisch-Partenkirchen | DE | 25. juli | 28. juli | 3 | 31 |
-| 9 | Bamberg | DE | 28. juli | 29. juli | 1* | 31 |
-| 10 | Lübeck | DE | 29. juli | 30. juli | 1* | 31 |
+| 2 | Berlin | DE | 5. juli | 8. juli | 3 | 27/28 |
+| 3 | Bad Schandau (Bohemian Switzerland) | DE | 8. juli | 10. juli | 2* | 28 |
+| 4 | Wien-området (Tulln an der Donau) | AT | 10. juli | 11. juli | 1* | 28 |
+| 5 | Plitvice Lakes NP | HR | 11. juli | 13. juli | 2 | 28/29 |
+| 6 | Split | HR | 13. juli | 20. juli | 7 | 29/30 |
+| 7 | Poreč / Rovinj, Istria | HR | 20. juli | 24. juli | 4 | 30 |
+| 8 | Zugspitze | DE | 24. juli | 27. juli | 3 | 31 |
+| 9 | Bamberg | DE | 27. juli | 29. juli | 2 | 31 |
+| 10 | Hamburg | DE | 29. juli | 30. juli | 1* | 31 |
 | 11 | Billund (Legoland) | DK | 30. juli | 1. aug | 2 | 31 |
 | 12 | Hirtshals → Larvik (Color Line ferge) | DK/NO | 1. aug | 1. aug | — | 31 |
 | 13 | Kongsberg | NO | 1. aug | — | Hjemme | 31 |
 
 *Kortstopp — unntak fra 3-netter-regelen (transit eller prioritert destinasjon).
 
-**Totalt:** 28 netter borte — 13 i Kroatia, 6 i Berlin/Bad Schandau, 3 transittnetter (Wien, Bamberg, Lübeck), 2 i Billund, 1 fergenatt, 3 netter Zugspitze. Hjemme 1. august (innenfor «senest 1. august»-grensen).
+**Totalt:** 28 netter borte — 13 i Kroatia, 5 i Berlin/Bad Schandau, 3 netter Zugspitze, 2 netter Bamberg, 2 transittnetter (Wien, Hamburg), 2 i Billund, 1 fergenatt. Hjemme 1. august (innenfor «senest 1. august»-grensen).
 
 ---
 
@@ -77,13 +77,13 @@ William er 5 år og er en viktig del av planleggingen:
 | Split | Poreč/Rovinj (via Rijeka) | 310 km | 4 t 30 min | A1 nord → Rijeka → Y-motorvei vest mot Istria |
 | Poreč/Rovinj | Zugspitze/Garmisch | 570 km | 8 t (inkl. Liechtensteinklamm 1,5 t) | A9/E751 nord → Ljubljana → Karawanken → A10 Tauern → **stopp Liechtensteinklamm** (Werfen/St. Johann im Pongau) → Salzburg → A8 øst → A95 sør. Svært lang dag — start senest kl. 07:30. |
 | Zugspitze/Garmisch | Bamberg | 315 km | 4 t 45 min | A95/A8 nord → München → A9 nord → A73 mot Bamberg |
-| Bamberg | Lübeck | 545 km | **8 t ⚠️** | A73 nord → A9 → A14 → Hamburg → A1 øst mot Lübeck. Overstiger 6t-grensen — start senest kl. 07:00. |
-| Lübeck | Billund | 285 km | 4 t 15 min | A1 vest → Hamburg → A7 nord → Flensburg-grensa → E45 nord inn i Danmark mot Billund |
+| Bamberg | Hamburg | 475 km | **6 t 30 min ⚠️** | A73 nord → A9 → A14 → Hamburg. Svakt over 6t-grensen — start senest kl. 07:00. |
+| Hamburg | Billund | 250 km | 3 t 30 min | A7 nord → Flensburg-grensa → E45 nord inn i Danmark → Billund |
 | Billund | Hirtshals | 250 km | 3 t 30 min | E45 nord gjennom Jutland til Hirtshals |
 | Hirtshals | Larvik (ferge) | — | 3 t 45 min | Color Line SuperSpeed |
 | Larvik | Kongsberg | 85 km | 1 t 15 min | E18/E134 |
 
-Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorvei (gjennomsnittsfart ca. 73 km/t inkl. reduksjon for byggesoner, kryss og hvilepauser). **⚠️ Bamberg → Lübeck (545 km, ~8t) overskrider det planlagte maksimum på 6 timer — vurder å dele etappen eller droppe ett av stoppene.**
+Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorvei (gjennomsnittsfart ca. 73 km/t inkl. reduksjon for byggesoner, kryss og hvilepauser). **⚠️ Bamberg → Hamburg (475 km, ~6t 30min) overskrider det planlagte maksimum på 6 timer marginalt — start senest kl. 07:00.**
 
 ---
 
@@ -92,7 +92,7 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 **Color Line Color Magic (Oslo–Kiel, utreise)**
 - Avgang: Oslo ca. kl. 14:00 daglig
 - Ankomst: Kiel ca. kl. 10:00 neste dag (~20 timer)
-- Estimert pris (2 voksne + 1 barn + bil + campingvogn + innvendig lugar): 5 000–8 000 NOK
+- Bekreftet pris (2 voksne + 1 barn + bil + campingvogn m/riktig høyde og lengde + innvendig lugar): **ca. 16 200 NOK**
 - Fasiliteter: restauranter, spa, underholdning for barn, butikk, WiFi
 - Nettside: https://www.colorline.no/oslo-kiel
 - Bookingref: —
@@ -100,13 +100,13 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 **Color Line SuperSpeed (Hirtshals–Larvik, hjemreise)**
 - Avganger: 2–3 daglig i juli (typisk 09:15, 14:30, 19:15 fra Hirtshals)
 - Overfartstid: 3 t 45 min
-- Estimert pris (bil + campingvogn + 2 voksne + 1 barn): 2 500–4 500 NOK en vei
+- Estimert pris (bil + campingvogn m/riktig høyde og lengde + 2 voksne + 1 barn): **~5 000 NOK** en vei (inkl. kjøretøylengde-tillegg — bekreft ved booking)
 - Nettside: https://www.colorline.no/hirtshals-larvik
 - Bookingref: —
 
 ---
 
-### Stopp 1: Berlin, Tyskland (4 netter: 5.–9. juli)
+### Stopp 1: Berlin, Tyskland (3 netter: 5.–8. juli)
 
 **Campingplass: DCC-Campingplatz Berlin-Gatow**
 - Adresse: Kladower Damm 213–217, 14089 Berlin-Gatow, Tyskland
@@ -127,19 +127,20 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 |-----------|------|-----------|-------------|
 | Besøk André og Lucia | Familiebesøk | Must-do | Fischerinsel 9. Fine spaserturer langs Spree i nærheten. |
 | Berlin Zoo | Dyrehage | Must-do | En av Europas mest artsrike. Akvarium inkludert. Halv til hel dag. https://www.zoo-berlin.de/ |
-| LEGOLAND Discovery Centre | Innendørs opplevelse | Must-do | LEGO-opplevelsessenter med byggeverksteder og 4D-kino. Bestill online. 2–3 timer. https://www.legolanddiscoverycentre.com/berlin/ |
+| FEZ Berlin | Aktivitet/sport | Must-do | Europas største fritids- og aktivitetssenter for barn. Klatreanlegg, lekeplasser, sportsbaner og kreative verksteder. William kan løpe og klatre i timesvis. https://www.fez-berlin.de/ |
+| Dark Matter — utstillingen | Museum/kunst | Must-do | Spektakulær interaktiv kunstutstilling med immersive lysrom og sanseopplevelser. En av Berlins mest omtalte attraksjoner. https://en.darkmatter.berlin/ |
 | Naturkundemuseum | Museum | Must-do | Verdens største monterte dinosaurskjelett. Barn elsker dinosauravdelingen. 2–3 timer. https://www.museumfuernaturkunde.berlin/ |
 | Tropical Islands | Badeland/tropisk | Nice-to-have | Verdens største innendørs tropiske badeanlegg. Ca. 60 km sør for Berlin (dagstur). Hel dag. https://www.tropical-islands.de/ |
 | Tempelhofer Feld | Park/friluft | Nice-to-have | Gammel flyplass omgjort til enorm bypark. Sykling, drageflying med William. Gratis. https://gruen-berlin.de/projekt/tempelhofer-feld |
 
 **Tips:**
 - Umweltplakette kreves i Berlin (grønn sticker — ta med fra Norge eller kjøp i forkant)
-- Vurder Berlin WelcomeCard for 4 dager (dekker kollektivtransport + rabatter)
+- Vurder Berlin WelcomeCard for 3 dager (dekker kollektivtransport + rabatter)
 - Campingplassen ved Havel er fin for bading på varme dager
 
 ---
 
-### Stopp 2: Bad Schandau / Bohemian Switzerland (2 netter: 9.–11. juli)
+### Stopp 2: Bad Schandau / Bohemian Switzerland (2 netter: 8.–10. juli)
 
 **Campingplass: Campingplatz Ostrauer Mühle**
 - Adresse: Ostrauer Mühle 15, 01814 Bad Schandau, Tyskland
@@ -167,7 +168,7 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 
 ---
 
-### Stopp 4: Wien-området (Tulln an der Donau), Østerrike (1 natt: 11.–12. juli)
+### Stopp 4: Wien-området (Tulln an der Donau), Østerrike (1 natt: 10.–11. juli)
 
 **Kjøring:** Bad Schandau → Tulln, 420 km, 6 t 15 min via E55/D8 sørover → Prague-ring → D1/E65 sørøst → Wien → B14/A1 nordvest til Tulln an der Donau. (80 km/t med campingvogn gjennom Tsjekkia og Østerrike — tidlig start anbefales.)
 
@@ -190,7 +191,7 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 
 ---
 
-### Stopp 5: Plitvice Lakes NP, Kroatia (2 netter: 12.–14. juli)
+### Stopp 5: Plitvice Lakes NP, Kroatia (2 netter: 11.–13. juli)
 
 **Kjøring:** Tulln (Wien-området) → Plitvice Lakes, 420 km, 6 t 15 min via A21/A2 sørøst → Spielfeld/Šentilj grense → A1 Slovenia (Ljubljana) → A1 Kroatia → D429 → D1 inn mot nasjonalparken. Slovenisk vignett brukes her. (80 km/t med campingvogn i alle land på ruten.)
 
@@ -219,7 +220,7 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 
 ---
 
-### Stopp 6: Split, Kroatia (7 netter: 14.–21. juli)
+### Stopp 6: Split, Kroatia (7 netter: 13.–20. juli)
 
 **Kjøring:** Plitvice → Split, 271 km, 4 t via A1 sørover (via D429 til A1) → avkjøring mot Split. (80 km/t med campingvogn på kroatisk motorvei.)
 
@@ -253,7 +254,7 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 
 ---
 
-### Stopp 7: Poreč / Rovinj, Istria, Kroatia (4 netter: 21.–25. juli)
+### Stopp 7: Poreč / Rovinj, Istria, Kroatia (4 netter: 20.–24. juli)
 
 **Kjøring:** Split → Poreč/Rovinj, 310 km, 4 t 30 min via A1 nord → Rijeka → Y-motorvei vest mot Istria. Naturlig siste stopp i Kroatia på hjemveien. (80 km/t med campingvogn på kroatisk motorvei.)
 
@@ -284,34 +285,34 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 
 ### Hjemreise — stopp og transittdager (25. juli – 1. august)
 
-Hjemreisen inkluderer tre opplevelsesstopp — Zugspitze, Lübeck og Billund (Legoland) — i tillegg til en kulturnat i Bamberg.
+Hjemreisen inkluderer tre opplevelsesstopp — Zugspitze, Hamburg og Billund (Legoland) — i tillegg til to kulturnetter i Bamberg.
 
-**Zugspitze / Garmisch-Partenkirchen, Bayern (3 netter: 25.–28. juli)**
-- Kjøring: Poreč/Rovinj → Garmisch-Partenkirchen, 570 km, **8 t (inkl. Liechtensteinklamm 1,5 t)** via A9/E751 → Ljubljana → Karawanken → A10 Tauern → **Liechtensteinklamm-stopp** → Salzburg → A8 øst → A95 sør. **Svært lang dag — start senest kl. 07:30.** (80 km/t med campingvogn i alle land, inkl. 130 km i Tyskland på A8/A95.)
-- **Liechtensteinklamm (stoppested underveis):** Spektakulær 270 m dyp juv nær Werfen/St. Johann im Pongau i Salzburg-regionen, rett ved A10. Trebroer over fossende elv, dramatisk berglandskap. 1–2 t. William vil elske det. Parkering ved Pfarrwerfen: https://www.liechtensteinklamm.at/
-- Campingplass: DCC Campingpark Grainau, Zugspitzstraße 76, 82491 Grainau
-- Nettside: https://www.dcc-campingpark-grainau.de/
-- Aktiviteter dag 1 (26. juli): **Zugspitzbahn** — tannhjulsbane og gondolbane til Tysklands høyeste topp (2 962 m). Book billett på forhånd: https://www.zugspitze.de/
-- Aktiviteter dag 2 (27. juli): **Neuschwanstein Castle** (~75 km øst via B2/B17) — Kong Ludvig IIs eventyrslott. Obligatorisk forhåndsbooking: https://www.neuschwanstein.de/
-- Aktiviteter dag 3 (28. juli): Eibsee og Garmisch-Partenkirchen by — rolig dag før avreise mot Bamberg.
+**Zugspitze, Bayern (3 netter: 24.–27. juli)**
+- Kjøring: Poreč/Rovinj → Zugspitze/Grainau, 570 km, **8 t (inkl. Liechtensteinklamm 1,5 t)** via A9/E751 → Ljubljana → Karawanken → A10 Tauern → **Liechtensteinklamm-stopp** → Salzburg → A8 øst → A95 sør. **Svært lang dag — start senest kl. 07:30.** (80 km/t med campingvogn i alle land, inkl. 130 km i Tyskland på A8/A95.)
+- **Liechtensteinklamm (stoppested underveis):** Spektakulær 270 m dyp juv nær Werfen/St. Johann im Pongau i Salzburg-regionen, rett ved A10. Trebroer over fossende elv, dramatisk berglandskap. 1–2 t. William vil elske det. https://www.josalzburg.com/de/aktivitaeten/liechtensteinklamm.html
+- Campingplass: Camping Resort Zugspitze, Griesener Str. 9, 82491 Grainau
+- Nettside: https://www.camping-resort-zugspitze.de/
+- Aktiviteter dag 1 (25. juli): **Zugspitzbahn** — tannhjulsbane og gondolbane til Tysklands høyeste topp (2 962 m). Book billett på forhånd: https://www.zugspitze.de/
+- Aktiviteter dag 2 (26. juli): **Neuschwanstein Castle** (~75 km øst via B2/B17) — Kong Ludvig IIs eventyrslott. Obligatorisk forhåndsbooking: https://www.neuschwanstein.de/
+- Aktiviteter dag 3 (27. juli): Eibsee og Garmisch-Partenkirchen by — rolig dag før avreise mot Bamberg.
 - Tips: Østerriksk vignett fra utreisen dekker eventuell tollstrekning. Ingen Umweltzone i Grainau/Garmisch.
 
-**Bamberg (1 natt: 28.–29. juli)**
-- Kjøring: Garmisch-Partenkirchen → Bamberg, 315 km, 4 t 45 min via A95/A8 nord → München → A9 nord → A73. (80 km/t med campingvogn, gjennomsnitt ~73 km/t.)
+**Bamberg (2 netter: 27.–29. juli)**
+- Kjøring: Zugspitze/Grainau → Bamberg, 315 km, 4 t 45 min via A95/A8 nord → München → A9 nord → A73. (80 km/t med campingvogn, gjennomsnitt ~73 km/t.)
 - Campingplass: Camping Island Bamberg, Campinginsel, 96052 Bamberg
 - Nettside: http://www.campinginsel.de/
-- Aktiviteter: Bamberg Altstadt (UNESCO) — over 2 400 fredede bygninger, romansk-gotisk katedral med "Bamberger Reiter", Altes Rathaus på elveøy. Kveldsspasertur.
+- Aktiviteter: Bamberg Altstadt (UNESCO) — over 2 400 fredede bygninger, romansk-gotisk katedral med "Bamberger Reiter", Altes Rathaus på elveøy. To netter gir god tid til gamlebyen og aftenmidddag med Schlenkerla Rauchbier.
 - Tips: Ingen Umweltzone. Kompakt gamlebyen — parkér ved campingplassen og gå inn.
 
-**Lübeck (1 natt: 29.–30. juli)**
-- Kjøring: Bamberg → Lübeck, 545 km, **8 t ⚠️** via A73 nord → A9 → A14 → Hamburg → A1 øst. **Overstiger 6t-grensen** — start senest kl. 07:00.
-- Campingplass: Naturcamping Brodten, Brodtener Ufer 37, 23570 Lübeck-Travemünde (på klipper ved Østersjøen)
-- Nettside: https://www.naturcamping-brodten.de/
-- Aktiviteter: Holstenporten og UNESCO-gamlebyen, Niederegger Marzipan (siden 1806), badestrand i Travemünde
-- Tips: Ingen Umweltzone. Neste dag: Lübeck → Billund via A1/A7 nord → Flensburg → E45, ca. 285 km, 4 t 15 min (80 km/t med campingvogn).
+**Hamburg (1 natt: 29.–30. juli)**
+- Kjøring: Bamberg → Hamburg, 475 km, **6 t 30 min ⚠️** via A73 nord → A9 → A14 → Hamburg. Svakt over 6t-grensen — start senest kl. 07:00. Direkte på ruten mot Billund, ingen omvei.
+- Campingplass: KNAUS Campingpark Hamburg, Wunderbrunnen 2, 22457 Hamburg
+- Nettside: https://www.knauscamp.de/hamburg/
+- Aktiviteter: **Miniatur Wunderland** (verdens største modelljernbane, perfekt for William — book billett online!), Speicherstadt (UNESCO-kanalkvarter), Hamburger Hafen
+- Tips: Book Miniatur Wunderland online på forhånd — veldig populær i juli. Neste dag: Hamburg → Billund via A7 nord → Flensburg → E45, ca. 250 km, 3 t 30 min (80 km/t med campingvogn i Danmark).
 
 **Billund, Danmark (2 netter: 30. juli–1. august)**
-- Kjøring: Lübeck → Billund, 285 km, 4 t 15 min via A1 vest → Hamburg → A7 nord → Flensburg-grensa → E45 nord inn i Danmark → Billund
+- Kjøring: Hamburg → Billund, 250 km, 3 t 30 min via A7 nord → Flensburg-grensa → E45 nord inn i Danmark → Billund
 - Campingplass: Legoland® Campingarea, Ellehammervej 2, 7190 Billund
 - Nettside: https://www.legoland.dk/feriepark/overnatning/camping/
 - Aktiviteter dag 1 (31. juli): **Legoland® Billund** — verdens første Legoland (åpnet 1968), 8 tematiske verdener, Miniland og rides. Heldagsopplevelse. Bestill billett online: https://www.legoland.dk/
@@ -399,6 +400,7 @@ Disse 10 campingplassene dekker ulike reisestiler langs hele den kroatiske ruten
 
 | Dato | Endring | Av |
 | --- | --- | --- |
+| 2026-05-05 | Åtte endringer: (1) Berlin: LEGOLAND Discovery Centre fjernet, erstattet med FEZ Berlin (aktivitetssenter for barn — must-do) og Dark Matter-utstillingen (must-do). (2) Berlin redusert fra 4 til 3 netter (5.–8. juli) — 1 dag overført til Bamberg. (3) Alle datoer mellom Berlin og Zugspitze fremskutt 1 dag. (4) Zugspitze omdøpt fra «Zugspitze / Garmisch-Partenkirchen» til «Zugspitze» og campingplass byttet til Camping Resort Zugspitze (Griesener Str. 9, 82491 Grainau). (5) Bamberg utvidet til 2 netter (27.–29. juli). (6) Stopp 10 byttet fra Lübeck til Hamburg (KNAUS Campingpark Hamburg) — Miniatur Wunderland som hovedaktivitet for William. Bamberg→Hamburg 475 km/6t 30min vs. tidligere 545 km/8t til Lübeck. Hamburg→Billund 250 km/3t 30min. (7) Color Magic-pris oppdatert til bekreftet 16 200 NOK (med riktig kjøretøyhøyde/-lengde). Color Line Hirtshals–Larvik estimert til ~5 000 NOK (samme hensyn). Ferge+bompenger-budsjett økt fra 12 000 til 23 000 NOK. (8) Liechtensteinklamm URL byttet til josalzburg.com. | Claude |
 | 2026-05-05 | To gjennomganger: (1) Kjøretider korrigert for alle etapper basert på faktisk 80 km/t fartsgrense med campingvogn i alle reiseland (Norge, Tsjekkia, Tyskland, Østerrike, Slovenia, Kroatia, Danmark) — snittfart ~73 km/t. Økt med 30 min–2,5 t per etappe. Fartsgrense-tabell i §3 korrigert: Østerrike/Slovenia var feil oppgitt som 100 km/t (korrekt: 80 km/t for henger >750 kg). Kroatia rettet fra 90 til 80 km/t (vår kombinasjon totalt ~3 700 kg). Tsjekkia lagt til. Advarsel lagt til for Bamberg → Lübeck (545 km, ~8t) som overskrider 6t-grensen. (2) Drivstoffbudsjett oppdatert til 11 500 NOK basert på 5 500 km × 11 L/100 km = 605 L × snitt ~19 NOK/L lokale priser. | Claude |
 | 2026-05-04 | Fem endringer: (1) Plitvice redusert fra 3 til 2 netter (12.–14. juli). (2) Brno og Graz fjernet som transitt — erstattet med ett stopp ved Wien-området: Donaupark Camping Tulln (11.–12. juli). (3) Billund lagt til med 2 netter (30. juli–1. august) for Legoland — Legoland® Campingarea, mellom Lübeck og Hirtshals. (4) Alle påfølgende datoer fra Plitvice til Lübeck fremskutt 2 dager. (5) Hero-tittel oppdatert til «Fra Kongsberg til Kroatia og tilbake». Stopp renummerert 1–13 uten hull. Totalt 28 netter uendret. | Claude |
 | 2026-05-04 | Fire endringer: (1) Campingplass ved Plitvice (stopp 3) byttet fra Camp Korana til Camping Plitvice (campingplitvice.hr). (2) Stopp 4 (Šibenik/Krka NP) fjernet — alle aktiviteter (Skradinski buk, Visovac-kloster, Šibenik UNESCO, Kornati) overført til Split-stoppen. Split utvidet fra 5 til 7 netter (16.–23. juli), direkte kjøring fra Plitvice (271 km, 3t 30min). (3) Zugspitze utvidet fra 2 til 3 netter (27.–30. juli). (4) Campingplass i Bamberg byttet til Camping Island Bamberg (campinginsel.de). Totalt 28 netter uendret, 14 netter i Kroatia. | Claude |
