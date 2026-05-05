@@ -270,6 +270,7 @@ Her kan vi legge idéer som kan vurderes senere, men som foreløpig ikke skal in
 
 | Dato | Endring | Av |
 | --- | --- | --- |
+| 2026-05-05 | Kjøretider omberegnet for alle etapper med korrekt metodikk: snitt 73 km/t motorvei / 62 km/t landevei + 25 min per hvil (ett stopp per 3 t kjøring). Alle tidligere tider brukte ~80 km/t snitt som overskrider lovlig grense. Endringer i Ferieplanen-2026.md (kjøreetapper-tabell) og index.html (driveFromPrevious.hours alle stopp). Bad Schandau → Møns Klint flagget ⚠️ — foretreisedel (380 km) treffer 6-timersgrensen. | Claude |
 | 2026-05-03 | §2.6 Værvarsel lagt til. Open-Meteo (gratis, ingen API-nøkkel) henter prognose ved sideåpning og cacher 1 time i localStorage. Tre visningssteder: kart-popup, kollapset Reiseplan-bar (kompakt strip med ett midday-symbol per dag) og utvidet detaljvisning (tabell med 5 tidspunkt per dag). Inline SVG-ikoner i 10 kategorier inkl. «ikke tilgjengelig». «Værvarsel-widget» fjernet fra §8 Fremtidige muligheter. | Claude |
 | 2026-04-09 | Dokumentet opprettet — struktur og tomme seksjoner | Claude + Arne |
 | 2026-04-10 | Teknologivalg, navigasjonsstruktur, designprinsipper, sjekkliste-strategi avklart via intervju | Claude + Arne |

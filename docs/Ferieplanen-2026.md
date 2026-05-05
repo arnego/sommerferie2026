@@ -64,20 +64,20 @@ William er 5 år og er en viktig del av planleggingen:
 |-----|-----|---------|----------|------|
 | Kongsberg | Larvik (ferge) | 85 km | 1 t 10 min | E18 sør |
 | Larvik | Hirtshals (ferge) | - | 3 t 45 min | Color Line SuperSpeed |
-| Hirtshals | Løkken | 55 km | 45 min | Rute 55 |
-| Løkken | Silkeborg | 130 km | 1 t 40 min | Rute 55 sørover fra Løkken, E39/rute 11 sør, rute 12 øst til Silkeborg |
-| Silkeborg | Billund | 40 km | 35 min | Rute 52/A13 |
-| Billund | Lübeck | 330 km | 4 t 15 min | E45/A7 sørover, A1 øst mot Lübeck |
-| Lübeck | Hamburg (dagstur) | 65 km | 45 min | A1 vest |
-| Lübeck | Berlin | 330 km | 3 t 45 min | A20 øst mot Rostock, A19/A24 sør mot Berlin |
-| Berlin | Bad Schandau | 250 km | 3 t 15 min | A13/A17 |
-| Bad Schandau | Møns Klint (via Rostock/Scandlines) | 445 km | 5t 15min + 2t ferge + 50min | A13/A14/A19 Dresden–Leipzig–Rostock (ca. 380 km), Scandlines ferge Rostock→Gedser (2t), E55 nord, Rute 59 vest til Møn |
-| Møns Klint | København | 120 km | 1 t 30 min | Rute 59 nord fra Møn, E47/E55 |
+| Hirtshals | Løkken | 55 km | 55 min | Rute 55 |
+| Løkken | Silkeborg | 130 km | 2 t 05 min | Rute 55 sørover fra Løkken, E39/rute 11 sør, rute 12 øst til Silkeborg |
+| Silkeborg | Billund | 40 km | 40 min | Rute 52/A13 |
+| Billund | Lübeck | 330 km | 5 t 00 min | E45/A7 sørover, A1 øst mot Lübeck |
+| Lübeck | Hamburg (dagstur) | 65 km | 55 min | A1 vest |
+| Lübeck | Berlin | 330 km | 5 t 00 min | A20 øst mot Rostock, A19/A24 sør mot Berlin |
+| Berlin | Bad Schandau | 250 km | 3 t 50 min | A13/A17 |
+| Bad Schandau | Møns Klint (via Rostock/Scandlines) | 445 km | ⚠️ 6 t 10 min + 2 t ferge + 1 t 05 min | A17 Dresden → A13/A10/A19 til Rostock (ca. 380 km), Scandlines ferge Rostock→Gedser (2 t), E55 nord, Rute 59 vest til Møn |
+| Møns Klint | København | 120 km | 1 t 45 min | Rute 59 nord fra Møn, E47/E55 |
 | København | Go Nordic terminal (Nordhavn) | 5 km | 15 min | Innkjøring kl. 14:00–15:30 |
 | København | Oslo (ferge) | - | ca. 17 t | Go Nordic Cruiseline (overnatting) |
 | Oslo | Kongsberg | 85 km | 1 t 15 min | E18/E134 |
 
-Alle kjøretider er beregnet med campingvogn (ca. 80 km/t snitt).
+Alle kjøretider er beregnet med campingvogn og juridisk fartsgrense 80 km/t (snitt 73 km/t på motorvei, 62 km/t på landevei) + 25 min per obligatorisk hvil (ett stopp per 3 timers kjøring). ⚠️ = etappe over 6-timers-grensen.
 
 ---
 
