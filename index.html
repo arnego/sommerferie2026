@@ -446,6 +446,7 @@ tailwind.config = {
               <span x-text="item.amount.toLocaleString('no-NO')"></span>
               <span class="text-sm text-muted font-body ml-1">NOK</span>
             </p>
+            <p x-show="item.detail" class="text-xs text-muted mt-1 leading-snug" x-text="item.detail"></p>
             <div class="mt-3 h-1.5 bg-sand/50 rounded-full overflow-hidden">
               <div class="h-full rounded-full transition-all duration-500"
                    :class="item.color"
@@ -813,12 +814,18 @@ function ferieApp() {
 
     // Budsjett
     budget: [
-      { category: 'Drivstoff', amount: 12000, color: 'bg-petrol' },
-      { category: 'Overnatting (camping)', amount: 15000, color: 'bg-success' },
-      { category: 'Mat og dagligvarer', amount: 20000, color: 'bg-sunshine' },
-      { category: 'Aktiviteter og inngang', amount: 10000, color: 'bg-petrol/70' },
-      { category: 'Ferger og bompenger', amount: 8000, color: 'bg-charcoal/60' },
-      { category: 'Buffer (10%)', amount: 6500, color: 'bg-muted' },
+      { category: 'Drivstoff (diesel)', amount: 7500, color: 'bg-petrol',
+        detail: 'ca. 2 500 km × 15 L/100 km ≈ 375 L · snitt ~19 NOK/L (NO ~21, DK/DE ~18)' },
+      { category: 'Overnatting (camping)', amount: 14000, color: 'bg-success',
+        detail: '27 netter · snitt ~520 NOK/natt (inkl. strøm, 2 voksne + William)' },
+      { category: 'Mat og dagligvarer', amount: 20000, color: 'bg-sunshine',
+        detail: '28 dager · snitt ~700 NOK/dag (camping-mat + utemat 3–4×/uke)' },
+      { category: 'Aktiviteter og inngang', amount: 12000, color: 'bg-petrol/70',
+        detail: 'LEGOLAND, LEGO House, Miniatur Wunderland, Tropical Islands, Berlin Zoo m.fl.' },
+      { category: 'Ferger', amount: 11000, color: 'bg-charcoal/60',
+        detail: 'Color Line ~3 500 · Scandlines ~1 800 · Go Nordic mini-cruise ~5 500 · ekstra lengde' },
+      { category: 'Buffer (10%)', amount: 6500, color: 'bg-muted',
+        detail: 'Uforutsette utgifter, drivstoffprisvariasjoner, sykdom m.m.' },
     ],
     get budgetTotal() {
       return this.budget.reduce((sum, item) => sum + item.amount, 0);
