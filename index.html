@@ -492,52 +492,64 @@ tailwind.config = {
         <div class="px-5 py-2.5 bg-cream/50 text-xs text-muted">Omtrentlige kurser. Sjekk oppdaterte kurser for avreise.</div>
       </div>
 
-      <!-- Big Mac Index -->
-      <h3 class="font-heading text-lg text-petrol mb-4">Big Mac Index - kostnadsnivå</h3>
-      <div class="bg-white rounded-xl border border-sand/50 overflow-hidden mb-8">
-        <table class="w-full text-sm">
+      <!-- Kostnadsnivå -->
+      <h3 class="font-heading text-lg text-petrol mb-4">Kostnadsnivå — mat, drikke og camping</h3>
+      <div class="bg-white rounded-xl border border-sand/50 overflow-x-auto mb-8">
+        <table class="w-full text-sm min-w-[680px]">
           <thead class="bg-cream/70">
             <tr>
-              <th class="text-left px-5 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Land</th>
-              <th class="text-right px-5 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Lokal pris</th>
-              <th class="text-right px-5 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">I NOK</th>
-              <th class="text-right px-5 py-3 text-xs text-petrol uppercase tracking-wider font-semibold hidden sm:table-cell">vs. Norge</th>
+              <th class="text-left px-4 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Land</th>
+              <th class="text-right px-4 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Enkel lunsj</th>
+              <th class="text-right px-4 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Middag for to</th>
+              <th class="text-right px-4 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Halvliter øl</th>
+              <th class="text-right px-4 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Cappuccino</th>
+              <th class="text-right px-4 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Camping / natt ①</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-sand/30">
             <tr class="hover:bg-cream/30">
-              <td class="px-5 py-3 font-medium">Norge</td>
-              <td class="px-5 py-3 text-right text-muted">~75 NOK</td>
-              <td class="px-5 py-3 text-right font-medium">75 NOK</td>
-              <td class="px-5 py-3 text-right text-muted hidden sm:table-cell">-</td>
+              <td class="px-4 py-3 font-medium">Norge</td>
+              <td class="px-4 py-3 text-right text-muted">~150 kr</td>
+              <td class="px-4 py-3 text-right text-muted">~800 kr</td>
+              <td class="px-4 py-3 text-right text-muted">~100 kr</td>
+              <td class="px-4 py-3 text-right text-muted">~60 kr</td>
+              <td class="px-4 py-3 text-right text-muted">~350 kr</td>
             </tr>
             <tr class="hover:bg-cream/30">
-              <td class="px-5 py-3 font-medium">Danmark</td>
-              <td class="px-5 py-3 text-right text-muted">~35 DKK</td>
-              <td class="px-5 py-3 text-right font-medium">~54 NOK</td>
-              <td class="px-5 py-3 text-right text-success hidden sm:table-cell">28% billigere</td>
+              <td class="px-4 py-3 font-medium">Danmark</td>
+              <td class="px-4 py-3 text-right"><span class="font-medium">~147 kr</span><br><span class="text-xs text-muted">95 DKK</span></td>
+              <td class="px-4 py-3 text-right"><span class="font-medium">~775 kr</span><br><span class="text-xs text-muted">500 DKK</span></td>
+              <td class="px-4 py-3 text-right"><span class="font-medium">~93 kr</span><br><span class="text-xs text-muted">60 DKK</span></td>
+              <td class="px-4 py-3 text-right"><span class="font-medium">~78 kr</span><br><span class="text-xs text-muted">50 DKK</span></td>
+              <td class="px-4 py-3 text-right"><span class="font-medium">~465 kr</span><br><span class="text-xs text-muted">300 DKK</span></td>
             </tr>
             <tr class="hover:bg-cream/30">
-              <td class="px-5 py-3 font-medium">Tyskland</td>
-              <td class="px-5 py-3 text-right text-muted">~5,30 EUR</td>
-              <td class="px-5 py-3 text-right font-medium">~61 NOK</td>
-              <td class="px-5 py-3 text-right text-success hidden sm:table-cell">19% billigere</td>
+              <td class="px-4 py-3 font-medium">Tyskland</td>
+              <td class="px-4 py-3 text-right"><span class="font-medium">~127 kr</span><br><span class="text-xs text-muted">11 EUR</span></td>
+              <td class="px-4 py-3 text-right"><span class="font-medium">~748 kr</span><br><span class="text-xs text-muted">65 EUR</span></td>
+              <td class="px-4 py-3 text-right"><span class="font-medium">~52 kr</span><br><span class="text-xs text-muted">4,50 EUR</span></td>
+              <td class="px-4 py-3 text-right"><span class="font-medium">~40 kr</span><br><span class="text-xs text-muted">3,50 EUR</span></td>
+              <td class="px-4 py-3 text-right"><span class="font-medium">~357 kr</span><br><span class="text-xs text-muted">31 EUR, snitt 5 pl.</span></td>
             </tr>
             <tr class="hover:bg-cream/30">
-              <td class="px-5 py-3 font-medium">Kroatia</td>
-              <td class="px-5 py-3 text-right text-muted">~4,40 EUR</td>
-              <td class="px-5 py-3 text-right font-medium">~51 NOK</td>
-              <td class="px-5 py-3 text-right text-success hidden sm:table-cell">32% billigere</td>
+              <td class="px-4 py-3 font-medium">Østerrike</td>
+              <td class="px-4 py-3 text-right"><span class="font-medium">~138 kr</span><br><span class="text-xs text-muted">12 EUR</span></td>
+              <td class="px-4 py-3 text-right"><span class="font-medium">~805 kr</span><br><span class="text-xs text-muted">70 EUR</span></td>
+              <td class="px-4 py-3 text-right"><span class="font-medium">~52 kr</span><br><span class="text-xs text-muted">4,50 EUR</span></td>
+              <td class="px-4 py-3 text-right"><span class="font-medium">~41 kr</span><br><span class="text-xs text-muted">3,60 EUR</span></td>
+              <td class="px-4 py-3 text-right"><span class="font-medium">~368 kr</span><br><span class="text-xs text-muted">32 EUR</span></td>
             </tr>
             <tr class="hover:bg-cream/30">
-              <td class="px-5 py-3 font-medium">Østerrike</td>
-              <td class="px-5 py-3 text-right text-muted">~4,60 EUR</td>
-              <td class="px-5 py-3 text-right font-medium">~53 NOK</td>
-              <td class="px-5 py-3 text-right text-success hidden sm:table-cell">29% billigere</td>
+              <td class="px-4 py-3 font-medium">Kroatia</td>
+              <td class="px-4 py-3 text-right"><span class="font-medium text-success">~115 kr</span><br><span class="text-xs text-muted">10 EUR</span></td>
+              <td class="px-4 py-3 text-right"><span class="font-medium text-success">~575 kr</span><br><span class="text-xs text-muted">50 EUR</span></td>
+              <td class="px-4 py-3 text-right"><span class="font-medium text-success">~40 kr</span><br><span class="text-xs text-muted">3,50 EUR</span></td>
+              <td class="px-4 py-3 text-right"><span class="font-medium text-success">~23 kr</span><br><span class="text-xs text-muted">2 EUR</span></td>
+              <td class="px-4 py-3 text-right"><span class="font-medium">~552 kr</span><br><span class="text-xs text-muted">48 EUR, snitt 3 pl.</span></td>
             </tr>
           </tbody>
         </table>
-        <div class="px-5 py-2.5 bg-cream/50 text-xs text-muted">Big Mac Index gir et omtrentlig bilde av kostnadsnivå. Mat og dagligvarer er generelt billigere i reiselandene enn i Norge. Kroatia bruker EUR siden 2023.</div>
+        <div class="px-5 py-2.5 bg-cream/50 text-xs text-muted">① Campingpris for 2 voksne + 1 barn + campingvogn + strøm, basert på valgte campingplasser i ruten. For Kroatia: snitt av Camping Plitvice, Camping Stobreč Split og Maistra Veštar — resort-fasiliteter og høysesong i juli gjør campingen dyrere enn det generelle prisnivået i landet. Mat og drikke (grønt) er billigst i Kroatia. Priser er omtrentlige for sommeren 2026.</div>
       </div>
 
       <!-- Fartsgrenser med henger -->
