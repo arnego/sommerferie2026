@@ -263,12 +263,33 @@ tailwind.config = {
                 <!-- Camping-info -->
                 <template x-if="stop.camping">
                   <div class="px-3 py-2 bg-cream rounded-lg">
-                    <p class="text-xs text-muted uppercase tracking-wider font-medium mb-1" x-text="stop.camping.label || 'Campingplass'"></p>
+                    <div class="flex items-start justify-between gap-2 mb-1">
+                      <p class="text-xs text-muted uppercase tracking-wider font-medium" x-text="stop.camping.label || 'Campingplass'"></p>
+                      <template x-if="stop.camping.booked">
+                        <span class="text-[10px] px-1.5 py-0.5 rounded-full bg-success/10 text-success font-medium whitespace-nowrap">✓ Booket</span>
+                      </template>
+                      <template x-if="!stop.camping.booked">
+                        <span class="text-[10px] px-1.5 py-0.5 rounded-full bg-sunshine/10 text-sunshine font-medium whitespace-nowrap">⚠ Utestående</span>
+                      </template>
+                    </div>
                     <p class="text-sm font-medium">
                       <a :href="stop.camping.url" target="_blank" rel="noopener"
                          class="text-petrol hover:underline" x-text="stop.camping.name"></a>
                     </p>
                     <p class="text-xs text-charcoal/60 mt-0.5" x-text="stop.camping.address"></p>
+                    <template x-if="stop.camping.checkIn || stop.camping.checkOut">
+                      <p class="text-xs text-charcoal/70 mt-1.5">
+                        <span class="font-medium">🕒 Innsjekk:</span> <span x-text="stop.camping.checkIn"></span>
+                        <span class="mx-1 text-muted">·</span>
+                        <span class="font-medium">Utsjekk:</span> <span x-text="stop.camping.checkOut"></span>
+                        <template x-if="stop.camping.timesEstimated">
+                          <span class="ml-1 text-muted italic">(ca. — verifisér ved booking)</span>
+                        </template>
+                      </p>
+                    </template>
+                    <template x-if="stop.camping.bookingRef">
+                      <p class="text-xs text-muted mt-1">Bookingref: <span class="font-mono text-charcoal/80" x-text="stop.camping.bookingRef"></span></p>
+                    </template>
                   </div>
                 </template>
 
@@ -551,6 +572,113 @@ tailwind.config = {
         </table>
         <div class="px-5 py-2.5 bg-cream/50 text-xs text-muted">① Campingpris for 2 voksne + 1 barn + campingvogn + strøm, basert på valgte campingplasser i ruten. For Kroatia: snitt av Camping Plitvice, Camping Stobreč Split og Maistra Veštar — resort-fasiliteter og høysesong i juli gjør campingen dyrere enn det generelle prisnivået i landet. Mat og drikke (grønt) er billigst i Kroatia. Priser er omtrentlige for sommeren 2026.</div>
       </div>
+
+      <!-- Bookingstatus -->
+      <h3 class="font-heading text-lg text-petrol mb-4">Bookingstatus — overnattinger og ferger</h3>
+      <div class="bg-white rounded-xl border border-sand/50 overflow-hidden mb-3">
+        <div class="px-5 py-3 bg-cream/70 flex items-center justify-between">
+          <div>
+            <p class="text-sm font-semibold text-petrol">
+              <span x-text="stops.filter(s => s.camping && s.camping.booked).length"></span>
+              <span> av </span>
+              <span x-text="stops.filter(s => s.camping).length"></span>
+              <span> booket</span>
+            </p>
+            <p class="text-xs text-muted mt-0.5">Trykk på lenken for å gå direkte til booking</p>
+          </div>
+          <div class="hidden sm:flex items-center gap-3 text-xs">
+            <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-success"></span> <span class="text-muted">Booket</span></span>
+            <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-sunshine"></span> <span class="text-muted">Utestående</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white rounded-xl border border-sand/50 overflow-x-auto mb-8">
+        <table class="w-full text-sm min-w-[720px]">
+          <thead class="bg-cream/70">
+            <tr>
+              <th class="text-left px-4 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">#</th>
+              <th class="text-left px-4 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Stopp</th>
+              <th class="text-left px-4 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Datoer</th>
+              <th class="text-right px-4 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Netter</th>
+              <th class="text-left px-4 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Overnatting</th>
+              <th class="text-center px-4 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Status</th>
+              <th class="text-center px-4 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Bookingside</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-sand/30">
+            <template x-for="stop in stops.filter(s => s.camping)" :key="stop.id">
+              <tr class="hover:bg-cream/30">
+                <td class="px-4 py-3 text-muted font-medium" x-text="stop.id"></td>
+                <td class="px-4 py-3 font-medium" x-text="stop.name"></td>
+                <td class="px-4 py-3 text-charcoal/70 whitespace-nowrap" x-text="formatStopDates(stop)"></td>
+                <td class="px-4 py-3 text-right text-muted" x-text="stop.nights || '—'"></td>
+                <td class="px-4 py-3">
+                  <p class="font-medium" x-text="stop.camping.name"></p>
+                  <p class="text-xs text-muted" x-show="stop.camping.bookingRef">Ref: <span class="font-mono" x-text="stop.camping.bookingRef"></span></p>
+                </td>
+                <td class="px-4 py-3 text-center">
+                  <template x-if="stop.camping.booked">
+                    <span class="inline-block text-xs px-2.5 py-1 rounded-full bg-success/10 text-success font-medium whitespace-nowrap">✓ Booket</span>
+                  </template>
+                  <template x-if="!stop.camping.booked">
+                    <span class="inline-block text-xs px-2.5 py-1 rounded-full bg-sunshine/10 text-sunshine font-medium whitespace-nowrap">⚠ Utestående</span>
+                  </template>
+                </td>
+                <td class="px-4 py-3 text-center">
+                  <a :href="stop.camping.url" target="_blank" rel="noopener"
+                     class="inline-flex items-center gap-1 text-petrol hover:underline text-xs font-medium">
+                    <span>Book ↗</span>
+                  </a>
+                </td>
+              </tr>
+            </template>
+          </tbody>
+        </table>
+        <div class="px-5 py-2.5 bg-cream/50 text-xs text-muted">Husk å booke senest mai 2026 for julitoppen i Kroatia. Kroatiske kystplasser fylles raskt opp.</div>
+      </div>
+
+      <!-- Istria — 10 familievennlige alternativer -->
+      <h3 class="font-heading text-lg text-petrol mb-2">Istria — 10 familievennlige alternativer</h3>
+      <p class="text-sm text-charcoal/70 mb-4">Stopp 7 (Poreč/Rovinj) er ennå ikke booket. Her er 10 familievennlige campingplasser på Istria-halvøya — alle med strand, kulturelle severdigheter og naturopplevelser i nærområdet. Sortert nord → sør.</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-3">
+        <template x-for="alt in istriaAlternatives" :key="alt.name">
+          <div class="bg-white rounded-xl border border-sand/50 p-5 flex flex-col">
+            <div class="flex items-start justify-between gap-2 mb-2">
+              <div>
+                <h4 class="font-heading text-base text-petrol leading-tight" x-text="alt.name"></h4>
+                <p class="text-xs text-muted mt-0.5" x-text="alt.location"></p>
+              </div>
+              <template x-if="alt.current">
+                <span class="text-[10px] px-2 py-0.5 rounded-full bg-sunshine/15 text-sunshine font-medium whitespace-nowrap">★ Nåværende valg</span>
+              </template>
+            </div>
+            <p class="text-xs text-charcoal/80 mb-3">
+              <span class="font-medium">Pris/natt (juli):</span> <span x-text="alt.price"></span>
+            </p>
+            <div class="mb-3">
+              <p class="text-[10px] text-muted uppercase tracking-wider font-semibold mb-1">Fasiliteter</p>
+              <ul class="space-y-0.5">
+                <template x-for="f in alt.facilities" :key="f">
+                  <li class="text-xs text-charcoal/75 pl-3 relative before:content-[''] before:absolute before:left-0 before:top-1.5 before:w-1 before:h-1 before:bg-success before:rounded-full" x-text="f"></li>
+                </template>
+              </ul>
+            </div>
+            <div class="mb-3 flex-grow">
+              <p class="text-[10px] text-muted uppercase tracking-wider font-semibold mb-1">Severdigheter i nærområdet</p>
+              <ul class="space-y-0.5">
+                <template x-for="s in alt.sights" :key="s">
+                  <li class="text-xs text-charcoal/75 pl-3 relative before:content-[''] before:absolute before:left-0 before:top-1.5 before:w-1 before:h-1 before:bg-petrol before:rounded-full" x-text="s"></li>
+                </template>
+              </ul>
+            </div>
+            <a :href="alt.url" target="_blank" rel="noopener"
+               class="mt-auto inline-flex items-center justify-center gap-1 px-4 py-2 rounded-lg bg-petrol text-white text-sm font-medium hover:bg-petrol/90 transition-colors">
+              <span>Booke direkte ↗</span>
+            </a>
+          </div>
+        </template>
+      </div>
+      <p class="text-xs text-muted mb-8">Priser er estimater for høysesong (juli 2026) for 2 voksne + 1 barn + campingvogn + strøm. Verifiser ved booking. Reserver senest mai 2026.</p>
 
       <!-- Fartsgrenser med henger -->
       <h3 class="font-heading text-lg text-petrol mb-4">Fartsgrenser med campingvogn</h3>
@@ -899,6 +1027,14 @@ function ferieApp() {
       return d.getDate() + '. ' + ['jan','feb','mar','apr','mai','jun','jul','aug','sep','okt','nov','des'][d.getMonth()];
     },
 
+    formatStopDates(stop) {
+      if (!stop || !stop.arrivalDate) return '—';
+      if (!stop.departureDate || stop.departureDate === stop.arrivalDate) {
+        return this.formatDate(stop.arrivalDate);
+      }
+      return this.formatDate(stop.arrivalDate) + ' – ' + this.formatDate(stop.departureDate);
+    },
+
     getMapsUrl(stop) {
       const dest = stop.camping && stop.camping.address
         ? encodeURIComponent(stop.camping.address)
@@ -1210,6 +1346,9 @@ function ferieApp() {
           url: 'https://www.colorline.no/oslo-kiel',
           booked: false,
           bookingRef: '',
+          checkIn: 'Ombord fra 12:30 (avgang 14:00)',
+          checkOut: 'Avstigning Kiel ca. 10:00',
+          timesEstimated: false,
         },
         driveFromPrevious: {
           km: 85,
@@ -1241,6 +1380,9 @@ function ferieApp() {
           url: 'https://www.dccberlin.de/',
           booked: false,
           bookingRef: '',
+          checkIn: '13:00',
+          checkOut: '12:00',
+          timesEstimated: true,
         },
         driveFromPrevious: {
           km: 354,
@@ -1276,6 +1418,9 @@ function ferieApp() {
           url: 'https://www.ostrauer-muehle.de/',
           booked: false,
           bookingRef: '',
+          checkIn: '14:00',
+          checkOut: '11:00',
+          timesEstimated: true,
         },
         driveFromPrevious: {
           km: 224,
@@ -1309,6 +1454,9 @@ function ferieApp() {
           url: 'https://www.donaupark-camping.at/',
           booked: false,
           bookingRef: '',
+          checkIn: '14:00',
+          checkOut: '10:00',
+          timesEstimated: false,
         },
         driveFromPrevious: {
           km: 420,
@@ -1344,6 +1492,9 @@ function ferieApp() {
           url: 'https://campingplitvice.hr/',
           booked: false,
           bookingRef: '',
+          checkIn: '13:00',
+          checkOut: '11:00',
+          timesEstimated: true,
         },
         driveFromPrevious: {
           km: 420,
@@ -1375,8 +1526,12 @@ function ferieApp() {
           name: 'Camping Stobreč Split',
           address: 'Stobreč bb, 21311 Stobreč – 6 km fra Diokletians palass',
           url: 'https://www.campingsplit.com/',
-          booked: false,
-          bookingRef: '',
+          booked: true,
+          bookingRef: 'PH27767231',
+          bookingDate: '2026-05-08',
+          checkIn: '13:00',
+          checkOut: '07:00–12:30',
+          timesEstimated: false,
         },
         driveFromPrevious: {
           km: 271,
@@ -1414,6 +1569,9 @@ function ferieApp() {
           url: 'https://www.maistra.com/properties/campsite-vestar/',
           booked: false,
           bookingRef: '',
+          checkIn: '15:00',
+          checkOut: '07:00–10:00',
+          timesEstimated: false,
         },
         driveFromPrevious: {
           km: 310,
@@ -1448,6 +1606,9 @@ function ferieApp() {
           url: 'https://www.camping-resort-zugspitze.de/',
           booked: false,
           bookingRef: '',
+          checkIn: '14:00',
+          checkOut: '12:00',
+          timesEstimated: true,
         },
         driveFromPrevious: {
           km: 570,
@@ -1482,6 +1643,9 @@ function ferieApp() {
           url: 'http://www.campinginsel.de/',
           booked: false,
           bookingRef: '',
+          checkIn: '13:00',
+          checkOut: '12:00',
+          timesEstimated: true,
         },
         driveFromPrevious: {
           km: 315,
@@ -1515,6 +1679,9 @@ function ferieApp() {
           url: 'https://www.knauscamp.de/hamburg/',
           booked: false,
           bookingRef: '',
+          checkIn: '14:00',
+          checkOut: '12:00',
+          timesEstimated: true,
         },
         driveFromPrevious: {
           km: 475,
@@ -1547,6 +1714,9 @@ function ferieApp() {
           url: 'https://www.legoland.dk/feriepark/overnatning/camping/',
           booked: false,
           bookingRef: '',
+          checkIn: '14:00',
+          checkOut: '11:00',
+          timesEstimated: true,
         },
         driveFromPrevious: {
           km: 250,
@@ -1585,6 +1755,9 @@ function ferieApp() {
           url: 'https://www.colorline.no/hirtshals-larvik',
           booked: false,
           bookingRef: '',
+          checkIn: 'Ombord fra 13:30 (avgang 14:30)',
+          checkOut: 'Avstigning Larvik ca. 18:15',
+          timesEstimated: false,
         },
         driveFromPrevious: {
           km: 250,
@@ -1628,6 +1801,180 @@ function ferieApp() {
 
     // Startpunkt (Kongsberg) for kartet
     homeBase: { lat: 59.67, lng: 9.65, name: 'Kongsberg' },
+
+    // Istria-alternativer for stopp 7 — sortert nord → sør
+    istriaAlternatives: [
+      {
+        name: 'Camping Park Umag',
+        location: 'Umag (nord-Istria)',
+        price: '~€40–50',
+        url: 'https://www.istracamping.com/accommodation/camping-park-umag/',
+        current: false,
+        facilities: [
+          '4-stjerns mega-camp med Blue Flag-strand',
+          '2 bassengkomplekser, 6 bassenger med sklier',
+          'Lekeplass og vannlekepark for barn',
+        ],
+        sights: [
+          'Middelalderbyen Umag (10 min)',
+          'Istrisk vinregion og olivenoljer',
+          'Novigrad gamleby (15 min)',
+        ],
+      },
+      {
+        name: 'Aminess Maravea Camping Resort',
+        location: 'Novigrad-Cittanova',
+        price: '~€40–50',
+        url: 'https://www.aminess.com/en/aminess-maravea-camping-resort',
+        current: false,
+        facilities: [
+          'Moderne familieresort med oppvarmede bassenger',
+          'Sandstrand med grunne barneområder',
+          'Kids\' club og animasjonsprogram',
+        ],
+        sights: [
+          'Pittoresk Novigrad gamleby (5 min)',
+          'Kysten mot Umag og Poreč',
+          'Mirna-elvedalen og Motovun-kollene',
+        ],
+      },
+      {
+        name: 'Valamar Camping Lanterna',
+        location: 'Tar / Poreč',
+        price: '~€55–65',
+        url: 'https://www.camping-adriatic.com/lanterna-premium-camping-resort-porec',
+        current: false,
+        facilities: [
+          '5-stjerns premium med 2 km steinstrand',
+          'Vannpark med sklier og bølgebasseng',
+          'Kids\' club med maskoten Maro',
+        ],
+        sights: [
+          'Poreč Eufrasius-basilika (UNESCO, 12 km)',
+          'Tar-bukten og Mirna-fjorden',
+          'Vrsar fiskelandsby og Lim-fjorden',
+        ],
+      },
+      {
+        name: 'Camping Bijela Uvala',
+        location: 'Poreč',
+        price: '~€35–45',
+        url: 'https://www.camping-adriatic.com/bijela-uvala-campsite-porec',
+        current: false,
+        facilities: [
+          '8.9/10 brukervurdering — populær blant familier',
+          '2 bassengkomplekser med barneområde',
+          'Direkte sjøtilgang og lange kystpromenader',
+        ],
+        sights: [
+          'Poreč gamlebyen (UNESCO) — 5 min',
+          'Lim-fjorden naturreservat',
+          'Baredine-grotten (drypsteinsgrotte)',
+        ],
+      },
+      {
+        name: 'Camping Valkanela',
+        location: 'Vrsar',
+        price: '~€35–45',
+        url: 'https://www.maistra.com/en/camping/camping-valkanela',
+        current: false,
+        facilities: [
+          'Daglige aktivitetsprogram for barn',
+          'Sandbukt med grunt vann — ideelt for William',
+          'Sport: tennis, beachvolley, sykkelutleie',
+        ],
+        sights: [
+          'Vrsar sjarmerende fiskelandsby (2 km)',
+          'Lim-fjorden naturreservat (10 min)',
+          'Funtana akvarium og kunstparker',
+        ],
+      },
+      {
+        name: 'Maistra Camping Veštar',
+        location: 'Rovinj',
+        price: '~€55–65',
+        url: 'https://www.maistra.com/properties/campsite-vestar/',
+        current: true,
+        facilities: [
+          '3 bassenger inkl. barneslider',
+          'Familieunderholdningsprogram',
+          'Gangavstand (~20 min) til Rovinj gamleby',
+        ],
+        sights: [
+          'Rovinj UNESCO-kandidat gamleby',
+          'Lim-fjorden naturreservat',
+          'St. Euphemia-basilika med panoramautsikt',
+        ],
+      },
+      {
+        name: 'Camping Polari',
+        location: 'Rovinj',
+        price: '~€45–55',
+        url: 'https://www.maistra.com/en/camping/camping-polari',
+        current: false,
+        facilities: [
+          '"Best campsite for kids" siden 2024',
+          'Omfattende animasjon — sirkusskole, kunst og sport',
+          'Premium Family Village med eget basseng',
+        ],
+        sights: [
+          'Rovinj sentrum (~5 km)',
+          'Kysten sør mot Bale og Pula',
+          'Lim-fjorden og Punta Corrente-parken',
+        ],
+      },
+      {
+        name: 'Mon Perin Village Plus',
+        location: 'Bale (mellom Rovinj og Pula)',
+        price: '~€40–50',
+        url: 'https://www.monperin.hr/',
+        current: false,
+        facilities: [
+          'Romslig camping i furuskog (720 plasser)',
+          'Direkte kystadgang med flere bademuligheter',
+          'Bassengkompleks for alle aldre',
+        ],
+        sights: [
+          'Bale — middelalderlandsby med 3 000 år historie',
+          'Vodnjan med Sveti Blaž-kirken',
+          'Pula amfiteater (30 km)',
+        ],
+      },
+      {
+        name: 'Camping Bi-Village',
+        location: 'Fažana (15 km fra Pula)',
+        price: '~€40–50',
+        url: 'https://www.bivillage.com/',
+        current: false,
+        facilities: [
+          '800 m sandstrand — sjelden i Istria!',
+          '3 bassenger med utsikt mot Brijuni-øyene',
+          'Vannsklier og oppblåsbar vannbane',
+        ],
+        sights: [
+          'Brijuni nasjonalpark (ferge fra Fažana, 5 min)',
+          'Pula UNESCO-amfiteater (15 km)',
+          'Cape Kamenjak naturreservat',
+        ],
+      },
+      {
+        name: 'Arena Stoja Campsite',
+        location: 'Pula',
+        price: '~€30–40',
+        url: 'https://www.arenacollection.com/en/destinations/pula/campsites/arena-stoja-campsite',
+        current: false,
+        facilities: [
+          'Dramatisk klippebeliggenhet på halvøy',
+          'Mer rustikk og rimeligere — "ekte" camping',
+          'Dykkesenter, kajakk og vannski',
+        ],
+        sights: [
+          'Pula UNESCO-amfiteater (3 km)',
+          'Pula gamleby og Forum',
+          'Cape Kamenjak naturreservat (15 min)',
+        ],
+      },
+    ],
 
     // Metoder
     scrollTo(id) {

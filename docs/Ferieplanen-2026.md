@@ -96,6 +96,7 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 - Fasiliteter: restauranter, spa, underholdning for barn, butikk, WiFi
 - Nettside: https://www.colorline.no/oslo-kiel
 - Bookingref: —
+- Ombord fra: 12:30 (avgang 14:00) · Avstigning Kiel: ca. 10:00 neste dag
 
 **Color Line SuperSpeed (Hirtshals–Larvik, hjemreise)**
 - Avganger: 2–3 daglig i juli (typisk 09:15, 14:30, 19:15 fra Hirtshals)
@@ -103,6 +104,7 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 - Estimert pris (bil + campingvogn m/riktig høyde og lengde + 2 voksne + 1 barn): **~5 000 NOK** en vei (inkl. kjøretøylengde-tillegg — bekreft ved booking)
 - Nettside: https://www.colorline.no/hirtshals-larvik
 - Bookingref: —
+- Ombord fra: 13:30 (avgang 14:30) · Avstigning Larvik: ca. 18:15
 
 ---
 
@@ -116,6 +118,7 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 - Tar imot campingvogn med strømtilkobling (16A CEE)
 - Booket: Nei
 - Bookingref: —
+- Innsjekk: 13:00 · Utsjekk: 12:00 (ca. — verifisér ved booking)
 
 **Familiebesøk: André og Lucia**
 - Adresse: Fischerinsel 9, 10179 Berlin
@@ -150,6 +153,7 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 - Tar imot campingvogn med strømtilkobling
 - Booket: Nei
 - Bookingref: —
+- Innsjekk: 14:00 · Utsjekk: 11:00 (ca. — verifisér ved booking)
 
 **Aktiviteter:**
 
@@ -178,6 +182,7 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 - Fasiliteter: Familievennlig campingplass rett ved Donau-elven, tilgang til Donau-sykkelsti, servicebygning, strømtilkobling
 - Booket: Nei
 - Bookingref: —
+- Innsjekk: 14:00 · Utsjekk: 10:00 (bekreftet via Booking.com)
 
 | Aktivitet | Type | Prioritet | Beskrivelse |
 |-----------|------|-----------|-------------|
@@ -201,6 +206,7 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 - Fasiliteter: 5-stjerns resort med 2 bassenger inkl. barnerutsjebane, kajakkutleie, e-sykkelutleie, restaurant, moderne sanitæranlegg
 - Booket: Nei
 - Bookingref: —
+- Innsjekk: 13:00 · Utsjekk: 11:00 (ca. — verifisér ved booking)
 
 **Aktiviteter:**
 
@@ -224,12 +230,14 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 
 **Kjøring:** Plitvice → Split, 271 km, 4 t via A1 sørover (via D429 til A1) → avkjøring mot Split. (80 km/t med campingvogn på kroatisk motorvei.)
 
-**Campingplass: Camping Stobreč Split**
+**Campingplass: Camping Stobreč Split** ✅
 - Adresse: Stobreč bb, 21311 Stobreč, Kroatia — 6 km fra Diokletians palass, rett ved sandstrand
 - Nettside: https://www.campingsplit.com/
 - Fasiliteter: Sandstrand, bademuligheter, servicebygning, strømtilkobling. Godt utgangspunkt for Split sentrum, Trogir og Krka NP.
-- Booket: Nei
-- Bookingref: —
+- **Booket: Ja — 8. mai 2026**
+- **Bookingref: PH27767231 (Phobs)**
+- Innsjekk: 13:00 (pitches) · Utsjekk: 07:00–12:30
+- Sen utsjekk mulig fram til 18:00 mot 50 % av prisen — koordineres med resepsjonen
 
 **Aktiviteter:**
 
@@ -265,6 +273,7 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 - Alternativ: Camping Bi Village (Fažana, nær Pula) — sandbukt, Brijuni-utsikt: https://www.bivillage.com/
 - Booket: Nei
 - Bookingref: —
+- Innsjekk: 15:00 (til 22:30) · Utsjekk: 07:00–10:00 (Maistra standard)
 
 **Aktiviteter:**
 
@@ -292,6 +301,7 @@ Hjemreisen inkluderer tre opplevelsesstopp — Zugspitze, Hamburg og Billund (Le
 - **Liechtensteinklamm (stoppested underveis):** Spektakulær 270 m dyp juv nær Werfen/St. Johann im Pongau i Salzburg-regionen, rett ved A10. Trebroer over fossende elv, dramatisk berglandskap. 1–2 t. William vil elske det. https://www.josalzburg.com/de/aktivitaeten/liechtensteinklamm.html
 - Campingplass: Camping Resort Zugspitze, Griesener Str. 9, 82491 Grainau
 - Nettside: https://www.camping-resort-zugspitze.de/
+- Innsjekk: 14:00 · Utsjekk: 12:00 (ca. — verifisér ved booking)
 - Aktiviteter dag 1 (25. juli): **Zugspitzbahn** — tannhjulsbane og gondolbane til Tysklands høyeste topp (2 962 m). Book billett på forhånd: https://www.zugspitze.de/
 - Aktiviteter dag 2 (26. juli): **Neuschwanstein Castle** (~75 km øst via B2/B17) — Kong Ludvig IIs eventyrslott. Obligatorisk forhåndsbooking: https://www.neuschwanstein.de/
 - Aktiviteter dag 3 (27. juli): Eibsee og Garmisch-Partenkirchen by — rolig dag før avreise mot Bamberg.
@@ -301,6 +311,7 @@ Hjemreisen inkluderer tre opplevelsesstopp — Zugspitze, Hamburg og Billund (Le
 - Kjøring: Zugspitze/Grainau → Bamberg, 315 km, 4 t 45 min via A95/A8 nord → München → A9 nord → A73. (80 km/t med campingvogn, gjennomsnitt ~73 km/t.)
 - Campingplass: Camping Island Bamberg, Campinginsel, 96052 Bamberg
 - Nettside: http://www.campinginsel.de/
+- Innsjekk: 13:00 · Utsjekk: 12:00 (ca. — verifisér ved booking)
 - Aktiviteter: Bamberg Altstadt (UNESCO) — over 2 400 fredede bygninger, romansk-gotisk katedral med "Bamberger Reiter", Altes Rathaus på elveøy. To netter gir god tid til gamlebyen og aftenmidddag med Schlenkerla Rauchbier.
 - Tips: Ingen Umweltzone. Kompakt gamlebyen — parkér ved campingplassen og gå inn.
 
@@ -308,6 +319,7 @@ Hjemreisen inkluderer tre opplevelsesstopp — Zugspitze, Hamburg og Billund (Le
 - Kjøring: Bamberg → Hamburg, 475 km, **6 t 30 min ⚠️** via A73 nord → A9 → A14 → Hamburg. Svakt over 6t-grensen — start senest kl. 07:00. Direkte på ruten mot Billund, ingen omvei.
 - Campingplass: KNAUS Campingpark Hamburg, Wunderbrunnen 2, 22457 Hamburg
 - Nettside: https://www.knauscamp.de/hamburg/
+- Innsjekk: 14:00 · Utsjekk: 12:00 (ca. — verifisér ved booking)
 - Aktiviteter: **Miniatur Wunderland** (verdens største modelljernbane, perfekt for William — book billett online!), Speicherstadt (UNESCO-kanalkvarter), Hamburger Hafen
 - Tips: Book Miniatur Wunderland online på forhånd — veldig populær i juli. Neste dag: Hamburg → Billund via A7 nord → Flensburg → E45, ca. 250 km, 3 t 30 min (80 km/t med campingvogn i Danmark).
 
@@ -315,6 +327,7 @@ Hjemreisen inkluderer tre opplevelsesstopp — Zugspitze, Hamburg og Billund (Le
 - Kjøring: Hamburg → Billund, 250 km, 3 t 30 min via A7 nord → Flensburg-grensa → E45 nord inn i Danmark → Billund
 - Campingplass: Legoland® Campingarea, Ellehammervej 2, 7190 Billund
 - Nettside: https://www.legoland.dk/feriepark/overnatning/camping/
+- Innsjekk: 14:00 · Utsjekk: 11:00 (ca. — verifisér ved booking)
 - Aktiviteter dag 1 (31. juli): **Legoland® Billund** — verdens første Legoland (åpnet 1968), 8 tematiske verdener, Miniland og rides. Heldagsopplevelse. Bestill billett online: https://www.legoland.dk/
 - Aktiviteter dag 2 (1. august formiddag): **LEGO House** — ikonisk opplevelseshus i Billund sentrum (2017). Interaktive soner og kreative verksteder. https://www.legohouse.com/
 - Tips: Bestill Legoland-billett online — spar tid og penger. Legoland® Campingarea er veldig populær i juli — bestill senest i mai. Start hjemreise mot Hirtshals senest kl. 11:00.
@@ -363,6 +376,29 @@ Disse 10 campingplassene dekker ulike reisestiler langs hele den kroatiske ruten
 
 ---
 
+## 4b. Istria — 10 familievennlige alternativer (stopp 7)
+
+Stopp 7 (Poreč/Rovinj, 4 netter, 20.–24. juli) er ennå ikke booket. Den nåværende valgte plassen (Maistra Camping Veštar) ble vurdert som litt dyr — disse 10 alternativene dekker ulike prisklasser og beliggenhet på Istria-halvøya. Alle har strand, kulturelle severdigheter (UNESCO-byer) og naturopplevelser i nærområdet.
+
+Sortert nord → sør:
+
+| # | Navn | Beliggenhet | Pris/natt (juli) | Hvorfor spesiell | Nettside |
+|---|------|-------------|------------------|------------------|---------|
+| 1 | **Camping Park Umag** | Umag (nord-Istria) | ~€40–50 | 4-stjerns mega-camp, Blue Flag-strand, 6 bassenger med sklier. Middelalderbyen Umag og istrisk vinregion i nærheten. | https://www.istracamping.com/accommodation/camping-park-umag/ |
+| 2 | **Aminess Maravea Camping Resort** | Novigrad-Cittanova | ~€40–50 | Moderne familieresort med oppvarmede bassenger og kids' club. 5 min til pittoresk Novigrad gamleby. | https://www.aminess.com/en/aminess-maravea-camping-resort |
+| 3 | **Valamar Camping Lanterna** | Tar / Poreč | ~€55–65 | 5-stjerns premium med 2 km steinstrand, vannpark og kids' club med maskoten Maro. 12 km til Poreč Eufrasius-basilika (UNESCO). | https://www.camping-adriatic.com/lanterna-premium-camping-resort-porec |
+| 4 | **Camping Bijela Uvala** | Poreč | ~€35–45 | 8.9/10 brukervurdering, 2 bassengkomplekser, gangavstand til Poreč gamlebyen (UNESCO). | https://www.camping-adriatic.com/bijela-uvala-campsite-porec |
+| 5 | **Camping Valkanela** | Vrsar | ~€35–45 | Daglige aktivitetsprogram for barn, sandbukt med grunt vann. Vrsar fiskelandsby og Lim-fjorden naturreservat i nærheten. | https://www.maistra.com/en/camping/camping-valkanela |
+| 6 ★ | **Maistra Camping Veštar** (nåværende valg) | Rovinj | ~€55–65 | 3 bassenger inkl. barneslider, gangavstand (~20 min) til Rovinj UNESCO-kandidat gamleby. Lim-fjorden i nærheten. | https://www.maistra.com/properties/campsite-vestar/ |
+| 7 | **Camping Polari** | Rovinj | ~€45–55 | "Best campsite for kids" siden 2024. Premium Family Village med eget basseng. Rovinj sentrum 5 km. | https://www.maistra.com/en/camping/camping-polari |
+| 8 | **Mon Perin Village Plus** | Bale (mellom Rovinj og Pula) | ~€40–50 | Romslig camping i furuskog (720 plasser), direkte kystadgang. Middelalderlandsbyen Bale, 30 km til Pula amfiteater. | https://www.monperin.hr/ |
+| 9 | **Camping Bi-Village** | Fažana, 15 km fra Pula | ~€40–50 | 800 m sandstrand (sjelden i Istria!), 3 bassenger med utsikt mot Brijuni-øyene. Brijuni NP og Pula amfiteater (UNESCO) i nærheten. | https://www.bivillage.com/ |
+| 10 | **Arena Stoja Campsite** | Pula | ~€30–40 | Dramatisk klippebeliggenhet på halvøy, 3 km fra Pula UNESCO-amfiteater. Mer rustikk og rimeligere. | https://www.arenacollection.com/en/destinations/pula/campsites/arena-stoja-campsite |
+
+**Kriterier:** Alle 10 er familievennlige (lekeplass/animasjon), har strand, kulturelle severdigheter (UNESCO-byer Pula, Poreč, Rovinj-kandidat) og naturopplevelser (Brijuni NP, Lim-fjorden, Cape Kamenjak, vinregioner) i nærområdet. Priser er estimater for høysesong juli 2026 med 2 voksne + 1 barn + campingvogn + strøm.
+
+---
+
 ### Praktisk info for Kroatia-reisen
 
 **Vignetter og bompenger:**
@@ -400,6 +436,7 @@ Disse 10 campingplassene dekker ulike reisestiler langs hele den kroatiske ruten
 
 | Dato | Endring | Av |
 | --- | --- | --- |
+| 2026-05-08 | Camping Stobreč Split booket (ref. PH27767231 via Phobs, mai 2026). Ny "Bookingstatus"-tabell i Praktisk-fanen som viser status for alle 12 overnattinger (10 camping + 2 ferger) med direkte bookinglenker. Ny "Istria — 10 familievennlige alternativer"-seksjon med detaljerte kort for stopp 7 (alternativer til Maistra Veštar med pris, fasiliteter, severdigheter). Ny §4b lagt til i dokumentet. Innsjekk-/utsjekkstider lagt til på alle stopp (camping og ferge). | Claude + Arne |
 | 2026-05-05 | Åtte endringer: (1) Berlin: LEGOLAND Discovery Centre fjernet, erstattet med FEZ Berlin (aktivitetssenter for barn — must-do) og Dark Matter-utstillingen (must-do). (2) Berlin redusert fra 4 til 3 netter (5.–8. juli) — 1 dag overført til Bamberg. (3) Alle datoer mellom Berlin og Zugspitze fremskutt 1 dag. (4) Zugspitze omdøpt fra «Zugspitze / Garmisch-Partenkirchen» til «Zugspitze» og campingplass byttet til Camping Resort Zugspitze (Griesener Str. 9, 82491 Grainau). (5) Bamberg utvidet til 2 netter (27.–29. juli). (6) Stopp 10 byttet fra Lübeck til Hamburg (KNAUS Campingpark Hamburg) — Miniatur Wunderland som hovedaktivitet for William. Bamberg→Hamburg 475 km/6t 30min vs. tidligere 545 km/8t til Lübeck. Hamburg→Billund 250 km/3t 30min. (7) Color Magic-pris oppdatert til bekreftet 16 200 NOK (med riktig kjøretøyhøyde/-lengde). Color Line Hirtshals–Larvik estimert til ~5 000 NOK (samme hensyn). Ferge+bompenger-budsjett økt fra 12 000 til 23 000 NOK. (8) Liechtensteinklamm URL byttet til josalzburg.com. | Claude |
 | 2026-05-05 | To gjennomganger: (1) Kjøretider korrigert for alle etapper basert på faktisk 80 km/t fartsgrense med campingvogn i alle reiseland (Norge, Tsjekkia, Tyskland, Østerrike, Slovenia, Kroatia, Danmark) — snittfart ~73 km/t. Økt med 30 min–2,5 t per etappe. Fartsgrense-tabell i §3 korrigert: Østerrike/Slovenia var feil oppgitt som 100 km/t (korrekt: 80 km/t for henger >750 kg). Kroatia rettet fra 90 til 80 km/t (vår kombinasjon totalt ~3 700 kg). Tsjekkia lagt til. Advarsel lagt til for Bamberg → Lübeck (545 km, ~8t) som overskrider 6t-grensen. (2) Drivstoffbudsjett oppdatert til 11 500 NOK basert på 5 500 km × 11 L/100 km = 605 L × snitt ~19 NOK/L lokale priser. | Claude |
 | 2026-05-04 | Fem endringer: (1) Plitvice redusert fra 3 til 2 netter (12.–14. juli). (2) Brno og Graz fjernet som transitt — erstattet med ett stopp ved Wien-området: Donaupark Camping Tulln (11.–12. juli). (3) Billund lagt til med 2 netter (30. juli–1. august) for Legoland — Legoland® Campingarea, mellom Lübeck og Hirtshals. (4) Alle påfølgende datoer fra Plitvice til Lübeck fremskutt 2 dager. (5) Hero-tittel oppdatert til «Fra Kongsberg til Kroatia og tilbake». Stopp renummerert 1–13 uten hull. Totalt 28 netter uendret. | Claude |
