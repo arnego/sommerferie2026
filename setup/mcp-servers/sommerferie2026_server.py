@@ -139,7 +139,7 @@ def git_push(commit_message: str, files: list[str]) -> tuple[bool, str]:
 
 # ── CLAUDE-KALL ───────────────────────────────────────────────────
 
-def call_claude(system: str, user: str, max_tokens: int = 32000) -> str:
+def call_claude(system: str, user: str, max_tokens: int = 64000) -> str:
     client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
     chunks: list[str] = []
     with client.messages.stream(
