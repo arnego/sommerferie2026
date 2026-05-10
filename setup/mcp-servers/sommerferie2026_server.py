@@ -141,13 +141,16 @@ def git_push(commit_message: str, files: list[str]) -> tuple[bool, str]:
 
 def call_claude(system: str, user: str, max_tokens: int = 32000) -> str:
     client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
-    response = client.messages.create(
+    chunks: list[str] = []
+    with client.messages.stream(
         model=MODEL,
         max_tokens=max_tokens,
         system=system,
-        messages=[{"role": "user", "content": user}]
-    )
-    return response.content[0].text
+        messages=[{"role": "user", "content": user}],
+    ) as stream:
+        for text in stream.text_stream:
+            chunks.append(text)
+    return "".join(chunks)
 
 def update_spec_with_claude(instruction: str, current_spec: str) -> str:
     return call_claude(
