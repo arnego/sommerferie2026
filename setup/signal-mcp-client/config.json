@@ -11,7 +11,7 @@
                 "--with",
                 "mcp",
                 "python3",
-                "/home/arne/projects/mcp-servers/sommerferie2026/sommerferie2026_server.py"
+                "/mnt/e/Git/sommerferie2026/setup/mcp-servers/sommerferie2026_server.py"
             ],
             "env": {}
         }
