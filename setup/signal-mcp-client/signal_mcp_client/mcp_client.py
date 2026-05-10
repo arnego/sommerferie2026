@@ -46,7 +46,9 @@ async def start_servers(
         logger.info(f"Connecting to MCP Server: {server_name} ({server_config.get('command')})")
         try:
             server_params = StdioServerParameters(
-                command=server_config.get("command"), args=server_config.get("args", []), env=server_config.get("env")
+                command=server_config.get("command"),
+                args=server_config.get("args", []),
+                env={**os.environ, **(server_config.get("env") or {})},
             )
 
             stdio_transport = await exit_stack.enter_async_context(stdio_client(server_params))
@@ -118,7 +120,7 @@ async def process_conversation_turn(session_id, args, tools, tool_name_to_sessio
             model=settings["model_name"],
             messages=messages,
             tools=tools,
-            max_tokens=8000,
+            max_tokens=2000,
         )
 
         message = response.choices[0].message

@@ -122,6 +122,48 @@ def clear_typing_indicator(recipient):
         client_logger.warning(f"Failed to clear typing indicator for {recipient}: {e}")
 
 
+def send_reaction(recipient, emoji, target_author, timestamp):
+    """Send (or replace) an emoji reaction on a specific message.
+
+    Signal allows one reaction per author per message – posting a new emoji
+    from the same author automatically replaces the previous one, so we don't
+    need to DELETE before swapping 👀 → ✅/❌.
+    """
+    if not (recipient and emoji and target_author and timestamp):
+        return
+    url = f"{SIGNAL_HTTP_BASE_URL}/v1/reactions/{SIGNAL_PHONE_NUMBER}"
+    payload = {
+        "reaction": emoji,
+        "recipient": recipient,
+        "target_author": target_author,
+        "timestamp": timestamp,
+    }
+    try:
+        response = requests.post(url, json=payload, timeout=5)
+        response.raise_for_status()
+        client_logger.debug(f"Sent reaction {emoji} on message from {target_author}@{timestamp}")
+    except requests.exceptions.RequestException as e:
+        client_logger.warning(f"Failed to send reaction {emoji} to {recipient}: {e}")
+
+
+def send_read_receipt(sender, timestamp):
+    """Mark a received message as read, so the sender sees the read indicator."""
+    if not (sender and timestamp):
+        return
+    url = f"{SIGNAL_HTTP_BASE_URL}/v1/receipts/{SIGNAL_PHONE_NUMBER}"
+    payload = {
+        "receipt_type": "read",
+        "recipient": sender,
+        "timestamp": timestamp,
+    }
+    try:
+        response = requests.post(url, json=payload, timeout=5)
+        response.raise_for_status()
+        client_logger.debug(f"Sent read receipt to {sender} for message@{timestamp}")
+    except requests.exceptions.RequestException as e:
+        client_logger.warning(f"Failed to send read receipt to {sender}: {e}")
+
+
 def save_image_attachment(session_dir, session_id, attachment_id):
     url = f"{SIGNAL_HTTP_BASE_URL}/v1/attachments/{attachment_id}"
     response = requests.get(url, timeout=30)
@@ -226,6 +268,7 @@ async def process_signal_message(websocket, args, tools, tool_name_to_session):
         user_message = data_message.get("message", "")
         attachments = data_message.get("attachments", [])
         quote = data_message.get("quote")
+        message_timestamp = data_message.get("timestamp") or envelope.get("timestamp")
 
         # Extract group info if this is a group message
         group_info = data_message.get("groupInfo", {})
@@ -271,6 +314,11 @@ async def process_signal_message(websocket, args, tools, tool_name_to_session):
             f"[{session_id}] Processing message for MCP: {user_message[:100]}{'...' if len(user_message) > 100 else ''}"
         )
 
+        # Acknowledge receipt: read receipt to sender, 👀 reaction on their message
+        # (reactions need timestamp + author of the original message; skipped silently if missing)
+        await asyncio.to_thread(send_read_receipt, source_number, message_timestamp)
+        await asyncio.to_thread(send_reaction, recipient, "👀", source_number, message_timestamp)
+
         await asyncio.to_thread(send_typing_indicator, recipient)
         try:
             async for response in mcp_client.process_conversation_turn(
@@ -297,8 +345,12 @@ async def process_signal_message(websocket, args, tools, tool_name_to_session):
                 else:
                     await asyncio.to_thread(send_typing_indicator, recipient)
 
+            # Swap 👀 → ✅ when processing completes without raising
+            await asyncio.to_thread(send_reaction, recipient, "✅", source_number, message_timestamp)
+
         except Exception as e:
             await asyncio.to_thread(clear_typing_indicator, recipient)
+            await asyncio.to_thread(send_reaction, recipient, "❌", source_number, message_timestamp)
             client_logger.error(f"[{session_id}] Error during MCP processing: {e}")
             traceback.print_exc()
 
