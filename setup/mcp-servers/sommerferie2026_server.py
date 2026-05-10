@@ -30,6 +30,7 @@ Krav:
 import subprocess
 import os
 import json
+import time
 from pathlib import Path
 from datetime import datetime
 import anthropic
@@ -190,29 +191,58 @@ def update_spec_with_claude(instruction: str, current_spec: str) -> str:
 def generate_edits(instruction: str, current_spec: str, current_html: str) -> dict:
     """Ber Claude foreslå targeted edits for spec + HTML, returnerer parsed JSON.
 
-    Outputen er liten (~tokens i 100-tallet til lavt 1000-tall), så vi setter
-    max_tokens lavt for å feile tidlig hvis modellen skulle prøve å regenerere
-    hele filen i stedet for å returnere edits.
+    Bruker prompt caching på systemprompten og filinnholdet: cache-lesninger
+    teller bare 10 % mot rate-limit-kvoten, noe som løser 30k tokens/min-grensen.
+    Prøver opptil 3 ganger med 30s ventetid ved RateLimitError (kald cache-miss).
     """
-    raw = call_claude(
-        system=EDIT_SYSTEM_PROMPT,
-        user=(
-            f"Oppdateringsforespørsel: {instruction}\n\n"
-            f"---\nNåværende Ferieplanen-2026.md:\n{current_spec}\n\n"
-            f"---\nNåværende index.html:\n{current_html}"
-        ),
-        max_tokens=16000,
-    )
-    # Modellen skal returnere ren JSON, men strip evt. ```json ... ``` for robusthet.
-    text = raw.strip()
-    if text.startswith("```"):
-        first_nl = text.find("\n")
+    client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
+
+    for attempt in range(3):
+        try:
+            chunks: list[str] = []
+            with client.messages.stream(
+                model=MODEL,
+                max_tokens=16000,
+                system=[{
+                    "type": "text",
+                    "text": EDIT_SYSTEM_PROMPT,
+                    "cache_control": {"type": "ephemeral"},
+                }],
+                messages=[{
+                    "role": "user",
+                    "content": [
+                        {
+                            "type": "text",
+                            "text": (
+                                f"Nåværende Ferieplanen-2026.md:\n{current_spec}\n\n"
+                                f"---\nNåværende index.html:\n{current_html}"
+                            ),
+                            "cache_control": {"type": "ephemeral"},
+                        },
+                        {
+                            "type": "text",
+                            "text": f"Oppdateringsforespørsel: {instruction}",
+                        },
+                    ],
+                }],
+            ) as stream:
+                for text in stream.text_stream:
+                    chunks.append(text)
+            break
+        except anthropic.RateLimitError:
+            if attempt == 2:
+                raise
+            time.sleep(30 * (attempt + 1))
+
+    raw = "".join(chunks).strip()
+    if raw.startswith("```"):
+        first_nl = raw.find("\n")
         if first_nl != -1:
-            text = text[first_nl + 1:]
-        if text.endswith("```"):
-            text = text[:-3]
-        text = text.strip()
-    return json.loads(text)
+            raw = raw[first_nl + 1:]
+        if raw.endswith("```"):
+            raw = raw[:-3]
+        raw = raw.strip()
+    return json.loads(raw)
 
 
 def apply_edits(content: str, edits: list[dict]) -> tuple[str, list[str]]:
