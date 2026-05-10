@@ -176,17 +176,18 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 
 **Kjøring:** Bad Schandau → Tulln, 420 km, 6 t 15 min via E55/D8 sørover → Prague-ring → D1/E65 sørøst → Wien → B14/A1 nordvest til Tulln an der Donau. (80 km/t med campingvogn gjennom Tsjekkia og Østerrike — tidlig start anbefales.)
 
-**Campingplass: Donaupark Camping Tulln**
-- Adresse: Donaupark, 3430 Tulln an der Donau, Niederösterreich, Østerrike
-- Nettside: https://www.donaupark-camping.at/
-- Fasiliteter: Familievennlig campingplass rett ved Donau-elven, tilgang til Donau-sykkelsti, servicebygning, strømtilkobling
+**Campingplass: Camping Wien West**
+- Adresse: Hüttelbergstraße 80, 1140 Wien, Østerrike
+- Nettside: https://www.campingwienwest.at/
+- Fasiliteter: Velrennomert familiecampingplass vest i Wien, ca. 3 km fra Schønbrunn-palasset og Tiergarten Schønbrunn. Enkel tilgang til sentrum via U4-linja (t-bane). God infrastruktur med dusj, strøm og internett.
 - Booket: Nei
 - Bookingref: —
-- Innsjekk: 14:00 · Utsjekk: 10:00 (bekreftet via Booking.com)
+- Innsjekk: 14:00 · Utsjekk: 10:00 (ca. — verifisér ved booking)
 
 | Aktivitet | Type | Prioritet | Beskrivelse |
 |-----------|------|-----------|-------------|
 | Kveldsspasertur langs Donau | Friluft | Must-do | Vakker spasertur langs Donaupromenaden i Tulln. Den berømte Donau-sykkelstien er flatt og barnevennlig. https://www.tulln.at/ |
+| Tiergarten Schönbrunn | Dyrehage | Must-do | Verdens eldste dyrehage (grunnlagt 1752), beliggende på Schönbrunn-palassets område i Wien. Et must-see for hele familien. Ca. 3 km fra Camping Wien West. https://www.zoovienna.at/ |
 | Tulln gamlebyen | Kultur | Nice-to-have | Sjarmerende by langs Donau med romansk Karner-kirke og historisk bykjerne. Tulln er fødebyen til kunstneren Egon Schiele. https://www.tulln.at/ |
 
 **Tips:**
@@ -436,6 +437,7 @@ Sortert nord → sør:
 
 | Dato | Endring | Av |
 | --- | --- | --- |
+| 2026-05-09 | Stopp 4 (Wien): Campingplass byttet fra Donaupark Camping Tulln til Camping Wien West (Hüttelbergstraße 80, 1140 Wien). Tiergarten Schønbrunn (verdens eldste dyrehage, grunnlagt 1752) lagt til som must-do-aktivitet. | Claude |
 | 2026-05-08 | Camping Stobreč Split booket (ref. PH27767231 via Phobs, mai 2026). Ny "Bookingstatus"-tabell i Praktisk-fanen som viser status for alle 12 overnattinger (10 camping + 2 ferger) med direkte bookinglenker. Ny "Istria — 10 familievennlige alternativer"-seksjon med detaljerte kort for stopp 7 (alternativer til Maistra Veštar med pris, fasiliteter, severdigheter). Ny §4b lagt til i dokumentet. Innsjekk-/utsjekkstider lagt til på alle stopp (camping og ferge). | Claude + Arne |
 | 2026-05-05 | Åtte endringer: (1) Berlin: LEGOLAND Discovery Centre fjernet, erstattet med FEZ Berlin (aktivitetssenter for barn — must-do) og Dark Matter-utstillingen (must-do). (2) Berlin redusert fra 4 til 3 netter (5.–8. juli) — 1 dag overført til Bamberg. (3) Alle datoer mellom Berlin og Zugspitze fremskutt 1 dag. (4) Zugspitze omdøpt fra «Zugspitze / Garmisch-Partenkirchen» til «Zugspitze» og campingplass byttet til Camping Resort Zugspitze (Griesener Str. 9, 82491 Grainau). (5) Bamberg utvidet til 2 netter (27.–29. juli). (6) Stopp 10 byttet fra Lübeck til Hamburg (KNAUS Campingpark Hamburg) — Miniatur Wunderland som hovedaktivitet for William. Bamberg→Hamburg 475 km/6t 30min vs. tidligere 545 km/8t til Lübeck. Hamburg→Billund 250 km/3t 30min. (7) Color Magic-pris oppdatert til bekreftet 16 200 NOK (med riktig kjøretøyhøyde/-lengde). Color Line Hirtshals–Larvik estimert til ~5 000 NOK (samme hensyn). Ferge+bompenger-budsjett økt fra 12 000 til 23 000 NOK. (8) Liechtensteinklamm URL byttet til josalzburg.com. | Claude |
 | 2026-05-05 | To gjennomganger: (1) Kjøretider korrigert for alle etapper basert på faktisk 80 km/t fartsgrense med campingvogn i alle reiseland (Norge, Tsjekkia, Tyskland, Østerrike, Slovenia, Kroatia, Danmark) — snittfart ~73 km/t. Økt med 30 min–2,5 t per etappe. Fartsgrense-tabell i §3 korrigert: Østerrike/Slovenia var feil oppgitt som 100 km/t (korrekt: 80 km/t for henger >750 kg). Kroatia rettet fra 90 til 80 km/t (vår kombinasjon totalt ~3 700 kg). Tsjekkia lagt til. Advarsel lagt til for Bamberg → Lübeck (545 km, ~8t) som overskrider 6t-grensen. (2) Drivstoffbudsjett oppdatert til 11 500 NOK basert på 5 500 km × 11 L/100 km = 605 L × snitt ~19 NOK/L lokale priser. | Claude |
