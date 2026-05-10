@@ -30,6 +30,23 @@ Claude har tillatelse til å gjøre `git pull --rebase`, `git commit` og `git pu
 
 Websiden er tilgjengelig på: `https://arnego.github.io/sommerferie2026/`
 
+## URL-kvalitetskontroll
+
+**Regel: Alle URL-er skal verifiseres med WebFetch før de legges inn i kode eller dokumenter.**
+
+Dette gjelder URL-er til campingplasser, aktiviteter, ferger, bookingplattformer og alle andre eksterne lenker.
+
+### Fremgangsmåte
+
+1. **Bruk WebFetch** på URL-en før den skrives inn i `index.html` eller `docs/`.
+2. **Sjekk at siden laster** (HTTP 200) og at innholdet matcher forventet sted/aktivitet (campingplassens navn, beliggenhet e.l. bør fremgå av siden).
+3. **Finn korrekt URL via WebSearch** dersom WebFetch feiler, gir 404, eller innholdet ikke stemmer.
+4. **Ikke legg inn URL-er fra hukommelse/treningsdata alene** — disse er ofte utdaterte, feilstavet eller peker på feil side.
+
+### Hvis verifisering ikke er mulig
+
+Dersom WebFetch ikke er tilgjengelig i konteksten: legg inn URL-en med en kommentar `// TODO: verifiser URL` og oppgi at URL-en er uverifisert i svar til bruker.
+
 ## GitHub Automation
 
 Two GitHub Actions workflows are configured:
