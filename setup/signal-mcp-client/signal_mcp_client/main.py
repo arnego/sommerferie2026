@@ -316,8 +316,11 @@ async def process_signal_message(websocket, args, tools, tool_name_to_session):
 
         # Acknowledge receipt: read receipt to sender, 👀 reaction on their message
         # (reactions need timestamp + author of the original message; skipped silently if missing)
-        await asyncio.to_thread(send_read_receipt, source_number, message_timestamp)
-        await asyncio.to_thread(send_reaction, recipient, "👀", source_number, message_timestamp)
+        # source_number may be None when Signal privacy hides the phone (UUID-only sender).
+        # Fall back to session_id (the source UUID) so reactions/receipts still work.
+        sender_id = source_number or session_id
+        await asyncio.to_thread(send_read_receipt, sender_id, message_timestamp)
+        await asyncio.to_thread(send_reaction, recipient, "👀", sender_id, message_timestamp)
 
         await asyncio.to_thread(send_typing_indicator, recipient)
         try:
@@ -346,11 +349,11 @@ async def process_signal_message(websocket, args, tools, tool_name_to_session):
                     await asyncio.to_thread(send_typing_indicator, recipient)
 
             # Swap 👀 → ✅ when processing completes without raising
-            await asyncio.to_thread(send_reaction, recipient, "✅", source_number, message_timestamp)
+            await asyncio.to_thread(send_reaction, recipient, "✅", sender_id, message_timestamp)
 
         except Exception as e:
             await asyncio.to_thread(clear_typing_indicator, recipient)
-            await asyncio.to_thread(send_reaction, recipient, "❌", source_number, message_timestamp)
+            await asyncio.to_thread(send_reaction, recipient, "❌", sender_id, message_timestamp)
             client_logger.error(f"[{session_id}] Error during MCP processing: {e}")
             traceback.print_exc()
 
