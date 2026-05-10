@@ -15,8 +15,9 @@ Windows 11
 │     │     └── signal-mcp-client    (lytter på Signal)
 │     ├── Claude Code                (redigerer filer, git push)
 │     ├── Git
-│     └── ~/projects/
-│           ├── sommerferie2026/     → GitHub Pages
+│     └── /mnt/e/Git/
+│     │     ├── sommerferie2026/     → GitHub Pages
+|     ├── ~/projects/
 │           └── signal-mcp-client/
 │
 └── (Docker Desktop ikke nødvendig)
@@ -233,7 +234,7 @@ uv --version
 ### Steg 4.1: Verifiser at repoet er på plass
 
 ```bash
-cd ~/projects/sommerferie2026
+cd /mnt/e/Git/sommerferie2026
 git status
 ```
 
@@ -466,7 +467,7 @@ npm install -g @anthropic-ai/claude-code
 ### Steg 9.2: Bruk Claude Code på repoet
 
 ```bash
-cd ~/projects/sommerferie2026
+cd /mnt/e/Git/sommerferie2026/
 claude
 ```
 
@@ -584,7 +585,7 @@ journalctl --user -u signal-mcp-client.service -n 50
 cat $HOME/.git-credentials
 
 # Autentiser på nytt
-cd ~/projects/sommerferie2026
+cd /mnt/e/Git/sommerferie2026
 git push
 # Skriv inn GitHub brukernavn og Personal Access Token når du blir spurt
 ```
@@ -603,14 +604,15 @@ which uv
 
 ```
 ~/projects/
-├── sommerferie2026/                 ← GitHub Pages repo
-│   └── index.html
 ├── signal-mcp-client/               ← klonet repo
 │   ├── config.json                  ← prosjektkonfigurasjon
 │   └── sessions/                    ← samtalehistorikk
 └── mcp-servers/
     └── sommerferie2026/
         └── sommerferie2026_server.py
+
+/mnt/e/Git/sommerferie2026/          ← GitHub Pages repo
+     └── index.html
 
 $HOME/
 ├── .bashrc                          ← miljøvariabler

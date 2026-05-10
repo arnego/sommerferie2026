@@ -30,7 +30,7 @@ curl -X POST http://localhost:8080/v1/accounts/+47DITT-NUMMER/registration-lock 
   -H "Content-Type: application/json" -d '{"pin": "DIN-PIN"}'
 
 ### Claude Code på repoet
-cd ~/projects/sommerferie2026
+cd /mnt/e/Git/sommerferie2026
 claude
 
 ### Filplasseringer
@@ -38,7 +38,7 @@ claude
 # MCP-server:            ~/projects/mcp-servers/sommerferie2026/sommerferie2026_server.py
 # Signal-data:           $HOME/.local/share/signal-api/
 # Systemd-tjenester:     $HOME/.config/systemd/user/
-# Repo:                  ~/projects/sommerferie2026/
+# Repo:                  /mnt/e/Git/sommerferie2026/
 
 ### Signal chat command reference
 # Set model through signal chat by sending /model <model name>
