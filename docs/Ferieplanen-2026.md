@@ -46,7 +46,7 @@ William er 5 år og er en viktig del av planleggingen:
 | 1 | Oslo → Kiel (Color Magic ferge) | NO/DE | 4. juli kv. | 5. juli | 1 (ferge) | 27 |
 | 2 | Berlin | DE | 5. juli | 8. juli | 3 | 27/28 |
 | 3 | Bad Schandau (Bohemian Switzerland) | DE | 8. juli | 10. juli | 2* | 28 |
-| 4 | Wien-området (Tulln an der Donau) | AT | 10. juli | 11. juli | 1* | 28 |
+| 4 | Wien | AT | 10. juli | 11. juli | 1* | 28 |
 | 5 | Plitvice Lakes NP | HR | 11. juli | 13. juli | 2 | 28/29 |
 | 6 | Split | HR | 13. juli | 20. juli | 7 | 29/30 |
 | 7 | Poreč / Rovinj, Istria | HR | 20. juli | 24. juli | 4 | 30 |
@@ -72,7 +72,7 @@ William er 5 år og er en viktig del av planleggingen:
 | Kiel | Berlin | 354 km | 5 t 15 min | A21/A24 øst mot Berlin |
 | Berlin | Bad Schandau | 224 km | 3 t 15 min | A13/A17 sørøst |
 | Bad Schandau | Wien-området (Tulln) | 420 km | 6 t 15 min | E55/D8 sørover → Prague-ring → D1/E65 sørøst → Wien → B14/A1 nordvest til Tulln an der Donau |
-| Tulln (Wien-området) | Plitvice Lakes | 420 km | 6 t 15 min | A21/A2 sørøst → Spielfeld/Šentilj grense → A1 Slovenia (Ljubljana) → A1 Kroatia → D429 → D1 inn mot nasjonalparken |
+| Wien | Plitvice Lakes | 420 km | 6 t 15 min | A21/A2 sørøst → Spielfeld/Šentilj grense → A1 Slovenia (Ljubljana) → A1 Kroatia → D429 → D1 inn mot nasjonalparken |
 | Plitvice | Split | 271 km | 4 t | D1/D33 sørover mot kysten → D8 Jadranska magistrala sør |
 | Split | Poreč/Rovinj (via Rijeka) | 310 km | 4 t 30 min | A1 nord → Rijeka → Y-motorvei vest mot Istria |
 | Poreč/Rovinj | Zugspitze/Garmisch | 570 km | 8 t (inkl. Liechtensteinklamm 1,5 t) | A9/E751 nord → Ljubljana → Karawanken → A10 Tauern → **stopp Liechtensteinklamm** (Werfen/St. Johann im Pongau) → Salzburg → A8 øst → A95 sør. Svært lang dag — start senest kl. 07:30. |
@@ -172,9 +172,9 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 
 ---
 
-### Stopp 4: Wien-området (Tulln an der Donau), Østerrike (1 natt: 10.–11. juli)
+### Stopp 4: Wien, Østerrike (1 natt: 10.–11. juli)
 
-**Kjøring:** Bad Schandau → Tulln, 420 km, 6 t 15 min via E55/D8 sørover → Prague-ring → D1/E65 sørøst → Wien → B14/A1 nordvest til Tulln an der Donau. (80 km/t med campingvogn gjennom Tsjekkia og Østerrike — tidlig start anbefales.)
+**Kjøring:** Bad Schandau → Wien, 420 km, 6 t 15 min via E55/D8 sørover → Prague-ring → D1/E65 sørøst → Wien → B14/A1 nordvest til Tulln an der Donau. (80 km/t med campingvogn gjennom Tsjekkia og Østerrike — tidlig start anbefales.)
 
 **Campingplass: Camping Wien West**
 - Adresse: Hüttelbergstraße 80, 1140 Wien, Østerrike
