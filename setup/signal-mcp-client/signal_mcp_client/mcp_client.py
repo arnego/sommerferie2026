@@ -120,7 +120,7 @@ async def process_conversation_turn(session_id, args, tools, tool_name_to_sessio
             model=settings["model_name"],
             messages=messages,
             tools=tools,
-            max_tokens=2000,
+            max_tokens=8000,
         )
 
         message = response.choices[0].message
