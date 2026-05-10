@@ -1,11 +1,12 @@
 import argparse
+import asyncio
 import json
 import logging
 import os
 import traceback
 from contextlib import AsyncExitStack
 
-from litellm import AuthenticationError, completion
+from litellm import AuthenticationError, RateLimitError, completion
 from mcp import ClientSession, StdioServerParameters, types
 from mcp.client.stdio import stdio_client
 
@@ -116,12 +117,21 @@ async def process_conversation_turn(session_id, args, tools, tool_name_to_sessio
         if system_prompt and system_prompt.lower() != "none":
             messages.insert(0, {"role": "system", "content": system_prompt})
 
-        response = completion(
-            model=settings["model_name"],
-            messages=messages,
-            tools=tools,
-            max_tokens=8000,
-        )
+        for attempt in range(3):
+            try:
+                response = completion(
+                    model=settings["model_name"],
+                    messages=messages,
+                    tools=tools,
+                    max_tokens=8000,
+                )
+                break
+            except RateLimitError:
+                if attempt == 2:
+                    raise
+                wait = 60 * (attempt + 1)
+                logger.warning(f"Rate limit hit on orchestration call, retrying in {wait}s (attempt {attempt + 1}/3)")
+                await asyncio.sleep(wait)
 
         message = response.choices[0].message
         history.add_assistant_message(session_dir, session_id, message.content, message.tool_calls)

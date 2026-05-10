@@ -45,7 +45,8 @@ FERIEPLAN_FILE   = REPO_PATH / "docs" / "Ferieplanen-2026.md"
 TEKNISK_SPEC_FILE = REPO_PATH / "docs" / "Teknisk-spesifikasjon.md"
 PAGES_URL        = "https://arnego.github.io/sommerferie2026/"
 GITHUB_REPO      = "https://github.com/arnego/sommerferie2026"
-MODEL            = "claude-sonnet-4-6"
+MODEL            = "claude-sonnet-4-6"   # spec-regenerering (update_technical_spec)
+EDIT_MODEL       = "claude-haiku-4-5-20251001"  # targeted edits – egen rate-limit-kvote
 # ──────────────────────────────────────────────────────────────────
 
 server = Server("sommerferie2026")
@@ -201,7 +202,7 @@ def generate_edits(instruction: str, current_spec: str, current_html: str) -> di
         try:
             chunks: list[str] = []
             with client.messages.stream(
-                model=MODEL,
+                model=EDIT_MODEL,
                 max_tokens=16000,
                 system=[{
                     "type": "text",
