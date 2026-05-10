@@ -119,9 +119,9 @@ tailwind.config = {
     <div class="relative max-w-3xl mx-auto px-6 pt-16 pb-12">
       <p class="inline-block bg-sunshine/20 text-sunshine text-xs font-semibold tracking-widest uppercase px-3 py-1.5 rounded mb-6">Sommerferie 2026</p>
       <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-4">
-        Fra <span class="text-sunshine">Kongsberg</span><br class="sm:hidden"> til Europa og tilbake
+        Fra <span class="text-sunshine">Kongsberg</span><br class="sm:hidden"> til Kroatia og tilbake
       </h1>
-      <p class="text-white/60 text-base sm:text-lg font-light">3,5 uker &middot; Campingvogn &middot; 2 voksne + 1 barn &middot; Juli 2026</p>
+      <p class="text-white/60 text-base sm:text-lg font-light">4 uker &middot; Campingvogn &middot; 2 voksne + 1 barn &middot; Juli 2026</p>
     </div>
 
     <!-- Stats-bar -->
@@ -136,7 +136,7 @@ tailwind.config = {
           <span class="text-[10px] sm:text-xs uppercase tracking-wider font-medium opacity-80">Land</span>
         </div>
         <div class="py-4 text-center">
-          <span class="font-heading text-2xl sm:text-3xl font-bold block">~2 150</span>
+          <span class="font-heading text-2xl sm:text-3xl font-bold block">~5 500</span>
           <span class="text-[10px] sm:text-xs uppercase tracking-wider font-medium opacity-80">Km</span>
         </div>
         <div class="py-4 text-center">
@@ -263,12 +263,33 @@ tailwind.config = {
                 <!-- Camping-info -->
                 <template x-if="stop.camping">
                   <div class="px-3 py-2 bg-cream rounded-lg">
-                    <p class="text-xs text-muted uppercase tracking-wider font-medium mb-1" x-text="stop.camping.label || 'Campingplass'"></p>
+                    <div class="flex items-start justify-between gap-2 mb-1">
+                      <p class="text-xs text-muted uppercase tracking-wider font-medium" x-text="stop.camping.label || 'Campingplass'"></p>
+                      <template x-if="stop.camping.booked">
+                        <span class="text-[10px] px-1.5 py-0.5 rounded-full bg-success/10 text-success font-medium whitespace-nowrap">✓ Booket</span>
+                      </template>
+                      <template x-if="!stop.camping.booked">
+                        <span class="text-[10px] px-1.5 py-0.5 rounded-full bg-sunshine/10 text-sunshine font-medium whitespace-nowrap">⚠ Utestående</span>
+                      </template>
+                    </div>
                     <p class="text-sm font-medium">
                       <a :href="stop.camping.url" target="_blank" rel="noopener"
                          class="text-petrol hover:underline" x-text="stop.camping.name"></a>
                     </p>
                     <p class="text-xs text-charcoal/60 mt-0.5" x-text="stop.camping.address"></p>
+                    <template x-if="stop.camping.checkIn || stop.camping.checkOut">
+                      <p class="text-xs text-charcoal/70 mt-1.5">
+                        <span class="font-medium">🕒 Innsjekk:</span> <span x-text="stop.camping.checkIn"></span>
+                        <span class="mx-1 text-muted">·</span>
+                        <span class="font-medium">Utsjekk:</span> <span x-text="stop.camping.checkOut"></span>
+                        <template x-if="stop.camping.timesEstimated">
+                          <span class="ml-1 text-muted italic">(ca. — verifisér ved booking)</span>
+                        </template>
+                      </p>
+                    </template>
+                    <template x-if="stop.camping.bookingRef">
+                      <p class="text-xs text-muted mt-1">Bookingref: <span class="font-mono text-charcoal/80" x-text="stop.camping.bookingRef"></span></p>
+                    </template>
                   </div>
                 </template>
 
@@ -446,7 +467,7 @@ tailwind.config = {
               <span x-text="item.amount.toLocaleString('no-NO')"></span>
               <span class="text-sm text-muted font-body ml-1">NOK</span>
             </p>
-            <p x-show="item.detail" class="text-xs text-muted mt-1 leading-snug" x-text="item.detail"></p>
+            <p x-show="item.note" x-text="item.note" class="text-xs text-muted mt-1 leading-snug"></p>
             <div class="mt-3 h-1.5 bg-sand/50 rounded-full overflow-hidden">
               <div class="h-full rounded-full transition-all duration-500"
                    :class="item.color"
@@ -483,11 +504,6 @@ tailwind.config = {
               <td class="px-5 py-3 text-right font-medium">~64,50 DKK</td>
             </tr>
             <tr class="hover:bg-cream/30">
-              <td class="px-5 py-3 font-medium">SEK (Svenske kroner)</td>
-              <td class="px-5 py-3 text-right text-muted">1 SEK = ~1,05 NOK</td>
-              <td class="px-5 py-3 text-right font-medium">~95 SEK</td>
-            </tr>
-            <tr class="hover:bg-cream/30">
               <td class="px-5 py-3 font-medium">CZK (Tsjekkiske koruna)</td>
               <td class="px-5 py-3 text-right text-muted">1 CZK = ~0,47 NOK</td>
               <td class="px-5 py-3 text-right font-medium">~213 CZK</td>
@@ -497,47 +513,187 @@ tailwind.config = {
         <div class="px-5 py-2.5 bg-cream/50 text-xs text-muted">Omtrentlige kurser. Sjekk oppdaterte kurser for avreise.</div>
       </div>
 
-      <!-- Big Mac Index -->
-      <h3 class="font-heading text-lg text-petrol mb-4">Big Mac Index - kostnadsnivå</h3>
-      <div class="bg-white rounded-xl border border-sand/50 overflow-hidden mb-8">
-        <table class="w-full text-sm">
+      <!-- Kostnadsnivå -->
+      <h3 class="font-heading text-lg text-petrol mb-4">Kostnadsnivå — mat, drikke og camping</h3>
+      <div class="bg-white rounded-xl border border-sand/50 overflow-x-auto mb-8">
+        <table class="w-full text-sm min-w-[680px]">
           <thead class="bg-cream/70">
             <tr>
-              <th class="text-left px-5 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Land</th>
-              <th class="text-right px-5 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Lokal pris</th>
-              <th class="text-right px-5 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">I NOK</th>
-              <th class="text-right px-5 py-3 text-xs text-petrol uppercase tracking-wider font-semibold hidden sm:table-cell">vs. Norge</th>
+              <th class="text-left px-4 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Land</th>
+              <th class="text-right px-4 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Enkel lunsj</th>
+              <th class="text-right px-4 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Middag for to</th>
+              <th class="text-right px-4 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Halvliter øl</th>
+              <th class="text-right px-4 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Cappuccino</th>
+              <th class="text-right px-4 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Camping / natt ①</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-sand/30">
             <tr class="hover:bg-cream/30">
-              <td class="px-5 py-3 font-medium">Norge</td>
-              <td class="px-5 py-3 text-right text-muted">~75 NOK</td>
-              <td class="px-5 py-3 text-right font-medium">75 NOK</td>
-              <td class="px-5 py-3 text-right text-muted hidden sm:table-cell">-</td>
+              <td class="px-4 py-3 font-medium">Norge</td>
+              <td class="px-4 py-3 text-right text-muted">~150 kr</td>
+              <td class="px-4 py-3 text-right text-muted">~800 kr</td>
+              <td class="px-4 py-3 text-right text-muted">~100 kr</td>
+              <td class="px-4 py-3 text-right text-muted">~60 kr</td>
+              <td class="px-4 py-3 text-right text-muted">~350 kr</td>
             </tr>
             <tr class="hover:bg-cream/30">
-              <td class="px-5 py-3 font-medium">Danmark</td>
-              <td class="px-5 py-3 text-right text-muted">~35 DKK</td>
-              <td class="px-5 py-3 text-right font-medium">~54 NOK</td>
-              <td class="px-5 py-3 text-right text-success hidden sm:table-cell">28% billigere</td>
+              <td class="px-4 py-3 font-medium">Danmark</td>
+              <td class="px-4 py-3 text-right"><span class="font-medium">~147 kr</span><br><span class="text-xs text-muted">95 DKK</span></td>
+              <td class="px-4 py-3 text-right"><span class="font-medium">~775 kr</span><br><span class="text-xs text-muted">500 DKK</span></td>
+              <td class="px-4 py-3 text-right"><span class="font-medium">~93 kr</span><br><span class="text-xs text-muted">60 DKK</span></td>
+              <td class="px-4 py-3 text-right"><span class="font-medium">~78 kr</span><br><span class="text-xs text-muted">50 DKK</span></td>
+              <td class="px-4 py-3 text-right"><span class="font-medium">~465 kr</span><br><span class="text-xs text-muted">300 DKK</span></td>
             </tr>
             <tr class="hover:bg-cream/30">
-              <td class="px-5 py-3 font-medium">Tyskland</td>
-              <td class="px-5 py-3 text-right text-muted">~5,30 EUR</td>
-              <td class="px-5 py-3 text-right font-medium">~61 NOK</td>
-              <td class="px-5 py-3 text-right text-success hidden sm:table-cell">19% billigere</td>
+              <td class="px-4 py-3 font-medium">Tyskland</td>
+              <td class="px-4 py-3 text-right"><span class="font-medium">~127 kr</span><br><span class="text-xs text-muted">11 EUR</span></td>
+              <td class="px-4 py-3 text-right"><span class="font-medium">~748 kr</span><br><span class="text-xs text-muted">65 EUR</span></td>
+              <td class="px-4 py-3 text-right"><span class="font-medium">~52 kr</span><br><span class="text-xs text-muted">4,50 EUR</span></td>
+              <td class="px-4 py-3 text-right"><span class="font-medium">~40 kr</span><br><span class="text-xs text-muted">3,50 EUR</span></td>
+              <td class="px-4 py-3 text-right"><span class="font-medium">~357 kr</span><br><span class="text-xs text-muted">31 EUR, snitt 5 pl.</span></td>
             </tr>
             <tr class="hover:bg-cream/30">
-              <td class="px-5 py-3 font-medium">Sverige</td>
-              <td class="px-5 py-3 text-right text-muted">~62 SEK</td>
-              <td class="px-5 py-3 text-right font-medium">~65 NOK</td>
-              <td class="px-5 py-3 text-right text-success hidden sm:table-cell">13% billigere</td>
+              <td class="px-4 py-3 font-medium">Østerrike</td>
+              <td class="px-4 py-3 text-right"><span class="font-medium">~138 kr</span><br><span class="text-xs text-muted">12 EUR</span></td>
+              <td class="px-4 py-3 text-right"><span class="font-medium">~805 kr</span><br><span class="text-xs text-muted">70 EUR</span></td>
+              <td class="px-4 py-3 text-right"><span class="font-medium">~52 kr</span><br><span class="text-xs text-muted">4,50 EUR</span></td>
+              <td class="px-4 py-3 text-right"><span class="font-medium">~41 kr</span><br><span class="text-xs text-muted">3,60 EUR</span></td>
+              <td class="px-4 py-3 text-right"><span class="font-medium">~368 kr</span><br><span class="text-xs text-muted">32 EUR</span></td>
+            </tr>
+            <tr class="hover:bg-cream/30">
+              <td class="px-4 py-3 font-medium">Kroatia</td>
+              <td class="px-4 py-3 text-right"><span class="font-medium text-success">~115 kr</span><br><span class="text-xs text-muted">10 EUR</span></td>
+              <td class="px-4 py-3 text-right"><span class="font-medium text-success">~575 kr</span><br><span class="text-xs text-muted">50 EUR</span></td>
+              <td class="px-4 py-3 text-right"><span class="font-medium text-success">~40 kr</span><br><span class="text-xs text-muted">3,50 EUR</span></td>
+              <td class="px-4 py-3 text-right"><span class="font-medium text-success">~23 kr</span><br><span class="text-xs text-muted">2 EUR</span></td>
+              <td class="px-4 py-3 text-right"><span class="font-medium">~552 kr</span><br><span class="text-xs text-muted">48 EUR, snitt 3 pl.</span></td>
             </tr>
           </tbody>
         </table>
-        <div class="px-5 py-2.5 bg-cream/50 text-xs text-muted">Big Mac Index gir et omtrentlig bilde av kostnadsniva. Mat og dagligvarer er generelt billigere i Danmark, Tyskland og Sverige enn i Norge.</div>
+        <div class="px-5 py-2.5 bg-cream/50 text-xs text-muted">① Campingpris for 2 voksne + 1 barn + campingvogn + strøm, basert på valgte campingplasser i ruten. For Kroatia: snitt av Camping Plitvice, Camping Stobreč Split og Maistra Veštar — resort-fasiliteter og høysesong i juli gjør campingen dyrere enn det generelle prisnivået i landet. Mat og drikke (grønt) er billigst i Kroatia. Priser er omtrentlige for sommeren 2026.</div>
       </div>
+
+      <!-- Bookingstatus -->
+      <h3 class="font-heading text-lg text-petrol mb-4">Bookingstatus — overnattinger og ferger</h3>
+      <div class="bg-white rounded-xl border border-sand/50 overflow-hidden mb-3">
+        <div class="px-5 py-3 bg-cream/70 flex items-center justify-between">
+          <div>
+            <p class="text-sm font-semibold text-petrol">
+              <span x-text="stops.filter(s => s.camping && s.camping.booked).length"></span>
+              <span> av </span>
+              <span x-text="stops.filter(s => s.camping).length"></span>
+              <span> booket</span>
+            </p>
+            <p class="text-xs text-muted mt-0.5">Trykk på lenken for å gå direkte til booking</p>
+          </div>
+          <div class="hidden sm:flex items-center gap-3 text-xs">
+            <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-success"></span> <span class="text-muted">Booket</span></span>
+            <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-sunshine"></span> <span class="text-muted">Utestående</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white rounded-xl border border-sand/50 overflow-x-auto mb-8">
+        <table class="w-full text-sm min-w-[720px]">
+          <thead class="bg-cream/70">
+            <tr>
+              <th class="text-left px-4 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">#</th>
+              <th class="text-left px-4 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Stopp</th>
+              <th class="text-left px-4 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Datoer</th>
+              <th class="text-right px-4 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Netter</th>
+              <th class="text-left px-4 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Overnatting</th>
+              <th class="text-center px-4 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Status</th>
+              <th class="text-center px-4 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Bookingside</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-sand/30">
+            <template x-for="stop in stops.filter(s => s.camping)" :key="stop.id">
+              <tr class="hover:bg-cream/30">
+                <td class="px-4 py-3 text-muted font-medium" x-text="stop.id"></td>
+                <td class="px-4 py-3 font-medium" x-text="stop.name"></td>
+                <td class="px-4 py-3 text-charcoal/70 whitespace-nowrap" x-text="formatStopDates(stop)"></td>
+                <td class="px-4 py-3 text-right text-muted" x-text="stop.nights || '—'"></td>
+                <td class="px-4 py-3">
+                  <p class="font-medium" x-text="stop.camping.name"></p>
+                  <p class="text-xs text-muted" x-show="stop.camping.bookingRef">Ref: <span class="font-mono" x-text="stop.camping.bookingRef"></span></p>
+                </td>
+                <td class="px-4 py-3 text-center">
+                  <template x-if="stop.camping.booked">
+                    <span class="inline-block text-xs px-2.5 py-1 rounded-full bg-success/10 text-success font-medium whitespace-nowrap">✓ Booket</span>
+                  </template>
+                  <template x-if="!stop.camping.booked">
+                    <span class="inline-block text-xs px-2.5 py-1 rounded-full bg-sunshine/10 text-sunshine font-medium whitespace-nowrap">⚠ Utestående</span>
+                  </template>
+                </td>
+                <td class="px-4 py-3 text-center">
+                  <a :href="stop.camping.url" target="_blank" rel="noopener"
+                     class="inline-flex items-center gap-1 text-petrol hover:underline text-xs font-medium">
+                    <span>Book ↗</span>
+                  </a>
+                </td>
+              </tr>
+            </template>
+          </tbody>
+        </table>
+        <div class="px-5 py-2.5 bg-cream/50 text-xs text-muted">Husk å booke senest mai 2026 for julitoppen i Kroatia. Kroatiske kystplasser fylles raskt opp.</div>
+      </div>
+
+      <!-- Istria — 10 familievennlige alternativer -->
+      <h3 class="font-heading text-lg text-petrol mb-2">Istria — 10 familievennlige alternativer</h3>
+      <p class="text-sm text-charcoal/70 mb-4">Stopp 7 (Poreč/Rovinj) er ennå ikke booket. Her er 10 familievennlige campingplasser på Istria-halvøya — alle med strand, kulturelle severdigheter og naturopplevelser i nærområdet. Sortert nord → sør.</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-3">
+        <template x-for="alt in istriaAlternatives" :key="alt.name">
+          <div class="rounded-xl border p-5 flex flex-col transition-all"
+               :class="alt.eliminated ? 'bg-charcoal/[0.03] border-sand/30 opacity-55' : 'bg-white border-sand/50'">
+            <div class="flex items-start justify-between gap-2 mb-2">
+              <div>
+                <h4 class="font-heading text-base leading-tight"
+                    :class="alt.eliminated ? 'line-through decoration-charcoal/40 decoration-2 text-muted' : 'text-petrol'"
+                    x-text="alt.name"></h4>
+                <p class="text-xs text-muted mt-0.5" x-text="alt.location"></p>
+              </div>
+              <div class="flex flex-col items-end gap-1 shrink-0">
+                <template x-if="alt.current">
+                  <span class="text-[10px] px-2 py-0.5 rounded-full bg-sunshine/15 text-sunshine font-medium whitespace-nowrap">★ Nåværende valg</span>
+                </template>
+                <template x-if="alt.eliminated">
+                  <span class="text-[10px] px-2 py-0.5 rounded-full bg-charcoal/10 text-muted font-medium whitespace-nowrap">✕ Eliminert</span>
+                </template>
+              </div>
+            </div>
+            <p class="text-xs text-charcoal/80 mb-3">
+              <span class="font-medium">Pris/natt (juli):</span> <span x-text="alt.price"></span>
+            </p>
+            <div class="mb-3">
+              <p class="text-[10px] text-muted uppercase tracking-wider font-semibold mb-1">Fasiliteter</p>
+              <ul class="space-y-0.5">
+                <template x-for="f in alt.facilities" :key="f">
+                  <li class="text-xs text-charcoal/75 pl-3 relative before:content-[''] before:absolute before:left-0 before:top-1.5 before:w-1 before:h-1 before:bg-success before:rounded-full" x-text="f"></li>
+                </template>
+              </ul>
+            </div>
+            <div class="mb-3 flex-grow">
+              <p class="text-[10px] text-muted uppercase tracking-wider font-semibold mb-1">Severdigheter i nærområdet</p>
+              <ul class="space-y-0.5">
+                <template x-for="s in alt.sights" :key="s">
+                  <li class="text-xs text-charcoal/75 pl-3 relative before:content-[''] before:absolute before:left-0 before:top-1.5 before:w-1 before:h-1 before:bg-petrol before:rounded-full" x-text="s"></li>
+                </template>
+              </ul>
+            </div>
+            <template x-if="!alt.eliminated">
+              <a :href="alt.url" target="_blank" rel="noopener"
+                 class="mt-auto inline-flex items-center justify-center gap-1 px-4 py-2 rounded-lg bg-petrol text-white text-sm font-medium hover:bg-petrol/90 transition-colors">
+                <span>Booke direkte ↗</span>
+              </a>
+            </template>
+            <template x-if="alt.eliminated">
+              <span class="mt-auto inline-flex items-center justify-center gap-1 px-4 py-2 rounded-lg bg-charcoal/10 text-muted text-sm font-medium cursor-not-allowed select-none">
+                <span>✕ Eliminert</span>
+              </span>
+            </template>
+          </div>
+        </template>
+      </div>
+      <p class="text-xs text-muted mb-8">Priser er estimater for høysesong (juli 2026) for 2 voksne + 1 barn + campingvogn + strøm. Verifiser ved booking. Reserver senest mai 2026.</p>
 
       <!-- Fartsgrenser med henger -->
       <h3 class="font-heading text-lg text-petrol mb-4">Fartsgrenser med campingvogn</h3>
@@ -559,10 +715,22 @@ tailwind.config = {
               <td class="px-3 py-3 text-center">80</td>
             </tr>
             <tr class="hover:bg-cream/30">
-              <td class="px-5 py-3 font-medium">Sverige</td>
+              <td class="px-5 py-3 font-medium">Østerrike</td>
+              <td class="px-3 py-3 text-center">50</td>
+              <td class="px-3 py-3 text-center">80</td>
+              <td class="px-3 py-3 text-center">80*</td>
+            </tr>
+            <tr class="hover:bg-cream/30">
+              <td class="px-5 py-3 font-medium">Slovenia</td>
+              <td class="px-3 py-3 text-center">50</td>
+              <td class="px-3 py-3 text-center">80</td>
+              <td class="px-3 py-3 text-center">80*</td>
+            </tr>
+            <tr class="hover:bg-cream/30">
+              <td class="px-5 py-3 font-medium">Kroatia</td>
               <td class="px-3 py-3 text-center">50</td>
               <td class="px-3 py-3 text-center">70</td>
-              <td class="px-3 py-3 text-center">80</td>
+              <td class="px-3 py-3 text-center">80*</td>
             </tr>
             <tr class="hover:bg-cream/30">
               <td class="px-5 py-3 font-medium">Danmark</td>
@@ -578,7 +746,7 @@ tailwind.config = {
             </tr>
           </tbody>
         </table>
-        <div class="px-5 py-2.5 bg-cream/50 text-xs text-muted">Alle hastigheter i km/t. *Tyskland: Ingen generell fartsgrense på Autobahn for biler uten henger, men 80 km/t med campingvogn. Totalvekt bil+vogn over 3,5t: 60 km/t landevei.</div>
+        <div class="px-5 py-2.5 bg-cream/50 text-xs text-muted">Alle hastigheter i km/t med campingvogn. *Østerrike/Slovenia: 80 km/t motorvei med henger. *Kroatia: 80 km/t motorvei med henger over 3,5 t totalvekt. *Tyskland: Ingen generell fartsgrense uten henger, men 80 km/t med campingvogn.</div>
       </div>
 
       <!-- Nodnumre -->
@@ -600,9 +768,9 @@ tailwind.config = {
           <p class="text-xs text-muted mt-0.5">Politi: 110</p>
         </div>
         <div class="bg-white rounded-xl p-4 border border-sand/50 text-center">
-          <p class="text-xs text-muted uppercase tracking-wider font-medium mb-1">Sverige</p>
+          <p class="text-xs text-muted uppercase tracking-wider font-medium mb-1">Kroatia</p>
           <p class="font-heading text-xl text-petrol">112</p>
-          <p class="text-xs text-muted mt-0.5">Felles nodnummer</p>
+          <p class="text-xs text-muted mt-0.5">Veihjelp: 1987</p>
         </div>
       </div>
 
@@ -622,8 +790,16 @@ tailwind.config = {
           <p class="text-sm text-charcoal/70">Grønn Umweltplakette (miljøplakett) er <strong>påbudt</strong> i alle tyske byer med Umweltzoner (inkl. Hamburg og Berlin). Bestill fra <a href="https://www.umwelt-plakette.de" target="_blank" class="text-petrol underline">umwelt-plakette.de</a> (15-30 EUR). Kun trekkvognen trenger plakett, ikke campingvognen. Bot uten plakett: ca. 100 EUR.</p>
         </div>
         <div class="bg-white rounded-xl p-5 border border-sand/50">
-          <h4 class="font-semibold text-sm text-charcoal mb-2">Sverige</h4>
-          <p class="text-sm text-charcoal/70">Ingen vignetter eller miljøsoner påkrevd. Bompenger på noen broer/tunneler (faktureres automatisk via nummerskilt).</p>
+          <h4 class="font-semibold text-sm text-charcoal mb-2">Østerrike - Motorvei-vignett</h4>
+          <p class="text-sm text-charcoal/70">Motorvei-vignett påkrevd. 10-dagers vignett: ~9,90 EUR per kjøretøy (bil og campingvogn separat over 3,5 t). Kjøpes ved grenseovergangen eller online på <a href="https://www.asfinag.at" target="_blank" rel="noopener" class="text-petrol underline">asfinag.at</a>.</p>
+        </div>
+        <div class="bg-white rounded-xl p-5 border border-sand/50">
+          <h4 class="font-semibold text-sm text-charcoal mb-2">Slovenia - Motorvei-vignett</h4>
+          <p class="text-sm text-charcoal/70">Motorvei-vignett påkrevd. 7-dagers vignett: ~15 EUR per kjøretøy. Kjøpes ved grenseovergangen eller online på <a href="https://evinjeta.dars.si" target="_blank" rel="noopener" class="text-petrol underline">evinjeta.dars.si</a>.</p>
+        </div>
+        <div class="bg-white rounded-xl p-5 border border-sand/50">
+          <h4 class="font-semibold text-sm text-charcoal mb-2">Kroatia - Bompenger</h4>
+          <p class="text-sm text-charcoal/70">Ingen vignett — bompenger betales ved bomstasjoner. A1 Zagreb–Split ca. 24 EUR totalt. EUR eller betalingskort aksepteres.</p>
         </div>
       </div>
 
@@ -814,18 +990,12 @@ function ferieApp() {
 
     // Budsjett
     budget: [
-      { category: 'Drivstoff (diesel)', amount: 5500, color: 'bg-petrol',
-        detail: 'ca. 2 500 km × 11 L/100 km ≈ 275 L · snitt ~19 NOK/L (NO ~21, DK/DE ~18)' },
-      { category: 'Overnatting (camping)', amount: 14000, color: 'bg-success',
-        detail: '27 netter · snitt ~520 NOK/natt (inkl. strøm, 2 voksne + William)' },
-      { category: 'Mat og dagligvarer', amount: 20000, color: 'bg-sunshine',
-        detail: '28 dager · snitt ~700 NOK/dag (camping-mat + utemat 3–4×/uke)' },
-      { category: 'Aktiviteter og inngang', amount: 12000, color: 'bg-petrol/70',
-        detail: 'LEGOLAND, LEGO House, Miniatur Wunderland, Tropical Islands, Berlin Zoo m.fl.' },
-      { category: 'Ferger', amount: 11000, color: 'bg-charcoal/60',
-        detail: 'Color Line ~3 500 · Scandlines ~1 800 · Go Nordic mini-cruise ~5 500 · ekstra lengde' },
-      { category: 'Buffer (10%)', amount: 6500, color: 'bg-muted',
-        detail: 'Uforutsette utgifter, drivstoffprisvariasjoner, sykdom m.m.' },
+      { category: 'Drivstoff', amount: 11500, note: '5 500 km × 11 L/100 km ≈ 605 L · snitt ~19 NOK/L (lokale priser)', color: 'bg-petrol' },
+      { category: 'Overnatting (camping)', amount: 15000, note: '28 netter · snitt ~535 NOK/natt', color: 'bg-success' },
+      { category: 'Mat og dagligvarer', amount: 18000, note: '28 dager · snitt ~640 NOK/dag for 3 personer', color: 'bg-sunshine' },
+      { category: 'Aktiviteter og inngang', amount: 10000, note: 'Zugspitze, Neuschwanstein, Legoland, Plitvice, Krka m.fl.', color: 'bg-petrol/70' },
+      { category: 'Ferger og bompenger', amount: 23000, note: 'Color Magic Oslo–Kiel 16 200 NOK (bekreftet pris m/riktig kjøretøyhøyde/-lengde) + Color Line Hirtshals–Larvik ~5 000 NOK + vignetter og bompenger ~1 800 NOK', color: 'bg-charcoal/60' },
+      { category: 'Buffer (10%)', amount: 8000, note: 'Uforutsette utgifter, drivstoffprisvariasjoner m.m.', color: 'bg-muted' },
     ],
     get budgetTotal() {
       return this.budget.reduce((sum, item) => sum + item.amount, 0);
@@ -870,6 +1040,14 @@ function ferieApp() {
     formatDate(dateStr) {
       const d = new Date(dateStr);
       return d.getDate() + '. ' + ['jan','feb','mar','apr','mai','jun','jul','aug','sep','okt','nov','des'][d.getMonth()];
+    },
+
+    formatStopDates(stop) {
+      if (!stop || !stop.arrivalDate) return '—';
+      if (!stop.departureDate || stop.departureDate === stop.arrivalDate) {
+        return this.formatDate(stop.arrivalDate);
+      }
+      return this.formatDate(stop.arrivalDate) + ' – ' + this.formatDate(stop.departureDate);
     },
 
     getMapsUrl(stop) {
@@ -1167,355 +1345,456 @@ function ferieApp() {
     stops: [
       {
         id: 1,
-        name: 'Løkken Strand',
-        country: 'Danmark',
-        countryCode: 'DK',
-        lat: 57.37,
-        lng: 9.72,
+        name: 'Color Magic (Oslo → Kiel)',
+        country: 'Norge / Tyskland',
+        countryCode: 'NO/DE',
+        lat: 57.1,
+        lng: 10.4,
         arrivalDate: '2026-07-04',
-        departureDate: '2026-07-07',
-        nights: 3,
-        week: 28,
+        departureDate: '2026-07-05',
+        nights: 1,
+        week: 27,
         camping: {
-          name: 'Løkken Klit Camping og Hytteby',
-          address: 'Jørgen Jensensvej 2, 9480 Løkken',
-          url: 'https://www.loekkenklit.dk/',
+          label: 'Ferge',
+          name: 'Color Line Color Magic',
+          address: 'Oslo Hjortneskaia – avgang kl. 14:00',
+          url: 'https://www.colorline.no/oslo-kiel',
           booked: false,
           bookingRef: '',
+          checkIn: 'Ombord fra 12:30 (avgang 14:00)',
+          checkOut: 'Avstigning Kiel ca. 10:00',
+          timesEstimated: false,
         },
         driveFromPrevious: {
-          km: 140,
-          hours: '1t 10min + 3t 45min ferge',
-          route: 'Kongsberg–Larvik (E18), ferge til Hirtshals (Color Line), Rute 55 til Løkken',
+          km: 85,
+          hours: '1t 15min + 20t ferge',
+          route: 'Kongsberg → Oslo Hjortneskaia (E18 nord), Color Magic avgår kl. 14:00',
         },
-        description: 'Bred, hvit sandstrand på den danske vestkysten. Innendørs svømmebasseng, trampoliner og stor lekeplass på campingplassen. Ca. 800 m til stranden.',
+        description: 'Utreise med Color Magic fra Oslo til Kiel. Overnatting i lugar ombord. Restauranter, spa og underholdning. Ankomst Kiel ca. kl. 10:00.',
         activities: [
-          { name: 'Løkken Strand', type: 'strand', priority: 'must-do', description: 'En av Danmarks bredeste sandstrender. Sandslottbygging og lek i bølgene. Ikoniske hvite badehus.', url: 'https://www.visit-nordvestkysten.com/northwest-coast/destinations/lokken', mapsQuery: 'Løkken Strand, 9480 Løkken, Danmark' },
-          { name: 'Rubjerg Knude Fyr', type: 'severdighet', priority: 'must-do', description: 'Berømt fyrtårn omgitt av sandklitter. 15 min kjøring. Lett turvei opp.', url: 'https://www.visit-nordvestkysten.com/northwest-coast/inspiration/rubjerg-knude-lighthouse', mapsQuery: 'Rubjerg Knude Fyr, Rubjerg Knude, 9800 Hjørring, Danmark' },
-          { name: 'Dagstur til Skagen / Grenen', type: 'severdighet', priority: 'must-do', description: '1 t 15 min kjøring. Grenen der to hav møtes — William kan stå i to hav samtidig. Sandormen kjører ut til spissen.', url: 'https://www.enjoynordjylland.com/skagen', mapsQuery: 'Grenen, Fyrvej, 9990 Skagen, Danmark' },
-          { name: 'Faarup Sommerland', type: 'forlystelsespark', priority: 'nice-to-have', description: 'Danmarks største forlystelsespark med vannpark og barneland. 25 min kjøring.', url: 'https://www.faarupsommerland.dk/', mapsQuery: 'Faarup Sommerland, Pirupvejen 16, 9690 Fjerritslev, Danmark' },
-          { name: 'Nordsøen Oceanarium', type: 'akvarium', priority: 'nice-to-have', description: 'Nordeuropas største akvarium med havsealer og haier. Hirtshals, 40 min kjøring.', url: 'https://nordsoenoceanarium.dk/', mapsQuery: 'Nordsøen Oceanarium, Willemoesvej 2, 9850 Hirtshals, Danmark' },
-          { name: 'Råbjerg Mile', type: 'natur', priority: 'nice-to-have', description: 'Danmarks største vandresandklit — unikt landskap som minner om en ørken.', url: 'https://www.enjoynordjylland.com/north-jutland/plan-your-trip/rabjerg-mile-gdk640523', mapsQuery: 'Råbjerg Mile, 9990 Skagen, Danmark' },
+          { name: 'Innsjekk og lugar', type: 'ombord', priority: 'must-do', description: 'Boarder i Oslo, innsjekk kl. 12:00. Avgang kl. 14:00. Lugar for familien.', url: 'https://www.colorline.no/oslo-kiel', mapsQuery: 'Oslo Hjortneskaia, 0252 Oslo, Norge' },
+          { name: 'Kveldsunderholdning ombord', type: 'lek', priority: 'must-do', description: 'Familiemiddag, barnedisco og lek ombord. William vil elske fergeturen.', url: '', mapsQuery: '' },
         ],
-        tips: ['Juli er høysesong — book campingplass tidlig', 'CampingKey Europe anbefales for rabatter på danske campingplasser', 'Husk solkrem og vindjakke — vestkysten kan være blåsende'],
+        tips: ['Book lugar med vindu for utsikt', 'Oppgi campingvogn-lengde ved booking', 'Ankomst Kiel ca. kl. 10:00 – god tid til å kjøre til Berlin'],
         imageUrl: '',
       },
       {
         id: 2,
-        name: 'Silkeborg',
-        country: 'Danmark',
-        countryCode: 'DK',
-        lat: 56.17,
-        lng: 9.55,
-        arrivalDate: '2026-07-07',
-        departureDate: '2026-07-10',
-        nights: 3,
-        week: 28,
-        camping: {
-          name: 'Skyttehusets Outdoor Camp',
-          address: 'Svejbækvej 3, 8600 Silkeborg',
-          url: 'https://skyttehusetscamping.dk/',
-          booked: false,
-          bookingRef: '',
-        },
-        driveFromPrevious: {
-          km: 130,
-          hours: '2t 05min',
-          route: 'Rute 55 sørover fra Løkken, E39/rute 11 sør, rute 12 øst til Silkeborg',
-        },
-        description: 'Danmarks utendørshovedstad midt i Søhøjlandet. Skyttehusets Outdoor Camp ligger i praktfull bøkeskog rett ved Gudenåen og Silkeborg-innsjøene, med direkte tilgang til noen av Danmarks beste MTB-løyper. Prisvinner «Best Danish Camp Site – outdoor» (2020).',
-        activities: [
-          { name: 'MTB — Vesterskoven og Nordskoven', type: 'sport', priority: 'must-do', description: 'Danmarks beste bynære MTB-løypenett. Vesterskoven: 17 km blå løype med noen av Danmarks lengste nedkjøringer, rett fra campingen. Nordskoven nås via el-solferge over innsjøen — blå/rød/svart løyper. Sykkelutleie på campingen (200 DKK/dag, inkl. hjelm).', url: 'https://skyttehusetscamping.dk/en/rental/bike-mtb/', mapsQuery: 'Vesterskoven, Silkeborg, Danmark' },
-          { name: 'AQUA Akvarium & Dyrepark', type: 'museum', priority: 'must-do', description: 'Nord-Europas eneste ferskvannsakvarium — 4 etasjer med fisk, amfibier, reptiler og lek. William kan klappe stor fisk i klappebassenget og se otertreningene. Utendørs vannlekeplass «Vandets Kraft» og daglige dyrestellinger i sommer.', url: 'https://visitaqua.dk/', mapsQuery: 'AQUA Akvarium og Dyrepark, Vejlsøvej 55, 8600 Silkeborg, Danmark' },
-          { name: 'Padling på Gudenåen', type: 'aktivitet', priority: 'nice-to-have', description: 'Kano og kajakk-utleie direkte fra campingplassen. Rolig elvepadling gjennom bøkeskogen langs Gudenåen — tilpasset barnefamilier.', url: 'https://skyttehusetscamping.dk/en/', mapsQuery: 'Skyttehusets Outdoor Camp, Svejbækvej 3, 8600 Silkeborg, Danmark' },
-          { name: 'Himmelbjerget og Hjejlen dampbåt', type: 'natur', priority: 'nice-to-have', description: 'Hjejlen er verdens eldste kullkjørte hjulbåt i drift (1861) og seiler fra Silkeborg via Julsø til Himmelbjerget (147 m) om sommeren. Kombinerer historisk båttur med utsiktsvandring for William.', url: 'https://hjejleselskabet.dk/', mapsQuery: 'Himmelbjerget, 8600 Silkeborg, Danmark' },
-          { name: 'Labyrinthia', type: 'aktivitet', priority: 'nice-to-have', description: '9 ulike labyrinter inkl. Europas største 3D-labyrint og 50+ spill og aktiviteter. 20 min kjøring fra campingen. Passer alle aldre — William elsker det.', url: 'https://www.labyrinthia.dk/', mapsQuery: 'Labyrinthia, Gl. Ryvej 2, 8653 Them, Danmark' },
-          { name: 'Silkeborg Bikepark', type: 'sport', priority: 'nice-to-have', description: 'Dedikert bikepark med flow trails, berms og drops bygget av Europas ledende trailbyggere. Klassifisert blå/rød/svart. Eget parkområde utenfor skogsrundene.', url: 'https://www.trailforks.com/region/silkeborg-bikepark/', mapsQuery: 'Silkeborg Bikepark, Silkeborg, Danmark' },
-          { name: 'Silkeborg Ørnereservat og Bisonpark', type: 'natur', priority: 'nice-to-have', description: 'Rovfuglshow med ugler, falker og ørner som flyr tett forbi, bisongsafari og burgerbar. Barnevennlig og spennende for William.', url: 'https://www.visitaarhus.com/areas-and-cities/silkeborg', mapsQuery: 'Silkeborg Ørnereservat, Silkeborg, Danmark' },
-        ],
-        tips: [
-          'MTB-utleie på campingen: kun 4 sykler — bestill på forhånd i høysesong (ring +45 86 84 51 11)',
-          'Nordskoven: ta el-solfergen over Svejbæksnævringen fra campingens brygge',
-          'Over 250 km merkede MTB-løyper i Søhøjlandet — kart fås i resepsjonen',
-          'AQUA: daglige dyrestellinger og ottershow i sommersesongen — sjekk programmet på visitaqua.dk',
-          'William kan bade i Slåensø (15 min gange fra campingen) mens én av de voksne sykler',
-          'Hjejlen avgår fra Silkeborg havn — ta båten til Himmelbjerget og sykkel tilbake langs sjøen',
-        ],
-        imageUrl: '',
-      },
-      {
-        id: 3,
-        name: 'Billund',
-        country: 'Danmark',
-        countryCode: 'DK',
-        lat: 55.73,
-        lng: 9.11,
-        arrivalDate: '2026-07-10',
-        departureDate: '2026-07-13',
-        nights: 3,
-        week: 28,
-        camping: {
-          name: 'LEGOLAND® Holiday Village Camping',
-          address: 'Ellehammers Allé, 7190 Billund',
-          url: 'https://www.legoland.dk/en/short-break/you-can-stay-here/legoland-holiday-village/camping/',
-          booked: false,
-          bookingRef: '',
-        },
-        driveFromPrevious: {
-          km: 40,
-          hours: '40min',
-          route: 'Rute 52/A13 sørover fra Silkeborg til Billund',
-        },
-        description: 'LEGO-hovedstaden! Gangavstand til LEGOLAND. Beboere på Holiday Village har tidlig parkadgang. Perfekt basecamp for 3 dager med forlystelser og dyrepark.',
-        activities: [
-          { name: 'LEGOLAND Billund', type: 'forlystelsespark', priority: 'must-do', description: 'Hovedattraksjonen. DUPLO Land og LEGO City for 5-åringer. Miniland. Planlegg en hel dag.', url: 'https://www.legoland.dk/', mapsQuery: 'LEGOLAND Billund, Billund Skovvej 31, 7190 Billund, Danmark' },
-          { name: 'LEGO House', type: 'museum', priority: 'must-do', description: '"Home of the Brick" i Billund sentrum. Interaktive byggesoner. 3–4 timer.', url: 'https://www.legohouse.com/', mapsQuery: 'LEGO House, Aastvej 1, 7190 Billund, Danmark' },
-          { name: 'Givskud Zoo (LEGOLAND Wildlife Park)', type: 'dyrepark', priority: 'must-do', description: 'Safari-park med løver, giraffer, elefanter. 25 min kjøring.', url: 'https://www.givskudzoo.dk/', mapsQuery: 'Givskud Zoo, Løveparkvej 3, 7323 Give, Danmark' },
-          { name: 'Lalandia Billund (Aquadome)', type: 'badeland', priority: 'nice-to-have', description: 'Tropisk badeland med vannrutsjebaner. Dagsbillett mulig. Perfekt på regnværsdager.', url: 'https://www.lalandia.dk/billund', mapsQuery: 'Lalandia Billund, Ellehammers Allé 2, 7190 Billund, Danmark' },
-          { name: 'Kongernes Jelling', type: 'historie', priority: 'nice-to-have', description: 'UNESCO vikinghistorie med interaktivt opplevelsessenter. 20 min kjøring. Gratis inngang.', url: 'https://kongernesjelling.dk/', mapsQuery: 'Kongernes Jelling, Gormsgade 23, 7300 Jelling, Danmark' },
-        ],
-        tips: ['Book campingplass + park-pakke via legoland.dk/en/bookings/ (2-dagers billett anbefales)', 'LEGOLAND åpner kl. 10:00 — vær tidlig for å unngå køer', 'Beboere på Holiday Village har tilgang til parken 30 min før offisiell åpning'],
-        imageUrl: '',
-      },
-      {
-        id: 4,
-        name: 'Lübeck',
-        country: 'Tyskland',
-        countryCode: 'DE',
-        lat: 53.87,
-        lng: 10.69,
-        arrivalDate: '2026-07-13',
-        departureDate: '2026-07-16',
-        nights: 3,
-        week: 29,
-        camping: {
-          name: 'Strandcamping Priwall',
-          address: 'Dünenweg 3, 23570 Lübeck-Travemünde',
-          url: 'http://www.strandcamping-priwall.de',
-          booked: false,
-          bookingRef: '',
-        },
-        driveFromPrevious: {
-          km: 330,
-          hours: '5t 00min',
-          route: 'E45/A7 sørover, A1 øst mot Lübeck',
-        },
-        description: 'UNESCO-listet hanseatisk gammelby med ikonisk Holstentor — middelalderport fra 1464. Dagstur til Hamburgs Miniatur Wunderland (~65 km). Campingplass med strand ved Østersjøen i Travemünde.',
-        activities: [
-          { name: 'Holstentor + Altstadt (UNESCO)', type: 'kultur', priority: 'must-do', description: 'Ikonisk middelalderport fra 1464. Sentrum av hansebyen — middelalderske gater og kjøpmannshus. Museum i Holstentor.', url: 'https://www.luebeck-tourismus.de/altstadt/holstentor', mapsQuery: 'Holstentor, Holstentorplatz, 23552 Lübeck, Deutschland' },
-          { name: 'Niederegger Marzipan', type: 'attraksjon', priority: 'must-do', description: 'Lübecks verdensberømte marzipan siden 1806. Café + lite marzipanmuseum i 2. etasje. William kan dekorere marzipan.', url: 'https://www.niederegger.de/', mapsQuery: 'Café Niederegger, Breite Straße 89, 23552 Lübeck, Deutschland' },
-          { name: 'Dagstur: Miniatur Wunderland Hamburg', type: 'attraksjon', priority: 'must-do', description: 'Verdens største modelljernbaneutstilling i Hamburgs Speicherstadt. Bestill billetter på forhånd! 3–4 timer. ~65 km fra Lübeck.', url: 'https://www.miniatur-wunderland.com/', mapsQuery: 'Miniatur Wunderland, Kehrwieder 2, 20457 Hamburg, Deutschland' },
-          { name: 'Dagstur: Hafenrundfahrt Hamburg', type: 'båtkjøring', priority: 'must-do', description: 'Barkastur i Hamburgs havn fra Landungsbrücken. Store containerskip. Ca. 1 time.', url: 'https://www.barkassen-meyer.de/', mapsQuery: 'Landungsbrücken, St. Pauli, 20359 Hamburg, Deutschland' },
-          { name: 'Strandbad Travemünde', type: 'strand', priority: 'nice-to-have', description: 'Bred sandstrand ved Østersjøen rett ved campingplassen. Grunt og barnevennlig vann.', url: 'https://www.luebeck-tourismus.de/wasser/travemuende', mapsQuery: 'Strand Travemünde, Lübeck-Travemünde, Deutschland' },
-          { name: 'Europäisches Hansemuseum', type: 'museum', priority: 'nice-to-have', description: 'Interaktivt museum om hanseatenes handelsnettverk. Moderne og engasjerende for alle aldre.', url: 'https://www.hansemuseum.eu/', mapsQuery: 'Europäisches Hansemuseum, An der Untertrave 1, 23552 Lübeck, Deutschland' },
-          { name: 'Marienkirche', type: 'severdighet', priority: 'nice-to-have', description: 'Verdens høyeste murkirke (1351). To bombesprengde klokker på gulvet som krigsminnesmerke.', url: 'https://www.st-marien-luebeck.de/', mapsQuery: 'St. Marienkirche, Marienkirchhof 1, 23552 Lübeck, Deutschland' },
-          { name: 'Bootsrundfahrt Trave', type: 'båtkjøring', priority: 'nice-to-have', description: 'Elvecruise gjennom gamlebyen langs Trave. Ser Holstentor og saltlagrene fra vannet.', url: 'https://www.quandt-linie.de/', mapsQuery: 'Quandt Linienschifffahrt, An der Obertrave, 23552 Lübeck, Deutschland' },
-        ],
-        tips: [
-          'Lübeck Altstadt er kompakt og lett å gå — parkér ved Holstentor og gå resten',
-          'Hamburg dagstur: Umweltplakette kreves (samme plakett som for Berlin)',
-          'Miniatur Wunderland: bestill billetter minimum 2–3 uker i forveien i juli',
-          'Skandinavienkai fergehavn er synlig fra campingplassen — store Finnlines/Stena-skip spennende for William',
-          'Lübeck selv har ingen Umweltzone',
-        ],
-        imageUrl: '',
-      },
-      {
-        id: 5,
         name: 'Berlin',
         country: 'Tyskland',
         countryCode: 'DE',
-        lat: 52.52,
-        lng: 13.40,
-        arrivalDate: '2026-07-16',
-        departureDate: '2026-07-20',
-        nights: 4,
-        week: 29,
+        lat: 52.4907,
+        lng: 13.3777,
+        arrivalDate: '2026-07-05',
+        departureDate: '2026-07-08',
+        nights: 3,
+        week: 27,
         camping: {
           name: 'DCC-Campingplatz Berlin-Gatow',
           address: 'Kladower Damm 213–217, 14089 Berlin-Gatow',
           url: 'https://www.dccberlin.de/',
           booked: false,
           bookingRef: '',
+          checkIn: '13:00',
+          checkOut: '12:00',
+          timesEstimated: true,
         },
         driveFromPrevious: {
-          km: 330,
-          hours: '5t 00min',
-          route: 'A20 øst mot Rostock, A19/A24 sør mot Berlin',
+          km: 354,
+          hours: '5t 15min',
+          route: 'Kiel → Berlin via A21/A24 øst',
         },
-        description: 'Tysklands hovedstad med familiebesøk hos André og Lucia. Campingplass med sandstrand ved Havel, ca. 22 km fra Fischerinsel.',
+        description: 'Tysklands hovedstad med familiebesøk hos André og Lucia. DCC-Campingplatz Berlin-Gatow ved Havel, ca. 22 km fra sentrum. Umweltplakette påkrevd.',
         activities: [
           { name: 'Besøk André og Lucia', type: 'familiebesøk', priority: 'must-do', description: 'Fischerinsel 9, 10179 Berlin. Sentralt i Mitte ved Spree-elven.', url: '', mapsQuery: 'Fischerinsel 9, 10179 Berlin, Deutschland' },
-          { name: 'Berlin Zoo', type: 'dyrehage', priority: 'must-do', description: 'En av Europas mest artsrike. Akvarium inkludert. Halv til hel dag.', url: 'https://www.zoo-berlin.de/', mapsQuery: 'Zoologischer Garten Berlin, Hardenbergplatz 8, 10787 Berlin, Deutschland' },
-          { name: 'LEGOLAND Discovery Centre', type: 'opplevelse', priority: 'must-do', description: 'LEGO-opplevelsessenter med byggeverksteder og 4D-kino. Bestill online. 2–3 timer.', url: 'https://www.legolanddiscoverycentre.com/berlin/', mapsQuery: 'LEGOLAND Discovery Centre Berlin, Potsdamer Str. 4, 10785 Berlin, Deutschland' },
-          { name: 'Tropical Islands', type: 'badeland', priority: 'must-do', description: 'Verdens største innendørs tropiske badeanlegg. Ca. 60 km sør for Berlin. Hel dag.', url: 'https://www.tropical-islands.de/', mapsQuery: 'Tropical Islands, Tropical-Islands-Allee 1, 15910 Krausnick, Deutschland' },
-          { name: 'Naturkundemuseum', type: 'museum', priority: 'must-do', description: 'Verdens største monterte dinosaurskjelett. Barn elsker dinosauravdelingen. 2–3 timer.', url: 'https://www.museumfuernaturkunde.berlin/', mapsQuery: 'Museum für Naturkunde, Invalidenstraße 43, 10115 Berlin, Deutschland' },
-          { name: 'Tempelhofer Feld', type: 'park', priority: 'nice-to-have', description: 'Gammel flyplass omgjort til enorm bypark. Sykling og drageflying med William. Gratis.', url: 'https://gruen-berlin.de/projekt/tempelhofer-feld', mapsQuery: 'Tempelhofer Feld, Tempelhofer Damm, 12101 Berlin, Deutschland' },
+          { name: 'Berlin Zoo', type: 'dyrehage', priority: 'must-do', description: 'En av Europas mest artsrike dyrehager. Akvarium inkludert. Halv til hel dag.', url: 'https://www.zoo-berlin.de/', mapsQuery: 'Zoologischer Garten Berlin, Hardenbergplatz 8, 10787 Berlin, Deutschland' },
+          { name: 'FEZ Berlin', type: 'aktivitet', priority: 'must-do', description: 'Europas største fritids- og aktivitetssenter for barn. Store klatreanlegg, lekeplasser, sportsbaner og kreative verksteder innendørs og utendørs. William kan løpe, klatre og bruke energi i timesvis!', url: 'https://www.fez-berlin.de/', mapsQuery: 'FEZ Berlin, An der Wuhlheide 197, 12459 Berlin, Deutschland' },
+          { name: 'Dark Matter — utstillingen', type: 'museum', priority: 'must-do', description: 'Spektakulær interaktiv kunstutstilling med immersive lysrom og sanseopplevelser. En av Berlins mest snakkede om attraksjoner. Fascinerende for hele familien.', url: 'https://en.darkmatter.berlin/', mapsQuery: 'Dark Matter Berlin, Deutschland' },
+          { name: 'Naturkundemuseum', type: 'museum', priority: 'must-do', description: 'Verdens største monterte dinosaurskjelett. 2–3 timer. William elsker dinosaur-avdelingen.', url: 'https://www.museumfuernaturkunde.berlin/', mapsQuery: 'Museum für Naturkunde, Invalidenstraße 43, 10115 Berlin, Deutschland' },
+          { name: 'Tempelhofer Feld', type: 'park', priority: 'nice-to-have', description: 'Gammel flyplass omgjort til bypark. Sykling og drageflying med William. Gratis.', url: 'https://gruen-berlin.de/projekt/tempelhofer-feld', mapsQuery: 'Tempelhofer Feld, Tempelhofer Damm, 12101 Berlin, Deutschland' },
         ],
-        tips: ['Umweltplakette kreves også i Berlin', 'Vurder Berlin WelcomeCard for 4 dager (dekker kollektivtransport + rabatter)', 'Campingplassen ved Havel er fin for bading på varme dager'],
+        tips: ['Umweltplakette kreves i Berlin — bestill fra umwelt-plakette.de', 'Vurder Berlin WelcomeCard for 3 dager (kollektivtransport + rabatter)', 'Campingplassen ved Havel er fin for bading på varme dager'],
         imageUrl: '',
       },
       {
-        id: 6,
+        id: 3,
         name: 'Bad Schandau',
         country: 'Tyskland',
         countryCode: 'DE',
-        lat: 50.92,
-        lng: 14.15,
-        arrivalDate: '2026-07-20',
-        departureDate: '2026-07-24',
-        nights: 4,
-        week: 30,
+        lat: 50.9125,
+        lng: 14.1496,
+        arrivalDate: '2026-07-08',
+        departureDate: '2026-07-10',
+        nights: 2,
+        week: 28,
         camping: {
           name: 'Campingplatz Ostrauer Mühle',
           address: 'Ostrauer Mühle 15, 01814 Bad Schandau',
           url: 'https://www.ostrauer-muehle.de/',
           booked: false,
           bookingRef: '',
+          checkIn: '14:00',
+          checkOut: '11:00',
+          timesEstimated: true,
         },
         driveFromPrevious: {
-          km: 250,
-          hours: '3t 50min',
-          route: 'A13/A17 sørover mot Sächsische Schweiz',
+          km: 224,
+          hours: '3t 15min',
+          route: 'Berlin → Bad Schandau via A13/A17 sørøst',
         },
-        description: 'Saksisk Sveits nasjonalpark med dramatiske sandsteinsformasjoner, festninger og historiske trikker. Campingplass direkte ved Bad Schandau ved foten av nasjonalparken.',
+        description: 'Saksisk Sveits nasjonalpark med dramatiske sandsteinsformasjoner og historiske trikker. Dagstur til Kamenice Gorge i Böhmisk Sveits på tsjekkisk side.',
         activities: [
-          { name: 'Basteibroen (Basteibrücke)', type: 'natur', priority: 'must-do', description: 'Ikonisk steinbro 194 m over Elben. Kort sti fra parkering (15–20 min). Hold godt i William — bratte stup!', url: 'https://www.saechsische-schweiz.de/ausflugsziele/bastei', mapsQuery: 'Bastei, 01824 Lohmen, Deutschland' },
-          { name: 'Festung Königstein', type: 'festning', priority: 'must-do', description: 'En av Europas største fjellfestninger. Kanoner, tunneler, utsikt. Halv dag.', url: 'https://www.festung-koenigstein.de/', mapsQuery: 'Festung Königstein, 01824 Königstein, Deutschland' },
-          { name: 'Kirnitzschtalbahn', type: 'tog', priority: 'must-do', description: 'Historisk sporvogn fra Bad Schandau til Lichtenhainer Wasserfall. William vil elske trikketuren!', url: 'https://www.rvsoe.de/verkehrsmittel/kirnitzschtalbahn', mapsQuery: 'Kirnitzschtalbahn Haltestelle Bad Schandau, Bad Schandau, Deutschland' },
-          { name: 'Dagstur: Kamenice Gorge (Tsjekkia)', type: 'natur', priority: 'must-do', description: 'Vakker elvekløft i Böhmisk Sveits nasjonalpark på tsjekkisk side av grensen. Ca. 10–15 km fra Bad Schandau via Hrensko. Båttur gjennom trange juv med opptil 30 m høye sandsteinsvegger — dramatisk og stemningsfullt. Perfekt for hele familien.', url: 'https://www.npcs.cz/en', mapsQuery: 'Kamenice Gorge, Hrensko, Czech Republic' },
-          { name: 'MTB — Elbsandsteingebirge', type: 'sport', priority: 'nice-to-have', description: 'Merkede MTB-ruter gjennom sandsteinlandskapet. Kirnitzschtal-dalen er en naturlig trasé langs elven. OBS: kun kjøring på merkede «Nationalpark Fahrradroute»-stier innenfor nasjonalparken. Krysser gjerne grensa til tsjekkisk side for mer terreng.', url: 'https://www.komoot.com/guide/2052/mtb-trails-around-bad-schandau', mapsQuery: 'Kirnitzschtal, Bad Schandau, Deutschland' },
-          { name: 'Amselsee i Rathen', type: 'natur', priority: 'nice-to-have', description: 'Rolig innsjøvandring med robåtutleie.', url: 'https://www.saechsische-schweiz.de/ausflugsziele/amselsee-kurort-rathen', mapsQuery: 'Amselsee, 01824 Kurort Rathen, Deutschland' },
-          { name: 'Elbeskipsfart (hjuldampere)', type: 'båtkjøring', priority: 'nice-to-have', description: 'Historiske hjuldampere på Elben. Fantastisk utsikt fra vannet.', url: 'https://www.saechsische-dampfschifffahrt.de/', mapsQuery: 'Sächsische Dampfschiffahrt, Bad Schandau, Deutschland' },
-          { name: 'Pirna gammelby', type: 'by', priority: 'nice-to-have', description: 'Sjarmerende gammelby med fargerike hus. 15 min kjøring. Is og spasertur.', url: 'https://www.pirna.de/tourismus', mapsQuery: 'Markt Pirna, 01796 Pirna, Deutschland' },
+          { name: 'Basteibroen (Basteibrücke)', type: 'natur', priority: 'must-do', description: 'Ikonisk steinbro 194 m over Elben. Kort sti fra parkering (15–20 min). Spektakulær utsikt.', url: 'https://www.saechsische-schweiz.de/ausflugsziele/bastei', mapsQuery: 'Bastei, 01824 Lohmen, Deutschland' },
+          { name: 'Festung Königstein', type: 'festning', priority: 'must-do', description: 'En av Europas største fjellfestninger. Kanoner, tunneler og panoramautsikt. Halv dag.', url: 'https://www.festung-koenigstein.de/', mapsQuery: 'Festung Königstein, 01824 Königstein, Deutschland' },
+          { name: 'Kirnitzschtalbahn', type: 'tog', priority: 'must-do', description: 'Historisk sporvogn fra Bad Schandau til Lichtenhainer Wasserfall. William vil elske trikketuren!', url: 'https://www.rvsoe.de/verkehrsmittel/kirnitzschtalbahn', mapsQuery: 'Kirnitzschtalbahn, Bad Schandau, Deutschland' },
+          { name: 'Kamenice Gorge (Tsjekkia)', type: 'natur', priority: 'must-do', description: 'Vakker elvekløft i Böhmisk Sveits NP. Båttur gjennom 30 m høye sandsteinsvegger. 10–15 km fra Bad Schandau via Hrensko.', url: 'https://www.npcs.cz/en', mapsQuery: 'Kamenice Gorge, Hrensko, Czech Republic' },
+        ],
+        tips: ['Gå til Bastei tidlig på morgenen for å unngå folkemengder', 'Kamenice Gorge: ta med CZK eller euro for båtbilletter', 'Ingen Umweltzone i Bad Schandau'],
+        imageUrl: '',
+      },
+      {
+        id: 4,
+        name: 'Wien-området (Tulln)',
+        country: 'Østerrike',
+        countryCode: 'AT',
+        lat: 48.3349,
+        lng: 16.0556,
+        arrivalDate: '2026-07-10',
+        departureDate: '2026-07-11',
+        nights: 1,
+        week: 28,
+        camping: {
+          name: 'Donaupark Camping Tulln',
+          address: 'Donaupark, 3430 Tulln an der Donau, Niederösterreich',
+          url: 'https://www.donaupark-camping.at/',
+          booked: false,
+          bookingRef: '',
+          checkIn: '14:00',
+          checkOut: '10:00',
+          timesEstimated: false,
+        },
+        driveFromPrevious: {
+          km: 420,
+          hours: '6t 15min',
+          route: 'Bad Schandau → Tulln via E55/D8 sørover → Prague-ring → D1/E65 sørøst → Wien → B14/A1 nordvest til Tulln an der Donau',
+        },
+        description: 'Naturskjønt transitstopp ved Donau-elven vest for Wien. Tulln an der Donau er en sjarmerende by i Niederösterreich med storslått Donauutsikt og direkte tilgang til den berømte Donau-sykkelstien. Donaupark Camping Tulln har familievennlige fasiliteter rett ved elven.',
+        activities: [
+          { name: 'Kveldsspasertur langs Donau', type: 'friluft', priority: 'must-do', description: 'Vakker spasertur langs Donaupromenaden i Tulln. Donau-sykkelstien er en av Europas mest populære — flatt og barnevennlig.', url: 'https://www.tulln.at/', mapsQuery: 'Donaupromenade Tulln an der Donau, Austria' },
+          { name: 'Tulln gamlebyen', type: 'kultur', priority: 'nice-to-have', description: 'Sjarmerende romersk-historisk by langs Donau. Romansk Karner-kirke og pittoreske gater. Tulln er fødebyen til kunstneren Egon Schiele.', url: 'https://www.tulln.at/', mapsQuery: 'Stadtplatz Tulln an der Donau, Austria' },
         ],
         tips: [
-          'Ingen Umweltzone i Bad Schandau (men unngå Dresden sentrum)',
-          'Gå til Bastei tidlig på morgenen for å unngå folkemengder',
-          'Bad Schandau har historisk personheis opp til utsiktspunkt',
-          'MTB: sykkelutleie i Bad Schandau sentrum og Königstein — forhåndsbooking anbefales i juli',
-          'Kamenice Gorge: kjør til Hrensko (ca. 15 min), gå ned til båtutleien i kløften. Ta med kontanter (tsjekkiske kroner eller euro). Parkering kan bli full tidlig om morgenen.',
+          'Kjøp østerriksk motorvei-vignett (10 dager, ~9,90 EUR per kjøretøy — bil og henger separat) ved grenseovergangen',
+          'Slovenisk vignett (7 dager, ~15 EUR) kjøpes online eller ved grensen neste morgen',
+          'Tidlig avreise anbefales — ~420 km til Plitvice neste dag',
         ],
+        imageUrl: '',
+      },
+      {
+        id: 5,
+        name: 'Plitvice Lakes NP',
+        country: 'Kroatia',
+        countryCode: 'HR',
+        lat: 44.8804,
+        lng: 15.6165,
+        arrivalDate: '2026-07-11',
+        departureDate: '2026-07-13',
+        nights: 2,
+        week: 28,
+        camping: {
+          name: 'Camping Plitvice',
+          address: 'Mukinje, 53231 Plitvička Jezera – 3 km fra Plitvice inngang',
+          url: 'https://campingplitvice.hr/',
+          booked: false,
+          bookingRef: '',
+          checkIn: '13:00',
+          checkOut: '11:00',
+          timesEstimated: true,
+        },
+        driveFromPrevious: {
+          km: 420,
+          hours: '6t 15min',
+          route: 'Tulln (Wien-området) → Plitvice via A21/A2 sørøst → Spielfeld/Šentilj grense → A1 Slovenia (Ljubljana) → A1 Kroatia → D429 → D1 inn mot nasjonalparken',
+        },
+        description: '16 turkisblå sjøer og fossen Veliki Slap (78 m) i UNESCO-verdensarv. Camping Plitvice med bassenger og moderne fasiliteter, kun 3 km fra parkens inngang.',
+        activities: [
+          { name: 'Store runde (Rute C/K)', type: 'natur', priority: 'must-do', description: 'De 16 sjøene og Veliki Slap. Elektrisk båttur over Kozjak-sjøen. Spektakulære trebroer. UNESCO-verdensarv.', url: 'https://np-plitvicka-jezera.hr/en/', mapsQuery: 'Plitvice Lakes Entrance 1, Croatia' },
+          { name: 'Veliki Slap (78 m)', type: 'natur', priority: 'must-do', description: 'Kroatias høyeste foss. Nær inngang 1 — lett tur for William.', url: 'https://np-plitvicka-jezera.hr/en/', mapsQuery: 'Veliki Slap, Plitvice Lakes, Croatia' },
+          { name: 'Rastoke (Slunj)', type: 'natur', priority: 'nice-to-have', description: '"Lille Plitvice" — pittoresk landsby der elva renner som fosser mellom husene. Perfekt ettermiddagsutflukt fra Camping Plitvice.', url: 'https://www.slunj-rastoke.hr/en/homepage-en/', mapsQuery: 'Rastoke, Slunj, Croatia' },
+          { name: 'Nikola Tesla-senteret (Smiljan)', type: 'museum', priority: 'nice-to-have', description: '75 km fra Plitvice. Fødested og interaktivt museum for Tesla.', url: 'https://www.mnt.hr/', mapsQuery: 'Nikola Tesla Memorial Center, Smiljan, Croatia' },
+        ],
+        tips: ['Bestill parkbillett online FØR ankomst — sparer kø', 'Inngang 1 for enklest tilgang til Veliki Slap', 'William kan gå Store runde (~8 km) — ta med bæresele som backup'],
+        imageUrl: '',
+      },
+      {
+        id: 6,
+        name: 'Split',
+        country: 'Kroatia',
+        countryCode: 'HR',
+        lat: 43.5081,
+        lng: 16.2648,
+        arrivalDate: '2026-07-13',
+        departureDate: '2026-07-20',
+        nights: 7,
+        week: 29,
+        camping: {
+          name: 'Camping Stobreč Split',
+          address: 'Stobreč bb, 21311 Stobreč – 6 km fra Diokletians palass',
+          url: 'https://www.campingsplit.com/',
+          booked: true,
+          bookingRef: 'PH27767231',
+          bookingDate: '2026-05-08',
+          checkIn: '13:00',
+          checkOut: '07:00–12:30',
+          timesEstimated: false,
+        },
+        driveFromPrevious: {
+          km: 271,
+          hours: '4t',
+          route: 'Plitvice → Split via D1/D33 sørover mot kysten → D8 Jadranska magistrala sør',
+        },
+        description: 'Dalmatias perler: Splits 2 000 år gamle Diokletians palass (UNESCO), Trogirs middelalderby (UNESCO) og Krka nasjonalpark med travertinfosser. Camping Stobreč Split rett ved sandstrand, 6 km fra Diokletians palass.',
+        activities: [
+          { name: 'Diokletians palass, Split (UNESCO)', type: 'kultur', priority: 'must-do', description: '2 000 år gammel keiserpalass der 3 000 mennesker bor i dag. Kjellerganger, Peristyl og katedrale.', url: 'https://visitsplit.com', mapsQuery: 'Diocletian\'s Palace, Split, Croatia' },
+          { name: 'Trogir gamlebyen (UNESCO)', type: 'kultur', priority: 'must-do', description: 'Mellomalderby på liten øy. Romansk-gotisk katedrale med Radovanporten (1240). Sjarmerende strandpromenade.', url: 'https://www.trogir.hr', mapsQuery: 'Trogir Old Town, Trogir, Croatia' },
+          { name: 'Skradinski buk (Krka NP)', type: 'natur', priority: 'must-do', description: 'Sju travertinfosser over 800 m med turkisblå badebassenger. Unikt og spektakulært. Bading juni–okt.', url: 'https://npkrka.hr/en_us/', mapsQuery: 'Skradinski Buk, Krka National Park, Croatia' },
+          { name: 'Visovac-kloster (Krka NP)', type: 'kultur', priority: 'must-do', description: 'Fransiskanerkloster fra 1400-tallet på liten øy i Visovac-sjøen. Nås kun med båt.', url: 'https://npkrka.hr/en_us/', mapsQuery: 'Visovac Island, Krka NP, Croatia' },
+          { name: 'Šibenik gamlebyen + St. Jakobs katedrale (UNESCO)', type: 'kultur', priority: 'must-do', description: 'Verdens eneste katedral bygget utelukkende av hugget stein (1431–1535). UNESCO-verdensarv.', url: 'https://www.sibenik-tourism.hr/lokacije/katedrala-sv-jakova/1/en.html', mapsQuery: 'Cathedral of St. James, Šibenik, Croatia' },
+          { name: 'Klis festning', type: 'severdighet', priority: 'nice-to-have', description: 'Middelalderborg nord for Split med panoramautsikt. Game of Thrones-lokasjon (Meereen).', url: 'https://www.tvrdavaklis.com/', mapsQuery: 'Klis Fortress, Split, Croatia' },
+          { name: 'Marjan-parken, Split', type: 'friluft', priority: 'nice-to-have', description: 'Skogspark på halvøy med sjøbading og sykkelstier. William kan sykle langs kysten.', url: 'https://www.marjan-parksuma.hr/', mapsQuery: 'Marjan Park, Split, Croatia' },
+          { name: 'Kornati nasjonalpark (dagstur)', type: 'natur', priority: 'nice-to-have', description: '89 ubebodde øyer — Middelhavslandskap i sin reineste form. Dagstur med båt fra Šibenik.', url: 'https://kornati.hr', mapsQuery: 'Kornati Islands, Croatia' },
+        ],
+        tips: ['Camping Stobreč Split: reserver i mai/juni for julibooking', 'Krka NP: dagstur fra Split (~86 km) — kjøp billett online på npkrka.hr', 'Trogir er 30 km vest — fin utflukt med bil', 'Split sentrum: parkér ved Zenta og gå inn til Diokletians palass'],
         imageUrl: '',
       },
       {
         id: 7,
-        name: 'Møns Klint',
-        country: 'Danmark',
-        countryCode: 'DK',
-        lat: 54.97,
-        lng: 12.54,
-        arrivalDate: '2026-07-24',
-        departureDate: '2026-07-26',
-        nights: 2,
+        name: 'Poreč / Rovinj, Istria',
+        country: 'Kroatia',
+        countryCode: 'HR',
+        lat: 45.0811,
+        lng: 13.6387,
+        arrivalDate: '2026-07-20',
+        departureDate: '2026-07-24',
+        nights: 4,
         week: 30,
         camping: {
-          name: 'Møns Klint Resort',
-          address: 'Klintevej 544, 4791 Borre',
-          url: 'https://www.moensklintresort.dk/',
+          name: 'Maistra Camping Veštar',
+          address: 'Veštar bb, 52210 Rovinj, Kroatia',
+          url: 'https://www.maistra.com/properties/campsite-vestar/',
           booked: false,
           bookingRef: '',
+          checkIn: '15:00',
+          checkOut: '07:00–10:00',
+          timesEstimated: false,
         },
         driveFromPrevious: {
-          km: 445,
-          hours: '⚠️ 6t 10min + 2t ferge + 1t 05min',
-          route: 'A17 Dresden → A13/A10/A19 til Rostock (ca. 380 km), Scandlines ferge Rostock→Gedser (2t), E55 nord, Rute 59 vest til Møn',
+          km: 310,
+          hours: '4t 30min',
+          route: 'Split → Poreč/Rovinj via A1 nord → Rijeka → Y-motorvei vest mot Istria',
         },
-        description: 'Danmarks mest spektakulære naturlandskap — 128 m høye krittklipper over Østersjøen. UNESCO Geopark med interaktivt GeoCenter, Dark Sky Park og strandvandring langs klintene.',
+        description: 'Kroatisk Istria — venetiansk kystkultur og krystallklart Adriaterhav. Maistra Camping Veštar har 3 bassenger og gangavstand til Rovinjs vakre gamlebyen. Avslutning av Kroatia-oppholdet før hjemreisen.',
         activities: [
-          { name: 'GeoCenter Møns Klint', type: 'museum', priority: 'must-do', description: 'Interaktivt museum om krittklintenes geologi og klimahistorie. Dinosaurspor! Populær med barnefamilier. 2–3 timer.', url: 'https://moensklint.dk/en/', mapsQuery: 'GeoCenter Møns Klint, Stengårdsvej 8, 4791 Borre, Danmark' },
-          { name: 'Vandring langs klintestien', type: 'natur', priority: 'must-do', description: 'Sti langs toppen av de 128 m høye krittklinterne. Spektakulær utsikt over Østersjøen.', url: 'https://www.southzealand-mon.com/moen', mapsQuery: 'Møns Klint, 4791 Borre, Danmark' },
-          { name: 'Klintholm Havn', type: 'by', priority: 'nice-to-have', description: 'Sjarmerende fiskerihavn. Fersk fisk og krabbe direkte fra fiskerne. Is og sjømat.', url: 'https://www.southzealand-mon.com/holiday/plan-your-trip/klintholm-harbour-gdk615280', mapsQuery: 'Klintholm Havn, Klintholmhavnvej, 4791 Bogø By, Danmark' },
-          { name: 'Liselund Slot', type: 'severdighet', priority: 'nice-to-have', description: 'Romantisk stråtekt slott fra 1700-tallet i vakker park. 10 min kjøring fra campingen.', url: 'https://natmus.dk/museer-og-slotte/liselund/', mapsQuery: 'Liselund Ny Slot, Liselundvej 4, 4791 Borre, Danmark' },
+          { name: 'Rovinj gamlebyen', type: 'kultur', priority: 'must-do', description: 'Venetiansk gamlebyen på halvøy. St. Euphemia-basilika (1736) med panoramautsikt. Sjarmerende gater og fiskerhavn.', url: 'https://www.rovinj-tourism.com', mapsQuery: 'Rovinj Old Town, Rovinj, Croatia' },
+          { name: 'Pula amfiteater', type: 'kultur', priority: 'must-do', description: 'Verdens best bevarte gladiatorarena fra 27 f.Kr. William kan gå i gladiatorenes fotspor. 1 t kjøring.', url: 'https://www.ami-pula.hr', mapsQuery: 'Pula Arena, Forum 1, 52100 Pula, Croatia' },
+          { name: 'Poreč Eufrasius-basilika (UNESCO)', type: 'kultur', priority: 'must-do', description: '1 600 år gammel basilika med gullmosaik i bysantinsk stil. Lett kombinert med is og strandtur.', url: 'https://www.myporec.com/', mapsQuery: 'Euphrasius Basilica, 52440 Poreč, Croatia' },
+          { name: 'Lim-fjorden (Limski kanal)', type: 'natur', priority: 'nice-to-have', description: 'Dramatisk fjordarm mellom Poreč og Rovinj. Oysters og båtturer fra Rovinj havn.', url: 'https://www.istra.hr', mapsQuery: 'Limski Kanal, Istria, Croatia' },
+          { name: 'Kamenjak nasjonalpark', type: 'strand', priority: 'nice-to-have', description: 'Uberørt halvøy sør for Pula med krystallklart vann og klipper.', url: 'https://www.kamenjak.hr', mapsQuery: 'Kamenjak, Premantura, Croatia' },
         ],
-        tips: [
-          'Klintestien har bratte partier — ta med bæresele til William på de krevende partiene',
-          'GeoCenter: kjøp billetter online for å unngå kø i høysesong',
-          'Klintholm Havn: fersk krabbe og fisk fra fiskerne om morgenen',
-          'Danmarks første Dark Sky Park — perfekt for kveldsstjerner fra campingen',
-          'Ingen Umweltzone på Møn',
-        ],
+        tips: ['Bestill Maistra Camping Veštar senest april — juli er høysesong', 'Pula amfiteater: gå tidlig for å unngå folkemengder', 'Kroatia bruker EUR siden 2023 — ingen valutaveksling'],
         imageUrl: '',
       },
       {
         id: 8,
-        name: 'København',
-        country: 'Danmark',
-        countryCode: 'DK',
-        lat: 55.68,
-        lng: 12.46,
-        arrivalDate: '2026-07-26',
-        departureDate: '2026-07-30',
-        nights: 4,
-        week: 30,
+        name: 'Zugspitze',
+        country: 'Tyskland',
+        countryCode: 'DE',
+        lat: 47.4778,
+        lng: 10.9761,
+        arrivalDate: '2026-07-24',
+        departureDate: '2026-07-27',
+        nights: 3,
+        week: 31,
         camping: {
-          name: 'DCU-Camping København - Absalon',
-          address: 'Korsdalsvej 132, 2610 Rødovre',
-          url: 'https://www.dcu.dk/en/dcu-camping/copenhagen-absalon',
+          name: 'Camping Resort Zugspitze',
+          address: 'Griesener Str. 9, 82491 Grainau',
+          url: 'https://www.camping-resort-zugspitze.de/',
           booked: false,
           bookingRef: '',
+          checkIn: '14:00',
+          checkOut: '12:00',
+          timesEstimated: true,
         },
         driveFromPrevious: {
-          km: 120,
-          hours: '1t 45min',
-          route: 'Rute 59 nord fra Møn, E47/E55 til København',
+          km: 570,
+          hours: '8t (inkl. Liechtensteinklamm 1,5t)',
+          route: 'Rovinj → Ljubljana via A9/E751 → Karawanken → A10 Tauern → stopp Liechtensteinklamm (Werfen) → Salzburg → A8 øst → A95 sør → Garmisch-Partenkirchen. Svært lang dag — start senest kl. 07:30.',
         },
-        description: 'Danmarks hovedstad med verdensklasse-attraksjoner for barn. DCU-Camping Absalon ligger naturskjønt i Rødovre vest for sentrum — 30 min fra Rådhuspladsen med bil, buss eller tog. Legeplass med miniby, hoppepude og legetårn. Naturområdet Vestvolden rett utenfor.',
+        description: 'Tre netter i de bayerske Alper ved foten av Zugspitze (2 962 m) — Tysklands høyeste fjell. Camping Resort Zugspitze ligger i Grainau med direkte utsikt mot Zugspitzmassivets topper. Zugspitzbahn og Neuschwanstein Castle er blant Europas fremste opplevelser.',
         activities: [
-          { name: 'Tivoli Gardens', type: 'forlystelsespark', priority: 'must-do', description: 'Verdens nest eldste forlystelsespark (1843). Mange karuseller for små barn. Barn under 8 gratis m/voksen.', url: 'https://www.tivoli.dk/', mapsQuery: 'Tivoli, Vesterbrogade 3, 1630 København, Danmark' },
-          { name: 'Bakken (Dyrehavsbakken)', type: 'forlystelsespark', priority: 'must-do', description: 'Verdens eldste forlystelsespark, gratis inngang! Ligger i Dyrehaven med tamme hjorter.', url: 'https://www.bakken.dk/', mapsQuery: 'Bakken, Dyrehavevej 62, 2930 Klampenborg, Danmark' },
-          { name: 'Den Blå Planet', type: 'akvarium', priority: 'must-do', description: 'Nordeuropas største akvarium. Haier, havskildpadder, interaktive utstillinger.', url: 'https://denblaaplanet.dk/', mapsQuery: 'Den Blå Planet, Jacob Fortlingsvej 1, 2770 Kastrup, Danmark' },
-          { name: 'Københavns Zoo', type: 'dyrehage', priority: 'nice-to-have', description: 'Elefanter, isbjørn, løver. Eget barne-zoo der William kan klappe dyr.', url: 'https://www.zoo.dk/', mapsQuery: 'Zoologisk Have København, Roskildevej 32, 2000 Frederiksberg, Danmark' },
-          { name: 'Amager Strandpark', type: 'strand', priority: 'nice-to-have', description: 'Kunstig sandstrand med grunt barnevennlig vann og lekeplasser. Gratis.', url: 'https://www.kk.dk/brug-byen/vandet-i-byen/badestrande/amager-strandpark', mapsQuery: 'Amager Strandpark, Amager Strand Promenade, 2300 København, Danmark' },
-          { name: 'Nyhavn + kanalbåt', type: 'sightseeing', priority: 'nice-to-have', description: 'Fargerike hus, is og båtkjøring på kanalene (ca. 1 time).', url: 'https://www.stromma.com/da-dk/copenhagen/', mapsQuery: 'Nyhavn, 1051 København, Danmark' },
-          { name: 'Experimentarium', type: 'vitensenter', priority: 'nice-to-have', description: 'Interaktivt vitensenter med hands-on utstillinger for barn.', url: 'https://www.experimentarium.dk/', mapsQuery: 'Experimentarium, Tuborg Havnevej 7, 2900 Hellerup, Danmark' },
+          { name: 'Liechtensteinklamm (stoppested underveis)', type: 'natur', priority: 'must-do', description: 'Spektakulær 270 m dyp juv ved Werfen/St. Johann im Pongau i Salzburg-regionen — rett ved A10 Tauern. Trebroer over fossende elv og dramatisk berglandskap. 1–2 t. William vil elske det!', url: 'https://www.josalzburg.com/de/aktivitaeten/liechtensteinklamm.html', mapsQuery: 'Liechtensteinklamm, 5452 Pfarrwerfen, Austria' },
+          { name: 'Zugspitzbahn', type: 'natur', priority: 'must-do', description: 'Tannhjulsbane og gondolbane til toppen av Tysklands høyeste fjell (2 962 m). Utsikt over Bayern og Østerrike. Book billett online på forhånd!', url: 'https://www.zugspitze.de/', mapsQuery: 'Zugspitze Talstation Eibsee, Grainau, Deutschland' },
+          { name: 'Neuschwanstein Castle', type: 'kultur', priority: 'must-do', description: 'Kong Ludvig IIs eventyrslott fra 1886 — inspirasjon til Disneyland. ~75 km øst via B2/B17. Spektakulær beliggenhet over Alpsee-sjøen. Obligatorisk forhåndsbooking!', url: 'https://www.neuschwanstein.de/', mapsQuery: 'Schloss Neuschwanstein, Neuschwansteinstraße 20, 87645 Schwangau, Deutschland' },
+          { name: 'Eibsee', type: 'natur', priority: 'must-do', description: 'Turkisblå alpinsjø ved foten av Zugspitze — direkte ved campingplassen. Bading, kanotur og uovertruffen fjellutsikt. Perfekt for William.', url: 'https://www.zugspitze.de/de/sommer/eibsee.html', mapsQuery: 'Eibsee, 82491 Grainau, Deutschland' },
+          { name: 'Garmisch-Partenkirchen by', type: 'kultur', priority: 'nice-to-have', description: 'Sjarmerende bayersk OL-by fra 1936. Marktplatz, bemalt husfasader og alpinsk atmosfære. 6 km fra campingplassen.', url: 'https://www.gapa.de/', mapsQuery: 'Garmisch-Partenkirchen Marktplatz, Deutschland' },
         ],
-        tips: ['DCU-Camping Absalon er populær i juli — book tidlig. DCU-medlemmer får 30–50 % rabatt.', 'Tog/buss til Rådhuspladsen: ca. 30 min. Ta S-tog fra Rødovre station (5 min gange fra campingen).', 'Kombiner Bakken med tur i Dyrehaven (tamme hjorter)', 'Dagstur til Kronborg slott i Helsingør (Hamlets slott) — ca. 45 min kjøring nord for København', 'Go Nordic-terminalen i Nordhavn: innsjekk fra kl. 14:00 på avreisedagen (30. juli)'],
+        tips: ['Svært lang kjøredag (~8t inkl. Liechtensteinklamm) — start fra Rovinj senest kl. 07:30. 80 km/t fartsgrense med campingvogn i alle land på ruten.', 'Book Zugspitzbahn-billett på forhånd: www.zugspitze.de — Juli er høysesong', 'Neuschwanstein: obligatorisk forhåndsbooking på neuschwanstein.de — begrenset kapasitet i juli', 'Østerriksk vignett gyldig fra utreisen dekker eventuell tollstrekning'],
         imageUrl: '',
       },
       {
         id: 9,
-        name: 'Go Nordic mini-cruise',
-        country: 'Danmark / Norge',
-        countryCode: 'DK/NO',
-        lat: 55.69,
-        lng: 12.60,
-        arrivalDate: '2026-07-30',
-        departureDate: '2026-07-31',
-        nights: 1,
+        name: 'Bamberg',
+        country: 'Tyskland',
+        countryCode: 'DE',
+        lat: 49.8988,
+        lng: 10.9028,
+        arrivalDate: '2026-07-27',
+        departureDate: '2026-07-29',
+        nights: 2,
         week: 31,
         camping: {
-          label: 'Ferge',
-          name: 'Go Nordic Cruiseline',
-          address: 'Nordhavn terminal, København — avgang kl. 16:30',
-          url: 'https://www.gonordiccruiseline.no/minicruise/',
+          name: 'Camping Island Bamberg',
+          address: 'Campinginsel, 96052 Bamberg',
+          url: 'http://www.campinginsel.de/',
           booked: false,
           bookingRef: '',
+          checkIn: '13:00',
+          checkOut: '12:00',
+          timesEstimated: true,
         },
         driveFromPrevious: {
-          km: 5,
-          hours: '15 min + 17t ferge',
-          route: 'Kjør til Nordhavn terminal (5 km). Innsjekk fra kl. 14:00. Avgang kl. 16:30',
+          km: 315,
+          hours: '4t 45min',
+          route: 'Garmisch-Partenkirchen → Bamberg via A95/A8 nord → München → A9 nord → A73 mot Bamberg',
         },
-        description: 'Hjemreise med Go Nordic mini-cruise København → Oslo. Overnatting i familielugar. Barnedisco, lekerom og bufferestaurant ombord. Ankomst Oslo Havneterminal ca. kl. 09:45.',
+        description: 'To netter i en av Tysklands best bevarte middelalderbyer — UNESCO-verdensarv. Bamberg er kjent for sin unike Rauchbier (røykøl), imponerende romansk-gotisk katedral og pittoresk gamlebyen langs Regnitz-elven. God tid til å utforske byen og hvile før fortsettelsen mot Hamburg.',
         activities: [
-          { name: 'Barnas lekeland', type: 'lek', priority: 'must-do', description: 'Dedikert lekerom for småbarn, barnedisco om kvelden.', url: '', mapsQuery: 'Nordhavn Terminal, Sundkrogsgade 2, 2150 Nordhavn, Danmark' },
-          { name: 'Sjøutsikt fra dekk', type: 'opplevelse', priority: 'must-do', description: 'Seiling gjennom Øresund og inn Oslofjorden — William ser fyrtårn, skip og øyer.', url: '', mapsQuery: '' },
-          { name: 'Familiebuffé', type: 'mat', priority: 'must-do', description: 'Middagsbuffé med dansk/norsk mat — populært med barnefamilier.', url: '', mapsQuery: '' },
-          { name: 'Frokostbuffé', type: 'mat', priority: 'nice-to-have', description: 'Frokostbuffé før ankomst Oslo ca. kl. 09:45.', url: '', mapsQuery: '' },
+          { name: 'Bamberg Altstadt (UNESCO)', type: 'kultur', priority: 'must-do', description: 'UNESCO-verdensarv med over 2 400 fredede historiske bygninger. Dom, Altes Rathaus (rådhus bygget på en elveøy) og sjarmerende gater fra middelalderen.', url: 'https://www.bamberg.info/en/', mapsQuery: 'Bamberg Altstadt, Bamberg, Deutschland' },
+          { name: 'Bamberger Dom', type: 'kultur', priority: 'must-do', description: 'Romansk-gotisk katedral fra 1237 med den berømte "Bamberger Reiter" — den anonyme ridderstatuen som er ikon i tysk kunsthistorie.', url: 'https://www.bamberger-dom.de/', mapsQuery: 'Bamberger Dom, Domplatz 5, 96049 Bamberg, Deutschland' },
+          { name: 'Schlenkerla Rauchbier', type: 'mat', priority: 'nice-to-have', description: 'Verdens mest kjente røykøl brygges kun i Bamberg siden 1405. Schlenkerla-brauerei i gamlebyen serverer direkte fra trefat.', url: 'https://www.schlenkerla.de/', mapsQuery: 'Schlenkerla, Dominikanerstraße 6, 96049 Bamberg, Deutschland' },
+          { name: 'Altes Rathaus', type: 'kultur', priority: 'nice-to-have', description: 'Ikonisk rådhus fra 1400-tallet bygget midt i Regnitz-elven på en kunstig steinøy — unikt i Europa og strålende for familiebilder.', url: 'https://www.bamberg.info/', mapsQuery: 'Altes Rathaus Bamberg, Obere Brücke, 96047 Bamberg, Deutschland' },
         ],
-        tips: ['Campingvogn må oppgis ved booking (ekstra lengdegebyr inngår i prisen)', 'Book familielugar med vindu — William vil nyte utsikten', 'Innsjekk starter kl. 14:00 — bruk formiddagen til en siste København-aktivitet'],
+        tips: ['Kjøredag 4t 45min fra Zugspitze — ankomst tidlig ettermiddag gir god tid til å utforske Bamberg', 'To netter gir rom for rolig utforskning av UNESCO-gamlebyen og middag med Rauchbier', 'Parkér ved campingplassen og gå inn til gamlebyen (~10 min)', 'Ingen Umweltzone i Bamberg', 'Neste dag: Bamberg → Hamburg (~475 km, ~6t 30min) via A73 → A9 → A14. Start senest kl. 07:00.'],
         imageUrl: '',
       },
       {
         id: 10,
+        name: 'Hamburg',
+        country: 'Tyskland',
+        countryCode: 'DE',
+        lat: 53.5753,
+        lng: 10.0153,
+        arrivalDate: '2026-07-29',
+        departureDate: '2026-07-30',
+        nights: 1,
+        week: 31,
+        camping: {
+          name: 'KNAUS Campingpark Hamburg',
+          address: 'Wunderbrunnen 2, 22457 Hamburg',
+          url: 'https://www.knauscamp.de/hamburg/',
+          booked: false,
+          bookingRef: '',
+          checkIn: '14:00',
+          checkOut: '12:00',
+          timesEstimated: true,
+        },
+        driveFromPrevious: {
+          km: 475,
+          hours: '6t 30min ⚠️',
+          route: 'Bamberg → Hamburg via A73 nord → A9 → A14 → Hamburg. ⚠️ Svakt over 6t-grensen — start senest kl. 07:00.',
+        },
+        description: 'En natt i Hamburg på ruten direkte mot Billund — ingen omvei. KNAUS Campingpark Hamburg ligger rett av A7 nord for sentrum. Miniatur Wunderland er verdens største modelljernbane og en uforglemmelig opplevelse for hele familien, spesielt William!',
+        activities: [
+          { name: 'Miniatur Wunderland', type: 'opplevelse', priority: 'must-do', description: 'Verdens største modelljernbane — 16 000 m+ spor, over 1 500 tog og detaljerte miniatyrverdener inkl. Skandinavia, Alpene og USA med animerte figurer. Åpner kl. 09:00. Book billett online!', url: 'https://www.miniatur-wunderland.de/', mapsQuery: 'Miniatur Wunderland, Kehrwieder 2, 20457 Hamburg, Deutschland' },
+          { name: 'Hamburg Speicherstadt (UNESCO)', type: 'kultur', priority: 'nice-to-have', description: 'Historiske røde lagerhus over kanalene — UNESCOs nyeste tyske verdensarv. Sjarmerende kanalpromenade rett ved Miniatur Wunderland. Kombiner de to på én dag.', url: 'https://www.hamburg.de/sehenswuerdigkeiten/speicherstadt/', mapsQuery: 'Speicherstadt, Hamburg, Deutschland' },
+          { name: 'Hamburger Hafen', type: 'friluft', priority: 'nice-to-have', description: 'Landungsbrücken og havnepromenaden med massive containerskip. Utsikt mot Elbphilharmonie. Gratis å oppleve fra kaikanten.', url: 'https://www.hamburg-tourism.de/', mapsQuery: 'Landungsbrücken, Hamburg, Deutschland' },
+        ],
+        tips: ['⚠️ Lang etappe (~6t 30min) — start fra Bamberg senest kl. 07:00', 'Miniatur Wunderland: bestill billett online — veldig populær i juli. Tidsluke om morgenen anbefales.', 'Neste dag: Hamburg → Billund (~250 km, ~3t 30min) via A7 nord → Flensburg-grensa → E45 → Billund', 'Tidlig avreise mot Billund anbefales — lang dag med Legoland venter!'],
+        imageUrl: '',
+      },
+      {
+        id: 11,
+        name: 'Billund (Legoland)',
+        country: 'Danmark',
+        countryCode: 'DK',
+        lat: 55.7297,
+        lng: 9.1282,
+        arrivalDate: '2026-07-30',
+        departureDate: '2026-08-01',
+        nights: 2,
+        week: 31,
+        camping: {
+          name: 'Legoland® Campingarea',
+          address: 'Ellehammervej 2, 7190 Billund, Danmark',
+          url: 'https://www.legoland.dk/feriepark/overnatning/camping/',
+          booked: false,
+          bookingRef: '',
+          checkIn: '14:00',
+          checkOut: '11:00',
+          timesEstimated: true,
+        },
+        driveFromPrevious: {
+          km: 250,
+          hours: '3t 30min',
+          route: 'Hamburg → Billund via A7 nord → Flensburg-grensa → E45 nord inn i Danmark → Billund',
+        },
+        description: 'To netter i Legoland-byen! Billund er Lego-verdenshovedstaden og hjem til det originale Legoland (åpnet 1968). Legoland® Campingarea ligger rett ved parkinngangen — William er på rett sted!',
+        activities: [
+          { name: 'Legoland® Billund', type: 'opplevelse', priority: 'must-do', description: 'Verdens første Legoland — åpnet 7. juni 1968! 8 tematiske verdener, LEGO-skulpturer, rides og Miniland med verdensmonumenter i LEGO-klosser. Heldagsopplevelse for hele familien.', url: 'https://www.legoland.dk/', mapsQuery: 'Legoland Billund, Nordmarksvej 9, 7190 Billund, Denmark' },
+          { name: 'LEGO House', type: 'opplevelse', priority: 'must-do', description: 'Det ikoniske LEGO-museet og opplevelseshuset i Billund sentrum (2017). 25 meter høy struktur bygget som 21 LEGO-klosser. Interaktive opplevelsessoner. William vil elske det!', url: 'https://www.legohouse.com/', mapsQuery: 'LEGO House, Billund, Denmark' },
+          { name: 'Lalandia Billund (svømmeparadis)', type: 'opplevelse', priority: 'nice-to-have', description: 'Stort innendørs svømmeanlegg og badeland rett ved Legoland. Tropisk vannpark med sklier — perfekt regnværsalternativ.', url: 'https://www.lalandia.dk/billund/', mapsQuery: 'Lalandia Billund, Denmark' },
+        ],
+        tips: [
+          'Bestill Legoland-billett online på forhånd — spar tid og penger: legoland.dk',
+          'Legoland® Campingarea: bestill senest i mai for julibooking — veldig populær',
+          'Billund → Hirtshals: ~250 km, ~3t 30min via E45 nord (80 km/t med campingvogn i Danmark). Start senest kl. 10:30 for å rekke Color Line kl. 14:30',
+          'LEGO House krever separat billett fra Legoland — kombiner smart over to dager',
+        ],
+        imageUrl: '',
+      },
+      {
+        id: 12,
+        name: 'Color Line (Hirtshals → Larvik)',
+        country: 'Danmark / Norge',
+        countryCode: 'DK/NO',
+        lat: 57.6,
+        lng: 9.9,
+        arrivalDate: '2026-08-01',
+        departureDate: '2026-08-01',
+        nights: 0,
+        week: 31,
+        camping: {
+          label: 'Ferge',
+          name: 'Color Line SuperSpeed',
+          address: 'Hirtshals havn – avgang kl. 14:30',
+          url: 'https://www.colorline.no/hirtshals-larvik',
+          booked: false,
+          bookingRef: '',
+          checkIn: 'Ombord fra 13:30 (avgang 14:30)',
+          checkOut: 'Avstigning Larvik ca. 18:15',
+          timesEstimated: false,
+        },
+        driveFromPrevious: {
+          km: 250,
+          hours: '3t 30min + 3t 45min ferge',
+          route: 'Billund → Hirtshals via E45 nord gjennom Jutland (250 km). Board kl. 14:30, ankommer Larvik ~18:15.',
+        },
+        description: 'Hjemreise med Color Line SuperSpeed Hirtshals → Larvik. Overfartstid 3 timer 45 minutter. Ankommer Larvik ca. kl. 18:15.',
+        activities: [
+          { name: 'Ankomst Larvik', type: 'reise', priority: 'must-do', description: 'Ankommer Larvik ca. kl. 18:15. Larvik → Kongsberg (85 km, 1t 15min) via E18/E134.', url: 'https://www.colorline.no/hirtshals-larvik', mapsQuery: 'Color Line Terminal Larvik, Norge' },
+        ],
+        tips: ['Book avgangsplassen tidlig — august er høysesong', 'Ankomst Larvik ~18:15 → hjemme i Kongsberg ca. kl. 19:30 den 1. august'],
+        imageUrl: '',
+      },
+      {
+        id: 13,
         name: 'Kongsberg',
         country: 'Norge',
         countryCode: 'NO',
-        lat: 59.67,
-        lng: 9.65,
+        lat: 59.6678,
+        lng: 9.6500,
         isHome: true,
-        arrivalDate: '2026-07-31',
+        arrivalDate: '2026-08-01',
         departureDate: null,
         nights: 0,
         week: 31,
@@ -1523,20 +1802,198 @@ function ferieApp() {
         driveFromPrevious: {
           km: 85,
           hours: '1t 15min',
-          route: 'Go Nordic ankommer Oslo kl. 09:45 → E18/E134 til Kongsberg. Hjemme til lunsj!',
+          route: 'Larvik → Kongsberg via E18/E134. Hjemme 1. august!',
         },
-        description: 'Hjemkomst etter 4 uker og over 4 000 km med campingvogn gjennom 5 land.',
+        description: 'Hjemkomst etter 28 netter og over 5 600 km med campingvogn gjennom 7 land. Kroatia, Zugspitze og Hamburg besøkt — neste eventyr planlegges.',
         activities: [],
         tips: [],
         imageUrl: '',
       },
 
-    
+
     ],
 
 
     // Startpunkt (Kongsberg) for kartet
     homeBase: { lat: 59.67, lng: 9.65, name: 'Kongsberg' },
+
+    // Istria-alternativer for stopp 7 — sortert nord → sør
+    istriaAlternatives: [
+      {
+        name: 'Camping Park Umag',
+        location: 'Umag (nord-Istria)',
+        price: '~€40–50',
+        url: 'https://www.istracamping.com/accommodation/camping-park-umag/',
+        current: false,
+        facilities: [
+          '4-stjerns mega-camp med Blue Flag-strand',
+          '2 bassengkomplekser, 6 bassenger med sklier',
+          'Lekeplass og vannlekepark for barn',
+        ],
+        sights: [
+          'Middelalderbyen Umag (10 min)',
+          'Istrisk vinregion og olivenoljer',
+          'Novigrad gamleby (15 min)',
+        ],
+      },
+      {
+        name: 'Aminess Maravea Camping Resort',
+        location: 'Novigrad-Cittanova',
+        price: '~€40–50',
+        url: 'https://www.aminess.com/en/aminess-maravea-camping-resort',
+        current: false,
+        eliminated: true,
+        facilities: [
+          'Moderne familieresort med oppvarmede bassenger',
+          'Sandstrand med grunne barneområder',
+          'Kids\' club og animasjonsprogram',
+        ],
+        sights: [
+          'Pittoresk Novigrad gamleby (5 min)',
+          'Kysten mot Umag og Poreč',
+          'Mirna-elvedalen og Motovun-kollene',
+        ],
+      },
+      {
+        name: 'Valamar Camping Lanterna',
+        location: 'Tar / Poreč',
+        price: '~€55–65',
+        url: 'https://www.camping-adriatic.com/lanterna-premium-camping-resort-porec',
+        current: false,
+        facilities: [
+          '5-stjerns premium med 2 km steinstrand',
+          'Vannpark med sklier og bølgebasseng',
+          'Kids\' club med maskoten Maro',
+        ],
+        sights: [
+          'Poreč Eufrasius-basilika (UNESCO, 12 km)',
+          'Tar-bukten og Mirna-fjorden',
+          'Vrsar fiskelandsby og Lim-fjorden',
+        ],
+      },
+      {
+        name: 'Camping Bijela Uvala',
+        location: 'Poreč',
+        price: '~€35–45',
+        url: 'https://www.camping-adriatic.com/bijela-uvala-campsite-porec',
+        current: false,
+        facilities: [
+          '8.9/10 brukervurdering — populær blant familier',
+          '2 bassengkomplekser med barneområde',
+          'Direkte sjøtilgang og lange kystpromenader',
+        ],
+        sights: [
+          'Poreč gamlebyen (UNESCO) — 5 min',
+          'Lim-fjorden naturreservat',
+          'Baredine-grotten (drypsteinsgrotte)',
+        ],
+      },
+      {
+        name: 'Camping Valkanela',
+        location: 'Vrsar',
+        price: '~€35–45',
+        url: 'https://www.maistra.com/en/camping/camping-valkanela',
+        current: false,
+        facilities: [
+          'Daglige aktivitetsprogram for barn',
+          'Sandbukt med grunt vann — ideelt for William',
+          'Sport: tennis, beachvolley, sykkelutleie',
+        ],
+        sights: [
+          'Vrsar sjarmerende fiskelandsby (2 km)',
+          'Lim-fjorden naturreservat (10 min)',
+          'Funtana akvarium og kunstparker',
+        ],
+      },
+      {
+        name: 'Maistra Camping Veštar',
+        location: 'Rovinj',
+        price: '~€55–65',
+        url: 'https://www.maistra.com/properties/campsite-vestar/',
+        current: true,
+        facilities: [
+          '3 bassenger inkl. barneslider',
+          'Familieunderholdningsprogram',
+          'Gangavstand (~20 min) til Rovinj gamleby',
+        ],
+        sights: [
+          'Rovinj UNESCO-kandidat gamleby',
+          'Lim-fjorden naturreservat',
+          'St. Euphemia-basilika med panoramautsikt',
+        ],
+      },
+      {
+        name: 'Camping Polari',
+        location: 'Rovinj',
+        price: '~€45–55',
+        url: 'https://www.maistra.com/en/camping/camping-polari',
+        current: false,
+        facilities: [
+          '"Best campsite for kids" siden 2024',
+          'Omfattende animasjon — sirkusskole, kunst og sport',
+          'Premium Family Village med eget basseng',
+        ],
+        sights: [
+          'Rovinj sentrum (~5 km)',
+          'Kysten sør mot Bale og Pula',
+          'Lim-fjorden og Punta Corrente-parken',
+        ],
+      },
+      {
+        name: 'Mon Perin Village Plus',
+        location: 'Bale (mellom Rovinj og Pula)',
+        price: '~€40–50',
+        url: 'https://www.monperin.hr/',
+        current: false,
+        eliminated: true,
+        facilities: [
+          'Romslig camping i furuskog (720 plasser)',
+          'Direkte kystadgang med flere bademuligheter',
+          'Bassengkompleks for alle aldre',
+        ],
+        sights: [
+          'Bale — middelalderlandsby med 3 000 år historie',
+          'Vodnjan med Sveti Blaž-kirken',
+          'Pula amfiteater (30 km)',
+        ],
+      },
+      {
+        name: 'Camping Bi-Village',
+        location: 'Fažana (15 km fra Pula)',
+        price: '~€40–50',
+        url: 'https://www.bivillage.com/',
+        current: false,
+        eliminated: true,
+        facilities: [
+          '800 m sandstrand — sjelden i Istria!',
+          '3 bassenger med utsikt mot Brijuni-øyene',
+          'Vannsklier og oppblåsbar vannbane',
+        ],
+        sights: [
+          'Brijuni nasjonalpark (ferge fra Fažana, 5 min)',
+          'Pula UNESCO-amfiteater (15 km)',
+          'Cape Kamenjak naturreservat',
+        ],
+      },
+      {
+        name: 'Arena Stoja Campsite',
+        location: 'Pula',
+        price: '~€30–40',
+        url: 'https://www.arenacollection.com/en/destinations/pula/campsites/arena-stoja-campsite',
+        current: false,
+        eliminated: true,
+        facilities: [
+          'Dramatisk klippebeliggenhet på halvøy',
+          'Mer rustikk og rimeligere — "ekte" camping',
+          'Dykkesenter, kajakk og vannski',
+        ],
+        sights: [
+          'Pula UNESCO-amfiteater (3 km)',
+          'Pula gamleby og Forum',
+          'Cape Kamenjak naturreservat (15 min)',
+        ],
+      },
+    ],
 
     // Metoder
     scrollTo(id) {
