@@ -7,10 +7,15 @@ Oppdaterer docs/ og index.html i GitHub-repo arnego/sommerferie2026 via
 git commit + push. Siden publiseres automatisk på GitHub Pages:
 https://arnego.github.io/sommerferie2026/
 
-Arbeidsflyt for innholdsendringer:
-  1. Oppdater relevant spec i docs/ (Ferieplanen-2026.md eller Teknisk-spesifikasjon.md)
-  2. Oppdater index.html basert på den oppdaterte spec-en
+Arbeidsflyt for innholdsendringer (update_travel_plan):
+  1. Claude foreslår en JSON-liste med {old_string, new_string}-erstatninger
+     for både Ferieplanen-2026.md og index.html
+  2. Serveren påfører erstatningene deterministisk (krever unik old_string)
   3. Commit + push begge filer i én operasjon
+
+Arbeidsflyt for teknisk spec (update_technical_spec):
+  1. Regenererer Teknisk-spesifikasjon.md i sin helhet via Claude
+  2. Commit + push
 
 Plassering i WSL:
   /mnt/e/Git/sommerferie2026/setup/mcp-servers/sommerferie2026_server.py
@@ -24,6 +29,7 @@ Krav:
 
 import subprocess
 import os
+import json
 from pathlib import Path
 from datetime import datetime
 import anthropic
@@ -64,16 +70,39 @@ Regler:
 - Oppdater endringsloggen nederst i dokumentet med dagens dato og en kort beskrivelse
 """
 
-HTML_UPDATE_SYSTEM_PROMPT = EXPERT_ROLE + """
-Du mottar en oppdateringsforespørsel, den relevante spec-filen og den nåværende index.html.
-Returner KUN den oppdaterte, komplette index.html – ingenting annet.
-Ingen forklaring, ingen markdown, bare ren HTML fra <!DOCTYPE html> til </html>.
+EDIT_SYSTEM_PROMPT = EXPERT_ROLE + """
+Du mottar en oppdateringsforespørsel sammen med Ferieplanen-2026.md (spec) og index.html.
+Din oppgave er å foreslå presise tekst-erstatninger som realiserer endringen.
 
-Regler:
-- Bevar all design, fargepalett og funksjonalitet (Tailwind, Alpine.js, Leaflet)
-- Gjør kun de forespurte endringene
-- Hold data i index.html konsistent med spec-filen
-- Oppdater "Sist oppdatert" i footer med dagens dato hvis den finnes
+Returner KUN ren JSON (ingen markdown-kodeblokker, ingen forklaring, ingen tekst rundt)
+med følgende struktur:
+
+{
+  "spec_edits": [
+    {"old_string": "<eksakt tekst i spec>", "new_string": "<ny tekst>", "description": "<kort>", "replace_all": false}
+  ],
+  "html_edits": [
+    {"old_string": "<eksakt tekst i HTML>", "new_string": "<ny tekst>", "description": "<kort>", "replace_all": false}
+  ]
+}
+
+KRITISKE REGLER for old_string:
+- Må være EKSAKT tekst fra filen, inkludert mellomrom, linjeskift, tegnsetting og HTML-tagger.
+- Som standard (replace_all=false) må old_string forekomme NØYAKTIG ÉN gang i filen.
+  Hvis konteksten er tvetydig, inkluder nok omkringliggende tekst til at strengen blir unik.
+- Sett replace_all=true KUN hvis du faktisk vil erstatte alle forekomster (f.eks. globalt navnebytte).
+- Hold strengene så korte som mulig samtidig som de er unike.
+- Aldri regex – ren tekst-matching.
+
+KRITISKE REGLER for innhold:
+- Gjør kun de forespurte endringene. Behold all annen struktur, design, fargepalett og
+  funksjonalitet (Tailwind, Alpine.js, Leaflet).
+- Hold data i index.html konsistent med spec-filen.
+- Legg til ett spec_edits-element som oppdaterer endringsloggen nederst i
+  Ferieplanen-2026.md med dagens dato og en kort beskrivelse av endringen.
+- Oppdater "Sist oppdatert"-feltet i HTML-footeren hvis det finnes.
+- Hvis en fil ikke trenger endringer, returner tom liste [].
+- Foretrekk få brede edits framfor mange små når endringer henger sammen i samme blokk.
 """
 
 
@@ -158,15 +187,65 @@ def update_spec_with_claude(instruction: str, current_spec: str) -> str:
         user=f"Oppdateringsforespørsel: {instruction}\n\n---\nNåværende spec:\n{current_spec}"
     )
 
-def update_html_with_claude(instruction: str, updated_spec: str, current_html: str) -> str:
-    return call_claude(
-        system=HTML_UPDATE_SYSTEM_PROMPT,
+def generate_edits(instruction: str, current_spec: str, current_html: str) -> dict:
+    """Ber Claude foreslå targeted edits for spec + HTML, returnerer parsed JSON.
+
+    Outputen er liten (~tokens i 100-tallet til lavt 1000-tall), så vi setter
+    max_tokens lavt for å feile tidlig hvis modellen skulle prøve å regenerere
+    hele filen i stedet for å returnere edits.
+    """
+    raw = call_claude(
+        system=EDIT_SYSTEM_PROMPT,
         user=(
             f"Oppdateringsforespørsel: {instruction}\n\n"
-            f"---\nOppdatert spec (Ferieplanen-2026.md):\n{updated_spec}\n\n"
+            f"---\nNåværende Ferieplanen-2026.md:\n{current_spec}\n\n"
             f"---\nNåværende index.html:\n{current_html}"
-        )
+        ),
+        max_tokens=16000,
     )
+    # Modellen skal returnere ren JSON, men strip evt. ```json ... ``` for robusthet.
+    text = raw.strip()
+    if text.startswith("```"):
+        first_nl = text.find("\n")
+        if first_nl != -1:
+            text = text[first_nl + 1:]
+        if text.endswith("```"):
+            text = text[:-3]
+        text = text.strip()
+    return json.loads(text)
+
+
+def apply_edits(content: str, edits: list[dict]) -> tuple[str, list[str]]:
+    """Påfør edits sekvensielt med unik-match-validering.
+
+    Returnerer (oppdatert_innhold, liste_med_feil). Edit feiler hvis old_string
+    ikke finnes, eller hvis den finnes flere ganger uten replace_all=true.
+    """
+    errors = []
+    for i, edit in enumerate(edits):
+        old = edit.get("old_string", "")
+        new = edit.get("new_string", "")
+        desc = edit.get("description") or f"edit {i + 1}"
+        replace_all = bool(edit.get("replace_all", False))
+
+        if not old:
+            errors.append(f"'{desc}': mangler old_string")
+            continue
+        count = content.count(old)
+        if count == 0:
+            errors.append(f"'{desc}': old_string ikke funnet i filen")
+            continue
+        if count > 1 and not replace_all:
+            errors.append(
+                f"'{desc}': old_string forekommer {count} ganger – sett replace_all=true "
+                f"hvis dette er ønsket, ellers utvid old_string så den blir unik"
+            )
+            continue
+        if replace_all:
+            content = content.replace(old, new)
+        else:
+            content = content.replace(old, new, 1)
+    return content, errors
 
 
 # ── VERKTØY ───────────────────────────────────────────────────────
@@ -178,13 +257,14 @@ async def list_tools() -> list[types.Tool]:
             name="update_travel_plan",
             description=(
                 "Oppdaterer reiseplanen for familie Goderstad sin campingvognferie juli 2026. "
-                "Oppdaterer først Ferieplanen-2026.md (spec), deretter index.html basert på "
-                "den oppdaterte spec-en, og committer + pusher begge filer til "
-                "https://github.com/arnego/sommerferie2026. "
-                "GitHub Pages publiserer siden automatisk på "
-                "https://arnego.github.io/sommerferie2026/ etter ~30 sekunder. "
-                "Brukes når noen vil endre rute, stopp, campingplasser, aktiviteter, "
-                "budsjett, huskeliste, datoer eller annet innhold i reiseplanen."
+                "Bruker presise tekst-erstatninger (targeted edits) i både "
+                "Ferieplanen-2026.md (spec) og index.html, og committer + pusher begge "
+                "filer til https://github.com/arnego/sommerferie2026. GitHub Pages "
+                "publiserer siden automatisk på https://arnego.github.io/sommerferie2026/ "
+                "etter ~30 sekunder. Brukes når noen vil endre rute, stopp, campingplasser, "
+                "aktiviteter, budsjett, huskeliste, datoer eller annet innhold i reiseplanen. "
+                "Egnet både for små punktendringer og større omskrivinger så lenge endringen "
+                "kan uttrykkes som tekst-erstatninger (ikke krever full restrukturering)."
             ),
             inputSchema={
                 "type": "object",
@@ -280,36 +360,69 @@ async def call_tool(name: str, arguments: dict) -> list[types.TextContent]:
         commit_message = arguments.get("commit_message", "").strip() or instruction
 
         try:
-            # Steg 1: Oppdater Ferieplanen-2026.md
             current_spec = read_file(FERIEPLAN_FILE)
-            updated_spec = update_spec_with_claude(instruction, current_spec)
-            write_file(FERIEPLAN_FILE, updated_spec)
-
-            # Steg 2: Oppdater index.html basert på oppdatert spec
             current_html = read_file(INDEX_FILE)
-            updated_html = update_html_with_claude(instruction, updated_spec, current_html)
 
-            stripped_html = updated_html.strip()
-            if not stripped_html.startswith("<!") or not stripped_html.endswith("</html>"):
-                # Rull tilbake spec-endringen
-                write_file(FERIEPLAN_FILE, current_spec)
-                tail = stripped_html[-120:] if len(stripped_html) > 120 else stripped_html
+            # Steg 1: Be Claude foreslå targeted edits som JSON
+            try:
+                edits = generate_edits(instruction, current_spec, current_html)
+            except json.JSONDecodeError as e:
+                return [types.TextContent(
+                    type="text",
+                    text=f"Feil: Klarte ikke parse edits-JSON fra Claude: {e}"
+                )]
+
+            spec_edits = edits.get("spec_edits") or []
+            html_edits = edits.get("html_edits") or []
+
+            if not spec_edits and not html_edits:
+                return [types.TextContent(
+                    type="text",
+                    text="Ingen endringer foreslått. Prøv å omformulere instruksjonen mer spesifikt."
+                )]
+
+            # Steg 2: Påfør edits in-memory og samle alle feil før vi skriver noe
+            new_spec, spec_errors = apply_edits(current_spec, spec_edits)
+            new_html, html_errors = apply_edits(current_html, html_edits)
+
+            if spec_errors or html_errors:
+                problem = []
+                if spec_errors:
+                    problem.append("Spec-feil:\n  - " + "\n  - ".join(spec_errors))
+                if html_errors:
+                    problem.append("HTML-feil:\n  - " + "\n  - ".join(html_errors))
                 return [types.TextContent(
                     type="text",
                     text=(
-                        f"Feil: Fikk ikke komplett HTML tilbake (trolig avkuttet av max_tokens).\n"
-                        f"Generert: {len(stripped_html)} tegn. Siste 120 tegn: ...{tail}\n"
-                        f"Spec-endringen er rullet tilbake."
+                        "Edits feilet – ingen filer endret.\n\n"
+                        + "\n\n".join(problem)
+                        + "\n\nPrøv å være mer spesifikk om hvor i dokumentet endringen skal skje."
                     )
                 )]
 
-            write_file(INDEX_FILE, updated_html)
+            # Steg 3: Skriv kun filene som faktisk endret seg
+            files_changed = []
+            if new_spec != current_spec:
+                write_file(FERIEPLAN_FILE, new_spec)
+                files_changed.append("docs/Ferieplanen-2026.md")
+            if new_html != current_html:
+                write_file(INDEX_FILE, new_html)
+                files_changed.append("index.html")
 
-            # Steg 3: Commit + push begge filer
-            success, git_output = git_push(
-                commit_message,
-                files=["docs/Ferieplanen-2026.md", "index.html"]
-            )
+            if not files_changed:
+                return [types.TextContent(
+                    type="text",
+                    text="Edits ble påført, men gav ingen netto endring. Ingenting committet."
+                )]
+
+            # Steg 4: Commit + push
+            success, git_output = git_push(commit_message, files=files_changed)
+
+            edit_summary = []
+            for e in spec_edits:
+                edit_summary.append(f"  - spec: {e.get('description') or '(uten beskrivelse)'}")
+            for e in html_edits:
+                edit_summary.append(f"  - html: {e.get('description') or '(uten beskrivelse)'}")
 
             if success:
                 return [types.TextContent(
@@ -317,7 +430,8 @@ async def call_tool(name: str, arguments: dict) -> list[types.TextContent]:
                     text=(
                         f"Reiseplanen er oppdatert og pushet til GitHub!\n"
                         f"Commit: \"{commit_message[:72]}\"\n"
-                        f"Endret: Ferieplanen-2026.md + index.html\n"
+                        f"Filer endret: {', '.join(files_changed)}\n"
+                        f"Endringer:\n" + "\n".join(edit_summary) + "\n"
                         f"GitHub Pages oppdateres om ~30 sekunder.\n"
                         f"{PAGES_URL}"
                     )
