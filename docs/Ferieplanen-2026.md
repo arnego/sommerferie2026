@@ -49,7 +49,7 @@ William er 5 år og er en viktig del av planleggingen:
 | 4 | Wien | AT | 10. juli | 11. juli | 1* | 28 |
 | 5 | Plitvice Lakes NP | HR | 11. juli | 13. juli | 2 | 28/29 |
 | 6 | Split | HR | 13. juli | 20. juli | 7 | 29/30 |
-| 7 | Poreč / Rovinj, Istria | HR | 20. juli | 24. juli | 4 | 30 |
+| 7 | Rovinj, Istria | HR | 20. juli | 24. juli | 4 | 30 |
 | 8 | Zugspitze | DE | 24. juli | 27. juli | 3 | 31 |
 | 9 | Bamberg | DE | 27. juli | 29. juli | 2 | 31 |
 | 10 | Hamburg | DE | 29. juli | 30. juli | 1* | 31 |
@@ -74,8 +74,8 @@ William er 5 år og er en viktig del av planleggingen:
 | Bad Schandau | Wien-området (Tulln) | 420 km | 6 t 15 min | E55/D8 sørover → Prague-ring → D1/E65 sørøst → Wien → B14/A1 nordvest til Tulln an der Donau |
 | Wien | Plitvice Lakes | 420 km | 6 t 15 min | A21/A2 sørøst → Spielfeld/Šentilj grense → A1 Slovenia (Ljubljana) → A1 Kroatia → D429 → D1 inn mot nasjonalparken |
 | Plitvice | Split | 271 km | 4 t | D1/D33 sørover mot kysten → D8 Jadranska magistrala sør |
-| Split | Poreč/Rovinj (via Rijeka) | 310 km | 4 t 30 min | A1 nord → Rijeka → Y-motorvei vest mot Istria |
-| Poreč/Rovinj | Zugspitze/Garmisch | 570 km | 8 t (inkl. Liechtensteinklamm 1,5 t) | A9/E751 nord → Ljubljana → Karawanken → A10 Tauern → **stopp Liechtensteinklamm** (Werfen/St. Johann im Pongau) → Salzburg → A8 øst → A95 sør. Svært lang dag — start senest kl. 07:30. |
+| Split | Rovinj (via Rijeka) | 310 km | 4 t 30 min | A1 nord → Rijeka → Y-motorvei vest mot Istria |
+| Rovinj | Zugspitze/Garmisch | 570 km | 8 t (inkl. Liechtensteinklamm 1,5 t) | A9/E751 nord → Ljubljana → Karawanken → A10 Tauern → **stopp Liechtensteinklamm** (Werfen/St. Johann im Pongau) → Salzburg → A8 øst → A95 sør. Svært lang dag — start senest kl. 07:30. |
 | Zugspitze/Garmisch | Bamberg | 315 km | 4 t 45 min | A95/A8 nord → München → A9 nord → A73 mot Bamberg |
 | Bamberg | Hamburg | 475 km | **6 t 30 min ⚠️** | A73 nord → A9 → A14 → Hamburg. Svakt over 6t-grensen — start senest kl. 07:00. |
 | Hamburg | Billund | 250 km | 3 t 30 min | A7 nord → Flensburg-grensa → E45 nord inn i Danmark → Billund |
@@ -263,31 +263,32 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 
 ---
 
-### Stopp 7: Poreč / Rovinj, Istria, Kroatia (4 netter: 20.–24. juli)
+### Stopp 7: Rovinj, Istria, Kroatia (4 netter: 20.–24. juli)
 
-**Kjøring:** Split → Poreč/Rovinj, 310 km, 4 t 30 min via A1 nord → Rijeka → Y-motorvei vest mot Istria. Naturlig siste stopp i Kroatia på hjemveien. (80 km/t med campingvogn på kroatisk motorvei.)
+**Kjøring:** Split → Rovinj, 310 km, 4 t 30 min via A1 nord → Rijeka → Y-motorvei vest mot Istria. Naturlig siste stopp i Kroatia på hjemveien. (80 km/t med campingvogn på kroatisk motorvei.)
 
-**Campingplass: Maistra Camping Veštar**
-- Adresse: Veštar bb, 52210 Rovinj, Kroatia
-- Nettside: https://www.maistra.com/properties/campsite-vestar/
-- Fasiliteter: 3 bassenger (inkl. barnebasseng med sklier), familieunderholdningsprogram, elektrisk tilkobling, direkte gangavstand til Rovinj gamlebyen (~20 min), parkering for campingvogn. Krever forhåndsbooking i juli.
-- Alternativ: Camping Bi Village (Fažana, nær Pula) — sandbukt, Brijuni-utsikt: https://www.bivillage.com/
+**Campingplass: Camping Polari**
+- Adresse: Polari 1, 52210 Rovinj, Kroatia
+- Nettside: https://www.maistra.com/properties/campsite-polari/
+- Fasiliteter: Maistra's største camping. 2 km strand (stein/grus), 2 utendørs bassenger + spray park med 3 bassenger og vannlekeplass, flytende aqua park, SUP/pedalbåtleie, taxibåt til Rovinj, sykkelsti til Rovinj (3,5 km). Kåret til "Best campsite for kids" siden 2024. Åpen 24.04–04.10.2026.
 - Booket: Nei
 - Bookingref: —
-- Innsjekk: 15:00 (til 22:30) · Utsjekk: 07:00–10:00 (Maistra standard)
+- Innsjekk: 15:00 · Utsjekk: 10:00 (Maistra standard)
 
 **Aktiviteter:**
 
 | Aktivitet | Type | Prioritet | Beskrivelse |
 |-----------|------|-----------|-------------|
-| Rovinj gamlebyen | Kultur/by | Must-do | Veneziansk gamlebyen på halvøy. Klatre til St. Euphemia-basilika (barokk, 1736) for panoramautsikt over Adriaterhavet. Sjarmerende gater og fiskerhavn. https://www.rovinj-tourism.com |
-| Pula amfiteater | Kultur/severdighet | Must-do | Verdens best bevarte gladiatorarena fra 27 f.Kr. (UNESCO). William kan gå i gladiatorenes fotspor gjennom underjordiske ganger. Ca. 1 t kjøring sør for Rovinj. https://www.ami-pula.hr |
-| Poreč Eufrasius-basilika | Kultur/UNESCO | Must-do | 1 600 år gammel basilika med gullmosaik i bysantinsk stil (UNESCO). Lett å kombinere med is og strandtur i Poreč sentrum. https://www.myporec.com/ |
-| Lim-fjorden (Limski kanal) | Natur/båttur | Nice-to-have | Dramatisk fjordarm mellom Poreč og Rovinj — unikt for Kroatia. Østers, fisk og pittoresk natur. Båtturer fra Rovinj havn. https://www.istra.hr |
-| Kamenjak nasjonalpark | Natur/strand | Nice-to-have | Uberørt halvøy sør for Pula med krystallklart vann og villmark. Barnevennlige strender og klipper. https://www.kamenjak.hr |
+| Rovinj gamlebyen | Kultur/by | Must-do | Venetiansk gamlebyen på halvøy. St. Euphemia-basilika (1736) med panoramautsikt. 3,5 km langs kyststi fra Polari — sykkel eller taxibåt. https://www.rovinj-tourism.com |
+| Zlatni Rt (Punta Corrente) naturpark | Natur/sykkel | Must-do | Fredet furuskog og steinbukter rett syd for Rovinj — starter nesten fra campingporten. Sykkeltur langs kystpromenaden, Lone Bay-stranden og klatreberg. Gratis. https://www.rovinj-tourism.com |
+| Dinopark Funtana | Opplevelse/barn | Must-do | 80 bevegelige dinosaurer i karst-skog. Dino Dome med live-show, Dragon Coaster, trampoliner, mini-zoo og ridning. Heldagsopplevelse for William! ~30 km nord for Rovinj. http://dinopark.hr |
+| Pula amfiteater (UNESCO) | Kultur/severdighet | Must-do | Verdens best bevarte gladiatorarena fra 27 f.Kr. William kan utforske underjordiske ganger i gladiatorenes fotspor. ~40 km sør. https://www.ami-pula.hr |
+| Brijuni nasjonalpark | Natur/dagstur | Nice-to-have | Øygruppe-NP med safaripark (sebra, elefant) og dinosaurspor fra Jura. Guidet tog- og båttur fra Fažana (~40 km). Halvdags- eller heldagstur. https://np-brijuni.hr/en/ |
+| Lim-fjorden (Limski kanal) | Natur/båttur | Nice-to-have | Dramatisk 13 km lang fjordarm — unik i Kroatia. Østers, fisk og pittoresk natur. Båtturer fra Rovinj havn. https://www.istra.hr |
 
 **Tips:**
-- Juli er høysesong i Istria — reserver Maistra Veštar senest mai
+- Bestill Camping Polari senest april — juli er høysesong
+- Dinopark Funtana: kjøp billett online på forhånd i høysesong
 - Pula amfiteater: gå tidlig på morgenen for å unngå folkemengder og sommerheten
 - Kroatia bruker EUR siden januar 2023 — ingen valutaveksling nødvendig
 
@@ -358,7 +359,7 @@ Disse 10 campingplassene dekker ulike reisestiler langs hele den kroatiske ruten
 
 | # | Navn | Beliggenhet | Hvorfor spesiell | Nettside |
 |---|------|-------------|-----------------|---------|
-| 5 ★ | **Maistra Camping Veštar** | Rovinj, Istria | 3 bassenger, familieunderholdningsprogram, gangavstand til Rovinj gamlebyen. Beste familieresorting i Istria. | https://www.maistra.com/properties/campsite-vestar/ |
+| 5 ★ | **Camping Polari** *(valgt)* | Rovinj, Istria | "Best campsite for kids" 2024. 2 km strand, 2 bassenger + spray park, taxibåt til Rovinj (3,5 km). Maistra's største camping. | https://www.maistra.com/properties/campsite-polari/ |
 | 6 | **Camping Bi Village** | Fažana, nær Pula | Sandbukt med krystallklart vann og utsikt til Brijuni-øyene. Nær Pula amfiteater. Barnevennlig resort. | https://www.bivillage.com/ |
 | 7 | **Autocamp Straško** | Novalja, Pag-øya | En av Kroatias vakreste sandstrender (Zrće-stranden). Tilgjengelig via Paški most-broen — ingen ferge nødvendig. | https://www.zrce.eu/camping/ |
 
@@ -379,7 +380,7 @@ Disse 10 campingplassene dekker ulike reisestiler langs hele den kroatiske ruten
 
 ## 4b. Istria — 10 familievennlige alternativer (stopp 7)
 
-Stopp 7 (Poreč/Rovinj, 4 netter, 20.–24. juli) er ennå ikke booket. Den nåværende valgte plassen (Maistra Camping Veštar) ble vurdert som litt dyr — disse 10 alternativene dekker ulike prisklasser og beliggenhet på Istria-halvøya. Alle har strand, kulturelle severdigheter (UNESCO-byer) og naturopplevelser i nærområdet.
+Stopp 7 (Rovinj, 4 netter, 20.–24. juli). Nåværende valg er **Camping Polari** (nr. 7 i tabellen). Andre alternativer på Istria-halvøya dekker ulike prisklasser og beliggenhet. Alle har strand, kulturelle severdigheter (UNESCO-byer) og naturopplevelser i nærområdet.
 
 Sortert nord → sør:
 
@@ -390,8 +391,8 @@ Sortert nord → sør:
 | 3 | **Valamar Camping Lanterna** | Tar / Poreč | ~€55–65 | 5-stjerns premium med 2 km steinstrand, vannpark og kids' club med maskoten Maro. 12 km til Poreč Eufrasius-basilika (UNESCO). | https://www.valamarcamping.com/lanterna-camp-porec |
 | 4 | **Camping Bijela Uvala** | Poreč | ~€35–45 | 8.9/10 brukervurdering, 2 bassengkomplekser, gangavstand til Poreč gamlebyen (UNESCO). | https://www.istracamping.com/accommodation/camping-bijela-uvala/ |
 | 5 | **Camping Valkanela** | Vrsar | ~€35–45 | Daglige aktivitetsprogram for barn, sandbukt med grunt vann. Vrsar fiskelandsby og Lim-fjorden naturreservat i nærheten. | https://www.maistra.com/properties/campsite-valkanela/ |
-| 6 ★ | **Maistra Camping Veštar** (nåværende valg) | Rovinj | ~€55–65 | 3 bassenger inkl. barneslider, gangavstand (~20 min) til Rovinj UNESCO-kandidat gamleby. Lim-fjorden i nærheten. | https://www.maistra.com/properties/campsite-vestar/ |
-| 7 | **Camping Polari** | Rovinj | ~€45–55 | "Best campsite for kids" siden 2024. Premium Family Village med eget basseng. Rovinj sentrum 5 km. | https://www.maistra.com/properties/campsite-polari/ |
+| 6 | **Maistra Camping Veštar** | Rovinj | ~€55–65 | 3 bassenger inkl. barneslider, gangavstand (~20 min) til Rovinj UNESCO-kandidat gamleby. Lim-fjorden i nærheten. | https://www.maistra.com/properties/campsite-vestar/ |
+| 7 ★ | **Camping Polari** *(nåværende valg)* | Rovinj | ~€45–55 | "Best campsite for kids" siden 2024. 2 km strand, spray park, taxibåt til Rovinj (3,5 km). Maistra's største. | https://www.maistra.com/properties/campsite-polari/ |
 | 8 | **Mon Perin Village Plus** | Bale (mellom Rovinj og Pula) | ~€40–50 | Romslig camping i furuskog (720 plasser), direkte kystadgang. Middelalderlandsbyen Bale, 30 km til Pula amfiteater. | https://www.monperin.com/en |
 | 9 | **Camping Bi-Village** | Fažana, 15 km fra Pula | ~€40–50 | 800 m sandstrand (sjelden i Istria!), 3 bassenger med utsikt mot Brijuni-øyene. Brijuni NP og Pula amfiteater (UNESCO) i nærheten. | https://www.bivillage.com/ |
 | 10 | **Arena Stoja Campsite** | Pula | ~€30–40 | Dramatisk klippebeliggenhet på halvøy, 3 km fra Pula UNESCO-amfiteater. Mer rustikk og rimeligere. | https://www.arenacollection.com/en/destinations/pula/campsites/arena-stoja-campsite |
@@ -437,6 +438,7 @@ Sortert nord → sør:
 
 | Dato | Endring | Av |
 | --- | --- | --- |
+| 2026-05-12 | Stopp 7 (Rovinj): Campingplass byttet fra Maistra Camping Veštar til Camping Polari (Polari 1, 52210 Rovinj). Stoppenavn endret til «Rovinj, Istria». Aktivitetsliste revidert: Zlatni Rt naturpark og Dinopark Funtana lagt til som must-do; Brijuni nasjonalpark lagt til som nice-to-have; Poreč-basilika og Kamenjak fjernet. §4b og strandliv-tabell oppdatert med nytt valg. | Claude |
 | 2026-05-09 | Stopp 4 (Wien): Campingplass byttet fra Donaupark Camping Tulln til Camping Wien West (Hüttelbergstraße 80, 1140 Wien). Tiergarten Schønbrunn (verdens eldste dyrehage, grunnlagt 1752) lagt til som must-do-aktivitet. | Claude |
 | 2026-05-08 | Camping Stobreč Split booket (ref. PH27767231 via Phobs, mai 2026). Ny "Bookingstatus"-tabell i Praktisk-fanen som viser status for alle 12 overnattinger (10 camping + 2 ferger) med direkte bookinglenker. Ny "Istria — 10 familievennlige alternativer"-seksjon med detaljerte kort for stopp 7 (alternativer til Maistra Veštar med pris, fasiliteter, severdigheter). Ny §4b lagt til i dokumentet. Innsjekk-/utsjekkstider lagt til på alle stopp (camping og ferge). | Claude + Arne |
 | 2026-05-05 | Åtte endringer: (1) Berlin: LEGOLAND Discovery Centre fjernet, erstattet med FEZ Berlin (aktivitetssenter for barn — must-do) og Dark Matter-utstillingen (must-do). (2) Berlin redusert fra 4 til 3 netter (5.–8. juli) — 1 dag overført til Bamberg. (3) Alle datoer mellom Berlin og Zugspitze fremskutt 1 dag. (4) Zugspitze omdøpt fra «Zugspitze / Garmisch-Partenkirchen» til «Zugspitze» og campingplass byttet til Camping Resort Zugspitze (Griesener Str. 9, 82491 Grainau). (5) Bamberg utvidet til 2 netter (27.–29. juli). (6) Stopp 10 byttet fra Lübeck til Hamburg (KNAUS Campingpark Hamburg) — Miniatur Wunderland som hovedaktivitet for William. Bamberg→Hamburg 475 km/6t 30min vs. tidligere 545 km/8t til Lübeck. Hamburg→Billund 250 km/3t 30min. (7) Color Magic-pris oppdatert til bekreftet 16 200 NOK (med riktig kjøretøyhøyde/-lengde). Color Line Hirtshals–Larvik estimert til ~5 000 NOK (samme hensyn). Ferge+bompenger-budsjett økt fra 12 000 til 23 000 NOK. (8) Liechtensteinklamm URL byttet til josalzburg.com. | Claude |
