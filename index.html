@@ -550,7 +550,7 @@ tailwind.config = {
              class="w-full flex items-center justify-between gap-3 px-5 py-4 cursor-pointer hover:bg-cream/50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-petrol/40 focus-visible:ring-inset">
           <div class="flex-1 min-w-0">
             <h3 class="font-heading text-lg text-petrol">Planlegging: Istria — 10 familievennlige alternativer</h3>
-            <p class="text-xs text-muted mt-0.5">Plan B for stopp 7 (Poreč/Rovinj)</p>
+            <p class="text-xs text-muted mt-0.5">Andre alternativer for stopp 7 (Rovinj)</p>
           </div>
           <svg class="w-5 h-5 text-muted transition-transform duration-200 flex-shrink-0"
                :class="expandedBudsjett === 'istria' && 'rotate-180'"
@@ -563,7 +563,7 @@ tailwind.config = {
              x-transition:enter-start="opacity-0 -translate-y-2"
              x-transition:enter-end="opacity-100 translate-y-0"
              class="border-t border-sand/50 p-5">
-          <p class="text-sm text-charcoal/70 mb-4">Stopp 7 (Poreč/Rovinj) er ennå ikke booket. Her er 10 familievennlige campingplasser på Istria-halvøya — alle med strand, kulturelle severdigheter og naturopplevelser i nærområdet. Sortert nord → sør.</p>
+          <p class="text-sm text-charcoal/70 mb-4">Andre alternativer for stopp 7 (Rovinj). Her er 10 familievennlige campingplasser på Istria-halvøya — alle med strand, kulturelle severdigheter og naturopplevelser i nærområdet. Sortert nord → sør.</p>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <template x-for="alt in istriaAlternatives" :key="alt.name">
               <div class="rounded-xl border p-5 flex flex-col transition-all"
@@ -1970,7 +1970,7 @@ function ferieApp() {
       },
       {
         id: 7,
-        name: 'Poreč / Rovinj, Istria',
+        name: 'Rovinj, Istria',
         country: 'Kroatia',
         countryCode: 'HR',
         lat: 45.0811,
@@ -1992,9 +1992,9 @@ function ferieApp() {
         driveFromPrevious: {
           km: 310,
           hours: '4t 30min',
-          route: 'Split → Poreč/Rovinj via A1 nord → Rijeka → Y-motorvei vest mot Istria',
+          route: 'Split → Rovinj via A1 nord → Rijeka → Y-motorvei vest mot Istria',
         },
-        description: 'Kroatisk Istria — venetiansk kystkultur og krystallklart Adriaterhav. Maistra Camping Veštar har 3 bassenger og gangavstand til Rovinjs vakre gamlebyen. Avslutning av Kroatia-oppholdet før hjemreisen.',
+        description: 'Kroatisk Istria — venetiansk kystkultur og krystallklart Adriaterhav. Camping Polari er kåret til "Best campsite for kids" og har Premium Family Village med eget basseng, rett ved Rovinj. Avslutning av Kroatia-oppholdet før hjemreisen.',
         activities: [
           { name: 'Rovinj gamlebyen', type: 'kultur', priority: 'must-do', description: 'Venetiansk gamlebyen på halvøy. St. Euphemia-basilika (1736) med panoramautsikt. Sjarmerende gater og fiskerhavn.', url: 'https://www.rovinj-tourism.com', mapsQuery: 'Rovinj Old Town, Rovinj, Croatia' },
           { name: 'Pula amfiteater', type: 'kultur', priority: 'must-do', description: 'Verdens best bevarte gladiatorarena fra 27 f.Kr. William kan gå i gladiatorenes fotspor. 1 t kjøring.', url: 'https://www.ami-pula.hr', mapsQuery: 'Pula Arena, Forum 1, 52100 Pula, Croatia' },
@@ -2002,7 +2002,7 @@ function ferieApp() {
           { name: 'Lim-fjorden (Limski kanal)', type: 'natur', priority: 'nice-to-have', description: 'Dramatisk fjordarm mellom Poreč og Rovinj. Oysters og båtturer fra Rovinj havn.', url: 'https://www.istra.hr', mapsQuery: 'Limski Kanal, Istria, Croatia' },
           { name: 'Kamenjak nasjonalpark', type: 'strand', priority: 'nice-to-have', description: 'Uberørt halvøy sør for Pula med krystallklart vann og klipper.', url: 'https://www.kamenjak.hr', mapsQuery: 'Kamenjak, Premantura, Croatia' },
         ],
-        tips: ['Bestill Maistra Camping Veštar senest april — juli er høysesong', 'Pula amfiteater: gå tidlig for å unngå folkemengder', 'Kroatia bruker EUR siden 2023 — ingen valutaveksling'],
+        tips: ['Bestill Camping Polari senest april — juli er høysesong', 'Pula amfiteater: gå tidlig for å unngå folkemengder', 'Kroatia bruker EUR siden 2023 — ingen valutaveksling'],
         imageUrl: '',
       },
       {
@@ -2311,7 +2311,7 @@ function ferieApp() {
         location: 'Rovinj',
         price: '~€55–65',
         url: 'https://www.maistra.com/properties/campsite-vestar/',
-        current: true,
+        current: false,
         facilities: [
           '3 bassenger inkl. barneslider',
           'Familieunderholdningsprogram',
@@ -2328,7 +2328,7 @@ function ferieApp() {
         location: 'Rovinj',
         price: '~€45–55',
         url: 'https://www.maistra.com/properties/campsite-polari/',
-        current: false,
+        current: true,
         facilities: [
           '"Best campsite for kids" siden 2024',
           'Omfattende animasjon — sirkusskole, kunst og sport',
