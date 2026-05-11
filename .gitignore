@@ -1,5 +1,6 @@
 *:Zone.Identifier
 .claude/
+.mcp.json
 
 # Selvgenererte (OpenSSL) sertifikater — ikke klarert av nettleser
 cert.pem
