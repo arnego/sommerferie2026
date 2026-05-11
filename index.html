@@ -47,6 +47,18 @@ tailwind.config = {
   [x-cloak] { display: none !important; }
   html { scroll-behavior: smooth; }
   body { font-family: 'Inter', sans-serif; }
+  /* Horisontal scroll-hint: gradient-fade på høyre kant */
+  .scroll-fade-right { position: relative; }
+  .scroll-fade-right::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 32px;
+    pointer-events: none;
+    background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.95));
+  }
 </style>
 </head>
 
@@ -58,16 +70,16 @@ tailwind.config = {
   <!-- ===== SEKSJON: NAVIGASJON ===== -->
   <nav class="sticky top-0 z-50 bg-petrol/95 backdrop-blur-sm shadow-md">
     <div class="max-w-5xl mx-auto px-4 sm:px-6">
-      <div class="flex items-center justify-between h-14">
+      <div class="flex items-center justify-between h-14 gap-3">
         <!-- Logo -->
-        <a href="#" class="font-heading text-white text-lg font-bold tracking-wide">Sommerferie 2026</a>
+        <a href="#" class="font-heading text-white text-base sm:text-lg font-bold tracking-wide whitespace-nowrap">Sommerferie 2026</a>
 
         <!-- Desktop-meny -->
         <div class="hidden lg:flex items-center gap-1">
           <template x-for="section in sections" :key="section.id">
             <a :href="'#' + section.id"
                @click.prevent="scrollTo(section.id)"
-               class="px-4 py-2 text-sm text-white/80 hover:text-white transition-colors relative"
+               class="px-3 py-2 text-sm text-white/85 hover:text-white transition-colors relative"
                :class="activeSection === section.id && 'text-white font-medium'">
               <span x-text="section.label"></span>
               <span x-show="activeSection === section.id"
@@ -76,19 +88,71 @@ tailwind.config = {
           </template>
         </div>
 
-        <!-- Hamburgermeny-knapp (mobil) -->
-        <button @click="mobileMenuOpen = !mobileMenuOpen"
-                class="lg:hidden text-white p-2 -mr-2"
-                :aria-expanded="mobileMenuOpen"
-                aria-label="Meny">
-          <svg x-show="!mobileMenuOpen" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-          </svg>
-          <svg x-show="mobileMenuOpen" x-cloak class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-          </svg>
-        </button>
+        <!-- Høyre-side: snarveier (valuta, SOS) + modus-toggle + hamburger -->
+        <div class="flex items-center gap-1 sm:gap-2">
+          <!-- Snarvei: valuta -->
+          <button type="button"
+                  @click="quickJump('valuta')"
+                  class="text-white/85 hover:text-white hover:bg-white/10 rounded-lg p-2 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-sunshine"
+                  aria-label="Valutakurser">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h4v18H3zM10 3h4v18h-4zM17 3h4v18h-4z" style="display:none"/>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 8.25c0-.41-.336-.75-.75-.75H9.75A2.25 2.25 0 0 0 7.5 9.75v0c0 1.243 1.007 2.25 2.25 2.25h4.5c1.243 0 2.25 1.007 2.25 2.25v0a2.25 2.25 0 0 1-2.25 2.25H8.25A.75.75 0 0 1 7.5 15.75M12 6v12"/>
+            </svg>
+          </button>
+          <!-- Snarvei: SOS -->
+          <button type="button"
+                  @click="quickJump('sos')"
+                  class="text-white/85 hover:text-white hover:bg-white/10 rounded-lg p-2 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-sunshine"
+                  aria-label="Nødnumre">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.105a1.125 1.125 0 0 0-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97a1.125 1.125 0 0 0 .417-1.173L6.911 3.108a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/>
+            </svg>
+          </button>
+
+          <!-- Modus-toggle (desktop) -->
+          <div class="hidden sm:flex bg-white/10 rounded-lg p-0.5 ml-1">
+            <button type="button" @click="mode = 'planlegging'"
+                    class="px-2.5 py-1 text-xs font-medium rounded-md transition-colors whitespace-nowrap"
+                    :class="mode === 'planlegging' ? 'bg-white text-petrol' : 'text-white/80 hover:text-white'"
+                    aria-label="Vis planleggingsmodus">Planlegging</button>
+            <button type="button" @click="mode = 'underveis'"
+                    class="px-2.5 py-1 text-xs font-medium rounded-md transition-colors whitespace-nowrap"
+                    :class="mode === 'underveis' ? 'bg-white text-petrol' : 'text-white/80 hover:text-white'"
+                    aria-label="Vis underveis-modus">Underveis</button>
+          </div>
+
+          <!-- Hamburgermeny-knapp (mobil) -->
+          <button @click="mobileMenuOpen = !mobileMenuOpen"
+                  class="lg:hidden text-white p-2"
+                  :aria-expanded="mobileMenuOpen"
+                  aria-label="Meny">
+            <svg x-show="!mobileMenuOpen" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+            <svg x-show="mobileMenuOpen" x-cloak class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
       </div>
+
+      <!-- "I dag"-pin (under turen) -->
+      <button type="button"
+              x-show="todayStatus === 'during' && currentStop && !currentStop.isHome"
+              x-cloak
+              @click="openStop(currentStop.id)"
+              class="w-full flex items-center justify-center gap-2 py-1.5 -mt-1 mb-1 text-xs bg-sunshine/20 hover:bg-sunshine/30 text-white rounded-md transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-sunshine">
+        <span class="inline-block w-1.5 h-1.5 rounded-full bg-sunshine animate-pulse"></span>
+        <span>
+          <span class="font-semibold">I dag:</span>
+          <span x-text="currentStop.name"></span>
+          <span class="text-white/70 hidden sm:inline" x-text="' · dag ' + currentTripDay + '/' + totalTripDays"></span>
+        </span>
+        <svg class="w-3 h-3 opacity-70" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+      </button>
 
       <!-- Mobilmeny -->
       <div x-show="mobileMenuOpen" x-cloak
@@ -99,10 +163,19 @@ tailwind.config = {
            x-transition:leave-start="opacity-100 translate-y-0"
            x-transition:leave-end="opacity-0 -translate-y-2"
            class="lg:hidden pb-3 border-t border-white/10">
+        <!-- Modus-toggle (mobil — vises i mobilmenyen siden sm:flex skjuler det) -->
+        <div class="sm:hidden flex bg-white/10 rounded-lg p-0.5 mx-4 mt-3">
+          <button type="button" @click="mode = 'planlegging'"
+                  class="flex-1 px-3 py-1.5 text-xs font-medium rounded-md transition-colors"
+                  :class="mode === 'planlegging' ? 'bg-white text-petrol' : 'text-white/80'">Planlegging</button>
+          <button type="button" @click="mode = 'underveis'"
+                  class="flex-1 px-3 py-1.5 text-xs font-medium rounded-md transition-colors"
+                  :class="mode === 'underveis' ? 'bg-white text-petrol' : 'text-white/80'">Underveis</button>
+        </div>
         <template x-for="section in sections" :key="section.id">
           <a :href="'#' + section.id"
              @click.prevent="scrollTo(section.id); mobileMenuOpen = false"
-             class="block px-4 py-3 text-sm text-white/80 hover:text-white hover:bg-white/5 transition-colors"
+             class="block px-4 py-3 text-sm text-white/85 hover:text-white hover:bg-white/5 transition-colors"
              :class="activeSection === section.id && 'text-white font-medium border-l-2 border-sunshine'">
             <span x-text="section.label"></span>
           </a>
@@ -119,9 +192,9 @@ tailwind.config = {
     <div class="relative max-w-3xl mx-auto px-6 pt-16 pb-12">
       <p class="inline-block bg-sunshine/20 text-sunshine text-xs font-semibold tracking-widest uppercase px-3 py-1.5 rounded mb-6">Sommerferie 2026</p>
       <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-4">
-        Fra <span class="text-sunshine">Kongsberg</span><br class="sm:hidden"> til Kroatia og tilbake
+        Fra Kongsberg til <span class="text-sunshine">Kroatia</span><br class="sm:hidden"> og tilbake
       </h1>
-      <p class="text-white/60 text-base sm:text-lg font-light">4 uker &middot; Campingvogn &middot; 2 voksne + 1 barn &middot; Juli 2026</p>
+      <p class="text-white/85 text-base sm:text-lg font-light">4 uker &middot; Campingvogn &middot; 2 voksne + 1 barn &middot; Juli 2026</p>
     </div>
 
     <!-- Stats-bar -->
@@ -140,7 +213,7 @@ tailwind.config = {
           <span class="text-[10px] sm:text-xs uppercase tracking-wider font-medium opacity-80">Km</span>
         </div>
         <div class="py-4 text-center">
-          <span class="font-heading text-2xl sm:text-3xl font-bold block" x-text="stops.length">8</span>
+          <span class="font-heading text-2xl sm:text-3xl font-bold block" x-text="stops.length">13</span>
           <span class="text-[10px] sm:text-xs uppercase tracking-wider font-medium opacity-80">Stopp</span>
         </div>
       </div>
@@ -200,7 +273,7 @@ tailwind.config = {
       <!-- Stoppkort -->
       <div class="space-y-1">
         <template x-for="stop in stops" :key="stop.id">
-          <div>
+          <div :id="'stop-' + stop.id + '-anchor'" class="scroll-mt-20">
             <!-- Kjøreetappe (mellom stopp) -->
             <div x-show="stop.driveFromPrevious && stop.driveFromPrevious.km > 0"
                  class="flex items-center gap-2 px-4 py-2 text-xs text-petrol/60">
@@ -217,8 +290,15 @@ tailwind.config = {
             <!-- Stopp-kort -->
             <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-sand/50 transition-shadow hover:shadow-md">
               <!-- Header (klikkbar) -->
-              <div @click="expandedStop = expandedStop === stop.id ? null : stop.id"
-                   class="w-full flex items-center gap-4 px-5 py-4 text-left transition-colors hover:bg-cream/50 cursor-pointer">
+              <div role="button"
+                   tabindex="0"
+                   @click="expandedStop = expandedStop === stop.id ? null : stop.id"
+                   @keydown.enter.prevent="expandedStop = expandedStop === stop.id ? null : stop.id"
+                   @keydown.space.prevent="expandedStop = expandedStop === stop.id ? null : stop.id"
+                   :aria-expanded="expandedStop === stop.id"
+                   :aria-controls="'stop-' + stop.id + '-content'"
+                   :aria-label="'Vis detaljer for ' + stop.name"
+                   class="w-full flex items-center gap-4 px-5 py-4 text-left transition-colors hover:bg-cream/50 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-petrol/40 focus-visible:ring-inset">
                 <div class="w-8 h-8 rounded-full bg-petrol text-white flex items-center justify-center text-sm font-bold flex-shrink-0"
                      x-text="stop.id"></div>
                 <div class="flex-1 min-w-0">
@@ -252,6 +332,8 @@ tailwind.config = {
 
               <!-- Innhold (ekspanderbart) -->
               <div x-show="expandedStop === stop.id"
+                   :id="'stop-' + stop.id + '-content'"
+                   role="region"
                    x-transition:enter="transition ease-out duration-200"
                    x-transition:enter-start="opacity-0 -translate-y-2"
                    x-transition:enter-end="opacity-100 translate-y-0"
@@ -346,9 +428,9 @@ tailwind.config = {
                     <table class="w-full text-xs border-collapse">
                       <thead>
                         <tr class="text-muted border-b border-sand/50">
-                          <th class="text-left py-1.5 px-2 font-medium">Dato</th>
+                          <th scope="col" class="text-left py-1.5 px-2 font-medium">Dato</th>
                           <template x-for="h in weatherHours" :key="h">
-                            <th class="text-center py-1.5 px-1 font-medium" x-text="h + ':00'"></th>
+                            <th scope="col" class="text-center py-1.5 px-1 font-medium" x-text="h + ':00'"></th>
                           </template>
                         </tr>
                       </thead>
@@ -392,12 +474,14 @@ tailwind.config = {
       <h2 class="font-heading text-2xl sm:text-3xl text-petrol mb-8">Pakkelister</h2>
 
       <!-- Tab-navigasjon -->
-      <div class="flex flex-wrap gap-1 mb-6 bg-white rounded-xl p-1.5 border border-sand/50">
+      <div class="flex gap-1 mb-6 bg-white rounded-xl p-1.5 border border-sand/50">
         <template x-for="tab in checklistTabs" :key="tab.id">
           <button @click="activeChecklist = tab.id"
-                  class="flex-1 min-w-[100px] px-3 py-2.5 text-xs sm:text-sm font-medium rounded-lg transition-colors"
-                  :class="activeChecklist === tab.id ? 'bg-petrol text-white shadow-sm' : 'text-charcoal/60 hover:bg-cream'"
-                  x-text="tab.label"></button>
+                  class="flex-1 px-2 sm:px-3 py-2.5 text-xs sm:text-sm font-medium rounded-lg transition-colors whitespace-nowrap"
+                  :class="activeChecklist === tab.id ? 'bg-petrol text-white shadow-sm' : 'text-charcoal/60 hover:bg-cream'">
+            <span class="sm:hidden" x-text="tab.shortLabel"></span>
+            <span class="hidden sm:inline" x-text="tab.label"></span>
+          </button>
         </template>
       </div>
 
@@ -424,11 +508,11 @@ tailwind.config = {
                      class="px-5 py-2.5 bg-cream/70 text-xs font-semibold text-petrol uppercase tracking-wider"
                      x-text="item.category"></div>
                 <!-- Item -->
-                <label class="flex items-center gap-3 px-5 py-3 cursor-pointer hover:bg-cream/30 transition-colors">
+                <label class="flex items-center gap-3 px-5 py-3 min-h-[44px] cursor-pointer hover:bg-cream/30 transition-colors">
                   <input type="checkbox"
                          x-model="checklists[tab.id][idx].done"
                          @change="saveChecklists()"
-                         class="w-4 h-4 rounded border-muted/40 text-success focus:ring-success/30 cursor-pointer flex-shrink-0">
+                         class="w-5 h-5 rounded border-muted/40 text-success focus:ring-success/30 cursor-pointer flex-shrink-0">
                   <span class="text-sm transition-all"
                         :class="checklists[tab.id][idx].done ? 'line-through text-muted' : 'text-charcoal'"
                         x-text="item.label"></span>
@@ -455,76 +539,153 @@ tailwind.config = {
   <!-- ===== SEKSJON: BUDSJETT & PRAKTISK ===== -->
   <section id="budsjett" class="py-12 sm:py-16 bg-sand/30">
     <div class="max-w-3xl mx-auto px-4 sm:px-6">
-      <h2 class="font-heading text-2xl sm:text-3xl text-petrol mb-8">Budsjett &amp; Praktisk</h2>
+      <h2 class="font-heading text-2xl sm:text-3xl text-petrol mb-2">
+        <span x-show="mode === 'planlegging'">Budsjett &amp; Praktisk</span>
+        <span x-show="mode === 'underveis'">Praktisk info</span>
+      </h2>
+      <p class="text-sm text-muted mb-6">
+        <span x-show="mode === 'planlegging'">Klikk på en seksjon for å åpne den.</span>
+        <span x-show="mode === 'underveis'">Mest brukt underveis — valuta, nødnumre, fartsgrenser og bompenger.</span>
+      </p>
 
-      <!-- Budsjett-grid -->
-      <h3 class="font-heading text-lg text-petrol mb-4">Estimert budsjett</h3>
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
-        <template x-for="item in budget" :key="item.category">
-          <div class="bg-white rounded-xl p-5 border border-sand/50">
-            <p class="text-xs text-muted uppercase tracking-wider font-medium mb-1" x-text="item.category"></p>
-            <p class="font-heading text-2xl text-charcoal">
-              <span x-text="item.amount.toLocaleString('no-NO')"></span>
-              <span class="text-sm text-muted font-body ml-1">NOK</span>
-            </p>
-            <p x-show="item.note" x-text="item.note" class="text-xs text-muted mt-1 leading-snug"></p>
-            <div class="mt-3 h-1.5 bg-sand/50 rounded-full overflow-hidden">
-              <div class="h-full rounded-full transition-all duration-500"
-                   :class="item.color"
-                   :style="'width:' + Math.round(item.amount / budgetTotal * 100) + '%'"></div>
-            </div>
+      <div class="space-y-3">
+
+      <!-- Budsjett-grid (kun planlegging) -->
+      <div x-show="mode === 'planlegging'" class="bg-white rounded-xl border border-sand/50 overflow-hidden">
+        <div role="button" tabindex="0"
+             @click="toggleBudsjett('estimat')"
+             @keydown.enter.prevent="toggleBudsjett('estimat')"
+             @keydown.space.prevent="toggleBudsjett('estimat')"
+             :aria-expanded="expandedBudsjett === 'estimat'"
+             aria-controls="budsjett-estimat-content"
+             class="w-full flex items-center justify-between gap-3 px-5 py-4 cursor-pointer hover:bg-cream/50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-petrol/40 focus-visible:ring-inset">
+          <div class="flex-1 min-w-0">
+            <h3 class="font-heading text-lg text-petrol">Estimert budsjett</h3>
+            <p class="text-xs text-muted mt-0.5" x-text="budgetTotal.toLocaleString('no-NO') + ' NOK totalt · 6 kategorier'"></p>
           </div>
-        </template>
-      </div>
-      <div class="bg-petrol text-white rounded-xl p-5 mb-10 flex items-center justify-between">
-        <span class="font-medium">Totalt estimert</span>
-        <span class="font-heading text-2xl" x-text="budgetTotal.toLocaleString('no-NO') + ' NOK'"></span>
-      </div>
-
-      <!-- Valutatabell -->
-      <h3 class="font-heading text-lg text-petrol mb-4">Valutakurser</h3>
-      <div class="bg-white rounded-xl border border-sand/50 overflow-hidden mb-8">
-        <table class="w-full text-sm">
-          <thead class="bg-cream/70">
-            <tr>
-              <th class="text-left px-5 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Valuta</th>
-              <th class="text-right px-5 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Kurs</th>
-              <th class="text-right px-5 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">100 NOK =</th>
-            </tr>
-          </thead>
-          <tbody class="divide-y divide-sand/30">
-            <tr class="hover:bg-cream/30">
-              <td class="px-5 py-3 font-medium">EUR (Euro)</td>
-              <td class="px-5 py-3 text-right text-muted">1 EUR = ~11,50 NOK</td>
-              <td class="px-5 py-3 text-right font-medium">~8,70 EUR</td>
-            </tr>
-            <tr class="hover:bg-cream/30">
-              <td class="px-5 py-3 font-medium">DKK (Danske kroner)</td>
-              <td class="px-5 py-3 text-right text-muted">1 DKK = ~1,55 NOK</td>
-              <td class="px-5 py-3 text-right font-medium">~64,50 DKK</td>
-            </tr>
-            <tr class="hover:bg-cream/30">
-              <td class="px-5 py-3 font-medium">CZK (Tsjekkiske koruna)</td>
-              <td class="px-5 py-3 text-right text-muted">1 CZK = ~0,47 NOK</td>
-              <td class="px-5 py-3 text-right font-medium">~213 CZK</td>
-            </tr>
-          </tbody>
-        </table>
-        <div class="px-5 py-2.5 bg-cream/50 text-xs text-muted">Omtrentlige kurser. Sjekk oppdaterte kurser for avreise.</div>
+          <svg class="w-5 h-5 text-muted transition-transform duration-200 flex-shrink-0"
+               :class="expandedBudsjett === 'estimat' && 'rotate-180'"
+               fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </div>
+        <div x-show="expandedBudsjett === 'estimat'" id="budsjett-estimat-content" role="region"
+             x-transition:enter="transition ease-out duration-200"
+             x-transition:enter-start="opacity-0 -translate-y-2"
+             x-transition:enter-end="opacity-100 translate-y-0"
+             class="border-t border-sand/50 p-5">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-5">
+            <template x-for="item in budget" :key="item.category">
+              <div class="bg-cream/40 rounded-xl p-5 border border-sand/40">
+                <p class="text-xs text-muted uppercase tracking-wider font-medium mb-1" x-text="item.category"></p>
+                <p class="font-heading text-2xl text-charcoal">
+                  <span x-text="item.amount.toLocaleString('no-NO')"></span>
+                  <span class="text-sm text-muted font-body ml-1">NOK</span>
+                </p>
+                <p x-show="item.note" x-text="item.note" class="text-[13px] text-muted mt-1 leading-snug"></p>
+                <div class="mt-3 h-1.5 bg-sand/50 rounded-full overflow-hidden">
+                  <div class="h-full rounded-full transition-all duration-500"
+                       :class="item.color"
+                       :style="'width:' + Math.round(item.amount / budgetTotal * 100) + '%'"></div>
+                </div>
+              </div>
+            </template>
+          </div>
+          <div class="bg-petrol text-white rounded-xl p-5 flex items-center justify-between">
+            <span class="font-medium">Totalt estimert</span>
+            <span class="font-heading text-2xl" x-text="budgetTotal.toLocaleString('no-NO') + ' NOK'"></span>
+          </div>
+        </div>
       </div>
 
-      <!-- Kostnadsnivå -->
-      <h3 class="font-heading text-lg text-petrol mb-4">Kostnadsnivå — mat, drikke og camping</h3>
-      <div class="bg-white rounded-xl border border-sand/50 overflow-x-auto mb-8">
+      <!-- Valutakurser -->
+      <div class="bg-white rounded-xl border border-sand/50 overflow-hidden">
+        <div role="button" tabindex="0"
+             @click="toggleBudsjett('valuta')"
+             @keydown.enter.prevent="toggleBudsjett('valuta')"
+             @keydown.space.prevent="toggleBudsjett('valuta')"
+             :aria-expanded="expandedBudsjett === 'valuta'"
+             aria-controls="budsjett-valuta-content"
+             class="w-full flex items-center justify-between gap-3 px-5 py-4 cursor-pointer hover:bg-cream/50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-petrol/40 focus-visible:ring-inset">
+          <div class="flex-1 min-w-0">
+            <h3 class="font-heading text-lg text-petrol">Valutakurser</h3>
+            <p class="text-xs text-muted mt-0.5">EUR · DKK · CZK mot NOK</p>
+          </div>
+          <svg class="w-5 h-5 text-muted transition-transform duration-200 flex-shrink-0"
+               :class="expandedBudsjett === 'valuta' && 'rotate-180'"
+               fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </div>
+        <div x-show="expandedBudsjett === 'valuta'" id="budsjett-valuta-content" role="region"
+             x-transition:enter="transition ease-out duration-200"
+             x-transition:enter-start="opacity-0 -translate-y-2"
+             x-transition:enter-end="opacity-100 translate-y-0"
+             class="border-t border-sand/50">
+          <table class="w-full text-sm">
+            <thead class="bg-cream/70">
+              <tr>
+                <th scope="col" class="text-left px-5 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Valuta</th>
+                <th scope="col" class="text-right px-5 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Kurs</th>
+                <th scope="col" class="text-right px-5 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">100 NOK =</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-sand/30">
+              <tr class="hover:bg-cream/30">
+                <td class="px-5 py-3 font-medium">EUR (Euro)</td>
+                <td class="px-5 py-3 text-right text-muted">1 EUR = ~11,50 NOK</td>
+                <td class="px-5 py-3 text-right font-medium">~8,70 EUR</td>
+              </tr>
+              <tr class="hover:bg-cream/30">
+                <td class="px-5 py-3 font-medium">DKK (Danske kroner)</td>
+                <td class="px-5 py-3 text-right text-muted">1 DKK = ~1,55 NOK</td>
+                <td class="px-5 py-3 text-right font-medium">~64,50 DKK</td>
+              </tr>
+              <tr class="hover:bg-cream/30">
+                <td class="px-5 py-3 font-medium">CZK (Tsjekkiske koruna)</td>
+                <td class="px-5 py-3 text-right text-muted">1 CZK = ~0,47 NOK</td>
+                <td class="px-5 py-3 text-right font-medium">~213 CZK</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="px-5 py-2.5 bg-cream/50 text-xs text-muted">Omtrentlige kurser. Sjekk oppdaterte kurser for avreise.</div>
+        </div>
+      </div>
+
+      <!-- Kostnadsnivå (kun planlegging) -->
+      <div x-show="mode === 'planlegging'" class="bg-white rounded-xl border border-sand/50 overflow-hidden">
+        <div role="button" tabindex="0"
+             @click="toggleBudsjett('kostnadsniva')"
+             @keydown.enter.prevent="toggleBudsjett('kostnadsniva')"
+             @keydown.space.prevent="toggleBudsjett('kostnadsniva')"
+             :aria-expanded="expandedBudsjett === 'kostnadsniva'"
+             aria-controls="budsjett-kostnadsniva-content"
+             class="w-full flex items-center justify-between gap-3 px-5 py-4 cursor-pointer hover:bg-cream/50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-petrol/40 focus-visible:ring-inset">
+          <div class="flex-1 min-w-0">
+            <h3 class="font-heading text-lg text-petrol">Kostnadsnivå — mat, drikke og camping</h3>
+            <p class="text-xs text-muted mt-0.5">Sammenligning av 5 land</p>
+          </div>
+          <svg class="w-5 h-5 text-muted transition-transform duration-200 flex-shrink-0"
+               :class="expandedBudsjett === 'kostnadsniva' && 'rotate-180'"
+               fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </div>
+        <div x-show="expandedBudsjett === 'kostnadsniva'" id="budsjett-kostnadsniva-content" role="region"
+             x-transition:enter="transition ease-out duration-200"
+             x-transition:enter-start="opacity-0 -translate-y-2"
+             x-transition:enter-end="opacity-100 translate-y-0"
+             class="border-t border-sand/50">
+        <div class="relative overflow-x-auto scroll-fade-right">
         <table class="w-full text-sm min-w-[680px]">
           <thead class="bg-cream/70">
             <tr>
-              <th class="text-left px-4 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Land</th>
-              <th class="text-right px-4 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Enkel lunsj</th>
-              <th class="text-right px-4 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Middag for to</th>
-              <th class="text-right px-4 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Halvliter øl</th>
-              <th class="text-right px-4 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Cappuccino</th>
-              <th class="text-right px-4 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Camping / natt ①</th>
+              <th scope="col" class="text-left px-4 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Land</th>
+              <th scope="col" class="text-right px-4 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Enkel lunsj</th>
+              <th scope="col" class="text-right px-4 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Middag for to</th>
+              <th scope="col" class="text-right px-4 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Halvliter øl</th>
+              <th scope="col" class="text-right px-4 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Cappuccino</th>
+              <th scope="col" class="text-right px-4 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Camping / natt ①</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-sand/30">
@@ -570,39 +731,58 @@ tailwind.config = {
             </tr>
           </tbody>
         </table>
+        </div>
         <div class="px-5 py-2.5 bg-cream/50 text-xs text-muted">① Campingpris for 2 voksne + 1 barn + campingvogn + strøm, basert på valgte campingplasser i ruten. For Kroatia: snitt av Camping Plitvice, Camping Stobreč Split og Maistra Veštar — resort-fasiliteter og høysesong i juli gjør campingen dyrere enn det generelle prisnivået i landet. Mat og drikke (grønt) er billigst i Kroatia. Priser er omtrentlige for sommeren 2026.</div>
+        </div>
       </div>
 
-      <!-- Bookingstatus -->
-      <h3 class="font-heading text-lg text-petrol mb-4">Bookingstatus — overnattinger og ferger</h3>
-      <div class="bg-white rounded-xl border border-sand/50 overflow-hidden mb-3">
-        <div class="px-5 py-3 bg-cream/70 flex items-center justify-between">
-          <div>
-            <p class="text-sm font-semibold text-petrol">
+      <!-- Bookingstatus (kun planlegging) -->
+      <div x-show="mode === 'planlegging'" class="bg-white rounded-xl border border-sand/50 overflow-hidden">
+        <div role="button" tabindex="0"
+             @click="toggleBudsjett('booking')"
+             @keydown.enter.prevent="toggleBudsjett('booking')"
+             @keydown.space.prevent="toggleBudsjett('booking')"
+             :aria-expanded="expandedBudsjett === 'booking'"
+             aria-controls="budsjett-booking-content"
+             class="w-full flex items-center justify-between gap-3 px-5 py-4 cursor-pointer hover:bg-cream/50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-petrol/40 focus-visible:ring-inset">
+          <div class="flex-1 min-w-0">
+            <h3 class="font-heading text-lg text-petrol">Bookingstatus — overnattinger og ferger</h3>
+            <p class="text-xs text-muted mt-0.5">
               <span x-text="stops.filter(s => s.camping && s.camping.booked).length"></span>
               <span> av </span>
               <span x-text="stops.filter(s => s.camping).length"></span>
               <span> booket</span>
             </p>
-            <p class="text-xs text-muted mt-0.5">Trykk på lenken for å gå direkte til booking</p>
           </div>
-          <div class="hidden sm:flex items-center gap-3 text-xs">
+          <svg class="w-5 h-5 text-muted transition-transform duration-200 flex-shrink-0"
+               :class="expandedBudsjett === 'booking' && 'rotate-180'"
+               fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </div>
+        <div x-show="expandedBudsjett === 'booking'" id="budsjett-booking-content" role="region"
+             x-transition:enter="transition ease-out duration-200"
+             x-transition:enter-start="opacity-0 -translate-y-2"
+             x-transition:enter-end="opacity-100 translate-y-0"
+             class="border-t border-sand/50">
+        <div class="px-5 py-3 bg-cream/40 flex items-center justify-between flex-wrap gap-2">
+          <p class="text-xs text-muted">Trykk på lenken for å gå direkte til booking</p>
+          <div class="flex items-center gap-3 text-xs">
             <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-success"></span> <span class="text-muted">Booket</span></span>
             <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-sunshine"></span> <span class="text-muted">Utestående</span></span>
           </div>
         </div>
-      </div>
-      <div class="bg-white rounded-xl border border-sand/50 overflow-x-auto mb-8">
+        <div class="relative overflow-x-auto scroll-fade-right">
         <table class="w-full text-sm min-w-[720px]">
           <thead class="bg-cream/70">
             <tr>
-              <th class="text-left px-4 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">#</th>
-              <th class="text-left px-4 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Stopp</th>
-              <th class="text-left px-4 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Datoer</th>
-              <th class="text-right px-4 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Netter</th>
-              <th class="text-left px-4 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Overnatting</th>
-              <th class="text-center px-4 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Status</th>
-              <th class="text-center px-4 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Bookingside</th>
+              <th scope="col" class="text-left px-4 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">#</th>
+              <th scope="col" class="text-left px-4 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Stopp</th>
+              <th scope="col" class="text-left px-4 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Datoer</th>
+              <th scope="col" class="text-right px-4 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Netter</th>
+              <th scope="col" class="text-left px-4 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Overnatting</th>
+              <th scope="col" class="text-center px-4 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Status</th>
+              <th scope="col" class="text-center px-4 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Bookingside</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-sand/30">
@@ -634,13 +814,37 @@ tailwind.config = {
             </template>
           </tbody>
         </table>
+        </div>
         <div class="px-5 py-2.5 bg-cream/50 text-xs text-muted">Husk å booke senest mai 2026 for julitoppen i Kroatia. Kroatiske kystplasser fylles raskt opp.</div>
+        </div>
       </div>
 
-      <!-- Istria — 10 familievennlige alternativer -->
-      <h3 class="font-heading text-lg text-petrol mb-2">Istria — 10 familievennlige alternativer</h3>
+      <!-- Istria — 10 familievennlige alternativer (kun planlegging) -->
+      <div x-show="mode === 'planlegging'" class="bg-white rounded-xl border border-sand/50 overflow-hidden">
+        <div role="button" tabindex="0"
+             @click="toggleBudsjett('istria')"
+             @keydown.enter.prevent="toggleBudsjett('istria')"
+             @keydown.space.prevent="toggleBudsjett('istria')"
+             :aria-expanded="expandedBudsjett === 'istria'"
+             aria-controls="budsjett-istria-content"
+             class="w-full flex items-center justify-between gap-3 px-5 py-4 cursor-pointer hover:bg-cream/50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-petrol/40 focus-visible:ring-inset">
+          <div class="flex-1 min-w-0">
+            <h3 class="font-heading text-lg text-petrol">Istria — 10 familievennlige alternativer</h3>
+            <p class="text-xs text-muted mt-0.5">Plan B for stopp 7 (Poreč/Rovinj)</p>
+          </div>
+          <svg class="w-5 h-5 text-muted transition-transform duration-200 flex-shrink-0"
+               :class="expandedBudsjett === 'istria' && 'rotate-180'"
+               fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </div>
+        <div x-show="expandedBudsjett === 'istria'" id="budsjett-istria-content" role="region"
+             x-transition:enter="transition ease-out duration-200"
+             x-transition:enter-start="opacity-0 -translate-y-2"
+             x-transition:enter-end="opacity-100 translate-y-0"
+             class="border-t border-sand/50 p-5">
       <p class="text-sm text-charcoal/70 mb-4">Stopp 7 (Poreč/Rovinj) er ennå ikke booket. Her er 10 familievennlige campingplasser på Istria-halvøya — alle med strand, kulturelle severdigheter og naturopplevelser i nærområdet. Sortert nord → sør.</p>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-3">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <template x-for="alt in istriaAlternatives" :key="alt.name">
           <div class="rounded-xl border p-5 flex flex-col transition-all"
                :class="alt.eliminated ? 'bg-charcoal/[0.03] border-sand/30 opacity-55' : 'bg-white border-sand/50'">
@@ -693,18 +897,41 @@ tailwind.config = {
           </div>
         </template>
       </div>
-      <p class="text-xs text-muted mb-8">Priser er estimater for høysesong (juli 2026) for 2 voksne + 1 barn + campingvogn + strøm. Verifiser ved booking. Reserver senest mai 2026.</p>
+      <p class="text-xs text-muted mt-4">Priser er estimater for høysesong (juli 2026) for 2 voksne + 1 barn + campingvogn + strøm. Verifiser ved booking. Reserver senest mai 2026.</p>
+        </div>
+      </div>
 
       <!-- Fartsgrenser med henger -->
-      <h3 class="font-heading text-lg text-petrol mb-4">Fartsgrenser med campingvogn</h3>
-      <div class="bg-white rounded-xl border border-sand/50 overflow-hidden mb-8">
+      <div class="bg-white rounded-xl border border-sand/50 overflow-hidden">
+        <div role="button" tabindex="0"
+             @click="toggleBudsjett('fart')"
+             @keydown.enter.prevent="toggleBudsjett('fart')"
+             @keydown.space.prevent="toggleBudsjett('fart')"
+             :aria-expanded="expandedBudsjett === 'fart'"
+             aria-controls="budsjett-fart-content"
+             class="w-full flex items-center justify-between gap-3 px-5 py-4 cursor-pointer hover:bg-cream/50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-petrol/40 focus-visible:ring-inset">
+          <div class="flex-1 min-w-0">
+            <h3 class="font-heading text-lg text-petrol">Fartsgrenser med campingvogn</h3>
+            <p class="text-xs text-muted mt-0.5">Norge · Danmark · Tyskland · Østerrike · Slovenia · Kroatia</p>
+          </div>
+          <svg class="w-5 h-5 text-muted transition-transform duration-200 flex-shrink-0"
+               :class="expandedBudsjett === 'fart' && 'rotate-180'"
+               fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </div>
+        <div x-show="expandedBudsjett === 'fart'" id="budsjett-fart-content" role="region"
+             x-transition:enter="transition ease-out duration-200"
+             x-transition:enter-start="opacity-0 -translate-y-2"
+             x-transition:enter-end="opacity-100 translate-y-0"
+             class="border-t border-sand/50">
         <table class="w-full text-sm">
           <thead class="bg-cream/70">
             <tr>
-              <th class="text-left px-5 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Land</th>
-              <th class="text-center px-3 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Tettbygd</th>
-              <th class="text-center px-3 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Landevei</th>
-              <th class="text-center px-3 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Motorvei</th>
+              <th scope="col" class="text-left px-5 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Land</th>
+              <th scope="col" class="text-center px-3 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Tettbygd</th>
+              <th scope="col" class="text-center px-3 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Landevei</th>
+              <th scope="col" class="text-center px-3 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Motorvei</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-sand/30">
@@ -747,68 +974,143 @@ tailwind.config = {
           </tbody>
         </table>
         <div class="px-5 py-2.5 bg-cream/50 text-xs text-muted">Alle hastigheter i km/t med campingvogn. *Østerrike/Slovenia: 80 km/t motorvei med henger. *Kroatia: 80 km/t motorvei med henger over 3,5 t totalvekt. *Tyskland: Ingen generell fartsgrense uten henger, men 80 km/t med campingvogn.</div>
+        </div>
       </div>
 
       <!-- Nodnumre -->
-      <h3 class="font-heading text-lg text-petrol mb-4">Nodnumre</h3>
-      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
-        <div class="bg-white rounded-xl p-4 border border-sand/50 text-center">
+      <div class="bg-white rounded-xl border border-sand/50 overflow-hidden">
+        <div role="button" tabindex="0"
+             @click="toggleBudsjett('sos')"
+             @keydown.enter.prevent="toggleBudsjett('sos')"
+             @keydown.space.prevent="toggleBudsjett('sos')"
+             :aria-expanded="expandedBudsjett === 'sos'"
+             aria-controls="budsjett-sos-content"
+             class="w-full flex items-center justify-between gap-3 px-5 py-4 cursor-pointer hover:bg-cream/50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-petrol/40 focus-visible:ring-inset">
+          <div class="flex-1 min-w-0">
+            <h3 class="font-heading text-lg text-petrol">Nødnumre</h3>
+            <p class="text-xs text-muted mt-0.5">Akuttnumre per land</p>
+          </div>
+          <svg class="w-5 h-5 text-muted transition-transform duration-200 flex-shrink-0"
+               :class="expandedBudsjett === 'sos' && 'rotate-180'"
+               fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </div>
+        <div x-show="expandedBudsjett === 'sos'" id="budsjett-sos-content" role="region"
+             x-transition:enter="transition ease-out duration-200"
+             x-transition:enter-start="opacity-0 -translate-y-2"
+             x-transition:enter-end="opacity-100 translate-y-0"
+             class="border-t border-sand/50 p-5">
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+        <div class="bg-white rounded-xl p-5 border border-sand/50 text-center">
           <p class="text-xs text-muted uppercase tracking-wider font-medium mb-1">Norge</p>
           <p class="font-heading text-xl text-petrol">113</p>
           <p class="text-xs text-muted mt-0.5">Politi: 112</p>
         </div>
-        <div class="bg-white rounded-xl p-4 border border-sand/50 text-center">
+        <div class="bg-white rounded-xl p-5 border border-sand/50 text-center">
           <p class="text-xs text-muted uppercase tracking-wider font-medium mb-1">Danmark</p>
           <p class="font-heading text-xl text-petrol">112</p>
           <p class="text-xs text-muted mt-0.5">Felles nodnummer</p>
         </div>
-        <div class="bg-white rounded-xl p-4 border border-sand/50 text-center">
+        <div class="bg-white rounded-xl p-5 border border-sand/50 text-center">
           <p class="text-xs text-muted uppercase tracking-wider font-medium mb-1">Tyskland</p>
           <p class="font-heading text-xl text-petrol">112</p>
           <p class="text-xs text-muted mt-0.5">Politi: 110</p>
         </div>
-        <div class="bg-white rounded-xl p-4 border border-sand/50 text-center">
+        <div class="bg-cream/40 rounded-xl p-5 border border-sand/40 text-center">
           <p class="text-xs text-muted uppercase tracking-wider font-medium mb-1">Kroatia</p>
           <p class="font-heading text-xl text-petrol">112</p>
           <p class="text-xs text-muted mt-0.5">Veihjelp: 1987</p>
         </div>
       </div>
+        </div>
+      </div>
 
       <!-- Bompenger / Vignetter / Miljosoner -->
-      <h3 class="font-heading text-lg text-petrol mb-4">Bompenger, vignetter og miljøsoner</h3>
-      <div class="space-y-3 mb-8">
-        <div class="bg-white rounded-xl p-5 border border-sand/50">
+      <div class="bg-white rounded-xl border border-sand/50 overflow-hidden">
+        <div role="button" tabindex="0"
+             @click="toggleBudsjett('bom')"
+             @keydown.enter.prevent="toggleBudsjett('bom')"
+             @keydown.space.prevent="toggleBudsjett('bom')"
+             :aria-expanded="expandedBudsjett === 'bom'"
+             aria-controls="budsjett-bom-content"
+             class="w-full flex items-center justify-between gap-3 px-5 py-4 cursor-pointer hover:bg-cream/50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-petrol/40 focus-visible:ring-inset">
+          <div class="flex-1 min-w-0">
+            <h3 class="font-heading text-lg text-petrol">Bompenger, vignetter og miljøsoner</h3>
+            <p class="text-xs text-muted mt-0.5">Praktisk per land</p>
+          </div>
+          <svg class="w-5 h-5 text-muted transition-transform duration-200 flex-shrink-0"
+               :class="expandedBudsjett === 'bom' && 'rotate-180'"
+               fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </div>
+        <div x-show="expandedBudsjett === 'bom'" id="budsjett-bom-content" role="region"
+             x-transition:enter="transition ease-out duration-200"
+             x-transition:enter-start="opacity-0 -translate-y-2"
+             x-transition:enter-end="opacity-100 translate-y-0"
+             class="border-t border-sand/50 p-5">
+      <div class="space-y-3">
+        <div class="bg-cream/40 rounded-xl p-5 border border-sand/40">
           <h4 class="font-semibold text-sm text-charcoal mb-2">Norge</h4>
           <p class="text-sm text-charcoal/70">AutoPASS-brikke anbefales. Bomstasjoner registrerer automatisk. Uten brikke faktureres via nummerskiltregistrering.</p>
         </div>
-        <div class="bg-white rounded-xl p-5 border border-sand/50">
+        <div class="bg-cream/40 rounded-xl p-5 border border-sand/40">
           <h4 class="font-semibold text-sm text-charcoal mb-2">Danmark</h4>
           <p class="text-sm text-charcoal/70">Storebæltbroen: BroBizz eller betal ved bomstasjon. Øresundbroen: BroBizz eller online forhåndsbetaling. Ingen vignetter.</p>
         </div>
-        <div class="bg-white rounded-xl p-5 border border-sand/50">
+        <div class="bg-cream/40 rounded-xl p-5 border border-sand/40">
           <h4 class="font-semibold text-sm text-charcoal mb-2">Tyskland - Umweltplakette</h4>
-          <p class="text-sm text-charcoal/70">Grønn Umweltplakette (miljøplakett) er <strong>påbudt</strong> i alle tyske byer med Umweltzoner (inkl. Hamburg og Berlin). Bestill fra <a href="https://www.umwelt-plakette.de" target="_blank" class="text-petrol underline">umwelt-plakette.de</a> (15-30 EUR). Kun trekkvognen trenger plakett, ikke campingvognen. Bot uten plakett: ca. 100 EUR.</p>
+          <p class="text-sm text-charcoal/70">Grønn Umweltplakette (miljøplakett) er <strong>påbudt</strong> i alle tyske byer med Umweltzoner (inkl. Hamburg og Berlin). Bestill fra <a href="https://www.umwelt-plakette.de" target="_blank" rel="noopener" class="text-petrol underline">umwelt-plakette.de</a> (15-30 EUR). Kun trekkvognen trenger plakett, ikke campingvognen. Bot uten plakett: ca. 100 EUR.</p>
         </div>
-        <div class="bg-white rounded-xl p-5 border border-sand/50">
+        <div class="bg-cream/40 rounded-xl p-5 border border-sand/40">
           <h4 class="font-semibold text-sm text-charcoal mb-2">Østerrike - Motorvei-vignett</h4>
           <p class="text-sm text-charcoal/70">Motorvei-vignett påkrevd. 10-dagers vignett: ~9,90 EUR per kjøretøy (bil og campingvogn separat over 3,5 t). Kjøpes ved grenseovergangen eller online på <a href="https://www.asfinag.at" target="_blank" rel="noopener" class="text-petrol underline">asfinag.at</a>.</p>
         </div>
-        <div class="bg-white rounded-xl p-5 border border-sand/50">
+        <div class="bg-cream/40 rounded-xl p-5 border border-sand/40">
           <h4 class="font-semibold text-sm text-charcoal mb-2">Slovenia - Motorvei-vignett</h4>
           <p class="text-sm text-charcoal/70">Motorvei-vignett påkrevd. 7-dagers vignett: ~15 EUR per kjøretøy. Kjøpes ved grenseovergangen eller online på <a href="https://evinjeta.dars.si" target="_blank" rel="noopener" class="text-petrol underline">evinjeta.dars.si</a>.</p>
         </div>
-        <div class="bg-white rounded-xl p-5 border border-sand/50">
+        <div class="bg-cream/40 rounded-xl p-5 border border-sand/40">
           <h4 class="font-semibold text-sm text-charcoal mb-2">Kroatia - Bompenger</h4>
           <p class="text-sm text-charcoal/70">Ingen vignett — bompenger betales ved bomstasjoner. A1 Zagreb–Split ca. 24 EUR totalt. EUR eller betalingskort aksepteres.</p>
         </div>
       </div>
+        </div>
+      </div>
 
       <!-- Viktige adresser -->
-      <h3 class="font-heading text-lg text-petrol mb-4">Viktige adresser</h3>
-      <div class="bg-white rounded-xl p-5 border border-sand/50 mb-4">
-        <h4 class="font-semibold text-sm text-charcoal mb-1">Andre og Lucia</h4>
-        <p class="text-sm text-charcoal/70">Fischerinsel 9, 10179 Berlin, Tyskland</p>
-        <p class="text-xs text-muted mt-1">Sentralt i Berlin Mitte, ved Spree-elven</p>
+      <div class="bg-white rounded-xl border border-sand/50 overflow-hidden">
+        <div role="button" tabindex="0"
+             @click="toggleBudsjett('adr')"
+             @keydown.enter.prevent="toggleBudsjett('adr')"
+             @keydown.space.prevent="toggleBudsjett('adr')"
+             :aria-expanded="expandedBudsjett === 'adr'"
+             aria-controls="budsjett-adr-content"
+             class="w-full flex items-center justify-between gap-3 px-5 py-4 cursor-pointer hover:bg-cream/50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-petrol/40 focus-visible:ring-inset">
+          <div class="flex-1 min-w-0">
+            <h3 class="font-heading text-lg text-petrol">Viktige adresser</h3>
+            <p class="text-xs text-muted mt-0.5">Familie og kontakter underveis</p>
+          </div>
+          <svg class="w-5 h-5 text-muted transition-transform duration-200 flex-shrink-0"
+               :class="expandedBudsjett === 'adr' && 'rotate-180'"
+               fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </div>
+        <div x-show="expandedBudsjett === 'adr'" id="budsjett-adr-content" role="region"
+             x-transition:enter="transition ease-out duration-200"
+             x-transition:enter-start="opacity-0 -translate-y-2"
+             x-transition:enter-end="opacity-100 translate-y-0"
+             class="border-t border-sand/50 p-5">
+        <div class="bg-cream/40 rounded-xl p-5 border border-sand/40">
+          <h4 class="font-semibold text-sm text-charcoal mb-1">Andre og Lucia</h4>
+          <p class="text-sm text-charcoal/70">Fischerinsel 9, 10179 Berlin, Tyskland</p>
+          <p class="text-xs text-muted mt-1">Sentralt i Berlin Mitte, ved Spree-elven</p>
+        </div>
+        </div>
+      </div>
+
       </div>
     </div>
   </section>
@@ -838,39 +1140,48 @@ function ferieApp() {
     // Reiseplan
     expandedStop: null,
 
+    // Modus: 'planlegging' eller 'underveis'
+    mode: 'planlegging',
+
+    // Budsjett & Praktisk — accordion-tilstand (én åpen om gangen)
+    expandedBudsjett: null,
+    toggleBudsjett(id) {
+      this.expandedBudsjett = this.expandedBudsjett === id ? null : id;
+    },
+
     // Sjekklister
     activeChecklist: 'pakkeliste',
     confirmReset: null,
     checklistTabs: [
-      { id: 'pakkeliste', label: 'Pakkeliste' },
-      { id: 'campingvogn', label: 'Campingvogn' },
-      { id: 'foravreise', label: 'For avreise' },
-      { id: 'daglig', label: 'Daglig' },
+      { id: 'pakkeliste', label: 'Pakkeliste', shortLabel: 'Pakking' },
+      { id: 'campingvogn', label: 'Campingvogn', shortLabel: 'Vogn' },
+      { id: 'foravreise', label: 'For avreise', shortLabel: 'Før' },
+      { id: 'daglig', label: 'Daglig', shortLabel: 'Daglig' },
     ],
     checklists: {
       pakkeliste: [
         // Klær Ann Kristin
-        { label: 'Klær Ann Kristin: Shorts og t-skjorter (5-6 stk)', done: false, category: 'Klær Ann Kristin' },
-        { label: 'Klær Ann Kristin: Langbukse og genser (2 stk)', done: false, category: 'Klær Ann Kristin' },
-        { label: 'Klær Ann Kristin: Badetøy og strandklær', done: false, category: 'Klær Ann Kristin' },
-        { label: 'Klær Ann Kristin: Regnjakke', done: false, category: 'Klær Ann Kristin' },
-        { label: 'Klær Ann Kristin: Undertøy og sokker (7+ stk)', done: false, category: 'Klær Ann Kristin' },
-        { label: 'Klær Ann Kristin: Komfortable sko + sandaler', done: false, category: 'Klær Ann Kristin' },
+        { label: 'Shorts og t-skjorter (5-6 stk)', done: false, category: 'Klær Ann Kristin' },
+        { label: 'Langbukse og genser (2 stk)', done: false, category: 'Klær Ann Kristin' },
+        { label: 'Badetøy og strandklær', done: false, category: 'Klær Ann Kristin' },
+        { label: 'Regnjakke', done: false, category: 'Klær Ann Kristin' },
+        { label: 'Undertøy og sokker (7+ stk)', done: false, category: 'Klær Ann Kristin' },
+        { label: 'Komfortable sko + sandaler', done: false, category: 'Klær Ann Kristin' },
         // Klær Arne
-        { label: 'Klær Arne: Shorts og t-skjorter (5-6 stk)', done: false, category: 'Klær Arne' },
-        { label: 'Klær Arne: Langbukse og genser (2 stk)', done: false, category: 'Klær Arne' },
-        { label: 'Klær Arne: Badetøy og strandklær', done: false, category: 'Klær Arne' },
-        { label: 'Klær Arne: Regnjakke', done: false, category: 'Klær Arne' },
-        { label: 'Klær Arne: Undertøy og sokker (7+ stk)', done: false, category: 'Klær Arne' },
-        { label: 'Klær Arne: Komfortable sko + sandaler', done: false, category: 'Klær Arne' },
+        { label: 'Shorts og t-skjorter (5-6 stk)', done: false, category: 'Klær Arne' },
+        { label: 'Langbukse og genser (2 stk)', done: false, category: 'Klær Arne' },
+        { label: 'Badetøy og strandklær', done: false, category: 'Klær Arne' },
+        { label: 'Regnjakke', done: false, category: 'Klær Arne' },
+        { label: 'Undertøy og sokker (7+ stk)', done: false, category: 'Klær Arne' },
+        { label: 'Komfortable sko + sandaler', done: false, category: 'Klær Arne' },
         // Klær William
-        { label: 'Klær William: Shorts og t-skjorter (6-7 stk)', done: false, category: 'Klær William' },
-        { label: 'Klær William: Langbukse og genser (2-3 stk)', done: false, category: 'Klær William' },
-        { label: 'Klær William: Badetøy og badeshorts (2 stk)', done: false, category: 'Klær William' },
-        { label: 'Klær William: Regnjakke og regntøy', done: false, category: 'Klær William' },
-        { label: 'Klær William: Undertøy og sokker (8+ stk)', done: false, category: 'Klær William' },
-        { label: 'Klær William: Gummistøvler + sandaler + sko', done: false, category: 'Klær William' },
-        { label: 'Klær William: Pysjamas (2 stk)', done: false, category: 'Klær William' },
+        { label: 'Shorts og t-skjorter (6-7 stk)', done: false, category: 'Klær William' },
+        { label: 'Langbukse og genser (2-3 stk)', done: false, category: 'Klær William' },
+        { label: 'Badetøy og badeshorts (2 stk)', done: false, category: 'Klær William' },
+        { label: 'Regnjakke og regntøy', done: false, category: 'Klær William' },
+        { label: 'Undertøy og sokker (8+ stk)', done: false, category: 'Klær William' },
+        { label: 'Gummistøvler + sandaler + sko', done: false, category: 'Klær William' },
+        { label: 'Pysjamas (2 stk)', done: false, category: 'Klær William' },
         // Dokumenter
         { label: 'Pass (alle 3)', done: false, category: 'Dokumenter' },
         { label: 'Førerkort', done: false, category: 'Dokumenter' },
@@ -1008,6 +1319,17 @@ function ferieApp() {
       return countries.size;
     },
 
+    // Stopp-status (besøkt / aktiv / kommende) basert på dato
+    getStopStatus(stop) {
+      const today = new Date().toISOString().slice(0, 10);
+      if (!stop || !stop.arrivalDate) return 'upcoming';
+      const arrival = stop.arrivalDate;
+      const departure = stop.departureDate || stop.arrivalDate;
+      if (today < arrival) return 'upcoming';
+      if (today > departure) return 'visited';
+      return 'active';
+    },
+
     // "I dag"-logikk
     get todayStatus() {
       const today = new Date().toISOString().slice(0, 10);
@@ -1034,6 +1356,29 @@ function ferieApp() {
       const idx = this.stops.indexOf(this.currentStop);
       if (idx < this.stops.length - 1) return this.stops[idx + 1].driveFromPrevious;
       return null;
+    },
+    get totalTripDays() {
+      const lastStop = this.stops[this.stops.length - 1];
+      const lastDate = lastStop.departureDate || lastStop.arrivalDate;
+      const first = new Date(this.stops[0].arrivalDate + 'T00:00:00');
+      const last = new Date(lastDate + 'T00:00:00');
+      return Math.round((last - first) / 86400000) + 1;
+    },
+    get currentTripDay() {
+      const today = new Date();
+      today.setHours(0,0,0,0);
+      const first = new Date(this.stops[0].arrivalDate + 'T00:00:00');
+      return Math.max(1, Math.round((today - first) / 86400000) + 1);
+    },
+
+    // Hurtignavigasjon til underseksjon i Budsjett & Praktisk (åpner accordion)
+    quickJump(budsjettId) {
+      this.expandedBudsjett = budsjettId;
+      this.mobileMenuOpen = false;
+      this.$nextTick(() => {
+        const el = document.getElementById('budsjett');
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
     },
 
 
@@ -1327,18 +1672,39 @@ function ferieApp() {
           : stop.camping.name)
         : '';
       const dateInfo = stop.departureDate
-        ? `${stop.arrivalDate.slice(5)} - ${stop.departureDate.slice(5)} &middot; ${stop.nights} netter`
+        ? `${stop.arrivalDate.slice(5)} – ${stop.departureDate.slice(5)} &middot; ${stop.nights} netter`
         : stop.arrivalDate.slice(5);
       const strip = this.hasAnyForecast(stop.id)
-        ? `<div style="display:flex;flex-wrap:wrap;gap:3px;margin:4px 0 2px;">${this.dayStripHtml(stop, 18)}</div>`
-        : '';
+        ? `<div style="display:flex;flex-wrap:wrap;gap:3px;margin:6px 0 2px;" aria-label="Værvarsel for ${stop.name}">${this.dayStripHtml(stop, 18)}</div>`
+        : `<div style="margin:6px 0 2px;font-size:11px;color:#999;font-style:italic;">Værvarsel kommer nærmere reisen</div>`;
+      const titleLink = stop.isHome
+        ? `<strong>${stop.name}</strong> (${stop.countryCode})`
+        : `<a href="#stop-${stop.id}" data-stop-id="${stop.id}" class="popup-stop-link" style="color:#1B4F72;text-decoration:none;font-weight:bold;border-bottom:1px dotted #1B4F72;">${stop.name}</a> (${stop.countryCode})`;
       return `
-        <strong>${stop.name}</strong> (${stop.countryCode})<br>
-        ${dateInfo}
+        ${titleLink}<br>
+        <span style="color:#555;font-size:12px;">${dateInfo}</span>
         ${strip}
-        <small>${campingLink}</small><br>
-        <small style="color:#666;">${stop.description.substring(0, 100)}...</small>
+        ${campingLink ? `<small style="display:block;margin-top:2px;">${campingLink}</small>` : ''}
       `;
+    },
+
+    handlePopupClick(e) {
+      const link = e.target.closest('.popup-stop-link');
+      if (!link) return;
+      e.preventDefault();
+      const stopId = parseInt(link.getAttribute('data-stop-id'), 10);
+      if (!stopId) return;
+      this.openStop(stopId);
+    },
+
+    openStop(stopId) {
+      // Lukk evt. åpen popup i kartet
+      if (this.map) this.map.closePopup();
+      this.expandedStop = stopId;
+      this.$nextTick(() => {
+        const el = document.getElementById('stop-' + stopId + '-anchor');
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
     },
 
     // Sentral datastruktur: stops
@@ -2003,6 +2369,9 @@ function ferieApp() {
     },
 
     init() {
+      // Sett smart standardmodus (Planlegging før avreise, Underveis under turen)
+      this.mode = this.todayStatus === 'during' ? 'underveis' : 'planlegging';
+
       // Last sjekklister fra localStorage
       this.loadChecklists();
 
@@ -2012,6 +2381,10 @@ function ferieApp() {
       // Initialiser kartet etter DOM er klar
       this.$nextTick(() => {
         this.initMap();
+        // Auto-utvid dagens stopp under turen (uten å scrolle siden)
+        if (this.todayStatus === 'during' && this.currentStop) {
+          this.expandedStop = this.currentStop.id;
+        }
       });
 
       // Observer hvilken seksjon som er synlig
@@ -2057,11 +2430,19 @@ function ferieApp() {
         .bindPopup('<strong>Kongsberg</strong><br>Start og slutt');
       allPoints.push([this.homeBase.lat, this.homeBase.lng]);
 
-      // Stopp-markorer
+      // Stopp-markorer (farge etter status: besøkt / aktiv / kommende)
       this.stops.forEach((stop, i) => {
         if (!stop.isHome) {
+          const status = this.getStopStatus(stop);
+          const colors = {
+            visited: { bg: '#607080', text: '#fff' },   // muted — passert
+            active:  { bg: '#F4A621', text: '#1B4F72' },// sunshine — her nå
+            upcoming:{ bg: '#1B4F72', text: '#fff' },   // petrol — kommende
+          };
+          const c = colors[status];
+          const ring = status === 'active' ? 'box-shadow:0 0 0 3px #F4A62133, 0 2px 6px rgba(0,0,0,0.3);' : 'box-shadow:0 2px 6px rgba(0,0,0,0.3);';
           const icon = L.divIcon({
-            html: `<div style="background:#1B4F72;color:white;border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:bold;border:2px solid white;box-shadow:0 2px 6px rgba(0,0,0,0.3);">${i + 1}</div>`,
+            html: `<div style="background:${c.bg};color:${c.text};border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:bold;border:2px solid white;${ring}">${i + 1}</div>`,
             className: '',
             iconSize: [28, 28],
             iconAnchor: [14, 14],
@@ -2070,6 +2451,10 @@ function ferieApp() {
           const marker = L.marker([stop.lat, stop.lng], { icon })
             .addTo(this.map)
             .bindPopup(this.buildStopPopupHtml(stop));
+          marker.on('popupopen', (e) => {
+            const el = e.popup.getElement();
+            if (el) el.addEventListener('click', (evt) => this.handlePopupClick(evt));
+          });
           this._stopMarkers.push({ marker, stop });
         }
         allPoints.push([stop.lat, stop.lng]);
