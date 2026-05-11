@@ -190,7 +190,6 @@ tailwind.config = {
     <div class="absolute bottom-0 left-0 w-72 h-72 bg-petrol/50 rounded-full translate-y-1/2 -translate-x-1/4 blur-3xl"></div>
 
     <div class="relative max-w-3xl mx-auto px-6 pt-16 pb-12">
-      <p class="inline-block bg-sunshine/20 text-sunshine text-xs font-semibold tracking-widest uppercase px-3 py-1.5 rounded mb-6">Sommerferie 2026</p>
       <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-4">
         Fra Kongsberg til <span class="text-sunshine">Kroatia</span><br class="sm:hidden"> og tilbake
       </h1>
@@ -473,9 +472,9 @@ tailwind.config = {
     <div class="max-w-3xl mx-auto px-4 sm:px-6">
       <h2 class="font-heading text-2xl sm:text-3xl text-petrol mb-8">Pakkelister</h2>
 
-      <!-- Tab-navigasjon -->
-      <div class="flex gap-1 mb-6 bg-white rounded-xl p-1.5 border border-sand/50">
-        <template x-for="tab in checklistTabs" :key="tab.id">
+      <!-- Tab-navigasjon (skjules når kun én liste er synlig) -->
+      <div x-show="visibleChecklistTabs.length > 1" class="flex gap-1 mb-6 bg-white rounded-xl p-1.5 border border-sand/50">
+        <template x-for="tab in visibleChecklistTabs" :key="tab.id">
           <button @click="activeChecklist = tab.id"
                   class="flex-1 px-2 sm:px-3 py-2.5 text-xs sm:text-sm font-medium rounded-lg transition-colors whitespace-nowrap"
                   :class="activeChecklist === tab.id ? 'bg-petrol text-white shadow-sm' : 'text-charcoal/60 hover:bg-cream'">
@@ -484,6 +483,10 @@ tailwind.config = {
           </button>
         </template>
       </div>
+      <!-- Heading når kun én liste er synlig (underveis-modus) -->
+      <h3 x-show="visibleChecklistTabs.length === 1"
+          x-text="(visibleChecklistTabs[0] && visibleChecklistTabs[0].label + ' sjekkliste') || ''"
+          class="font-heading text-lg text-petrol mb-4"></h3>
 
       <!-- Sjekkliste-innhold -->
       <template x-for="tab in checklistTabs" :key="tab.id">
@@ -1150,11 +1153,23 @@ function ferieApp() {
     activeChecklist: 'pakkeliste',
     confirmReset: null,
     checklistTabs: [
-      { id: 'pakkeliste', label: 'Pakkeliste', shortLabel: 'Pakking' },
-      { id: 'campingvogn', label: 'Campingvogn', shortLabel: 'Vogn' },
-      { id: 'foravreise', label: 'For avreise', shortLabel: 'Før' },
-      { id: 'daglig', label: 'Daglig', shortLabel: 'Daglig' },
+      { id: 'pakkeliste', label: 'Pakkeliste', shortLabel: 'Pakking', planleggingOnly: true },
+      { id: 'campingvogn', label: 'Campingvogn', shortLabel: 'Vogn', planleggingOnly: true },
+      { id: 'foravreise', label: 'For avreise', shortLabel: 'Før', planleggingOnly: true },
+      { id: 'daglig', label: 'Daglig', shortLabel: 'Daglig', underveisOnly: true },
     ],
+    get visibleChecklistTabs() {
+      return this.checklistTabs.filter(t => {
+        if (this.mode === 'underveis') return !t.planleggingOnly;
+        return !t.underveisOnly;
+      });
+    },
+    syncActiveChecklist() {
+      const visible = this.visibleChecklistTabs;
+      if (!visible.find(t => t.id === this.activeChecklist)) {
+        this.activeChecklist = visible[0]?.id || 'pakkeliste';
+      }
+    },
     checklists: {
       pakkeliste: [
         // Klær Ann Kristin
@@ -2368,6 +2383,10 @@ function ferieApp() {
     init() {
       // Sett smart standardmodus (Planlegging før avreise, Underveis under turen)
       this.mode = this.todayStatus === 'during' ? 'underveis' : 'planlegging';
+
+      // Sørg for at aktiv sjekkliste-tab matcher modus ved oppstart og ved bytte
+      this.syncActiveChecklist();
+      this.$watch('mode', () => this.syncActiveChecklist());
 
       // Last sjekklister fra localStorage
       this.loadChecklists();
