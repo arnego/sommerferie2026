@@ -178,7 +178,7 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 
 **Campingplass: Camping Wien West**
 - Adresse: Hüttelbergstraße 80, 1140 Wien, Østerrike
-- Nettside: https://www.campingwienwest.at/
+- Nettside: https://www.micampa.com/
 - Fasiliteter: Velrennomert familiecampingplass vest i Wien, ca. 3 km fra Schønbrunn-palasset og Tiergarten Schønbrunn. Enkel tilgang til sentrum via U4-linja (t-bane). God infrastruktur med dusj, strøm og internett.
 - Booket: Nei
 - Bookingref: —
@@ -216,7 +216,7 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 | Store runde (Rute C/K) | Natur/UNESCO | Must-do | De 16 sjøene med Veliki Slap (78 m — Kroatias høyeste foss). Elektrisk båttur over Kozjak-sjøen. Spektakulære trebroer over fossene. UNESCO-verdensarv. Bestill billett online! https://np-plitvicka-jezera.hr |
 | Galovačke bukara-fossefall | Natur | Must-do | Spektakulær serie med turkisblå fosser i øvre innsjøsystem. Nær inngang 1. https://np-plitvicka-jezera.hr |
 | Rastoke, Slunj | Natur/kultur | Must-do | «Lille Plitvice» — pittoresk landsby der Slunjčica-elva renner som fosser mellom husene. Perfekt ettermiddagsutflukt fra Camping Plitvice. https://slunj-rastoke.hr/en/homepage-en/ |
-| Nikola Tesla-senteret (Smiljan) | Museum | Nice-to-have | 75 km fra Plitvice. Fødested og interaktivt museum for Nikola Tesla. https://mnt.hr/ |
+| Nikola Tesla-senteret (Smiljan) | Museum | Nice-to-have | 75 km fra Plitvice. Fødested og interaktivt museum for Nikola Tesla. https://mcnikolatesla.hr/en/ |
 | Kayakk på Gacka-elven | Aktivitet | Nice-to-have | Krystallklart vann gjennom bøkeskog. Tilbys av lokale operatører nær parken. |
 
 **Tips:**
@@ -327,10 +327,10 @@ Hjemreisen inkluderer tre opplevelsesstopp — Zugspitze, Hamburg og Billund (Le
 **Billund, Danmark (2 netter: 30. juli–1. august)**
 - Kjøring: Hamburg → Billund, 250 km, 3 t 30 min via A7 nord → Flensburg-grensa → E45 nord inn i Danmark → Billund
 - Campingplass: Legoland® Campingarea, Ellehammervej 2, 7190 Billund
-- Nettside: https://www.legoland.dk/feriepark/overnatning/camping/
+- Nettside: https://www.legoland.dk/overnatning/legoland-holiday-village/
 - Innsjekk: 14:00 · Utsjekk: 11:00 (ca. — verifisér ved booking)
 - Aktiviteter dag 1 (31. juli): **Legoland® Billund** — verdens første Legoland (åpnet 1968), 8 tematiske verdener, Miniland og rides. Heldagsopplevelse. Bestill billett online: https://www.legoland.dk/
-- Aktiviteter dag 2 (1. august formiddag): **LEGO House** — ikonisk opplevelseshus i Billund sentrum (2017). Interaktive soner og kreative verksteder. https://www.legohouse.com/
+- Aktiviteter dag 2 (1. august formiddag): **LEGO House** — ikonisk opplevelseshus i Billund sentrum (2017). Interaktive soner og kreative verksteder. https://legohouse.com/en-gb
 - Tips: Bestill Legoland-billett online — spar tid og penger. Legoland® Campingarea er veldig populær i juli — bestill senest i mai. Start hjemreise mot Hirtshals senest kl. 11:00.
 
 **1. august: Billund → Hirtshals → Larvik → Kongsberg**
@@ -387,12 +387,12 @@ Sortert nord → sør:
 |---|------|-------------|------------------|------------------|---------|
 | 1 | **Camping Park Umag** | Umag (nord-Istria) | ~€40–50 | 4-stjerns mega-camp, Blue Flag-strand, 6 bassenger med sklier. Middelalderbyen Umag og istrisk vinregion i nærheten. | https://www.istracamping.com/accommodation/camping-park-umag/ |
 | 2 | **Aminess Maravea Camping Resort** | Novigrad-Cittanova | ~€40–50 | Moderne familieresort med oppvarmede bassenger og kids' club. 5 min til pittoresk Novigrad gamleby. | https://www.aminess.com/en/aminess-maravea-camping-resort |
-| 3 | **Valamar Camping Lanterna** | Tar / Poreč | ~€55–65 | 5-stjerns premium med 2 km steinstrand, vannpark og kids' club med maskoten Maro. 12 km til Poreč Eufrasius-basilika (UNESCO). | https://www.camping-adriatic.com/lanterna-premium-camping-resort-porec |
-| 4 | **Camping Bijela Uvala** | Poreč | ~€35–45 | 8.9/10 brukervurdering, 2 bassengkomplekser, gangavstand til Poreč gamlebyen (UNESCO). | https://www.camping-adriatic.com/bijela-uvala-campsite-porec |
-| 5 | **Camping Valkanela** | Vrsar | ~€35–45 | Daglige aktivitetsprogram for barn, sandbukt med grunt vann. Vrsar fiskelandsby og Lim-fjorden naturreservat i nærheten. | https://www.maistra.com/en/camping/camping-valkanela |
+| 3 | **Valamar Camping Lanterna** | Tar / Poreč | ~€55–65 | 5-stjerns premium med 2 km steinstrand, vannpark og kids' club med maskoten Maro. 12 km til Poreč Eufrasius-basilika (UNESCO). | https://www.valamarcamping.com/lanterna-camp-porec |
+| 4 | **Camping Bijela Uvala** | Poreč | ~€35–45 | 8.9/10 brukervurdering, 2 bassengkomplekser, gangavstand til Poreč gamlebyen (UNESCO). | https://www.istracamping.com/accommodation/camping-bijela-uvala/ |
+| 5 | **Camping Valkanela** | Vrsar | ~€35–45 | Daglige aktivitetsprogram for barn, sandbukt med grunt vann. Vrsar fiskelandsby og Lim-fjorden naturreservat i nærheten. | https://www.maistra.com/properties/campsite-valkanela/ |
 | 6 ★ | **Maistra Camping Veštar** (nåværende valg) | Rovinj | ~€55–65 | 3 bassenger inkl. barneslider, gangavstand (~20 min) til Rovinj UNESCO-kandidat gamleby. Lim-fjorden i nærheten. | https://www.maistra.com/properties/campsite-vestar/ |
-| 7 | **Camping Polari** | Rovinj | ~€45–55 | "Best campsite for kids" siden 2024. Premium Family Village med eget basseng. Rovinj sentrum 5 km. | https://www.maistra.com/en/camping/camping-polari |
-| 8 | **Mon Perin Village Plus** | Bale (mellom Rovinj og Pula) | ~€40–50 | Romslig camping i furuskog (720 plasser), direkte kystadgang. Middelalderlandsbyen Bale, 30 km til Pula amfiteater. | https://www.monperin.hr/ |
+| 7 | **Camping Polari** | Rovinj | ~€45–55 | "Best campsite for kids" siden 2024. Premium Family Village med eget basseng. Rovinj sentrum 5 km. | https://www.maistra.com/properties/campsite-polari/ |
+| 8 | **Mon Perin Village Plus** | Bale (mellom Rovinj og Pula) | ~€40–50 | Romslig camping i furuskog (720 plasser), direkte kystadgang. Middelalderlandsbyen Bale, 30 km til Pula amfiteater. | https://www.monperin.com/en |
 | 9 | **Camping Bi-Village** | Fažana, 15 km fra Pula | ~€40–50 | 800 m sandstrand (sjelden i Istria!), 3 bassenger med utsikt mot Brijuni-øyene. Brijuni NP og Pula amfiteater (UNESCO) i nærheten. | https://www.bivillage.com/ |
 | 10 | **Arena Stoja Campsite** | Pula | ~€30–40 | Dramatisk klippebeliggenhet på halvøy, 3 km fra Pula UNESCO-amfiteater. Mer rustikk og rimeligere. | https://www.arenacollection.com/en/destinations/pula/campsites/arena-stoja-campsite |
 
