@@ -190,8 +190,8 @@ tailwind.config = {
     <div class="absolute bottom-0 left-0 w-72 h-72 bg-petrol/50 rounded-full translate-y-1/2 -translate-x-1/4 blur-3xl"></div>
 
     <div class="relative max-w-3xl mx-auto px-6 pt-16 pb-12">
-      <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-4">
-        Fra Kongsberg til <span class="text-sunshine">Kroatia</span><br class="sm:hidden"> og tilbake
+      <h1 class="font-heading text-[clamp(1.4rem,7vw,3.75rem)] font-bold leading-tight mb-4 whitespace-nowrap">
+        Fra Kongsberg til <span class="text-sunshine">Kroatia</span>
       </h1>
       <p class="text-white/85 text-base sm:text-lg font-light">4 uker &middot; Campingvogn &middot; 2 voksne + 1 barn &middot; Juli 2026</p>
     </div>
@@ -464,78 +464,6 @@ tailwind.config = {
           </div>
         </template>
       </div>
-    </div>
-  </section>
-
-  <!-- ===== SEKSJON: PAKKELISTER ===== -->
-  <section id="pakkelister" class="py-12 sm:py-16">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6">
-      <h2 class="font-heading text-2xl sm:text-3xl text-petrol mb-8">Pakkelister</h2>
-
-      <!-- Tab-navigasjon (skjules når kun én liste er synlig) -->
-      <div x-show="visibleChecklistTabs.length > 1" class="flex gap-1 mb-6 bg-white rounded-xl p-1.5 border border-sand/50">
-        <template x-for="tab in visibleChecklistTabs" :key="tab.id">
-          <button @click="activeChecklist = tab.id"
-                  class="flex-1 px-2 sm:px-3 py-2.5 text-xs sm:text-sm font-medium rounded-lg transition-colors whitespace-nowrap"
-                  :class="activeChecklist === tab.id ? 'bg-petrol text-white shadow-sm' : 'text-charcoal/60 hover:bg-cream'">
-            <span class="sm:hidden" x-text="tab.shortLabel"></span>
-            <span class="hidden sm:inline" x-text="tab.label"></span>
-          </button>
-        </template>
-      </div>
-      <!-- Heading når kun én liste er synlig (underveis-modus) -->
-      <h3 x-show="visibleChecklistTabs.length === 1"
-          x-text="(visibleChecklistTabs[0] && visibleChecklistTabs[0].label + ' sjekkliste') || ''"
-          class="font-heading text-lg text-petrol mb-4"></h3>
-
-      <!-- Sjekkliste-innhold -->
-      <template x-for="tab in checklistTabs" :key="tab.id">
-        <div x-show="activeChecklist === tab.id" x-transition.opacity>
-
-          <!-- Fremgangsindikator -->
-          <div class="flex items-center gap-3 mb-4 px-1">
-            <div class="flex-1 h-2 bg-sand/60 rounded-full overflow-hidden">
-              <div class="h-full bg-success rounded-full transition-all duration-300"
-                   :style="'width:' + checklistProgress(tab.id) + '%'"></div>
-            </div>
-            <span class="text-xs text-muted font-medium whitespace-nowrap"
-                  x-text="checklistDoneCount(tab.id) + ' av ' + checklists[tab.id].length + ' fullført'"></span>
-          </div>
-
-          <!-- Sjekkliste-items -->
-          <div class="bg-white rounded-xl border border-sand/50 overflow-hidden divide-y divide-sand/30">
-            <template x-for="(item, idx) in checklists[tab.id]" :key="idx">
-              <div>
-                <!-- Kategori-header (vises kun ved forste item i ny kategori) -->
-                <div x-show="idx === 0 || item.category !== checklists[tab.id][idx-1].category"
-                     class="px-5 py-2.5 bg-cream/70 text-xs font-semibold text-petrol uppercase tracking-wider"
-                     x-text="item.category"></div>
-                <!-- Item -->
-                <label class="flex items-center gap-3 px-5 py-3 min-h-[44px] cursor-pointer hover:bg-cream/30 transition-colors">
-                  <input type="checkbox"
-                         x-model="checklists[tab.id][idx].done"
-                         @change="saveChecklists()"
-                         class="w-5 h-5 rounded border-muted/40 text-success focus:ring-success/30 cursor-pointer flex-shrink-0">
-                  <span class="text-sm transition-all"
-                        :class="checklists[tab.id][idx].done ? 'line-through text-muted' : 'text-charcoal'"
-                        x-text="item.label"></span>
-                </label>
-              </div>
-            </template>
-          </div>
-
-          <!-- Nullstill-knapp -->
-          <div class="mt-4 flex justify-end">
-            <button @click="confirmReset = confirmReset === tab.id ? null : tab.id"
-                    class="text-xs text-muted hover:text-red-500 transition-colors px-3 py-1.5 rounded-lg hover:bg-red-50">
-              <span x-show="confirmReset !== tab.id">Nullstill liste</span>
-              <span x-show="confirmReset === tab.id" class="text-red-500 font-medium"
-                    @click.stop="resetChecklist(tab.id); confirmReset = null">Bekreft nullstilling</span>
-            </button>
-          </div>
-
-        </div>
-      </template>
     </div>
   </section>
 
@@ -1111,6 +1039,74 @@ tailwind.config = {
     </div>
   </section>
 
+  <!-- ===== SEKSJON: PAKKELISTER ===== -->
+  <section id="pakkelister" class="py-12 sm:py-16">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <h2 class="font-heading text-2xl sm:text-3xl text-petrol mb-8">Pakkelister</h2>
+
+      <!-- Tab-navigasjon -->
+      <div class="flex gap-1 mb-6 bg-white rounded-xl p-1.5 border border-sand/50">
+        <template x-for="tab in visibleChecklistTabs" :key="tab.id">
+          <button @click="activeChecklist = tab.id"
+                  class="flex-1 px-2 sm:px-3 py-2.5 text-xs sm:text-sm font-medium rounded-lg transition-colors whitespace-nowrap"
+                  :class="activeChecklist === tab.id ? 'bg-petrol text-white shadow-sm' : 'text-charcoal/60 hover:bg-cream'">
+            <span class="sm:hidden" x-text="tab.shortLabel"></span>
+            <span class="hidden sm:inline" x-text="tab.label"></span>
+          </button>
+        </template>
+      </div>
+
+      <!-- Sjekkliste-innhold -->
+      <template x-for="tab in checklistTabs" :key="tab.id">
+        <div x-show="activeChecklist === tab.id" x-transition.opacity>
+
+          <!-- Fremgangsindikator -->
+          <div class="flex items-center gap-3 mb-4 px-1">
+            <div class="flex-1 h-2 bg-sand/60 rounded-full overflow-hidden">
+              <div class="h-full bg-success rounded-full transition-all duration-300"
+                   :style="'width:' + checklistProgress(tab.id) + '%'"></div>
+            </div>
+            <span class="text-xs text-muted font-medium whitespace-nowrap"
+                  x-text="checklistDoneCount(tab.id) + ' av ' + checklists[tab.id].length + ' fullført'"></span>
+          </div>
+
+          <!-- Sjekkliste-items -->
+          <div class="bg-white rounded-xl border border-sand/50 overflow-hidden divide-y divide-sand/30">
+            <template x-for="(item, idx) in checklists[tab.id]" :key="idx">
+              <div>
+                <!-- Kategori-header (vises kun ved forste item i ny kategori) -->
+                <div x-show="idx === 0 || item.category !== checklists[tab.id][idx-1].category"
+                     class="px-5 py-2.5 bg-cream/70 text-xs font-semibold text-petrol uppercase tracking-wider"
+                     x-text="item.category"></div>
+                <!-- Item -->
+                <label class="flex items-center gap-3 px-5 py-3 min-h-[44px] cursor-pointer hover:bg-cream/30 transition-colors">
+                  <input type="checkbox"
+                         x-model="checklists[tab.id][idx].done"
+                         @change="saveChecklists()"
+                         class="w-5 h-5 rounded border-muted/40 text-success focus:ring-success/30 cursor-pointer flex-shrink-0">
+                  <span class="text-sm transition-all"
+                        :class="checklists[tab.id][idx].done ? 'line-through text-muted' : 'text-charcoal'"
+                        x-text="item.label"></span>
+                </label>
+              </div>
+            </template>
+          </div>
+
+          <!-- Nullstill-knapp -->
+          <div class="mt-4 flex justify-end">
+            <button @click="confirmReset = confirmReset === tab.id ? null : tab.id"
+                    class="text-xs text-muted hover:text-red-500 transition-colors px-3 py-1.5 rounded-lg hover:bg-red-50">
+              <span x-show="confirmReset !== tab.id">Nullstill liste</span>
+              <span x-show="confirmReset === tab.id" class="text-red-500 font-medium"
+                    @click.stop="resetChecklist(tab.id); confirmReset = null">Bekreft nullstilling</span>
+            </button>
+          </div>
+
+        </div>
+      </template>
+    </div>
+  </section>
+
   <!-- ===== FOOTER ===== -->
   <footer class="bg-petrol text-white/50 text-center py-8 text-xs tracking-wide">
     <p>Sommerferie 2026 &middot; Familien Goderstad</p>
@@ -1129,9 +1125,9 @@ function ferieApp() {
     sections: [
       { id: 'kart', label: 'Kart' },
       { id: 'reiseplan', label: 'Reiseplan' },
-      { id: 'pakkelister', label: 'Pakkelister' },
       { id: 'booking', label: 'Booking & Planlegging', planleggingOnly: true },
       { id: 'budsjett', label: 'Budsjett & Praktisk' },
+      { id: 'pakkelister', label: 'Pakkelister' },
     ],
     get visibleSections() {
       return this.sections.filter(s => !s.planleggingOnly || this.mode === 'planlegging');
@@ -1156,7 +1152,7 @@ function ferieApp() {
       { id: 'pakkeliste', label: 'Pakkeliste', shortLabel: 'Pakking', planleggingOnly: true },
       { id: 'campingvogn', label: 'Campingvogn', shortLabel: 'Vogn', planleggingOnly: true },
       { id: 'foravreise', label: 'For avreise', shortLabel: 'Før', planleggingOnly: true },
-      { id: 'daglig', label: 'Daglig', shortLabel: 'Daglig', underveisOnly: true },
+      { id: 'daglig', label: 'Daglig sjekkliste', shortLabel: 'Daglig sjekkliste', underveisOnly: true },
     ],
     get visibleChecklistTabs() {
       return this.checklistTabs.filter(t => {
