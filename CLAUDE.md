@@ -32,20 +32,27 @@ Websiden er tilgjengelig på: `https://arnego.github.io/sommerferie2026/`
 
 ## URL-kvalitetskontroll
 
-**Regel: Alle URL-er skal verifiseres med WebFetch før de legges inn i kode eller dokumenter.**
+**Regel: Alle URL-er skal verifiseres før de legges inn i kode eller dokumenter. Bruk aldri URL-er fra hukommelse/treningsdata alene.**
 
 Dette gjelder URL-er til campingplasser, aktiviteter, ferger, bookingplattformer og alle andre eksterne lenker.
 
+### Verktøyprioritet
+
+Bruk verktøyene i denne rekkefølgen:
+
+1. **Tavily** (foretrekkes når tilgjengelig) — bruk `tavily-search` for å finne korrekt URL, og `tavily-extract` for å verifisere at siden inneholder forventet innhold. Tavily håndterer JS-rendrede sider og fungerer globalt.
+2. **WebFetch** (fallback) — hent URL-en direkte og sjekk at innholdet matcher forventet sted.
+3. **WebSearch** (for å finne riktig URL) — bruk dersom verken Tavily eller WebFetch gir et godt resultat.
+
 ### Fremgangsmåte
 
-1. **Bruk WebFetch** på URL-en før den skrives inn i `index.html` eller `docs/`.
-2. **Sjekk at siden laster** (HTTP 200) og at innholdet matcher forventet sted/aktivitet (campingplassens navn, beliggenhet e.l. bør fremgå av siden).
-3. **Finn korrekt URL via WebSearch** dersom WebFetch feiler, gir 404, eller innholdet ikke stemmer.
-4. **Ikke legg inn URL-er fra hukommelse/treningsdata alene** — disse er ofte utdaterte, feilstavet eller peker på feil side.
+1. **Finn URL** med Tavily-søk (eller WebSearch) hvis du ikke er 100 % sikker på adressen.
+2. **Verifiser innholdet** med `tavily-extract` (eller WebFetch) — campingplassens navn og beliggenhet skal fremgå av siden.
+3. **Legg inn URL-en** i `index.html` eller `docs/` først etter vellykket verifisering.
 
 ### Hvis verifisering ikke er mulig
 
-Dersom WebFetch ikke er tilgjengelig i konteksten: legg inn URL-en med en kommentar `// TODO: verifiser URL` og oppgi at URL-en er uverifisert i svar til bruker.
+Legg inn URL-en med en kommentar `// TODO: verifiser URL` og oppgi at URL-en er uverifisert i svar til bruker.
 
 ## GitHub Automation
 
