@@ -93,18 +93,18 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 **Color Line SuperSpeed (Larvik–Hirtshals, utreise)**
 - Avgang: Larvik kl. 08:00 (lørdag 4. juli)
 - Ankomst: Hirtshals ca. kl. 12:00 (~3 t 55 min)
-- Estimert pris (2 voksne + 1 barn + bil + campingvogn m/riktig høyde og lengde): **~5 000 NOK** (inkl. kjøretøylengde-tillegg — bekreft ved booking)
+- Estimert pris (2 voksne + 1 barn + bil + campingvogn m/riktig høyde og lengde): **~5 000 NOK** (inkl. kjøretøylengde-tillegg)
 - Fasiliteter: snackbar og dekk
 - Nettside: https://www.colorline.no/hirtshals-larvik
-- Bookingref: —
+- **Booket: Ja (17. mai 2026) — Bookingref: XDM7361**
 - Ombord fra: ca. 07:00 (avgang 08:00) · Ankomst Hirtshals: ca. 12:00
 
 **Color Line SuperSpeed (Hirtshals–Larvik, hjemreise)**
-- Avganger: 2–3 daglig i juli (typisk 09:15, 14:30, 19:15 fra Hirtshals)
+- Avgang: Hirtshals kl. 14:30 (lørdag 1. august)
 - Overfartstid: 3 t 45 min
-- Estimert pris (bil + campingvogn m/riktig høyde og lengde + 2 voksne + 1 barn): **~5 000 NOK** en vei (inkl. kjøretøylengde-tillegg — bekreft ved booking)
+- Estimert pris (bil + campingvogn m/riktig høyde og lengde + 2 voksne + 1 barn): **~5 000 NOK** en vei (inkl. kjøretøylengde-tillegg)
 - Nettside: https://www.colorline.no/hirtshals-larvik
-- Bookingref: —
+- **Booket: Ja (17. mai 2026) — Bookingref: XDM7361**
 - Ombord fra: 13:30 (avgang 14:30) · Avstigning Larvik: ca. 18:15
 
 ---
@@ -467,6 +467,7 @@ Sortert nord → sør:
 
 | Dato | Endring | Av |
 | --- | --- | --- |
+| 2026-05-17 | Color Line-ferger booket: begge fergeoverfarter (Larvik→Hirtshals 4. juli og Hirtshals→Larvik 1. august) registrert som booket med ref. XDM7361 i både index.html og Ferieplanen-2026.md. | Claude |
 | 2026-05-17 | Én natt flyttet fra Berlin til Wien: Berlin 3→2 netter (5.–7. juli), Wien 1→2 netter (9.–11. juli). Bad Schandau-datoer justert tilsvarende (7.–9. juli). Plitvice og alle etterfølgende stopp uendret. | Claude |
 | 2026-05-16 | Avstandsverifisering: Alle 14 kjøreetapper verifisert mot eksterne kilder (rome2rio, distance.to, travelmath, trippy, wanderlog). Kritisk feil oppdaget: transittstopp «Stover Strand» lå 530 km fra Hirtshals (ikke 315 km) — erstattet med **Campingplatz Jarplund** (2 km sør for Flensburg), som gir 362 km dag 1 og 434 km dag 2 (verifisert). Øvrige korreksjoner: Split→Rovinj 310→433 km; Bamberg→Hamburg 475→551 km (⚠️ 7t33min); Zugspitze→Bamberg 315→323 km; Hamburg→Billund 250→280 km; Kongsberg↔Larvik 85→91 km; Wien→Plitvice 420→472 km. Regel for avstandsverifisering lagt til i CLAUDE.md. | Claude |
 | 2026-05-16 | Transittstopp justert: Naturcamping Retgendorf (Schwerin, 390 km dag 1 / 190 km dag 2) erstattet med Camping Land an der Elbe, Stover Strand 7, 21423 Drage. | Claude |
