@@ -23,7 +23,7 @@
 - **Hoveddestinasjon: Kroatia** — med minimum 14 netter langs Adriaterkysten og i nasjonalparkene.
 - Et besøk til familie (André og Lucia) i Tyskland i løpet av ferien på adresse: Fischerinsel 9, 10179 Berlin, Tyskland.
 - Bohemian Switzerland (Bad Schandau) inngår som transittstopp på vei sydover.
-- **Effektiv reise:** Color Magic Oslo→Kiel på utreisen sparer kjøring gjennom hele Danmark. Color Line Hirtshals→Larvik på hjemreisen.
+- **Ferger:** Color Line SuperSpeed Larvik→Hirtshals på utreisen (lørdag 4. juli, avgang kl. 08:00). Color Line SuperSpeed Hirtshals→Larvik på hjemreisen (1. august).
 - Ingen overnattinger kortere enn 3 netter med mindre vi eksplisitt har kommet med ønske om det for spesifikke destinasjoner.
 - Kjøreetapper må være under 6 timer per dag med minimum ett stopp underveis.
 - Vi unngår Sverige — hjemreisen skjer via Hirtshals→Larvik (Color Line).
@@ -43,23 +43,24 @@ William er 5 år og er en viktig del av planleggingen:
 
 | # | Sted | Land | Ankomst | Avreise | Netter | Uke |
 |---|------|------|---------|---------|--------|-----|
-| 1 | Oslo → Kiel (Color Magic ferge) | NO/DE | 4. juli kv. | 5. juli | 1 (ferge) | 27 |
-| 2 | Berlin | DE | 5. juli | 8. juli | 3 | 27/28 |
-| 3 | Bad Schandau (Bohemian Switzerland) | DE | 8. juli | 10. juli | 2* | 28 |
-| 4 | Wien | AT | 10. juli | 11. juli | 1* | 28 |
-| 5 | Plitvice Lakes NP | HR | 11. juli | 13. juli | 2 | 28/29 |
-| 6 | Split | HR | 13. juli | 20. juli | 7 | 29/30 |
-| 7 | Rovinj, Istria | HR | 20. juli | 24. juli | 4 | 30 |
-| 8 | Zugspitze | DE | 24. juli | 27. juli | 3 | 31 |
-| 9 | Bamberg | DE | 27. juli | 29. juli | 2 | 31 |
-| 10 | Hamburg | DE | 29. juli | 30. juli | 1* | 31 |
-| 11 | Billund (Legoland) | DK | 30. juli | 1. aug | 2 | 31 |
-| 12 | Hirtshals → Larvik (Color Line ferge) | DK/NO | 1. aug | 1. aug | — | 31 |
-| 13 | Kongsberg | NO | 1. aug | — | Hjemme | 31 |
+| 1 | Larvik → Hirtshals (Color Line ferge) | NO/DK | 4. juli morgen | 4. juli middag | 0 (ferge) | 27 |
+| 2 | Schweriner See (Naturcamping Retgendorf) | DE | 4. juli kv. | 5. juli | 1 (transit) | 27 |
+| 3 | Berlin | DE | 5. juli | 8. juli | 3 | 27/28 |
+| 4 | Bad Schandau (Bohemian Switzerland) | DE | 8. juli | 10. juli | 2* | 28 |
+| 5 | Wien | AT | 10. juli | 11. juli | 1* | 28 |
+| 6 | Plitvice Lakes NP | HR | 11. juli | 13. juli | 2 | 28/29 |
+| 7 | Split | HR | 13. juli | 20. juli | 7 | 29/30 |
+| 8 | Rovinj, Istria | HR | 20. juli | 24. juli | 4 | 30 |
+| 9 | Zugspitze | DE | 24. juli | 27. juli | 3 | 31 |
+| 10 | Bamberg | DE | 27. juli | 29. juli | 2 | 31 |
+| 11 | Hamburg | DE | 29. juli | 30. juli | 1* | 31 |
+| 12 | Billund (Legoland) | DK | 30. juli | 1. aug | 2 | 31 |
+| 13 | Hirtshals → Larvik (Color Line ferge) | DK/NO | 1. aug | 1. aug | — | 31 |
+| 14 | Kongsberg | NO | 1. aug | — | Hjemme | 31 |
 
 *Kortstopp — unntak fra 3-netter-regelen (transit eller prioritert destinasjon).
 
-**Totalt:** 28 netter borte — 13 i Kroatia, 5 i Berlin/Bad Schandau, 3 netter Zugspitze, 2 netter Bamberg, 2 transittnetter (Wien, Hamburg), 2 i Billund, 1 fergenatt. Hjemme 1. august (innenfor «senest 1. august»-grensen).
+**Totalt:** 28 netter borte — 13 i Kroatia, 5 i Berlin/Bad Schandau, 3 netter Zugspitze, 2 netter Bamberg, 3 transittnetter (Retgendorf/Schweriner See, Wien, Hamburg), 2 i Billund. Hjemme 1. august (innenfor «senest 1. august»-grensen).
 
 ---
 
@@ -67,9 +68,9 @@ William er 5 år og er en viktig del av planleggingen:
 
 | Fra | Til | Avstand | Kjøretid | Rute |
 |-----|-----|---------|----------|------|
-| Kongsberg | Oslo | 85 km | 1 t 15 min | E18 nord |
-| Oslo | Kiel (ferge) | — | 20 t | Color Magic avganger daglig kl. 14:00 fra Oslo |
-| Kiel | Berlin | 354 km | 5 t 15 min | A21/A24 øst mot Berlin |
+| Kongsberg | Larvik | 85 km | 1 t 15 min | E18 sørøst |
+| Hirtshals | Naturcamping Retgendorf | 390 km | 5 t 20 min | E45 sør gjennom Jylland → Padborg-grense → A7 Hamburg → A24 øst → avkjøring Schwerin → Retgendorf |
+| Retgendorf | Berlin | 190 km | 2 t 40 min | A24 øst mot Berlin |
 | Berlin | Bad Schandau | 224 km | 3 t 15 min | A13/A17 sørøst |
 | Bad Schandau | Wien-området (Tulln) | 420 km | 6 t 15 min | E55/D8 sørover → Prague-ring → D1/E65 sørøst → Wien → B14/A1 nordvest til Tulln an der Donau |
 | Wien | Plitvice Lakes | 420 km | 6 t 15 min | A21/A2 sørøst → Spielfeld/Šentilj grense → A1 Slovenia (Ljubljana) → A1 Kroatia → D429 → D1 inn mot nasjonalparken |
@@ -89,14 +90,14 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 
 ### Ferger
 
-**Color Line Color Magic (Oslo–Kiel, utreise)**
-- Avgang: Oslo ca. kl. 14:00 daglig
-- Ankomst: Kiel ca. kl. 10:00 neste dag (~20 timer)
-- Bekreftet pris (2 voksne + 1 barn + bil + campingvogn m/riktig høyde og lengde + innvendig lugar): **ca. 16 200 NOK**
-- Fasiliteter: restauranter, spa, underholdning for barn, butikk, WiFi
-- Nettside: https://www.colorline.no/oslo-kiel
+**Color Line SuperSpeed (Larvik–Hirtshals, utreise)**
+- Avgang: Larvik kl. 08:00 (lørdag 4. juli)
+- Ankomst: Hirtshals ca. kl. 12:00 (~3 t 55 min)
+- Estimert pris (2 voksne + 1 barn + bil + campingvogn m/riktig høyde og lengde): **~5 000 NOK** (inkl. kjøretøylengde-tillegg — bekreft ved booking)
+- Fasiliteter: snackbar og dekk
+- Nettside: https://www.colorline.no/hirtshals-larvik
 - Bookingref: —
-- Ombord fra: 12:30 (avgang 14:00) · Avstigning Kiel: ca. 10:00 neste dag
+- Ombord fra: ca. 07:00 (avgang 08:00) · Ankomst Hirtshals: ca. 12:00
 
 **Color Line SuperSpeed (Hirtshals–Larvik, hjemreise)**
 - Avganger: 2–3 daglig i juli (typisk 09:15, 14:30, 19:15 fra Hirtshals)
@@ -108,7 +109,35 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 
 ---
 
-### Stopp 1: Berlin, Tyskland (3 netter: 5.–8. juli)
+### Stopp 1: Schweriner See, Naturcamping Retgendorf (1 natt: 4.–5. juli)
+
+**Kjøring:** Hirtshals → Naturcamping Retgendorf, 390 km, 5 t 20 min via E45 sør gjennom Jylland → Padborg-grense → A7 Hamburg → A24 øst, avkjøring mot Schwerin → Retgendorf. (80 km/t med campingvogn i Danmark og Tyskland.)
+
+**Campingplass: Naturcamping Retgendorf**
+- Adresse: Seestraße 7A, 19067 Retgendorf, Mecklenburg-Vorpommern, Tyskland
+- Nettside: https://naturcamping-retgendorf.de/
+- Fasiliteter: Familiedrevet naturcamping direkte ved Schweriner See. 7 hektar, 100 plasser, 1 km strandlinje mot innsjøen. Direkte badetilgang, roing, fisking, lekeplass, snackbar og strandbar «Möwe». Turstier i nærområdet. Enkel men sjarmerende plass.
+- Tar imot campingvogn med strømtilkobling
+- Booket: Nei
+- Bookingref: —
+- Innsjekk: 14:00 · Utsjekk: 11:00 (ca. — verifisér ved booking)
+
+**Aktiviteter:**
+
+| Aktivitet | Type | Prioritet | Beskrivelse |
+|-----------|------|-----------|-------------|
+| Kveldsspasertur langs innsjøen | Friluft | Must-do | Campingplassen har 1 km strandlinje direkte mot Schweriner See. Fine turløyper langs vannkanten — perfekt for å strekke bena etter lang dag i bil og ferge. |
+| Bading i Schweriner See | Friluft | Must-do | Direkte badetilgang fra campingplassen. Grunt og rolig ved bryggen — perfekt for William. |
+| Schweriner Schloss (kort utflukt) | Kultur | Nice-to-have | Eventyrlig nygotisk palass fra 1800-tallet på halvøy i Schweriner See, 17 km fra campingplassen. https://www.museum-schwerin.com/ |
+
+**Tips:**
+- Enkel plass uten mange fasiliteter — perfekt for én natt med ro og tur
+- Ankomst på kvelden etter lang dag fra Hirtshals — sjekk inn, spis, gå tur langs sjøen og sov godt
+- Neste morgen: 190 km til Berlin via A24 — lett og ledig kjøredag, ca. 2t 40min
+
+---
+
+### Stopp 2: Berlin, Tyskland (3 netter: 5.–8. juli)
 
 **Campingplass: DCC-Campingplatz Berlin-Gatow**
 - Adresse: Kladower Damm 213–217, 14089 Berlin-Gatow, Tyskland
@@ -143,7 +172,7 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 
 ---
 
-### Stopp 2: Bad Schandau / Bohemian Switzerland (2 netter: 8.–10. juli)
+### Stopp 3: Bad Schandau / Bohemian Switzerland (2 netter: 8.–10. juli)
 
 **Campingplass: Campingplatz Ostrauer Mühle**
 - Adresse: Ostrauer Mühle 15, 01814 Bad Schandau, Tyskland
@@ -172,7 +201,7 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 
 ---
 
-### Stopp 4: Wien, Østerrike (1 natt: 10.–11. juli)
+### Stopp 5: Wien, Østerrike (1 natt: 10.–11. juli)
 
 **Kjøring:** Bad Schandau → Wien, 420 km, 6 t 15 min via E55/D8 sørover → Prague-ring → D1/E65 sørøst → Wien → B14/A1 nordvest til Tulln an der Donau. (80 km/t med campingvogn gjennom Tsjekkia og Østerrike — tidlig start anbefales.)
 
@@ -197,7 +226,7 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 
 ---
 
-### Stopp 5: Plitvice Lakes NP, Kroatia (2 netter: 11.–13. juli)
+### Stopp 6: Plitvice Lakes NP, Kroatia (2 netter: 11.–13. juli)
 
 **Kjøring:** Tulln (Wien-området) → Plitvice Lakes, 420 km, 6 t 15 min via A21/A2 sørøst → Spielfeld/Šentilj grense → A1 Slovenia (Ljubljana) → A1 Kroatia → D429 → D1 inn mot nasjonalparken. Slovenisk vignett brukes her. (80 km/t med campingvogn i alle land på ruten.)
 
@@ -227,7 +256,7 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 
 ---
 
-### Stopp 6: Split, Kroatia (7 netter: 13.–20. juli)
+### Stopp 7: Split, Kroatia (7 netter: 13.–20. juli)
 
 **Kjøring:** Plitvice → Split, 271 km, 4 t via A1 sørover (via D429 til A1) → avkjøring mot Split. (80 km/t med campingvogn på kroatisk motorvei.)
 
@@ -263,7 +292,7 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 
 ---
 
-### Stopp 7: Rovinj, Istria, Kroatia (4 netter: 20.–24. juli)
+### Stopp 8: Rovinj, Istria, Kroatia (4 netter: 20.–24. juli)
 
 **Kjøring:** Split → Rovinj, 310 km, 4 t 30 min via A1 nord → Rijeka → Y-motorvei vest mot Istria. Naturlig siste stopp i Kroatia på hjemveien. (80 km/t med campingvogn på kroatisk motorvei.)
 
@@ -438,6 +467,7 @@ Sortert nord → sør:
 
 | Dato | Endring | Av |
 | --- | --- | --- |
+| 2026-05-16 | Utreisedagen endret: Color Magic Oslo→Kiel erstattet med Color Line SuperSpeed Larvik→Hirtshals (avgang kl. 08:00, ankomst Hirtshals ca. kl. 12:00). Nytt transittstopp 1 natt lagt til: Naturcamping Retgendorf ved Schweriner See (Seestraße 7A, 19067 Retgendorf) — enkel naturcamping direkte på innsjøen med tur- og bademuligheter. Rute dag 1: Kongsberg→Larvik (85 km) + ferge + Hirtshals→Retgendorf (390 km, 5t 20min). Rute dag 2: Retgendorf→Berlin (190 km, 2t 40min). Alle stopp renummerert (+1): Berlin=Stopp 2, Bad Schandau=Stopp 3, Wien=Stopp 5, osv. Fergebudsjett redusert fra 23 000 NOK til 12 000 NOK (sparer ca. 11 000 NOK vs. Color Magic). | Claude |
 | 2026-05-12 | Stopp 7 (Rovinj): Campingplass byttet fra Maistra Camping Veštar til Camping Polari (Polari 1, 52210 Rovinj). Stoppenavn endret til «Rovinj, Istria». Aktivitetsliste revidert: Zlatni Rt naturpark og Dinopark Funtana lagt til som must-do; Brijuni nasjonalpark lagt til som nice-to-have; Poreč-basilika og Kamenjak fjernet. §4b og strandliv-tabell oppdatert med nytt valg. | Claude |
 | 2026-05-09 | Stopp 4 (Wien): Campingplass byttet fra Donaupark Camping Tulln til Camping Wien West (Hüttelbergstraße 80, 1140 Wien). Tiergarten Schønbrunn (verdens eldste dyrehage, grunnlagt 1752) lagt til som must-do-aktivitet. | Claude |
 | 2026-05-08 | Camping Stobreč Split booket (ref. PH27767231 via Phobs, mai 2026). Ny "Bookingstatus"-tabell i Praktisk-fanen som viser status for alle 12 overnattinger (10 camping + 2 ferger) med direkte bookinglenker. Ny "Istria — 10 familievennlige alternativer"-seksjon med detaljerte kort for stopp 7 (alternativer til Maistra Veštar med pris, fasiliteter, severdigheter). Ny §4b lagt til i dokumentet. Innsjekk-/utsjekkstider lagt til på alle stopp (camping og ferge). | Claude + Arne |
