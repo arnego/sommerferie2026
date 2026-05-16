@@ -45,9 +45,9 @@ William er 5 år og er en viktig del av planleggingen:
 |---|------|------|---------|---------|--------|-----|
 | 1 | Larvik → Hirtshals (Color Line ferge) | NO/DK | 4. juli morgen | 4. juli middag | 0 (ferge) | 27 |
 | 2 | Jarplund, Flensburg (Campingplatz Jarplund) | DE | 4. juli kv. | 5. juli | 1 (transit) | 27 |
-| 3 | Berlin | DE | 5. juli | 8. juli | 3 | 27/28 |
-| 4 | Bad Schandau (Bohemian Switzerland) | DE | 8. juli | 10. juli | 2* | 28 |
-| 5 | Wien | AT | 10. juli | 11. juli | 1* | 28 |
+| 3 | Berlin | DE | 5. juli | 7. juli | 2 | 27/28 |
+| 4 | Bad Schandau (Bohemian Switzerland) | DE | 7. juli | 9. juli | 2* | 28 |
+| 5 | Wien | AT | 9. juli | 11. juli | 2* | 28 |
 | 6 | Plitvice Lakes NP | HR | 11. juli | 13. juli | 2 | 28/29 |
 | 7 | Split | HR | 13. juli | 20. juli | 7 | 29/30 |
 | 8 | Rovinj, Istria | HR | 20. juli | 24. juli | 4 | 30 |
@@ -60,7 +60,7 @@ William er 5 år og er en viktig del av planleggingen:
 
 *Kortstopp — unntak fra 3-netter-regelen (transit eller prioritert destinasjon).
 
-**Totalt:** 28 netter borte — 13 i Kroatia, 5 i Berlin/Bad Schandau, 3 netter Zugspitze, 2 netter Bamberg, 3 transittnetter (Jarplund/Flensburg, Wien, Hamburg), 2 i Billund. Hjemme 1. august (innenfor «senest 1. august»-grensen).
+**Totalt:** 28 netter borte — 13 i Kroatia, 4 i Berlin/Bad Schandau, 2 i Wien, 3 netter Zugspitze, 2 netter Bamberg, 2 transittnetter (Jarplund/Flensburg, Hamburg), 2 i Billund. Hjemme 1. august (innenfor «senest 1. august»-grensen).
 
 ---
 
@@ -137,7 +137,7 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 
 ---
 
-### Stopp 2: Berlin, Tyskland (3 netter: 5.–8. juli)
+### Stopp 2: Berlin, Tyskland (2 netter: 5.–7. juli)
 
 **Campingplass: DCC-Campingplatz Berlin-Gatow**
 - Adresse: Kladower Damm 213–217, 14089 Berlin-Gatow, Tyskland
@@ -172,7 +172,7 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 
 ---
 
-### Stopp 3: Bad Schandau / Bohemian Switzerland (2 netter: 8.–10. juli)
+### Stopp 3: Bad Schandau / Bohemian Switzerland (2 netter: 7.–9. juli)
 
 **Campingplass: Campingplatz Ostrauer Mühle**
 - Adresse: Ostrauer Mühle 15, 01814 Bad Schandau, Tyskland
@@ -201,7 +201,7 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 
 ---
 
-### Stopp 5: Wien, Østerrike (1 natt: 10.–11. juli)
+### Stopp 5: Wien, Østerrike (2 netter: 9.–11. juli)
 
 **Kjøring:** Bad Schandau → Wien, 420 km, 5 t 45 min via E55/D8 sørover → Prague-ring → D1/E65 sørøst → Wien → A1 vest mot Camping Wien West (Hüttelbergstraße, 14. bydel). (80 km/t med campingvogn gjennom Tsjekkia og Østerrike — tidlig start anbefales.) (verifisert)
 
@@ -467,6 +467,7 @@ Sortert nord → sør:
 
 | Dato | Endring | Av |
 | --- | --- | --- |
+| 2026-05-17 | Én natt flyttet fra Berlin til Wien: Berlin 3→2 netter (5.–7. juli), Wien 1→2 netter (9.–11. juli). Bad Schandau-datoer justert tilsvarende (7.–9. juli). Plitvice og alle etterfølgende stopp uendret. | Claude |
 | 2026-05-16 | Avstandsverifisering: Alle 14 kjøreetapper verifisert mot eksterne kilder (rome2rio, distance.to, travelmath, trippy, wanderlog). Kritisk feil oppdaget: transittstopp «Stover Strand» lå 530 km fra Hirtshals (ikke 315 km) — erstattet med **Campingplatz Jarplund** (2 km sør for Flensburg), som gir 362 km dag 1 og 434 km dag 2 (verifisert). Øvrige korreksjoner: Split→Rovinj 310→433 km; Bamberg→Hamburg 475→551 km (⚠️ 7t33min); Zugspitze→Bamberg 315→323 km; Hamburg→Billund 250→280 km; Kongsberg↔Larvik 85→91 km; Wien→Plitvice 420→472 km. Regel for avstandsverifisering lagt til i CLAUDE.md. | Claude |
 | 2026-05-16 | Transittstopp justert: Naturcamping Retgendorf (Schwerin, 390 km dag 1 / 190 km dag 2) erstattet med Camping Land an der Elbe, Stover Strand 7, 21423 Drage. | Claude |
 | 2026-05-16 | Utreisedagen endret: Color Magic Oslo→Kiel erstattet med Color Line SuperSpeed Larvik→Hirtshals (avgang kl. 08:00, ankomst Hirtshals ca. kl. 12:00). Fergebudsjett redusert fra 23 000 NOK til 12 000 NOK (sparer ca. 11 000 NOK vs. Color Magic). | Claude |
