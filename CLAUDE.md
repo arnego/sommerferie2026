@@ -54,6 +54,32 @@ Bruk verktøyene i denne rekkefølgen:
 
 Legg inn URL-en med en kommentar `// TODO: verifiser URL` og oppgi at URL-en er uverifisert i svar til bruker.
 
+## Avstandsberegning mellom stopp
+
+**Regel: Alle kjøreavstander skal verifiseres mot eksterne kilder før de legges inn i kode eller dokumenter. Bruk aldri treningsdataavstander alene.**
+
+Dette gjelder alle kjøreetapper i reiseplanen — mellom campingplasser, ferger og alle andre stopp.
+
+### Verktøyprioritet
+
+Bruk verktøyene i denne rekkefølgen:
+
+1. **Tavily** (foretrekkes) — søk med `tavily-search` etter avstand mellom konkrete adresser/steder, og bruk `tavily-extract` på Viamichelin, distance.to eller tilsvarende kartside for å hente verifisert avstand.
+2. **WebFetch** (fallback) — hent avstandsside direkte (f.eks. `https://www.viamichelin.com/`) og les av distansen.
+3. **WebSearch** (siste utvei) — bruk dersom Tavily og WebFetch ikke gir presise resultater.
+
+### Fremgangsmåte
+
+1. **Søk etter avstand** med Tavily eller WebSearch — bruk campingplassens adresse (ikke bare bynavn), motorveibetegnelse og «km» i søket.
+2. **Krysssjekk** mot minst én kilde (Viamichelin, ADAC, distance.to, ViaMichelin caravan-rute eller tilsvarende).
+3. **Toleranse**: Avvik på ≤ 10 km mellom kilder er akseptabelt — bruk da gjennomsnittet. Avvik > 10 km krever undersøkelse av rutealternativer.
+4. **Merk verifiserte etapper** med `(verifisert)` i kjøreetapper-tabellen i `Ferieplanen-2026.md`.
+5. **Tidsberegning**: Bruk alltid `avstand ÷ 73 km/t` (80 km/t maks med campingvogn, ~91 % gjennomsnittsfart inkl. tettsteder, kryss og pauser).
+
+### Hvis verifisering ikke er mulig
+
+Merk distansen med `// TODO: verifiser avstand` i koden og oppgi at avstanden er uverifisert i svar til bruker.
+
 ## GitHub Automation
 
 Two GitHub Actions workflows are configured:

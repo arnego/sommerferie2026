@@ -44,7 +44,7 @@ William er 5 år og er en viktig del av planleggingen:
 | # | Sted | Land | Ankomst | Avreise | Netter | Uke |
 |---|------|------|---------|---------|--------|-----|
 | 1 | Larvik → Hirtshals (Color Line ferge) | NO/DK | 4. juli morgen | 4. juli middag | 0 (ferge) | 27 |
-| 2 | Stover Strand, Elbe (Camping Land an der Elbe) | DE | 4. juli kv. | 5. juli | 1 (transit) | 27 |
+| 2 | Jarplund, Flensburg (Campingplatz Jarplund) | DE | 4. juli kv. | 5. juli | 1 (transit) | 27 |
 | 3 | Berlin | DE | 5. juli | 8. juli | 3 | 27/28 |
 | 4 | Bad Schandau (Bohemian Switzerland) | DE | 8. juli | 10. juli | 2* | 28 |
 | 5 | Wien | AT | 10. juli | 11. juli | 1* | 28 |
@@ -60,7 +60,7 @@ William er 5 år og er en viktig del av planleggingen:
 
 *Kortstopp — unntak fra 3-netter-regelen (transit eller prioritert destinasjon).
 
-**Totalt:** 28 netter borte — 13 i Kroatia, 5 i Berlin/Bad Schandau, 3 netter Zugspitze, 2 netter Bamberg, 3 transittnetter (Retgendorf/Schweriner See, Wien, Hamburg), 2 i Billund. Hjemme 1. august (innenfor «senest 1. august»-grensen).
+**Totalt:** 28 netter borte — 13 i Kroatia, 5 i Berlin/Bad Schandau, 3 netter Zugspitze, 2 netter Bamberg, 3 transittnetter (Jarplund/Flensburg, Wien, Hamburg), 2 i Billund. Hjemme 1. august (innenfor «senest 1. august»-grensen).
 
 ---
 
@@ -68,23 +68,23 @@ William er 5 år og er en viktig del av planleggingen:
 
 | Fra | Til | Avstand | Kjøretid | Rute |
 |-----|-----|---------|----------|------|
-| Kongsberg | Larvik | 85 km | 1 t 15 min | E18 sørøst |
-| Hirtshals | Stover Strand (Drage) | 315 km | 4 t 20 min | E45 sør gjennom Jylland → Padborg-grense → A7 Hamburg → A25 sørøst mot Geesthacht → Stover Strand, Drage |
-| Stover Strand | Berlin | 320 km | 4 t 20 min | A25 nord → Hamburg → A24 øst mot Berlin |
-| Berlin | Bad Schandau | 224 km | 3 t 15 min | A13/A17 sørøst |
-| Bad Schandau | Wien-området (Tulln) | 420 km | 6 t 15 min | E55/D8 sørover → Prague-ring → D1/E65 sørøst → Wien → B14/A1 nordvest til Tulln an der Donau |
-| Wien | Plitvice Lakes | 420 km | 6 t 15 min | A21/A2 sørøst → Spielfeld/Šentilj grense → A1 Slovenia (Ljubljana) → A1 Kroatia → D429 → D1 inn mot nasjonalparken |
-| Plitvice | Split | 271 km | 4 t | D1/D33 sørover mot kysten → D8 Jadranska magistrala sør |
-| Split | Rovinj (via Rijeka) | 310 km | 4 t 30 min | A1 nord → Rijeka → Y-motorvei vest mot Istria |
-| Rovinj | Zugspitze/Garmisch | 570 km | 8 t (inkl. Liechtensteinklamm 1,5 t) | A9/E751 nord → Ljubljana → Karawanken → A10 Tauern → **stopp Liechtensteinklamm** (Werfen/St. Johann im Pongau) → Salzburg → A8 øst → A95 sør. Svært lang dag — start senest kl. 07:30. |
-| Zugspitze/Garmisch | Bamberg | 315 km | 4 t 45 min | A95/A8 nord → München → A9 nord → A73 mot Bamberg |
-| Bamberg | Hamburg | 475 km | **6 t 30 min ⚠️** | A73 nord → A9 → A14 → Hamburg. Svakt over 6t-grensen — start senest kl. 07:00. |
-| Hamburg | Billund | 250 km | 3 t 30 min | A7 nord → Flensburg-grensa → E45 nord inn i Danmark → Billund |
-| Billund | Hirtshals | 250 km | 3 t 30 min | E45 nord gjennom Jutland til Hirtshals |
+| Kongsberg | Larvik | 91 km (verifisert) | 1 t 15 min | E18 sørøst |
+| Hirtshals | Jarplund (Flensburg) | 362 km (verifisert) | 4 t 57 min | E45 sør gjennom Jylland → Padborg-grense → A7 sørover → Flensburg → Jarplund |
+| Jarplund | Berlin | 434 km (verifisert) | 5 t 57 min | A7 sørover → Hamburg → A24 øst mot Berlin |
+| Berlin | Bad Schandau | 222 km (verifisert) | 3 t 2 min | A13/A17 sørøst |
+| Bad Schandau | Wien (Camping Wien West) | 420 km (verifisert) | 5 t 45 min | E55/D8 sørover → Prague-ring → D1/E65 sørøst → Wien → A1 vest mot Hüttelbergstraße |
+| Wien | Plitvice Lakes | 472 km (verifisert) | **6 t 28 min ⚠️** | S1/A2 sørøst → Spielfeld/Šentilj grense → A1 Slovenia (Ljubljana) → A1 Kroatia → D429 → D1 inn mot nasjonalparken |
+| Plitvice | Split | 253 km (verifisert) | 3 t 28 min | D1/D33 sørover mot kysten → D8 Jadranska magistrala sør |
+| Split | Rovinj (via Zagreb/Rijeka) | 433 km (verifisert) | 5 t 56 min | A1 nord → Zagreb → A6 vest → Rijeka → Y-motorvei vest mot Istria |
+| Rovinj | Zugspitze/Garmisch | 493 km (verifisert) | **8 t 15 min ⚠️** (inkl. Liechtensteinklamm 1,5 t) | A9/E751 nord → Ljubljana → Karawanken → A10 Tauern → **stopp Liechtensteinklamm** (Werfen/St. Johann im Pongau) → Salzburg → A8 øst → A95 sør. Svært lang dag — start senest kl. 07:30. |
+| Zugspitze/Garmisch | Bamberg | 323 km (verifisert) | 4 t 25 min | A95/A8 nord → München → A9 nord → A73 mot Bamberg |
+| Bamberg | Hamburg | 551 km (verifisert) | **7 t 33 min ⚠️** | A73 nord → A9 → A14 → Hamburg. Klart over 6t-grensen — start senest kl. 07:00. |
+| Hamburg | Billund | 280 km (verifisert) | 3 t 50 min | A7 nord → Flensburg-grensa → E45 nord inn i Danmark → Billund |
+| Billund | Hirtshals | 250 km (verifisert) | 3 t 26 min | E45 nord gjennom Jutland til Hirtshals |
 | Hirtshals | Larvik (ferge) | — | 3 t 45 min | Color Line SuperSpeed |
-| Larvik | Kongsberg | 85 km | 1 t 15 min | E18/E134 |
+| Larvik | Kongsberg | 91 km (verifisert) | 1 t 15 min | E18/E134 |
 
-Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorvei (gjennomsnittsfart ca. 73 km/t inkl. reduksjon for byggesoner, kryss og hvilepauser). **⚠️ Bamberg → Hamburg (475 km, ~6t 30min) overskrider det planlagte maksimum på 6 timer marginalt — start senest kl. 07:00.**
+Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorvei (gjennomsnittsfart ca. 73 km/t inkl. reduksjon for byggesoner, kryss og hvilepauser). ⚠️ **Tre etapper overskrider 6t-grensen:** Wien → Plitvice (472 km, ~6t 28min), Rovinj → Zugspitze (493 km, ~6t 45min nettokjøring), Bamberg → Hamburg (551 km, ~7t 33min) — start tidlig på disse dagene.
 
 ---
 
@@ -109,14 +109,15 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 
 ---
 
-### Stopp 1: Stover Strand, Elbe (1 natt: 4.–5. juli)
+### Stopp 1: Jarplund, Flensburg (1 natt: 4.–5. juli)
 
-**Kjøring:** Hirtshals → Stover Strand (Drage), 315 km, 4 t 20 min via E45 sør gjennom Jylland → Padborg-grense → A7 Hamburg → A25 sørøst mot Geesthacht → Stover Strand, Drage. (80 km/t med campingvogn i Danmark og Tyskland.)
+**Kjøring:** Hirtshals → Jarplund (Flensburg), 362 km, 4 t 57 min via E45 sør gjennom Jylland → Padborg-grense → A7 sørover → Flensburg → Jarplund. (80 km/t med campingvogn i Danmark og Tyskland.)
 
-**Campingplass: Camping Land an der Elbe**
-- Adresse: Stover Strand 7, 21423 Drage (sør for Hamburg), Tyskland
-- Nettside: https://www.camping-land-online.de/
-- Fasiliteter: Familiedrevet naturcamping direkte på Elbe-bredden. Drevet av samme familie siden 1960 — naturbelastet og uendret. To parkaktige, naturlige plassområder. Utsikt over elven og passerende skip. Kiosk. Enkel men sjarmerende — kåret til ett av 80 beste campingplasser i Tyskland (BeyondCamping).
+**Campingplass: Campingplatz Jarplund**
+- Adresse: Jarplund, 24963 Tarp (2 km sør for Flensburg), Tyskland
+- Nettside: http://www.campingplatz-jarplund.de/
+- Fasiliteter: Rolig familiecamping i det grønne, 2 km sør for Flensburg. Familiedrevet (Familie Johannsen). Stellplasser for campingvogn. Nær Flensburg Fjord og Østersjøen.
+- Sesong 2026: åpen 27.03.–17.10.2026
 - Tar imot campingvogn med strømtilkobling
 - Booket: Nei
 - Bookingref: —
@@ -126,14 +127,13 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 
 | Aktivitet | Type | Prioritet | Beskrivelse |
 |-----------|------|-----------|-------------|
-| Kveldsspasertur langs Elbe | Friluft | Must-do | Campingplassen har direkte tilgang til Elbe-bredden. Rolige turveier langs elven — perfekt for å strekke bena etter lang dag i bil og ferge. Se på de store skipene som seiler forbi. |
-| Lek og bading ved elven | Friluft | Must-do | Naturlig Elbe-strand ved campingplassen. William kan leke i sanden og se på skipene. |
-| Lüneburger Heide (nærhet) | Friluft | Nice-to-have | Store heideområder med skog og gressletter starter 15–20 km sør for campingplassen — fin utflukt om det er tid. |
+| Kveldsspasertur i naturen | Friluft | Must-do | Campingplassen ligger rolig og idyllisk i det grønne — perfekt for å strekke bena etter lang dag i bil og på ferge. |
+| Flensburg gamlebyen og havn | Sightseeing | Nice-to-have | Flensburg er kun 2 km unna — vakker gamlebyen med sjarmerende havn ved Flensburg Fjord. |
 
 **Tips:**
-- Enkel, naturlig plass uten mange fasiliteter — familiedrevet siden 1960
-- Ankomst ca. 16:30–17:00 etter 4 t 20 min fra Hirtshals — rolig ankomst med god tid til tur
-- Neste dag: 320 km til Berlin via A25 nord → Hamburg → A24 øst (4 t 20 min) — godt balansert
+- Campingplassen er åpen fra 27.03.2026 — godt innenfor reisedatoene
+- Ankomst ca. 17:00–17:30 etter ca. 5 t kjøring fra Hirtshals (inkl. pauser) — rolig ankomst
+- Neste dag: 434 km til Berlin via A7 sør → Hamburg → A24 øst (5 t 57 min) — tidlig avreise anbefales
 
 ---
 
@@ -203,7 +203,7 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 
 ### Stopp 5: Wien, Østerrike (1 natt: 10.–11. juli)
 
-**Kjøring:** Bad Schandau → Wien, 420 km, 6 t 15 min via E55/D8 sørover → Prague-ring → D1/E65 sørøst → Wien → B14/A1 nordvest til Tulln an der Donau. (80 km/t med campingvogn gjennom Tsjekkia og Østerrike — tidlig start anbefales.)
+**Kjøring:** Bad Schandau → Wien, 420 km, 5 t 45 min via E55/D8 sørover → Prague-ring → D1/E65 sørøst → Wien → A1 vest mot Camping Wien West (Hüttelbergstraße, 14. bydel). (80 km/t med campingvogn gjennom Tsjekkia og Østerrike — tidlig start anbefales.) (verifisert)
 
 **Campingplass: Camping Wien West**
 - Adresse: Hüttelbergstraße 80, 1140 Wien, Østerrike
@@ -222,13 +222,13 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 **Tips:**
 - **Kjøp østerriksk motorvei-vignett** ved grenseovergangen (10-dagersvignett ~9,90 EUR per kjøretøy — bil og campingvogn regnes separat)
 - **Slovenisk vignett** (7 dager ~15 EUR) kjøpes online eller ved grensen neste dag
-- Tidlig avreise anbefales — ~420 km til Plitvice neste dag
+- Tidlig avreise anbefales — ~472 km til Plitvice neste dag (6t 28min ⚠️)
 
 ---
 
 ### Stopp 6: Plitvice Lakes NP, Kroatia (2 netter: 11.–13. juli)
 
-**Kjøring:** Tulln (Wien-området) → Plitvice Lakes, 420 km, 6 t 15 min via A21/A2 sørøst → Spielfeld/Šentilj grense → A1 Slovenia (Ljubljana) → A1 Kroatia → D429 → D1 inn mot nasjonalparken. Slovenisk vignett brukes her. (80 km/t med campingvogn i alle land på ruten.)
+**Kjøring:** Wien (Camping Wien West) → Plitvice Lakes, 472 km, **6 t 28 min ⚠️** via S1/A2 sørøst → Spielfeld/Šentilj grense → A1 Slovenia (Ljubljana) → A1 Kroatia → D429 → D1 inn mot nasjonalparken. Slovenisk vignett brukes her. (80 km/t med campingvogn i alle land på ruten.) (verifisert)
 
 **Campingplass: Camping Plitvice**
 - Adresse: Mukinje, 53231 Plitvička Jezera, Kroatia — 3 km fra Plitvice inngang
@@ -258,7 +258,7 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 
 ### Stopp 7: Split, Kroatia (7 netter: 13.–20. juli)
 
-**Kjøring:** Plitvice → Split, 271 km, 4 t via A1 sørover (via D429 til A1) → avkjøring mot Split. (80 km/t med campingvogn på kroatisk motorvei.)
+**Kjøring:** Plitvice → Split, 253 km, 3 t 28 min via A1 sørover (via D429 til A1) → avkjøring mot Split. (80 km/t med campingvogn på kroatisk motorvei.) (verifisert)
 
 **Campingplass: Camping Stobreč Split** ✅
 - Adresse: Stobreč bb, 21311 Stobreč, Kroatia — 6 km fra Diokletians palass, rett ved sandstrand
@@ -294,7 +294,7 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 
 ### Stopp 8: Rovinj, Istria, Kroatia (4 netter: 20.–24. juli)
 
-**Kjøring:** Split → Rovinj, 310 km, 4 t 30 min via A1 nord → Rijeka → Y-motorvei vest mot Istria. Naturlig siste stopp i Kroatia på hjemveien. (80 km/t med campingvogn på kroatisk motorvei.)
+**Kjøring:** Split → Rovinj, 433 km, 5 t 56 min via A1 nord → Zagreb → A6 vest → Rijeka → Y-motorvei vest mot Istria. Naturlig siste stopp i Kroatia på hjemveien. (80 km/t med campingvogn på kroatisk motorvei.) (verifisert)
 
 **Campingplass: Camping Polari**
 - Adresse: Polari 1, 52210 Rovinj, Kroatia
@@ -328,7 +328,7 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 Hjemreisen inkluderer tre opplevelsesstopp — Zugspitze, Hamburg og Billund (Legoland) — i tillegg til to kulturnetter i Bamberg.
 
 **Zugspitze, Bayern (3 netter: 24.–27. juli)**
-- Kjøring: Poreč/Rovinj → Zugspitze/Grainau, 570 km, **8 t (inkl. Liechtensteinklamm 1,5 t)** via A9/E751 → Ljubljana → Karawanken → A10 Tauern → **Liechtensteinklamm-stopp** → Salzburg → A8 øst → A95 sør. **Svært lang dag — start senest kl. 07:30.** (80 km/t med campingvogn i alle land, inkl. 130 km i Tyskland på A8/A95.)
+- Kjøring: Poreč/Rovinj → Zugspitze/Grainau, 493 km, **8 t 15 min ⚠️ (inkl. Liechtensteinklamm 1,5 t)** via A9/E751 → Ljubljana → Karawanken → A10 Tauern → **Liechtensteinklamm-stopp** → Salzburg → A8 øst → A95 sør. **Svært lang dag — start senest kl. 07:30.** (80 km/t med campingvogn i alle land.) (verifisert)
 - **Liechtensteinklamm (stoppested underveis):** Spektakulær 270 m dyp juv nær Werfen/St. Johann im Pongau i Salzburg-regionen, rett ved A10. Trebroer over fossende elv, dramatisk berglandskap. 1–2 t. William vil elske det. https://www.josalzburg.com/de/aktivitaeten/liechtensteinklamm.html
 - Campingplass: Camping Resort Zugspitze, Griesener Str. 9, 82491 Grainau
 - Nettside: https://www.camping-resort-zugspitze.de/
@@ -339,7 +339,7 @@ Hjemreisen inkluderer tre opplevelsesstopp — Zugspitze, Hamburg og Billund (Le
 - Tips: Østerriksk vignett fra utreisen dekker eventuell tollstrekning. Ingen Umweltzone i Grainau/Garmisch.
 
 **Bamberg (2 netter: 27.–29. juli)**
-- Kjøring: Zugspitze/Grainau → Bamberg, 315 km, 4 t 45 min via A95/A8 nord → München → A9 nord → A73. (80 km/t med campingvogn, gjennomsnitt ~73 km/t.)
+- Kjøring: Zugspitze/Grainau → Bamberg, 323 km, 4 t 25 min via A95/A8 nord → München → A9 nord → A73. (80 km/t med campingvogn, gjennomsnitt ~73 km/t.) (verifisert)
 - Campingplass: Camping Island Bamberg, Campinginsel, 96052 Bamberg
 - Nettside: http://www.campinginsel.de/
 - Innsjekk: 13:00 · Utsjekk: 12:00 (ca. — verifisér ved booking)
@@ -347,15 +347,15 @@ Hjemreisen inkluderer tre opplevelsesstopp — Zugspitze, Hamburg og Billund (Le
 - Tips: Ingen Umweltzone. Kompakt gamlebyen — parkér ved campingplassen og gå inn.
 
 **Hamburg (1 natt: 29.–30. juli)**
-- Kjøring: Bamberg → Hamburg, 475 km, **6 t 30 min ⚠️** via A73 nord → A9 → A14 → Hamburg. Svakt over 6t-grensen — start senest kl. 07:00. Direkte på ruten mot Billund, ingen omvei.
+- Kjøring: Bamberg → Hamburg, 551 km, **7 t 33 min ⚠️** via A73 nord → A9 → A14 → Hamburg. Klart over 6t-grensen — start senest kl. 07:00. Direkte på ruten mot Billund, ingen omvei. (verifisert)
 - Campingplass: KNAUS Campingpark Hamburg, Wunderbrunnen 2, 22457 Hamburg
 - Nettside: https://www.knauscamp.de/hamburg/
 - Innsjekk: 14:00 · Utsjekk: 12:00 (ca. — verifisér ved booking)
 - Aktiviteter: **Miniatur Wunderland** (verdens største modelljernbane, perfekt for William — book billett online!), Speicherstadt (UNESCO-kanalkvarter), Hamburger Hafen
-- Tips: Book Miniatur Wunderland online på forhånd — veldig populær i juli. Neste dag: Hamburg → Billund via A7 nord → Flensburg → E45, ca. 250 km, 3 t 30 min (80 km/t med campingvogn i Danmark).
+- Tips: Book Miniatur Wunderland online på forhånd — veldig populær i juli. Neste dag: Hamburg → Billund via A7 nord → Flensburg → E45, ca. 280 km, 3 t 50 min (80 km/t med campingvogn i Danmark).
 
 **Billund, Danmark (2 netter: 30. juli–1. august)**
-- Kjøring: Hamburg → Billund, 250 km, 3 t 30 min via A7 nord → Flensburg-grensa → E45 nord inn i Danmark → Billund
+- Kjøring: Hamburg → Billund, 280 km, 3 t 50 min via A7 nord → Flensburg-grensa → E45 nord inn i Danmark → Billund (verifisert)
 - Campingplass: Legoland® Campingarea, Ellehammervej 2, 7190 Billund
 - Nettside: https://www.legoland.dk/overnatning/legoland-holiday-village/
 - Innsjekk: 14:00 · Utsjekk: 11:00 (ca. — verifisér ved booking)
@@ -364,9 +364,9 @@ Hjemreisen inkluderer tre opplevelsesstopp — Zugspitze, Hamburg og Billund (Le
 - Tips: Bestill Legoland-billett online — spar tid og penger. Legoland® Campingarea er veldig populær i juli — bestill senest i mai. Start hjemreise mot Hirtshals senest kl. 11:00.
 
 **1. august: Billund → Hirtshals → Larvik → Kongsberg**
-- Billund → Hirtshals: 250 km, 3 t 30 min via E45 nord gjennom Jutland (80 km/t med campingvogn i Danmark)
+- Billund → Hirtshals: 250 km, 3 t 26 min via E45 nord gjennom Jutland (80 km/t med campingvogn i Danmark)
 - Color Line SuperSpeed: anbefalt avgang kl. 14:30 fra Hirtshals, ankommer Larvik ~18:15
-- Larvik → Kongsberg: 85 km, 1 t 15 min via E18/E134
+- Larvik → Kongsberg: 91 km, 1 t 15 min via E18/E134 (verifisert)
 - **HJEMME 1. august!** ✓
 
 ---
@@ -467,8 +467,9 @@ Sortert nord → sør:
 
 | Dato | Endring | Av |
 | --- | --- | --- |
-| 2026-05-16 | Transittstopp justert: Naturcamping Retgendorf (Schwerin, 390 km dag 1 / 190 km dag 2) erstattet med Camping Land an der Elbe, Stover Strand 7, 21423 Drage — direkte på Elbe-bredden sør for Hamburg. Bedre etappebalanse: dag 1 = 315 km (4t 20min), dag 2 = 320 km (4t 20min). Familiedrevet plass siden 1960, 4,8/5-vurdert. | Claude |
-| 2026-05-16 | Utreisedagen endret: Color Magic Oslo→Kiel erstattet med Color Line SuperSpeed Larvik→Hirtshals (avgang kl. 08:00, ankomst Hirtshals ca. kl. 12:00). Nytt transittstopp 1 natt lagt til: Camping Land an der Elbe ved Stover Strand, Drage — enkel naturcamping direkte på Elbe-bredden med tur- og bademuligheter. Rute dag 1: Kongsberg→Larvik (85 km) + ferge + Hirtshals→Stover Strand (315 km, 4t 20min). Rute dag 2: Stover Strand→Berlin (320 km, 4t 20min). Alle stopp renummerert (+1): Berlin=Stopp 2, Bad Schandau=Stopp 3, Wien=Stopp 5, osv. Fergebudsjett redusert fra 23 000 NOK til 12 000 NOK (sparer ca. 11 000 NOK vs. Color Magic). | Claude |
+| 2026-05-16 | Avstandsverifisering: Alle 14 kjøreetapper verifisert mot eksterne kilder (rome2rio, distance.to, travelmath, trippy, wanderlog). Kritisk feil oppdaget: transittstopp «Stover Strand» lå 530 km fra Hirtshals (ikke 315 km) — erstattet med **Campingplatz Jarplund** (2 km sør for Flensburg), som gir 362 km dag 1 og 434 km dag 2 (verifisert). Øvrige korreksjoner: Split→Rovinj 310→433 km; Bamberg→Hamburg 475→551 km (⚠️ 7t33min); Zugspitze→Bamberg 315→323 km; Hamburg→Billund 250→280 km; Kongsberg↔Larvik 85→91 km; Wien→Plitvice 420→472 km. Regel for avstandsverifisering lagt til i CLAUDE.md. | Claude |
+| 2026-05-16 | Transittstopp justert: Naturcamping Retgendorf (Schwerin, 390 km dag 1 / 190 km dag 2) erstattet med Camping Land an der Elbe, Stover Strand 7, 21423 Drage. | Claude |
+| 2026-05-16 | Utreisedagen endret: Color Magic Oslo→Kiel erstattet med Color Line SuperSpeed Larvik→Hirtshals (avgang kl. 08:00, ankomst Hirtshals ca. kl. 12:00). Fergebudsjett redusert fra 23 000 NOK til 12 000 NOK (sparer ca. 11 000 NOK vs. Color Magic). | Claude |
 | 2026-05-12 | Stopp 7 (Rovinj): Campingplass byttet fra Maistra Camping Veštar til Camping Polari (Polari 1, 52210 Rovinj). Stoppenavn endret til «Rovinj, Istria». Aktivitetsliste revidert: Zlatni Rt naturpark og Dinopark Funtana lagt til som must-do; Brijuni nasjonalpark lagt til som nice-to-have; Poreč-basilika og Kamenjak fjernet. §4b og strandliv-tabell oppdatert med nytt valg. | Claude |
 | 2026-05-09 | Stopp 4 (Wien): Campingplass byttet fra Donaupark Camping Tulln til Camping Wien West (Hüttelbergstraße 80, 1140 Wien). Tiergarten Schønbrunn (verdens eldste dyrehage, grunnlagt 1752) lagt til som must-do-aktivitet. | Claude |
 | 2026-05-08 | Camping Stobreč Split booket (ref. PH27767231 via Phobs, mai 2026). Ny "Bookingstatus"-tabell i Praktisk-fanen som viser status for alle 12 overnattinger (10 camping + 2 ferger) med direkte bookinglenker. Ny "Istria — 10 familievennlige alternativer"-seksjon med detaljerte kort for stopp 7 (alternativer til Maistra Veštar med pris, fasiliteter, severdigheter). Ny §4b lagt til i dokumentet. Innsjekk-/utsjekkstider lagt til på alle stopp (camping og ferge). | Claude + Arne |
