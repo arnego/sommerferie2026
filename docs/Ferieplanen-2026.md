@@ -44,7 +44,7 @@ William er 5 år og er en viktig del av planleggingen:
 | # | Sted | Land | Ankomst | Avreise | Netter | Uke |
 |---|------|------|---------|---------|--------|-----|
 | 1 | Larvik → Hirtshals (Color Line ferge) | NO/DK | 4. juli morgen | 4. juli middag | 0 (ferge) | 27 |
-| 2 | Schweriner See (Naturcamping Retgendorf) | DE | 4. juli kv. | 5. juli | 1 (transit) | 27 |
+| 2 | Stover Strand, Elbe (Camping Land an der Elbe) | DE | 4. juli kv. | 5. juli | 1 (transit) | 27 |
 | 3 | Berlin | DE | 5. juli | 8. juli | 3 | 27/28 |
 | 4 | Bad Schandau (Bohemian Switzerland) | DE | 8. juli | 10. juli | 2* | 28 |
 | 5 | Wien | AT | 10. juli | 11. juli | 1* | 28 |
@@ -69,8 +69,8 @@ William er 5 år og er en viktig del av planleggingen:
 | Fra | Til | Avstand | Kjøretid | Rute |
 |-----|-----|---------|----------|------|
 | Kongsberg | Larvik | 85 km | 1 t 15 min | E18 sørøst |
-| Hirtshals | Naturcamping Retgendorf | 390 km | 5 t 20 min | E45 sør gjennom Jylland → Padborg-grense → A7 Hamburg → A24 øst → avkjøring Schwerin → Retgendorf |
-| Retgendorf | Berlin | 190 km | 2 t 40 min | A24 øst mot Berlin |
+| Hirtshals | Stover Strand (Drage) | 315 km | 4 t 20 min | E45 sør gjennom Jylland → Padborg-grense → A7 Hamburg → A25 sørøst mot Geesthacht → Stover Strand, Drage |
+| Stover Strand | Berlin | 320 km | 4 t 20 min | A25 nord → Hamburg → A24 øst mot Berlin |
 | Berlin | Bad Schandau | 224 km | 3 t 15 min | A13/A17 sørøst |
 | Bad Schandau | Wien-området (Tulln) | 420 km | 6 t 15 min | E55/D8 sørover → Prague-ring → D1/E65 sørøst → Wien → B14/A1 nordvest til Tulln an der Donau |
 | Wien | Plitvice Lakes | 420 km | 6 t 15 min | A21/A2 sørøst → Spielfeld/Šentilj grense → A1 Slovenia (Ljubljana) → A1 Kroatia → D429 → D1 inn mot nasjonalparken |
@@ -109,31 +109,31 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 
 ---
 
-### Stopp 1: Schweriner See, Naturcamping Retgendorf (1 natt: 4.–5. juli)
+### Stopp 1: Stover Strand, Elbe (1 natt: 4.–5. juli)
 
-**Kjøring:** Hirtshals → Naturcamping Retgendorf, 390 km, 5 t 20 min via E45 sør gjennom Jylland → Padborg-grense → A7 Hamburg → A24 øst, avkjøring mot Schwerin → Retgendorf. (80 km/t med campingvogn i Danmark og Tyskland.)
+**Kjøring:** Hirtshals → Stover Strand (Drage), 315 km, 4 t 20 min via E45 sør gjennom Jylland → Padborg-grense → A7 Hamburg → A25 sørøst mot Geesthacht → Stover Strand, Drage. (80 km/t med campingvogn i Danmark og Tyskland.)
 
-**Campingplass: Naturcamping Retgendorf**
-- Adresse: Seestraße 7A, 19067 Retgendorf, Mecklenburg-Vorpommern, Tyskland
-- Nettside: https://naturcamping-retgendorf.de/
-- Fasiliteter: Familiedrevet naturcamping direkte ved Schweriner See. 7 hektar, 100 plasser, 1 km strandlinje mot innsjøen. Direkte badetilgang, roing, fisking, lekeplass, snackbar og strandbar «Möwe». Turstier i nærområdet. Enkel men sjarmerende plass.
+**Campingplass: Camping Land an der Elbe**
+- Adresse: Stover Strand 7, 21423 Drage (sør for Hamburg), Tyskland
+- Nettside: https://www.camping-land-online.de/
+- Fasiliteter: Familiedrevet naturcamping direkte på Elbe-bredden. Drevet av samme familie siden 1960 — naturbelastet og uendret. To parkaktige, naturlige plassområder. Utsikt over elven og passerende skip. Kiosk. Enkel men sjarmerende — kåret til ett av 80 beste campingplasser i Tyskland (BeyondCamping).
 - Tar imot campingvogn med strømtilkobling
 - Booket: Nei
 - Bookingref: —
-- Innsjekk: 14:00 · Utsjekk: 11:00 (ca. — verifisér ved booking)
+- Innsjekk: 15:00 · Utsjekk: 12:00 (ca. — verifisér ved booking)
 
 **Aktiviteter:**
 
 | Aktivitet | Type | Prioritet | Beskrivelse |
 |-----------|------|-----------|-------------|
-| Kveldsspasertur langs innsjøen | Friluft | Must-do | Campingplassen har 1 km strandlinje direkte mot Schweriner See. Fine turløyper langs vannkanten — perfekt for å strekke bena etter lang dag i bil og ferge. |
-| Bading i Schweriner See | Friluft | Must-do | Direkte badetilgang fra campingplassen. Grunt og rolig ved bryggen — perfekt for William. |
-| Schweriner Schloss (kort utflukt) | Kultur | Nice-to-have | Eventyrlig nygotisk palass fra 1800-tallet på halvøy i Schweriner See, 17 km fra campingplassen. https://www.museum-schwerin.com/ |
+| Kveldsspasertur langs Elbe | Friluft | Must-do | Campingplassen har direkte tilgang til Elbe-bredden. Rolige turveier langs elven — perfekt for å strekke bena etter lang dag i bil og ferge. Se på de store skipene som seiler forbi. |
+| Lek og bading ved elven | Friluft | Must-do | Naturlig Elbe-strand ved campingplassen. William kan leke i sanden og se på skipene. |
+| Lüneburger Heide (nærhet) | Friluft | Nice-to-have | Store heideområder med skog og gressletter starter 15–20 km sør for campingplassen — fin utflukt om det er tid. |
 
 **Tips:**
-- Enkel plass uten mange fasiliteter — perfekt for én natt med ro og tur
-- Ankomst på kvelden etter lang dag fra Hirtshals — sjekk inn, spis, gå tur langs sjøen og sov godt
-- Neste morgen: 190 km til Berlin via A24 — lett og ledig kjøredag, ca. 2t 40min
+- Enkel, naturlig plass uten mange fasiliteter — familiedrevet siden 1960
+- Ankomst ca. 16:30–17:00 etter 4 t 20 min fra Hirtshals — rolig ankomst med god tid til tur
+- Neste dag: 320 km til Berlin via A25 nord → Hamburg → A24 øst (4 t 20 min) — godt balansert
 
 ---
 
@@ -467,7 +467,8 @@ Sortert nord → sør:
 
 | Dato | Endring | Av |
 | --- | --- | --- |
-| 2026-05-16 | Utreisedagen endret: Color Magic Oslo→Kiel erstattet med Color Line SuperSpeed Larvik→Hirtshals (avgang kl. 08:00, ankomst Hirtshals ca. kl. 12:00). Nytt transittstopp 1 natt lagt til: Naturcamping Retgendorf ved Schweriner See (Seestraße 7A, 19067 Retgendorf) — enkel naturcamping direkte på innsjøen med tur- og bademuligheter. Rute dag 1: Kongsberg→Larvik (85 km) + ferge + Hirtshals→Retgendorf (390 km, 5t 20min). Rute dag 2: Retgendorf→Berlin (190 km, 2t 40min). Alle stopp renummerert (+1): Berlin=Stopp 2, Bad Schandau=Stopp 3, Wien=Stopp 5, osv. Fergebudsjett redusert fra 23 000 NOK til 12 000 NOK (sparer ca. 11 000 NOK vs. Color Magic). | Claude |
+| 2026-05-16 | Transittstopp justert: Naturcamping Retgendorf (Schwerin, 390 km dag 1 / 190 km dag 2) erstattet med Camping Land an der Elbe, Stover Strand 7, 21423 Drage — direkte på Elbe-bredden sør for Hamburg. Bedre etappebalanse: dag 1 = 315 km (4t 20min), dag 2 = 320 km (4t 20min). Familiedrevet plass siden 1960, 4,8/5-vurdert. | Claude |
+| 2026-05-16 | Utreisedagen endret: Color Magic Oslo→Kiel erstattet med Color Line SuperSpeed Larvik→Hirtshals (avgang kl. 08:00, ankomst Hirtshals ca. kl. 12:00). Nytt transittstopp 1 natt lagt til: Camping Land an der Elbe ved Stover Strand, Drage — enkel naturcamping direkte på Elbe-bredden med tur- og bademuligheter. Rute dag 1: Kongsberg→Larvik (85 km) + ferge + Hirtshals→Stover Strand (315 km, 4t 20min). Rute dag 2: Stover Strand→Berlin (320 km, 4t 20min). Alle stopp renummerert (+1): Berlin=Stopp 2, Bad Schandau=Stopp 3, Wien=Stopp 5, osv. Fergebudsjett redusert fra 23 000 NOK til 12 000 NOK (sparer ca. 11 000 NOK vs. Color Magic). | Claude |
 | 2026-05-12 | Stopp 7 (Rovinj): Campingplass byttet fra Maistra Camping Veštar til Camping Polari (Polari 1, 52210 Rovinj). Stoppenavn endret til «Rovinj, Istria». Aktivitetsliste revidert: Zlatni Rt naturpark og Dinopark Funtana lagt til som must-do; Brijuni nasjonalpark lagt til som nice-to-have; Poreč-basilika og Kamenjak fjernet. §4b og strandliv-tabell oppdatert med nytt valg. | Claude |
 | 2026-05-09 | Stopp 4 (Wien): Campingplass byttet fra Donaupark Camping Tulln til Camping Wien West (Hüttelbergstraße 80, 1140 Wien). Tiergarten Schønbrunn (verdens eldste dyrehage, grunnlagt 1752) lagt til som must-do-aktivitet. | Claude |
 | 2026-05-08 | Camping Stobreč Split booket (ref. PH27767231 via Phobs, mai 2026). Ny "Bookingstatus"-tabell i Praktisk-fanen som viser status for alle 12 overnattinger (10 camping + 2 ferger) med direkte bookinglenker. Ny "Istria — 10 familievennlige alternativer"-seksjon med detaljerte kort for stopp 7 (alternativer til Maistra Veštar med pris, fasiliteter, severdigheter). Ny §4b lagt til i dokumentet. Innsjekk-/utsjekkstider lagt til på alle stopp (camping og ferge). | Claude + Arne |
