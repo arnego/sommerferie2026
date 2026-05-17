@@ -8,9 +8,9 @@
 
 ## 1. Fakta om turen
 
-- **Avreisedato:** Tidligst 4. juli
-- **Returdato:** Senest 1. august
-- **Varighet:** ca. 4 uker (27 netter + hjemkomst 31. juli)
+- **Avreisedato:** Fredag 3. juli (Color Line ferge avgang kl. 17:35 fra Larvik)
+- **Returdato:** Natt til 2. august (ankomst Larvik ~02:40, hjemme i Kongsberg ca. kl. 04:00)
+- **Varighet:** 29 netter borte — hjemkomst 2. august
 - **Startpunkt:** Kongsberg, Norge
 - **Kjøretøy:** Campingvogn Knaus Sport 400 LK, trukket av Land Rover Discovery 4
 - **Deltakere:** Ann Kristin (42 år), Arne (40 år) og William (5 år)
@@ -23,7 +23,7 @@
 - **Hoveddestinasjon: Kroatia** — med minimum 14 netter langs Adriaterkysten og i nasjonalparkene.
 - Et besøk til familie (André og Lucia) i Tyskland i løpet av ferien på adresse: Fischerinsel 9, 10179 Berlin, Tyskland.
 - Bohemian Switzerland (Bad Schandau) inngår som transittstopp på vei sydover.
-- **Ferger:** Color Line SuperSpeed Larvik→Hirtshals på utreisen (lørdag 4. juli, avgang kl. 08:00). Color Line SuperSpeed Hirtshals→Larvik på hjemreisen (1. august).
+- **Ferger:** Color Line SuperSpeed Larvik→Hirtshals på utreisen (fredag 3. juli, avgang kl. 17:35, ankomst Hirtshals ca. 21:40). Color Line SuperSpeed Hirtshals→Larvik på hjemreisen (lørdag 1. august, avgang kl. 22:15, ankomst Larvik ca. 02:40 natt til 2. august).
 - Ingen overnattinger kortere enn 3 netter med mindre vi eksplisitt har kommet med ønske om det for spesifikke destinasjoner.
 - Kjøreetapper må være under 6 timer per dag med minimum ett stopp underveis.
 - Vi unngår Sverige — hjemreisen skjer via Hirtshals→Larvik (Color Line).
@@ -43,24 +43,25 @@ William er 5 år og er en viktig del av planleggingen:
 
 | # | Sted | Land | Ankomst | Avreise | Netter | Uke |
 |---|------|------|---------|---------|--------|-----|
-| 1 | Larvik → Hirtshals (Color Line ferge) | NO/DK | 4. juli morgen | 4. juli middag | 0 (ferge) | 27 |
-| 2 | Jarplund, Flensburg (Campingplatz Jarplund) | DE | 4. juli kv. | 5. juli | 1 (transit) | 27 |
-| 3 | Berlin | DE | 5. juli | 7. juli | 2 | 27/28 |
-| 4 | Bad Schandau (Bohemian Switzerland) | DE | 7. juli | 9. juli | 2* | 28 |
-| 5 | Wien | AT | 9. juli | 11. juli | 2* | 28 |
-| 6 | Plitvice Lakes NP | HR | 11. juli | 13. juli | 2 | 28/29 |
-| 7 | Split | HR | 13. juli | 20. juli | 7 | 29/30 |
-| 8 | Rovinj, Istria | HR | 20. juli | 24. juli | 4 | 30 |
-| 9 | Zugspitze | DE | 24. juli | 27. juli | 3 | 31 |
-| 10 | Bamberg | DE | 27. juli | 29. juli | 2 | 31 |
-| 11 | Hamburg | DE | 29. juli | 30. juli | 1* | 31 |
-| 12 | Billund (Legoland) | DK | 30. juli | 1. aug | 2 | 31 |
-| 13 | Hirtshals → Larvik (Color Line ferge) | DK/NO | 1. aug | 1. aug | — | 31 |
-| 14 | Kongsberg | NO | 1. aug | — | Hjemme | 31 |
+| 1 | Larvik → Hirtshals (Color Line ferge, avgang 17:35) | NO/DK | 3. juli kv. | 3. juli kv. | 0 (ferge) | 27 |
+| 2 | Hirtshals (overnatting) — Hirtshals Camping | DK | 3. juli kv. | 4. juli | 1 (transit) | 27 |
+| 3 | Jarplund, Flensburg (Campingplatz Jarplund) | DE | 4. juli kv. | 5. juli | 1 (transit) | 27 |
+| 4 | Berlin | DE | 5. juli | 7. juli | 2 | 27/28 |
+| 5 | Bad Schandau (Bohemian Switzerland) | DE | 7. juli | 9. juli | 2* | 28 |
+| 6 | Wien | AT | 9. juli | 11. juli | 2* | 28 |
+| 7 | Plitvice Lakes NP | HR | 11. juli | 13. juli | 2 | 28/29 |
+| 8 | Split | HR | 13. juli | 20. juli | 7 | 29/30 |
+| 9 | Rovinj, Istria | HR | 20. juli | 24. juli | 4 | 30 |
+| 10 | Zugspitze | DE | 24. juli | 27. juli | 3 | 31 |
+| 11 | Bamberg | DE | 27. juli | 29. juli | 2 | 31 |
+| 12 | Hamburg | DE | 29. juli | 30. juli | 1* | 31 |
+| 13 | Billund (Legoland) | DK | 30. juli | 1. aug | 2 | 31 |
+| 14 | Hirtshals → Larvik (Color Line ferge, avgang 22:15) | DK/NO | 1. aug kv. | 2. aug | — | 31 |
+| 15 | Kongsberg | NO | 2. aug | — | Hjemme | 31 |
 
 *Kortstopp — unntak fra 3-netter-regelen (transit eller prioritert destinasjon).
 
-**Totalt:** 28 netter borte — 13 i Kroatia, 4 i Berlin/Bad Schandau, 2 i Wien, 3 netter Zugspitze, 2 netter Bamberg, 2 transittnetter (Jarplund/Flensburg, Hamburg), 2 i Billund. Hjemme 1. august (innenfor «senest 1. august»-grensen).
+**Totalt:** 29 netter borte — 13 i Kroatia, 4 i Berlin/Bad Schandau, 2 i Wien, 3 netter Zugspitze, 2 netter Bamberg, 3 transittnetter (Hirtshals, Jarplund/Flensburg, Hamburg), 2 i Billund. Hjemme 2. august (kveldsavgang Hirtshals 1. august, ankomst Larvik natt til 2. august).
 
 ---
 
@@ -81,7 +82,7 @@ William er 5 år og er en viktig del av planleggingen:
 | Bamberg | Hamburg | 551 km (verifisert) | **7 t 33 min ⚠️** | A73 nord → A9 → A14 → Hamburg. Klart over 6t-grensen — start senest kl. 07:00. |
 | Hamburg | Billund | 280 km (verifisert) | 3 t 50 min | A7 nord → Flensburg-grensa → E45 nord inn i Danmark → Billund |
 | Billund | Hirtshals | 250 km (verifisert) | 3 t 26 min | E45 nord gjennom Jutland til Hirtshals |
-| Hirtshals | Larvik (ferge) | — | 3 t 45 min | Color Line SuperSpeed |
+| Hirtshals | Larvik (ferge) | — | 4 t 25 min | Color Line SuperSpeed — avgang kl. 22:15, ankomst Larvik ~02:40 (natt til 2. august) |
 | Larvik | Kongsberg | 91 km (verifisert) | 1 t 15 min | E18/E134 |
 
 Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorvei (gjennomsnittsfart ca. 73 km/t inkl. reduksjon for byggesoner, kryss og hvilepauser). ⚠️ **Tre etapper overskrider 6t-grensen:** Wien → Plitvice (472 km, ~6t 28min), Rovinj → Zugspitze (493 km, ~6t 45min nettokjøring), Bamberg → Hamburg (551 km, ~7t 33min) — start tidlig på disse dagene.
@@ -91,25 +92,55 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 ### Ferger
 
 **Color Line SuperSpeed (Larvik–Hirtshals, utreise)**
-- Avgang: Larvik kl. 08:00 (lørdag 4. juli)
-- Ankomst: Hirtshals ca. kl. 12:00 (~3 t 55 min)
+- Avgang: Larvik kl. 17:35 (fredag 3. juli)
+- Ankomst: Hirtshals ca. kl. 21:40 (~4 t 05 min)
 - Estimert pris (2 voksne + 1 barn + bil + campingvogn m/riktig høyde og lengde): **~5 000 NOK** (inkl. kjøretøylengde-tillegg)
 - Fasiliteter: snackbar og dekk
 - Nettside: https://www.colorline.no/hirtshals-larvik
 - **Booket: Ja (17. mai 2026) — Bookingref: XDM7361**
-- Ombord fra: ca. 07:00 (avgang 08:00) · Ankomst Hirtshals: ca. 12:00
+- Ombord fra: ca. 16:45 (avgang 17:35) · Ankomst Hirtshals: ca. 21:40
 
 **Color Line SuperSpeed (Hirtshals–Larvik, hjemreise)**
-- Avgang: Hirtshals kl. 14:30 (lørdag 1. august)
-- Overfartstid: 3 t 45 min
+- Avgang: Hirtshals kl. 22:15 (lørdag 1. august)
+- Ankomst: Larvik ca. 02:40 (natt til søndag 2. august) · Overfartstid: ~4 t 25 min
 - Estimert pris (bil + campingvogn m/riktig høyde og lengde + 2 voksne + 1 barn): **~5 000 NOK** en vei (inkl. kjøretøylengde-tillegg)
 - Nettside: https://www.colorline.no/hirtshals-larvik
 - **Booket: Ja (17. mai 2026) — Bookingref: XDM7361**
-- Ombord fra: 13:30 (avgang 14:30) · Avstigning Larvik: ca. 18:15
+- Ombord fra: 21:15 (avgang 22:15) · Ankomst Larvik: ca. 02:40 (2. august)
 
 ---
 
-### Stopp 1: Jarplund, Flensburg (1 natt: 4.–5. juli)
+### Stopp 2: Hirtshals, Danmark (1 natt: 3.–4. juli)
+
+**Kjøring:** Color Line terminal Hirtshals → Hirtshals Camping, ca. 3 km, ~10 min. Ankomst ca. kl. 21:40 etter kveldsseilingen fra Larvik.
+
+**Campingplass: Hirtshals Camping**
+- Adresse: Kystvejen, 9850 Hirtshals, Danmark — ved Nordsjøen, ca. 10 min fra fergeterminalen
+- Nettside: https://hirtshals-camping.dk/
+- Telefon: +45 98 94 25 35
+- Fasiliteter: Familiecamping ved Nordsjøen, nær Nordsøen Oceanarium. Enkel og rolig overnatting for transittnatt etter kveldsseilingen.
+- Sesong 2026: åpen 28.03.–18.10.2026
+- Tar imot campingvogn med strømtilkobling
+- Booket: Nei — **ring for å varsle sen innsjekk (ankomst ca. 21:40–22:00)**
+- Bookingref: —
+- Innsjekk: 21:00 (sen innsjekk etter kveldsseilingen — avtal på forhånd) · Utsjekk: 12:00
+
+**Aktiviteter:**
+
+| Aktivitet | Type | Prioritet | Beskrivelse |
+|-----------|------|-----------|-------------|
+| Nordsøen Oceanarium | Akvarium/barn | Nice-to-have | Nordens største akvarium (500 000 liter). William vil elske haiene og sel-showet! 5 min gange fra campingen. https://www.nordsoenoceanarium.dk/ |
+| Morgenspasertur på stranden | Friluft | Nice-to-have | Hirtshals har lang sandstrand ved Nordsjøen — fin oppvekker før videre kjøring til Jarplund. |
+
+**Tips:**
+- Ring campingen på forhånd for å varsle sen innsjekk (+45 98 94 25 35) — ankomst ca. kl. 22:00
+- Dette er en praktisk transittnatt — fokus på hvile, ikke aktiviteter
+- Neste dag: 362 km til Jarplund/Flensburg via E45 sør (4 t 57 min med campingvogn)
+- Nordsøen Oceanarium ligger bokstavelig talt nesten rett ved campingen hvis William vil se fisker neste morgen
+
+---
+
+### Stopp 3: Jarplund, Flensburg (1 natt: 4.–5. juli)
 
 **Kjøring:** Hirtshals → Jarplund (Flensburg), 362 km, 4 t 57 min via E45 sør gjennom Jylland → Padborg-grense → A7 sørover → Flensburg → Jarplund. (80 km/t med campingvogn i Danmark og Tyskland.)
 
@@ -137,7 +168,7 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 
 ---
 
-### Stopp 2: Berlin, Tyskland (2 netter: 5.–7. juli)
+### Stopp 4: Berlin, Tyskland (2 netter: 5.–7. juli)
 
 **Campingplass: DCC-Campingplatz Berlin-Gatow**
 - Adresse: Kladower Damm 213–217, 14089 Berlin-Gatow, Tyskland
@@ -172,7 +203,7 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 
 ---
 
-### Stopp 3: Bad Schandau / Bohemian Switzerland (2 netter: 7.–9. juli)
+### Stopp 5: Bad Schandau / Bohemian Switzerland (2 netter: 7.–9. juli)
 
 **Campingplass: Campingplatz Ostrauer Mühle**
 - Adresse: Ostrauer Mühle 15, 01814 Bad Schandau, Tyskland
@@ -201,7 +232,7 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 
 ---
 
-### Stopp 5: Wien, Østerrike (2 netter: 9.–11. juli)
+### Stopp 6: Wien, Østerrike (2 netter: 9.–11. juli)
 
 **Kjøring:** Bad Schandau → Wien, 420 km, 5 t 45 min via E55/D8 sørover → Prague-ring → D1/E65 sørøst → Wien → A1 vest mot Camping Wien West (Hüttelbergstraße, 14. bydel). (80 km/t med campingvogn gjennom Tsjekkia og Østerrike — tidlig start anbefales.) (verifisert)
 
@@ -226,7 +257,7 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 
 ---
 
-### Stopp 6: Plitvice Lakes NP, Kroatia (2 netter: 11.–13. juli)
+### Stopp 7: Plitvice Lakes NP, Kroatia (2 netter: 11.–13. juli)
 
 **Kjøring:** Wien (Camping Wien West) → Plitvice Lakes, 472 km, **6 t 28 min ⚠️** via S1/A2 sørøst → Spielfeld/Šentilj grense → A1 Slovenia (Ljubljana) → A1 Kroatia → D429 → D1 inn mot nasjonalparken. Slovenisk vignett brukes her. (80 km/t med campingvogn i alle land på ruten.) (verifisert)
 
@@ -256,7 +287,7 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 
 ---
 
-### Stopp 7: Split, Kroatia (7 netter: 13.–20. juli)
+### Stopp 8: Split, Kroatia (7 netter: 13.–20. juli)
 
 **Kjøring:** Plitvice → Split, 253 km, 3 t 28 min via A1 sørover (via D429 til A1) → avkjøring mot Split. (80 km/t med campingvogn på kroatisk motorvei.) (verifisert)
 
@@ -292,7 +323,7 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 
 ---
 
-### Stopp 8: Rovinj, Istria, Kroatia (4 netter: 20.–24. juli)
+### Stopp 9: Rovinj, Istria, Kroatia (4 netter: 20.–24. juli)
 
 **Kjøring:** Split → Rovinj, 433 km, 5 t 56 min via A1 nord → Zagreb → A6 vest → Rijeka → Y-motorvei vest mot Istria. Naturlig siste stopp i Kroatia på hjemveien. (80 km/t med campingvogn på kroatisk motorvei.) (verifisert)
 
@@ -363,11 +394,11 @@ Hjemreisen inkluderer tre opplevelsesstopp — Zugspitze, Hamburg og Billund (Le
 - Aktiviteter dag 2 (1. august formiddag): **LEGO House** — ikonisk opplevelseshus i Billund sentrum (2017). Interaktive soner og kreative verksteder. https://legohouse.com/en-gb
 - Tips: Bestill Legoland-billett online — spar tid og penger. Legoland® Campingarea er veldig populær i juli — bestill senest i mai. Start hjemreise mot Hirtshals senest kl. 11:00.
 
-**1. august: Billund → Hirtshals → Larvik → Kongsberg**
-- Billund → Hirtshals: 250 km, 3 t 26 min via E45 nord gjennom Jutland (80 km/t med campingvogn i Danmark)
-- Color Line SuperSpeed: anbefalt avgang kl. 14:30 fra Hirtshals, ankommer Larvik ~18:15
-- Larvik → Kongsberg: 91 km, 1 t 15 min via E18/E134 (verifisert)
-- **HJEMME 1. august!** ✓
+**1.–2. august: Billund → Hirtshals → Larvik → Kongsberg**
+- Billund → Hirtshals: 250 km, 3 t 26 min via E45 nord gjennom Jutland (80 km/t med campingvogn i Danmark) — start senest kl. 18:30 for å rekke kveldsavgangen
+- Color Line SuperSpeed: **avgang kl. 22:15** fra Hirtshals, ankomst Larvik ~02:40 (natt til 2. august) — booket, ref. XDM7361
+- Larvik → Kongsberg: 91 km, 1 t 15 min via E18/E134 (verifisert) — hjemme i Kongsberg ca. kl. 04:00
+- **HJEMME 2. august!** ✓
 
 ---
 
@@ -467,6 +498,7 @@ Sortert nord → sør:
 
 | Dato | Endring | Av |
 | --- | --- | --- |
+| 2026-05-17 | Utreiseferge endret til kveldsavgang 17:35 fredag 3. juli (ikke 08:00 lørdag 4. juli). Nytt Stopp 2 lagt til: Hirtshals Camping (1 transittnatt 3.–4. juli). Hjemferd endret til kveldsavgang 22:15 fra Hirtshals 1. august, ankomst Larvik ~02:40 natt til 2. august. Alle stopp-nummereringer i ruteoversikten og stopp-seksjonene fremskutt med 1 (Jarplund→Stopp 3, Berlin→Stopp 4, osv., til Billund→Stopp 13). Faktaseksjon, ruteoversikt, kjøreetapper, fergeseksjon, hjemreise og endringslogg oppdatert. Totalt: 29 netter borte (var 28). | Claude |
 | 2026-05-17 | Color Line-ferger booket: begge fergeoverfarter (Larvik→Hirtshals 4. juli og Hirtshals→Larvik 1. august) registrert som booket med ref. XDM7361 i både index.html og Ferieplanen-2026.md. | Claude |
 | 2026-05-17 | Én natt flyttet fra Berlin til Wien: Berlin 3→2 netter (5.–7. juli), Wien 1→2 netter (9.–11. juli). Bad Schandau-datoer justert tilsvarende (7.–9. juli). Plitvice og alle etterfølgende stopp uendret. | Claude |
 | 2026-05-16 | Avstandsverifisering: Alle 14 kjøreetapper verifisert mot eksterne kilder (rome2rio, distance.to, travelmath, trippy, wanderlog). Kritisk feil oppdaget: transittstopp «Stover Strand» lå 530 km fra Hirtshals (ikke 315 km) — erstattet med **Campingplatz Jarplund** (2 km sør for Flensburg), som gir 362 km dag 1 og 434 km dag 2 (verifisert). Øvrige korreksjoner: Split→Rovinj 310→433 km; Bamberg→Hamburg 475→551 km (⚠️ 7t33min); Zugspitze→Bamberg 315→323 km; Hamburg→Billund 250→280 km; Kongsberg↔Larvik 85→91 km; Wien→Plitvice 420→472 km. Regel for avstandsverifisering lagt til i CLAUDE.md. | Claude |
