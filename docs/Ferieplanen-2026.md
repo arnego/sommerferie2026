@@ -46,9 +46,9 @@ William er 5 år og er en viktig del av planleggingen:
 | 1 | Larvik → Hirtshals (Color Line ferge, avgang 17:35) | NO/DK | 3. juli kv. | 3. juli kv. | 0 (ferge) | 27 |
 | 2 | Hirtshals (overnatting) — Hirtshals Camping | DK | 3. juli kv. | 4. juli | 1 (transit) | 27 |
 | 3 | Jarplund, Flensburg (Campingplatz Jarplund) | DE | 4. juli kv. | 5. juli | 1 (transit) | 27 |
-| 4 | Berlin | DE | 5. juli | 7. juli | 2 | 27/28 |
-| 5 | Bad Schandau (Bohemian Switzerland) | DE | 7. juli | 9. juli | 2* | 28 |
-| 6 | Wien | AT | 9. juli | 11. juli | 2* | 28 |
+| 4 | Berlin | DE | 5. juli | 8. juli | 3 | 27/28 |
+| 5 | Bad Schandau (Bohemian Switzerland) | DE | 8. juli | 10. juli | 2* | 28 |
+| 6 | Wien | AT | 10. juli | 11. juli | 1* | 28 |
 | 7 | Plitvice Lakes NP | HR | 11. juli | 13. juli | 2 | 28/29 |
 | 8 | Split | HR | 13. juli | 20. juli | 7 | 29/30 |
 | 9 | Rovinj, Istria | HR | 20. juli | 24. juli | 4 | 30 |
@@ -168,17 +168,17 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 
 ---
 
-### Stopp 4: Berlin, Tyskland (2 netter: 5.–7. juli)
+### Stopp 4: Berlin, Tyskland (3 netter: 5.–8. juli)
 
-**Campingplass: DCC-Campingplatz Berlin-Gatow**
-- Adresse: Kladower Damm 213–217, 14089 Berlin-Gatow, Tyskland
-- Nettside: https://www.dccberlin.de/
-- Fasiliteter: Stor lekeplass, sandstrand ved Havel med bademuligheter, kajakkutleie, kiosk, grillplasser, Wi-Fi
-- Ca. 22 km fra Fischerinsel (ca. 30–40 min med bil)
-- Tar imot campingvogn med strømtilkobling (16A CEE)
+**Campingplass: Hotel & City Camping Süd**
+- Adresse: Bäkehang 9A, 14532 Kleinmachnow, Tyskland (sørvest for Berlin, ved Teltowkanal)
+- Nettside: https://www.city-camping-berlin.de/camping-sued-hotel-und-city-camping-berlin/
+- Fasiliteter: Lekeplass, biergarten, gratis Wi-Fi, frokostbuffet, vaskemaskin, gassflaskebytte, ferskvannstapping, strøm. Åpen hele året.
+- Transport til sentrum: 5 min til buss → S-Bahn Wannsee → direkte til sentrum. Sykkelrute via Kronprinzessinnenweg gjennom Grunewald.
+- Tar imot campingvogn med strømtilkobling
 - Booket: Nei
 - Bookingref: —
-- Innsjekk: 13:00 · Utsjekk: 12:00 (ca. — verifisér ved booking)
+- Innsjekk: 13:00 · Utsjekk: 11:00 (verifisert)
 
 **Familiebesøk: André og Lucia**
 - Adresse: Fischerinsel 9, 10179 Berlin
@@ -199,11 +199,11 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 **Tips:**
 - Umweltplakette kreves i Berlin (grønn sticker — ta med fra Norge eller kjøp i forkant)
 - Vurder Berlin WelcomeCard for 3 dager (dekker kollektivtransport + rabatter)
-- Campingplassen ved Havel er fin for bading på varme dager
+- Hotel & City Camping Süd: 5 min til buss → S-Bahn Wannsee → direkte inn til sentrum. Sykkelrute via Kronprinzessinnenweg gjennom Grunewald er et fint alternativ.
 
 ---
 
-### Stopp 5: Bad Schandau / Bohemian Switzerland (2 netter: 7.–9. juli)
+### Stopp 5: Bad Schandau / Bohemian Switzerland (2 netter: 8.–10. juli)
 
 **Campingplass: Campingplatz Ostrauer Mühle**
 - Adresse: Ostrauer Mühle 15, 01814 Bad Schandau, Tyskland
@@ -232,7 +232,7 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 
 ---
 
-### Stopp 6: Wien, Østerrike (2 netter: 9.–11. juli)
+### Stopp 6: Wien, Østerrike (1 natt: 10.–11. juli)
 
 **Kjøring:** Bad Schandau → Wien, 420 km, 5 t 45 min via E55/D8 sørover → Prague-ring → D1/E65 sørøst → Wien → A1 vest mot Camping Wien West (Hüttelbergstraße, 14. bydel). (80 km/t med campingvogn gjennom Tsjekkia og Østerrike — tidlig start anbefales.) (verifisert)
 
@@ -498,6 +498,7 @@ Sortert nord → sør:
 
 | Dato | Endring | Av |
 | --- | --- | --- |
+| 2026-05-17 | Berlin utvidet fra 2 til 3 netter (5.–8. juli). Campingplass byttet fra DCC-Campingplatz Berlin-Gatow til Hotel & City Camping Süd (Bäkehang 9A, 14532 Kleinmachnow). Wien redusert fra 2 til 1 natt (10.–11. juli). Bad Schandau fremskutt 1 dag (8.–10. juli). Plitvice og alle etterfølgende stopp uendret. | Claude |
 | 2026-05-17 | Utreiseferge endret til kveldsavgang 17:35 fredag 3. juli (ikke 08:00 lørdag 4. juli). Nytt Stopp 2 lagt til: Hirtshals Camping (1 transittnatt 3.–4. juli). Hjemferd endret til kveldsavgang 22:15 fra Hirtshals 1. august, ankomst Larvik ~02:40 natt til 2. august. Alle stopp-nummereringer i ruteoversikten og stopp-seksjonene fremskutt med 1 (Jarplund→Stopp 3, Berlin→Stopp 4, osv., til Billund→Stopp 13). Faktaseksjon, ruteoversikt, kjøreetapper, fergeseksjon, hjemreise og endringslogg oppdatert. Totalt: 29 netter borte (var 28). | Claude |
 | 2026-05-17 | Color Line-ferger booket: begge fergeoverfarter (Larvik→Hirtshals 4. juli og Hirtshals→Larvik 1. august) registrert som booket med ref. XDM7361 i både index.html og Ferieplanen-2026.md. | Claude |
 | 2026-05-17 | Én natt flyttet fra Berlin til Wien: Berlin 3→2 netter (5.–7. juli), Wien 1→2 netter (9.–11. juli). Bad Schandau-datoer justert tilsvarende (7.–9. juli). Plitvice og alle etterfølgende stopp uendret. | Claude |
