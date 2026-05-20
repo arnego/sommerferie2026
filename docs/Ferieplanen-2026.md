@@ -48,7 +48,7 @@ William er 5 år og er en viktig del av planleggingen:
 | 3 | Jarplund, Flensburg (Campingplatz Jarplund) | DE | 4. juli kv. | 5. juli | 1 (transit) | 27 |
 | 4 | Berlin | DE | 5. juli | 8. juli | 3 | 27/28 |
 | 5 | Bad Schandau (Bohemian Switzerland) | DE | 8. juli | 10. juli | 2* | 28 |
-| 6 | Wien | AT | 10. juli | 11. juli | 1* | 28 |
+| 6 | Berndorf (Wienerwald) | AT | 10. juli | 11. juli | 1* | 28 |
 | 7 | Plitvice Lakes NP | HR | 11. juli | 13. juli | 2 | 28/29 |
 | 8 | Split | HR | 13. juli | 20. juli | 7 | 29/30 |
 | 9 | Rovinj, Istria | HR | 20. juli | 24. juli | 4 | 30 |
@@ -61,7 +61,7 @@ William er 5 år og er en viktig del av planleggingen:
 
 *Kortstopp — unntak fra 3-netter-regelen (transit eller prioritert destinasjon).
 
-**Totalt:** 29 netter borte — 13 i Kroatia, 4 i Berlin/Bad Schandau, 2 i Wien, 3 netter Zugspitze, 2 netter Bamberg, 3 transittnetter (Hirtshals, Jarplund/Flensburg, Hamburg), 2 i Billund. Hjemme 2. august (kveldsavgang Hirtshals 1. august, ankomst Larvik natt til 2. august).
+**Totalt:** 29 netter borte — 13 i Kroatia, 4 i Berlin/Bad Schandau, 1 ved Berndorf (Wienerwald), 3 netter Zugspitze, 2 netter Bamberg, 3 transittnetter (Hirtshals, Jarplund/Flensburg, Hamburg), 2 i Billund. Hjemme 2. august (kveldsavgang Hirtshals 1. august, ankomst Larvik natt til 2. august).
 
 ---
 
@@ -73,8 +73,8 @@ William er 5 år og er en viktig del av planleggingen:
 | Hirtshals | Jarplund (Flensburg) | 362 km (verifisert) | 4 t 57 min | E45 sør gjennom Jylland → Padborg-grense → A7 sørover → Flensburg → Jarplund |
 | Jarplund | Berlin | 434 km (verifisert) | 5 t 57 min | A7 sørover → Hamburg → A24 øst mot Berlin |
 | Berlin | Bad Schandau | 222 km (verifisert) | 3 t 2 min | A13/A17 sørøst |
-| Bad Schandau | Wien (Camping Wien West) | 420 km (verifisert) | 5 t 45 min | E55/D8 sørover → Prague-ring → D1/E65 sørøst → Wien → A1 vest mot Hüttelbergstraße |
-| Wien | Plitvice Lakes | 472 km (verifisert) | **6 t 28 min ⚠️** | S1/A2 sørøst → Spielfeld/Šentilj grense → A1 Slovenia (Ljubljana) → A1 Kroatia → D429 → D1 inn mot nasjonalparken |
+| Bad Schandau | Berndorf (Seecamping Masai Mara) | 467 km (// TODO: verifiser avstand) | **6 t 24 min ⚠️** | E55/D8 sørover → Prague-ring → D1/E65 sørøst → Wien (nordfra via A22) → S1 sørring → A2 sørover → Baden → B212 → Berndorf |
+| Berndorf | Plitvice Lakes | 425 km (// TODO: verifiser avstand) | 5 t 49 min | B212 → Baden → A2 sørover → Spielfeld/Šentilj grense → A1 Slovenia (Ljubljana) → A1 Kroatia → D429 → D1 inn mot nasjonalparken |
 | Plitvice | Split | 253 km (verifisert) | 3 t 28 min | D1/D33 sørover mot kysten → D8 Jadranska magistrala sør |
 | Split | Rovinj (via Zagreb/Rijeka) | 433 km (verifisert) | 5 t 56 min | A1 nord → Zagreb → A6 vest → Rijeka → Y-motorvei vest mot Istria |
 | Rovinj | Zugspitze/Garmisch | 493 km (verifisert) | **8 t 15 min ⚠️** (inkl. Liechtensteinklamm 1,5 t) | A9/E751 nord → Ljubljana → Karawanken → A10 Tauern → **stopp Liechtensteinklamm** (Werfen/St. Johann im Pongau) → Salzburg → A8 øst → A95 sør. Svært lang dag — start senest kl. 07:30. |
@@ -85,7 +85,7 @@ William er 5 år og er en viktig del av planleggingen:
 | Hirtshals | Larvik (ferge) | — | 4 t 25 min | Color Line SuperSpeed — avgang kl. 22:15, ankomst Larvik ~02:40 (natt til 2. august) |
 | Larvik | Kongsberg | 91 km (verifisert) | 1 t 15 min | E18/E134 |
 
-Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorvei (gjennomsnittsfart ca. 73 km/t inkl. reduksjon for byggesoner, kryss og hvilepauser). ⚠️ **Tre etapper overskrider 6t-grensen:** Wien → Plitvice (472 km, ~6t 28min), Rovinj → Zugspitze (493 km, ~6t 45min nettokjøring), Bamberg → Hamburg (551 km, ~7t 33min) — start tidlig på disse dagene.
+Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorvei (gjennomsnittsfart ca. 73 km/t inkl. reduksjon for byggesoner, kryss og hvilepauser). ⚠️ **Tre etapper overskrider 6t-grensen:** Bad Schandau → Berndorf (~467 km, ~6t 24min, uverifisert), Rovinj → Zugspitze (493 km, ~6t 45min nettokjøring), Bamberg → Hamburg (551 km, ~7t 33min) — start tidlig på disse dagene.
 
 ---
 
@@ -232,34 +232,35 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 
 ---
 
-### Stopp 6: Wien, Østerrike (1 natt: 10.–11. juli)
+### Stopp 6: Berndorf (Wienerwald), Østerrike (1 natt: 10.–11. juli)
 
-**Kjøring:** Bad Schandau → Wien, 420 km, 5 t 45 min via E55/D8 sørover → Prague-ring → D1/E65 sørøst → Wien → A1 vest mot Camping Wien West (Hüttelbergstraße, 14. bydel). (80 km/t med campingvogn gjennom Tsjekkia og Østerrike — tidlig start anbefales.) (verifisert)
+**Kjøring:** Bad Schandau → Berndorf, ~467 km, **~6 t 24 min ⚠️** via E55/D8 sørover → Prague-ring → D1/E65 sørøst → Wien (nordfra via A22) → S1 sørring → A2 sørover → Baden → B212 → Berndorf. (80 km/t med campingvogn gjennom Tsjekkia og Østerrike — tidlig start anbefales.) (// TODO: verifiser avstand)
 
-**Campingplass: Camping Wien West**
-- Adresse: Hüttelbergstraße 80, 1140 Wien, Østerrike
-- Nettside: https://www.micampa.com/
-- Fasiliteter: Velrennomert familiecampingplass vest i Wien, ca. 3 km fra Schønbrunn-palasset og Tiergarten Schønbrunn. Enkel tilgang til sentrum via U4-linja (t-bane). God infrastruktur med dusj, strøm og internett.
+**Campingplass: Seecamping Masai Mara**
+- Adresse: Köhlerweg 9, 2560 Berndorf, Østerrike
+- Nettside: https://www.seecamping-masai-mara.at
+- Fasiliteter: Idyllisk sjøcamping i kanten av Wienerwald. Direkte beliggenhet ved innsjø med kajakkutleie, robåt og pedalebåt. Fiske, tennis, bordtennis, sykkelutleie. Strøm (CEE 16A), Wi-Fi, moderne sanitæranlegg. 25 plasser. Åpen 1.4.–30.9.
 - Booket: Nei
 - Bookingref: —
-- Innsjekk: 14:00 · Utsjekk: 10:00 (ca. — verifisér ved booking)
+- Innsjekk: 08:00–12:00 og 16:00–20:00 · Utsjekk: 08:00–12:00 (ca. — verifisér ved booking)
 
 | Aktivitet | Type | Prioritet | Beskrivelse |
 |-----------|------|-----------|-------------|
-| Kveldsspasertur langs Donau | Friluft | Must-do | Vakker spasertur langs Donaupromenaden i Tulln. Den berømte Donau-sykkelstien er flatt og barnevennlig. https://www.tulln.at/ |
-| Tiergarten Schönbrunn | Dyrehage | Must-do | Verdens eldste dyrehage (grunnlagt 1752), beliggende på Schönbrunn-palassets område i Wien. Et must-see for hele familien. Ca. 3 km fra Camping Wien West. https://www.zoovienna.at/ |
-| Tulln gamlebyen | Kultur | Nice-to-have | Sjarmerende by langs Donau med romansk Karner-kirke og historisk bykjerne. Tulln er fødebyen til kunstneren Egon Schiele. https://www.tulln.at/ |
+| Bading og kajakk i sjøen | Friluft/vann | Must-do | Seecamping Masai Mara ligger direkte ved innsjø med kajakkutleie, robåter og pedalebåt. Perfekt ettermiddagsaktivitet for William etter lang kjøredag. |
+| Kveldstur i Wienerwald | Friluft | Must-do | Campingen ligger i kanten av Wienerwald (Wiens naturpark og UNESCO-biosfærereservat) — rolig kveldsspasertur i bøke- og furuskog. |
+| Baden bei Wien | Kurbad/kultur | Nice-to-have | Historisk badeby og kurort ca. 18 km nord for Berndorf, kjent for termalbad og sene 1800-tall-arkitektur. https://www.baden.at/ |
 
 **Tips:**
 - **Kjøp østerriksk motorvei-vignett** ved grenseovergangen (10-dagersvignett ~9,90 EUR per kjøretøy — bil og campingvogn regnes separat)
 - **Slovenisk vignett** (7 dager ~15 EUR) kjøpes online eller ved grensen neste dag
-- Tidlig avreise anbefales — ~472 km til Plitvice neste dag (6t 28min ⚠️)
+- Ring campingen på forhånd: +43 699 110 637 20 — innsjekk kun kl. 08–12 og 16–20
+- Tidlig avreise anbefales — ~425 km til Plitvice neste dag (~5t 49min)
 
 ---
 
 ### Stopp 7: Plitvice Lakes NP, Kroatia (2 netter: 11.–13. juli)
 
-**Kjøring:** Wien (Camping Wien West) → Plitvice Lakes, 472 km, **6 t 28 min ⚠️** via S1/A2 sørøst → Spielfeld/Šentilj grense → A1 Slovenia (Ljubljana) → A1 Kroatia → D429 → D1 inn mot nasjonalparken. Slovenisk vignett brukes her. (80 km/t med campingvogn i alle land på ruten.) (verifisert)
+**Kjøring:** Berndorf (Seecamping Masai Mara) → Plitvice Lakes, ~425 km, ~5 t 49 min via B212 → Baden → A2 sørover → Spielfeld/Šentilj grense → A1 Slovenia (Ljubljana) → A1 Kroatia → D429 → D1 inn mot nasjonalparken. Slovenisk vignett brukes her. (80 km/t med campingvogn i alle land på ruten.) (// TODO: verifiser avstand)
 
 **Campingplass: Camping Plitvice**
 - Adresse: Mukinje, 53231 Plitvička Jezera, Kroatia — 3 km fra Plitvice inngang
@@ -498,6 +499,7 @@ Sortert nord → sør:
 
 | Dato | Endring | Av |
 | --- | --- | --- |
+| 2026-05-20 | Stopp 6 byttet fra Wien (Camping Wien West) til Berndorf (Seecamping Masai Mara, Köhlerweg 9, 2560 Berndorf). Campingplass verifisert via seecamping-masai-mara.at. Kjøreetapper oppdatert: Bad Schandau→Berndorf ~467 km/~6t 24min ⚠️ og Berndorf→Plitvice ~425 km/~5t 49min (begge uverifiserte — TODO). Aktiviteter og tips oppdatert for Berndorf (sjøbading, Wienerwald, Baden bei Wien). | Claude |
 | 2026-05-17 | Berlin utvidet fra 2 til 3 netter (5.–8. juli). Campingplass byttet fra DCC-Campingplatz Berlin-Gatow til Hotel & City Camping Süd (Bäkehang 9A, 14532 Kleinmachnow). Wien redusert fra 2 til 1 natt (10.–11. juli). Bad Schandau fremskutt 1 dag (8.–10. juli). Plitvice og alle etterfølgende stopp uendret. | Claude |
 | 2026-05-17 | Utreiseferge endret til kveldsavgang 17:35 fredag 3. juli (ikke 08:00 lørdag 4. juli). Nytt Stopp 2 lagt til: Hirtshals Camping (1 transittnatt 3.–4. juli). Hjemferd endret til kveldsavgang 22:15 fra Hirtshals 1. august, ankomst Larvik ~02:40 natt til 2. august. Alle stopp-nummereringer i ruteoversikten og stopp-seksjonene fremskutt med 1 (Jarplund→Stopp 3, Berlin→Stopp 4, osv., til Billund→Stopp 13). Faktaseksjon, ruteoversikt, kjøreetapper, fergeseksjon, hjemreise og endringslogg oppdatert. Totalt: 29 netter borte (var 28). | Claude |
 | 2026-05-17 | Color Line-ferger booket: begge fergeoverfarter (Larvik→Hirtshals 4. juli og Hirtshals→Larvik 1. august) registrert som booket med ref. XDM7361 i både index.html og Ferieplanen-2026.md. | Claude |
