@@ -45,7 +45,7 @@ William er 5 år og er en viktig del av planleggingen:
 |---|------|------|---------|---------|--------|-----|
 | 1 | Larvik → Hirtshals (Color Line ferge, avgang 17:35) | NO/DK | 3. juli kv. | 3. juli kv. | 0 (ferge) | 27 |
 | 2 | Hirtshals (overnatting) — Hirtshals Camping | DK | 3. juli kv. | 4. juli | 1 (transit) | 27 |
-| 3 | Jarplund, Flensburg (Campingplatz Jarplund) | DE | 4. juli kv. | 5. juli | 1 (transit) | 27 |
+| 3 | Groß Buchwald (Groß Buchwald meadow-campspace) | DE | 4. juli kv. | 5. juli | 1 (transit) | 27 |
 | 4 | Berlin | DE | 5. juli | 8. juli | 3 | 27/28 |
 | 5 | Bad Schandau (Bohemian Switzerland) | DE | 8. juli | 10. juli | 2 | 28 |
 | 6 | Český Krumlov | CZ | 10. juli | 11. juli | 1* | 28 |
@@ -75,8 +75,8 @@ William er 5 år og er en viktig del av planleggingen:
 | Fra | Til | Avstand | Kjøretid | Rute |
 |-----|-----|---------|----------|------|
 | Kongsberg | Larvik | 91 km (verifisert) | 1 t 15 min | E18 sørøst |
-| Hirtshals | Jarplund (Flensburg) | 362 km (verifisert) | 4 t 57 min | E45 sør gjennom Jylland → Padborg-grense → A7 sørover → Flensburg → Jarplund |
-| Jarplund | Berlin | 434 km (verifisert) | 5 t 57 min | A7 sørover → Hamburg → A24 øst mot Berlin |
+| Hirtshals | Groß Buchwald | ~435 km (// TODO: verifiser avstand) | ~5 t 58 min | E45 sør gjennom Jylland → Padborg-grense → A7 sørover → Bordesholm-avkjøring → Groß Buchwald |
+| Groß Buchwald | Berlin | ~367 km (// TODO: verifiser avstand) | ~5 t 2 min | A7 sørover → Hamburg → A24 øst mot Berlin |
 | Berlin | Bad Schandau | 222 km (verifisert) | 3 t 2 min | A13/A17 sørøst |
 | Bad Schandau | Český Krumlov | 287 km (verifisert, rome2rio) | 3 t 56 min | E442/D8 sørover → Praha-omkjøring → D3/E55 sør mot České Budějovice → Český Krumlov |
 | Český Krumlov | Graz | 307 km (verifisert) | 4 t 12 min | E55 sør → České Budějovice → Linz → A9 Pyhrn-motorvei sør → Graz |
@@ -93,7 +93,7 @@ William er 5 år og er en viktig del av planleggingen:
 | Hirtshals | Larvik (ferge) | — | 4 t 25 min | Color Line SuperSpeed — avgang kl. 22:15, ankomst Larvik ~02:40 (natt til 2. august) |
 | Larvik | Kongsberg | 91 km (verifisert) | 1 t 15 min | E18/E134 |
 
-Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorvei (gjennomsnittsfart ca. 73 km/t inkl. reduksjon for byggesoner, kryss og hvilepauser). ✅ **Alle etapper er nå under 6-timersgrensen** — den lengste er Rovinj → Liechtensteinklamm (~405 km, ~5t 33min). De tre tidligere lange dagene (Bad Schandau → Berndorf, Rovinj → Zugspitze og Bamberg → Hamburg) er delt opp av de nye stoppene Český Krumlov, Graz, Liechtensteinklamm og Wernigerode (Harz).
+Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorvei (gjennomsnittsfart ca. 73 km/t inkl. reduksjon for byggesoner, kryss og hvilepauser). ✅ **Alle etapper er nå under 6-timersgrensen** — den lengste er Rovinj → Liechtensteinklamm (~405 km, ~5t 33min). Etappen Hirtshals → Groß Buchwald er estimert til ~435 km / ~5t 58min (nær grensen — avstandene er ikke endelig verifisert, se TODO-merkinger). De tre tidligere lange dagene (Bad Schandau → Berndorf, Rovinj → Zugspitze og Bamberg → Hamburg) er delt opp av de nye stoppene Český Krumlov, Graz, Liechtensteinklamm og Wernigerode (Harz).
 
 ---
 
@@ -129,50 +129,49 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 - Fasiliteter: Familiecamping ved Nordsjøen, nær Nordsøen Oceanarium. Enkel og rolig overnatting for transittnatt etter kveldsseilingen.
 - Sesong 2026: åpen 28.03.–18.10.2026
 - Tar imot campingvogn med strømtilkobling
-- Booket: Nei — **ring for å varsle sen innsjekk (ankomst ca. 21:40–22:00)**
-- Bookingref: —
-- Innsjekk: 21:00 (sen innsjekk etter kveldsseilingen — avtal på forhånd) · Utsjekk: 12:00
+- Booket: Ja (4. juni 2026) — OrdreNr: **44021108** · Beløb: 370,00 DKK
+- Bookingref: 44021108
+- Innsjekk: 21:00 (sen innsjekk etter kveldsseilingen — varsle på forhånd) · Utsjekk: 12:00
 
 **Aktiviteter:**
 
 | Aktivitet | Type | Prioritet | Beskrivelse |
 |-----------|------|-----------|-------------|
 | Nordsøen Oceanarium | Akvarium/barn | Nice-to-have | Nordens største akvarium (500 000 liter). William vil elske haiene og sel-showet! 5 min gange fra campingen. https://www.nordsoenoceanarium.dk/ |
-| Morgenspasertur på stranden | Friluft | Nice-to-have | Hirtshals har lang sandstrand ved Nordsjøen — fin oppvekker før videre kjøring til Jarplund. |
+| Morgenspasertur på stranden | Friluft | Nice-to-have | Hirtshals har lang sandstrand ved Nordsjøen — fin oppvekker før videre kjøring til Groß Buchwald. |
 
 **Tips:**
-- Ring campingen på forhånd for å varsle sen innsjekk (+45 98 94 25 35) — ankomst ca. kl. 22:00
+- Campingen er booket (OrdreNr: 44021108) — varsle sen innsjekk via telefon (+45 98 94 25 35)
 - Dette er en praktisk transittnatt — fokus på hvile, ikke aktiviteter
-- Neste dag: 362 km til Jarplund/Flensburg via E45 sør (4 t 57 min med campingvogn)
+- Neste dag: ~435 km til Groß Buchwald (Schleswig-Holstein) via E45 sør og A7 (~5t 58min med campingvogn) — tidlig avreise viktig (etappen er nær 6-timersgrensen)
 - Nordsøen Oceanarium ligger bokstavelig talt nesten rett ved campingen hvis William vil se fisker neste morgen
 
 ---
 
-### Stopp 3: Jarplund, Flensburg (1 natt: 4.–5. juli)
+### Stopp 3: Groß Buchwald, Schleswig-Holstein (1 natt: 4.–5. juli)
 
-**Kjøring:** Hirtshals → Jarplund (Flensburg), 362 km, 4 t 57 min via E45 sør gjennom Jylland → Padborg-grense → A7 sørover → Flensburg → Jarplund. (80 km/t med campingvogn i Danmark og Tyskland.)
+**Kjøring:** Hirtshals → Groß Buchwald, ~435 km, ~5 t 58 min via E45 sør gjennom Jylland → Padborg-grense → A7 sørover → Bordesholm-avkjøring → Groß Buchwald. (80 km/t med campingvogn i Danmark og Tyskland.) (// TODO: verifiser avstand)
 
-**Campingplass: Campingplatz Jarplund**
-- Adresse: Jarplund, 24963 Tarp (2 km sør for Flensburg), Tyskland
-- Nettside: http://www.campingplatz-jarplund.de/
-- Fasiliteter: Rolig familiecamping i det grønne, 2 km sør for Flensburg. Familiedrevet (Familie Johannsen). Stellplasser for campingvogn. Nær Flensburg Fjord og Østersjøen.
-- Sesong 2026: åpen 27.03.–17.10.2026
-- Tar imot campingvogn med strømtilkobling
-- Booket: Nei
-- Bookingref: —
-- Innsjekk: 15:00 · Utsjekk: 12:00 (ca. — verifisér ved booking)
+**Campingplass: Groß Buchwald meadow-campspace (Campspace)**
+- Adresse: Groß Buchwald, Schleswig-Holstein, Deutschland
+- Nettside: https://campspace.com/en/s/family-friendly-meadow-campspace_23618
+- Fasiliteter: Naturcamp på eng hos privatpersonen Freya, i rolig schleswig-holsteiner landskap nær Bordesholm. Plass til opptil 6 personer, naturlig pitchplass for telt og campingvogn.
+- Booket: Ja (4. juni 2026) — Booking **#r442778** · Betalt: €26,40 (€20,00 + €6,40 Campspace-gebyr) · Avventer bekreftelse fra vert (Freya)
+- Bookingref: r442778
+- Innsjekk: 14:00–20:00 · Utsjekk: 09:00–12:00
 
 **Aktiviteter:**
 
 | Aktivitet | Type | Prioritet | Beskrivelse |
 |-----------|------|-----------|-------------|
-| Kveldsspasertur i naturen | Friluft | Must-do | Campingplassen ligger rolig og idyllisk i det grønne — perfekt for å strekke bena etter lang dag i bil og på ferge. |
-| Flensburg gamlebyen og havn | Sightseeing | Nice-to-have | Flensburg er kun 2 km unna — vakker gamlebyen med sjarmerende havn ved Flensburg Fjord. |
+| Friluftsliv og naturstier rundt Groß Buchwald | Friluft | Must-do | Groß Buchwald og Bordesholm-området har over 300 enkle, familievennlige turveier gjennom skog og forbi naturlige innsjøer (Klasterteich, Einfelder See, Westensee). Flat og barnevennlig terreng. Perfekt for å strekke bena etter lang kjøredag. https://www.komoot.com/guide/28131/hiking-around-gross-buchwald |
+| ErlebnisWald Trappenkamp | Friluft/barn | Nice-to-have | Et av Schleswig-Holsteins mest populære familieattraksjoner, kun noen km unna (Tannenhof, 24635 Daldorf). Over 100 hektar med villsvingehege (daglig mating kl. 14:00), Adler-Arena (ørn- og haukshow), Norddeutschlands største friluftssommerfuglhage, WaldWasserWelt (1 700 m² vannlekeplass) og Fantasiewelt Wald (innendørs klatreverden for 2–8 år). William vil elske det! Åpent man–søn kl. 10–17. https://www.erlebniswald-trappenkamp.de/ |
 
 **Tips:**
-- Campingplassen er åpen fra 27.03.2026 — godt innenfor reisedatoene
-- Ankomst ca. 17:00–17:30 etter ca. 5 t kjøring fra Hirtshals (inkl. pauser) — rolig ankomst
-- Neste dag: 434 km til Berlin via A7 sør → Hamburg → A24 øst (5 t 57 min) — tidlig avreise anbefales
+- Innsjekk mellom kl. 14:00 og 20:00 — kontakt verten Freya på Campspace-appen hvis dere blir forsinket
+- Utsjekk mellom kl. 09:00 og 12:00 — tidlig avreise anbefales for å rekke Berlin tidlig ettermiddag
+- Etappen fra Hirtshals er nær 6-timersgrensen (~5t 58min) — start tidlig og ta minst ett stopp underveis i Jylland
+- Neste dag: ~367 km til Berlin via A7 sørover → Hamburg → A24 øst (~5t 2min med campingvogn)
 
 ---
 
@@ -573,6 +572,7 @@ Sortert nord → sør:
 
 | Dato | Endring | Av |
 | --- | --- | --- |
+| 2026-06-05 | (1) Stopp 2 (Hirtshals Camping): bookingstatus oppdatert til Ja — OrdreNr 44021108, betalt 370,00 DKK (email fra info@hirtshals-camping.dk). (2) Stopp 3 byttet fra Jarplund (Campingplatz Jarplund) til **Groß Buchwald meadow-campspace** (Campspace booking #r442778, betalt €26,40, avventer bekreftelse fra vert Freya). Navigasjon: Groß Buchwald, Schleswig-Holstein, Deutschland. Innsjekk 14:00–20:00, utsjekk 09:00–12:00. (3) Aktiviteter lagt til for Groß Buchwald: naturstier (Komoot, 300+ enkle løyper, Einfelder See/Westensee) og ErlebnisWald Trappenkamp (villsvin, ørneshow, WaldWasserWelt, Fantasiewelt Wald — familievennlig, kun noen km unna). (4) Kjøreetapper oppdatert: Hirtshals→Groß Buchwald ~435 km/~5t 58min og Groß Buchwald→Berlin ~367 km/~5t 2min (begge uverifiserte — TODO). | Claude |
 | 2026-05-29 | Fire endringer i ruteplanen: (1) Zugspitze redusert fra 3 til 2 netter (24.–26. juli) → Bamberg fremskutt 1 dag (26.–28. juli). (2) Berndorf (Wienerwald) fjernet og erstattet med to nye kulturnetter mellom Bad Schandau og Plitvice: **Český Krumlov** (CZ, Camping Chvalšiny, 10.–11. juli) og **Graz** (AT, Reisemobil-Stellplatz Graz, 11.–12. juli). Plitvice redusert fra 2 til 1 natt (12.–13. juli) for å holde Split-booking (13. juli) fast. (3) Nytt stopp mellom Bamberg og Hamburg: **Wernigerode (Harz)**, Camping am Brocken (28.–29. juli) — slott, damptog, dryppsteinhuler, hengebro og turer. (4) Liechtensteinklamm gjort om fra dagstopp til egen overnatting: 1 natt tatt fra Rovinj (4→3, 20.–23. juli) og lagt til **Liechtensteinklamm/St. Johann im Pongau** (Landhaus Camping Kastenhof, gåavstand til klammen, 23.–24. juli). Alle nye avstander verifisert (rome2rio/viamichelin/travelmath). Resultat: alle kjøreetapper nå under 6 t (de tre tidligere ⚠️-dagene delt opp). Kroatia-netter: 13→11 (under §2-målet på 14 — bevisst valg). Stopp renummerert til 18 totalt. index.html oppdatert tilsvarende. | Claude |
 | 2026-05-20 | Stopp 6 byttet fra Wien (Camping Wien West) til Berndorf (Seecamping Masai Mara, Köhlerweg 9, 2560 Berndorf). Campingplass verifisert via seecamping-masai-mara.at. Kjøreetapper oppdatert: Bad Schandau→Berndorf ~467 km/~6t 24min ⚠️ og Berndorf→Plitvice ~425 km/~5t 49min (begge uverifiserte — TODO). Aktiviteter og tips oppdatert for Berndorf (sjøbading, Wienerwald, Baden bei Wien). | Claude |
 | 2026-05-17 | Berlin utvidet fra 2 til 3 netter (5.–8. juli). Campingplass byttet fra DCC-Campingplatz Berlin-Gatow til Hotel & City Camping Süd (Bäkehang 9A, 14532 Kleinmachnow). Wien redusert fra 2 til 1 natt (10.–11. juli). Bad Schandau fremskutt 1 dag (8.–10. juli). Plitvice og alle etterfølgende stopp uendret. | Claude |
