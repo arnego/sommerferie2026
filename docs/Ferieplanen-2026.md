@@ -75,8 +75,8 @@ William er 5 år og er en viktig del av planleggingen:
 | Fra | Til | Avstand | Kjøretid | Rute |
 |-----|-----|---------|----------|------|
 | Kongsberg | Larvik | 91 km (verifisert) | 1 t 15 min | E18 sørøst |
-| Hirtshals | Groß Buchwald | ~435 km (// TODO: verifiser avstand) | ~5 t 58 min | E45 sør gjennom Jylland → Padborg-grense → A7 sørover → Bordesholm-avkjøring → Groß Buchwald |
-| Groß Buchwald | Berlin | ~367 km (// TODO: verifiser avstand) | ~5 t 2 min | A7 sørover → Hamburg → A24 øst mot Berlin |
+| Hirtshals | Groß Buchwald | ~451 km (verifisert, travelmath.com) ⚠️ | ~6 t 11 min | E45 sør gjennom Jylland → Padborg-grense → A7 sørover → Bordesholm-avkjøring → Groß Buchwald |
+| Groß Buchwald | Berlin | ~350 km (verifisert, travelmath.com) | ~4 t 47 min | A7 sørover → Hamburg → A24 øst mot Berlin |
 | Berlin | Bad Schandau | 222 km (verifisert) | 3 t 2 min | A13/A17 sørøst |
 | Bad Schandau | Český Krumlov | 287 km (verifisert, rome2rio) | 3 t 56 min | E442/D8 sørover → Praha-omkjøring → D3/E55 sør mot České Budějovice → Český Krumlov |
 | Český Krumlov | Graz | 307 km (verifisert) | 4 t 12 min | E55 sør → České Budějovice → Linz → A9 Pyhrn-motorvei sør → Graz |
@@ -93,7 +93,7 @@ William er 5 år og er en viktig del av planleggingen:
 | Hirtshals | Larvik (ferge) | — | 4 t 25 min | Color Line SuperSpeed — avgang kl. 22:15, ankomst Larvik ~02:40 (natt til 2. august) |
 | Larvik | Kongsberg | 91 km (verifisert) | 1 t 15 min | E18/E134 |
 
-Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorvei (gjennomsnittsfart ca. 73 km/t inkl. reduksjon for byggesoner, kryss og hvilepauser). ✅ **Alle etapper er nå under 6-timersgrensen** — den lengste er Rovinj → Liechtensteinklamm (~405 km, ~5t 33min). Etappen Hirtshals → Groß Buchwald er estimert til ~435 km / ~5t 58min (nær grensen — avstandene er ikke endelig verifisert, se TODO-merkinger). De tre tidligere lange dagene (Bad Schandau → Berndorf, Rovinj → Zugspitze og Bamberg → Hamburg) er delt opp av de nye stoppene Český Krumlov, Graz, Liechtensteinklamm og Wernigerode (Harz).
+Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorvei (gjennomsnittsfart ca. 73 km/t inkl. reduksjon for byggesoner, kryss og hvilepauser). ⚠️ **Etappen Hirtshals → Groß Buchwald (~451 km, ~6t 11min) overskrider 6-timersgrensen** — ta minst én lang pause underveis i Jylland. Den nest lengste er Rovinj → Liechtensteinklamm (~405 km, ~5t 33min). De tre tidligere lange dagene (Bad Schandau → Berndorf, Rovinj → Zugspitze og Bamberg → Hamburg) er delt opp av de nye stoppene Český Krumlov, Graz, Liechtensteinklamm og Wernigerode (Harz).
 
 ---
 
@@ -143,14 +143,14 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 **Tips:**
 - Campingen er booket (OrdreNr: 44021108) — varsle sen innsjekk via telefon (+45 98 94 25 35)
 - Dette er en praktisk transittnatt — fokus på hvile, ikke aktiviteter
-- Neste dag: ~435 km til Groß Buchwald (Schleswig-Holstein) via E45 sør og A7 (~5t 58min med campingvogn) — tidlig avreise viktig (etappen er nær 6-timersgrensen)
+- Neste dag: ~451 km til Groß Buchwald (Schleswig-Holstein) via E45 sør og A7 (~6t 11min med campingvogn) ⚠️ — etappen overskrider 6-timersgrensen! Start tidlig og ta minst én lang pause underveis
 - Nordsøen Oceanarium ligger bokstavelig talt nesten rett ved campingen hvis William vil se fisker neste morgen
 
 ---
 
 ### Stopp 3: Groß Buchwald, Schleswig-Holstein (1 natt: 4.–5. juli)
 
-**Kjøring:** Hirtshals → Groß Buchwald, ~435 km, ~5 t 58 min via E45 sør gjennom Jylland → Padborg-grense → A7 sørover → Bordesholm-avkjøring → Groß Buchwald. (80 km/t med campingvogn i Danmark og Tyskland.) (// TODO: verifiser avstand)
+**Kjøring:** Hirtshals → Groß Buchwald, ~451 km, ~6 t 11 min via E45 sør gjennom Jylland → Padborg-grense → A7 sørover → Bordesholm-avkjøring → Groß Buchwald. (80 km/t med campingvogn i Danmark og Tyskland.) (verifisert, travelmath.com) ⚠️ Overskrider 6-timersgrensen — ta lang pause underveis i Jylland.
 
 **Campingplass: Groß Buchwald meadow-campspace (Campspace)**
 - Adresse: Groß Buchwald, Schleswig-Holstein, Deutschland
@@ -170,8 +170,8 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 **Tips:**
 - Innsjekk mellom kl. 14:00 og 20:00 — kontakt verten Freya på Campspace-appen hvis dere blir forsinket
 - Utsjekk mellom kl. 09:00 og 12:00 — tidlig avreise anbefales for å rekke Berlin tidlig ettermiddag
-- Etappen fra Hirtshals er nær 6-timersgrensen (~5t 58min) — start tidlig og ta minst ett stopp underveis i Jylland
-- Neste dag: ~367 km til Berlin via A7 sørover → Hamburg → A24 øst (~5t 2min med campingvogn)
+- ⚠️ Etappen fra Hirtshals (451 km, ~6t 11min) overskrider 6-timersgrensen — start tidlig og ta minst én lang pause underveis i Jylland
+- Neste dag: ~350 km til Berlin via A7 sørover → Hamburg → A24 øst (~4t 47min med campingvogn)
 
 ---
 
@@ -512,29 +512,6 @@ Disse 10 campingplassene dekker ulike reisestiler langs hele den kroatiske ruten
 
 ---
 
-## 4b. Istria — 10 familievennlige alternativer (stopp 10)
-
-Stopp 10 (Rovinj, 3 netter, 20.–23. juli). Nåværende valg er **Camping Polari** (nr. 7 i tabellen). Andre alternativer på Istria-halvøya dekker ulike prisklasser og beliggenhet. Alle har strand, kulturelle severdigheter (UNESCO-byer) og naturopplevelser i nærområdet.
-
-Sortert nord → sør:
-
-| # | Navn | Beliggenhet | Pris/natt (juli) | Hvorfor spesiell | Nettside |
-|---|------|-------------|------------------|------------------|---------|
-| 1 | **Camping Park Umag** | Umag (nord-Istria) | ~€40–50 | 4-stjerns mega-camp, Blue Flag-strand, 6 bassenger med sklier. Middelalderbyen Umag og istrisk vinregion i nærheten. | https://www.istracamping.com/accommodation/camping-park-umag/ |
-| 2 | **Aminess Maravea Camping Resort** | Novigrad-Cittanova | ~€40–50 | Moderne familieresort med oppvarmede bassenger og kids' club. 5 min til pittoresk Novigrad gamleby. | https://www.aminess.com/en/aminess-maravea-camping-resort |
-| 3 | **Valamar Camping Lanterna** | Tar / Poreč | ~€55–65 | 5-stjerns premium med 2 km steinstrand, vannpark og kids' club med maskoten Maro. 12 km til Poreč Eufrasius-basilika (UNESCO). | https://www.valamarcamping.com/lanterna-camp-porec |
-| 4 | **Camping Bijela Uvala** | Poreč | ~€35–45 | 8.9/10 brukervurdering, 2 bassengkomplekser, gangavstand til Poreč gamlebyen (UNESCO). | https://www.istracamping.com/accommodation/camping-bijela-uvala/ |
-| 5 | **Camping Valkanela** | Vrsar | ~€35–45 | Daglige aktivitetsprogram for barn, sandbukt med grunt vann. Vrsar fiskelandsby og Lim-fjorden naturreservat i nærheten. | https://www.maistra.com/properties/campsite-valkanela/ |
-| 6 | **Maistra Camping Veštar** | Rovinj | ~€55–65 | 3 bassenger inkl. barneslider, gangavstand (~20 min) til Rovinj UNESCO-kandidat gamleby. Lim-fjorden i nærheten. | https://www.maistra.com/properties/campsite-vestar/ |
-| 7 ★ | **Camping Polari** *(nåværende valg)* | Rovinj | ~€45–55 | "Best campsite for kids" siden 2024. 2 km strand, spray park, taxibåt til Rovinj (3,5 km). Maistra's største. | https://www.maistra.com/properties/campsite-polari/ |
-| 8 | **Mon Perin Village Plus** | Bale (mellom Rovinj og Pula) | ~€40–50 | Romslig camping i furuskog (720 plasser), direkte kystadgang. Middelalderlandsbyen Bale, 30 km til Pula amfiteater. | https://www.monperin.com/en |
-| 9 | **Camping Bi-Village** | Fažana, 15 km fra Pula | ~€40–50 | 800 m sandstrand (sjelden i Istria!), 3 bassenger med utsikt mot Brijuni-øyene. Brijuni NP og Pula amfiteater (UNESCO) i nærheten. | https://www.bivillage.com/ |
-| 10 | **Arena Stoja Campsite** | Pula | ~€30–40 | Dramatisk klippebeliggenhet på halvøy, 3 km fra Pula UNESCO-amfiteater. Mer rustikk og rimeligere. | https://www.arenacollection.com/en/destinations/pula/campsites/arena-stoja-campsite |
-
-**Kriterier:** Alle 10 er familievennlige (lekeplass/animasjon), har strand, kulturelle severdigheter (UNESCO-byer Pula, Poreč, Rovinj-kandidat) og naturopplevelser (Brijuni NP, Lim-fjorden, Cape Kamenjak, vinregioner) i nærområdet. Priser er estimater for høysesong juli 2026 med 2 voksne + 1 barn + campingvogn + strøm.
-
----
-
 ### Praktisk info for Kroatia-reisen
 
 **Vignetter og bompenger:**
@@ -572,6 +549,7 @@ Sortert nord → sør:
 
 | Dato | Endring | Av |
 | --- | --- | --- |
+| 2026-06-05 | Kjøreetapper verifisert og §4b Istria-seksjon fjernet: (1) Hirtshals→Groß Buchwald oppdatert til ~451 km / ~6t 11min (verifisert, travelmath.com) ⚠️ — overskrider 6-timersgrensen. (2) Groß Buchwald→Berlin oppdatert til ~350 km / ~4t 47min (verifisert, travelmath.com). (3) Seksjon §4b "Istria — 10 familievennlige alternativer" fjernet fra Ferieplanen-2026.md og index.html — campingplassvalget for stopp 10 er tatt (Camping Polari, Rovinj). | Claude |
 | 2026-06-05 | (1) Stopp 2 (Hirtshals Camping): bookingstatus oppdatert til Ja — OrdreNr 44021108, betalt 370,00 DKK (email fra info@hirtshals-camping.dk). (2) Stopp 3 byttet fra Jarplund (Campingplatz Jarplund) til **Groß Buchwald meadow-campspace** (Campspace booking #r442778, betalt €26,40, avventer bekreftelse fra vert Freya). Navigasjon: Groß Buchwald, Schleswig-Holstein, Deutschland. Innsjekk 14:00–20:00, utsjekk 09:00–12:00. (3) Aktiviteter lagt til for Groß Buchwald: naturstier (Komoot, 300+ enkle løyper, Einfelder See/Westensee) og ErlebnisWald Trappenkamp (villsvin, ørneshow, WaldWasserWelt, Fantasiewelt Wald — familievennlig, kun noen km unna). (4) Kjøreetapper oppdatert: Hirtshals→Groß Buchwald ~435 km/~5t 58min og Groß Buchwald→Berlin ~367 km/~5t 2min (begge uverifiserte — TODO). | Claude |
 | 2026-05-29 | Fire endringer i ruteplanen: (1) Zugspitze redusert fra 3 til 2 netter (24.–26. juli) → Bamberg fremskutt 1 dag (26.–28. juli). (2) Berndorf (Wienerwald) fjernet og erstattet med to nye kulturnetter mellom Bad Schandau og Plitvice: **Český Krumlov** (CZ, Camping Chvalšiny, 10.–11. juli) og **Graz** (AT, Reisemobil-Stellplatz Graz, 11.–12. juli). Plitvice redusert fra 2 til 1 natt (12.–13. juli) for å holde Split-booking (13. juli) fast. (3) Nytt stopp mellom Bamberg og Hamburg: **Wernigerode (Harz)**, Camping am Brocken (28.–29. juli) — slott, damptog, dryppsteinhuler, hengebro og turer. (4) Liechtensteinklamm gjort om fra dagstopp til egen overnatting: 1 natt tatt fra Rovinj (4→3, 20.–23. juli) og lagt til **Liechtensteinklamm/St. Johann im Pongau** (Landhaus Camping Kastenhof, gåavstand til klammen, 23.–24. juli). Alle nye avstander verifisert (rome2rio/viamichelin/travelmath). Resultat: alle kjøreetapper nå under 6 t (de tre tidligere ⚠️-dagene delt opp). Kroatia-netter: 13→11 (under §2-målet på 14 — bevisst valg). Stopp renummerert til 18 totalt. index.html oppdatert tilsvarende. | Claude |
 | 2026-05-20 | Stopp 6 byttet fra Wien (Camping Wien West) til Berndorf (Seecamping Masai Mara, Köhlerweg 9, 2560 Berndorf). Campingplass verifisert via seecamping-masai-mara.at. Kjøreetapper oppdatert: Bad Schandau→Berndorf ~467 km/~6t 24min ⚠️ og Berndorf→Plitvice ~425 km/~5t 49min (begge uverifiserte — TODO). Aktiviteter og tips oppdatert for Berndorf (sjøbading, Wienerwald, Baden bei Wien). | Claude |

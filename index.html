@@ -539,88 +539,6 @@ tailwind.config = {
         <div class="px-5 py-2.5 bg-cream/50 text-xs text-muted">Husk å booke senest mai 2026 for julitoppen i Kroatia. Kroatiske kystplasser fylles raskt opp.</div>
       </div>
 
-      <!-- Istria — 10 familievennlige alternativer (accordion) -->
-      <div class="bg-white rounded-xl border border-sand/50 overflow-hidden">
-        <div role="button" tabindex="0"
-             @click="toggleBudsjett('istria')"
-             @keydown.enter.prevent="toggleBudsjett('istria')"
-             @keydown.space.prevent="toggleBudsjett('istria')"
-             :aria-expanded="expandedBudsjett === 'istria'"
-             aria-controls="booking-istria-content"
-             class="w-full flex items-center justify-between gap-3 px-5 py-4 cursor-pointer hover:bg-cream/50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-petrol/40 focus-visible:ring-inset">
-          <div class="flex-1 min-w-0">
-            <h3 class="font-heading text-lg text-petrol">Planlegging: Istria — 10 familievennlige alternativer</h3>
-            <p class="text-xs text-muted mt-0.5">Andre alternativer for stopp 10 (Rovinj)</p>
-          </div>
-          <svg class="w-5 h-5 text-muted transition-transform duration-200 flex-shrink-0"
-               :class="expandedBudsjett === 'istria' && 'rotate-180'"
-               fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-          </svg>
-        </div>
-        <div x-show="expandedBudsjett === 'istria'" id="booking-istria-content" role="region"
-             x-transition:enter="transition ease-out duration-200"
-             x-transition:enter-start="opacity-0 -translate-y-2"
-             x-transition:enter-end="opacity-100 translate-y-0"
-             class="border-t border-sand/50 p-5">
-          <p class="text-sm text-charcoal/70 mb-4">Andre alternativer for stopp 10 (Rovinj). Her er 10 familievennlige campingplasser på Istria-halvøya — alle med strand, kulturelle severdigheter og naturopplevelser i nærområdet. Sortert nord → sør.</p>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <template x-for="alt in istriaAlternatives" :key="alt.name">
-              <div class="rounded-xl border p-5 flex flex-col transition-all"
-                   :class="alt.eliminated ? 'bg-charcoal/[0.03] border-sand/30 opacity-55' : 'bg-cream/40 border-sand/40'">
-                <div class="flex items-start justify-between gap-2 mb-2">
-                  <div>
-                    <h4 class="font-heading text-base leading-tight"
-                        :class="alt.eliminated ? 'line-through decoration-charcoal/40 decoration-2 text-muted' : 'text-petrol'"
-                        x-text="alt.name"></h4>
-                    <p class="text-xs text-muted mt-0.5" x-text="alt.location"></p>
-                  </div>
-                  <div class="flex flex-col items-end gap-1 shrink-0">
-                    <template x-if="alt.current">
-                      <span class="text-[10px] px-2 py-0.5 rounded-full bg-sunshine/15 text-sunshine font-medium whitespace-nowrap">★ Nåværende valg</span>
-                    </template>
-                    <template x-if="alt.eliminated">
-                      <span class="text-[10px] px-2 py-0.5 rounded-full bg-charcoal/10 text-muted font-medium whitespace-nowrap">✕ Eliminert</span>
-                    </template>
-                  </div>
-                </div>
-                <p class="text-xs text-charcoal/80 mb-3">
-                  <span class="font-medium">Pris/natt (juli):</span> <span x-text="alt.price"></span>
-                </p>
-                <div class="mb-3">
-                  <p class="text-[10px] text-muted uppercase tracking-wider font-semibold mb-1">Fasiliteter</p>
-                  <ul class="space-y-0.5">
-                    <template x-for="f in alt.facilities" :key="f">
-                      <li class="text-xs text-charcoal/75 pl-3 relative before:content-[''] before:absolute before:left-0 before:top-1.5 before:w-1 before:h-1 before:bg-success before:rounded-full" x-text="f"></li>
-                    </template>
-                  </ul>
-                </div>
-                <div class="mb-3 flex-grow">
-                  <p class="text-[10px] text-muted uppercase tracking-wider font-semibold mb-1">Severdigheter i nærområdet</p>
-                  <ul class="space-y-0.5">
-                    <template x-for="s in alt.sights" :key="s">
-                      <li class="text-xs text-charcoal/75 pl-3 relative before:content-[''] before:absolute before:left-0 before:top-1.5 before:w-1 before:h-1 before:bg-petrol before:rounded-full" x-text="s"></li>
-                    </template>
-                  </ul>
-                </div>
-                <template x-if="!alt.eliminated">
-                  <a :href="alt.url" target="_blank" rel="noopener"
-                     class="mt-auto inline-flex items-center justify-center gap-1 px-4 py-2 rounded-lg bg-petrol text-white text-sm font-medium hover:bg-petrol/90 transition-colors">
-                    <span>Booke direkte ↗</span>
-                  </a>
-                </template>
-                <template x-if="alt.eliminated">
-                  <span class="mt-auto inline-flex items-center justify-center gap-1 px-4 py-2 rounded-lg bg-charcoal/10 text-muted text-sm font-medium cursor-not-allowed select-none">
-                    <span>✕ Eliminert</span>
-                  </span>
-                </template>
-              </div>
-            </template>
-          </div>
-          <p class="text-xs text-muted mt-4">Priser er estimater for høysesong (juli 2026) for 2 voksne + 1 barn + campingvogn + strøm. Verifiser ved booking. Reserver senest mai 2026.</p>
-        </div>
-      </div>
-
       </div>
     </div>
   </section>
@@ -1811,7 +1729,7 @@ function ferieApp() {
         tips: [
           'Campingen er booket (OrdreNr: 44021108, 370 DKK) — varsle sen innsjekk via telefon (+45 98 94 25 35)',
           'Hirtshals Camping: gratis WiFi, enkelt serviceanlegg — perfekt for kortopphold',
-          'Neste dag: Hirtshals → Groß Buchwald, ~435 km, ~5t 58min via A7 — tidlig avreise anbefales (etappen er nær 6-timersgrensen)',
+          'Neste dag: Hirtshals → Groß Buchwald, ~451 km, ~6t 11min via A7 — ⚠️ etappen overskrider 6-timersgrensen! Ta minst én lang pause underveis i Jylland.',
         ],
         imageUrl: '',
       },
@@ -1837,8 +1755,8 @@ function ferieApp() {
           timesEstimated: false,
         },
         driveFromPrevious: {
-          km: 435, // TODO: verifiser avstand
-          hours: '5t 58min',
+          km: 451, // verifisert (travelmath.com) — ⚠️ overskrider 6t-regelen
+          hours: '6t 11min',
           route: 'Hirtshals → E45 sør gjennom Jylland → Padborg-grense → A7 sørover → Bordesholm-avkjøring → Groß Buchwald',
         },
         description: 'Naturcamp på eng midt i Schleswig-Holstein — et rolig alternativ til tradisjonell campingplass. Campspace-plass hos Freya nær Bordesholm, i naturparken Holsteinische Schweiz og rett ved Erlebniswald Trappenkamp. Booking #r442778 er betalt og avventer bekreftelse fra verten.',
@@ -1850,7 +1768,7 @@ function ferieApp() {
           'Innsjekk mellom kl. 14:00 og 20:00 — kontakt verten Freya på Campspace-appen ved forsinkelse',
           'Utsjekk mellom kl. 09:00 og 12:00 — tidlig avreise anbefales for å rekke Berlin tidlig ettermiddag',
           'Booking #r442778 er betalt (€26,40) — avventer endelig bekreftelse fra vert (Freya)',
-          'Neste dag: ~367 km til Berlin via A7 sørover → Hamburg → A24 øst (~5t 2min) — tidlig avreise anbefales',
+          'Neste dag: ~350 km til Berlin via A7 sørover → Hamburg → A24 øst (~4t 47min)',
         ],
         imageUrl: '',
       },
@@ -1876,8 +1794,8 @@ function ferieApp() {
           timesEstimated: true,
         },
         driveFromPrevious: {
-          km: 367, // TODO: verifiser avstand
-          hours: '5t 2min',
+          km: 350, // verifisert (travelmath.com)
+          hours: '4t 47min',
           route: 'Groß Buchwald → A7 sørover → Hamburg → A24 øst mot Berlin',
         },
         description: 'Tysklands hovedstad med familiebesøk hos André og Lucia. Hotel & City Camping Süd ved Teltowkanal i Kleinmachnow — 5 min til buss, deretter S-Bahn Wannsee direkte til sentrum. Umweltplakette påkrevd.',
@@ -2406,183 +2324,6 @@ function ferieApp() {
     // Startpunkt (Kongsberg) for kartet
     homeBase: { lat: 59.67, lng: 9.65, name: 'Kongsberg' },
 
-    // Istria-alternativer for stopp 10 — sortert nord → sør
-    istriaAlternatives: [
-      {
-        name: 'Camping Park Umag',
-        location: 'Umag (nord-Istria)',
-        price: '~€40–50',
-        url: 'https://www.istracamping.com/accommodation/camping-park-umag/',
-        current: false,
-        facilities: [
-          '4-stjerns mega-camp med Blue Flag-strand',
-          '2 bassengkomplekser, 6 bassenger med sklier',
-          'Lekeplass og vannlekepark for barn',
-        ],
-        sights: [
-          'Middelalderbyen Umag (10 min)',
-          'Istrisk vinregion og olivenoljer',
-          'Novigrad gamleby (15 min)',
-        ],
-      },
-      {
-        name: 'Aminess Maravea Camping Resort',
-        location: 'Novigrad-Cittanova',
-        price: '~€40–50',
-        url: 'https://www.aminess.com/en/aminess-maravea-camping-resort',
-        current: false,
-        eliminated: true,
-        facilities: [
-          'Moderne familieresort med oppvarmede bassenger',
-          'Sandstrand med grunne barneområder',
-          'Kids\' club og animasjonsprogram',
-        ],
-        sights: [
-          'Pittoresk Novigrad gamleby (5 min)',
-          'Kysten mot Umag og Poreč',
-          'Mirna-elvedalen og Motovun-kollene',
-        ],
-      },
-      {
-        name: 'Valamar Camping Lanterna',
-        location: 'Tar / Poreč',
-        price: '~€55–65',
-        url: 'https://www.valamarcamping.com/lanterna-camp-porec',
-        current: false,
-        facilities: [
-          '5-stjerns premium med 2 km steinstrand',
-          'Vannpark med sklier og bølgebasseng',
-          'Kids\' club med maskoten Maro',
-        ],
-        sights: [
-          'Poreč Eufrasius-basilika (UNESCO, 12 km)',
-          'Tar-bukten og Mirna-fjorden',
-          'Vrsar fiskelandsby og Lim-fjorden',
-        ],
-      },
-      {
-        name: 'Camping Bijela Uvala',
-        location: 'Poreč',
-        price: '~€35–45',
-        url: 'https://www.istracamping.com/accommodation/camping-bijela-uvala/',
-        current: false,
-        facilities: [
-          '8.9/10 brukervurdering — populær blant familier',
-          '2 bassengkomplekser med barneområde',
-          'Direkte sjøtilgang og lange kystpromenader',
-        ],
-        sights: [
-          'Poreč gamlebyen (UNESCO) — 5 min',
-          'Lim-fjorden naturreservat',
-          'Baredine-grotten (drypsteinsgrotte)',
-        ],
-      },
-      {
-        name: 'Camping Valkanela',
-        location: 'Vrsar',
-        price: '~€35–45',
-        url: 'https://www.maistra.com/properties/campsite-valkanela/',
-        current: false,
-        facilities: [
-          'Daglige aktivitetsprogram for barn',
-          'Sandbukt med grunt vann — ideelt for William',
-          'Sport: tennis, beachvolley, sykkelutleie',
-        ],
-        sights: [
-          'Vrsar sjarmerende fiskelandsby (2 km)',
-          'Lim-fjorden naturreservat (10 min)',
-          'Funtana akvarium og kunstparker',
-        ],
-      },
-      {
-        name: 'Maistra Camping Veštar',
-        location: 'Rovinj',
-        price: '~€55–65',
-        url: 'https://www.maistra.com/properties/campsite-vestar/',
-        current: false,
-        facilities: [
-          '3 bassenger inkl. barneslider',
-          'Familieunderholdningsprogram',
-          'Gangavstand (~20 min) til Rovinj gamleby',
-        ],
-        sights: [
-          'Rovinj UNESCO-kandidat gamleby',
-          'Lim-fjorden naturreservat',
-          'St. Euphemia-basilika med panoramautsikt',
-        ],
-      },
-      {
-        name: 'Camping Polari',
-        location: 'Rovinj',
-        price: '~€45–55',
-        url: 'https://www.maistra.com/properties/campsite-polari/',
-        current: true,
-        facilities: [
-          '"Best campsite for kids" siden 2024',
-          'Omfattende animasjon — sirkusskole, kunst og sport',
-          'Premium Family Village med eget basseng',
-        ],
-        sights: [
-          'Rovinj sentrum (~5 km)',
-          'Kysten sør mot Bale og Pula',
-          'Lim-fjorden og Punta Corrente-parken',
-        ],
-      },
-      {
-        name: 'Mon Perin Village Plus',
-        location: 'Bale (mellom Rovinj og Pula)',
-        price: '~€40–50',
-        url: 'https://www.monperin.com/en',
-        current: false,
-        eliminated: true,
-        facilities: [
-          'Romslig camping i furuskog (720 plasser)',
-          'Direkte kystadgang med flere bademuligheter',
-          'Bassengkompleks for alle aldre',
-        ],
-        sights: [
-          'Bale — middelalderlandsby med 3 000 år historie',
-          'Vodnjan med Sveti Blaž-kirken',
-          'Pula amfiteater (30 km)',
-        ],
-      },
-      {
-        name: 'Camping Bi-Village',
-        location: 'Fažana (15 km fra Pula)',
-        price: '~€40–50',
-        url: 'https://www.bivillage.com/',
-        current: false,
-        eliminated: true,
-        facilities: [
-          '800 m sandstrand — sjelden i Istria!',
-          '3 bassenger med utsikt mot Brijuni-øyene',
-          'Vannsklier og oppblåsbar vannbane',
-        ],
-        sights: [
-          'Brijuni nasjonalpark (ferge fra Fažana, 5 min)',
-          'Pula UNESCO-amfiteater (15 km)',
-          'Cape Kamenjak naturreservat',
-        ],
-      },
-      {
-        name: 'Arena Stoja Campsite',
-        location: 'Pula',
-        price: '~€30–40',
-        url: 'https://www.arenacollection.com/en/destinations/pula/campsites/arena-stoja-campsite',
-        current: false,
-        eliminated: true,
-        facilities: [
-          'Dramatisk klippebeliggenhet på halvøy',
-          'Mer rustikk og rimeligere — "ekte" camping',
-          'Dykkesenter, kajakk og vannski',
-        ],
-        sights: [
-          'Pula UNESCO-amfiteater (3 km)',
-          'Pula gamleby og Forum',
-          'Cape Kamenjak naturreservat (15 min)',
-        ],
-      },
-    ],
 
     // Metoder
     scrollTo(id) {
