@@ -1326,6 +1326,7 @@ function ferieApp() {
     },
 
     getMapsUrl(stop) {
+      if (stop.camping && stop.camping.navUrl) return stop.camping.navUrl;
       const dest = stop.camping && stop.camping.address
         ? encodeURIComponent(stop.camping.address)
         : `${stop.lat},${stop.lng}`;
@@ -1746,7 +1747,8 @@ function ferieApp() {
         week: 27,
         camping: {
           name: 'Groß Buchwald meadow-campspace',
-          address: 'Groß Buchwald, Schleswig-Holstein, Deutschland',
+          address: 'Dorfplatz 4, 24582 Groß Buchwald, Deutschland',
+          navUrl: 'https://maps.app.goo.gl/sDWvraFcnFt5sHhF9?g_st=ic',
           url: 'https://campspace.com/en/s/family-friendly-meadow-campspace_23618',
           booked: true,
           bookingRef: 'r442778',
@@ -1761,7 +1763,7 @@ function ferieApp() {
         },
         description: 'Naturcamp på eng midt i Schleswig-Holstein — et rolig alternativ til tradisjonell campingplass. Campspace-plass hos Freya nær Bordesholm, i naturparken Holsteinische Schweiz og rett ved Erlebniswald Trappenkamp. Booking #r442778 er bekreftet og betalt.',
         activities: [
-          { name: 'Friluftsliv og naturstier rundt Groß Buchwald', type: 'friluft', priority: 'must-do', description: 'Groß Buchwald og Bordesholm-området har over 300 enkle, familievennlige turveier gjennom skog og forbi naturlige innsjøer (Klasterteich, Einfelder See, Westensee). Flat og barnevennlig terreng. Perfekt for å strekke bena etter lang kjøredag.', url: 'https://www.komoot.com/guide/28131/hiking-around-gross-buchwald', mapsQuery: 'Groß Buchwald, Schleswig-Holstein, Deutschland' },
+          { name: 'Friluftsliv og naturstier rundt Groß Buchwald', type: 'friluft', priority: 'must-do', description: 'Groß Buchwald og Bordesholm-området har over 300 enkle, familievennlige turveier gjennom skog og forbi naturlige innsjøer (Klasterteich, Einfelder See, Westensee). Flat og barnevennlig terreng. Perfekt for å strekke bena etter lang kjøredag.', url: 'https://www.komoot.com/guide/28131/hiking-around-gross-buchwald', mapsQuery: 'Dorfplatz 4, 24582 Groß Buchwald, Deutschland' },
           { name: 'ErlebnisWald Trappenkamp', type: 'friluft', priority: 'nice-to-have', description: 'Et av Schleswig-Holsteins mest populære familieattraksjoner, kun noen km unna. Over 100 hektar med villsvingehege (daglig mating kl. 14:00), Adler-Arena (ørn- og haukshow), Norddeutschlands største friluftssommerfuglhage, WaldWasserWelt (1 700 m² vannlekeplass) og Fantasiewelt Wald (innendørs klatreverden for 2–8 år). William vil elske det! Åpent man–søn kl. 10–17.', url: 'https://www.erlebniswald-trappenkamp.de/', mapsQuery: 'Erlebniswald Trappenkamp, Tannenhof, 24635 Daldorf, Deutschland' },
         ],
         tips: [

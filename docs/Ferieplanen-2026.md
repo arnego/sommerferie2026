@@ -153,7 +153,7 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 **Kjøring:** Hirtshals → Groß Buchwald, ~451 km, ~6 t 11 min via E45 sør gjennom Jylland → Padborg-grense → A7 sørover → Bordesholm-avkjøring → Groß Buchwald. (80 km/t med campingvogn i Danmark og Tyskland.) (verifisert, travelmath.com) ⚠️ Overskrider 6-timersgrensen — ta lang pause underveis i Jylland.
 
 **Campingplass: Groß Buchwald meadow-campspace (Campspace)**
-- Adresse: Groß Buchwald, Schleswig-Holstein, Deutschland
+- Adresse: Dorfplatz 4, 24582 Groß Buchwald, Deutschland
 - Nettside: https://campspace.com/en/s/family-friendly-meadow-campspace_23618
 - Fasiliteter: Naturcamp på eng hos privatpersonen Freya, i rolig schleswig-holsteiner landskap nær Bordesholm. Plass til opptil 6 personer, naturlig pitchplass for telt og campingvogn.
 - Booket: Ja (4. juni 2026) — Booking **#r442778** · Bekreftet (5. juni 2026) · Betalt: €26,40 (€20,00 + €6,40 Campspace-gebyr)
