@@ -156,7 +156,7 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 - Adresse: Groß Buchwald, Schleswig-Holstein, Deutschland
 - Nettside: https://campspace.com/en/s/family-friendly-meadow-campspace_23618
 - Fasiliteter: Naturcamp på eng hos privatpersonen Freya, i rolig schleswig-holsteiner landskap nær Bordesholm. Plass til opptil 6 personer, naturlig pitchplass for telt og campingvogn.
-- Booket: Ja (4. juni 2026) — Booking **#r442778** · Betalt: €26,40 (€20,00 + €6,40 Campspace-gebyr) · Avventer bekreftelse fra vert (Freya)
+- Booket: Ja (4. juni 2026) — Booking **#r442778** · Bekreftet (5. juni 2026) · Betalt: €26,40 (€20,00 + €6,40 Campspace-gebyr)
 - Bookingref: r442778
 - Innsjekk: 14:00–20:00 · Utsjekk: 09:00–12:00
 
