@@ -48,25 +48,24 @@ William er 5 år og er en viktig del av planleggingen:
 | 3 | Groß Buchwald (Groß Buchwald meadow-campspace) | DE | 4. juli kv. | 5. juli | 1 (transit) | 27 |
 | 4 | Berlin | DE | 5. juli | 8. juli | 3 | 27/28 |
 | 5 | Bad Schandau (Bohemian Switzerland) | DE | 8. juli | 10. juli | 2 | 28 |
-| 6 | Český Krumlov | CZ | 10. juli | 11. juli | 1* | 28 |
-| 7 | Graz | AT | 11. juli | 12. juli | 1* | 28 |
-| 8 | Plitvice Lakes NP | HR | 12. juli | 13. juli | 1* | 28 |
-| 9 | Split | HR | 13. juli | 20. juli | 7 | 29/30 |
-| 10 | Rovinj, Istria | HR | 20. juli | 23. juli | 3 | 30 |
-| 11 | Liechtensteinklamm (St. Johann im Pongau) | AT | 23. juli | 24. juli | 1* | 30 |
-| 12 | Zugspitze | DE | 24. juli | 26. juli | 2 | 31 |
-| 13 | Bamberg | DE | 26. juli | 28. juli | 2 | 31 |
-| 14 | Wernigerode (Harz) | DE | 28. juli | 29. juli | 1* | 31 |
-| 15 | Hamburg | DE | 29. juli | 30. juli | 1* | 31 |
-| 16 | Billund (Legoland) | DK | 30. juli | 1. aug | 2 | 31 |
-| 17 | Hirtshals → Larvik (Color Line ferge, avgang 22:15) | DK/NO | 1. aug kv. | 2. aug | — | 31 |
-| 18 | Kongsberg | NO | 2. aug | — | Hjemme | 31 |
+| 6 | Český Krumlov | CZ | 10. juli | 12. juli | 2* | 28 |
+| 7 | Mondsee (transit) | AT | 12. juli | 13. juli | 1* | 28 |
+| 8 | Postojna | SI | 13. juli | 15. juli | 2 | 28 |
+| 9 | Rovinj, Istria | HR | 15. juli | 22. juli | 7 | 29/30 |
+| 10 | Klagenfurt / Wörthersee | AT | 22. juli | 23. juli | 1* | 30 |
+| 11 | Zugspitze | DE | 23. juli | 26. juli | 3 | 30/31 |
+| 12 | Bamberg | DE | 26. juli | 28. juli | 2 | 31 |
+| 13 | Braunlage (Harz) | DE | 28. juli | 29. juli | 1* | 31 |
+| 14 | Hamburg | DE | 29. juli | 30. juli | 1* | 31 |
+| 15 | Billund (Legoland) | DK | 30. juli | 1. aug | 2 | 31 |
+| 16 | Hirtshals → Larvik (Color Line ferge, avgang 22:15) | DK/NO | 1. aug kv. | 2. aug | — | 31 |
+| 17 | Kongsberg | NO | 2. aug | — | Hjemme | 31 |
 
 *Kortstopp — unntak fra 3-netter-regelen (transit eller prioritert destinasjon).
 
-**Totalt:** 29 netter borte — 11 i Kroatia (Plitvice 1, Split 7, Rovinj 3), 3 i Berlin, 2 i Bad Schandau, 2 nye kulturnetter (Český Krumlov 1, Graz 1), 1 natt Liechtensteinklamm, 2 netter Zugspitze, 2 netter Bamberg, 1 natt Wernigerode (Harz), 3 transittnetter (Hirtshals, Jarplund/Flensburg, Hamburg), 2 i Billund. Hjemme 2. august (kveldsavgang Hirtshals 1. august, ankomst Larvik natt til 2. august).
+**Totalt:** 29 netter borte — 7 i Kroatia (Rovinj 7), 2 i Slovenia (Postojna), 1 natt Mondsee (AT), 1 natt Klagenfurt/Wörthersee (AT), 3 netter Zugspitze, 3 netter Berlin, 2 netter Bad Schandau, 2 netter Český Krumlov, 2 netter Bamberg, 1 natt Braunlage (Harz), 3 transittnetter (Hirtshals, Groß Buchwald, Hamburg), 2 i Billund. Hjemme 2. august (kveldsavgang Hirtshals 1. august, ankomst Larvik natt til 2. august).
 
-> **Merk:** Plitvice er redusert fra 2 til 1 natt og Rovinj fra 4 til 3 netter for å gi plass til de nye kulturstoppene (Český Krumlov, Graz) og overnatting ved Liechtensteinklamm. Det gir 11 netter i Kroatia — under det opprinnelige målet på 14 netter (§2). Til gjengjeld er alle kjøreetapper nå under 6 timer.
+> **Merk:** Graz, Plitvice og Split er fjernet. Erstatt med: Mondsee (transit 1n), Postojna/Slovenia (2n) og ekstra tid i Rovinj (3n → 7n). Liechtensteinklamm er erstattet med Klagenfurt/Wörthersee. Zugspitze utvidet til 3 netter. Totalt 7 netter i Kroatia — under opprinnelig mål på 14 netter (§2), men bevisst valg. Alle kjøreetapper under 6 timer.
 
 ---
 
@@ -79,21 +78,20 @@ William er 5 år og er en viktig del av planleggingen:
 | Groß Buchwald | Berlin | ~350 km (verifisert, travelmath.com) | ~4 t 47 min | A7 sørover → Hamburg → A24 øst mot Berlin |
 | Berlin | Bad Schandau | 222 km (verifisert) | 3 t 2 min | A13/A17 sørøst |
 | Bad Schandau | Český Krumlov | 287 km (verifisert, rome2rio) | 3 t 56 min | E442/D8 sørover → Praha-omkjøring → D3/E55 sør mot České Budějovice → Český Krumlov |
-| Český Krumlov | Graz | 307 km (verifisert) | 4 t 12 min | E55 sør → České Budějovice → Linz → A9 Pyhrn-motorvei sør → Graz |
-| Graz | Plitvice Lakes | 310 km (verifisert; 306–335 km avh. av rute) | 4 t 15 min | A9 sør → Spielfeld/Šentilj grense → A1 Slovenia → Maribor → Zagreb → A1 Kroatia → D429 → D1 inn mot nasjonalparken |
-| Plitvice | Split | 253 km (verifisert) | 3 t 28 min | D1/D33 sørover mot kysten → D8 Jadranska magistrala sør |
-| Split | Rovinj (via Zagreb/Rijeka) | 433 km (verifisert) | 5 t 56 min | A1 nord → Zagreb → A6 vest → Rijeka → Y-motorvei vest mot Istria |
-| Rovinj | Liechtensteinklamm (St. Johann im Pongau) | 405 km (verifisert, rome2rio) | 5 t 33 min | A9 Istria nord → Slovenia (Koper) → A1 Ljubljana → Karawanken → Villach → A10 Tauern nord → St. Johann im Pongau |
-| Liechtensteinklamm | Zugspitze/Garmisch | 237 km (verifisert, rome2rio) | 3 t 15 min | A10 nord → Salzburg → A8 vest (mot München) → A95 sør → Garmisch → Grainau |
-| Zugspitze/Garmisch | Bamberg | 323 km (verifisert) | 4 t 25 min | A95/A8 nord → München → A9 nord → A73 mot Bamberg |
-| Bamberg | Wernigerode (Harz) | 274 km (verifisert, rome2rio) | 3 t 45 min | A73 nord → Erfurt → A71/A38 → Nordhausen → B4/B81 → Elbingerode/Wernigerode |
-| Wernigerode (Harz) | Hamburg | 233 km (verifisert, rome2rio) | 3 t 12 min | A36 → A395/A39 → A7 nord → Hamburg |
+| Český Krumlov | Mondsee | ~154 km (verifisert) | ~2 t 6 min | E55/A7 sør → Linz → A1 vest → B154 sør → Mondsee |
+| Mondsee | Postojna | ~385 km (verifisert) | ~5 t 16 min | Mondsee → Salzburg (~70 km) → A10 Tauern → Villach → A2 → Ljubljana → A1 → Postojna |
+| Postojna | Rovinj | ~110 km (verifisert) | ~1 t 30 min | A1 → E70 → Koper → A9 Istria → Rovinj |
+| Rovinj | Klagenfurt / Wörthersee | ~270 km (verifisert) | ~3 t 42 min | A9 Istria nord → Koper → A1 Ljubljana → Karawanken-tunnelen → Villach → A2 → Klagenfurt |
+| Klagenfurt / Wörthersee | Zugspitze/Grainau | ~284 km (verifisert) | ~3 t 53 min | A10 Tauern → A13 Brenner → Innsbruck → A12 → B2 → Grainau (ev. stopp Liechtensteinklamm +45 min) |
+| Zugspitze/Grainau | Bamberg | 323 km (verifisert) | 4 t 25 min | A95/A8 nord → München → A9 nord → A73 mot Bamberg |
+| Bamberg | Braunlage (Harz) | ~280 km | ~3 t 50 min | A73 nord → Erfurt → A4/A38 → Nordhausen → B4 → Braunlage |
+| Braunlage (Harz) | Hamburg | ~246 km | ~3 t 22 min | B4 nord → A7 nord → Hamburg |
 | Hamburg | Billund | 280 km (verifisert) | 3 t 50 min | A7 nord → Flensburg-grensa → E45 nord inn i Danmark → Billund |
 | Billund | Hirtshals | 250 km (verifisert) | 3 t 26 min | E45 nord gjennom Jutland til Hirtshals |
 | Hirtshals | Larvik (ferge) | — | 4 t 25 min | Color Line SuperSpeed — avgang kl. 22:15, ankomst Larvik ~02:40 (natt til 2. august) |
 | Larvik | Kongsberg | 91 km (verifisert) | 1 t 15 min | E18/E134 |
 
-Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorvei (gjennomsnittsfart ca. 73 km/t inkl. reduksjon for byggesoner, kryss og hvilepauser). ⚠️ **Etappen Hirtshals → Groß Buchwald (~451 km, ~6t 11min) overskrider 6-timersgrensen** — ta minst én lang pause underveis i Jylland. Den nest lengste er Rovinj → Liechtensteinklamm (~405 km, ~5t 33min). De tre tidligere lange dagene (Bad Schandau → Berndorf, Rovinj → Zugspitze og Bamberg → Hamburg) er delt opp av de nye stoppene Český Krumlov, Graz, Liechtensteinklamm og Wernigerode (Harz).
+Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorvei (gjennomsnittsfart ca. 73 km/t inkl. reduksjon for byggesoner, kryss og hvilepauser). ⚠️ **Etappen Hirtshals → Groß Buchwald (~451 km, ~6t 11min) overskrider 6-timersgrensen** — ta minst én lang pause underveis i Jylland. Den lengste av de nye søretappene er Mondsee → Postojna (~385 km, ~5t 16min) — innenfor grensen. Estimert total kjørelengde: ~4 100 km.
 
 ---
 
@@ -239,7 +237,7 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 
 ---
 
-### Stopp 6: Český Krumlov, Tsjekkia (1 natt: 10.–11. juli)
+### Stopp 6: Český Krumlov, Tsjekkia (2 netter: 10.–12. juli)
 
 **Kjøring:** Bad Schandau → Český Krumlov, 287 km, 3 t 56 min via E442/D8 sørover → Praha-omkjøring → D3/E55 sør mot České Budějovice → Český Krumlov. (80 km/t med campingvogn gjennom Tsjekkia.) (verifisert, rome2rio)
 
@@ -264,113 +262,73 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 - **Kjøp tsjekkisk e-vignett** (elektronisk, ~ ekvivalent 270 CZK/10 dager per kjøretøy) på edalnice.cz før innkjøring på motorvei
 - Český Krumlov blir fullt av dagsturister midt på dagen — gå tidlig morgen eller om kvelden for å ha de smale gatene mest mulig for seg selv
 - Ta med kontanter i tsjekkiske kroner (CZK) — mange små steder tar ikke kort
-- Neste dag: 307 km til Graz (~4 t 12 min) via Linz og A9 Pyhrn-motorvei
+- Neste dag: ~154 km til Mondsee (~2 t 6 min) via Linz og A1 vestover — kort og behagelig kjøredag
 
 ---
 
-### Stopp 7: Graz, Østerrike (1 natt: 11.–12. juli)
+### Stopp 7: Mondsee, Østerrike (1 natt: 12.–13. juli)
 
-**Kjøring:** Český Krumlov → Graz, 307 km, 4 t 12 min via E55 sør → České Budějovice → Linz → A9 Pyhrn-motorvei sør → Graz. (80 km/t med campingvogn gjennom Tsjekkia og Østerrike.) (verifisert)
+**Kjøring:** Český Krumlov → Mondsee, ~154 km, ~2 t 6 min via E55/A7 sør → Linz → A1 vest → B154 sør → Mondsee. (80 km/t med campingvogn.) (verifisert)
 
-**Campingplass: Reisemobil-Stellplatz Graz (tidl. Camping Central)**
-- Adresse: Martinhofstraße 3, 8054 Graz (Straßgang-bydelen, sørvest i byen)
-- Nettside: https://www.reisemobilstellplatz-graz.at
-- Fasiliteter: Tar imot både bobil og campingvogn (~160 plasser). Strøm på alle plasser, moderne sanitæranlegg, vaskemaskin, café, vann/tømming. Ligger i skogkanten rett ved Straßgangs store utendørsbasseng. Buss til sentrum hvert 15. min (~6 km).
+**Campingplass: Camp MondSeeLand**
+- Adresse: Punzau 21, 5310 Tiefgraben am Mondsee, Østerrike
+- Nettside: https://www.campmondsee.at/en
+- Fasiliteter: 4★-campingplass med panoramautsikt mot Schafberg og Drachenwand. Oppvarmet utendørs basseng, «Robinson-dal» lekeplass for barn, direkteadgang til Mondsee. Vurdert 4,8/5.
 - Booket: Nei
 - Bookingref: —
-- Telefon: +43 676 3785102 · E-post: office@reisemobilstellplatz-graz.at
-- Innsjekk: hele døgnet (24/7) · Utsjekk: fleksibel (ca. — verifisér ved booking)
+- Innsjekk: 14:00 · Utsjekk: 11:00
 
 **Aktiviteter:**
 
 | Aktivitet | Type | Prioritet | Beskrivelse |
 |-----------|------|-----------|-------------|
-| Grazer Altstadt (UNESCO) | Kultur/UNESCO | Must-do | En av Sentral-Europas best bevarte gamlebyer — UNESCO-verdensarv. Røde tegltak, renessansegårder og yrende torg. Østerrikes nest største by med ung, levende atmosfære. https://www.graztourismus.at/en |
-| Schloßberg og klokketårnet (Uhrturm) | Severdighet/utsikt | Must-do | Bytårnet på fjellet midt i Graz med byens ikoniske klokketårn. Ta den fjellbane/heisen opp (eller 260 trinn) til panoramautsikt — gøy for William. https://www.graztourismus.at/en/sights/the-schlossberg-graz_pl5379 |
-| Straßgang-badet | Friluft/vann | Must-do | Stort utendørsbasseng rett ved campingplassen — perfekt avkjøling for William etter kjøredagen. |
-| Schloss Eggenberg | Kultur/severdighet | Nice-to-have | Praktfullt barokkslott (UNESCO) med park og påfugler i utkanten av Graz. Fin formiddagsutflukt. https://www.museum-joanneum.at/en/schloss-eggenberg |
+| Badeliv i Mondsee | Friluft/vann | Must-do | Turkisblå Salzkammergut-innsjø rett ved campingen. Oppvarmet basseng på camp + direkteadgang til Mondsee for svømming. Panoramautsikt mot Schafberg og Drachenwand. |
+| Mondsee landsby og kirke | Kultur | Nice-to-have | Pittoresk landsby med berømt augustinerklosterkirke (kjent fra Sound of Music-bryllupsscenen). 5 min kjøring fra campingen. https://www.mondsee.at/ |
 
 **Tips:**
-- **Østerriksk motorvei-vignett** kreves (10-dagersvignett ~12 EUR per kjøretøy — bil og campingvogn regnes separat) — kjøp før innkjøring på A9 (asfinag.at)
-- Ingen Umweltzone i Graz, men sentrum har soner med kjørerestriksjoner — bruk bussen fra campingplassen
-- Neste dag: 310 km til Plitvice (~4 t 15 min) via Maribor og Zagreb — **slovensk vignett** (7 dager ~16 EUR) kjøpes før grensen
+- **Østerriksk motorvei-vignett** kreves (~€9,90 per kjøretøy, 10 dager) — kjøp online på asfinag.at eller ved grensen
+- Kort kjøredag (~154 km, 2t 6min) — ankom tidlig ettermiddag og nyt ettermiddagen ved sjøen
+- Neste dag: ~385 km til Postojna (~5 t 16 min) via Salzburg → A10 Tauern → Villach → Ljubljana — tidlig avreise anbefales
 
 ---
 
-### Stopp 8: Plitvice Lakes NP, Kroatia (1 natt: 12.–13. juli)
+### Stopp 8: Postojna, Slovenia (2 netter: 13.–15. juli)
 
-**Kjøring:** Graz → Plitvice Lakes, 310 km, 4 t 15 min via A9 sør → Spielfeld/Šentilj grense → A1 Slovenia → Maribor → Zagreb → A1 Kroatia → D429 → D1 inn mot nasjonalparken. Slovensk vignett brukes her. (80 km/t med campingvogn i alle land på ruten.) (verifisert; 306–335 km avhengig av rute)
+**Kjøring:** Mondsee → Postojna, ~385 km, ~5 t 16 min via Salzburg → A10 Tauern → Villach → A2 → Ljubljana → A1 → Postojna. (80 km/t med campingvogn.) (verifisert)
 
-**Campingplass: Camping Plitvice**
-- Adresse: Mukinje, 53231 Plitvička Jezera, Kroatia — 3 km fra Plitvice inngang
-- Nettside: https://campingplitvice.hr/
-- Fasiliteter: 5-stjerns resort med 2 bassenger inkl. barnerutsjebane, kajakkutleie, e-sykkelutleie, restaurant, moderne sanitæranlegg
+**Campingplass: Camping Pivka Jama**
+- Adresse: Veliki Otok 50, 6230 Postojna, Slovenia
+- Nettside: http://camping-postojna.com/en
+- Fasiliteter: Rolig skog-camping 4 km fra Postojnahulen. Plass for campingvogn, moderne sanitæranlegg.
 - Booket: Nei
 - Bookingref: —
-- Innsjekk: 13:00 · Utsjekk: 11:00 (ca. — verifisér ved booking)
+- Innsjekk: 14:00 · Utsjekk: 11:00
 
 **Aktiviteter:**
 
 | Aktivitet | Type | Prioritet | Beskrivelse |
 |-----------|------|-----------|-------------|
-| Store runde (Rute C/K) | Natur/UNESCO | Must-do | De 16 sjøene med Veliki Slap (78 m — Kroatias høyeste foss). Elektrisk båttur over Kozjak-sjøen. Spektakulære trebroer over fossene. UNESCO-verdensarv. Bestill billett online! https://np-plitvicka-jezera.hr |
-| Galovačke bukara-fossefall | Natur | Must-do | Spektakulær serie med turkisblå fosser i øvre innsjøsystem. Nær inngang 1. https://np-plitvicka-jezera.hr |
-| Rastoke, Slunj | Natur/kultur | Nice-to-have | «Lille Plitvice» — pittoresk landsby der Slunjčica-elva renner som fosser mellom husene. Mulig stopp på veien til Split. https://slunj-rastoke.hr/en/homepage-en/ |
+| Postojnahulen (Postojnska jama) | Natur/severdighet | Must-do | Europas mest besøkte hule — 24 km nettverkslengde, 5 km guidet tur med elektrisk tog. Spektakulære tropfstein-formasjoner og katedraler. Alltid 10 °C inne — ta med jakke. https://www.postojnska-jama.eu/en/postojna-cave/ |
+| Predjama-slottet (Predjamski grad) | Severdighet | Must-do | Middelalderfestning bygd inn i en 123 m høy fjellvegg — en av verdens mest dramatisk plasserte slott. 10 km fra hulen. https://www.postojnska-jama.eu/en/predjama-castle/ |
 
 **Tips:**
-- **Med kun 1 natt:** ankom om ettermiddagen 12. juli, sjekk inn og hvil. Gå inn i parken **tidlig (kl. 08:00) 13. juli** og gjør Store runde før avreise mot Split på ettermiddagen.
-- Bestill parkbillett online FØR ankomst (https://np-plitvicka-jezera.hr/en/) — sparer kø og garanterer plass
-- Gå inn ved inngang 1 for enklest tilgang til Veliki Slap og elektrisk båt
-- William kan gå hele Store runde (~8 km med pauser), men ta med bæresele som backup
-- Tips: Rastoke (Slunj) ligger ~30 min mot Split og kan tas som et kort strekk-bena-stopp på avreisedagen
+- Bestill Postojnahule-billett online på forhånd — sparer kø og sikrer plass
+- Ta med varm jakke inn i hulen (alltid 10 °C inne)
+- Kombibillett for Postojnahule + Predjama-slottet er rimeligst
+- **Slovensk vignett** (~€16, 7 dager) kreves — kjøp på e-vinjeta.si eller ved grensen
+- Neste dag: ~110 km til Rovinj (~1 t 30 min) via A1 → Koper → A9 Istria
 
 ---
 
-### Stopp 9: Split, Kroatia (7 netter: 13.–20. juli)
+### Stopp 9: Rovinj, Istria, Kroatia (7 netter: 15.–22. juli)
 
-**Kjøring:** Plitvice → Split, 253 km, 3 t 28 min via A1 sørover (via D429 til A1) → avkjøring mot Split. (80 km/t med campingvogn på kroatisk motorvei.) (verifisert)
-
-**Campingplass: Camping Stobreč Split** ✅
-- Adresse: Stobreč bb, 21311 Stobreč, Kroatia — 6 km fra Diokletians palass, rett ved sandstrand
-- Nettside: https://www.campingsplit.com/
-- Fasiliteter: Sandstrand, bademuligheter, servicebygning, strømtilkobling. Godt utgangspunkt for Split sentrum, Trogir og Krka NP.
-- **Booket: Ja — 8. mai 2026**
-- **Bookingref: PH27767231 (Phobs)**
-- Innsjekk: 13:00 (pitches) · Utsjekk: 07:00–12:30
-- Sen utsjekk mulig fram til 18:00 mot 50 % av prisen — koordineres med resepsjonen
-
-**Aktiviteter:**
-
-| Aktivitet | Type | Prioritet | Beskrivelse |
-|-----------|------|-----------|-------------|
-| Diokletians palass, Split | Kultur/UNESCO | Must-do | 2 000 år gammel romersk keiserpalass der 3 000 mennesker bor i dag. Gå gjennom kjelleranleggene, Peristyl-plassen og Katedralen Sv. Duje (keiserens mausoleum!). https://visitsplit.com |
-| Trogir gamlebyen | Kultur/UNESCO | Must-do | Mellomalderby på liten øy (UNESCO). Romansk-gotisk katedrale St. Lovro med Radovanporten (1240). 30 km vest for Stobreč — perfekt kveldstur. https://www.trogir.hr |
-| Skradinski buk (Krka NP) | Natur | Must-do | Sju travertinfosser over 800 m med turkisblå badebassenger. Badesesong juni–okt. Unikt og spektakulært. Dagstur fra Split (~86 km). https://npkrka.hr/en_us/ |
-| Visovac-kloster (Krka NP) | Kultur/båttur | Must-do | Fransiskanerkloster fra 1400-tallet på liten øy i Visovac-sjøen. Nås kun med båt inkludert i parkbillett. https://npkrka.hr/en_us/ |
-| Šibenik gamlebyen + St. Jakobs katedrale | Kultur/UNESCO | Must-do | Verdens eneste katedral utelukkende bygget av hugget stein (1431–1535), UNESCO-verdensarv. Kombiner med Krka NP-dagstur. https://www.sibenik-tourism.hr/lokacije/katedrala-sv-jakova/1/en.html |
-| Klis festning | Severdighet | Nice-to-have | Middelalderborg på klippen nord for Split. Panoramautsikt over Adriaterhavet. Game of Thrones-lokasjon (Meereen). https://www.tvrdavaklis.com/ |
-| Marjan-parken, Split | Friluft/strand | Nice-to-have | Skogspark på halvøy med sjøbading, sykkelstier og utsikt. William kan sykle. https://www.marjan-parksuma.hr/ |
-| Kornati nasjonalpark (dagstur) | Natur/sjø | Nice-to-have | 89 ubebodde øyer og holmer — Middelhavet i sin reneste form. Dagstur med båt fra Šibenik. https://kornati.hr |
-
-**Tips:**
-- Camping Stobreč Split: reserver i mai/juni for julibooking
-- Krka NP-billett kjøpes online (https://npkrka.hr/) — skip kø
-- Bading i Skradinski buk kun tillatt i merket sone — ta med badegreier!
-- Split sentrum: parkér utenfor (Zenta eller North parkering) og ta buss inn
-- Klis festning: åpner kl. 09:00 — gå tidlig for best utsikt og minst varme
-- Trogir er en 5-minutters bro-spasertur fra fastlandet — 30 km vest for Stobreč
-
----
-
-### Stopp 10: Rovinj, Istria, Kroatia (3 netter: 20.–23. juli)
-
-**Kjøring:** Split → Rovinj, 433 km, 5 t 56 min via A1 nord → Zagreb → A6 vest → Rijeka → Y-motorvei vest mot Istria. Naturlig siste stopp i Kroatia på hjemveien. (80 km/t med campingvogn på kroatisk motorvei.) (verifisert)
+**Kjøring:** Postojna → Rovinj, ~110 km, ~1 t 30 min via A1 → E70 → Koper → A9 Istria → Rovinj. (80 km/t med campingvogn.) (verifisert)
 
 **Campingplass: Camping Polari**
 - Adresse: Polari 1, 52210 Rovinj, Kroatia
 - Nettside: https://www.maistra.com/properties/campsite-polari/
 - Fasiliteter: Maistra's største camping. 2 km strand (stein/grus), 2 utendørs bassenger + spray park med 3 bassenger og vannlekeplass, flytende aqua park, SUP/pedalbåtleie, taxibåt til Rovinj, sykkelsti til Rovinj (3,5 km). Kåret til "Best campsite for kids" siden 2024. Åpen 24.04–04.10.2026.
-- Booket: Nei
+- Booket: Nei (tidligere booking MÅ endres: 20–23 jul → 15–22 jul, 7 netter)
 - Bookingref: —
 - Innsjekk: 15:00 · Utsjekk: 10:00 (Maistra standard)
 
@@ -386,73 +344,73 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 | Lim-fjorden (Limski kanal) | Natur/båttur | Nice-to-have | Dramatisk 13 km lang fjordarm — unik i Kroatia. Østers, fisk og pittoresk natur. Båtturer fra Rovinj havn. https://www.istra.hr |
 
 **Tips:**
-- Bestill Camping Polari senest april — juli er høysesong
+- Bestill Camping Polari senest april — juli er høysesong (husk å endre booking til 15–22 jul, 7 netter)
 - Dinopark Funtana: kjøp billett online på forhånd i høysesong
 - Pula amfiteater: gå tidlig på morgenen for å unngå folkemengder og sommerheten
 - Kroatia bruker EUR siden januar 2023 — ingen valutaveksling nødvendig
-- Neste dag: 405 km til Liechtensteinklamm/St. Johann im Pongau (~5 t 33 min) — start tidlig morgen
+- Neste dag: ~270 km til Klagenfurt/Wörthersee (~3 t 42 min) via Koper → Ljubljana → Karawanken-tunnelen — start tidlig morgen
 
 ---
 
-### Stopp 11: Liechtensteinklamm (St. Johann im Pongau), Østerrike (1 natt: 23.–24. juli)
+### Stopp 10: Klagenfurt / Wörthersee, Østerrike (1 natt: 22.–23. juli)
 
-**Kjøring:** Rovinj → St. Johann im Pongau, 405 km, 5 t 33 min via A9 Istria nord → Slovenia (Koper) → A1 Ljubljana → Karawanken-tunnelen → Villach → A10 Tauern nord → St. Johann im Pongau. Slovensk og østerriksk vignett brukes. (80 km/t med campingvogn i alle land.) (verifisert, rome2rio)
+**Kjøring:** Rovinj → Klagenfurt/Wörthersee, ~270 km, ~3 t 42 min via A9 Istria nord → Koper → A1 Ljubljana → Karawanken-tunnelen → Villach → A2 → Klagenfurt. Slovensk og østerriksk vignett brukes. (80 km/t med campingvogn i alle land.) (verifisert)
 
-**Campingplass: Landhaus Camping Kastenhof**
-- Adresse: Wagrainer Straße, 5600 St. Johann im Pongau, Østerrike — sørenden av St. Johann, 60 km sør for Salzburg
-- Nettside: https://www.camping-kastenhof.at
-- Fasiliteter: Familiedrevet camping- og landhus. Plasser for campingvogn/bobil med strøm, moderne sanitæranlegg. **Liechtensteinklamm er gåavstand fra plassen!** Sentrum av St. Johann (butikker, restauranter) til fots. Bademuligheter og turstier i nærheten.
+**Campingplass: Falkensteiner Camping Wörthersee**
+- Adresse: Am Wörthersee, 9020 Klagenfurt am Wörthersee, Østerrike
+- Nettside: https://www.falkensteinercamping.com/en/woerthersee
+- Fasiliteter: Åpnet 1. juni 2026. Direkteadgang til Wörthersee-stranden. Familievennlig resort ved Europas varmeste badesø.
 - Booket: Nei
 - Bookingref: —
-- Innsjekk: 14:00 · Utsjekk: 11:00 (ca. — verifisér ved booking)
+- Innsjekk: 14:00 · Utsjekk: 11:00
 
 **Aktiviteter:**
 
 | Aktivitet | Type | Prioritet | Beskrivelse |
 |-----------|------|-----------|-------------|
-| Liechtensteinklamm | Natur/severdighet | Must-do | En av Alpenes lengste og dypeste juv (270 m). Trebroer og stiger gjennom den vannslepne kløften, med den nye «Helix»-spiraltrappen som stiger 30 m. Tordnende foss og regnbue-tåke. Et naturskue for hele familien — gåavstand fra campingen. https://www.josalzburg.com/en/activities/liechtenstein-gorge.html |
-| Kveldstur i St. Johann | Friluft/kultur | Nice-to-have | Pongauer Dom (nygotisk katedral) og rolig fjellbygdsstemning. Fine spaserturer langs Salzach-elven etter kjøredagen. |
+| Badeliv i Wörthersee | Friluft/vann | Must-do | Europas varmeste naturbadesø (26–28 °C om sommeren). Strandadgang rett fra campingen. Ideelt for William etter syv dager i Rovinj. https://www.woerthersee.com/en/ |
+| Liechtensteinklamm (benstrekk neste dag) | Natur/severdighet | Nice-to-have | En av Alpenes dypeste juv (270 m) i St. Johann im Pongau — ~45 min omvei via A10 Tauern på vei til Zugspitze. Trebroer og stiger langs fossestryk, ny «Helix»-spiraltrapp. Solide sko og jakke anbefales. https://www.josalzburg.com/en/activities/liechtenstein-gorge.html |
 
 **Tips:**
-- **Klamm-tips:** Liechtensteinklamm kan ikke kjøres med barnevogn — ta med bæresele for William. Solide sko anbefales (det drypper). Sjekk åpningstider på josalzburg.com før besøk.
-- Østerriksk vignett fra Graz-etappen er fortsatt gyldig; slovensk vignett dekker transitten gjennom Slovenia
-- Adressen på campingen bør verifiseres ved booking (Wagrainer Straße / sørenden av St. Johann)
-- Neste dag: kort etappe på 237 km til Zugspitze/Grainau (~3 t 15 min) — rolig morgen og evt. et nytt klamm-besøk er mulig
+- Wörthersee: finest bading på ettermiddagen — campingen har direkteadgang til stranden
+- **Slovensk vignett** (~€16) + **østerriksk vignett** (~€9,90) kreves for ruten — kjøp online før avreise
+- Neste dag: ~284 km til Zugspitze/Grainau (~3 t 53 min) via A10 Tauern → Innsbruck → Brenner (ev. stopp Liechtensteinklamm som benstrekk +45 min)
 
 ---
 
-### Hjemreise — stopp og transittdager (24. juli – 1. august)
+### Hjemreise — stopp og transittdager (23. juli – 1. august)
 
-Hjemreisen inkluderer opplevelsesstoppene Zugspitze, Wernigerode (Harz), Hamburg og Billund (Legoland) — i tillegg til to kulturnetter i Bamberg. Liechtensteinklamm (stopp 11) er nå en egen overnatting (se over).
+Hjemreisen inkluderer opplevelsesstoppene Zugspitze, Braunlage (Harz), Hamburg og Billund (Legoland) — i tillegg til to kulturnetter i Bamberg. Klagenfurt/Wörthersee (stopp 10) er en egen overnatting (se over).
 
-**Zugspitze, Bayern (2 netter: 24.–26. juli)**
-- Kjøring: Liechtensteinklamm/St. Johann im Pongau → Zugspitze/Grainau, 237 km, 3 t 15 min via A10 nord → Salzburg → A8 vest (mot München) → A95 sør → Garmisch → Grainau. (80 km/t med campingvogn.) (verifisert, rome2rio)
+**Zugspitze, Bayern (3 netter: 23.–26. juli)**
+- Kjøring: Klagenfurt/Wörthersee → Zugspitze/Grainau, ~284 km, ~3 t 53 min via A10 Tauern → A13 Brenner → Innsbruck → A12 Inn-dal → B2 → Grainau. Ev. stopp Liechtensteinklamm +45 min. (80 km/t med campingvogn.) (verifisert)
 - Campingplass: Camping Resort Zugspitze, Griesener Str. 9, 82491 Grainau
 - Nettside: https://www.camping-resort-zugspitze.de/
 - Innsjekk: 14:00 · Utsjekk: 12:00 (ca. — verifisér ved booking)
-- Ankomstdag (24. juli): kort kjøredag — ankom tidlig ettermiddag og ta en rolig tur til **Eibsee**, den turkisblå alpinsjøen rett ved campingplassen (bading, kanotur, fjellutsikt).
-- Aktiviteter dag 1 (25. juli — full dag): **Zugspitzbahn** — tannhjulsbane og gondolbane til Tysklands høyeste topp (2 962 m). Book billett på forhånd: https://www.zugspitze.de/
-- Avreisedag (26. juli): tidlig start mot Bamberg. (Alternativ for den fulle dagen: **Neuschwanstein Castle**, ~75 km, krever obligatorisk forhåndsbooking på https://www.neuschwanstein.de/ — velg enten Zugspitzbahn eller Neuschwanstein når det bare er én full dag.)
-- Tips: Østerriksk vignett fra utreisen dekker eventuell tollstrekning. Ingen Umweltzone i Grainau/Garmisch. Med to netter er det tid til én stor opplevelse + Eibsee.
+- Ankomstdag (23. juli): ankom tidlig ettermiddag og ta en rolig tur til **Eibsee**, den turkisblå alpinsjøen rett ved campingplassen (bading, kanotur, fjellutsikt).
+- Dag 2 (24. juli — full dag): **Zugspitzbahn** — tannhjulsbane og gondolbane til Tysklands høyeste topp (2 962 m). Book billett på forhånd: https://www.zugspitze.de/
+- Dag 3 (25. juli — full dag): **Neuschwanstein Castle**, ~75 km, krever obligatorisk forhåndsbooking på https://www.neuschwanstein.de/. Med 3 netter er det nå tid til begge store opplevelser!
+- Tips: Book Zugspitzbahn og Neuschwanstein online på forhånd — Juli er høysesong. Ingen Umweltzone i Grainau/Garmisch. Nice-to-have: **Höllentalklamm** — dramatisk kløftevandring fra Hammersbach (5–6 km tur/retur, ~2–3t, gratis inngang).
 
 **Bamberg (2 netter: 26.–28. juli)**
 - Kjøring: Zugspitze/Grainau → Bamberg, 323 km, 4 t 25 min via A95/A8 nord → München → A9 nord → A73. (80 km/t med campingvogn, gjennomsnitt ~73 km/t.) (verifisert)
 - Campingplass: Camping Island Bamberg, Campinginsel, 96052 Bamberg
 - Nettside: http://www.campinginsel.de/
 - Innsjekk: 13:00 · Utsjekk: 12:00 (ca. — verifisér ved booking)
-- Aktiviteter: Bamberg Altstadt (UNESCO) — over 2 400 fredede bygninger, romansk-gotisk katedral med "Bamberger Reiter", Altes Rathaus på elveøy. To netter gir god tid til gamlebyen og aftenmidddag med Schlenkerla Rauchbier.
-- Tips: Ingen Umweltzone. Kompakt gamlebyen — parkér ved campingplassen og gå inn. Neste dag: kort etappe på 274 km til Wernigerode/Harz (~3 t 45 min).
+- Aktiviteter: Bamberg Altstadt (UNESCO) — over 2 400 fredede bygninger, romansk-gotisk katedral med "Bamberger Reiter", Altes Rathaus på elveøy. To netter gir god tid til gamlebyen og aftensmiddag med Schlenkerla Rauchbier.
+- Tips: Ingen Umweltzone. Kompakt gamlebyen — parkér ved campingplassen og gå inn. Neste dag: ~280 km til Braunlage/Harz (~3 t 50 min).
 
-**Wernigerode (Harz) (1 natt: 28.–29. juli)**
-- Kjøring: Bamberg → Wernigerode (Camping am Brocken, Elbingerode), 274 km, 3 t 45 min via A73 nord → Erfurt → A71/A38 → Nordhausen → B4/B81 → Elbingerode. (80 km/t med campingvogn.) (verifisert, rome2rio)
-- Campingplass: Camping am Brocken, Elbingerode (Oddhausweg/ved skogkanten), 38875 Oberharz am Brocken
-- Nettside: https://campingambrocken.de
-- Innsjekk: ca. 15:00 (skranke stengt 13–15 og 22–07) · Utsjekk: ca. 12:00 (ca. — verifisér ved booking)
-- Aktiviteter: **Wernigerode** — fargerik bindingsverksby med eventyrslott (Schloss Wernigerode) og den historiske **Harzer Schmalspurbahn** (damptog til Brocken-toppen — William vil elske det!). I nærheten: **Rübeland dryppsteinhuler**, **Rappbodetalsperre** med Tysklands lengste hengebro (Titan RT) og megazipline, og fine skogsturer/bademuligheter ved demningene. Et stopp som dekker både kultur, bading og turer.
-- Tips: Kurkort fra campingen gir gratis buss i Wernigerode-området. Ingen Umweltzone. Bryter opp den tidligere lange Bamberg→Hamburg-dagen i to behagelige etapper.
+**Braunlage (Harz) (1 natt: 28.–29. juli)**
+- Kjøring: Bamberg → Braunlage, ~280 km, ~3 t 50 min via A73 nord → Erfurt → A4/A38 → Nordhausen → B4 → Braunlage.
+- Campingplass: Camping- und Wohnmobilstellplatz Braunlage, Am Campingplatz 1, 38700 Braunlage
+- Nettside: https://campingbraunlage.de
+- Innsjekk: ca. 15:00 · Utsjekk: ca. 12:00
+- **Must-do: Naturmythenpfad** — 4 km sirkelrute gjennom Harz-skogen med 9 interaktive installasjoner (ønsketreet, labyrinten, myte-skulpturer). 3–4t, starter 600 m fra campingen. Magisk for barn!
+- Nice-to-have (dagtur ~25 km): **Wernigerode** — fargerik bindingsverksby med slott og den historiske **Harzer Schmalspurbahn** (damptog til Brocken-toppen).
+- Tips: Braunlage er kursted — rolig og familievennlig, ingen Umweltzone. Neste dag: ~246 km til Hamburg (~3 t 22 min).
 
 **Hamburg (1 natt: 29.–30. juli)**
-- Kjøring: Wernigerode (Harz) → Hamburg, 233 km, 3 t 12 min via A36 → A395/A39 → A7 nord → Hamburg. Direkte på ruten mot Billund. (80 km/t med campingvogn.) (verifisert, rome2rio)
+- Kjøring: Braunlage (Harz) → Hamburg, ~246 km, ~3 t 22 min via B4 nord → A7 nord → Hamburg. Direkte på ruten mot Billund. (80 km/t med campingvogn.)
 - Campingplass: KNAUS Campingpark Hamburg, Wunderbrunnen 2, 22457 Hamburg
 - Nettside: https://www.knauscamp.de/hamburg/
 - Innsjekk: 14:00 · Utsjekk: 12:00 (ca. — verifisér ved booking)
@@ -549,6 +507,7 @@ Disse 10 campingplassene dekker ulike reisestiler langs hele den kroatiske ruten
 
 | Dato | Endring | Av |
 | --- | --- | --- |
+| 2026-06-07 | Omstrukturering av sørruten: (1) Graz, Plitvice og Split fjernet. (2) Český Krumlov utvidet fra 1 til 2 netter (10–12 jul). (3) Nytt transitstopp **Mondsee** (Camp MondSeeLand, 12–13 jul, 1n) erstatter Graz. (4) Nytt stopp **Postojna, Slovenia** (Camping Pivka Jama, 13–15 jul, 2n) — Postojnahule + Predjama-slottet. (5) **Rovinj** utvidet fra 3 til 7 netter (15–22 jul). (6) **Klagenfurt/Wörthersee** (Falkensteiner Camping, 22–23 jul, 1n) erstatter Liechtensteinklamm. Liechtensteinklamm beholdt som Nice-to-have benstrekk på vei til Zugspitze. (7) **Zugspitze** utvidet fra 2 til 3 netter (23–26 jul) — plass til Zugspitzbahn, Neuschwanstein og Höllentalklamm (ny Nice-to-have). (8) **Braunlage** (Camping- und Wohnmobilstellplatz Braunlage) erstatter Wernigerode som Harz-stopp — Naturmythenpfad lagt til som Must-do. Totalt 29 netter uendret. Ruteoversikt renummerert til 17 stopp. Kjøreetapper, hero-km (~4 100 km) og alle stoppbeskrivelser oppdatert. | Claude |
 | 2026-06-05 | Kjøreetapper verifisert og §4b Istria-seksjon fjernet: (1) Hirtshals→Groß Buchwald oppdatert til ~451 km / ~6t 11min (verifisert, travelmath.com) ⚠️ — overskrider 6-timersgrensen. (2) Groß Buchwald→Berlin oppdatert til ~350 km / ~4t 47min (verifisert, travelmath.com). (3) Seksjon §4b "Istria — 10 familievennlige alternativer" fjernet fra Ferieplanen-2026.md og index.html — campingplassvalget for stopp 10 er tatt (Camping Polari, Rovinj). | Claude |
 | 2026-06-05 | (1) Stopp 2 (Hirtshals Camping): bookingstatus oppdatert til Ja — OrdreNr 44021108, betalt 370,00 DKK (email fra info@hirtshals-camping.dk). (2) Stopp 3 byttet fra Jarplund (Campingplatz Jarplund) til **Groß Buchwald meadow-campspace** (Campspace booking #r442778, betalt €26,40, avventer bekreftelse fra vert Freya). Navigasjon: Groß Buchwald, Schleswig-Holstein, Deutschland. Innsjekk 14:00–20:00, utsjekk 09:00–12:00. (3) Aktiviteter lagt til for Groß Buchwald: naturstier (Komoot, 300+ enkle løyper, Einfelder See/Westensee) og ErlebnisWald Trappenkamp (villsvin, ørneshow, WaldWasserWelt, Fantasiewelt Wald — familievennlig, kun noen km unna). (4) Kjøreetapper oppdatert: Hirtshals→Groß Buchwald ~435 km/~5t 58min og Groß Buchwald→Berlin ~367 km/~5t 2min (begge uverifiserte — TODO). | Claude |
 | 2026-05-29 | Fire endringer i ruteplanen: (1) Zugspitze redusert fra 3 til 2 netter (24.–26. juli) → Bamberg fremskutt 1 dag (26.–28. juli). (2) Berndorf (Wienerwald) fjernet og erstattet med to nye kulturnetter mellom Bad Schandau og Plitvice: **Český Krumlov** (CZ, Camping Chvalšiny, 10.–11. juli) og **Graz** (AT, Reisemobil-Stellplatz Graz, 11.–12. juli). Plitvice redusert fra 2 til 1 natt (12.–13. juli) for å holde Split-booking (13. juli) fast. (3) Nytt stopp mellom Bamberg og Hamburg: **Wernigerode (Harz)**, Camping am Brocken (28.–29. juli) — slott, damptog, dryppsteinhuler, hengebro og turer. (4) Liechtensteinklamm gjort om fra dagstopp til egen overnatting: 1 natt tatt fra Rovinj (4→3, 20.–23. juli) og lagt til **Liechtensteinklamm/St. Johann im Pongau** (Landhaus Camping Kastenhof, gåavstand til klammen, 23.–24. juli). Alle nye avstander verifisert (rome2rio/viamichelin/travelmath). Resultat: alle kjøreetapper nå under 6 t (de tre tidligere ⚠️-dagene delt opp). Kroatia-netter: 13→11 (under §2-målet på 14 — bevisst valg). Stopp renummerert til 18 totalt. index.html oppdatert tilsvarende. | Claude |
