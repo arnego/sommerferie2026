@@ -51,21 +51,21 @@ William er 5 år og er en viktig del av planleggingen:
 | 6 | Český Krumlov | CZ | 10. juli | 12. juli | 2* | 28 |
 | 7 | Mondsee (transit) | AT | 12. juli | 13. juli | 1* | 28 |
 | 8 | Postojna | SI | 13. juli | 15. juli | 2 | 28 |
-| 9 | Rovinj, Istria | HR | 15. juli | 22. juli | 7 | 29/30 |
-| 10 | Klagenfurt / Wörthersee | AT | 22. juli | 23. juli | 1* | 30 |
-| 11 | Zugspitze | DE | 23. juli | 26. juli | 3 | 30/31 |
-| 12 | Bamberg | DE | 26. juli | 28. juli | 2 | 31 |
-| 13 | Braunlage (Harz) | DE | 28. juli | 29. juli | 1* | 31 |
-| 14 | Hamburg | DE | 29. juli | 30. juli | 1* | 31 |
+| 9 | Rovinj, Istria (Maistra Vestar Campsite 🔒) | HR | 15. juli | 20. juli | 5 | 29 |
+| 10 | Klagenfurt / Wörthersee | AT | 20. juli | 21. juli | 1* | 30 |
+| 11 | Zugspitze | DE | 21. juli | 24. juli | 3 | 30 |
+| 12 | Bamberg | DE | 24. juli | 26. juli | 2 | 30 |
+| 13 | Braunlage (Harz) | DE | 26. juli | 28. juli | 2* | 30/31 |
+| 14 | Hamburg | DE | 28. juli | 30. juli | 2* | 31 |
 | 15 | Billund (Legoland) | DK | 30. juli | 1. aug | 2 | 31 |
 | 16 | Hirtshals → Larvik (Color Line ferge, avgang 22:15) | DK/NO | 1. aug kv. | 2. aug | — | 31 |
 | 17 | Kongsberg | NO | 2. aug | — | Hjemme | 31 |
 
 *Kortstopp — unntak fra 3-netter-regelen (transit eller prioritert destinasjon).
 
-**Totalt:** 29 netter borte — 7 i Kroatia (Rovinj 7), 2 i Slovenia (Postojna), 1 natt Mondsee (AT), 1 natt Klagenfurt/Wörthersee (AT), 3 netter Zugspitze, 3 netter Berlin, 2 netter Bad Schandau, 2 netter Český Krumlov, 2 netter Bamberg, 1 natt Braunlage (Harz), 3 transittnetter (Hirtshals, Groß Buchwald, Hamburg), 2 i Billund. Hjemme 2. august (kveldsavgang Hirtshals 1. august, ankomst Larvik natt til 2. august).
+**Totalt:** 29 netter borte — 5 i Kroatia (Rovinj 5, Maistra Vestar 🔒), 2 i Slovenia (Postojna), 1 natt Mondsee (AT), 1 natt Klagenfurt/Wörthersee (AT), 3 netter Zugspitze, 3 netter Berlin, 2 netter Bad Schandau, 2 netter Český Krumlov, 2 netter Bamberg, 2 netter Braunlage (Harz), 2 transittnetter (Hirtshals, Groß Buchwald), 2 netter Hamburg, 2 i Billund. Hjemme 2. august (kveldsavgang Hirtshals 1. august, ankomst Larvik natt til 2. august).
 
-> **Merk:** Graz, Plitvice og Split er fjernet. Erstatt med: Mondsee (transit 1n), Postojna/Slovenia (2n) og ekstra tid i Rovinj (3n → 7n). Liechtensteinklamm er erstattet med Klagenfurt/Wörthersee. Zugspitze utvidet til 3 netter. Totalt 7 netter i Kroatia — under opprinnelig mål på 14 netter (§2), men bevisst valg. Alle kjøreetapper under 6 timer.
+> **Merk:** Graz, Plitvice og Split er fjernet. Erstatt med: Mondsee (transit 1n), Postojna/Slovenia (2n) og 5 netter i Rovinj (Maistra Vestar Campsite, booket PH28273444). Liechtensteinklamm er erstattet med Klagenfurt/Wörthersee. Zugspitze utvidet til 3 netter. Braunlage og Hamburg er utvidet til 2 netter hver. Totalt 5 netter i Kroatia — under opprinnelig mål på 14 netter (§2), men bevisst valg. Alle kjøreetapper under 6 timer.
 
 ---
 
@@ -320,23 +320,22 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 
 ---
 
-### Stopp 9: Rovinj, Istria, Kroatia (7 netter: 15.–22. juli)
+### Stopp 9: Rovinj, Istria, Kroatia (5 netter: 15.–20. juli)
 
 **Kjøring:** Postojna → Rovinj, ~110 km, ~1 t 30 min via A1 → E70 → Koper → A9 Istria → Rovinj. (80 km/t med campingvogn.) (verifisert)
 
-**Campingplass: Camping Polari**
-- Adresse: Polari 1, 52210 Rovinj, Kroatia
-- Nettside: https://www.maistra.com/properties/campsite-polari/
-- Fasiliteter: Maistra's største camping. 2 km strand (stein/grus), 2 utendørs bassenger + spray park med 3 bassenger og vannlekeplass, flytende aqua park, SUP/pedalbåtleie, taxibåt til Rovinj, sykkelsti til Rovinj (3,5 km). Kåret til "Best campsite for kids" siden 2024. Åpen 24.04–04.10.2026.
-- Booket: Nei (tidligere booking MÅ endres: 20–23 jul → 15–22 jul, 7 netter)
-- Bookingref: —
-- Innsjekk: 15:00 · Utsjekk: 10:00 (Maistra standard)
+**Campingplass: Maistra Vestar Campsite** 🔒
+- Adresse: Veštar 1, 52210 Rovinj, Kroatia
+- Nettside: https://www.maistra.com/properties/campsite-vestar/
+- Fasiliteter: 5-stjerners Maistra-camping ~3 km fra Rovinj gamlebyen. Premium-plasser med Adriaterhav-utsikt. Pitch PREMIUM booket 5 netter for 3 personer (545 EUR inkl. turistskatt).
+- **Booket: Ja** — bookingref. **PH28273444** (09.06.2026)
+- Innsjekk: 13:00 · Utsjekk: 12:00
 
 **Aktiviteter:**
 
 | Aktivitet | Type | Prioritet | Beskrivelse |
 |-----------|------|-----------|-------------|
-| Rovinj gamlebyen | Kultur/by | Must-do | Venetiansk gamlebyen på halvøy. St. Euphemia-basilika (1736) med panoramautsikt. 3,5 km langs kyststi fra Polari — sykkel eller taxibåt. https://www.rovinj-tourism.com |
+| Rovinj gamlebyen | Kultur/by | Must-do | Venetiansk gamlebyen på halvøy. St. Euphemia-basilika (1736) med panoramautsikt. ~3 km langs kyststi fra Vestar — sykkel eller taxibåt. https://www.rovinj-tourism.com |
 | Zlatni Rt (Punta Corrente) naturpark | Natur/sykkel | Must-do | Fredet furuskog og steinbukter rett syd for Rovinj — starter nesten fra campingporten. Sykkeltur langs kystpromenaden, Lone Bay-stranden og klatreberg. Gratis. https://www.rovinj-tourism.com |
 | Dinopark Funtana | Opplevelse/barn | Must-do | 80 bevegelige dinosaurer i karst-skog. Dino Dome med live-show, Dragon Coaster, trampoliner, mini-zoo og ridning. Heldagsopplevelse for William! ~30 km nord for Rovinj. http://dinopark.hr |
 | Pula amfiteater (UNESCO) | Kultur/severdighet | Must-do | Verdens best bevarte gladiatorarena fra 27 f.Kr. William kan utforske underjordiske ganger i gladiatorenes fotspor. ~40 km sør. https://www.ami-pula.hr |
@@ -344,7 +343,7 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 | Lim-fjorden (Limski kanal) | Natur/båttur | Nice-to-have | Dramatisk 13 km lang fjordarm — unik i Kroatia. Østers, fisk og pittoresk natur. Båtturer fra Rovinj havn. https://www.istra.hr |
 
 **Tips:**
-- Bestill Camping Polari senest april — juli er høysesong (husk å endre booking til 15–22 jul, 7 netter)
+- Booking bekreftet: Maistra Vestar Campsite, 15–20 jul, Pitch PREMIUM, ref. PH28273444
 - Dinopark Funtana: kjøp billett online på forhånd i høysesong
 - Pula amfiteater: gå tidlig på morgenen for å unngå folkemengder og sommerheten
 - Kroatia bruker EUR siden januar 2023 — ingen valutaveksling nødvendig
@@ -352,7 +351,7 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 
 ---
 
-### Stopp 10: Klagenfurt / Wörthersee, Østerrike (1 natt: 22.–23. juli)
+### Stopp 10: Klagenfurt / Wörthersee, Østerrike (1 natt: 20.–21. juli)
 
 **Kjøring:** Rovinj → Klagenfurt/Wörthersee, ~270 km, ~3 t 42 min via A9 Istria nord → Koper → A1 Ljubljana → Karawanken-tunnelen → Villach → A2 → Klagenfurt. Slovensk og østerriksk vignett brukes. (80 km/t med campingvogn i alle land.) (verifisert)
 
@@ -378,21 +377,21 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 
 ---
 
-### Hjemreise — stopp og transittdager (23. juli – 1. august)
+### Hjemreise — stopp og transittdager (21. juli – 1. august)
 
 Hjemreisen inkluderer opplevelsesstoppene Zugspitze, Braunlage (Harz), Hamburg og Billund (Legoland) — i tillegg til to kulturnetter i Bamberg. Klagenfurt/Wörthersee (stopp 10) er en egen overnatting (se over).
 
-**Zugspitze, Bayern (3 netter: 23.–26. juli)**
+**Zugspitze, Bayern (3 netter: 21.–24. juli)**
 - Kjøring: Klagenfurt/Wörthersee → Zugspitze/Grainau, ~284 km, ~3 t 53 min via A10 Tauern → A13 Brenner → Innsbruck → A12 Inn-dal → B2 → Grainau. Ev. stopp Liechtensteinklamm +45 min. (80 km/t med campingvogn.) (verifisert)
 - Campingplass: Camping Resort Zugspitze, Griesener Str. 9, 82491 Grainau
 - Nettside: https://www.camping-resort-zugspitze.de/
 - Innsjekk: 14:00 · Utsjekk: 12:00 (ca. — verifisér ved booking)
-- Ankomstdag (23. juli): ankom tidlig ettermiddag og ta en rolig tur til **Eibsee**, den turkisblå alpinsjøen rett ved campingplassen (bading, kanotur, fjellutsikt).
-- Dag 2 (24. juli — full dag): **Zugspitzbahn** — tannhjulsbane og gondolbane til Tysklands høyeste topp (2 962 m). Book billett på forhånd: https://www.zugspitze.de/
-- Dag 3 (25. juli — full dag): **Neuschwanstein Castle**, ~75 km, krever obligatorisk forhåndsbooking på https://www.neuschwanstein.de/. Med 3 netter er det nå tid til begge store opplevelser!
+- Ankomstdag (21. juli): ankom tidlig ettermiddag og ta en rolig tur til **Eibsee**, den turkisblå alpinsjøen rett ved campingplassen (bading, kanotur, fjellutsikt).
+- Dag 2 (22. juli — full dag): **Zugspitzbahn** — tannhjulsbane og gondolbane til Tysklands høyeste topp (2 962 m). Book billett på forhånd: https://www.zugspitze.de/
+- Dag 3 (23. juli — full dag): **Neuschwanstein Castle**, ~75 km, krever obligatorisk forhåndsbooking på https://www.neuschwanstein.de/. Med 3 netter er det nå tid til begge store opplevelser!
 - Tips: Book Zugspitzbahn og Neuschwanstein online på forhånd — Juli er høysesong. Ingen Umweltzone i Grainau/Garmisch. Nice-to-have: **Höllentalklamm** — dramatisk kløftevandring fra Hammersbach (5–6 km tur/retur, ~2–3t, gratis inngang).
 
-**Bamberg (2 netter: 26.–28. juli)**
+**Bamberg (2 netter: 24.–26. juli)**
 - Kjøring: Zugspitze/Grainau → Bamberg, 323 km, 4 t 25 min via A95/A8 nord → München → A9 nord → A73. (80 km/t med campingvogn, gjennomsnitt ~73 km/t.) (verifisert)
 - Campingplass: Camping Island Bamberg, Campinginsel, 96052 Bamberg
 - Nettside: http://www.campinginsel.de/
@@ -400,22 +399,22 @@ Hjemreisen inkluderer opplevelsesstoppene Zugspitze, Braunlage (Harz), Hamburg o
 - Aktiviteter: Bamberg Altstadt (UNESCO) — over 2 400 fredede bygninger, romansk-gotisk katedral med "Bamberger Reiter", Altes Rathaus på elveøy. To netter gir god tid til gamlebyen og aftensmiddag med Schlenkerla Rauchbier.
 - Tips: Ingen Umweltzone. Kompakt gamlebyen — parkér ved campingplassen og gå inn. Neste dag: ~280 km til Braunlage/Harz (~3 t 50 min).
 
-**Braunlage (Harz) (1 natt: 28.–29. juli)**
+**Braunlage (Harz) (2 netter: 26.–28. juli)**
 - Kjøring: Bamberg → Braunlage, ~280 km, ~3 t 50 min via A73 nord → Erfurt → A4/A38 → Nordhausen → B4 → Braunlage.
 - Campingplass: Camping- und Wohnmobilstellplatz Braunlage, Am Campingplatz 1, 38700 Braunlage
 - Nettside: https://campingbraunlage.de
 - Innsjekk: ca. 15:00 · Utsjekk: ca. 12:00
 - **Must-do: Naturmythenpfad** — 4 km sirkelrute gjennom Harz-skogen med 9 interaktive installasjoner (ønsketreet, labyrinten, myte-skulpturer). 3–4t, starter 600 m fra campingen. Magisk for barn!
 - Nice-to-have (dagtur ~25 km): **Wernigerode** — fargerik bindingsverksby med slott og den historiske **Harzer Schmalspurbahn** (damptog til Brocken-toppen).
-- Tips: Braunlage er kursted — rolig og familievennlig, ingen Umweltzone. Neste dag: ~246 km til Hamburg (~3 t 22 min).
+- Tips: Braunlage er kursted — rolig og familievennlig, ingen Umweltzone. 2 netter gir tid til Naturmythenpfad dag 1 og dagtur Wernigerode dag 2. Neste dag: ~246 km til Hamburg (~3 t 22 min).
 
-**Hamburg (1 natt: 29.–30. juli)**
+**Hamburg (2 netter: 28.–30. juli)**
 - Kjøring: Braunlage (Harz) → Hamburg, ~246 km, ~3 t 22 min via B4 nord → A7 nord → Hamburg. Direkte på ruten mot Billund. (80 km/t med campingvogn.)
 - Campingplass: KNAUS Campingpark Hamburg, Wunderbrunnen 2, 22457 Hamburg
 - Nettside: https://www.knauscamp.de/hamburg/
 - Innsjekk: 14:00 · Utsjekk: 12:00 (ca. — verifisér ved booking)
 - Aktiviteter: **Miniatur Wunderland** (verdens største modelljernbane, perfekt for William — book billett online!), Speicherstadt (UNESCO-kanalkvarter), Hamburger Hafen
-- Tips: Book Miniatur Wunderland online på forhånd — veldig populær i juli. Neste dag: Hamburg → Billund via A7 nord → Flensburg → E45, ca. 280 km, 3 t 50 min (80 km/t med campingvogn i Danmark).
+- Tips: Book Miniatur Wunderland online på forhånd — veldig populær i juli. Med 2 netter er det god tid til å se mer av havnebyen. Neste dag: Hamburg → Billund via A7 nord → Flensburg → E45, ca. 280 km, 3 t 50 min (80 km/t med campingvogn i Danmark).
 
 **Billund, Danmark (2 netter: 30. juli–1. august)**
 - Kjøring: Hamburg → Billund, 280 km, 3 t 50 min via A7 nord → Flensburg-grensa → E45 nord inn i Danmark → Billund (verifisert)
@@ -451,7 +450,7 @@ Disse 10 campingplassene dekker ulike reisestiler langs hele den kroatiske ruten
 
 | # | Navn | Beliggenhet | Hvorfor spesiell | Nettside |
 |---|------|-------------|-----------------|---------|
-| 5 ★ | **Camping Polari** *(valgt)* | Rovinj, Istria | "Best campsite for kids" 2024. 2 km strand, 2 bassenger + spray park, taxibåt til Rovinj (3,5 km). Maistra's største camping. | https://www.maistra.com/properties/campsite-polari/ |
+| 5 ★ | **Maistra Vestar Campsite** *(valgt, 🔒 booket PH28273444)* | Rovinj, Istria | 5-stjerners Maistra-camping ~3 km fra Rovinj gamlebyen. Adriaterhav-utsikt, Premium-plasser. 15–20 jul, 5n. | https://www.maistra.com/properties/campsite-vestar/ |
 | 6 | **Camping Bi Village** | Fažana, nær Pula | Sandbukt med krystallklart vann og utsikt til Brijuni-øyene. Nær Pula amfiteater. Barnevennlig resort. | https://www.bivillage.com/ |
 | 7 | **Autocamp Straško** | Novalja, Pag-øya | En av Kroatias vakreste sandstrender (Zrće-stranden). Tilgjengelig via Paški most-broen — ingen ferge nødvendig. | https://www.zrce.eu/camping/ |
 
@@ -507,6 +506,7 @@ Disse 10 campingplassene dekker ulike reisestiler langs hele den kroatiske ruten
 
 | Dato | Endring | Av |
 | --- | --- | --- |
+| 2026-06-09 | Rovinj (stopp 9) byttet fra Camping Polari til **Maistra Vestar Campsite** (Veštar 1, 52210 Rovinj). Booking bekreftet — ref. **PH28273444** (09.06.2026), Pitch PREMIUM, 5 netter (15–20 jul), 3 personer, 545 EUR. Rovinj forkortet fra 7 til 5 netter frigir 2 netter — redistribuert: **+1n Braunlage** (1→2n), **+1n Hamburg** (1→2n). Datokjede stopp 10–14 fremskutt 2 dager: Klagenfurt 20–21 jul, Zugspitze 21–24 jul, Bamberg 24–26 jul, Braunlage 26–28 jul, Hamburg 28–30 jul. Billund 30 jul–1 aug og ferge 1. aug uendret. Totalt 29 netter uendret (verifisert). | Claude |
 | 2026-06-07 | Omstrukturering av sørruten: (1) Graz, Plitvice og Split fjernet. (2) Český Krumlov utvidet fra 1 til 2 netter (10–12 jul). (3) Nytt transitstopp **Mondsee** (Camp MondSeeLand, 12–13 jul, 1n) erstatter Graz. (4) Nytt stopp **Postojna, Slovenia** (Camping Pivka Jama, 13–15 jul, 2n) — Postojnahule + Predjama-slottet. (5) **Rovinj** utvidet fra 3 til 7 netter (15–22 jul). (6) **Klagenfurt/Wörthersee** (Falkensteiner Camping, 22–23 jul, 1n) erstatter Liechtensteinklamm. Liechtensteinklamm beholdt som Nice-to-have benstrekk på vei til Zugspitze. (7) **Zugspitze** utvidet fra 2 til 3 netter (23–26 jul) — plass til Zugspitzbahn, Neuschwanstein og Höllentalklamm (ny Nice-to-have). (8) **Braunlage** (Camping- und Wohnmobilstellplatz Braunlage) erstatter Wernigerode som Harz-stopp — Naturmythenpfad lagt til som Must-do. Totalt 29 netter uendret. Ruteoversikt renummerert til 17 stopp. Kjøreetapper, hero-km (~4 100 km) og alle stoppbeskrivelser oppdatert. | Claude |
 | 2026-06-05 | Kjøreetapper verifisert og §4b Istria-seksjon fjernet: (1) Hirtshals→Groß Buchwald oppdatert til ~451 km / ~6t 11min (verifisert, travelmath.com) ⚠️ — overskrider 6-timersgrensen. (2) Groß Buchwald→Berlin oppdatert til ~350 km / ~4t 47min (verifisert, travelmath.com). (3) Seksjon §4b "Istria — 10 familievennlige alternativer" fjernet fra Ferieplanen-2026.md og index.html — campingplassvalget for stopp 10 er tatt (Camping Polari, Rovinj). | Claude |
 | 2026-06-05 | (1) Stopp 2 (Hirtshals Camping): bookingstatus oppdatert til Ja — OrdreNr 44021108, betalt 370,00 DKK (email fra info@hirtshals-camping.dk). (2) Stopp 3 byttet fra Jarplund (Campingplatz Jarplund) til **Groß Buchwald meadow-campspace** (Campspace booking #r442778, betalt €26,40, avventer bekreftelse fra vert Freya). Navigasjon: Groß Buchwald, Schleswig-Holstein, Deutschland. Innsjekk 14:00–20:00, utsjekk 09:00–12:00. (3) Aktiviteter lagt til for Groß Buchwald: naturstier (Komoot, 300+ enkle løyper, Einfelder See/Westensee) og ErlebnisWald Trappenkamp (villsvin, ørneshow, WaldWasserWelt, Fantasiewelt Wald — familievennlig, kun noen km unna). (4) Kjøreetapper oppdatert: Hirtshals→Groß Buchwald ~435 km/~5t 58min og Groß Buchwald→Berlin ~367 km/~5t 2min (begge uverifiserte — TODO). | Claude |
