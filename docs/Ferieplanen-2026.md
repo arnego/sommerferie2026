@@ -82,7 +82,7 @@ William er 5 år og er en viktig del av planleggingen:
 | Mondsee | Postojna | ~385 km (verifisert) | ~5 t 16 min | Mondsee → Salzburg (~70 km) → A10 Tauern → Villach → A2 → Ljubljana → A1 → Postojna |
 | Postojna | Rovinj | ~110 km (verifisert) | ~1 t 30 min | A1 → E70 → Koper → A9 Istria → Rovinj |
 | Rovinj | Klagenfurt / Wörthersee | ~270 km (verifisert) | ~3 t 42 min | A9 Istria nord → Koper → A1 Ljubljana → Karawanken-tunnelen → Villach → A2 → Klagenfurt |
-| Klagenfurt / Wörthersee | Zugspitze/Grainau | ~284 km (verifisert) | ~3 t 53 min | A10 Tauern → A13 Brenner → Innsbruck → A12 → B2 → Grainau (ev. stopp Liechtensteinklamm +45 min) |
+| Klagenfurt / Wörthersee | Zugspitze/Grainau | ~390 km (verifisert) | ~5 t 20 min | Klagenfurt → B100 → Lienz → Felbertauern-tunnelen → Wörgl → Achensee → B2 → Grainau |
 | Zugspitze/Grainau | Bamberg | 323 km (verifisert) | 4 t 25 min | A95/A8 nord → München → A9 nord → A73 mot Bamberg |
 | Bamberg | Braunlage (Harz) | ~280 km | ~3 t 50 min | A73 nord → Erfurt → A4/A38 → Nordhausen → B4 → Braunlage |
 | Braunlage (Harz) | Hamburg | ~246 km | ~3 t 22 min | B4 nord → A7 nord → Hamburg |
@@ -373,7 +373,7 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 **Tips:**
 - Wörthersee: finest bading på ettermiddagen — campingen har direkteadgang til stranden
 - **Slovensk vignett** (~€16) + **østerriksk vignett** (~€9,90) kreves for ruten — kjøp online før avreise
-- Neste dag: ~284 km til Zugspitze/Grainau (~3 t 53 min) via A10 Tauern → Innsbruck → Brenner (ev. stopp Liechtensteinklamm som benstrekk +45 min)
+- Neste dag: ~390 km til Zugspitze/Grainau (~5 t 20 min) via Felbertauern → Wörgl → Garmisch → Grainau (ev. stopp Liechtensteinklamm som benstrekk +45 min)
 
 ---
 
@@ -382,7 +382,7 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 Hjemreisen inkluderer opplevelsesstoppene Zugspitze, Braunlage (Harz), Hamburg og Billund (Legoland) — i tillegg til to kulturnetter i Bamberg. Klagenfurt/Wörthersee (stopp 10) er en egen overnatting (se over).
 
 **Zugspitze, Bayern (3 netter: 21.–24. juli)**
-- Kjøring: Klagenfurt/Wörthersee → Zugspitze/Grainau, ~284 km, ~3 t 53 min via A10 Tauern → A13 Brenner → Innsbruck → A12 Inn-dal → B2 → Grainau. Ev. stopp Liechtensteinklamm +45 min. (80 km/t med campingvogn.) (verifisert)
+- Kjøring: Klagenfurt/Wörthersee → Zugspitze/Grainau, ~390 km, ~5 t 20 min via Klagenfurt → B100 → Lienz → Felbertauern-tunnelen → Wörgl → Achensee → B2 → Grainau. Ev. stopp Liechtensteinklamm +45 min. (80 km/t med campingvogn.) (verifisert)
 - Campingplass: Camping Resort Zugspitze, Griesener Str. 9, 82491 Grainau
 - Nettside: https://www.camping-resort-zugspitze.de/
 - Innsjekk: 14:00 · Utsjekk: 12:00 (ca. — verifisér ved booking)
@@ -506,6 +506,7 @@ Disse 10 campingplassene dekker ulike reisestiler langs hele den kroatiske ruten
 
 | Dato | Endring | Av |
 | --- | --- | --- |
+| 2026-06-10 | (1) FEX Berlin og Naturkundemuseum (stopp 4 Berlin) endret til «nice-to-have» prioritet. (2) Kjøreavstand Klagenfurt/Wörthersee → Zugspitze/Grainau oppdatert og verifisert via OSRM: **~284 km → ~390 km**, reisetid 3 t 53 min → 5 t 20 min. Korrigert rute: Felbertauern-tunnelen (via Lienz) → Wörgl → Achensee → B2 → Grainau (begge hoved­ruter gir ~389 km). Tidligere verdi var feil (basert på estimat). (3) Kartkordinater for alle overnattingssteder (stopp 2–15) oppdatert fra tilnærmede bykjerner til faktiske GPS-koordinater fra PiNCAMP, NorCamp, ACSI, JetCamp og offisielle nettsider. Stopp med størst avvik: Berlin/Kleinmachnow (+14 km fra sentrum), KNAUS Hamburg/Schnelsen, Falkensteiner Wörthersee, Camping Resort Zugspitze (tidligere feil lengdegrad). | Claude |
 | 2026-06-09 | Rovinj (stopp 9) byttet fra Camping Polari til **Maistra Vestar Campsite** (Veštar 1, 52210 Rovinj). Booking bekreftet — ref. **PH28273444** (09.06.2026), Pitch PREMIUM, 5 netter (15–20 jul), 3 personer, 545 EUR. Rovinj forkortet fra 7 til 5 netter frigir 2 netter — redistribuert: **+1n Braunlage** (1→2n), **+1n Hamburg** (1→2n). Datokjede stopp 10–14 fremskutt 2 dager: Klagenfurt 20–21 jul, Zugspitze 21–24 jul, Bamberg 24–26 jul, Braunlage 26–28 jul, Hamburg 28–30 jul. Billund 30 jul–1 aug og ferge 1. aug uendret. Totalt 29 netter uendret (verifisert). | Claude |
 | 2026-06-07 | Omstrukturering av sørruten: (1) Graz, Plitvice og Split fjernet. (2) Český Krumlov utvidet fra 1 til 2 netter (10–12 jul). (3) Nytt transitstopp **Mondsee** (Camp MondSeeLand, 12–13 jul, 1n) erstatter Graz. (4) Nytt stopp **Postojna, Slovenia** (Camping Pivka Jama, 13–15 jul, 2n) — Postojnahule + Predjama-slottet. (5) **Rovinj** utvidet fra 3 til 7 netter (15–22 jul). (6) **Klagenfurt/Wörthersee** (Falkensteiner Camping, 22–23 jul, 1n) erstatter Liechtensteinklamm. Liechtensteinklamm beholdt som Nice-to-have benstrekk på vei til Zugspitze. (7) **Zugspitze** utvidet fra 2 til 3 netter (23–26 jul) — plass til Zugspitzbahn, Neuschwanstein og Höllentalklamm (ny Nice-to-have). (8) **Braunlage** (Camping- und Wohnmobilstellplatz Braunlage) erstatter Wernigerode som Harz-stopp — Naturmythenpfad lagt til som Must-do. Totalt 29 netter uendret. Ruteoversikt renummerert til 17 stopp. Kjøreetapper, hero-km (~4 100 km) og alle stoppbeskrivelser oppdatert. | Claude |
 | 2026-06-05 | Kjøreetapper verifisert og §4b Istria-seksjon fjernet: (1) Hirtshals→Groß Buchwald oppdatert til ~451 km / ~6t 11min (verifisert, travelmath.com) ⚠️ — overskrider 6-timersgrensen. (2) Groß Buchwald→Berlin oppdatert til ~350 km / ~4t 47min (verifisert, travelmath.com). (3) Seksjon §4b "Istria — 10 familievennlige alternativer" fjernet fra Ferieplanen-2026.md og index.html — campingplassvalget for stopp 10 er tatt (Camping Polari, Rovinj). | Claude |
