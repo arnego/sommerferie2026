@@ -754,7 +754,7 @@ tailwind.config = {
              class="w-full flex items-center justify-between gap-3 px-5 py-4 cursor-pointer hover:bg-cream/50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-petrol/40 focus-visible:ring-inset">
           <div class="flex-1 min-w-0">
             <h3 class="font-heading text-lg text-petrol">Fartsgrenser med campingvogn</h3>
-            <p class="text-xs text-muted mt-0.5">Norge · Danmark · Tyskland · Østerrike · Slovenia · Kroatia</p>
+            <p class="text-xs text-muted mt-0.5">Norge · Danmark · Tyskland · Østerrike · Slovenia · Kroatia · Italia</p>
           </div>
           <svg class="w-5 h-5 text-muted transition-transform duration-200 flex-shrink-0"
                :class="expandedBudsjett === 'fart' && 'rotate-180'"
@@ -796,6 +796,12 @@ tailwind.config = {
               <td class="px-3 py-3 text-center">80*</td>
             </tr>
             <tr class="hover:bg-cream/30">
+              <td class="px-5 py-3 font-medium">Italia</td>
+              <td class="px-3 py-3 text-center">50</td>
+              <td class="px-3 py-3 text-center">70</td>
+              <td class="px-3 py-3 text-center">80*</td>
+            </tr>
+            <tr class="hover:bg-cream/30">
               <td class="px-5 py-3 font-medium">Kroatia</td>
               <td class="px-3 py-3 text-center">50</td>
               <td class="px-3 py-3 text-center">70</td>
@@ -815,7 +821,7 @@ tailwind.config = {
             </tr>
           </tbody>
         </table>
-        <div class="px-5 py-2.5 bg-cream/50 text-xs text-muted">Alle hastigheter i km/t med campingvogn. *Østerrike/Slovenia: 80 km/t motorvei med henger. *Kroatia: 80 km/t motorvei med henger over 3,5 t totalvekt. *Tyskland: Ingen generell fartsgrense uten henger, men 80 km/t med campingvogn.</div>
+        <div class="px-5 py-2.5 bg-cream/50 text-xs text-muted">Alle hastigheter i km/t med campingvogn. *Østerrike/Slovenia: 80 km/t motorvei med henger. *Kroatia: 80 km/t motorvei med henger over 3,5 t totalvekt. *Italia: 80 km/t motorvei (autostrada) med henger. *Tyskland: Ingen generell fartsgrense uten henger, men 80 km/t med campingvogn.</div>
         </div>
       </div>
 
@@ -1782,8 +1788,8 @@ function ferieApp() {
         lat: 52.4000,
         lng: 13.1797,
         arrivalDate: '2026-07-05',
-        departureDate: '2026-07-08',
-        nights: 3,
+        departureDate: '2026-07-09',
+        nights: 4,
         week: 27,
         camping: {
           name: 'Hotel & City Camping Süd',
@@ -1819,8 +1825,8 @@ function ferieApp() {
         countryCode: 'DE',
         lat: 50.9293,
         lng: 14.1926,
-        arrivalDate: '2026-07-08',
-        departureDate: '2026-07-10',
+        arrivalDate: '2026-07-09',
+        departureDate: '2026-07-11',
         nights: 2,
         week: 28,
         camping: {
@@ -1855,8 +1861,8 @@ function ferieApp() {
         countryCode: 'CZ',
         lat: 48.8597,
         lng: 14.2136,
-        arrivalDate: '2026-07-10',
-        departureDate: '2026-07-12',
+        arrivalDate: '2026-07-11',
+        departureDate: '2026-07-13',
         nights: 2,
         week: 28,
         camping: {
@@ -1885,45 +1891,48 @@ function ferieApp() {
           'Kjøp tsjekkisk e-vignett (~270 CZK/10 dager per kjøretøy) på edalnice.cz før motorvei',
           'Gå i gamlebyen tidlig morgen eller kveld — dagsturistene fyller gatene midt på dagen',
           'Ta med kontanter i tsjekkiske kroner (CZK) — mange små steder tar ikke kort',
-          'Neste dag: ~154 km til Mondsee (~2t 6min) via Linz og A1 vestover — kort og behagelig kjøredag',
+          'Neste dag: ~216 km til Hallstatt/Obertraun (~2t 58min) via Linz → A1 → Salzkammergut — kort, vakker kjøredag inn i Alpene',
         ],
         imageUrl: '',
       },
       {
         id: 7,
-        name: 'Mondsee',
+        name: 'Hallstatt / Obertraun',
         country: 'Østerrike',
         countryCode: 'AT',
-        lat: 47.8671,
-        lng: 13.3067,
-        arrivalDate: '2026-07-12',
-        departureDate: '2026-07-13',
+        lat: 47.5492,
+        lng: 13.6765,
+        arrivalDate: '2026-07-13',
+        departureDate: '2026-07-14',
         nights: 1,
-        week: 28,
+        week: 29,
         camping: {
-          name: 'Camp MondSeeLand',
-          address: 'Punzau 21, 5310 Tiefgraben am Mondsee, Østerrike',
-          url: 'https://www.campmondsee.at/en',
+          name: 'Camping am See – Obertraun',
+          address: 'Winkl 77, 4831 Obertraun am Hallstättersee, Østerrike',
+          url: 'http://camping-park-am-see.at/',
           booked: false,
           bookingRef: '',
-          checkIn: '14:00',
+          checkIn: '13:00',
           checkOut: '11:00',
           timesEstimated: true,
         },
         driveFromPrevious: {
-          km: 154,
-          hours: '2t 6min',
-          route: 'Český Krumlov → Linz (~84 km, E55/A7) → A1 vest → B154 sør → Mondsee (verifisert)',
+          km: 216, // verifisert (Google Maps) — Chvalšiny → Obertraun
+          hours: '2t 58min',
+          route: 'Český Krumlov → Linz (A7) → A1 vest → B145 Salzkammergut → Bad Ischl → Obertraun am Hallstättersee (verifisert)',
         },
-        description: 'Transit-stopp ved Mondsee i Salzkammergut — turkisblå innsjø omkranset av Schafberg og Drachenwand. Camp MondSeeLand (4★, kåret til ett av Europas beste) gir en rolig halvdag med badeliv etter den korte kjøredagen fra Český Krumlov.',
+        description: 'Transit-stopp i Salzkammergut ved Hallstättersee — en av Østerrikes dypeste og mest fotograferte innsjøer, omkranset av Dachstein-massivet. Camping am See ligger med egen strand rett ved vannet i Obertraun, med utsikt mot det historiske Hallstatt. Kortere og vakrere kjøredag enn tidligere, med en avslappet halvdag ved sjøen før den lange søretappen.',
         activities: [
-          { name: 'Badeliv i Mondsee', type: 'friluft', priority: 'must-do', description: 'Turkisblå Salzkammergut-innsjø rett ved campingplassen. Oppvarmet utendørsbasseng på camp + direkteadgang til Mondsee for svømming og kanopadling. Panoramautsikt mot Schafberg og Drachenwand.', url: 'https://www.campmondsee.at/en', mapsQuery: 'Mondsee, Salzkammergut, Austria' },
-          { name: 'Mondsee (landsbyen og kirken)', type: 'kultur', priority: 'nice-to-have', description: 'Pittoresk Salzkammergut-landsby med berømt augustinerklosterkirke (kjent fra Sound of Music-bryllupsscenen). 5 min kjøring fra campingen.', url: 'https://www.mondsee.at/', mapsQuery: 'Mondsee Basilika, Mondsee, Austria' },
+          { name: 'Hallstatt gamleby (UNESCO)', type: 'kultur', priority: 'must-do', description: 'Verdensberømt landsby klemt mellom fjellet og Hallstättersee — UNESCO-verdensarv. Brosteinsgater, pastellhus og den ikoniske utsikten. ~10 min med bil eller båt over sjøen fra Obertraun.', url: 'https://www.hallstatt.net/', mapsQuery: 'Hallstatt, Austria' },
+          { name: 'Salzwelten Hallstatt (saltgruven)', type: 'opplevelse', priority: 'must-do', description: 'Verdens eldste saltgruve (7 000 år) høyt over Hallstatt. Bergmannsrutsjebaner ned i fjellet, underjordisk saltsjø og «Skywalk Welterbeblick» med svimlende utsikt. William vil elske rutsjebanene!', url: 'https://www.salzwelten.at/en/hallstatt/', mapsQuery: 'Salzwelten Hallstatt, Austria' },
+          { name: 'Dachstein Krippenstein — Rieseneishöhle & Five Fingers', type: 'natur', priority: 'nice-to-have', description: 'Gondolbane fra Obertraun (rett ved campingen) opp til kjempeishulen (Rieseneishöhle), Mammuthulen og «Five Fingers»-utsiktsplattformen som svever over stupet. Spektakulært for hele familien.', url: 'https://www.dachstein-salzkammergut.com/en/', mapsQuery: 'Krippenstein, Obertraun, Austria' },
+          { name: 'Badeliv i Hallstättersee', type: 'friluft', priority: 'must-do', description: 'Krystallklart alpevann rett ved campingplassens egen strand. Svømming, SUP og kanopadling med Dachstein-fjellene speilet i sjøen.', url: 'http://camping-park-am-see.at/', mapsQuery: 'Hallstättersee, Obertraun, Austria' },
         ],
         tips: [
-          'Østerriksk motorveivignett kreves (10-dager ~€9,90 per kjøretøy) — kjøp online på asfinag.at eller ved grensen',
-          'Kort kjøredag (~154 km, 2t 6min) — ankom tidlig ettermiddag og nyt ettermiddagen ved sjøen',
-          'Neste dag: ~385 km til Postojna (~5t 16min) via Salzburg → A10 Tauern → Villach → Ljubljana — tidlig avreise anbefales',
+          'Østerriksk motorveivignett kreves (10-dager ~€12 per kjøretøy) — kjøp online på asfinag.at eller ved grensen',
+          'Hallstatt har sterkt begrenset parkering og kan stenge for biler ved fullt belegg — kjør tidlig, eller ta båten over fra Obertraun/Hallstatt Lahn',
+          'Camping am See er en sjarmerende, økologisk «camping de charme» med egen strand — fasilitetene er enkle, men beliggenheten er enestående',
+          'Neste dag: ~330 km til Postojna (~4t 31min) via Bad Ischl → Salzburg → A10 Tauern → Villach → Ljubljana — tidlig avreise anbefales',
         ],
         imageUrl: '',
       },
@@ -1934,10 +1943,10 @@ function ferieApp() {
         countryCode: 'SI',
         lat: 45.8046,
         lng: 14.2053,
-        arrivalDate: '2026-07-13',
+        arrivalDate: '2026-07-14',
         departureDate: '2026-07-15',
-        nights: 2,
-        week: 28,
+        nights: 1,
+        week: 29,
         camping: {
           name: 'Camping Pivka Jama',
           address: 'Veliki Otok 50, 6230 Postojna, Slovenia',
@@ -1949,19 +1958,19 @@ function ferieApp() {
           timesEstimated: true,
         },
         driveFromPrevious: {
-          km: 385,
-          hours: '5t 16min',
-          route: 'Mondsee → Salzburg (~70 km) → A10 Tauern → Villach → A2 → Ljubljana → A1 → Postojna (verifisert)',
+          km: 330, // verifisert (Google Maps) — Obertraun → Postojna
+          hours: '4t 31min',
+          route: 'Obertraun → Bad Ischl → Salzburg → A10 Tauern → Villach → A2 Slovenia → Ljubljana → A1 → Postojna (verifisert)',
         },
-        description: 'Slovenia i to verdensklasse-attraksjoner: Postojnahulen (Europas mest besøkte hule — 5 km med elektrisk tog gjennom tropfstein-katedraler) og Predjama-slottet (middelalderfestning bygd inn i en 123 m høy fjellvegg). Camping Pivka Jama ligger rolig i skogen 4 km fra hulen.',
+        description: 'Én natt i Slovenia ved Postojnahulen — Europas mest besøkte hule (5 km med elektrisk tog gjennom drypstein-katedraler). Vi ankommer ettermiddag, tar hulen tidlig neste morgen og kjører videre til Rovinj. Camping Pivka Jama ligger rolig i skogen rett ved hulen, med basseng og barnebasseng.',
         activities: [
-          { name: 'Postojnahulen (Postojnska jama)', type: 'natur', priority: 'must-do', description: 'Europas mest besøkte hule — 24 km nettverkslengde, 5 km guidet tur med elektrisk tog. Spektakulære tropfstein-formasjoner, grotter og katedraler. Alltid 10 °C inne — ta med jakke.', url: 'https://www.postojnska-jama.eu/en/postojna-cave/', mapsQuery: 'Postojna Cave, Postojna, Slovenia' },
-          { name: 'Predjama-slottet (Predjamski grad)', type: 'severdighet', priority: 'must-do', description: 'Middelalderfestning bygd inn i en 123 m høy fjellvegg — en av verdens mest dramatisk plasserte slott. 10 km fra Postojnahulen. Egne tunneler gjennom fjellet.', url: 'https://www.postojnska-jama.eu/en/predjama-castle/', mapsQuery: 'Predjama Castle, Slovenia' },
+          { name: 'Postojnahulen (Postojnska jama)', type: 'natur', priority: 'must-do', description: 'Europas mest besøkte hule — 24 km nettverkslengde, 5 km guidet tur med elektrisk tog. Spektakulære drypstein-formasjoner, grotter og katedraler. Alltid 10 °C inne — ta med jakke. Ta tidlig morgenslot 15. juli før avreise mot Rovinj.', url: 'https://www.postojnska-jama.eu/en/postojna-cave/', mapsQuery: 'Postojna Cave, Postojna, Slovenia' },
+          { name: 'Predjama-slottet (Predjamski grad)', type: 'severdighet', priority: 'nice-to-have', description: 'Middelalderfestning bygd inn i en 123 m høy fjellvegg — en av verdens mest dramatisk plasserte slott. 10 km fra Postojnahulen. Kan tas med før avreise dersom tiden strekker til.', url: 'https://www.postojnska-jama.eu/en/predjama-castle/', mapsQuery: 'Predjama Castle, Slovenia' },
         ],
         tips: [
-          'Bestill Postojnahule-billett online på forhånd — sparer kø og sikrer plass',
+          'Bestill Postojnahule-billett online på forhånd — velg et tidlig morgenslot 15. juli så dere rekker videre til Rovinj samme dag',
           'Ta med varm jakke inn i hulen (alltid 10 °C inne)',
-          'Kombibillett for Postojnahule + Predjama-slottet er rimeligst',
+          'Med kun 1 natt: prioriter hulen. Predjama-slottet (kombibillett) kan tas med hvis tid før avreise',
           'Neste dag: ~110 km til Rovinj (~1t 30min) via A1 → Koper → A9 Istria',
         ],
         imageUrl: '',
@@ -2002,24 +2011,24 @@ function ferieApp() {
           { name: 'Brijuni nasjonalpark', type: 'natur', priority: 'nice-to-have', description: 'Øygruppe-NP med safaripark (sebra, elefant) og dinosaurspor fra Jura. Guidet tog- og båttur fra Fažana (~40 km). Halvdags- eller heldagstur.', url: 'https://np-brijuni.hr/en/', mapsQuery: 'Fažana harbor, Fažana, Croatia' },
           { name: 'Lim-fjorden (Limski kanal)', type: 'natur', priority: 'nice-to-have', description: 'Dramatisk 13 km lang fjordarm — unik i Kroatia. Østers, fisk og pittoresk natur. Båtturer fra Rovinj havn.', url: 'https://www.istra.hr', mapsQuery: 'Limski Kanal, Istria, Croatia' },
         ],
-        tips: ['Booking bekreftet (PH28273444) — Maistra Vestar Campsite, 15–20 jul, Pitch PREMIUM', 'Dinopark Funtana: kjøp billett online på forhånd i høysesong', 'Pula amfiteater: gå tidlig på morgenen for å unngå folkemengder', 'Kroatia bruker EUR siden 2023 — ingen valutaveksling', 'Neste dag: 270 km til Klagenfurt/Wörthersee (~3t 42min) via A1 Ljubljana → A2 — start tidlig morgen'],
+        tips: ['Booking bekreftet (PH28273444) — Maistra Vestar Campsite, 15–20 jul, Pitch PREMIUM', 'Dinopark Funtana: kjøp billett online på forhånd i høysesong', 'Pula amfiteater: gå tidlig på morgenen for å unngå folkemengder', 'Kroatia bruker EUR siden 2023 — ingen valutaveksling', 'Neste dag: ~273 km til Lago di Santa Croce / Alpago (~3t 45min) via Trieste → A4 → A27 Belluno — rask motorvei, start tidlig morgen'],
         imageUrl: '',
       },
       {
         id: 10,
-        name: 'Klagenfurt / Wörthersee',
-        country: 'Østerrike',
-        countryCode: 'AT',
-        lat: 46.6187,
-        lng: 14.2495,
+        name: 'Lago di Santa Croce / Alpago',
+        country: 'Italia',
+        countryCode: 'IT',
+        lat: 46.1200,
+        lng: 12.3524,
         arrivalDate: '2026-07-20',
         departureDate: '2026-07-21',
         nights: 1,
-        week: 29,
+        week: 30,
         camping: {
-          name: 'Falkensteiner Camping Wörthersee',
-          address: 'Am Wörthersee, 9020 Klagenfurt am Wörthersee, Østerrike',
-          url: 'https://www.falkensteinercamping.com/en/woerthersee',
+          name: 'Camping Sarathei',
+          address: 'Viale Al Lago 13, 32016 Farra d\'Alpago (BL), Italia',
+          url: 'https://www.sarathei.it/en',
           booked: false,
           bookingRef: '',
           checkIn: '14:00',
@@ -2027,19 +2036,21 @@ function ferieApp() {
           timesEstimated: true,
         },
         driveFromPrevious: {
-          km: 270,
-          hours: '3t 42min',
-          route: 'Rovinj → A9 Istria nord → Koper → A1 Ljubljana → Karawanken-tunnelen → Villach → A2 → Klagenfurt (slovensk + østerriksk vignett)',
+          km: 273, // verifisert (Google Maps) — Rovinj → Farra d'Alpago, rask A4/A27-motorvei
+          hours: '3t 45min',
+          route: 'Rovinj → A9 Istria → Trieste → A4 (Venezia) → A27 nord → Belluno → Lago di Santa Croce / Alpago (verifisert)',
         },
-        description: 'Transit-stopp ved Europas varmeste badesø — Wörthersee i Kärnten når 26–28 °C om sommeren. Falkensteiner Camping Wörthersee (åpnet 1. juni 2026) gir direkteadgang til strandkanten. Rolig ettermiddag etter den korte kjøredagen fra Rovinj.',
+        description: 'Transit-stopp ved Lago di Santa Croce — en sjarmerende, mindre kjent alpesjø i Dolomittenes forfjell (Prealpi). En av Italias beste vindsurf- og kitesjøer, med Camping Sarathei rett ved egen strand. Kort, rask motorvei-etappe fra Rovinj gir en avslappet ettermiddag ved vannet — og setter oss opp for den korte, vakre Dolomitt- og Brenner-ruten videre til Zugspitze.',
         activities: [
-          { name: 'Badeliv i Wörthersee', type: 'friluft', priority: 'must-do', description: 'Europas varmeste naturbadesø (26–28 °C om sommeren). Strandadgang rett fra campingen. Ideelt for William etter uken i Rovinj.', url: 'https://www.woerthersee.com/en/', mapsQuery: 'Wörthersee, Klagenfurt, Austria' },
-          { name: 'Liechtensteinklamm (benstrekk på vei til Zugspitze)', type: 'natur', priority: 'nice-to-have', description: 'En av Alpenes dypeste juv (270 m) i St. Johann im Pongau — ~45 min omvei via A10 Tauern på vei til Zugspitze neste dag. Trebroer og stiger langs fossestryk, ny «Helix»-spiraltrapp. William vil elske det. Solide sko og jakke anbefales.', url: 'https://www.josalzburg.com/en/activities/liechtenstein-gorge.html', mapsQuery: 'Liechtensteinklamm, 5600 St. Johann im Pongau, Austria' },
+          { name: 'Badeliv og vannsport i Lago di Santa Croce', type: 'friluft', priority: 'must-do', description: 'Klart, mildt alpevann med egen strand ved campingen. Bading, SUP og kano — sjøen er kjent for jevn termisk vind, et eldorado for windsurfing og kitesurfing. Flott avkjøling etter kjøreturen.', url: 'https://www.sarathei.it/en', mapsQuery: 'Lago di Santa Croce, Alpago, Italy' },
+          { name: 'Cortina d\'Ampezzo og Dolomittene (på vei til Zugspitze)', type: 'natur', priority: 'nice-to-have', description: 'Morgendagens etappe går gjennom hjertet av Dolomittene (UNESCO) forbi den glamorøse fjellbyen Cortina d\'Ampezzo og Toblach i Pustertal — en av Europas vakreste bilruter. Legg inn et fotostopp.', url: 'https://www.dolomiti.org/en/', mapsQuery: 'Cortina d\'Ampezzo, Italy' },
+          { name: 'Cansiglio-skogen og Alpago-platået', type: 'natur', priority: 'nice-to-have', description: 'Vidstrakt høyslette og urskog rett over sjøen — vandring, dyreliv og panoramautsikt over Santa Croce. Rolig motvekt til kysten.', url: 'https://www.visitalpago.com/', mapsQuery: 'Bosco del Cansiglio, Italy' },
         ],
         tips: [
-          'Wörthersee: finest bading på ettermiddagen — campingen har direkteadgang til stranden',
-          'Neste dag til Zugspitze (~390 km, ~5t 20min) via Felbertauern → Wörgl → Garmisch → Grainau — ev. stopp Liechtensteinklamm som benstrekk',
-          'Slovensk vignett (~€16) + østerriksk vignett er nødvendig for ruten — kjøp online før avreise fra Rovinj',
+          'Italia bruker bompengebommer (ikke vignett) — A4/A27 betales ved bom. Ingen vignett nødvendig i Italia',
+          'Lago di Santa Croce har jevn ettermiddagsvind — perfekt for windsurfing/SUP, men hold øye med William ved vannkanten',
+          'Neste dag: ~295 km til Zugspitze/Grainau (~4t 25min) via Cortina → Dolomittene → Pustertal → Brenner → Innsbruck → Garmisch — kortere og vakrere enn den østerrikske ruten',
+          'Den korte østerrikske strekningen (Brenner → Garmisch) krever østerriksk vignett + Brenner-bompenger — kjøp vignett online før Innsbruck',
         ],
         imageUrl: '',
       },
@@ -2065,9 +2076,9 @@ function ferieApp() {
           timesEstimated: true,
         },
         driveFromPrevious: {
-          km: 390, // verifisert (OSRM) — begge ruter (Felbertauern og Tauern/Salzburg) gir ~389 km
-          hours: '5t 20min',
-          route: 'Klagenfurt → A2 → Spittal → B100 → Lienz → Felbertauern-tunnelen → Wörgl → Achensee → B2 → Garmisch → Grainau (verifisert)',
+          km: 295, // verifisert (Google Maps) — Farra d'Alpago → Grainau via Cortina/Pustertal/Brenner
+          hours: '4t 25min',
+          route: 'Lago di Santa Croce → Cortina d\'Ampezzo → Toblach/Pustertal → Brixen → A22 Brenner → Innsbruck → Garmisch → Grainau (verifisert)',
         },
         description: 'Tre netter i de bayerske Alper ved foten av Zugspitze (2 962 m) — Tysklands høyeste fjell. Camping Resort Zugspitze ligger i Grainau med direkte utsikt mot Zugspitzmassivets topper. Tre netter gir plass til Zugspitzbahn, Eibsee OG Neuschwanstein.',
         activities: [
@@ -2077,7 +2088,7 @@ function ferieApp() {
           { name: 'Höllentalklamm', type: 'natur', priority: 'nice-to-have', description: 'Dramatisk kløftevandring fra Hammersbach ved foten av Zugspitze — smal kløft med hengebroer, tunneler og fossestryk. 5–6 km tur/retur, 2–3t, egnet for familier. Gratis inngang.', url: 'https://www.gapa-tourismus.de/sommer/hiking/hollental/', mapsQuery: 'Höllentalklamm, Grainau, Deutschland' },
           { name: 'Garmisch-Partenkirchen by', type: 'kultur', priority: 'nice-to-have', description: 'Sjarmerende bayersk OL-by fra 1936. Marktplatz, bemalt husfasader og alpinsk atmosfære. 6 km fra campingplassen.', url: 'https://gapa-tourismus.de/', mapsQuery: 'Garmisch-Partenkirchen Marktplatz, Deutschland' },
         ],
-        tips: ['Book Zugspitzbahn-billett på forhånd: www.zugspitze.de — Juli er høysesong', 'Med 3 netter: Dag 1 Eibsee, Dag 2 Zugspitzbahn, Dag 3 Neuschwanstein (+ Höllentalklamm om tid)', 'Neuschwanstein krever forhåndsbooking på neuschwanstein.de', 'Østerriksk vignett fra Wörthersee-etappen er fortsatt gyldig'],
+        tips: ['Book Zugspitzbahn-billett på forhånd: www.zugspitze.de — Juli er høysesong', 'Med 3 netter: Dag 1 Eibsee, Dag 2 Zugspitzbahn, Dag 3 Neuschwanstein (+ Höllentalklamm om tid)', 'Neuschwanstein krever forhåndsbooking på neuschwanstein.de', 'Østerriksk vignett + Brenner-bompenger kreves for siste etappe (Italia → Brenner → Garmisch)'],
         imageUrl: '',
       },
       {
@@ -2280,7 +2291,7 @@ function ferieApp() {
           hours: '1t 15min',
           route: 'Larvik → Kongsberg via E18/E134. Hjemme 2. august!',
         },
-        description: 'Hjemkomst etter 29 netter og ~5 700 km med campingvogn gjennom 7 land. Český Krumlov, Graz, Kroatia, Liechtensteinklamm, Zugspitze, Harz og Hamburg besøkt — neste eventyr planlegges.',
+        description: 'Hjemkomst etter 29 netter og ~5 700 km med campingvogn gjennom 7 land. Český Krumlov, Hallstatt, Istria, Dolomittene, Zugspitze, Harz og Hamburg besøkt — neste eventyr planlegges.',
         activities: [],
         tips: [],
         imageUrl: '',

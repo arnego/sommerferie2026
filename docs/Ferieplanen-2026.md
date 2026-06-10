@@ -46,13 +46,13 @@ William er 5 år og er en viktig del av planleggingen:
 | 1 | Larvik → Hirtshals (Color Line ferge, avgang 17:35) | NO/DK | 3. juli kv. | 3. juli kv. | 0 (ferge) | 27 |
 | 2 | Hirtshals (overnatting) — Hirtshals Camping | DK | 3. juli kv. | 4. juli | 1 (transit) | 27 |
 | 3 | Groß Buchwald (Groß Buchwald meadow-campspace) | DE | 4. juli kv. | 5. juli | 1 (transit) | 27 |
-| 4 | Berlin | DE | 5. juli | 8. juli | 3 | 27/28 |
-| 5 | Bad Schandau (Bohemian Switzerland) | DE | 8. juli | 10. juli | 2 | 28 |
-| 6 | Český Krumlov | CZ | 10. juli | 12. juli | 2* | 28 |
-| 7 | Mondsee (transit) | AT | 12. juli | 13. juli | 1* | 28 |
-| 8 | Postojna | SI | 13. juli | 15. juli | 2 | 28 |
+| 4 | Berlin | DE | 5. juli | 9. juli | 4 | 27/28 |
+| 5 | Bad Schandau (Bohemian Switzerland) | DE | 9. juli | 11. juli | 2 | 28 |
+| 6 | Český Krumlov | CZ | 11. juli | 13. juli | 2* | 28 |
+| 7 | Hallstatt / Obertraun (transit) | AT | 13. juli | 14. juli | 1* | 29 |
+| 8 | Postojna | SI | 14. juli | 15. juli | 1* | 29 |
 | 9 | Rovinj, Istria (Maistra Vestar Campsite 🔒) | HR | 15. juli | 20. juli | 5 | 29 |
-| 10 | Klagenfurt / Wörthersee | AT | 20. juli | 21. juli | 1* | 30 |
+| 10 | Lago di Santa Croce / Alpago (transit) | IT | 20. juli | 21. juli | 1* | 30 |
 | 11 | Zugspitze | DE | 21. juli | 24. juli | 3 | 30 |
 | 12 | Bamberg | DE | 24. juli | 26. juli | 2 | 30 |
 | 13 | Braunlage (Harz) | DE | 26. juli | 28. juli | 2* | 30/31 |
@@ -63,9 +63,9 @@ William er 5 år og er en viktig del av planleggingen:
 
 *Kortstopp — unntak fra 3-netter-regelen (transit eller prioritert destinasjon).
 
-**Totalt:** 29 netter borte — 5 i Kroatia (Rovinj 5, Maistra Vestar 🔒), 2 i Slovenia (Postojna), 1 natt Mondsee (AT), 1 natt Klagenfurt/Wörthersee (AT), 3 netter Zugspitze, 3 netter Berlin, 2 netter Bad Schandau, 2 netter Český Krumlov, 2 netter Bamberg, 2 netter Braunlage (Harz), 2 transittnetter (Hirtshals, Groß Buchwald), 2 netter Hamburg, 2 i Billund. Hjemme 2. august (kveldsavgang Hirtshals 1. august, ankomst Larvik natt til 2. august).
+**Totalt:** 29 netter borte — 5 i Kroatia (Rovinj 5, Maistra Vestar 🔒), 1 natt Slovenia (Postojna), 1 natt Hallstatt/Obertraun (AT), 1 natt Lago di Santa Croce/Alpago (IT), 3 netter Zugspitze, 4 netter Berlin, 2 netter Bad Schandau, 2 netter Český Krumlov, 2 netter Bamberg, 2 netter Braunlage (Harz), 2 transittnetter (Hirtshals, Groß Buchwald), 2 netter Hamburg, 2 i Billund. Hjemme 2. august (kveldsavgang Hirtshals 1. august, ankomst Larvik natt til 2. august).
 
-> **Merk:** Graz, Plitvice og Split er fjernet. Erstatt med: Mondsee (transit 1n), Postojna/Slovenia (2n) og 5 netter i Rovinj (Maistra Vestar Campsite, booket PH28273444). Liechtensteinklamm er erstattet med Klagenfurt/Wörthersee. Zugspitze utvidet til 3 netter. Braunlage og Hamburg er utvidet til 2 netter hver. Totalt 5 netter i Kroatia — under opprinnelig mål på 14 netter (§2), men bevisst valg. Alle kjøreetapper under 6 timer.
+> **Merk:** Graz, Plitvice og Split er fjernet. Sørruten går nå om Hallstatt/Obertraun (transit 1n) i Salzkammergut, Postojna/Slovenia (1n) og 5 netter i Rovinj (Maistra Vestar Campsite, booket PH28273444). På hjemveien er Klagenfurt/Wörthersee erstattet med Lago di Santa Croce / Alpago (1n) i Italia, slik at vi kjører den kortere og vakrere Brenner-ruten gjennom Dolomittene til Zugspitze. Berlin er utvidet til 4 netter (én natt flyttet fra Postojna). Zugspitze 3 netter, Braunlage og Hamburg 2 netter hver. Totalt 5 netter i Kroatia — under opprinnelig mål på 14 netter (§2), men bevisst valg. Alle kjøreetapper under 6 timer.
 
 ---
 
@@ -78,11 +78,11 @@ William er 5 år og er en viktig del av planleggingen:
 | Groß Buchwald | Berlin | ~350 km (verifisert, travelmath.com) | ~4 t 47 min | A7 sørover → Hamburg → A24 øst mot Berlin |
 | Berlin | Bad Schandau | 222 km (verifisert) | 3 t 2 min | A13/A17 sørøst |
 | Bad Schandau | Český Krumlov | 287 km (verifisert, rome2rio) | 3 t 56 min | E442/D8 sørover → Praha-omkjøring → D3/E55 sør mot České Budějovice → Český Krumlov |
-| Český Krumlov | Mondsee | ~154 km (verifisert) | ~2 t 6 min | E55/A7 sør → Linz → A1 vest → B154 sør → Mondsee |
-| Mondsee | Postojna | ~385 km (verifisert) | ~5 t 16 min | Mondsee → Salzburg (~70 km) → A10 Tauern → Villach → A2 → Ljubljana → A1 → Postojna |
+| Český Krumlov | Hallstatt / Obertraun | ~216 km (verifisert, Google Maps) | ~2 t 58 min | A7 → Linz → A1 vest → B145 Salzkammergut → Bad Ischl → Obertraun am Hallstättersee |
+| Hallstatt / Obertraun | Postojna | ~330 km (verifisert, Google Maps) | ~4 t 31 min | Obertraun → Bad Ischl → Salzburg → A10 Tauern → Villach → A2 → Ljubljana → A1 → Postojna |
 | Postojna | Rovinj | ~110 km (verifisert) | ~1 t 30 min | A1 → E70 → Koper → A9 Istria → Rovinj |
-| Rovinj | Klagenfurt / Wörthersee | ~270 km (verifisert) | ~3 t 42 min | A9 Istria nord → Koper → A1 Ljubljana → Karawanken-tunnelen → Villach → A2 → Klagenfurt |
-| Klagenfurt / Wörthersee | Zugspitze/Grainau | ~390 km (verifisert) | ~5 t 20 min | Klagenfurt → B100 → Lienz → Felbertauern-tunnelen → Wörgl → Achensee → B2 → Grainau |
+| Rovinj | Lago di Santa Croce / Alpago | ~273 km (verifisert, Google Maps) | ~3 t 45 min | A9 Istria → Trieste → A4 (Venezia) → A27 nord → Belluno → Lago di Santa Croce |
+| Lago di Santa Croce / Alpago | Zugspitze/Grainau | ~295 km (verifisert, Google Maps) | ~4 t 25 min | Cortina d'Ampezzo → Toblach/Pustertal → Brixen → A22 Brenner → Innsbruck → Garmisch → Grainau |
 | Zugspitze/Grainau | Bamberg | 323 km (verifisert) | 4 t 25 min | A95/A8 nord → München → A9 nord → A73 mot Bamberg |
 | Bamberg | Braunlage (Harz) | ~280 km | ~3 t 50 min | A73 nord → Erfurt → A4/A38 → Nordhausen → B4 → Braunlage |
 | Braunlage (Harz) | Hamburg | ~246 km | ~3 t 22 min | B4 nord → A7 nord → Hamburg |
@@ -91,7 +91,7 @@ William er 5 år og er en viktig del av planleggingen:
 | Hirtshals | Larvik (ferge) | — | 4 t 25 min | Color Line SuperSpeed — avgang kl. 22:15, ankomst Larvik ~02:40 (natt til 2. august) |
 | Larvik | Kongsberg | 91 km (verifisert) | 1 t 15 min | E18/E134 |
 
-Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorvei (gjennomsnittsfart ca. 73 km/t inkl. reduksjon for byggesoner, kryss og hvilepauser). ⚠️ **Etappen Hirtshals → Groß Buchwald (~451 km, ~6t 11min) overskrider 6-timersgrensen** — ta minst én lang pause underveis i Jylland. Den lengste av de nye søretappene er Mondsee → Postojna (~385 km, ~5t 16min) — innenfor grensen. Estimert total kjørelengde: ~4 100 km.
+Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorvei (gjennomsnittsfart ca. 73 km/t inkl. reduksjon for byggesoner, kryss og hvilepauser). ⚠️ **Etappen Hirtshals → Groß Buchwald (~451 km, ~6t 11min) overskrider 6-timersgrensen** — ta minst én lang pause underveis i Jylland. Den lengste av søretappene er nå Hallstatt/Obertraun → Postojna (~330 km, ~4t 31min) — godt innenfor grensen. Den nye Brenner-ruten fra Rovinj (Lago di Santa Croce → Zugspitze, ~295 km) erstatter den lange Felbertauern-etappen (~390 km) og er både kortere og vakrere. Estimert total kjørelengde: ~4 050 km.
 
 ---
 
@@ -173,7 +173,7 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 
 ---
 
-### Stopp 4: Berlin, Tyskland (3 netter: 5.–8. juli)
+### Stopp 4: Berlin, Tyskland (4 netter: 5.–9. juli)
 
 **Campingplass: Hotel & City Camping Süd**
 - Adresse: Bäkehang 9A, 14532 Kleinmachnow, Tyskland (sørvest for Berlin, ved Teltowkanal)
@@ -208,7 +208,7 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 
 ---
 
-### Stopp 5: Bad Schandau / Bohemian Switzerland (2 netter: 8.–10. juli)
+### Stopp 5: Bad Schandau / Bohemian Switzerland (2 netter: 9.–11. juli)
 
 **Campingplass: Campingplatz Ostrauer Mühle**
 - Adresse: Ostrauer Mühle 15, 01814 Bad Schandau, Tyskland
@@ -237,7 +237,7 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 
 ---
 
-### Stopp 6: Český Krumlov, Tsjekkia (2 netter: 10.–12. juli)
+### Stopp 6: Český Krumlov, Tsjekkia (2 netter: 11.–13. juli)
 
 **Kjøring:** Bad Schandau → Český Krumlov, 287 km, 3 t 56 min via E442/D8 sørover → Praha-omkjøring → D3/E55 sør mot České Budějovice → Český Krumlov. (80 km/t med campingvogn gjennom Tsjekkia.) (verifisert, rome2rio)
 
@@ -262,44 +262,46 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 - **Kjøp tsjekkisk e-vignett** (elektronisk, ~ ekvivalent 270 CZK/10 dager per kjøretøy) på edalnice.cz før innkjøring på motorvei
 - Český Krumlov blir fullt av dagsturister midt på dagen — gå tidlig morgen eller om kvelden for å ha de smale gatene mest mulig for seg selv
 - Ta med kontanter i tsjekkiske kroner (CZK) — mange små steder tar ikke kort
-- Neste dag: ~154 km til Mondsee (~2 t 6 min) via Linz og A1 vestover — kort og behagelig kjøredag
+- Neste dag: ~216 km til Hallstatt/Obertraun (~2 t 58 min) via Linz → A1 → Salzkammergut — kort, vakker kjøredag inn i Alpene
 
 ---
 
-### Stopp 7: Mondsee, Østerrike (1 natt: 12.–13. juli)
+### Stopp 7: Hallstatt / Obertraun, Østerrike (1 natt: 13.–14. juli)
 
-**Kjøring:** Český Krumlov → Mondsee, ~154 km, ~2 t 6 min via E55/A7 sør → Linz → A1 vest → B154 sør → Mondsee. (80 km/t med campingvogn.) (verifisert)
+**Kjøring:** Český Krumlov → Obertraun, ~216 km, ~2 t 58 min via A7 → Linz → A1 vest → B145 Salzkammergut → Bad Ischl → Obertraun am Hallstättersee. (80 km/t med campingvogn.) (verifisert, Google Maps)
 
-**Campingplass: Camp MondSeeLand**
-- Adresse: Punzau 21, 5310 Tiefgraben am Mondsee, Østerrike
-- Nettside: https://www.campmondsee.at/en
-- Fasiliteter: 4★-campingplass med panoramautsikt mot Schafberg og Drachenwand. Oppvarmet utendørs basseng, «Robinson-dal» lekeplass for barn, direkteadgang til Mondsee. Vurdert 4,8/5.
+**Campingplass: Camping am See – Obertraun**
+- Adresse: Winkl 77, 4831 Obertraun am Hallstättersee, Østerrike
+- Nettside: http://camping-park-am-see.at/
+- Fasiliteter: Sjarmerende, økologisk «camping de charme» med egen strand rett ved Hallstättersee, utsikt mot det historiske Hallstatt. Plass for campingvogn/bobil, glamping-lodger, gratis Wi-Fi. Enkle fasiliteter, men enestående beliggenhet.
 - Booket: Nei
 - Bookingref: —
-- Innsjekk: 14:00 · Utsjekk: 11:00
+- Innsjekk: 13:00 · Utsjekk: 11:00 (ca. — verifisér ved booking)
 
 **Aktiviteter:**
 
 | Aktivitet | Type | Prioritet | Beskrivelse |
 |-----------|------|-----------|-------------|
-| Badeliv i Mondsee | Friluft/vann | Must-do | Turkisblå Salzkammergut-innsjø rett ved campingen. Oppvarmet basseng på camp + direkteadgang til Mondsee for svømming. Panoramautsikt mot Schafberg og Drachenwand. |
-| Mondsee landsby og kirke | Kultur | Nice-to-have | Pittoresk landsby med berømt augustinerklosterkirke (kjent fra Sound of Music-bryllupsscenen). 5 min kjøring fra campingen. https://www.mondsee.at/ |
+| Hallstatt gamleby (UNESCO) | Kultur/UNESCO | Must-do | Verdensberømt landsby klemt mellom fjellet og Hallstättersee — UNESCO-verdensarv. Brosteinsgater, pastellhus og den ikoniske utsikten. ~10 min med bil eller båt over sjøen fra Obertraun. https://www.hallstatt.net/ |
+| Salzwelten Hallstatt (saltgruven) | Opplevelse/historie | Must-do | Verdens eldste saltgruve (7 000 år) høyt over Hallstatt. Bergmannsrutsjebaner ned i fjellet, underjordisk saltsjø og «Skywalk Welterbeblick». William vil elske rutsjebanene! https://www.salzwelten.at/en/hallstatt/ |
+| Dachstein Krippenstein — Rieseneishöhle & Five Fingers | Natur/opplevelse | Nice-to-have | Gondolbane fra Obertraun (rett ved campingen) opp til kjempeishulen, Mammuthulen og «Five Fingers»-utsiktsplattformen som svever over stupet. https://www.dachstein-salzkammergut.com/en/ |
+| Badeliv i Hallstättersee | Friluft/vann | Must-do | Krystallklart alpevann rett ved campingplassens egen strand. Svømming, SUP og kano med Dachstein-fjellene speilet i sjøen. |
 
 **Tips:**
-- **Østerriksk motorvei-vignett** kreves (~€9,90 per kjøretøy, 10 dager) — kjøp online på asfinag.at eller ved grensen
-- Kort kjøredag (~154 km, 2t 6min) — ankom tidlig ettermiddag og nyt ettermiddagen ved sjøen
-- Neste dag: ~385 km til Postojna (~5 t 16 min) via Salzburg → A10 Tauern → Villach → Ljubljana — tidlig avreise anbefales
+- **Østerriksk motorvei-vignett** kreves (~€12 per kjøretøy, 10 dager) — kjøp online på asfinag.at eller ved grensen
+- Hallstatt har sterkt begrenset parkering og kan stenge for biler ved fullt belegg — kjør tidlig, eller ta båten over fra Obertraun/Hallstatt Lahn
+- Neste dag: ~330 km til Postojna (~4 t 31 min) via Bad Ischl → Salzburg → A10 Tauern → Villach → Ljubljana — tidlig avreise anbefales
 
 ---
 
-### Stopp 8: Postojna, Slovenia (2 netter: 13.–15. juli)
+### Stopp 8: Postojna, Slovenia (1 natt: 14.–15. juli)
 
-**Kjøring:** Mondsee → Postojna, ~385 km, ~5 t 16 min via Salzburg → A10 Tauern → Villach → A2 → Ljubljana → A1 → Postojna. (80 km/t med campingvogn.) (verifisert)
+**Kjøring:** Obertraun → Postojna, ~330 km, ~4 t 31 min via Bad Ischl → Salzburg → A10 Tauern → Villach → A2 → Ljubljana → A1 → Postojna. (80 km/t med campingvogn.) (verifisert, Google Maps)
 
 **Campingplass: Camping Pivka Jama**
 - Adresse: Veliki Otok 50, 6230 Postojna, Slovenia
 - Nettside: http://camping-postojna.com/en
-- Fasiliteter: Rolig skog-camping 4 km fra Postojnahulen. Plass for campingvogn, moderne sanitæranlegg.
+- Fasiliteter: Rolig skog-camping rett ved Postojnahulen. Utendørs basseng + barnebasseng, tennis/volleyball/bowling, sykkelutleie. Plass for campingvogn, moderne sanitæranlegg. (Vurdert 4,3 — beliggenheten ved hulen er ideell for morgenbesøket.)
 - Booket: Nei
 - Bookingref: —
 - Innsjekk: 14:00 · Utsjekk: 11:00
@@ -308,13 +310,14 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 
 | Aktivitet | Type | Prioritet | Beskrivelse |
 |-----------|------|-----------|-------------|
-| Postojnahulen (Postojnska jama) | Natur/severdighet | Must-do | Europas mest besøkte hule — 24 km nettverkslengde, 5 km guidet tur med elektrisk tog. Spektakulære tropfstein-formasjoner og katedraler. Alltid 10 °C inne — ta med jakke. https://www.postojnska-jama.eu/en/postojna-cave/ |
-| Predjama-slottet (Predjamski grad) | Severdighet | Must-do | Middelalderfestning bygd inn i en 123 m høy fjellvegg — en av verdens mest dramatisk plasserte slott. 10 km fra hulen. https://www.postojnska-jama.eu/en/predjama-castle/ |
+| Postojnahulen (Postojnska jama) | Natur/severdighet | Must-do | Europas mest besøkte hule — 24 km nettverkslengde, 5 km guidet tur med elektrisk tog. Spektakulære drypstein-formasjoner og katedraler. Alltid 10 °C inne — ta med jakke. Ta tidlig morgenslot 15. juli før avreise mot Rovinj. https://www.postojnska-jama.eu/en/postojna-cave/ |
+| Predjama-slottet (Predjamski grad) | Severdighet | Nice-to-have | Middelalderfestning bygd inn i en 123 m høy fjellvegg — en av verdens mest dramatisk plasserte slott. 10 km fra hulen. Kan tas med før avreise dersom tiden strekker til. https://www.postojnska-jama.eu/en/predjama-castle/ |
 
 **Tips:**
-- Bestill Postojnahule-billett online på forhånd — sparer kø og sikrer plass
+- Vi ankommer ettermiddag, tar hulen tidlig neste morgen (15. juli) og kjører videre til Rovinj samme dag
+- Bestill Postojnahule-billett online på forhånd — velg et tidlig morgenslot
 - Ta med varm jakke inn i hulen (alltid 10 °C inne)
-- Kombibillett for Postojnahule + Predjama-slottet er rimeligst
+- Med kun 1 natt: prioriter hulen. Predjama-slottet (kombibillett) kan tas med hvis tid før avreise
 - **Slovensk vignett** (~€16, 7 dager) kreves — kjøp på e-vinjeta.si eller ved grensen
 - Neste dag: ~110 km til Rovinj (~1 t 30 min) via A1 → Koper → A9 Istria
 
@@ -347,18 +350,18 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 - Dinopark Funtana: kjøp billett online på forhånd i høysesong
 - Pula amfiteater: gå tidlig på morgenen for å unngå folkemengder og sommerheten
 - Kroatia bruker EUR siden januar 2023 — ingen valutaveksling nødvendig
-- Neste dag: ~270 km til Klagenfurt/Wörthersee (~3 t 42 min) via Koper → Ljubljana → Karawanken-tunnelen — start tidlig morgen
+- Neste dag: ~273 km til Lago di Santa Croce / Alpago (~3 t 45 min) via Trieste → A4 → A27 Belluno — rask motorvei, start tidlig morgen
 
 ---
 
-### Stopp 10: Klagenfurt / Wörthersee, Østerrike (1 natt: 20.–21. juli)
+### Stopp 10: Lago di Santa Croce / Alpago, Italia (1 natt: 20.–21. juli)
 
-**Kjøring:** Rovinj → Klagenfurt/Wörthersee, ~270 km, ~3 t 42 min via A9 Istria nord → Koper → A1 Ljubljana → Karawanken-tunnelen → Villach → A2 → Klagenfurt. Slovensk og østerriksk vignett brukes. (80 km/t med campingvogn i alle land.) (verifisert)
+**Kjøring:** Rovinj → Farra d'Alpago, ~273 km, ~3 t 45 min via A9 Istria → Trieste → A4 (Venezia) → A27 nord → Belluno → Lago di Santa Croce. Slovensk vignett brukes på den korte strekningen ved Koper/Trieste; Italia bruker bompengebommer (ingen vignett). (80 km/t med campingvogn.) (verifisert, Google Maps)
 
-**Campingplass: Falkensteiner Camping Wörthersee**
-- Adresse: Am Wörthersee, 9020 Klagenfurt am Wörthersee, Østerrike
-- Nettside: https://www.falkensteinercamping.com/en/woerthersee
-- Fasiliteter: Åpnet 1. juni 2026. Direkteadgang til Wörthersee-stranden. Familievennlig resort ved Europas varmeste badesø.
+**Campingplass: Camping Sarathei**
+- Adresse: Viale Al Lago 13, 32016 Farra d'Alpago (BL), Italia
+- Nettside: https://www.sarathei.it/en
+- Fasiliteter: Direkte ved egen strand på Lago di Santa Croce, i Dolomittenes forfjell. Plass for campingvogn/bobil/telt, lekeplass, restaurant. Åpner 1. april 2026. Vurdert 4,3.
 - Booket: Nei
 - Bookingref: —
 - Innsjekk: 14:00 · Utsjekk: 11:00
@@ -367,22 +370,23 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 
 | Aktivitet | Type | Prioritet | Beskrivelse |
 |-----------|------|-----------|-------------|
-| Badeliv i Wörthersee | Friluft/vann | Must-do | Europas varmeste naturbadesø (26–28 °C om sommeren). Strandadgang rett fra campingen. Ideelt for William etter syv dager i Rovinj. https://www.woerthersee.com/en/ |
-| Liechtensteinklamm (benstrekk neste dag) | Natur/severdighet | Nice-to-have | En av Alpenes dypeste juv (270 m) i St. Johann im Pongau — ~45 min omvei via A10 Tauern på vei til Zugspitze. Trebroer og stiger langs fossestryk, ny «Helix»-spiraltrapp. Solide sko og jakke anbefales. https://www.josalzburg.com/en/activities/liechtenstein-gorge.html |
+| Badeliv og vannsport i Lago di Santa Croce | Friluft/vann | Must-do | Klart, mildt alpevann med egen strand ved campingen. Bading, SUP og kano — en av Italias beste sjøer for windsurfing og kitesurfing pga. jevn termisk vind. |
+| Cortina d'Ampezzo og Dolomittene (på vei til Zugspitze) | Natur/severdighet | Nice-to-have | Morgendagens etappe går gjennom hjertet av Dolomittene (UNESCO) forbi Cortina d'Ampezzo og Toblach i Pustertal — en av Europas vakreste bilruter. https://www.dolomiti.org/en/ |
+| Cansiglio-skogen og Alpago-platået | Natur | Nice-to-have | Vidstrakt høyslette og urskog rett over sjøen — vandring, dyreliv og panoramautsikt over Santa Croce. https://www.visitalpago.com/ |
 
 **Tips:**
-- Wörthersee: finest bading på ettermiddagen — campingen har direkteadgang til stranden
-- **Slovensk vignett** (~€16) + **østerriksk vignett** (~€9,90) kreves for ruten — kjøp online før avreise
-- Neste dag: ~390 km til Zugspitze/Grainau (~5 t 20 min) via Felbertauern → Wörgl → Garmisch → Grainau (ev. stopp Liechtensteinklamm som benstrekk +45 min)
+- Italia bruker bompengebommer (ikke vignett) — A4/A27 betales ved bom. Ingen vignett nødvendig i Italia
+- Lago di Santa Croce har jevn ettermiddagsvind — perfekt for windsurfing/SUP, men hold øye med William ved vannkanten
+- Neste dag: ~295 km til Zugspitze/Grainau (~4 t 25 min) via Cortina → Dolomittene → Pustertal → Brenner → Innsbruck → Garmisch — kortere og vakrere enn den østerrikske Felbertauern-ruten. Krever østerriksk vignett + Brenner-bompenger for siste strekning
 
 ---
 
 ### Hjemreise — stopp og transittdager (21. juli – 1. august)
 
-Hjemreisen inkluderer opplevelsesstoppene Zugspitze, Braunlage (Harz), Hamburg og Billund (Legoland) — i tillegg til to kulturnetter i Bamberg. Klagenfurt/Wörthersee (stopp 10) er en egen overnatting (se over).
+Hjemreisen inkluderer opplevelsesstoppene Zugspitze, Braunlage (Harz), Hamburg og Billund (Legoland) — i tillegg til to kulturnetter i Bamberg. Lago di Santa Croce / Alpago (stopp 10) er en egen overnatting (se over).
 
 **Zugspitze, Bayern (3 netter: 21.–24. juli)**
-- Kjøring: Klagenfurt/Wörthersee → Zugspitze/Grainau, ~390 km, ~5 t 20 min via Klagenfurt → B100 → Lienz → Felbertauern-tunnelen → Wörgl → Achensee → B2 → Grainau. Ev. stopp Liechtensteinklamm +45 min. (80 km/t med campingvogn.) (verifisert)
+- Kjøring: Lago di Santa Croce / Alpago → Zugspitze/Grainau, ~295 km, ~4 t 25 min via Cortina d'Ampezzo → Toblach/Pustertal → Brixen → A22 Brenner → Innsbruck → Garmisch → Grainau. (80 km/t med campingvogn; vakker fjellrute gjennom Dolomittene.) (verifisert, Google Maps)
 - Campingplass: Camping Resort Zugspitze, Griesener Str. 9, 82491 Grainau
 - Nettside: https://www.camping-resort-zugspitze.de/
 - Innsjekk: 14:00 · Utsjekk: 12:00 (ca. — verifisér ved booking)
@@ -506,6 +510,7 @@ Disse 10 campingplassene dekker ulike reisestiler langs hele den kroatiske ruten
 
 | Dato | Endring | Av |
 | --- | --- | --- |
+| 2026-06-11 | Fire ruteendringer (alle avstander verifisert via Google Maps, campingplasser via Tavily/Google Places). (1) **Stopp 7: Mondsee → Hallstatt/Obertraun** (Camping am See, Winkl 77, Obertraun am Hallstättersee). Bedre fordelt kjøretid: Český Krumlov→Obertraun ~216 km/2t58 + Obertraun→Postojna ~330 km/4t31 (mot tidligere 154/385 km, der dag 2 var 5t16). Salzkammergut-stopp med Hallstatt UNESCO, saltgruve og Dachstein. (2) **Stopp 10: Klagenfurt/Wörthersee → Lago di Santa Croce / Alpago, Italia** (Camping Sarathei). Muliggjør den kortere, vakrere **Brenner-ruten** gjennom Dolomittene: Rovinj→Santa Croce ~273 km/3t45 + Santa Croce→Zugspitze ~295 km/4t25 via Cortina/Pustertal/Brenner (mot tidligere Felbertauern ~390 km/5t20). Mindre, sjarmerende alpesjø med bedre balanse. Italia lagt til i fartsgrense-tabellen. (3) **Én natt flyttet fra Postojna til Berlin**: Berlin 3→4n (5–9 jul), Postojna 2→1n (14–15 jul). Stopp 5–8 fremskutt 1 dag; Rovinj (booket, 15–20 jul) og alt etter uendret. (4) **Postojna**: beholder Camping Pivka Jama (ved hulen, basseng + barnebasseng) — bekreftet som beste valg for 1-natt-stoppet før morgenbesøk i hulen. Predjama nedgradert til nice-to-have pga. 1 natt. Totalt 29 netter uendret. | Claude |
 | 2026-06-10 | (1) FEX Berlin og Naturkundemuseum (stopp 4 Berlin) endret til «nice-to-have» prioritet. (2) Kjøreavstand Klagenfurt/Wörthersee → Zugspitze/Grainau oppdatert og verifisert via OSRM: **~284 km → ~390 km**, reisetid 3 t 53 min → 5 t 20 min. Korrigert rute: Felbertauern-tunnelen (via Lienz) → Wörgl → Achensee → B2 → Grainau (begge hoved­ruter gir ~389 km). Tidligere verdi var feil (basert på estimat). (3) Kartkordinater for alle overnattingssteder (stopp 2–15) oppdatert fra tilnærmede bykjerner til faktiske GPS-koordinater fra PiNCAMP, NorCamp, ACSI, JetCamp og offisielle nettsider. Stopp med størst avvik: Berlin/Kleinmachnow (+14 km fra sentrum), KNAUS Hamburg/Schnelsen, Falkensteiner Wörthersee, Camping Resort Zugspitze (tidligere feil lengdegrad). | Claude |
 | 2026-06-09 | Rovinj (stopp 9) byttet fra Camping Polari til **Maistra Vestar Campsite** (Veštar 1, 52210 Rovinj). Booking bekreftet — ref. **PH28273444** (09.06.2026), Pitch PREMIUM, 5 netter (15–20 jul), 3 personer, 545 EUR. Rovinj forkortet fra 7 til 5 netter frigir 2 netter — redistribuert: **+1n Braunlage** (1→2n), **+1n Hamburg** (1→2n). Datokjede stopp 10–14 fremskutt 2 dager: Klagenfurt 20–21 jul, Zugspitze 21–24 jul, Bamberg 24–26 jul, Braunlage 26–28 jul, Hamburg 28–30 jul. Billund 30 jul–1 aug og ferge 1. aug uendret. Totalt 29 netter uendret (verifisert). | Claude |
 | 2026-06-07 | Omstrukturering av sørruten: (1) Graz, Plitvice og Split fjernet. (2) Český Krumlov utvidet fra 1 til 2 netter (10–12 jul). (3) Nytt transitstopp **Mondsee** (Camp MondSeeLand, 12–13 jul, 1n) erstatter Graz. (4) Nytt stopp **Postojna, Slovenia** (Camping Pivka Jama, 13–15 jul, 2n) — Postojnahule + Predjama-slottet. (5) **Rovinj** utvidet fra 3 til 7 netter (15–22 jul). (6) **Klagenfurt/Wörthersee** (Falkensteiner Camping, 22–23 jul, 1n) erstatter Liechtensteinklamm. Liechtensteinklamm beholdt som Nice-to-have benstrekk på vei til Zugspitze. (7) **Zugspitze** utvidet fra 2 til 3 netter (23–26 jul) — plass til Zugspitzbahn, Neuschwanstein og Höllentalklamm (ny Nice-to-have). (8) **Braunlage** (Camping- und Wohnmobilstellplatz Braunlage) erstatter Wernigerode som Harz-stopp — Naturmythenpfad lagt til som Must-do. Totalt 29 netter uendret. Ruteoversikt renummerert til 17 stopp. Kjøreetapper, hero-km (~4 100 km) og alle stoppbeskrivelser oppdatert. | Claude |
