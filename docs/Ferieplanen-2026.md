@@ -22,7 +22,7 @@
 - Start og slutt i Kongsberg, Norge.
 - **Hoveddestinasjon: Kroatia** — med minimum 14 netter langs Adriaterkysten og i nasjonalparkene.
 - Et besøk til familie (André og Lucia) i Tyskland i løpet av ferien på adresse: Fischerinsel 9, 10179 Berlin, Tyskland.
-- Bohemian Switzerland (Bad Schandau) inngår som transittstopp på vei sydover.
+- Bohemian Switzerland (Böhmisk Sveits) inngår som stopp på vei sydover — base på Kemp Mezní Louka på tsjekkisk side, med dagsturer til både den tsjekkiske og saksiske (tyske) delen av parken.
 - **Ferger:** Color Line SuperSpeed Larvik→Hirtshals på utreisen (fredag 3. juli, avgang kl. 17:35, ankomst Hirtshals ca. 21:40). Color Line SuperSpeed Hirtshals→Larvik på hjemreisen (lørdag 1. august, avgang kl. 22:15, ankomst Larvik ca. 02:40 natt til 2. august).
 - Ingen overnattinger kortere enn 3 netter med mindre vi eksplisitt har kommet med ønske om det for spesifikke destinasjoner.
 - Kjøreetapper må være under 6 timer per dag med minimum ett stopp underveis.
@@ -47,7 +47,7 @@ William er 5 år og er en viktig del av planleggingen:
 | 2 | Hirtshals (overnatting) — Hirtshals Camping | DK | 3. juli kv. | 4. juli | 1 (transit) | 27 |
 | 3 | Groß Buchwald (Groß Buchwald meadow-campspace) | DE | 4. juli kv. | 5. juli | 1 (transit) | 27 |
 | 4 | Berlin | DE | 5. juli | 9. juli | 4 | 27/28 |
-| 5 | Bad Schandau (Bohemian Switzerland) | DE | 9. juli | 11. juli | 2 | 28 |
+| 5 | Bøhmisk Sveits (Mezní Louka) | CZ | 9. juli | 11. juli | 2 | 28 |
 | 6 | Český Krumlov | CZ | 11. juli | 13. juli | 2* | 28 |
 | 7 | Hallstatt / Obertraun (transit) | AT | 13. juli | 14. juli | 1* | 29 |
 | 8 | Postojna | SI | 14. juli | 15. juli | 1* | 29 |
@@ -63,7 +63,7 @@ William er 5 år og er en viktig del av planleggingen:
 
 *Kortstopp — unntak fra 3-netter-regelen (transit eller prioritert destinasjon).
 
-**Totalt:** 29 netter borte — 5 i Kroatia (Rovinj 5, Maistra Vestar 🔒), 1 natt Slovenia (Postojna), 1 natt Hallstatt/Obertraun (AT), 1 natt Lago di Santa Croce/Alpago (IT), 3 netter Zugspitze, 4 netter Berlin, 2 netter Bad Schandau, 2 netter Český Krumlov, 2 netter Bamberg, 2 netter Braunlage (Harz), 2 transittnetter (Hirtshals, Groß Buchwald), 2 netter Hamburg, 2 i Billund. Hjemme 2. august (kveldsavgang Hirtshals 1. august, ankomst Larvik natt til 2. august).
+**Totalt:** 29 netter borte — 5 i Kroatia (Rovinj 5, Maistra Vestar 🔒), 1 natt Slovenia (Postojna), 1 natt Hallstatt/Obertraun (AT), 1 natt Lago di Santa Croce/Alpago (IT), 3 netter Zugspitze, 4 netter Berlin, 2 netter Bøhmisk Sveits (Mezní Louka), 2 netter Český Krumlov, 2 netter Bamberg, 2 netter Braunlage (Harz), 2 transittnetter (Hirtshals, Groß Buchwald), 2 netter Hamburg, 2 i Billund. Hjemme 2. august (kveldsavgang Hirtshals 1. august, ankomst Larvik natt til 2. august).
 
 > **Merk:** Graz, Plitvice og Split er fjernet. Sørruten går nå om Hallstatt/Obertraun (transit 1n) i Salzkammergut, Postojna/Slovenia (1n) og 5 netter i Rovinj (Maistra Vestar Campsite, booket PH28273444). På hjemveien er Klagenfurt/Wörthersee erstattet med Lago di Santa Croce / Alpago (1n) i Italia, slik at vi kjører den kortere og vakrere Brenner-ruten gjennom Dolomittene til Zugspitze. Berlin er utvidet til 4 netter (én natt flyttet fra Postojna). Zugspitze 3 netter, Braunlage og Hamburg 2 netter hver. Totalt 5 netter i Kroatia — under opprinnelig mål på 14 netter (§2), men bevisst valg. Alle kjøreetapper under 6 timer.
 
@@ -76,9 +76,9 @@ William er 5 år og er en viktig del av planleggingen:
 | Kongsberg | Larvik | 91 km (verifisert) | 1 t 15 min | E18 sørøst |
 | Hirtshals | Groß Buchwald | ~451 km (verifisert, travelmath.com) ⚠️ | ~6 t 11 min | E45 sør gjennom Jylland → Padborg-grense → A7 sørover → Bordesholm-avkjøring → Groß Buchwald |
 | Groß Buchwald | Berlin | ~350 km (verifisert, travelmath.com) | ~4 t 47 min | A7 sørover → Hamburg → A24 øst mot Berlin |
-| Berlin | Bad Schandau | 222 km (verifisert) | 3 t 2 min | A13/A17 sørøst |
-| Bad Schandau | Český Krumlov | 287 km (verifisert, rome2rio) | 3 t 56 min | E442/D8 sørover → Praha-omkjøring → D3/E55 sør mot České Budějovice → Český Krumlov |
-| Český Krumlov | Hallstatt / Obertraun | ~216 km (verifisert, Google Maps) | ~2 t 58 min | A7 → Linz → A1 vest → B145 Salzkammergut → Bad Ischl → Obertraun am Hallstättersee |
+| Berlin | Mezní Louka (Bøhmisk Sveits) | ~235 km (verifisert, rome2rio) | ~3 t 13 min | A13/A17 sørøst → Dresden → Hřensko-grensa → Mezní Louka |
+| Mezní Louka | Český Krumlov (Nové Spolí) | ~285 km (verifisert, rome2rio) | ~3 t 54 min | Hřensko → D8/E442 sørover → Praha-omkjøring → D3/E55 sør mot České Budějovice → Český Krumlov |
+| Český Krumlov | Hallstatt / Obertraun | ~213 km (verifisert, rome2rio/daytrip) | ~2 t 55 min | A7 → Linz → A1 vest → B145 Salzkammergut → Bad Ischl → Obertraun am Hallstättersee |
 | Hallstatt / Obertraun | Postojna | ~330 km (verifisert, Google Maps) | ~4 t 31 min | Obertraun → Bad Ischl → Salzburg → A10 Tauern → Villach → A2 → Ljubljana → A1 → Postojna |
 | Postojna | Rovinj | ~110 km (verifisert) | ~1 t 30 min | A1 → E70 → Koper → A9 Istria → Rovinj |
 | Rovinj | Lago di Santa Croce / Alpago | ~273 km (verifisert, Google Maps) | ~3 t 45 min | A9 Istria → Trieste → A4 (Venezia) → A27 nord → Belluno → Lago di Santa Croce |
@@ -91,7 +91,7 @@ William er 5 år og er en viktig del av planleggingen:
 | Hirtshals | Larvik (ferge) | — | 4 t 25 min | Color Line SuperSpeed — avgang kl. 22:15, ankomst Larvik ~02:40 (natt til 2. august) |
 | Larvik | Kongsberg | 91 km (verifisert) | 1 t 15 min | E18/E134 |
 
-Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorvei (gjennomsnittsfart ca. 73 km/t inkl. reduksjon for byggesoner, kryss og hvilepauser). ⚠️ **Etappen Hirtshals → Groß Buchwald (~451 km, ~6t 11min) overskrider 6-timersgrensen** — ta minst én lang pause underveis i Jylland. Den lengste av søretappene er nå Hallstatt/Obertraun → Postojna (~330 km, ~4t 31min) — godt innenfor grensen. Den nye Brenner-ruten fra Rovinj (Lago di Santa Croce → Zugspitze, ~295 km) erstatter den lange Felbertauern-etappen (~390 km) og er både kortere og vakrere. Estimert total kjørelengde: ~4 050 km.
+Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorvei (gjennomsnittsfart ca. 73 km/t inkl. reduksjon for byggesoner, kryss og hvilepauser). ⚠️ **Etappen Hirtshals → Groß Buchwald (~451 km, ~6t 11min) overskrider 6-timersgrensen** — ta minst én lang pause underveis i Jylland. Den lengste av søretappene er nå Hallstatt/Obertraun → Postojna (~330 km, ~4t 31min) — godt innenfor grensen. Den nye Brenner-ruten fra Rovinj (Lago di Santa Croce → Zugspitze, ~295 km) erstatter den lange Felbertauern-etappen (~390 km) og er både kortere og vakrere. Estimert total kjørelengde: ~4 060 km.
 
 ---
 
@@ -181,8 +181,8 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 - Fasiliteter: Lekeplass, biergarten, gratis Wi-Fi, frokostbuffet, vaskemaskin, gassflaskebytte, ferskvannstapping, strøm. Åpen hele året.
 - Transport til sentrum: 5 min til buss → S-Bahn Wannsee → direkte til sentrum. Sykkelrute via Kronprinzessinnenweg gjennom Grunewald.
 - Tar imot campingvogn med strømtilkobling
-- Booket: Nei
-- Bookingref: —
+- **Booket: Ja — bekreftet**
+- Bookingref: Bekreftet
 - Innsjekk: 13:00 · Utsjekk: 11:00 (verifisert)
 
 **Familiebesøk: André og Lucia**
@@ -209,13 +209,15 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 
 ---
 
-### Stopp 5: Bad Schandau / Bohemian Switzerland (2 netter: 9.–11. juli)
+### Stopp 5: Bøhmisk Sveits / Mezní Louka (2 netter: 9.–11. juli)
 
-**Campingplass: Campingplatz Ostrauer Mühle**
-- Adresse: Ostrauer Mühle 15, 01814 Bad Schandau, Tyskland
-- Nettside: https://www.ostrauer-muehle.de/
-- Fasiliteter: Lekeplass, Elbe-elven i nærheten, felleskjøkken, turstier direkte fra plassen
-- Lies direkte i Bad Schandau ved foten av nasjonalparken
+**Kjøring:** Berlin → Mezní Louka, ~235 km, ~3 t 13 min via A13/A17 sørøst → Dresden → Hřensko-grensa → Mezní Louka. (80 km/t med campingvogn.) (verifisert, rome2rio: Berlin→Hřensko 230,9 km + ~5 km opp til Mezní Louka)
+
+**Campingplass: Kemp Mezní Louka**
+- Adresse: Mezní Louka, 407 17 Hřensko, Tsjekkia — midt i České Švýcarsko (Böhmisk Sveits) nasjonalpark, ~5 km fra Hřensko
+- Nettside: https://www.kemp-mezni-louka.cz/
+- Fasiliteter: Nytt sanitæranlegg med varmt vann hele dagen, drikkevann over hele plassen, eltilkobling, vannpåfylling og tømmestasjon for campingvogn (výlevka), felleskjøkken (kjøleskap, kokeplate, mikrobølge), sykkellager og felles bålplass. Eid av nasjonalparkforvaltningen (Správa NP České Švýcarsko). Rett ved bussstopp og ved stien mot Pravčická brána.
+- **Ingen minimumsregel for opphold** — fungerer fint for 2-nattersstoppet (i motsetning til Ostrauer Mühle, som krever minimum 4 netter)
 - Tar imot campingvogn med strømtilkobling
 - Booket: Nei
 - Bookingref: —
@@ -225,27 +227,30 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 
 | Aktivitet | Type | Prioritet | Beskrivelse |
 |-----------|------|-----------|-------------|
-| Basteibroen (Basteibrücke) | Natur/utsiktspunkt | Must-do | Ikonisk steinbro 194 meter over Elben. Kort sti fra parkering (15–20 min). Gå tidlig! https://www.saechsische-schweiz.de/region/highlights/bastei |
-| Dagstur: Kamenice Gorge (Tsjekkia) | Natur/båttur | Must-do | Vakker elvekløft i Böhmisk Sveits nasjonalpark. Ca. 10–15 km fra Bad Schandau. Båttur gjennom trange juv med 30 m høye sandsteinsvegger. Ta med kontanter (tsjekkiske kroner eller euro). https://npcs.cz/en/ |
-| Kirnitzschtalbahn | Historisk trikk | Must-do | Historisk sporvogn fra Bad Schandau til Lichtenhainer Wasserfall. William vil elske trikketuren! https://www.rvsoe.de/verkehrsmittel/kirnitzschtalbahn/ |
-| Festung Königstein | Festning/historie | Nice-to-have | En av Europas største fjellfestninger. Kanoner, tunneler, utsikt. https://www.festung-koenigstein.de/ |
-| Amselsee i Rathen | Natur/båt | Nice-to-have | Rolig innsjøvandring med robåtutleie. https://www.saechsische-schweiz.de/ausflugsziele/amselsee-kurort-rathen |
+| Pravčická brána & lunsj på Falkenstein (Sokolí hnízdo) | Natur + mat | Must-do | Europas største naturlige steinbue (26,5 m spenn) — tsjekkisk nasjonalmonument og selve ikonet for Böhmisk Sveits. Lunsj på den historiske restauranten Sokolí hnízdo (Falcon's Nest) rett ved buen. Sti fra Mezní Louka (~6,5 km) eller kortere fra Hřensko (~4 km). Åpent daglig 10–18. Inngang voksne 125 CZK / 5 EUR, barn 6–14 år 50 CZK / 2 EUR. https://pbrana.cz/en/ |
+| Kamenice Gorge (soutěsky) | Natur/båttur | Must-do | Vakre elvekløfter (Edmundova og Divoká soutěska) i Böhmisk Sveits NP. Båttur gjennom trange juv med 30 m høye sandsteinsvegger. Bare ~5 km fra campingen via Hřensko. Ta med kontanter (CZK eller euro). https://npcs.cz/en/ |
+| Basteibroen (Basteibrücke) | Natur/utsiktspunkt | Must-do | Ikonisk steinbro 194 meter over Elben på den saksiske (tyske) siden. Dagstur ~25 km via Hřensko/Bad Schandau. Kort sti fra parkering (15–20 min). Gå tidlig! https://www.saechsische-schweiz.de/region/highlights/bastei |
+| Kirnitzschtalbahn | Historisk trikk | Nice-to-have | Historisk sporvogn fra Bad Schandau til Lichtenhainer Wasserfall på tysk side. Hyggelig trikketur dersom dere likevel er i Bad Schandau-området. https://www.rvsoe.de/verkehrsmittel/kirnitzschtalbahn/ |
+| Festung Königstein | Festning/historie | Nice-to-have | En av Europas største fjellfestninger på tysk side. Kanoner, tunneler, utsikt. https://www.festung-koenigstein.de/ |
 
 **Tips:**
+- Kemp Mezní Louka har ingen minimumsregel for opphold og ligger rett ved stien til Pravčická brána
 - Gå til Bastei tidlig på morgenen for å unngå folkemengder
-- Ingen Umweltzone i Bad Schandau
-- Kamenice Gorge: parkering i Hrensko kan bli full tidlig i høysesong
+- Falkenstein-restauranten og Kamenice Gorge: ta med CZK eller euro
+- Kjøp tsjekkisk e-vignett (~270 CZK/10 dager per kjøretøy) på edalnice.cz før innkjøring på motorvei
+- Parkering i Hřensko kan bli full tidlig i høysesong — campingen ligger uansett ved stiens øvre startpunkt på Mezní Louka
 
 ---
 
 ### Stopp 6: Český Krumlov, Tsjekkia (2 netter: 11.–13. juli)
 
-**Kjøring:** Bad Schandau → Český Krumlov, 287 km, 3 t 56 min via E442/D8 sørover → Praha-omkjøring → D3/E55 sør mot České Budějovice → Český Krumlov. (80 km/t med campingvogn gjennom Tsjekkia.) (verifisert, rome2rio)
+**Kjøring:** Mezní Louka → Český Krumlov, ~285 km, ~3 t 54 min via Hřensko → D8/E442 sørover → Praha-omkjøring → D3/E55 sør mot České Budějovice → Český Krumlov. (80 km/t med campingvogn gjennom Tsjekkia.) (verifisert, rome2rio: Český Krumlov→Hřensko 280 km + ~5 km fra Mezní Louka)
 
-**Campingplass: Camping Chvalšiny**
-- Adresse: Chvalšiny 295, 382 08 Chvalšiny, Tsjekkia — ca. 10 km vest for Český Krumlov
-- Nettside: https://mycamp.cz/en/caravan-camping-krumlov
-- Fasiliteter: Koselig familiecamping, kåret til ACSI «Best Camp in the Czech Republic 2025». 150 plasser for campingvogn/bobil. Økologisk saltvannsbasseng, dam med bading, lekeplass, restaurant. Utsikt mot Blanský les-skogen.
+**Campingplass: Kemp Český Krumlov – Nové Spolí**
+- Adresse: Nové Spolí, 381 01 Český Krumlov, Tsjekkia — rett ved Vltava, ~1,5 km (30 min gange) fra gamlebyen
+- Nettside: https://www.kempkrumlov.cz/
+- Fasiliteter: Vodácký kemp (padle-/raftecamping) nærmest UNESCO-gamlebyen. Plasser for campingvogn/bobil, to sanitæranlegg med varmt vann og dusj, to parkeringer, kiosk/servering med sitteplasser, gratis Wi-Fi. Drives av AUGUSTIN s.r.o. Samarbeider med båt-/rafteutleien Vydra. Åpen 1.5.–30.9.2026.
+- Pris (2026): campingvogn 400 CZK/natt, bobil 450 CZK/natt, eltilkobling 150 CZK/dag, voksen 110–130 CZK/natt, barn 7–15 år 100–110 CZK/natt
 - Booket: Nei
 - Bookingref: —
 - Innsjekk: 13:00 · Utsjekk: 12:00 (ca. — verifisér ved booking)
@@ -254,22 +259,23 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 
 | Aktivitet | Type | Prioritet | Beskrivelse |
 |-----------|------|-----------|-------------|
+| Familie-rafting fra campingen inn til byen | Friluft/vann | Must-do | Rolig familie-rafting/flåtetur på Vltava fra Kemp Nové Spolí og ned forbi de små stryktrappene (propusti) inn i hjertet av gamlebyen. Campingen samarbeider med båtutleien Vydra — komplett utstyr (flåte/kano, vester, padler) for både barn og voksne, og de kan kjøre utstyr til og fra elven. En av turens høydepunkter for William! https://vydra.info/ (se også https://www.kempkrumlov.cz/) |
 | Český Krumlov gamlebyen (UNESCO) | Kultur/UNESCO | Must-do | Eventyraktig middelalderby i Sør-Böhmen, UNESCO-verdensarv siden 1992. Vltava-elven svinger rundt den brosteinsbelagte gamlebyen, kronet av et enormt slott. Som hentet fra en bok — William vil elske de smale gatene. https://www.ckrumlov.info/en/ |
 | Český Krumlov slott og slottshage | Kultur/severdighet | Must-do | Tsjekkias nest største slottskompleks med fargerikt rundtårn, bjørnegrav og barokk slottshage med utsikt over byen. Kort klatretur opp fra elven. https://www.zamek-ceskykrumlov.cz/en |
-| Flåte-/kanotur på Vltava | Friluft/vann | Nice-to-have | Rolig padletur eller flåtetur på Vltava forbi gamlebyen — populær familieaktivitet i sommervarmen. Lokale operatører i byen. |
-| Bading i campingdammen | Friluft/vann | Nice-to-have | Camping Chvalšiny har egen badedam og saltvannsbasseng — fin avkjøling etter en dag i byen. |
+| Bading og avslapning ved Vltava | Friluft/vann | Nice-to-have | Kemp Nové Spolí ligger rett ved elvebredden med plen og kiosk — fin avkjøling og lek ved vannet etter en dag i byen. https://www.kempkrumlov.cz/ |
 
 **Tips:**
 - **Kjøp tsjekkisk e-vignett** (elektronisk, ~ ekvivalent 270 CZK/10 dager per kjøretøy) på edalnice.cz før innkjøring på motorvei
+- Book familie-rafting hos Vydra på forhånd i høysesong — campingen formidler turen rett fra plassen
 - Český Krumlov blir fullt av dagsturister midt på dagen — gå tidlig morgen eller om kvelden for å ha de smale gatene mest mulig for seg selv
 - Ta med kontanter i tsjekkiske kroner (CZK) — mange små steder tar ikke kort
-- Neste dag: ~216 km til Hallstatt/Obertraun (~2 t 58 min) via Linz → A1 → Salzkammergut — kort, vakker kjøredag inn i Alpene
+- Neste dag: ~213 km til Hallstatt/Obertraun (~2 t 55 min) via Linz → A1 → Salzkammergut — kort, vakker kjøredag inn i Alpene
 
 ---
 
 ### Stopp 7: Hallstatt / Obertraun, Østerrike (1 natt: 13.–14. juli)
 
-**Kjøring:** Český Krumlov → Obertraun, ~216 km, ~2 t 58 min via A7 → Linz → A1 vest → B145 Salzkammergut → Bad Ischl → Obertraun am Hallstättersee. (80 km/t med campingvogn.) (verifisert, Google Maps)
+**Kjøring:** Český Krumlov → Obertraun, ~213 km, ~2 t 55 min via A7 → Linz → A1 vest → B145 Salzkammergut → Bad Ischl → Obertraun am Hallstättersee. (80 km/t med campingvogn.) (verifisert, rome2rio/daytrip)
 
 **Campingplass: Camping am See – Obertraun**
 - Adresse: Winkl 77, 4831 Obertraun am Hallstättersee, Østerrike
@@ -511,6 +517,7 @@ Disse 10 campingplassene dekker ulike reisestiler langs hele den kroatiske ruten
 
 | Dato | Endring | Av |
 | --- | --- | --- |
+| 2026-06-15 | Seks endringer (campingplasser/URL-er verifisert via Tavily, avstander via rome2rio/daytrip). (1) **Stopp 4 Berlin**: Hotel & City Camping Süd bekreftet — bookingstatus Nei → Ja. (2) **Stopp 5**: byttet fra Campingplatz Ostrauer Mühle (krever min. 4 netter) til **Kemp Mezní Louka** (kemp-mezni-louka.cz) på tsjekkisk side, midt i Böhmisk Sveits NP og rett ved stien til Pravčická brána — ingen minimumsregel. Stoppet omdøpt til «Bøhmisk Sveits (Mezní Louka)», land DE→CZ. Aktiviteter: **Pravčická brána & lunsj på Sokolí hnízdo/Falcon's Nest** (pbrana.cz), Kamenice Gorge og Basteibroen som must-do; **Kirnitzschtalbahn** flyttet til nice-to-have (sammen med Festung Königstein). (3) **Stopp 6 Český Krumlov**: campingplass byttet fra Camping Chvalšiny til **Kemp Český Krumlov – Nové Spolí** (kempkrumlov.cz), ved Vltava ~1,5 km fra gamlebyen. Ny must-do: **familie-rafting fra campingen inn til byen** via båtutleien Vydra (vydra.info). (4) **Kjøreavstander oppdatert/verifisert**: Berlin→Mezní Louka ~235 km (~3t13), Mezní Louka→Český Krumlov ~285 km (~3t54), Český Krumlov→Obertraun ~213 km (~2t55). Total kjørelengde ~4 050→~4 060 km. (5) **Kartkoordinater** oppdatert til nøyaktig posisjon for de nye campingplassene (Mezní Louka 50.8739, 14.3186; Nové Spolí 48.7969, 14.3060 — Mapy.com). (6) **Drivstoffbudsjett** oppdatert til 14,5 L/100 km: 11 500 → 15 700 NOK (~5 700 km × 14,5 L/100 km ≈ 827 L × ~19 NOK/L). | Claude |
 | 2026-06-11 | **Deutsches Technikmuseum** (Trebbiner Straße 9, 10963 Berlin) lagt til som Must-do-aktivitet på stopp 4 Berlin — tog, fly, skip og TechLab for barn. URL verifisert via Tavily. | Claude |
 | 2026-06-11 | Fire ruteendringer (alle avstander verifisert via Google Maps, campingplasser via Tavily/Google Places). (1) **Stopp 7: Mondsee → Hallstatt/Obertraun** (Camping am See, Winkl 77, Obertraun am Hallstättersee). Bedre fordelt kjøretid: Český Krumlov→Obertraun ~216 km/2t58 + Obertraun→Postojna ~330 km/4t31 (mot tidligere 154/385 km, der dag 2 var 5t16). Salzkammergut-stopp med Hallstatt UNESCO, saltgruve og Dachstein. (2) **Stopp 10: Klagenfurt/Wörthersee → Lago di Santa Croce / Alpago, Italia** (Camping Sarathei). Muliggjør den kortere, vakrere **Brenner-ruten** gjennom Dolomittene: Rovinj→Santa Croce ~273 km/3t45 + Santa Croce→Zugspitze ~295 km/4t25 via Cortina/Pustertal/Brenner (mot tidligere Felbertauern ~390 km/5t20). Mindre, sjarmerende alpesjø med bedre balanse. Italia lagt til i fartsgrense-tabellen. (3) **Én natt flyttet fra Postojna til Berlin**: Berlin 3→4n (5–9 jul), Postojna 2→1n (14–15 jul). Stopp 5–8 fremskutt 1 dag; Rovinj (booket, 15–20 jul) og alt etter uendret. (4) **Postojna**: beholder Camping Pivka Jama (ved hulen, basseng + barnebasseng) — bekreftet som beste valg for 1-natt-stoppet før morgenbesøk i hulen. Predjama nedgradert til nice-to-have pga. 1 natt. Totalt 29 netter uendret. | Claude |
 | 2026-06-10 | (1) FEX Berlin og Naturkundemuseum (stopp 4 Berlin) endret til «nice-to-have» prioritet. (2) Kjøreavstand Klagenfurt/Wörthersee → Zugspitze/Grainau oppdatert og verifisert via OSRM: **~284 km → ~390 km**, reisetid 3 t 53 min → 5 t 20 min. Korrigert rute: Felbertauern-tunnelen (via Lienz) → Wörgl → Achensee → B2 → Grainau (begge hoved­ruter gir ~389 km). Tidligere verdi var feil (basert på estimat). (3) Kartkordinater for alle overnattingssteder (stopp 2–15) oppdatert fra tilnærmede bykjerner til faktiske GPS-koordinater fra PiNCAMP, NorCamp, ACSI, JetCamp og offisielle nettsider. Stopp med størst avvik: Berlin/Kleinmachnow (+14 km fra sentrum), KNAUS Hamburg/Schnelsen, Falkensteiner Wörthersee, Camping Resort Zugspitze (tidligere feil lengdegrad). | Claude |
