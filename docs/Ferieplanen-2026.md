@@ -49,7 +49,7 @@ William er 5 år og er en viktig del av planleggingen:
 | 4 | Berlin | DE | 5. juli | 9. juli | 4 | 27/28 |
 | 5 | Gohrisch (Saksisk Sveits) | DE | 9. juli | 11. juli | 2 | 28 |
 | 6 | Český Krumlov | CZ | 11. juli | 13. juli | 2* | 28 |
-| 7 | Hallstatt / Obertraun (transit) | AT | 13. juli | 14. juli | 1* | 29 |
+| 7 | Leibnitz (transit) | AT | 13. juli | 14. juli | 1* | 29 |
 | 8 | Postojna | SI | 14. juli | 15. juli | 1* | 29 |
 | 9 | Rovinj, Istria (Maistra Vestar Campsite 🔒) | HR | 15. juli | 20. juli | 5 | 29 |
 | 10 | Lago di Santa Croce / Alpago (transit) | IT | 20. juli | 21. juli | 1* | 30 |
@@ -63,9 +63,9 @@ William er 5 år og er en viktig del av planleggingen:
 
 *Kortstopp — unntak fra 3-netter-regelen (transit eller prioritert destinasjon).
 
-**Totalt:** 29 netter borte — 5 i Kroatia (Rovinj 5, Maistra Vestar 🔒), 1 natt Slovenia (Postojna), 1 natt Hallstatt/Obertraun (AT), 1 natt Lago di Santa Croce/Alpago (IT), 3 netter Zugspitze, 4 netter Berlin, 2 netter Gohrisch (Saksisk Sveits), 2 netter Český Krumlov, 2 netter Bamberg, 2 netter Braunlage (Harz), 2 transittnetter (Hirtshals, Groß Buchwald), 2 netter Hamburg, 2 i Billund. Hjemme 2. august (kveldsavgang Hirtshals 1. august, ankomst Larvik natt til 2. august).
+**Totalt:** 29 netter borte — 5 i Kroatia (Rovinj 5, Maistra Vestar 🔒), 1 natt Slovenia (Postojna), 1 natt Leibnitz (AT, transit), 1 natt Lago di Santa Croce/Alpago (IT), 3 netter Zugspitze, 4 netter Berlin, 2 netter Gohrisch (Saksisk Sveits), 2 netter Český Krumlov, 2 netter Bamberg, 2 netter Braunlage (Harz), 2 transittnetter (Hirtshals, Groß Buchwald), 2 netter Hamburg, 2 i Billund. Hjemme 2. august (kveldsavgang Hirtshals 1. august, ankomst Larvik natt til 2. august).
 
-> **Merk:** Graz, Plitvice og Split er fjernet. Sørruten går nå om Hallstatt/Obertraun (transit 1n) i Salzkammergut, Postojna/Slovenia (1n) og 5 netter i Rovinj (Maistra Vestar Campsite, booket PH28273444). På hjemveien er Klagenfurt/Wörthersee erstattet med Lago di Santa Croce / Alpago (1n) i Italia, slik at vi kjører den kortere og vakrere Brenner-ruten gjennom Dolomittene til Zugspitze. Berlin er utvidet til 4 netter (én natt flyttet fra Postojna). Zugspitze 3 netter, Braunlage og Hamburg 2 netter hver. Totalt 5 netter i Kroatia — under opprinnelig mål på 14 netter (§2), men bevisst valg. Alle kjøreetapper under 6 timer.
+> **Merk:** Plitvice og Split er fjernet. Sørruten går nå via A9-motorveien (Liezen/Graz) med transittstopp i Leibnitz (1n) i Sør-Steiermark, Postojna/Slovenia (1n) og 5 netter i Rovinj (Maistra Vestar Campsite, booket PH28273444). På hjemveien er Klagenfurt/Wörthersee erstattet med Lago di Santa Croce / Alpago (1n) i Italia, slik at vi kjører den kortere og vakrere Brenner-ruten gjennom Dolomittene til Zugspitze. Berlin er utvidet til 4 netter (én natt flyttet fra Postojna). Zugspitze 3 netter, Braunlage og Hamburg 2 netter hver. Totalt 5 netter i Kroatia — under opprinnelig mål på 14 netter (§2), men bevisst valg. Alle kjøreetapper under 6 timer.
 
 ---
 
@@ -78,8 +78,8 @@ William er 5 år og er en viktig del av planleggingen:
 | Groß Buchwald | Berlin | ~350 km (verifisert, travelmath.com) | ~4 t 47 min | A7 sørover → Hamburg → A24 øst mot Berlin |
 | Berlin | Gohrisch (Saksisk Sveits) | 253 km (verifisert, OSRM) | 3 t 28 min | A13/A17 sørøst (4 km fra Festung Königstein) |
 | Gohrisch | Český Krumlov (Camping Paradijs, Zlatá Koruna) | 299 km (verifisert, OSRM) | 4 t 06 min | Gohrisch → Dresden → D8/E442 sørover → Praha-omkjøring → D3/E55 sør mot České Budějovice → Zlatá Koruna/Rájov |
-| Český Krumlov | Hallstatt / Obertraun | 214 km (verifisert, OSRM) | 2 t 56 min | Zlatá Koruna → Český Krumlov → A7 → Linz → A1 vest → B145 Salzkammergut → Bad Ischl → Obertraun am Hallstättersee |
-| Hallstatt / Obertraun | Postojna | ~330 km (verifisert, Google Maps) | ~4 t 31 min | Obertraun → Bad Ischl → Salzburg → A10 Tauern → Villach → A2 → Ljubljana → A1 → Postojna |
+| Český Krumlov | Leibnitz | 344 km (verifisert, OSRM) | 4 t 43 min | Zlatá Koruna → České Budějovice → Linz (A7) → A9 Pyhrn sørover → Liezen → Graz → Leibnitz |
+| Leibnitz | Postojna | 218 km (verifisert, OSRM) | 2 t 59 min | Leibnitz → E57 → Spielfeld-grensa → Maribor → E59/E61 → Ljubljana → Postojna |
 | Postojna | Rovinj | ~110 km (verifisert) | ~1 t 30 min | A1 → E70 → Koper → A9 Istria → Rovinj |
 | Rovinj | Lago di Santa Croce / Alpago | ~273 km (verifisert, Google Maps) | ~3 t 45 min | A9 Istria → Trieste → A4 (Venezia) → A27 nord → Belluno → Lago di Santa Croce |
 | Lago di Santa Croce / Alpago | Zugspitze/Grainau | ~295 km (verifisert, Google Maps) | ~4 t 25 min | Cortina d'Ampezzo → Toblach/Pustertal → Brixen → A22 Brenner → Innsbruck → Garmisch → Grainau |
@@ -91,7 +91,7 @@ William er 5 år og er en viktig del av planleggingen:
 | Hirtshals | Larvik (ferge) | — | 4 t 25 min | Color Line SuperSpeed — avgang kl. 22:15, ankomst Larvik ~02:40 (natt til 2. august) |
 | Larvik | Kongsberg | 91 km (verifisert) | 1 t 15 min | E18/E134 |
 
-Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorvei (gjennomsnittsfart ca. 73 km/t inkl. reduksjon for byggesoner, kryss og hvilepauser). ⚠️ **Etappen Hirtshals → Groß Buchwald (~451 km, ~6t 11min) overskrider 6-timersgrensen** — ta minst én lang pause underveis i Jylland. Den lengste av søretappene er nå Hallstatt/Obertraun → Postojna (~330 km, ~4t 31min) — godt innenfor grensen. Den nye Brenner-ruten fra Rovinj (Lago di Santa Croce → Zugspitze, ~295 km) erstatter den lange Felbertauern-etappen (~390 km) og er både kortere og vakrere. Estimert total kjørelengde: ~4 060 km.
+Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorvei (gjennomsnittsfart ca. 73 km/t inkl. reduksjon for byggesoner, kryss og hvilepauser). ⚠️ **Etappen Hirtshals → Groß Buchwald (~451 km, ~6t 11min) overskrider 6-timersgrensen** — ta minst én lang pause underveis i Jylland. Den lengste av søretappene er nå Český Krumlov → Leibnitz (344 km, 4t 43min) via A9 gjennom Liezen og Graz — godt innenfor grensen. Den nye Brenner-ruten fra Rovinj (Lago di Santa Croce → Zugspitze, ~295 km) erstatter den lange Felbertauern-etappen (~390 km) og er både kortere og vakrere. Estimert total kjørelengde: ~4 080 km.
 
 ---
 
@@ -268,19 +268,21 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 - Camping Paradijs er en rolig plass — nattero kl. 22–07, barn under 12 år under tilsyn, hunder gratis. Gjør gjerne online innsjekk på forhånd via alfred.previo.app (kode BDYEL4), men meld dere i resepsjonen ved ankomst med gyldig ID
 - Český Krumlov blir fullt av dagsturister midt på dagen — gå tidlig morgen eller om kvelden for å ha de smale gatene mest mulig for seg selv
 - Ta med kontanter i tsjekkiske kroner (CZK) — mange små steder tar ikke kort
-- Neste dag: ~214 km til Hallstatt/Obertraun (~2 t 56 min) via Linz → A1 → Salzkammergut — kort, vakker kjøredag inn i Alpene
+- Neste dag: ~344 km til Leibnitz (~4 t 43 min) via A9 gjennom Liezen og Graz — lengste søretappe, men godt innenfor 6-timersgrensen
 
 ---
 
-### Stopp 7: Hallstatt / Obertraun, Østerrike (1 natt: 13.–14. juli)
+### Stopp 7: Leibnitz, Østerrike (1 natt transit: 13.–14. juli)
 
-**Kjøring:** Český Krumlov → Obertraun, ~213 km, ~2 t 55 min via A7 → Linz → A1 vest → B145 Salzkammergut → Bad Ischl → Obertraun am Hallstättersee. (80 km/t med campingvogn.) (verifisert, rome2rio/daytrip)
+**Kjøring:** Český Krumlov → Leibnitz, 344 km, 4 t 43 min via České Budějovice → Linz (A7) → A9 Pyhrn sørover → Liezen → Graz → Leibnitz. (80 km/t med campingvogn.) (verifisert, OSRM)
 
-**Campingplass: Camping am See – Obertraun**
-- Adresse: Winkl 77, 4831 Obertraun am Hallstättersee, Østerrike
-- Nettside: http://camping-park-am-see.at/
-- Fasiliteter: Sjarmerende, økologisk «camping de charme» med egen strand rett ved Hallstättersee, utsikt mot det historiske Hallstatt. Plass for campingvogn/bobil, glamping-lodger, gratis Wi-Fi. Enkle fasiliteter, men enestående beliggenhet.
-- Booket: Nei
+**Campingplass: Städtisches Bad & Camping Leibnitz**
+- Adresse: Rudolf-Hans-Bartsch-Gasse 33, 8430 Leibnitz, Østerrike
+- Nettside: https://citiesapps.com/pages/stadtisches-bad-and-camping-leibnitz
+- GPS: 46.7785, 15.5287
+- E-post/telefon: camping@leibnitz.at · +43 3452 82463
+- Fasiliteter: Ca. 60 stellplasser midt i byparken, rett ved byens Erlebnisbad (sports-, opplevelses- og barnebasseng, liggesletter, lekeplass, minigolf, sportsanlegg). Romslige sanitæranlegg, vaskemaskin, oppvaskplass, Wi-Fi (mot betaling). Sesongåpent ca. 15. mai–september.
+- **Booket: Forespørsel sendt på e-post – avventer svar**
 - Bookingref: —
 - Innsjekk: 13:00 · Utsjekk: 11:00 (ca. — verifisér ved booking)
 
@@ -288,21 +290,21 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 
 | Aktivitet | Type | Prioritet | Beskrivelse |
 |-----------|------|-----------|-------------|
-| Hallstatt gamleby (UNESCO) | Kultur/UNESCO | Must-do | Verdensberømt landsby klemt mellom fjellet og Hallstättersee — UNESCO-verdensarv. Brosteinsgater, pastellhus og den ikoniske utsikten. ~10 min med bil eller båt over sjøen fra Obertraun. https://www.hallstatt.net/ |
-| Salzwelten Hallstatt (saltgruven) | Opplevelse/historie | Must-do | Verdens eldste saltgruve (7 000 år) høyt over Hallstatt. Bergmannsrutsjebaner ned i fjellet, underjordisk saltsjø og «Skywalk Welterbeblick». William vil elske rutsjebanene! https://www.salzwelten.at/en/hallstatt/ |
-| Dachstein Krippenstein — Rieseneishöhle & Five Fingers | Natur/opplevelse | Nice-to-have | Gondolbane fra Obertraun (rett ved campingen) opp til kjempeishulen, Mammuthulen og «Five Fingers»-utsiktsplattformen som svever over stupet. https://www.dachstein-salzkammergut.com/en/ |
-| Badeliv i Hallstättersee | Friluft/vann | Must-do | Krystallklart alpevann rett ved campingplassens egen strand. Svømming, SUP og kano med Dachstein-fjellene speilet i sjøen. |
+| Erlebnisbad Leibnitz | Friluft/bad | Must-do | Opplevelsesbad rett ved campingen med sportsbasseng, opplevelsesbasseng og eget barnebasseng, store liggesletter, lekeplass og minigolf. Åpent 15. mai–september kl. 08–20. Ideelt for William etter en lang kjøredag. https://citiesapps.com/pages/stadtisches-bad-and-camping-leibnitz |
+| Schloss Seggau | Kultur/historie | Nice-to-have | Slott på en skogkledd høyde over Leibnitz, med historiske vinkjellere, romersk lapidarium og vid utsikt over Sør-Steiermarks vinmarker. Kort kjøretur opp fra byen. https://www.seggau.com/ |
+| Leibnitz Altstadt & Hauptplatz | Kultur | Nice-to-have | Hyggelig steirisk småby langs Den sør-steiriske vinveien. Brosteinsbelagt Hauptplatz med kafeer og rådhus — fin kveldsspasertur etter bading. https://www.leibnitz.at/ |
 
 **Tips:**
-- **Østerriksk motorvei-vignett** kreves (~€12 per kjøretøy, 10 dager) — kjøp online på asfinag.at eller ved grensen
-- Hallstatt har sterkt begrenset parkering og kan stenge for biler ved fullt belegg — kjør tidlig, eller ta båten over fra Obertraun/Hallstatt Lahn
-- Neste dag: ~330 km til Postojna (~4 t 31 min) via Bad Ischl → Salzburg → A10 Tauern → Villach → Ljubljana — tidlig avreise anbefales
+- **Østerriksk motorvei-vignett** kreves (~€12,40 per kjøretøy, 10 dager) — kjøp online på asfinag.at eller ved grensen
+- Erlebnisbad og campingplass har sesongåpent fra 15. mai til september — bekreft åpningstider ved booking
+- Booking er sendt på e-post (camping@leibnitz.at), men ennå ikke bekreftet
+- Neste dag: ~218 km til Postojna (~2 t 59 min) via E57 → Spielfeld-grensa → Maribor → Ljubljana → E61 — kort, grei kjøredag inn i Slovenia
 
 ---
 
 ### Stopp 8: Postojna, Slovenia (1 natt: 14.–15. juli)
 
-**Kjøring:** Obertraun → Postojna, ~330 km, ~4 t 31 min via Bad Ischl → Salzburg → A10 Tauern → Villach → A2 → Ljubljana → A1 → Postojna. (80 km/t med campingvogn.) (verifisert, Google Maps)
+**Kjøring:** Leibnitz → Postojna, 218 km, 2 t 59 min via E57 → Spielfeld-grensa → Maribor → E59/E61 → Ljubljana → Postojna. (80 km/t med campingvogn.) (verifisert, OSRM)
 
 **Campingplass: Camping Pivka Jama**
 - Adresse: Veliki Otok 50, 6230 Postojna, Slovenia
@@ -518,6 +520,7 @@ Disse 10 campingplassene dekker ulike reisestiler langs hele den kroatiske ruten
 
 | Dato | Endring | Av |
 | --- | --- | --- |
+| 2026-06-20 | **Stopp 7 lagt om: Hallstatt/Obertraun → Leibnitz** (Städtisches Bad & Camping Leibnitz, Rudolf-Hans-Bartsch-Gasse 33, 8430 Leibnitz). Sørruten mellom Český Krumlov og Postojna går nå via A9-motorveien gjennom Liezen og Graz, med transittstopp i Sør-Steiermark. URL/adresse/GPS (46.7785, 15.5287) verifisert via Tavily/Nominatim. Booking: forespørsel sendt på e-post (camping@leibnitz.at), avventer svar. Aktiviteter: Erlebnisbad ved campingen (must-do), Schloss Seggau + Leibnitz Altstadt (nice-to-have). Kjøreetapper reverifisert via OSRM: Český Krumlov→Leibnitz 344 km / 4t 43min (via A9/Graz), Leibnitz→Postojna 218 km / 2t 59min (E57/E61). Merk: Hallstatt/Salzkammergut (saltgruve, Dachstein, UNESCO-landsby) utgår med denne ruten. | Claude |
 | 2026-06-19 | **Stopp 6 byttet til Camping Paradijs** (Rájov 26, 381 01 Zlatá Koruna, ~6 km fra Český Krumlov) — erstatter Kemp Nové Spolí. **Booket og bekreftet** på e-post (ref. VOU2321, Alfred-kode BDYEL4, forhåndsbetalt 1 736 CZK, elveplass A4 «u řeky», 3 gjester, 11.–13. juli). URL/adresse/GPS (48.8397, 14.3753) verifisert via Tavily/Campercontact. Rolig familieplass som ikke tar imot raftegrupper → **familie-rafting fra campingen fjernet**; lagt til **Klosteret Zlatá Koruna** (nice-to-have) som ligger rett ved plassen. Kjøreetapper reverifisert via OSRM: Gohrisch→Camping Paradijs 299 km / 4t 06min, Camping Paradijs→Hallstatt 214 km / 2t 56min. | Claude |
 | 2026-06-19 | **Stopp 5 byttet til Caravan Camping Sächsische Schweiz** (Dorfplatz 181d, 01824 Kurort Gohrisch), 4 km fra Festung Königstein — erstatter Kemp Mezní Louka. URL og adresse/GPS (50.9145, 14.1071) verifisert via Tavily/PiNCAMP. Booking: bestilt, avventer bekreftelse. Aktiviteter etter ønske: **Festung Königstein + Basteibroen** som Must-do; **Kirnitzschtalbahn + Amselsee (Kurort Rathen)** som nice-to-have backup. Kjøreetapper reverifisert via OSRM (eksakte koordinater): Berlin→Gohrisch 253 km / 3t 28min, Gohrisch→Český Krumlov (Nové Spolí) 305 km / 4t 11min. Stopp 6 (Nové Spolí + rafting) uendret. | Claude |
 | 2026-06-15 | **Stopp 15 Billund**: overnatting byttet fra Legoland® Campingarea til **Billund Stellplatz** (Grenevej 1, 7190 Billund, billundstellplatz.dk). Satt til **booket** fordi plassen har pladsgaranti (alltid plass, ingen reservasjon nødvendig). ~3 km til Legoland/LEGO House/Lalandia. Kartkoordinater oppdatert til 55.7056, 9.1321 (URL verifisert via Tavily). | Claude |
