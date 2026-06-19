@@ -2051,7 +2051,7 @@ function ferieApp() {
         tips: [
           'Italia bruker bompengebommer (ikke vignett) — A4/A27 betales ved bom. Ingen vignett nødvendig i Italia',
           'Lago di Santa Croce har jevn ettermiddagsvind — perfekt for windsurfing/SUP, men hold øye med William ved vannkanten',
-          'Neste dag: ~285 km til Zugspitze/Grainau (~3t 54min) via Cortina → Dolomittene → Pustertal → Brenner → Innsbruck → Garmisch → Grainau — kortere og vakrere enn den østerrikske ruten',
+          'Neste dag: ~273 km til Zugspitze/Krün (~3t 44min) via Cortina → Dolomittene → Pustertal → Brenner → Innsbruck → Seefeld → Mittenwald → Krün — kortere og vakrere enn den østerrikske ruten',
           'Den korte østerrikske strekningen (Brenner → Garmisch) krever østerriksk vignett + Brenner-bompenger — kjøp vignett online før Innsbruck',
         ],
         imageUrl: '',
@@ -2061,16 +2061,16 @@ function ferieApp() {
         name: 'Zugspitze',
         country: 'Tyskland',
         countryCode: 'DE',
-        lat: 47.4800,
-        lng: 11.0557,
+        lat: 47.4904,
+        lng: 11.2556,
         arrivalDate: '2026-07-21',
         departureDate: '2026-07-24',
         nights: 3,
         week: 30,
         camping: {
-          name: 'Camping Erlebnis Zugspitze',
-          address: 'Griesener Straße 2, 82491 Grainau',
-          url: 'https://www.pure-camping.de/camping-erlebnis-zugspitze-garmisch-partenkirchen-bayern/',
+          name: 'Alpen-Caravanpark Tennsee',
+          address: 'Am Tennsee 1, 82494 Krün (mellom Garmisch og Mittenwald)',
+          url: 'https://www.camping-tennsee.de/en/',
           booked: false,
           bookingRef: '',
           checkIn: '14:00',
@@ -2078,19 +2078,19 @@ function ferieApp() {
           timesEstimated: true,
         },
         driveFromPrevious: {
-          km: 285, // verifisert (OSRM) — Lago di Santa Croce → Grainau via Cortina/Pustertal/Brenner
-          hours: '3t 54min',
-          route: 'Lago di Santa Croce → Cortina d\'Ampezzo → Toblach/Pustertal → Brixen → A22 Brenner → Innsbruck → Garmisch → Grainau (verifisert)',
+          km: 273, // verifisert (OSRM) — Lago di Santa Croce → Krün via Brenner/Seefeld/Mittenwald
+          hours: '3t 44min',
+          route: 'Lago di Santa Croce → Cortina d\'Ampezzo → Toblach/Pustertal → Brixen → A22 Brenner → Innsbruck → Seefeld → Mittenwald → Krün (verifisert)',
         },
-        description: 'Tre netter i de bayerske Alper ved foten av Zugspitze (2 962 m) — Tysklands høyeste fjell. Camping Erlebnis Zugspitze ligger i alpelandsbyen Grainau rett ved Loisach-elven, med utsikt mot Zugspitzmassivet og kort vei til fjellbanene. Tre netter gir plass til Zugspitzbahn, Eibsee OG Neuschwanstein.',
+        description: 'Tre netter i de bayerske Alper i regionen rundt Zugspitze (2 962 m) — Tysklands høyeste fjell. Alpen-Caravanpark Tennsee er en prisbelønt (ADAC/DCC/ECC) familiecamping ved Tennsee, idyllisk plassert mellom Garmisch og Mittenwald med utsikt mot Karwendel og Wetterstein. Sentral base for dagsturer til Zugspitzbahn, Eibsee OG Neuschwanstein.',
         activities: [
-          { name: 'Zugspitzbahn', type: 'natur', priority: 'must-do', description: 'Tannhjulsbane og gondolbane til toppen av Tysklands høyeste fjell (2 962 m). Dalstasjon/Eibsee-seilbane bare ~4 km fra campingen. Utsikt over Bayern og Østerrike. Book billett online på forhånd — Juli er høysesong!', url: 'https://www.zugspitze.de/', mapsQuery: 'Zugspitze Talstation Eibsee, Grainau, Deutschland' },
-          { name: 'Eibsee', type: 'natur', priority: 'must-do', description: 'Turkisblå alpinsjø ved foten av Zugspitze, ~4 km fra campingen ved Grainau. Bading, kanotur og uovertruffen fjellutsikt. Perfekt for ankomstdagens ettermiddag.', url: 'https://www.zugspitze.de/de/sommer/eibsee.html', mapsQuery: 'Eibsee, 82491 Grainau, Deutschland' },
-          { name: 'Neuschwanstein Castle', type: 'kultur', priority: 'must-do', description: 'Kong Ludvig IIs eventyrslott fra 1886 — inspirasjon til Disneyland. ~75 km via B2/B17. Obligatorisk forhåndsbooking. Med 3 netter er det nå tid til både Zugspitzbahn og slottet.', url: 'https://www.neuschwanstein.de/', mapsQuery: 'Schloss Neuschwanstein, Neuschwansteinstraße 20, 87645 Schwangau, Deutschland' },
-          { name: 'Höllentalklamm', type: 'natur', priority: 'nice-to-have', description: 'Dramatisk kløftevandring fra Hammersbach ved foten av Zugspitze — smal kløft med hengebroer, tunneler og fossestryk. 5–6 km tur/retur, 2–3t, egnet for familier. Gratis inngang.', url: 'https://www.gapa-tourismus.de/sommer/hiking/hollental/', mapsQuery: 'Höllentalklamm, Grainau, Deutschland' },
-          { name: 'Garmisch-Partenkirchen by', type: 'kultur', priority: 'nice-to-have', description: 'Sjarmerende bayersk OL-by fra 1936. Marktplatz, bemalt husfasader og alpinsk atmosfære. ~6 km fra campingen.', url: 'https://gapa-tourismus.de/', mapsQuery: 'Garmisch-Partenkirchen Marktplatz, Deutschland' },
+          { name: 'Zugspitzbahn', type: 'natur', priority: 'must-do', description: 'Tannhjulsbane og gondolbane til toppen av Tysklands høyeste fjell (2 962 m). Dalstasjon i Garmisch ~18 km fra campingen. Utsikt over Bayern og Østerrike. Book billett online på forhånd — Juli er høysesong!', url: 'https://www.zugspitze.de/', mapsQuery: 'Bayerische Zugspitzbahn Talstation, Garmisch-Partenkirchen, Deutschland' },
+          { name: 'Eibsee', type: 'natur', priority: 'must-do', description: 'Turkisblå alpinsjø ved foten av Zugspitze, ~22 km fra campingen via Garmisch/Grainau. Bading, kanotur og uovertruffen fjellutsikt. Fin dagstur.', url: 'https://www.zugspitze.de/de/sommer/eibsee.html', mapsQuery: 'Eibsee, 82491 Grainau, Deutschland' },
+          { name: 'Neuschwanstein Castle', type: 'kultur', priority: 'must-do', description: 'Kong Ludvig IIs eventyrslott fra 1886 — inspirasjon til Disneyland. ~75 km via Oberau/Ettal/Steingaden. Obligatorisk forhåndsbooking. Med 3 netter er det nå tid til både Zugspitzbahn og slottet.', url: 'https://www.neuschwanstein.de/', mapsQuery: 'Schloss Neuschwanstein, Neuschwansteinstraße 20, 87645 Schwangau, Deutschland' },
+          { name: 'Höllentalklamm', type: 'natur', priority: 'nice-to-have', description: 'Dramatisk kløftevandring fra Hammersbach ved foten av Zugspitze — smal kløft med hengebroer, tunneler og fossestryk. 5–6 km tur/retur, 2–3t, egnet for familier. Gratis inngang. ~17 km fra campingen.', url: 'https://www.gapa-tourismus.de/sommer/hiking/hollental/', mapsQuery: 'Höllentalklamm, Grainau, Deutschland' },
+          { name: 'Mittenwald & Garmisch-Partenkirchen', type: 'kultur', priority: 'nice-to-have', description: 'Mittenwald (~5 km) er kjent for fiolinbygging og bemalte Lüftlmalerei-fasader; Garmisch-Partenkirchen (~13 km) er den sjarmerende OL-byen fra 1936 med Marktplatz og alpinsk atmosfære.', url: 'https://www.alpenwelt-karwendel.de/', mapsQuery: 'Mittenwald, Deutschland' },
         ],
-        tips: ['Book Zugspitzbahn-billett på forhånd: www.zugspitze.de — Juli er høysesong', 'Med 3 netter: Dag 1 Eibsee, Dag 2 Zugspitzbahn, Dag 3 Neuschwanstein (+ Höllentalklamm om tid)', 'Neuschwanstein krever forhåndsbooking på neuschwanstein.de', 'Ingen Umweltzone i Grainau/Garmisch', 'Østerriksk vignett + Brenner-bompenger kreves for siste etappe (Italia → Brenner → Garmisch)'],
+        tips: ['Book Zugspitzbahn-billett på forhånd: www.zugspitze.de — Juli er høysesong', 'Med 3 netter: Dag 1 Eibsee/Mittenwald, Dag 2 Zugspitzbahn, Dag 3 Neuschwanstein (+ Höllentalklamm om tid)', 'Neuschwanstein krever forhåndsbooking på neuschwanstein.de', 'Ankomst via Seefeld/Mittenwald: Zirlerberg (B177) har bratt stigning — alternativt via Garmisch (litt lengre, slakere)', 'Østerriksk vignett + Brenner-bompenger kreves for siste etappe (Italia → Brenner → Innsbruck)'],
         imageUrl: '',
       },
       {
@@ -2115,9 +2115,9 @@ function ferieApp() {
           timesEstimated: true,
         },
         driveFromPrevious: {
-          km: 323,
-          hours: '4t 25min',
-          route: 'Garmisch-Partenkirchen → Bamberg via A95/A8 nord → München → A9 nord → A73 mot Bamberg',
+          km: 333, // verifisert (OSRM) — Krün/Tennsee → Bamberg
+          hours: '4t 34min',
+          route: 'Krün → Garmisch → A95/A8 nord → München → A9 nord → A73 mot Bamberg',
         },
         description: 'To netter i en av Tysklands best bevarte middelalderbyer — UNESCO-verdensarv. Bamberg er kjent for sin unike Rauchbier (røykøl), imponerende romansk-gotisk katedral og pittoresk gamlebyen langs Regnitz-elven. God tid til å utforske byen og hvile før fortsettelsen mot Hamburg.',
         activities: [
