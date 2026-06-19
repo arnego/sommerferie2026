@@ -310,7 +310,7 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 - Adresse: Veliki Otok 50, 6230 Postojna, Slovenia
 - Nettside: http://camping-postojna.com/en
 - Fasiliteter: Rolig skog-camping rett ved Postojnahulen. Utendørs basseng + barnebasseng, tennis/volleyball/bowling, sykkelutleie. Plass for campingvogn, moderne sanitæranlegg. (Vurdert 4,3 — beliggenheten ved hulen er ideell for morgenbesøket.)
-- Booket: Nei
+- **Booket: Forespørsel sendt på e-post – avventer svar**
 - Bookingref: —
 - Innsjekk: 14:00 · Utsjekk: 11:00
 
@@ -520,6 +520,7 @@ Disse 10 campingplassene dekker ulike reisestiler langs hele den kroatiske ruten
 
 | Dato | Endring | Av |
 | --- | --- | --- |
+| 2026-06-20 | **Stopp 8 Camping Pivka Jama (Postojna)**: bookingstatus oppdatert til «forespørsel sendt på e-post – avventer svar». | Claude |
 | 2026-06-20 | **Stopp 7 lagt om: Hallstatt/Obertraun → Leibnitz** (Städtisches Bad & Camping Leibnitz, Rudolf-Hans-Bartsch-Gasse 33, 8430 Leibnitz). Sørruten mellom Český Krumlov og Postojna går nå via A9-motorveien gjennom Liezen og Graz, med transittstopp i Sør-Steiermark. URL/adresse/GPS (46.7785, 15.5287) verifisert via Tavily/Nominatim. Booking: forespørsel sendt på e-post (camping@leibnitz.at), avventer svar. Aktiviteter: Erlebnisbad ved campingen (must-do), Schloss Seggau + Leibnitz Altstadt (nice-to-have). Kjøreetapper reverifisert via OSRM: Český Krumlov→Leibnitz 344 km / 4t 43min (via A9/Graz), Leibnitz→Postojna 218 km / 2t 59min (E57/E61). Merk: Hallstatt/Salzkammergut (saltgruve, Dachstein, UNESCO-landsby) utgår med denne ruten. | Claude |
 | 2026-06-19 | **Stopp 6 byttet til Camping Paradijs** (Rájov 26, 381 01 Zlatá Koruna, ~6 km fra Český Krumlov) — erstatter Kemp Nové Spolí. **Booket og bekreftet** på e-post (ref. VOU2321, Alfred-kode BDYEL4, forhåndsbetalt 1 736 CZK, elveplass A4 «u řeky», 3 gjester, 11.–13. juli). URL/adresse/GPS (48.8397, 14.3753) verifisert via Tavily/Campercontact. Rolig familieplass som ikke tar imot raftegrupper → **familie-rafting fra campingen fjernet**; lagt til **Klosteret Zlatá Koruna** (nice-to-have) som ligger rett ved plassen. Kjøreetapper reverifisert via OSRM: Gohrisch→Camping Paradijs 299 km / 4t 06min, Camping Paradijs→Hallstatt 214 km / 2t 56min. | Claude |
 | 2026-06-19 | **Stopp 5 byttet til Caravan Camping Sächsische Schweiz** (Dorfplatz 181d, 01824 Kurort Gohrisch), 4 km fra Festung Königstein — erstatter Kemp Mezní Louka. URL og adresse/GPS (50.9145, 14.1071) verifisert via Tavily/PiNCAMP. Booking: bestilt, avventer bekreftelse. Aktiviteter etter ønske: **Festung Königstein + Basteibroen** som Must-do; **Kirnitzschtalbahn + Amselsee (Kurort Rathen)** som nice-to-have backup. Kjøreetapper reverifisert via OSRM (eksakte koordinater): Berlin→Gohrisch 253 km / 3t 28min, Gohrisch→Český Krumlov (Nové Spolí) 305 km / 4t 11min. Stopp 6 (Nové Spolí + rafting) uendret. | Claude |
