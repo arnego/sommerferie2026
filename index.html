@@ -2051,7 +2051,7 @@ function ferieApp() {
         tips: [
           'Italia bruker bompengebommer (ikke vignett) — A4/A27 betales ved bom. Ingen vignett nødvendig i Italia',
           'Lago di Santa Croce har jevn ettermiddagsvind — perfekt for windsurfing/SUP, men hold øye med William ved vannkanten',
-          'Neste dag: ~273 km til Zugspitze/Krün (~3t 44min) via Cortina → Dolomittene → Pustertal → Brenner → Innsbruck → Seefeld → Mittenwald → Krün — kortere og vakrere enn den østerrikske ruten',
+          'Neste dag: ~303 km til Zugspitze/Lermoos (~4t 09min) via Cortina → Dolomittene → Pustertal → Brenner → Innsbruck → Telfs → Fernpass → Lermoos — vakker fjellrute gjennom Dolomittene',
           'Den korte østerrikske strekningen (Brenner → Garmisch) krever østerriksk vignett + Brenner-bompenger — kjøp vignett online før Innsbruck',
         ],
         imageUrl: '',
@@ -2059,38 +2059,38 @@ function ferieApp() {
       {
         id: 11,
         name: 'Zugspitze',
-        country: 'Tyskland',
-        countryCode: 'DE',
-        lat: 47.4904,
-        lng: 11.2556,
+        country: 'Østerrike',
+        countryCode: 'AT',
+        lat: 47.4025,
+        lng: 10.8881,
         arrivalDate: '2026-07-21',
         departureDate: '2026-07-24',
         nights: 3,
         week: 30,
         camping: {
-          name: 'Alpen-Caravanpark Tennsee',
-          address: 'Am Tennsee 1, 82494 Krün (mellom Garmisch og Mittenwald)',
-          url: 'https://www.camping-tennsee.de/en/',
+          name: 'Happy Camp Lermoos',
+          address: 'Garmischer Straße 21, 6631 Lermoos, Tirol',
+          url: 'https://www.camping-lermoos.com/en/',
           booked: false,
-          bookingRef: '',
+          bookingRef: 'Forespørsel sendt – avventer svar',
           checkIn: '14:00',
           checkOut: '12:00',
           timesEstimated: true,
         },
         driveFromPrevious: {
-          km: 273, // verifisert (OSRM) — Lago di Santa Croce → Krün via Brenner/Seefeld/Mittenwald
-          hours: '3t 44min',
-          route: 'Lago di Santa Croce → Cortina d\'Ampezzo → Toblach/Pustertal → Brixen → A22 Brenner → Innsbruck → Seefeld → Mittenwald → Krün (verifisert)',
+          km: 303, // verifisert (OSRM) — Lago di Santa Croce → Lermoos via Brenner/Innsbruck/Fernpass
+          hours: '4t 09min',
+          route: 'Lago di Santa Croce → Cortina d\'Ampezzo → Toblach/Pustertal → Brixen → A22 Brenner → Innsbruck → Telfs → Fernpass → Lermoos (verifisert)',
         },
-        description: 'Tre netter i de bayerske Alper i regionen rundt Zugspitze (2 962 m) — Tysklands høyeste fjell. Alpen-Caravanpark Tennsee er en prisbelønt (ADAC/DCC/ECC) familiecamping ved Tennsee, idyllisk plassert mellom Garmisch og Mittenwald med utsikt mot Karwendel og Wetterstein. Sentral base for dagsturer til Zugspitzbahn, Eibsee OG Neuschwanstein.',
+        description: 'Tre netter ved foten av Zugspitze (2 962 m) på den tyrolske siden, i Tiroler Zugspitz Arena. Happy Camp Lermoos er en rolig, parkliknende familiecamping 5 min fra Lermoos sentrum, med lekeplass og fjellutsikt. Sentral base med kort vei til Tiroler Zugspitzbahn (Ehrwald), Eibsee OG Neuschwanstein.',
         activities: [
-          { name: 'Zugspitzbahn', type: 'natur', priority: 'must-do', description: 'Tannhjulsbane og gondolbane til toppen av Tysklands høyeste fjell (2 962 m). Dalstasjon i Garmisch ~18 km fra campingen. Utsikt over Bayern og Østerrike. Book billett online på forhånd — Juli er høysesong!', url: 'https://www.zugspitze.de/', mapsQuery: 'Bayerische Zugspitzbahn Talstation, Garmisch-Partenkirchen, Deutschland' },
-          { name: 'Eibsee', type: 'natur', priority: 'must-do', description: 'Turkisblå alpinsjø ved foten av Zugspitze, ~22 km fra campingen via Garmisch/Grainau. Bading, kanotur og uovertruffen fjellutsikt. Fin dagstur.', url: 'https://www.zugspitze.de/de/sommer/eibsee.html', mapsQuery: 'Eibsee, 82491 Grainau, Deutschland' },
-          { name: 'Neuschwanstein Castle', type: 'kultur', priority: 'must-do', description: 'Kong Ludvig IIs eventyrslott fra 1886 — inspirasjon til Disneyland. ~75 km via Oberau/Ettal/Steingaden. Obligatorisk forhåndsbooking. Med 3 netter er det nå tid til både Zugspitzbahn og slottet.', url: 'https://www.neuschwanstein.de/', mapsQuery: 'Schloss Neuschwanstein, Neuschwansteinstraße 20, 87645 Schwangau, Deutschland' },
-          { name: 'Höllentalklamm', type: 'natur', priority: 'nice-to-have', description: 'Dramatisk kløftevandring fra Hammersbach ved foten av Zugspitze — smal kløft med hengebroer, tunneler og fossestryk. 5–6 km tur/retur, 2–3t, egnet for familier. Gratis inngang. ~17 km fra campingen.', url: 'https://www.gapa-tourismus.de/sommer/hiking/hollental/', mapsQuery: 'Höllentalklamm, Grainau, Deutschland' },
-          { name: 'Mittenwald & Garmisch-Partenkirchen', type: 'kultur', priority: 'nice-to-have', description: 'Mittenwald (~5 km) er kjent for fiolinbygging og bemalte Lüftlmalerei-fasader; Garmisch-Partenkirchen (~13 km) er den sjarmerende OL-byen fra 1936 med Marktplatz og alpinsk atmosfære.', url: 'https://www.alpenwelt-karwendel.de/', mapsQuery: 'Mittenwald, Deutschland' },
+          { name: 'Zugspitzbahn', type: 'natur', priority: 'must-do', description: 'Tiroler Zugspitzbahn — gondolbane fra Ehrwald (~5 km fra campingen) rett til toppen av Zugspitze (2 962 m). Spektakulær utsikt over Tirol og Bayern. (Bayerische Zugspitzbahn fra Garmisch er et alternativ.) Book billett online på forhånd — Juli er høysesong!', url: 'https://www.zugspitze.at/en', mapsQuery: 'Tiroler Zugspitzbahn Talstation, Obermoos 1, 6632 Ehrwald, Austria' },
+          { name: 'Eibsee', type: 'natur', priority: 'must-do', description: 'Turkisblå alpinsjø ved foten av Zugspitze på tysk side, ~23 km fra campingen. Bading, kanotur og uovertruffen fjellutsikt. Fin dagstur.', url: 'https://www.zugspitze.de/de/sommer/eibsee.html', mapsQuery: 'Eibsee, 82491 Grainau, Deutschland' },
+          { name: 'Neuschwanstein Castle', type: 'kultur', priority: 'must-do', description: 'Kong Ludvig IIs eventyrslott fra 1886 — inspirasjon til Disneyland. Bare ~40 km via Reutte/Füssen — vesentlig nærmere fra Lermoos. Obligatorisk forhåndsbooking.', url: 'https://www.neuschwanstein.de/', mapsQuery: 'Schloss Neuschwanstein, Neuschwansteinstraße 20, 87645 Schwangau, Deutschland' },
+          { name: 'Höllentalklamm', type: 'natur', priority: 'nice-to-have', description: 'Dramatisk kløftevandring fra Hammersbach ved foten av Zugspitze — smal kløft med hengebroer, tunneler og fossestryk. 5–6 km tur/retur, 2–3t, egnet for familier. Gratis inngang. ~20 km fra campingen.', url: 'https://www.gapa-tourismus.de/sommer/hiking/hollental/', mapsQuery: 'Höllentalklamm, Grainau, Deutschland' },
+          { name: 'Tiroler Zugspitz Arena & Blindsee', type: 'natur', priority: 'nice-to-have', description: 'Lermoos og Ehrwald ligger i en vakker høyslette omkranset av fjell. Den krystallklare Blindsee (~6 km mot Fernpass) er populær for bading og snorkling, og Grubigstein-banen fra Lermoos gir fin familiefjelltur.', url: 'https://www.zugspitzarena.com/en/', mapsQuery: 'Blindsee, 6631 Lermoos, Austria' },
         ],
-        tips: ['Book Zugspitzbahn-billett på forhånd: www.zugspitze.de — Juli er høysesong', 'Med 3 netter: Dag 1 Eibsee/Mittenwald, Dag 2 Zugspitzbahn, Dag 3 Neuschwanstein (+ Höllentalklamm om tid)', 'Neuschwanstein krever forhåndsbooking på neuschwanstein.de', 'Ankomst via Seefeld/Mittenwald: Zirlerberg (B177) har bratt stigning — alternativt via Garmisch (litt lengre, slakere)', 'Østerriksk vignett + Brenner-bompenger kreves for siste etappe (Italia → Brenner → Innsbruck)'],
+        tips: ['Book Zugspitzbahn-billett på forhånd (Tiroler Zugspitzbahn: zugspitze.at) — Juli er høysesong', 'Med 3 netter: Dag 1 Eibsee/Blindsee, Dag 2 Zugspitzbahn (Ehrwald), Dag 3 Neuschwanstein (+ Höllentalklamm om tid)', 'Neuschwanstein krever forhåndsbooking på neuschwanstein.de', 'Booking: forespørsel er sendt til Happy Camp Lermoos – avventer bekreftelse', 'Østerriksk vignett kreves (A12 Inntal); Brenner-bompenger for innkjøring fra Italia'],
         imageUrl: '',
       },
       {
@@ -2115,9 +2115,9 @@ function ferieApp() {
           timesEstimated: true,
         },
         driveFromPrevious: {
-          km: 333, // verifisert (OSRM) — Krün/Tennsee → Bamberg
-          hours: '4t 34min',
-          route: 'Krün → Garmisch → A95/A8 nord → München → A9 nord → A73 mot Bamberg',
+          km: 343, // verifisert (OSRM) — Lermoos → Bamberg
+          hours: '4t 42min',
+          route: 'Lermoos → Garmisch → A95/A8 nord → München → A9 nord → A73 mot Bamberg',
         },
         description: 'To netter i en av Tysklands best bevarte middelalderbyer — UNESCO-verdensarv. Bamberg er kjent for sin unike Rauchbier (røykøl), imponerende romansk-gotisk katedral og pittoresk gamlebyen langs Regnitz-elven. God tid til å utforske byen og hvile før fortsettelsen mot Hamburg.',
         activities: [
