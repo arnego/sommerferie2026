@@ -82,8 +82,8 @@ William er 5 år og er en viktig del av planleggingen:
 | Leibnitz | Postojna | 218 km (verifisert, OSRM) | 2 t 59 min | Leibnitz → E57 → Spielfeld-grensa → Maribor → E59/E61 → Ljubljana → Postojna |
 | Postojna | Rovinj | ~110 km (verifisert) | ~1 t 30 min | A1 → E70 → Koper → A9 Istria → Rovinj |
 | Rovinj | Lago di Santa Croce / Alpago | ~273 km (verifisert, Google Maps) | ~3 t 45 min | A9 Istria → Trieste → A4 (Venezia) → A27 nord → Belluno → Lago di Santa Croce |
-| Lago di Santa Croce / Alpago | Zugspitze/Garmisch | 285 km (verifisert, OSRM) | 3 t 54 min | Cortina d'Ampezzo → Toblach/Pustertal → Brixen → A22 Brenner → Innsbruck → Garmisch-Partenkirchen |
-| Zugspitze/Garmisch | Bamberg | 323 km (verifisert, OSRM) | 4 t 25 min | A95/A8 nord → München → A9 nord → A73 mot Bamberg |
+| Lago di Santa Croce / Alpago | Zugspitze/Grainau | 285 km (verifisert, OSRM) | 3 t 54 min | Cortina d'Ampezzo → Toblach/Pustertal → Brixen → A22 Brenner → Innsbruck → Garmisch → Grainau |
+| Zugspitze/Grainau | Bamberg | 323 km (verifisert, OSRM) | 4 t 25 min | A95/A8 nord → München → A9 nord → A73 mot Bamberg |
 | Bamberg | Braunlage (Harz) | ~280 km | ~3 t 50 min | A73 nord → Erfurt → A4/A38 → Nordhausen → B4 → Braunlage |
 | Braunlage (Harz) | Hamburg | ~246 km | ~3 t 22 min | B4 nord → A7 nord → Hamburg |
 | Hamburg | Billund | 280 km (verifisert) | 3 t 50 min | A7 nord → Flensburg-grensa → E45 nord inn i Danmark → Billund |
@@ -385,7 +385,7 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 **Tips:**
 - Italia bruker bompengebommer (ikke vignett) — A4/A27 betales ved bom. Ingen vignett nødvendig i Italia
 - Lago di Santa Croce har jevn ettermiddagsvind — perfekt for windsurfing/SUP, men hold øye med William ved vannkanten
-- Neste dag: ~285 km til Zugspitze/Garmisch (~3 t 54 min) via Cortina → Dolomittene → Pustertal → Brenner → Innsbruck → Garmisch — kortere og vakrere enn den østerrikske Felbertauern-ruten. Krever østerriksk vignett + Brenner-bompenger for siste strekning
+- Neste dag: ~285 km til Zugspitze/Grainau (~3 t 54 min) via Cortina → Dolomittene → Pustertal → Brenner → Innsbruck → Garmisch → Grainau — kortere og vakrere enn den østerrikske Felbertauern-ruten. Krever østerriksk vignett + Brenner-bompenger for siste strekning
 
 ---
 
@@ -394,19 +394,19 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 Hjemreisen inkluderer opplevelsesstoppene Zugspitze, Braunlage (Harz), Hamburg og Billund (Legoland) — i tillegg til to kulturnetter i Bamberg. Lago di Santa Croce / Alpago (stopp 10) er en egen overnatting (se over).
 
 **Zugspitze, Bayern (3 netter: 21.–24. juli)**
-- Kjøring: Lago di Santa Croce / Alpago → Zugspitze/Garmisch, 285 km, 3 t 54 min via Cortina d'Ampezzo → Toblach/Pustertal → Brixen → A22 Brenner → Innsbruck → Garmisch-Partenkirchen. (80 km/t med campingvogn; vakker fjellrute gjennom Dolomittene.) (verifisert, OSRM)
-- Campingplass: Edelweiss Lodge & Resort – Campground (Vacation Village), Artillery Kaserne, 82467 Garmisch-Partenkirchen (innsjekk/registrering på Edelweiss Lodge & Resort, Sankt-Martin-Str. 120)
-- Nettside: https://www.edelweisslodgeandresort.com/accommodations/rooms-suites/campground
-- GPS: 47.4842, 11.0592
-- **Booket: Forespørsel sendt – avventer svar** · ⚠️ Adgang krever gyldig DoD-adgangskort (Common Access Card) eller ledsagelse av autorisert vert
+- Kjøring: Lago di Santa Croce / Alpago → Zugspitze/Grainau, 285 km, 3 t 54 min via Cortina d'Ampezzo → Toblach/Pustertal → Brixen → A22 Brenner → Innsbruck → Garmisch → Grainau. (80 km/t med campingvogn; vakker fjellrute gjennom Dolomittene.) (verifisert, OSRM)
+- Campingplass: Camping Erlebnis Zugspitze, Griesener Straße 2, 82491 Grainau
+- Nettside: https://www.pure-camping.de/camping-erlebnis-zugspitze-garmisch-partenkirchen-bayern/
+- GPS: 47.4800, 11.0557
+- Booket: Nei (sivil campingplass i Grainau — Camping Resort Zugspitze ved siden av var fullt; Edelweiss-alternativet forkastet pga. militærbase-adgang)
 - Innsjekk: 14:00 · Utsjekk: 12:00 (ca. — verifisér ved booking)
-- Ankomstdag (21. juli): ankom tidlig ettermiddag og ta en rolig tur til **Eibsee**, den turkisblå alpinsjøen ~12 km mot Grainau (bading, kanotur, fjellutsikt). Campingen ligger sentralt i Garmisch med basseng og restauranter på Edelweiss-resortet i gangavstand.
-- Dag 2 (22. juli — full dag): **Zugspitzbahn** — Bayerische Zugspitzbahn har dalstasjon i Garmisch (kort fra campingen); tannhjulsbane og gondol til Tysklands høyeste topp (2 962 m). Book billett på forhånd: https://www.zugspitze.de/
+- Ankomstdag (21. juli): ankom tidlig ettermiddag og ta en rolig tur til **Eibsee**, den turkisblå alpinsjøen ~4 km fra campingen ved Grainau (bading, kanotur, fjellutsikt). Plassen ligger ved Loisach-elven med utsikt mot Zugspitzmassivet, kort vei til fjellbanene.
+- Dag 2 (22. juli — full dag): **Zugspitzbahn** — tannhjulsbane/gondol til Tysklands høyeste topp (2 962 m); dalstasjon/Eibsee-seilbane ~4 km fra campingen. Book billett på forhånd: https://www.zugspitze.de/
 - Dag 3 (23. juli — full dag): **Neuschwanstein Castle**, ~75 km, krever obligatorisk forhåndsbooking på https://www.neuschwanstein.de/. Med 3 netter er det nå tid til begge store opplevelser!
-- Tips: Registrering og forhåndsbetaling skjer på Edelweiss Lodge & Resort før oppsett; gangporten er åpen kl. 06–22. Book Zugspitzbahn og Neuschwanstein online på forhånd — Juli er høysesong. Ingen Umweltzone i Garmisch. Nice-to-have: **Höllentalklamm** — dramatisk kløftevandring fra Hammersbach (5–6 km tur/retur, ~2–3t, gratis inngang).
+- Tips: Book Zugspitzbahn og Neuschwanstein online på forhånd — Juli er høysesong. Ingen Umweltzone i Grainau/Garmisch. Nice-to-have: **Höllentalklamm** — dramatisk kløftevandring fra Hammersbach (5–6 km tur/retur, ~2–3t, gratis inngang).
 
 **Bamberg (2 netter: 24.–26. juli)**
-- Kjøring: Zugspitze/Garmisch → Bamberg, 323 km, 4 t 25 min via A95/A8 nord → München → A9 nord → A73. (80 km/t med campingvogn, gjennomsnitt ~73 km/t.) (verifisert)
+- Kjøring: Zugspitze/Grainau → Bamberg, 323 km, 4 t 25 min via A95/A8 nord → München → A9 nord → A73. (80 km/t med campingvogn, gjennomsnitt ~73 km/t.) (verifisert)
 - Campingplass: Camping Island Bamberg, Campinginsel, 96052 Bamberg
 - Nettside: http://www.campinginsel.de/
 - Innsjekk: 13:00 · Utsjekk: 12:00 (ca. — verifisér ved booking)
@@ -522,6 +522,7 @@ Disse 10 campingplassene dekker ulike reisestiler langs hele den kroatiske ruten
 
 | Dato | Endring | Av |
 | --- | --- | --- |
+| 2026-06-20 | **Stopp 11 Zugspitze**: Edelweiss-alternativet forkastet (campingen ligger på en amerikansk militærbase og krever DoD-adgang). Byttet til **Camping Erlebnis Zugspitze** (Griesener Straße 2, 82491 Grainau) — sivil 3-stjerners familiecamping ved Loisach, rett ved Eibsee, Zugspitzbahn og Höllentalklamm. Søsterplass til den fulle Camping Resort Zugspitze, samme gate i Grainau. URL/GPS (47.4800, 11.0557) verifisert via Tavily/PiNCAMP/ACSI. Ingen ekstra kjøretid: Lago di Santa Croce→Grainau 285 km / 3t 54min, Grainau→Bamberg 323 km / 4t 25min (uendret). Ingen booking sendt ennå. | Claude |
 | 2026-06-20 | **Stopp 11 Zugspitze**: campingplass byttet fra Camping Resort Zugspitze (Grainau) — ikke ledig — til **Edelweiss Lodge & Resort – Campground (Vacation Village)** på Artillery Kaserne i Garmisch-Partenkirchen. URL/GPS (47.4842, 11.0592) verifisert via Tavily/Nominatim. Booking: forespørsel sendt, avventer svar. ⚠️ Krever gyldig DoD-adgangskort eller autorisert vert. Markør flyttet til Garmisch; kjøreetappe Lago di Santa Croce→Garmisch reverifisert via OSRM 285 km / 3t 54min (var 295 km/Grainau), Garmisch→Bamberg uendret 323 km. Aktiviteter justert (Eibsee nå ~12 km, Garmisch sentrum i gangavstand, Zugspitzbahn fra dalstasjon i Garmisch). | Claude |
 | 2026-06-20 | **Stopp 8 Camping Pivka Jama (Postojna)**: bookingstatus oppdatert til «forespørsel sendt på e-post – avventer svar». | Claude |
 | 2026-06-20 | **Stopp 7 lagt om: Hallstatt/Obertraun → Leibnitz** (Städtisches Bad & Camping Leibnitz, Rudolf-Hans-Bartsch-Gasse 33, 8430 Leibnitz). Sørruten mellom Český Krumlov og Postojna går nå via A9-motorveien gjennom Liezen og Graz, med transittstopp i Sør-Steiermark. URL/adresse/GPS (46.7785, 15.5287) verifisert via Tavily/Nominatim. Booking: forespørsel sendt på e-post (camping@leibnitz.at), avventer svar. Aktiviteter: Erlebnisbad ved campingen (must-do), Schloss Seggau + Leibnitz Altstadt (nice-to-have). Kjøreetapper reverifisert via OSRM: Český Krumlov→Leibnitz 344 km / 4t 43min (via A9/Graz), Leibnitz→Postojna 218 km / 2t 59min (E57/E61). Merk: Hallstatt/Salzkammergut (saltgruve, Dachstein, UNESCO-landsby) utgår med denne ruten. | Claude |
