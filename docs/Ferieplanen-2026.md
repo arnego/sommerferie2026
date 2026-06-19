@@ -77,8 +77,8 @@ William er 5 år og er en viktig del av planleggingen:
 | Hirtshals | Groß Buchwald | ~451 km (verifisert, travelmath.com) ⚠️ | ~6 t 11 min | E45 sør gjennom Jylland → Padborg-grense → A7 sørover → Bordesholm-avkjøring → Groß Buchwald |
 | Groß Buchwald | Berlin | ~350 km (verifisert, travelmath.com) | ~4 t 47 min | A7 sørover → Hamburg → A24 øst mot Berlin |
 | Berlin | Gohrisch (Saksisk Sveits) | 253 km (verifisert, OSRM) | 3 t 28 min | A13/A17 sørøst (4 km fra Festung Königstein) |
-| Gohrisch | Český Krumlov (Nové Spolí) | 305 km (verifisert, OSRM) | 4 t 11 min | Gohrisch → Dresden → D8/E442 sørover → Praha-omkjøring → D3/E55 sør mot České Budějovice → Český Krumlov |
-| Český Krumlov | Hallstatt / Obertraun | ~213 km (verifisert, rome2rio/daytrip) | ~2 t 55 min | A7 → Linz → A1 vest → B145 Salzkammergut → Bad Ischl → Obertraun am Hallstättersee |
+| Gohrisch | Český Krumlov (Camping Paradijs, Zlatá Koruna) | 299 km (verifisert, OSRM) | 4 t 06 min | Gohrisch → Dresden → D8/E442 sørover → Praha-omkjøring → D3/E55 sør mot České Budějovice → Zlatá Koruna/Rájov |
+| Český Krumlov | Hallstatt / Obertraun | 214 km (verifisert, OSRM) | 2 t 56 min | Zlatá Koruna → Český Krumlov → A7 → Linz → A1 vest → B145 Salzkammergut → Bad Ischl → Obertraun am Hallstättersee |
 | Hallstatt / Obertraun | Postojna | ~330 km (verifisert, Google Maps) | ~4 t 31 min | Obertraun → Bad Ischl → Salzburg → A10 Tauern → Villach → A2 → Ljubljana → A1 → Postojna |
 | Postojna | Rovinj | ~110 km (verifisert) | ~1 t 30 min | A1 → E70 → Koper → A9 Istria → Rovinj |
 | Rovinj | Lago di Santa Croce / Alpago | ~273 km (verifisert, Google Maps) | ~3 t 45 min | A9 Istria → Trieste → A4 (Venezia) → A27 nord → Belluno → Lago di Santa Croce |
@@ -242,32 +242,33 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 
 ### Stopp 6: Český Krumlov, Tsjekkia (2 netter: 11.–13. juli)
 
-**Kjøring:** Gohrisch → Český Krumlov, 305 km, 4 t 11 min via Dresden → D8/E442 sørover → Praha-omkjøring → D3/E55 sør mot České Budějovice → Český Krumlov. (80 km/t med campingvogn gjennom Tsjekkia.) (verifisert, OSRM, eksakte campingkoordinater Gohrisch→Nové Spolí)
+**Kjøring:** Gohrisch → Camping Paradijs (Zlatá Koruna), 299 km, 4 t 06 min via Dresden → D8/E442 sørover → Praha-omkjøring → D3/E55 sør mot České Budějovice → Zlatá Koruna/Rájov. (80 km/t med campingvogn gjennom Tsjekkia.) (verifisert, OSRM, eksakte campingkoordinater)
 
-**Campingplass: Kemp Český Krumlov – Nové Spolí**
-- Adresse: Nové Spolí, 381 01 Český Krumlov, Tsjekkia — rett ved Vltava, ~1,5 km (30 min gange) fra gamlebyen
-- Nettside: https://www.kempkrumlov.cz/
-- Fasiliteter: Vodácký kemp (padle-/raftecamping) nærmest UNESCO-gamlebyen. Plasser for campingvogn/bobil, to sanitæranlegg med varmt vann og dusj, to parkeringer, kiosk/servering med sitteplasser, gratis Wi-Fi. Drives av AUGUSTIN s.r.o. Samarbeider med båt-/rafteutleien Vydra. Åpen 1.5.–30.9.2026.
-- Pris (2026): campingvogn 400 CZK/natt, bobil 450 CZK/natt, eltilkobling 150 CZK/dag, voksen 110–130 CZK/natt, barn 7–15 år 100–110 CZK/natt
-- Booket: Nei
-- Bookingref: —
-- Innsjekk: 13:00 · Utsjekk: 12:00 (ca. — verifisér ved booking)
+**Campingplass: Camping Paradijs** ✅ BOOKET & BEKREFTET
+- Adresse: Rájov 26, 381 01 Zlatá Koruna, Tsjekkia — rett ved Vltava, ~6 km fra Český Krumlov
+- Nettside: https://kempukrumlova.cz/
+- GPS: 48.8397, 14.3753
+- Fasiliteter: Rolig, familievennlig elvebreddcamping (tar bevisst ikke imot vodáci/raftegrupper). Elveplasser med strøm, sanitæranlegg med varmt vann døgnet rundt, grill-/bålplass. Drives av Jana Eremiášová. Åpen sesongen 2026.
+- **Booket: Ja** — bestilt og bekreftet på e-post 19.06.2026, forhåndsbetalt 1 736 CZK
+- Bookingref: **VOU2321** (Alfred-administrasjonskode BDYEL4, online innsjekk på alfred.previo.app)
+- Reservasjon: elveplass A4 «u řeky» med strøm, 3 gjester, 11.–13. juli (2 netter)
+- Innsjekk: fra 14:00 · Utsjekk: senest 12:00
 
 **Aktiviteter:**
 
 | Aktivitet | Type | Prioritet | Beskrivelse |
 |-----------|------|-----------|-------------|
-| Familie-rafting fra campingen inn til byen | Friluft/vann | Must-do | Rolig familie-rafting/flåtetur på Vltava fra Kemp Nové Spolí og ned forbi de små stryktrappene (propusti) inn i hjertet av gamlebyen. Campingen samarbeider med båtutleien Vydra — komplett utstyr (flåte/kano, vester, padler) for både barn og voksne, og de kan kjøre utstyr til og fra elven. En av turens høydepunkter for William! https://vydra.info/ (se også https://www.kempkrumlov.cz/) |
 | Český Krumlov gamlebyen (UNESCO) | Kultur/UNESCO | Must-do | Eventyraktig middelalderby i Sør-Böhmen, UNESCO-verdensarv siden 1992. Vltava-elven svinger rundt den brosteinsbelagte gamlebyen, kronet av et enormt slott. Som hentet fra en bok — William vil elske de smale gatene. https://www.ckrumlov.info/en/ |
 | Český Krumlov slott og slottshage | Kultur/severdighet | Must-do | Tsjekkias nest største slottskompleks med fargerikt rundtårn, bjørnegrav og barokk slottshage med utsikt over byen. Kort klatretur opp fra elven. https://www.zamek-ceskykrumlov.cz/en |
-| Bading og avslapning ved Vltava | Friluft/vann | Nice-to-have | Kemp Nové Spolí ligger rett ved elvebredden med plen og kiosk — fin avkjøling og lek ved vannet etter en dag i byen. https://www.kempkrumlov.cz/ |
+| Klosteret Zlatá Koruna | Kultur/historie | Nice-to-have | Et av Sentral-Europas best bevarte gotiske cistercienserklostre, nasjonalt kulturminne grunnlagt 1263 på en bergodde i Vltava-dalen — rett ved campingen. Omvisning gjennom kapittelsal, klostergang og den store klosterkirken. https://www.klaster-zlatakoruna.cz/en/about |
+| Bading og avslapning ved Vltava | Friluft/vann | Nice-to-have | Camping Paradijs ligger rett ved elvebredden med elveplasser og grill-/bålplass — fin avkjøling og lek ved vannet etter en dag i byen (bading på eget ansvar). https://kempukrumlova.cz/ |
 
 **Tips:**
 - **Kjøp tsjekkisk e-vignett** (elektronisk, ~ ekvivalent 270 CZK/10 dager per kjøretøy) på edalnice.cz før innkjøring på motorvei
-- Book familie-rafting hos Vydra på forhånd i høysesong — campingen formidler turen rett fra plassen
+- Camping Paradijs er en rolig plass — nattero kl. 22–07, barn under 12 år under tilsyn, hunder gratis. Gjør gjerne online innsjekk på forhånd via alfred.previo.app (kode BDYEL4), men meld dere i resepsjonen ved ankomst med gyldig ID
 - Český Krumlov blir fullt av dagsturister midt på dagen — gå tidlig morgen eller om kvelden for å ha de smale gatene mest mulig for seg selv
 - Ta med kontanter i tsjekkiske kroner (CZK) — mange små steder tar ikke kort
-- Neste dag: ~213 km til Hallstatt/Obertraun (~2 t 55 min) via Linz → A1 → Salzkammergut — kort, vakker kjøredag inn i Alpene
+- Neste dag: ~214 km til Hallstatt/Obertraun (~2 t 56 min) via Linz → A1 → Salzkammergut — kort, vakker kjøredag inn i Alpene
 
 ---
 
@@ -517,6 +518,7 @@ Disse 10 campingplassene dekker ulike reisestiler langs hele den kroatiske ruten
 
 | Dato | Endring | Av |
 | --- | --- | --- |
+| 2026-06-19 | **Stopp 6 byttet til Camping Paradijs** (Rájov 26, 381 01 Zlatá Koruna, ~6 km fra Český Krumlov) — erstatter Kemp Nové Spolí. **Booket og bekreftet** på e-post (ref. VOU2321, Alfred-kode BDYEL4, forhåndsbetalt 1 736 CZK, elveplass A4 «u řeky», 3 gjester, 11.–13. juli). URL/adresse/GPS (48.8397, 14.3753) verifisert via Tavily/Campercontact. Rolig familieplass som ikke tar imot raftegrupper → **familie-rafting fra campingen fjernet**; lagt til **Klosteret Zlatá Koruna** (nice-to-have) som ligger rett ved plassen. Kjøreetapper reverifisert via OSRM: Gohrisch→Camping Paradijs 299 km / 4t 06min, Camping Paradijs→Hallstatt 214 km / 2t 56min. | Claude |
 | 2026-06-19 | **Stopp 5 byttet til Caravan Camping Sächsische Schweiz** (Dorfplatz 181d, 01824 Kurort Gohrisch), 4 km fra Festung Königstein — erstatter Kemp Mezní Louka. URL og adresse/GPS (50.9145, 14.1071) verifisert via Tavily/PiNCAMP. Booking: bestilt, avventer bekreftelse. Aktiviteter etter ønske: **Festung Königstein + Basteibroen** som Must-do; **Kirnitzschtalbahn + Amselsee (Kurort Rathen)** som nice-to-have backup. Kjøreetapper reverifisert via OSRM (eksakte koordinater): Berlin→Gohrisch 253 km / 3t 28min, Gohrisch→Český Krumlov (Nové Spolí) 305 km / 4t 11min. Stopp 6 (Nové Spolí + rafting) uendret. | Claude |
 | 2026-06-15 | **Stopp 15 Billund**: overnatting byttet fra Legoland® Campingarea til **Billund Stellplatz** (Grenevej 1, 7190 Billund, billundstellplatz.dk). Satt til **booket** fordi plassen har pladsgaranti (alltid plass, ingen reservasjon nødvendig). ~3 km til Legoland/LEGO House/Lalandia. Kartkoordinater oppdatert til 55.7056, 9.1321 (URL verifisert via Tavily). | Claude |
 | 2026-06-15 | Seks endringer (campingplasser/URL-er verifisert via Tavily, avstander via rome2rio/daytrip). (1) **Stopp 4 Berlin**: Hotel & City Camping Süd bekreftet — bookingstatus Nei → Ja. (2) **Stopp 5**: byttet fra Campingplatz Ostrauer Mühle (krever min. 4 netter) til **Kemp Mezní Louka** (kemp-mezni-louka.cz) på tsjekkisk side, midt i Böhmisk Sveits NP og rett ved stien til Pravčická brána — ingen minimumsregel. Stoppet omdøpt til «Bøhmisk Sveits (Mezní Louka)», land DE→CZ. Aktiviteter: **Pravčická brána & lunsj på Sokolí hnízdo/Falcon's Nest** (pbrana.cz), Kamenice Gorge og Basteibroen som must-do; **Kirnitzschtalbahn** flyttet til nice-to-have (sammen med Festung Königstein). (3) **Stopp 6 Český Krumlov**: campingplass byttet fra Camping Chvalšiny til **Kemp Český Krumlov – Nové Spolí** (kempkrumlov.cz), ved Vltava ~1,5 km fra gamlebyen. Ny must-do: **familie-rafting fra campingen inn til byen** via båtutleien Vydra (vydra.info). (4) **Kjøreavstander oppdatert/verifisert**: Berlin→Mezní Louka ~235 km (~3t13), Mezní Louka→Český Krumlov ~285 km (~3t54), Český Krumlov→Obertraun ~213 km (~2t55). Total kjørelengde ~4 050→~4 060 km. (5) **Kartkoordinater** oppdatert til nøyaktig posisjon for de nye campingplassene (Mezní Louka 50.8739, 14.3186; Nové Spolí 48.7969, 14.3060 — Mapy.com). (6) **Drivstoffbudsjett** oppdatert til 14,5 L/100 km og korrigert distanse: 11 500 → 11 300 NOK (~4 100 km × 14,5 L/100 km ≈ 594 L × ~19 NOK/L). Foreldet «5 700 km» (rest fra eldre, lengre rute) rettet til ~4 100 km — som stemmer med hero-seksjonen og summen av de verifiserte kjøreetappene (4 093 km). | Claude |
