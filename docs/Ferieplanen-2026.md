@@ -53,7 +53,7 @@ William er 5 år og er en viktig del av planleggingen:
 | 8 | Postojna | SI | 14. juli | 15. juli | 1* | 29 |
 | 9 | Rovinj, Istria (Maistra Vestar Campsite 🔒) | HR | 15. juli | 20. juli | 5 | 29 |
 | 10 | Lago di Santa Croce / Alpago (transit) | IT | 20. juli | 21. juli | 1* | 30 |
-| 11 | Zugspitze (Lermoos) | AT | 21. juli | 24. juli | 3 | 30 |
+| 11 | Zugspitze (Krün) | DE | 21. juli | 24. juli | 3 | 30 |
 | 12 | Bamberg | DE | 24. juli | 26. juli | 2 | 30 |
 | 13 | Braunlage (Harz) | DE | 26. juli | 28. juli | 2* | 30/31 |
 | 14 | Hamburg | DE | 28. juli | 30. juli | 2* | 31 |
@@ -82,8 +82,8 @@ William er 5 år og er en viktig del av planleggingen:
 | Leibnitz | Postojna | 218 km (verifisert, OSRM) | 2 t 59 min | Leibnitz → E57 → Spielfeld-grensa → Maribor → E59/E61 → Ljubljana → Postojna |
 | Postojna | Rovinj | ~110 km (verifisert) | ~1 t 30 min | A1 → E70 → Koper → A9 Istria → Rovinj |
 | Rovinj | Lago di Santa Croce / Alpago | ~273 km (verifisert, Google Maps) | ~3 t 45 min | A9 Istria → Trieste → A4 (Venezia) → A27 nord → Belluno → Lago di Santa Croce |
-| Lago di Santa Croce / Alpago | Zugspitze/Lermoos | 303 km (verifisert, OSRM) | 4 t 09 min | Cortina d'Ampezzo → Toblach/Pustertal → Brixen → A22 Brenner → Innsbruck → Telfs → Fernpass → Lermoos |
-| Zugspitze/Lermoos | Bamberg | 343 km (verifisert, OSRM) | 4 t 42 min | Lermoos → Garmisch → A95/A8 nord → München → A9 nord → A73 mot Bamberg |
+| Lago di Santa Croce / Alpago | Zugspitze/Krün | 284 km (verifisert) | 3 t 53 min | Cortina d'Ampezzo → Toblach/Pustertal → Brixen → A22 Brenner → Innsbruck → Seefeld → Mittenwald → Krün |
+| Zugspitze/Krün | Bamberg | 324 km (verifisert) | 4 t 26 min | Krün → Garmisch → A95/A8 nord → München → A9 nord → A73 mot Bamberg |
 | Bamberg | Braunlage (Harz) | ~280 km | ~3 t 50 min | A73 nord → Erfurt → A4/A38 → Nordhausen → B4 → Braunlage |
 | Braunlage (Harz) | Hamburg | ~246 km | ~3 t 22 min | B4 nord → A7 nord → Hamburg |
 | Hamburg | Billund | 280 km (verifisert) | 3 t 50 min | A7 nord → Flensburg-grensa → E45 nord inn i Danmark → Billund |
@@ -385,7 +385,7 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 **Tips:**
 - Italia bruker bompengebommer (ikke vignett) — A4/A27 betales ved bom. Ingen vignett nødvendig i Italia
 - Lago di Santa Croce har jevn ettermiddagsvind — perfekt for windsurfing/SUP, men hold øye med William ved vannkanten
-- Neste dag: ~303 km til Zugspitze/Lermoos (~4 t 09 min) via Cortina → Dolomittene → Pustertal → Brenner → Innsbruck → Telfs → Fernpass → Lermoos. Krever østerriksk vignett + Brenner-bompenger for siste strekning
+- Neste dag: ~284 km til Zugspitze/Krün (~3 t 53 min) via Cortina → Dolomittene → Pustertal → Brenner → Innsbruck → Seefeld → Mittenwald → Krün. Krever østerriksk vignett + Brenner-bompenger for transitten gjennom Østerrike
 
 ---
 
@@ -394,19 +394,19 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 Hjemreisen inkluderer opplevelsesstoppene Zugspitze, Braunlage (Harz), Hamburg og Billund (Legoland) — i tillegg til to kulturnetter i Bamberg. Lago di Santa Croce / Alpago (stopp 10) er en egen overnatting (se over).
 
 **Zugspitze, Bayern (3 netter: 21.–24. juli)**
-- Kjøring: Lago di Santa Croce / Alpago → Zugspitze/Lermoos, 303 km, 4 t 09 min via Cortina d'Ampezzo → Toblach/Pustertal → Brixen → A22 Brenner → Innsbruck → Telfs → Fernpass → Lermoos. (80 km/t med campingvogn; vakker fjellrute gjennom Dolomittene.) (verifisert, OSRM)
-- Campingplass: Happy Camp Lermoos, Garmischer Straße 21, 6631 Lermoos, Tirol (Østerrike)
-- Nettside: https://www.camping-lermoos.com/en/
-- GPS: 47.4025, 10.8881
-- **Booket: Forespørsel sendt – avventer svar** (rolig parkliknende familiecamping på den tyrolske siden av Zugspitze, 5 min fra Lermoos sentrum, med lekeplass)
-- Innsjekk: 14:00 · Utsjekk: 12:00 (ca. — verifisér ved booking)
-- Ankomstdag (21. juli): ankom tidlig ettermiddag — plassen ligger i Tiroler Zugspitz Arena med fjellutsikt. Bad i den krystallklare **Blindsee** (~6 km) eller rusle i Lermoos sentrum.
-- Dag 2 (22. juli — full dag): **Zugspitzbahn** — Tiroler Zugspitzbahn fra Ehrwald (~5 km) rett til toppen (2 962 m). Innom **Eibsee** (~23 km) for bading og fjellutsikt. Book billett på forhånd: https://www.zugspitze.at/en
-- Dag 3 (23. juli — full dag): **Neuschwanstein Castle**, bare ~40 km via Reutte/Füssen (mye nærmere fra Lermoos), krever obligatorisk forhåndsbooking på https://www.neuschwanstein.de/. Med 3 netter er det nå tid til begge store opplevelser!
-- Tips: Book Zugspitzbahn (zugspitze.at) og Neuschwanstein online på forhånd — Juli er høysesong. Østerriksk vignett kreves (A12 Inntal). Nice-to-have: **Höllentalklamm** — dramatisk kløftevandring fra Hammersbach (~20 km, 5–6 km tur/retur, ~2–3t, gratis inngang).
+- Kjøring: Lago di Santa Croce / Alpago → Zugspitze/Krün, 284 km, 3 t 53 min via Cortina d'Ampezzo → Toblach/Pustertal → Brixen → A22 Brenner → Innsbruck → Seefeld → Mittenwald → Krün. (80 km/t med campingvogn; vakker fjellrute gjennom Dolomittene.) (verifisert)
+- Campingplass: Alpen-Caravanpark Tennsee, Am Tennsee 1, 82494 Krün, Bayern (Tyskland)
+- Nettside: https://www.camping-tennsee.de/en/
+- GPS: 47.4933, 11.2696
+- **Booket: Ja** — plass «1 Himmelreich» reservert 20.06.2026 (21.–24. juli, 2 voksne + 1 barn under 5). Prisbelønt 5-stjerners familiecamping ved fjellsjøen Tennsee mellom Garmisch og Mittenwald, med lekeplass, restaurant og utsikt mot Karwendel og Wetterstein. (Buchungsanfrage mottatt; plassen sender endelig skriftlig bekreftelse.)
+- Innsjekk: frem til 18:00 (lunsjpause uten innsjekk 12:30–14:30) · Utsjekk: 08:00–12:00 (verifisert mot plassens nettside)
+- Ankomstdag (21. juli): ankom tidlig ettermiddag — plassen ligger ved Tennsee med fjellutsikt. Bad i sjøen eller i de rolige badesjøene **Lautersee/Ferchensee** ved Mittenwald.
+- Dag 2 (22. juli — full dag): **Zugspitzbahn** — Bayerische Zugspitzbahn fra Garmisch/Eibsee (~20 km) rett til toppen (2 962 m), Tysklands høyeste fjell. Innom **Eibsee** for bading og fjellutsikt. Book billett på forhånd: https://zugspitze.de/en
+- Dag 3 (23. juli — full dag): **Neuschwanstein Castle**, ~55 km via Garmisch/Oberammergau eller Mittenwald → Füssen, krever obligatorisk forhåndsbooking på https://www.neuschwanstein.de/. Med 3 netter er det nå tid til begge store opplevelser!
+- Tips: Book Zugspitzbahn (zugspitze.de) og Neuschwanstein online på forhånd — Juli er høysesong. Selve oppholdet er i Tyskland (ingen vignett), men innkjøringen fra Italia transitterer Østerrike (Brenner → Innsbruck → Seefeld): østerriksk vignett + Brenner-bompenger kreves. Nice-to-have: **Höllentalklamm** — dramatisk kløftevandring fra Hammersbach (~20 km, 5–6 km tur/retur, ~2–3t, gratis inngang); sjarmerende fiolinbyen **Mittenwald** (~7 km) med Karwendelbahn.
 
 **Bamberg (2 netter: 24.–26. juli)**
-- Kjøring: Zugspitze/Lermoos → Bamberg, 343 km, 4 t 42 min via Lermoos → Garmisch → A95/A8 nord → München → A9 nord → A73. (80 km/t med campingvogn, gjennomsnitt ~73 km/t.) (verifisert, OSRM)
+- Kjøring: Zugspitze/Krün → Bamberg, 324 km, 4 t 26 min via Krün → Garmisch → A95/A8 nord → München → A9 nord → A73. (80 km/t med campingvogn, gjennomsnitt ~73 km/t.) (verifisert)
 - Campingplass: Camping Island Bamberg, Campinginsel, 96052 Bamberg
 - Nettside: http://www.campinginsel.de/
 - Innsjekk: 13:00 · Utsjekk: 12:00 (ca. — verifisér ved booking)
@@ -525,6 +525,7 @@ Disse 10 campingplassene dekker ulike reisestiler langs hele den kroatiske ruten
 | 2026-06-20 | **Stopp 11 Zugspitze**: Tennsee forkastet (for lang reisevei til aktivitetene). Byttet til **Happy Camp Lermoos** (Garmischer Straße 21, 6631 Lermoos, Tirol) på den tyrolske siden av Zugspitze — bookingforespørsel sendt, avventer svar. URL/GPS (47.4025, 10.8881) verifisert via Tavily/PiNCAMP. Mye bedre tilrettelagt for must-do: Tiroler Zugspitzbahn (Ehrwald) ~5 km, Neuschwanstein ~40 km (vesentlig nærmere), Eibsee ~23 km, Höllentalklamm ~20 km. Stopp 11 flyttet fra Tyskland (DE) til Østerrike (AT). Kjøreetapper via Fernpass (OSRM): Lago di Santa Croce→Lermoos 303 km / 4t 09min, Lermoos→Bamberg 343 km / 4t 42min (begge godt under 6t). | Claude |
 | 2026-06-20 | **Stopp 11 Zugspitze**: begge Grainau-plassene (Camping Resort Zugspitze og Camping Erlebnis Zugspitze) var fullt. Byttet til **Alpen-Caravanpark Tennsee** (Am Tennsee 1, 82494 Krün) — prisbelønt (ADAC/DCC/ECC) sivil familiecamping mellom Garmisch og Mittenwald. URL/GPS (47.4904, 11.2556) verifisert via Tavily/ACSI/camping-tennsee.de. Nesten ingen ekstra kjøretid: ankomst via Seefeld/Mittenwald gir Lago di Santa Croce→Krün 273 km / 3t 44min (12 km kortere enn Grainau), Krün→Bamberg 333 km / 4t 34min — totalt gjennomkjøring ~uendret. Aktiviteter justert til avstand (Zugspitzbahn ~18 km, Eibsee ~22 km, Höllentalklamm ~17 km); Mittenwald lagt til som nice-to-have. Ingen booking sendt ennå. | Claude |
 | 2026-06-20 | **Stopp 11 Zugspitze**: Edelweiss-alternativet forkastet (campingen ligger på en amerikansk militærbase og krever DoD-adgang). Byttet til **Camping Erlebnis Zugspitze** (Griesener Straße 2, 82491 Grainau) — sivil 3-stjerners familiecamping ved Loisach, rett ved Eibsee, Zugspitzbahn og Höllentalklamm. Søsterplass til den fulle Camping Resort Zugspitze, samme gate i Grainau. URL/GPS (47.4800, 11.0557) verifisert via Tavily/PiNCAMP/ACSI. Ingen ekstra kjøretid: Lago di Santa Croce→Grainau 285 km / 3t 54min, Grainau→Bamberg 323 km / 4t 25min (uendret). Ingen booking sendt ennå. | Claude |
+| 2026-06-20 | **Stopp 11 Zugspitze**: campingplass byttet til **Alpen-Caravanpark Tennsee** (Am Tennsee 1, 82494 Krün, Bayern) — ledig plass funnet og booket. **Booket: Ja** — plass «1 Himmelreich», 21.–24. juli, 2 voksne + 1 barn (booking-bekreftelse mottatt på e-post 20.06.2026, emne «Eingang Ihrer Buchungsanfrage / Confirmation of your booking request»). URL og adresse verifisert via Tavily (camping-tennsee.de). Innsjekk/utsjekk verifisert mot plassens nettside (ankomst frem til 18:00, lunsjpause 12:30–14:30, utsjekk 08:00–12:00). Stoppet flyttet fra Lermoos (AT) til Krün (DE) — land AT→DE, GPS 47.4933, 11.2696. Kjøreetapper reverifisert (cross-check travelmath/bikemap/distance.to mot prosjektets OSRM-anker): Lago di Santa Croce→Krün **284 km / 3t 53min** (via Innsbruck→Seefeld→Mittenwald, ~19 km kortere enn Fernpass/Lermoos-ruten), Krün→Bamberg **324 km / 4t 26min**. Aktiviteter justert til Bayern-basen: Zugspitzbahn nå Bayerische fra Garmisch/Eibsee (~20 km), Neuschwanstein ~55 km, ny nice-to-have Mittenwald & Karwendel (~7 km) erstatter Tiroler Zugspitz Arena/Blindsee. | Claude |
 | 2026-06-20 | **Stopp 11 Zugspitze**: campingplass byttet fra Camping Resort Zugspitze (Grainau) — ikke ledig — til **Edelweiss Lodge & Resort – Campground (Vacation Village)** på Artillery Kaserne i Garmisch-Partenkirchen. URL/GPS (47.4842, 11.0592) verifisert via Tavily/Nominatim. Booking: forespørsel sendt, avventer svar. ⚠️ Krever gyldig DoD-adgangskort eller autorisert vert. Markør flyttet til Garmisch; kjøreetappe Lago di Santa Croce→Garmisch reverifisert via OSRM 285 km / 3t 54min (var 295 km/Grainau), Garmisch→Bamberg uendret 323 km. Aktiviteter justert (Eibsee nå ~12 km, Garmisch sentrum i gangavstand, Zugspitzbahn fra dalstasjon i Garmisch). | Claude |
 | 2026-06-20 | **Stopp 8 Camping Pivka Jama (Postojna)**: bookingstatus oppdatert til «forespørsel sendt på e-post – avventer svar». | Claude |
 | 2026-06-20 | **Stopp 7 lagt om: Hallstatt/Obertraun → Leibnitz** (Städtisches Bad & Camping Leibnitz, Rudolf-Hans-Bartsch-Gasse 33, 8430 Leibnitz). Sørruten mellom Český Krumlov og Postojna går nå via A9-motorveien gjennom Liezen og Graz, med transittstopp i Sør-Steiermark. URL/adresse/GPS (46.7785, 15.5287) verifisert via Tavily/Nominatim. Booking: forespørsel sendt på e-post (camping@leibnitz.at), avventer svar. Aktiviteter: Erlebnisbad ved campingen (must-do), Schloss Seggau + Leibnitz Altstadt (nice-to-have). Kjøreetapper reverifisert via OSRM: Český Krumlov→Leibnitz 344 km / 4t 43min (via A9/Graz), Leibnitz→Postojna 218 km / 2t 59min (E57/E61). Merk: Hallstatt/Salzkammergut (saltgruve, Dachstein, UNESCO-landsby) utgår med denne ruten. | Claude |
