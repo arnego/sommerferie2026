@@ -22,7 +22,7 @@
 - Start og slutt i Kongsberg, Norge.
 - **Hoveddestinasjon: Kroatia** — med minimum 14 netter langs Adriaterkysten og i nasjonalparkene.
 - Et besøk til familie (André og Lucia) i Tyskland i løpet av ferien på adresse: Fischerinsel 9, 10179 Berlin, Tyskland.
-- Saksisk Sveits (Gohrisch, ved Festung Königstein) inngår som stopp på vei sydover — base på Caravan Camping Sächsische Schweiz på tysk side.
+- Saksisk Sveits (Königstein, ved Festung Königstein) inngår som stopp på vei sydover — base på Campingplatz am Treidlerweg direkte ved Elben på tysk side.
 - **Ferger:** Color Line SuperSpeed Larvik→Hirtshals på utreisen (fredag 3. juli, avgang kl. 17:35, ankomst Hirtshals ca. 21:40). Color Line SuperSpeed Hirtshals→Larvik på hjemreisen (lørdag 1. august, avgang kl. 22:15, ankomst Larvik ca. 02:40 natt til 2. august).
 - Ingen overnattinger kortere enn 3 netter med mindre vi eksplisitt har kommet med ønske om det for spesifikke destinasjoner.
 - Kjøreetapper må være under 6 timer per dag med minimum ett stopp underveis.
@@ -47,7 +47,7 @@ William er 5 år og er en viktig del av planleggingen:
 | 2 | Hirtshals (overnatting) — Hirtshals Camping | DK | 3. juli kv. | 4. juli | 1 (transit) | 27 |
 | 3 | Groß Buchwald (Groß Buchwald meadow-campspace) | DE | 4. juli kv. | 5. juli | 1 (transit) | 27 |
 | 4 | Berlin | DE | 5. juli | 9. juli | 4 | 27/28 |
-| 5 | Gohrisch (Saksisk Sveits) | DE | 9. juli | 11. juli | 2 | 28 |
+| 5 | Königstein (Saksisk Sveits) | DE | 9. juli | 11. juli | 2 | 28 |
 | 6 | Český Krumlov | CZ | 11. juli | 13. juli | 2* | 28 |
 | 7 | Leibnitz (transit) | AT | 13. juli | 14. juli | 1* | 29 |
 | 8 | Postojna | SI | 14. juli | 15. juli | 1* | 29 |
@@ -63,7 +63,7 @@ William er 5 år og er en viktig del av planleggingen:
 
 *Kortstopp — unntak fra 3-netter-regelen (transit eller prioritert destinasjon).
 
-**Totalt:** 29 netter borte — 5 i Kroatia (Rovinj 5, Maistra Vestar 🔒), 1 natt Slovenia (Postojna), 1 natt Leibnitz (AT, transit), 1 natt Lago di Santa Croce/Alpago (IT), 3 netter Zugspitze, 4 netter Berlin, 2 netter Gohrisch (Saksisk Sveits), 2 netter Český Krumlov, 2 netter Bamberg, 2 netter Braunlage (Harz), 2 transittnetter (Hirtshals, Groß Buchwald), 2 netter Hamburg, 2 i Billund. Hjemme 2. august (kveldsavgang Hirtshals 1. august, ankomst Larvik natt til 2. august).
+**Totalt:** 29 netter borte — 5 i Kroatia (Rovinj 5, Maistra Vestar 🔒), 1 natt Slovenia (Postojna), 1 natt Leibnitz (AT, transit), 1 natt Lago di Santa Croce/Alpago (IT), 3 netter Zugspitze, 4 netter Berlin, 2 netter Königstein (Saksisk Sveits), 2 netter Český Krumlov, 2 netter Bamberg, 2 netter Braunlage (Harz), 2 transittnetter (Hirtshals, Groß Buchwald), 2 netter Hamburg, 2 i Billund. Hjemme 2. august (kveldsavgang Hirtshals 1. august, ankomst Larvik natt til 2. august).
 
 > **Merk:** Plitvice og Split er fjernet. Sørruten går nå via A9-motorveien (Liezen/Graz) med transittstopp i Leibnitz (1n) i Sør-Steiermark, Postojna/Slovenia (1n) og 5 netter i Rovinj (Maistra Vestar Campsite, booket PH28273444). På hjemveien er Klagenfurt/Wörthersee erstattet med Lago di Santa Croce / Alpago (1n) i Italia, slik at vi kjører den kortere og vakrere Brenner-ruten gjennom Dolomittene til Zugspitze. Berlin er utvidet til 4 netter (én natt flyttet fra Postojna). Zugspitze 3 netter, Braunlage og Hamburg 2 netter hver. Totalt 5 netter i Kroatia — under opprinnelig mål på 14 netter (§2), men bevisst valg. Alle kjøreetapper under 6 timer.
 
@@ -76,8 +76,8 @@ William er 5 år og er en viktig del av planleggingen:
 | Kongsberg | Larvik | 91 km (verifisert) | 1 t 15 min | E18 sørøst |
 | Hirtshals | Groß Buchwald | ~451 km (verifisert, travelmath.com) ⚠️ | ~6 t 11 min | E45 sør gjennom Jylland → Padborg-grense → A7 sørover → Bordesholm-avkjøring → Groß Buchwald |
 | Groß Buchwald | Berlin | ~350 km (verifisert, travelmath.com) | ~4 t 47 min | A7 sørover → Hamburg → A24 øst mot Berlin |
-| Berlin | Gohrisch (Saksisk Sveits) | 253 km (verifisert, OSRM) | 3 t 28 min | A13/A17 sørøst (4 km fra Festung Königstein) |
-| Gohrisch | Český Krumlov (Camping Paradijs, Zlatá Koruna) | 299 km (verifisert, OSRM) | 4 t 06 min | Gohrisch → Dresden → D8/E442 sørover → Praha-omkjøring → D3/E55 sør mot České Budějovice → Zlatá Koruna/Rájov |
+| Berlin | Königstein (Saksisk Sveits) | 253 km (verifisert, OSRM) | 3 t 28 min | A13/A17 sørøst → Pirna → Königstein (Treidlerweg, ved Elben) |
+| Königstein | Český Krumlov (Camping Paradijs, Zlatá Koruna) | 299 km (verifisert, OSRM) | 4 t 06 min | Königstein → Dresden → D8/E442 sørover → Praha-omkjøring → D3/E55 sør mot České Budějovice → Zlatá Koruna/Rájov |
 | Český Krumlov | Leibnitz | 344 km (verifisert, OSRM) | 4 t 43 min | Zlatá Koruna → České Budějovice → Linz (A7) → A9 Pyhrn sørover → Liezen → Graz → Leibnitz |
 | Leibnitz | Postojna | 218 km (verifisert, OSRM) | 2 t 59 min | Leibnitz → E57 → Spielfeld-grensa → Maribor → E59/E61 → Ljubljana → Postojna |
 | Postojna | Rovinj | ~110 km (verifisert) | ~1 t 30 min | A1 → E70 → Koper → A9 Istria → Rovinj |
@@ -209,40 +209,39 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 
 ---
 
-### Stopp 5: Gohrisch / Saksisk Sveits (2 netter: 9.–11. juli)
+### Stopp 5: Königstein / Saksisk Sveits (2 netter: 9.–11. juli)
 
-**Kjøring:** Berlin → Gohrisch, 253 km, 3 t 28 min via A13/A17 sørøst → Dresden → Königstein/Gohrisch. (80 km/t med campingvogn.) (verifisert, OSRM, eksakte campingkoordinater)
+**Kjøring:** Berlin → Königstein, 253 km, 3 t 28 min via A13/A17 sørøst → Dresden → Pirna → Königstein. (80 km/t med campingvogn.) (verifisert, OSRM; campingplass flyttet ~3 km til Königstein, innenfor toleranse)
 
-**Campingplass: Caravan Camping Sächsische Schweiz**
-- Adresse: Dorfplatz 181d, 01824 Kurort Gohrisch, Tyskland
-- Nettside: https://caravan-camping-saechsischeschweiz.de/en/
-- GPS: 50.9145, 14.1071
-- Fasiliteter: Familievennlig plass på høydeplatå ved Gohrisch, oppvarmet basseng (midt april–midt oktober), sanitæranlegg, lekeområde, brødservice, e-sykkelutleie, restaurant. Turstier direkte fra plassen.
-- Sentralt i nasjonalparken, kun 4 km fra Festung Königstein og Bad Schandau (S-Bahn til Dresden)
-- Tar imot campingvogn med strømtilkobling
-- Booket: Bestilt – avventer bekreftelse
-- Bookingref: —
-- Innsjekk: 14:00 · Utsjekk: 11:00 (ca. — verifisér ved booking)
+**Campingplass: Campingplatz am Treidlerweg / Pension Bomätscher** ✅ BOOKET & BEKREFTET
+- Adresse: Am Alten Sägewerk 4, 01824 Königstein, Tyskland
+- Nettside: https://www.treidlercamping.de/
+- GPS: 50.9253, 14.0932
+- Fasiliteter: Familievennlig plass direkte ved Elben på den gamle treidlerstien (Elberadweg), med utsikt til Lilienstein og Festung Königstein. Sanitæranlegg, frokostservering på soltrasse, restaurant/pension. Turstier og elvepromenade fra plassen.
+- Sentralt i Elbsandsteingebirge — Festung Königstein ruver rett over plassen (~2 km), Bad Schandau og Bastei i nærheten, S-Bahn (S1) til Dresden fra Königstein stasjon
+- Tar imot campingvogn med strømtilkobling (ankom med bil + liten campingvogn)
+- **Booket: Ja** — bookingref. **OBP-AG-20260620145629** (20.06.2026), plass «Erste Reihe», 9.–11. juli, 2 voksne + 1 barn, **betalt 155,60 € via PayPal** (inkl. frokost for alle tre)
+- Innsjekk: plass ledig fra 11:00 (innsjekk-kode F6C354D1) · Utsjekk: innen 10:30 (verifisert mot booking). Meld fra ved ankomst etter 18:00; gebyr ved ankomst etter 20:00
 
 **Aktiviteter:**
 
 | Aktivitet | Type | Prioritet | Beskrivelse |
 |-----------|------|-----------|-------------|
-| Festung Königstein | Festning/historie | Must-do | En av Europas største fjellfestninger, bare 4 km fra campingen. Kanoner, tunneler, dyp brønn og panoramautsikt over Elbedalen. Halv dag. https://www.festung-koenigstein.de/ |
+| Festung Königstein | Festning/historie | Must-do | En av Europas største fjellfestninger, som ruver rett over campingen (~2 km). Kanoner, tunneler, dyp brønn og panoramautsikt over Elbedalen. Halv dag. https://www.festung-koenigstein.de/ |
 | Basteibroen (Basteibrücke) | Natur/utsiktspunkt | Must-do | Ikonisk steinbro 194 meter over Elben. Kort sti fra parkering (15–20 min). Gå tidlig! https://www.saechsische-schweiz.de/ausflugsziele/bastei |
 | Kirnitzschtalbahn | Historisk trikk | Nice-to-have | Historisk sporvogn fra Bad Schandau til Lichtenhainer Wasserfall. William vil elske trikketuren! https://www.rvsoe.de/verkehrsmittel/kirnitzschtalbahn |
 | Amselsee i Kurort Rathen | Natur/båt | Nice-to-have | Rolig innsjø i sandsteinkløft med robåtutleie — avslappende familieaktivitet mellom klippene. Lett å kombinere med Bastei. https://www.saechsische-schweiz.de/ausflugsziele/amselsee-kurort-rathen |
 
 **Tips:**
 - Gå til Bastei tidlig på morgenen for å unngå folkemengder
-- Oppvarmet basseng på campingen — fin avkjøling etter en dag i fjellet
-- Ingen Umweltzone i Gohrisch; Dresden nås enkelt med S-Bahn fra Königstein stasjon
+- Innsjekk via terminal med kode F6C354D1 — plass ledig fra kl. 11:00, utsjekk innen 10:30. Frokost er forhåndsbestilt (2 voksne + 1 barn), serveres 08:00–10:00 på soltrassen
+- Ingen Umweltzone i Königstein; Dresden nås enkelt med S-Bahn (S1) fra Königstein stasjon
 
 ---
 
 ### Stopp 6: Český Krumlov, Tsjekkia (2 netter: 11.–13. juli)
 
-**Kjøring:** Gohrisch → Camping Paradijs (Zlatá Koruna), 299 km, 4 t 06 min via Dresden → D8/E442 sørover → Praha-omkjøring → D3/E55 sør mot České Budějovice → Zlatá Koruna/Rájov. (80 km/t med campingvogn gjennom Tsjekkia.) (verifisert, OSRM, eksakte campingkoordinater)
+**Kjøring:** Königstein → Camping Paradijs (Zlatá Koruna), 299 km, 4 t 06 min via Dresden → D8/E442 sørover → Praha-omkjøring → D3/E55 sør mot České Budějovice → Zlatá Koruna/Rájov. (80 km/t med campingvogn gjennom Tsjekkia.) (verifisert, OSRM; campingplass flyttet ~3 km til Königstein, innenfor toleranse)
 
 **Campingplass: Camping Paradijs** ✅ BOOKET & BEKREFTET
 - Adresse: Rájov 26, 381 01 Zlatá Koruna, Tsjekkia — rett ved Vltava, ~6 km fra Český Krumlov
@@ -525,6 +524,7 @@ Disse 10 campingplassene dekker ulike reisestiler langs hele den kroatiske ruten
 | 2026-06-20 | **Stopp 11 Zugspitze**: Tennsee forkastet (for lang reisevei til aktivitetene). Byttet til **Happy Camp Lermoos** (Garmischer Straße 21, 6631 Lermoos, Tirol) på den tyrolske siden av Zugspitze — bookingforespørsel sendt, avventer svar. URL/GPS (47.4025, 10.8881) verifisert via Tavily/PiNCAMP. Mye bedre tilrettelagt for must-do: Tiroler Zugspitzbahn (Ehrwald) ~5 km, Neuschwanstein ~40 km (vesentlig nærmere), Eibsee ~23 km, Höllentalklamm ~20 km. Stopp 11 flyttet fra Tyskland (DE) til Østerrike (AT). Kjøreetapper via Fernpass (OSRM): Lago di Santa Croce→Lermoos 303 km / 4t 09min, Lermoos→Bamberg 343 km / 4t 42min (begge godt under 6t). | Claude |
 | 2026-06-20 | **Stopp 11 Zugspitze**: begge Grainau-plassene (Camping Resort Zugspitze og Camping Erlebnis Zugspitze) var fullt. Byttet til **Alpen-Caravanpark Tennsee** (Am Tennsee 1, 82494 Krün) — prisbelønt (ADAC/DCC/ECC) sivil familiecamping mellom Garmisch og Mittenwald. URL/GPS (47.4904, 11.2556) verifisert via Tavily/ACSI/camping-tennsee.de. Nesten ingen ekstra kjøretid: ankomst via Seefeld/Mittenwald gir Lago di Santa Croce→Krün 273 km / 3t 44min (12 km kortere enn Grainau), Krün→Bamberg 333 km / 4t 34min — totalt gjennomkjøring ~uendret. Aktiviteter justert til avstand (Zugspitzbahn ~18 km, Eibsee ~22 km, Höllentalklamm ~17 km); Mittenwald lagt til som nice-to-have. Ingen booking sendt ennå. | Claude |
 | 2026-06-20 | **Stopp 11 Zugspitze**: Edelweiss-alternativet forkastet (campingen ligger på en amerikansk militærbase og krever DoD-adgang). Byttet til **Camping Erlebnis Zugspitze** (Griesener Straße 2, 82491 Grainau) — sivil 3-stjerners familiecamping ved Loisach, rett ved Eibsee, Zugspitzbahn og Höllentalklamm. Søsterplass til den fulle Camping Resort Zugspitze, samme gate i Grainau. URL/GPS (47.4800, 11.0557) verifisert via Tavily/PiNCAMP/ACSI. Ingen ekstra kjøretid: Lago di Santa Croce→Grainau 285 km / 3t 54min, Grainau→Bamberg 323 km / 4t 25min (uendret). Ingen booking sendt ennå. | Claude |
+| 2026-06-20 | **Stopp 5 Saksisk Sveits**: Caravan Camping Sächsische Schweiz (Gohrisch) ga negativt svar (fullbooket) — byttet til **Campingplatz am Treidlerweg / Pension Bomätscher** (Am Alten Sägewerk 4, 01824 Königstein), direkte ved Elben på den gamle treidlerstien. **Booket og bekreftet** — bookingref. **OBP-AG-20260620145629**, plass «Erste Reihe», 9.–11. juli, 2 voksne + 1 barn, **betalt 155,60 € via PayPal** (inkl. frokost). Innsjekk-kode F6C354D1; plass ledig fra 11:00, utsjekk innen 10:30. URL/adresse/GPS (50.9253, 14.0932) verifisert via Tavily mot plassens nettside. Stoppet omdøpt Gohrisch→Königstein; markør flyttet ~3 km (kjøreetapper 253/299 km uendret, innenfor toleranse). Festung Königstein nå ~2 km (ruver rett over plassen); «oppvarmet basseng» fjernet (gjaldt Gohrisch-plassen). | Claude |
 | 2026-06-20 | **Stopp 11 Zugspitze**: campingplass byttet til **Alpen-Caravanpark Tennsee** (Am Tennsee 1, 82494 Krün, Bayern) — ledig plass funnet og booket. **Booket: Ja** — plass «1 Himmelreich», 21.–24. juli, 2 voksne + 1 barn (booking-bekreftelse mottatt på e-post 20.06.2026, emne «Eingang Ihrer Buchungsanfrage / Confirmation of your booking request»). URL og adresse verifisert via Tavily (camping-tennsee.de). Innsjekk/utsjekk verifisert mot plassens nettside (ankomst frem til 18:00, lunsjpause 12:30–14:30, utsjekk 08:00–12:00). Stoppet flyttet fra Lermoos (AT) til Krün (DE) — land AT→DE, GPS 47.4933, 11.2696. Kjøreetapper reverifisert (cross-check travelmath/bikemap/distance.to mot prosjektets OSRM-anker): Lago di Santa Croce→Krün **284 km / 3t 53min** (via Innsbruck→Seefeld→Mittenwald, ~19 km kortere enn Fernpass/Lermoos-ruten), Krün→Bamberg **324 km / 4t 26min**. Aktiviteter justert til Bayern-basen: Zugspitzbahn nå Bayerische fra Garmisch/Eibsee (~20 km), Neuschwanstein ~55 km, ny nice-to-have Mittenwald & Karwendel (~7 km) erstatter Tiroler Zugspitz Arena/Blindsee. | Claude |
 | 2026-06-20 | **Stopp 11 Zugspitze**: campingplass byttet fra Camping Resort Zugspitze (Grainau) — ikke ledig — til **Edelweiss Lodge & Resort – Campground (Vacation Village)** på Artillery Kaserne i Garmisch-Partenkirchen. URL/GPS (47.4842, 11.0592) verifisert via Tavily/Nominatim. Booking: forespørsel sendt, avventer svar. ⚠️ Krever gyldig DoD-adgangskort eller autorisert vert. Markør flyttet til Garmisch; kjøreetappe Lago di Santa Croce→Garmisch reverifisert via OSRM 285 km / 3t 54min (var 295 km/Grainau), Garmisch→Bamberg uendret 323 km. Aktiviteter justert (Eibsee nå ~12 km, Garmisch sentrum i gangavstand, Zugspitzbahn fra dalstasjon i Garmisch). | Claude |
 | 2026-06-20 | **Stopp 8 Camping Pivka Jama (Postojna)**: bookingstatus oppdatert til «forespørsel sendt på e-post – avventer svar». | Claude |

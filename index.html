@@ -1821,38 +1821,38 @@ function ferieApp() {
       },
       {
         id: 5,
-        name: 'Gohrisch (Saksisk Sveits)',
+        name: 'Königstein (Saksisk Sveits)',
         country: 'Tyskland',
         countryCode: 'DE',
-        lat: 50.9145,
-        lng: 14.1071,
+        lat: 50.9253,
+        lng: 14.0932,
         arrivalDate: '2026-07-09',
         departureDate: '2026-07-11',
         nights: 2,
         week: 28,
         camping: {
-          name: 'Caravan Camping Sächsische Schweiz',
-          address: 'Dorfplatz 181d, 01824 Kurort Gohrisch',
-          url: 'https://caravan-camping-saechsischeschweiz.de/en/',
-          booked: false,
-          bookingRef: 'Bestilt – avventer bekreftelse',
-          checkIn: '14:00',
-          checkOut: '11:00',
-          timesEstimated: true,
+          name: 'Campingplatz am Treidlerweg',
+          address: 'Am Alten Sägewerk 4, 01824 Königstein',
+          url: 'https://www.treidlercamping.de/',
+          booked: true,
+          bookingRef: 'OBP-AG-20260620145629 — plass «Erste Reihe», 9.–11. juli, betalt 155,60 € (PayPal). Innsjekk-kode: F6C354D1',
+          checkIn: '11:00',
+          checkOut: '10:30',
+          timesEstimated: false,
         },
         driveFromPrevious: {
-          km: 253, // verifisert (OSRM, eksakte campingkoordinater)
+          km: 253, // verifisert (OSRM) — Berlin → Saksisk Sveits; campingplass flyttet ~3 km til Königstein (innenfor toleranse)
           hours: '3t 28min',
-          route: 'Berlin → Gohrisch via A13/A17 sørøst (4 km fra Königstein)',
+          route: 'Berlin → A13/A17 sørøst → Pirna → Königstein (Treidlerweg, direkte ved Elben)',
         },
-        description: 'Familievennlig camping på et høydeplatå ved Gohrisch, midt i Saksisk Sveits nasjonalpark og bare 4 km fra Festung Königstein. Oppvarmet basseng på plassen og dramatiske sandsteinsformasjoner i alle retninger.',
+        description: 'Familievennlig campingplass direkte ved Elben på den gamle treidlerstien (Elberadweg) i Königstein, midt i Elbsandsteingebirge/Saksisk Sveits. Idyllisk beliggenhet med utsikt til Lilienstein og Festung Königstein, som ruver rett over plassen. Turstier og elvepromenade fra døra.',
         activities: [
-          { name: 'Festung Königstein', type: 'festning', priority: 'must-do', description: 'En av Europas største fjellfestninger, bare 4 km fra campingen. Kanoner, tunneler, dyp brønn og panoramautsikt over Elbedalen. Halv dag.', url: 'https://www.festung-koenigstein.de/', mapsQuery: 'Festung Königstein, 01824 Königstein, Deutschland' },
+          { name: 'Festung Königstein', type: 'festning', priority: 'must-do', description: 'En av Europas største fjellfestninger, som ruver rett over campingen (~2 km). Kanoner, tunneler, dyp brønn og panoramautsikt over Elbedalen. Halv dag.', url: 'https://www.festung-koenigstein.de/', mapsQuery: 'Festung Königstein, 01824 Königstein, Deutschland' },
           { name: 'Basteibroen (Basteibrücke)', type: 'natur', priority: 'must-do', description: 'Ikonisk steinbro 194 m over Elben. Kort sti fra parkering (15–20 min). Spektakulær utsikt. Gå tidlig for å unngå folkemengder.', url: 'https://www.saechsische-schweiz.de/ausflugsziele/bastei', mapsQuery: 'Bastei, 01824 Lohmen, Deutschland' },
           { name: 'Kirnitzschtalbahn', type: 'tog', priority: 'nice-to-have', description: 'Historisk sporvogn fra Bad Schandau til Lichtenhainer Wasserfall. William vil elske trikketuren!', url: 'https://www.rvsoe.de/verkehrsmittel/kirnitzschtalbahn', mapsQuery: 'Kirnitzschtalbahn, Bad Schandau, Deutschland' },
           { name: 'Amselsee i Kurort Rathen', type: 'natur', priority: 'nice-to-have', description: 'Rolig innsjø i en sandsteinkløft med robåtutleie — avslappende familieaktivitet mellom klippene. Kombineres lett med en tur til Bastei.', url: 'https://www.saechsische-schweiz.de/ausflugsziele/amselsee-kurort-rathen', mapsQuery: 'Amselsee, 01824 Kurort Rathen, Deutschland' },
         ],
-        tips: ['Gå til Bastei tidlig på morgenen for å unngå folkemengder', 'Oppvarmet basseng på campingen (åpent midt april–midt oktober)', 'Ingen Umweltzone i Gohrisch — Dresden nås med S-Bahn fra Königstein'],
+        tips: ['Gå til Bastei tidlig på morgenen for å unngå folkemengder', 'Innsjekk via terminal med kode F6C354D1; plass ledig fra kl. 11:00, utsjekk innen 10:30. Meld fra hvis ankomst etter kl. 18:00 (ellers kan plassen kanselleres), gebyr ved ankomst etter 20:00', 'Frokost er forhåndsbestilt (2 voksne + 1 barn) — serveres 08:00–10:00 på soltrassen', 'Ingen Umweltzone i Königstein — Dresden nås enkelt med S-Bahn (S1) fra Königstein stasjon'],
         imageUrl: '',
       },
       {
@@ -1877,9 +1877,9 @@ function ferieApp() {
           timesEstimated: false,
         },
         driveFromPrevious: {
-          km: 299, // verifisert (OSRM, eksakte campingkoordinater Gohrisch→Camping Paradijs)
+          km: 299, // verifisert (OSRM) — Saksisk Sveits → Camping Paradijs; campingplass flyttet ~3 km til Königstein (innenfor toleranse)
           hours: '4t 06min',
-          route: 'Gohrisch → Dresden → D8/E442 sørover → Praha-omkjøring → D3/E55 sør mot České Budějovice → Zlatá Koruna/Rájov',
+          route: 'Königstein → Dresden → D8/E442 sørover → Praha-omkjøring → D3/E55 sør mot České Budějovice → Zlatá Koruna/Rájov',
         },
         description: 'Eventyraktig middelalderby i Sør-Böhmen — UNESCO-verdensarv siden 1992. Vltava-elven svinger rundt den brosteinsbelagte gamlebyen, kronet av et enormt slott. Camping Paradijs er en rolig, familievennlig elvebreddcamping i Zlatá Koruna (~6 km fra byen) — elveplass A4 «u řeky» med strøm. Booket og bekreftet (VOU2321).',
         activities: [
