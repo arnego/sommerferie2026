@@ -539,6 +539,66 @@ tailwind.config = {
         <div class="px-5 py-2.5 bg-cream/50 text-xs text-muted">Husk å booke senest mai 2026 for julitoppen i Kroatia. Kroatiske kystplasser fylles raskt opp.</div>
       </div>
 
+      <!-- Aktiviteter å booke på forhånd -->
+      <div class="bg-white rounded-xl border border-sand/50 overflow-hidden">
+        <div class="px-5 py-4 border-b border-sand/50">
+          <h3 class="font-heading text-lg text-petrol">Aktiviteter å booke på forhånd</h3>
+          <p class="text-xs text-muted mt-0.5">
+            <span x-text="advanceBookings.length"></span>
+            <span> populære attraksjoner som anbefales (eller krever) booking online før avreise — juli er høysesong</span>
+          </p>
+        </div>
+        <div class="divide-y divide-sand/30">
+          <template x-for="b in advanceBookings" :key="b.stopId + '-' + b.activity">
+            <div class="px-5 py-4">
+              <div class="flex items-start justify-between gap-3 flex-wrap">
+                <div class="flex-1 min-w-0">
+                  <div class="flex items-center gap-2 flex-wrap mb-1">
+                    <h4 class="font-medium text-charcoal" x-text="b.activity"></h4>
+                    <a href="#" @click.prevent="openStop(b.stopId)"
+                       class="inline-flex items-center gap-1 text-xs px-2 py-0.5 rounded-full bg-petrol/10 text-petrol hover:bg-petrol/20 font-medium whitespace-nowrap">
+                      <span x-text="'Stopp ' + b.stopId + ': ' + (stopById(b.stopId)?.name || '')"></span>
+                      <span aria-hidden="true">→</span>
+                    </a>
+                  </div>
+                  <p class="text-sm text-charcoal/80 leading-snug" x-text="b.what"></p>
+                  <p class="text-xs text-muted mt-1.5 flex items-start gap-1.5">
+                    <span aria-hidden="true">💡</span>
+                    <span x-text="b.why"></span>
+                  </p>
+                </div>
+                <div class="flex flex-col items-end gap-1 shrink-0">
+                  <template x-if="b.bookUrl">
+                    <a :href="b.bookUrl" target="_blank" rel="noopener"
+                       class="inline-flex items-center gap-1 text-xs px-3 py-1.5 rounded-full bg-petrol text-white hover:bg-petrol/90 font-medium whitespace-nowrap">
+                      <span>Book online ↗</span>
+                    </a>
+                  </template>
+                  <template x-if="b.bookUrl">
+                    <span class="text-[11px] text-muted" x-text="b.bookLabel"></span>
+                  </template>
+                </div>
+              </div>
+              <div class="mt-2.5 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-muted">
+                <template x-if="b.phone">
+                  <span class="flex items-center gap-1">
+                    <span aria-hidden="true">📞</span>
+                    <a :href="'tel:' + b.phone.replace(/\s/g, '')" class="hover:text-petrol hover:underline" x-text="b.phone"></a>
+                  </span>
+                </template>
+                <template x-if="b.email">
+                  <span class="flex items-center gap-1">
+                    <span aria-hidden="true">✉️</span>
+                    <a :href="'mailto:' + b.email" class="hover:text-petrol hover:underline" x-text="b.email"></a>
+                  </span>
+                </template>
+              </div>
+            </div>
+          </template>
+        </div>
+        <div class="px-5 py-2.5 bg-cream/50 text-xs text-muted">Klikk på stopp-merket for å hoppe til reiserute-kortet. Telefon/e-post er oppgitt som alternativ dersom online booking ikke passer.</div>
+      </div>
+
       </div>
     </div>
   </section>
@@ -1246,6 +1306,75 @@ function ferieApp() {
     ],
     get budgetTotal() {
       return this.budget.reduce((sum, item) => sum + item.amount, 0);
+    },
+
+    // Aktiviteter som anbefales/krever booking på forhånd.
+    // bookUrl = side for online booking; hvis online booking ikke finnes, bruk phone/email i stedet.
+    advanceBookings: [
+      {
+        stopId: 8,
+        activity: 'Postojnahulen (Postojnska jama)',
+        what: 'Europas mest besøkte hule — 5 km guidet tur med elektrisk tog gjennom drypstein-katedraler. Velg et tidlig morgenslot 15. juli så dere rekker videre til Rovinj samme dag.',
+        why: 'Høysesong i juli — kjøp helst minst én dag før besøket',
+        bookUrl: 'https://www.postojnska-jama.eu/en/tickets',
+        bookLabel: 'postojnska-jama.eu',
+        phone: '+386 5 700 01 00',
+        email: 'info@postojnska-jama.eu',
+      },
+      {
+        stopId: 9,
+        activity: 'Dinopark Funtana',
+        what: '80 bevegelige dinosaurer i karst-skog, med Dino Dome live-show, Dragon Coaster, trampoliner og mini-zoo. Heldagsopplevelse ~30 km nord for Rovinj.',
+        why: 'Kjøp billett online på forhånd i høysesong',
+        bookUrl: 'https://dinopark-funtana.com/official-dinopark-funtana-tickets',
+        bookLabel: 'dinopark-funtana.com',
+        phone: '+385 52 445 327',
+        email: 'info@dinopark-funtana.com',
+      },
+      {
+        stopId: 11,
+        activity: 'Bayerische Zugspitzbahn',
+        what: 'Tannhjuls- og seilbane fra Garmisch/Eibsee opp til toppen av Zugspitze (2 962 m), Tysklands høyeste fjell, med spektakulær utsikt over Bayern og Tirol.',
+        why: 'Juli er høysesong — book tidsluke online på forhånd',
+        bookUrl: 'https://zugspitze.de/en/Shop',
+        bookLabel: 'zugspitze.de',
+        phone: '+49 8821 7970',
+        email: 'info@zugspitze.de',
+      },
+      {
+        stopId: 11,
+        activity: 'Neuschwanstein Castle',
+        what: 'Kong Ludvig IIs eventyrslott fra 1886 — inspirasjon til Disneyland. Besøk er kun mulig som guidet omvisning med fast klokkeslett, ~55 km fra campingen.',
+        why: 'Obligatorisk forhåndsbooking — omvisninger selges ofte ut i god tid',
+        bookUrl: 'https://www.hohenschwangau.de/en/tours-tickets/official-tickets-neuschwanstein-hohenschwangau',
+        bookLabel: 'hohenschwangau.de (offisiell billettshop)',
+        phone: '+49 8362 930830',
+        email: 'info@hohenschwangau.de',
+      },
+      {
+        stopId: 14,
+        activity: 'Miniatur Wunderland',
+        what: 'Verdens største modelljernbane — 16 000 m+ spor og over 1 500 tog gjennom detaljerte miniatyrverdener. Billetter er knyttet til en tidsluke for inngang.',
+        why: 'Svært populær i juli — book tidsluke online for å unngå utsolgt/kø',
+        bookUrl: 'https://www.miniatur-wunderland.com/visiting/plan-your-visit/tickets',
+        bookLabel: 'miniatur-wunderland.com',
+        phone: '+49 40 3006800',
+        email: 'info@miniatur-wunderland.de',
+      },
+      {
+        stopId: 15,
+        activity: 'Legoland® Billund',
+        what: 'Verdens første Legoland (1968) med 8 tematiske verdener, rides og Miniland. Heldagsopplevelse for hele familien.',
+        why: 'Spar tid og penger — online fra 349 DKK mot 519 DKK ved inngangen',
+        bookUrl: 'https://www.legoland.dk/billetter-saesonpas',
+        bookLabel: 'legoland.dk',
+        phone: '+45 75 33 13 33',
+        email: 'kundeservice@legoland.dk',
+      },
+    ],
+
+    stopById(id) {
+      return this.stops.find(s => s.id === id);
     },
 
     // Beregnet
