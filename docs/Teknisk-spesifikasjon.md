@@ -69,10 +69,12 @@ Referanseinformasjon som er nyttig underveis:
 ### 2.6 Værvarsel
 Værvarsel for hvert overnattingssted, hentet ved sideåpning fra **Open-Meteo** (`https://api.open-meteo.com/v1/forecast`) — gratis, krever ingen API-nøkkel, full CORS-støtte og dekker hele ruten (DK/DE/NO).
 
+**Temperatur:** Temperatur vises sammen med værsymbolet overalt, hentet fra samme Open-Meteo-kall (`hourly=...,temperature_2m` + `daily=weather_code,temperature_2m_max,temperature_2m_min`). Temperatur vises i hele grader med `°C` etter verdien, og utelates diskret når den mangler.
+
 **Tre visningssteder:**
-1. **Kart-popup** — når man klikker en stopp-markør vises en kompakt rad med ett værsymbol per overnattingsdag (basert på prognose kl. 12:00).
+1. **Kart-popup** — når man klikker en stopp-markør vises en kompakt rad med ett dagssammendrag per overnattingsdag: symbol fra Open-Meteos daglige «mest signifikante» værkode + dagens maks/min-temperatur (`maks°/min°C`), der maks vises i rød (`#C0392B`) og min i petrol (`#1B4F72`).
 2. **Reiseplan, kollapset bar** — samme kompakte rad under datolinjen i den klikkbare overskriften.
-3. **Reiseplan, utvidet detaljvisning** — egen «Værvarsel»-seksjon med tabell: én rad per overnattingsdag, kolonner for dato/ukedag og symbol for kl. 09 / 12 / 15 / 18 / 21.
+3. **Reiseplan, utvidet detaljvisning** — egen «Værvarsel»-seksjon med tabell: én rad per overnattingsdag, kolonner for dato/ukedag og for kl. 09 / 12 / 15 / 18 / 21 — hver celle viser timesymbol med timestemperatur stablet under.
 
 **Manglende data:** Hvis forecast er utilgjengelig for et tidspunkt (utenfor prognosehorisont, nettverksfeil osv.), vises et diskret «ikke tilgjengelig»-symbol (kort vannrett strek). Den kompakte raden i popup og kollapset bar skjules helt når ingen data er tilgjengelig for stoppet (unngå støy av kun streker); tabellen vises alltid og fyller cellene med streker der data mangler.
 
@@ -270,6 +272,7 @@ Her kan vi legge idéer som kan vurderes senere, men som foreløpig ikke skal in
 
 | Dato | Endring | Av |
 | --- | --- | --- |
+| 2026-06-23 | §2.6 Værvarsel: temperatur vises nå sammen med værsymbolene overalt, fra samme Open-Meteo-kall. Stripene (kart-popup + kollapset bar) bruker daglig totalvurdering (`daily.weather_code` + maks/min-temp) i stedet for kl. 12-symbol, vist som `maks°/min°C` med rød maks (`#C0392B`, ~5:1 kontrast) og blå/petrol min (`#1B4F72`, WCAG AA). Den utvidede tabellen viser timestemperatur stablet under hvert timesymbol. Ny `temps`-map og `daily`-objekt per dag i datamodellen; cache-nøkkel bumpet til `sommerferie2026-weather-v2`. Nye hjelpere `getHourTemp`, `getDaily`, `formatTemp`, `formatTempRange`, `weatherCellHtml`; mock-data utvidet med temperatur og dagssammendrag. | Claude |
 | 2026-05-11 | Pakkelister flyttet til siste hovedseksjon (etter Budsjett & Praktisk) i begge moduser. Tab-raden vises alltid — i underveis-modus med én synlig tab er etiketten endret til «Daglig sjekkliste» som fungerer som overskrift. Hero-tittel forkortet til «Fra Kongsberg til Kroatia» (uten «og tilbake») og brytes ikke lenger på flere linjer — `clamp(1.4rem, 7vw, 3.75rem)` + `whitespace-nowrap` gir én linje fra ~340 px viewport opp til 1280+ px. | Claude |
 | 2026-05-11 | Pakkelister filtreres nå på modus: Planlegging viser Pakkeliste/Campingvogn/For avreise; Underveis viser kun Daglig. Tab-raden skjules når kun én liste er synlig — i underveis-modus vises «Daglig sjekkliste» som h3-overskrift istedenfor en enslig tab. `syncActiveChecklist()` kjøres ved oppstart og via `$watch('mode')` for å auto-bytte aktiv tab når modus endres. Fjernet overflødig «SOMMERFERIE 2026»-pill over hero-tittelen (duplikat av logoen i navbaren). | Claude |
 | 2026-05-11 | Ny hovedseksjon «Booking & Planlegging» — kun synlig i planleggingsmodus. Bookingstatus-tabellen (overnattinger og ferger) er flyttet ut av Budsjett & Praktisk og vises alltid utvidet i den nye seksjonen (ikke i accordion). Istria-alternativene flyttet til samme seksjon som accordion med ny tittel «Planlegging: Istria — 10 familievennlige alternativer». Navbar fikk en ny lenke mellom Pakkelister og Budsjett & Praktisk som filtreres bort i underveis-modus. Filteret styres av `planleggingOnly`-flagg på sections-array og en `visibleSections`-getter som brukes i både desktop- og mobil-meny. | Claude |

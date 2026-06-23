@@ -438,7 +438,7 @@ tailwind.config = {
                           <tr class="border-b border-sand/30 last:border-b-0">
                             <td class="py-1.5 px-2 text-charcoal/80 whitespace-nowrap" x-text="formatDateWithWeekday(date)"></td>
                             <template x-for="h in weatherHours" :key="h">
-                              <td class="py-1 px-1 text-center" x-html="weatherIconSvg(getHourCode(stop.id, date, h), 26)"></td>
+                              <td class="py-1 px-1 text-center" x-html="weatherCellHtml(stop.id, date, h)"></td>
                             </template>
                           </tr>
                         </template>
@@ -1347,7 +1347,7 @@ function ferieApp() {
     weather: {},
     weatherMock: false,
     weatherTtlMs: 60 * 60 * 1000,
-    weatherStorageKey: 'sommerferie2026-weather',
+    weatherStorageKey: 'sommerferie2026-weather-v2',
     weatherHours: ['09', '12', '15', '18', '21'],
 
     datesForStop(stop) {
@@ -1442,16 +1442,64 @@ function ferieApp() {
       return this.getHourCode(stopId, dateStr, '12');
     },
 
+    getHourTemp(stopId, dateStr, hour) {
+      const w = this.weather[stopId];
+      if (!w || !w.days) return null;
+      const day = w.days.find(d => d.date === dateStr);
+      if (!day || !day.temps) return null;
+      const v = day.temps[hour];
+      return (v === null || v === undefined) ? null : v;
+    },
+
+    getDaily(stopId, dateStr) {
+      const w = this.weather[stopId];
+      if (!w || !w.days) return null;
+      const day = w.days.find(d => d.date === dateStr);
+      return (day && day.daily) ? day.daily : null;
+    },
+
+    formatTemp(t) {
+      return (t === null || t === undefined || Number.isNaN(t)) ? '' : `${Math.round(t)}°C`;
+    },
+
+    formatTempRange(tMax, tMin) {
+      const r = v => (v === null || v === undefined || Number.isNaN(v)) ? null : Math.round(v);
+      const hi = r(tMax), lo = r(tMin);
+      if (hi === null && lo === null) return '';
+      const max = hi !== null ? `<span style="color:#C0392B;">${hi}°</span>` : '';
+      const min = lo !== null ? `<span style="color:#1B4F72;">${lo}°C</span>` : '';
+      if (hi !== null && lo !== null) return `${max}<span style="color:#888;">/</span>${min}`;
+      // Bare én verdi tilgjengelig: vis den med °C-suffiks i sin farge
+      return hi !== null ? `<span style="color:#C0392B;">${hi}°C</span>` : min;
+    },
+
     dayStripHtml(stop, px) {
       const dates = this.datesForStop(stop);
       if (dates.length === 0) return '';
-      return dates.map(d => this.weatherIconSvg(this.getMiddayCode(stop.id, d), px || 18)).join('');
+      return dates.map(d => {
+        const day = this.getDaily(stop.id, d);
+        const code = day ? day.code : null;
+        const icon = this.weatherIconSvg(code, px || 18);
+        const range = day ? this.formatTempRange(day.tMax, day.tMin) : ''; // allerede farget HTML
+        const tempHtml = range ? `<span style="font-size:11px;white-space:nowrap;">${range}</span>` : '';
+        return `<span style="display:inline-flex;align-items:center;gap:3px;">${icon}${tempHtml}</span>`;
+      }).join('');
+    },
+
+    weatherCellHtml(stopId, date, hour) {
+      const icon = this.weatherIconSvg(this.getHourCode(stopId, date, hour), 26);
+      const temp = this.formatTemp(this.getHourTemp(stopId, date, hour));
+      const tempHtml = temp ? `<div class="text-[10px] text-charcoal/60 leading-none mt-0.5">${temp}</div>` : '';
+      return `<div class="flex flex-col items-center">${icon}${tempHtml}</div>`;
     },
 
     hasAnyForecast(stopId) {
       const w = this.weather[stopId];
       if (!w || !w.days || w.days.length === 0) return false;
-      return w.days.some(day => Object.values(day.hours).some(v => v !== null && v !== undefined));
+      return w.days.some(day =>
+        Object.values(day.hours).some(v => v !== null && v !== undefined)
+        || (day.daily && day.daily.code !== null && day.daily.code !== undefined)
+      );
     },
 
     buildMockWeather() {
@@ -1467,6 +1515,18 @@ function ferieApp() {
         [0, 1, 2, 3, 3],          // Solrik morgen, skyet kveld
         [1, 0, 0, 1, 2],          // Sol hele dagen
       ];
+      // Parallelle timestemperaturer (°C) – samme rekkefølge som samplePatterns
+      const tempPatterns = [
+        [14, 19, 22, 20, 16],
+        [11, 13, 12, 10, 9],
+        [13, 17, 19, 18, 15],
+        [9, 12, 14, 12, 10],
+        [16, 21, 19, 16, 14],
+        [null, 1, 0, null, null], // Snø + manglende temp (n/a)
+        [12, 18, 23, 19, 15],
+        [17, 24, 26, 23, 19],
+      ];
+      const dailyCode = { '0':0,'1':1,'2':2,'3':3,'45':45,'51':51,'61':61,'63':63,'71':71,'73':73,'80':80,'95':95 };
       const out = {};
       this.stops.forEach((stop, idx) => {
         if (stop.isHome) return;
@@ -1474,15 +1534,25 @@ function ferieApp() {
         out[stop.id] = {
           fetchedAt: Date.now(),
           days: dates.map((date, di) => {
-            const pattern = samplePatterns[(idx + di) % samplePatterns.length];
+            const pi = (idx + di) % samplePatterns.length;
+            const pattern = samplePatterns[pi];
+            const tpattern = tempPatterns[pi];
+            // Daglig totalvurdering: mest signifikant (høyeste) værkode + maks/min av timestemp
+            const codeVals = pattern.filter(v => v !== null && v !== undefined);
+            const tVals = tpattern.filter(v => v !== null && v !== undefined);
+            const dCode = codeVals.length ? dailyCode[String(Math.max(...codeVals))] ?? Math.max(...codeVals) : null;
             return {
               date,
               hours: {
-                '09': pattern[0],
-                '12': pattern[1],
-                '15': pattern[2],
-                '18': pattern[3],
-                '21': pattern[4],
+                '09': pattern[0], '12': pattern[1], '15': pattern[2], '18': pattern[3], '21': pattern[4],
+              },
+              temps: {
+                '09': tpattern[0], '12': tpattern[1], '15': tpattern[2], '18': tpattern[3], '21': tpattern[4],
+              },
+              daily: {
+                code: dCode,
+                tMax: tVals.length ? Math.max(...tVals) : null,
+                tMin: tVals.length ? Math.min(...tVals) : null,
               },
             };
           }),
@@ -1530,7 +1600,8 @@ function ferieApp() {
       const url = new URL('https://api.open-meteo.com/v1/forecast');
       url.searchParams.set('latitude', stop.lat);
       url.searchParams.set('longitude', stop.lng);
-      url.searchParams.set('hourly', 'weathercode');
+      url.searchParams.set('hourly', 'weathercode,temperature_2m');
+      url.searchParams.set('daily', 'weather_code,temperature_2m_max,temperature_2m_min');
       url.searchParams.set('timezone', 'auto');
       url.searchParams.set('start_date', startDate);
       url.searchParams.set('end_date', endDate);
@@ -1540,16 +1611,37 @@ function ferieApp() {
       const json = await res.json();
       const times = (json.hourly && json.hourly.time) || [];
       const codes = (json.hourly && json.hourly.weathercode) || [];
+      const temps = (json.hourly && json.hourly.temperature_2m) || [];
+
+      // Daglig totalvurdering (mest signifikant værkode + maks/min-temp)
+      const dailyByDate = {};
+      const dTimes = (json.daily && json.daily.time) || [];
+      const dCodes = (json.daily && json.daily.weather_code) || [];
+      const dMax = (json.daily && json.daily.temperature_2m_max) || [];
+      const dMin = (json.daily && json.daily.temperature_2m_min) || [];
+      dTimes.forEach((t, i) => {
+        dailyByDate[t] = {
+          code: dCodes[i] === undefined ? null : dCodes[i],
+          tMax: dMax[i] === undefined ? null : dMax[i],
+          tMin: dMin[i] === undefined ? null : dMin[i],
+        };
+      });
 
       const byDate = {};
       dates.forEach(d => {
-        byDate[d] = { date: d, hours: { '09': null, '12': null, '15': null, '18': null, '21': null } };
+        byDate[d] = {
+          date: d,
+          hours: { '09': null, '12': null, '15': null, '18': null, '21': null },
+          temps: { '09': null, '12': null, '15': null, '18': null, '21': null },
+          daily: dailyByDate[d] || { code: null, tMax: null, tMin: null },
+        };
       });
       times.forEach((t, i) => {
         const date = t.slice(0, 10);
         const hour = t.slice(11, 13);
         if (byDate[date] && this.weatherHours.includes(hour)) {
           byDate[date].hours[hour] = codes[i];
+          byDate[date].temps[hour] = (temps[i] === undefined ? null : temps[i]);
         }
       });
       return { fetchedAt: Date.now(), days: dates.map(d => byDate[d]) };
