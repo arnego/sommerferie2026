@@ -302,14 +302,6 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 - **VIKTIG:** reservert plass holdes kun til kl. 20:00 — planlegg ankomst før det. Lekeplass og basseng i nærheten — fin avkjøling for William
 - Neste dag: ~246 km til Postojna (~3 t 22 min) via A9 → Spielfeld-grensa → Maribor → Ljubljana → E61 — grei kjøredag inn i Slovenia
 
-**Vurderte alternativer (alle tar imot campingvogn, ingen minstenetter, ≤15 min fra A9):**
-
-| Campingplass | Beliggenhet | Dag 1 (CK→) | Dag 2 (→Postojna) | Avvik 50/50 | URL |
-|--------------|-------------|-------------|-------------------|-------------|-----|
-| **Reisemobil-Stellplatz / Camping Central Graz** *(valgt)* | Straßgang, Graz | 312 km / 4 t 16 min | 246 km / 3 t 22 min | ±27 min | https://www.reisemobilstellplatz-graz.at |
-| Schwarzlsee Camping | Premstätten, sør for Graz | 318 km / 4 t 22 min | 238 km / 3 t 16 min | ±33 min | https://www.schwarzlsee.at/camping |
-| Camp Sulmsee | Leibnitz/Wildon | 345 km / 4 t 44 min | 220 km / 3 t 01 min | ±52 min | https://www.sulmsee.camp |
-
 ---
 
 ### Stopp 8: Postojna, Slovenia (1 natt: 14.–15. juli)
@@ -470,43 +462,7 @@ Hjemreisen inkluderer opplevelsesstoppene Zugspitze, Braunlage (Harz), Hamburg o
 
 ---
 
-## 4. Foreslåtte campingplasser i Kroatia — 10 alternativer
-
-Disse 10 campingplassene dekker ulike reisestiler langs hele den kroatiske ruten vår. De fire vi har valgt for hoved-ruten er markert med ★. De resterende er gode alternativer ved endringer i ruten.
-
-### Naturopplevelser
-
-| # | Navn | Beliggenhet | Hvorfor spesiell | Nettside |
-|---|------|-------------|-----------------|---------|
-| 1 ★ | **Camp Korana** | Slunj, 6 km fra Plitvice inngang 1 | I elvegorgen langs Korana-elva. Stille, autentisk og vakker. 35 hektar bøkeskog. Drevet av nasjonalparken. | https://np-plitvicka-jezera.hr/en/plan-your-visit/hotels-and-camps/camp-korana/ |
-| 2 | **Camping Plitvice** | Mukinje, 3 km fra Plitvice | 5-stjerns resort med 2 bassenger inkl. barnerutsjebane, kajakkutleie, e-sykkelutleie, restaturant. Nærmest parkinngangen. | https://campingplitvice.hr/ |
-| 3 ★ | **Camp Krka** | Lozovac, 1 km fra Krka NP inngang | Familieid skogsidyll. Ferskt brød daglig, basseng, moderne sanitær. Beste base for Krka-fossene og Šibenik. | https://www.camp-krka.hr/ |
-| 4 | **Camping Biokovo** | Zagvozd, 10 min fra Makarska | Fjellside-camping under Biokovo-toppene. Kombinerer eventyrlig fjellvandring i NP med Adriaterstrand 10 min unna. | https://www.campingbiokovo.hr/ |
-
-### Strandliv
-
-| # | Navn | Beliggenhet | Hvorfor spesiell | Nettside |
-|---|------|-------------|-----------------|---------|
-| 5 ★ | **Maistra Vestar Campsite** *(valgt, 🔒 booket PH28273444)* | Rovinj, Istria | 5-stjerners Maistra-camping ~3 km fra Rovinj gamlebyen. Adriaterhav-utsikt, Premium-plasser. 15–20 jul, 5n. | https://www.maistra.com/properties/campsite-vestar/ |
-| 6 | **Camping Bi Village** | Fažana, nær Pula | Sandbukt med krystallklart vann og utsikt til Brijuni-øyene. Nær Pula amfiteater. Barnevennlig resort. | https://www.bivillage.com/ |
-| 7 | **Autocamp Straško** | Novalja, Pag-øya | En av Kroatias vakreste sandstrender (Zrće-stranden). Tilgjengelig via Paški most-broen — ingen ferge nødvendig. | https://www.zrce.eu/camping/ |
-
-### Kultur og by
-
-| # | Navn | Beliggenhet | Hvorfor spesiell | Nettside |
-|---|------|-------------|-----------------|---------|
-| 8 | **Arena Camping Stoja** | Stoja-halvøya, Pula | Adriater-klipper 3 km fra Pulas UNESCO-amfiteater. Dykking og vannski tilbys. Dramatisk naturomgivelse. | https://www.arenacollection.com/en/destinations/pula/campsites/arena-stoja-campsite |
-| 9 ★ | **Amadria Park Camping Trogir** | Seget Vranjica, 5 km fra Trogir | Perfekt base for Trogir UNESCO + Split UNESCO dagsturer. 500 m strand, miniklub for barn, restaurant. | https://www.amadriapark.com/trogir/camping/ |
-
-### Kombinert — natur, strand og kultur
-
-| # | Navn | Beliggenhet | Hvorfor spesiell | Nettside |
-|---|------|-------------|-----------------|---------|
-| 10 | **Camping Park Soline** | Biograd na Moru, mellom Zadar og Šibenik | Furuskog + naturlig strandlagune + pittoresk dalmatinsk kystby. Ideell base for dagsturer til Kornati nasjonalpark (89 øyer). | https://www.camping-biograd.com/en/home/ |
-
----
-
-### Praktisk info for Kroatia-reisen
+## 4. Praktisk info (vignetter, valuta og fartsgrenser)
 
 **Vignetter og bompenger:**
 - **Østerrike:** Motorvei-vignett kreves for hvert kjøretøy separat (bil + campingvogn regnes individuelt). 10-dagersvignett ~9,90 EUR. Kjøpes ved grenseovergangen eller på https://www.asfinag.at/
@@ -543,6 +499,7 @@ Disse 10 campingplassene dekker ulike reisestiler langs hele den kroatiske ruten
 
 | Dato | Endring | Av |
 | --- | --- | --- |
+| 2026-06-25 | **Dok-opprydding (ikke-valgte campingplasser)**: (1) Stopp 7 — fjernet «Vurderte alternativer»-tabellen (Graz/Schwarzlsee/Camp Sulmsee) siden Graz er booket og bekreftet. (2) §4 «Foreslåtte campingplasser i Kroatia — 10 alternativer» — fjernet hele campingplasslisten; 9 av 10 hørte til den forkastede lengre Kroatia-ruten (Plitvice/Krka/Split/Trogir/Pula osv.), og Rovinj er allerede detaljert i eget stoppavsnitt. Beholdt den praktiske infoen (vignetter, valuta, fartsgrenser), nå omdøpt til §4 «Praktisk info». | Claude |
 | 2026-06-25 | **Stopp 7 Graz booket**: Reisemobil-Stellplatz / Camping Central Graz bekreftet via Reservia — ref. **D9590A9F** (FTG und PICAD Graz GnbR). Comfort Caravan Pitch, 13.–14. juli, 1 natt, 1 plass. Reservasjonsgebyr **7 € kontant på stedet**, reg.nr. RA43955. NB: reservert plass holdes kun til **kl. 20:00** — ankomst før det. Bookingstatus Nei → Ja; innsjekk-/tipstekster oppdatert. | Claude |
 | 2026-06-25 | **Stopp 7 byttet: Leibnitz → Graz**: Städtisches Bad & Camping Leibnitz svarte ikke på e-post og hadde ingen ledige plasser — erstattet med **Reisemobil-Stellplatz / Camping Central Graz** (Martinhofstraße 3, 8054 Graz/Straßgang, GPS 47.0244/15.3972). Tar imot campingvogn (~25 €/døgn), lekeplass/basseng i nærheten, Stellplass åpen hele året (ingen bookingavhengighet). Best balanserte alternativ langs A9-korridoren: dag 1 **Český Krumlov → Graz 312 km / 4 t 16 min**, dag 2 **Graz → Postojna 246 km / 3 t 22 min** (avvik ±27 min fra 50/50, mot ±52 min for Leibnitz). Caravan-rute bekreftet via web (A9 Pyhrn er hovedkorridoren mot Slovenia). Aktiviteter byttet til Graz: Schlossberg/Uhrturm/Schlossbergrutsche (must-do), Graz gamleby UNESCO + Schloss Eggenberg (nice-to-have). Vurderte også Schwarzlsee Camping (±33 min) og Camp Sulmsee (±52 min). Avstander OSRM-verifisert, URL-er/GPS verifisert via Tavily/Nominatim. Oppdatert: stopptabell, totaler, §2-note, kjøreetapper, rutenote, stopp 6-tips og stopp 8-etappe. Ikke booket ennå. | Claude |
 | 2026-06-25 | **Stopp 13 Rübeland-lenke rettet + Harzdrenalin lagt til**: «Rübeland dryppsteinhuler» pekte feilaktig til harzdrenalin.de — rettet til den offisielle hulesiden **harzer-hoehlen.de** (Baumannshöhle/Hermannshöhle, verifisert via Tavily), avstand justert til ~23 km (OSRM). **harzdrenalin.de** lagt til som eget nice-to-have: eventyrareal ved Rappbodetalsperren (~26 km) med TITAN RT-gangbro, Megazipline, Gigaswing, 5D-kino m.m. | Claude |
