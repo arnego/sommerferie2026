@@ -273,7 +273,7 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 
 ### Stopp 7: Graz, Østerrike (1 natt transit: 13.–14. juli)
 
-> **Merk:** Erstatter tidligere planlagte Leibnitz. Städtisches Bad & Camping Leibnitz svarte ikke på e-post og viste ingen ledige plasser i bookingsystemet. Graz er valgt som primæralternativ — bedre balansert kjøring og en plass som er åpen hele året (ingen bookingavhengighet).
+> **Merk:** Erstatter tidligere planlagte Leibnitz. Städtisches Bad & Camping Leibnitz svarte ikke på e-post og viste ingen ledige plasser i bookingsystemet. Graz er valgt — bedre balansert kjøring og en plass som er åpen hele året. **Booket og bekreftet 24.06.2026** (Reservia, ref. D9590A9F).
 
 **Kjøring:** Český Krumlov → Graz, 312 km, 4 t 16 min via České Budějovice → Linz (A7) → A9 Pyhrn (Bosruck-/Gleinalmtunnel) → Graz Webling/Straßgang. (80 km/t med campingvogn.) (verifisert, OSRM)
 
@@ -283,9 +283,9 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 - GPS: 47.0244, 15.3972
 - Telefon: +43 676 3785102
 - Fasiliteter: Bynær plass ved skogkanten i Straßgang, ~5 min fra A9 (avkjørsel Webling). Tar imot campingvogn (~25 €/døgn, uten fortelt), strøm, moderne sanitæranlegg, vaskemaskin/tørketrommel, Wi-Fi. Lekeplass og utendørsbasseng i nærheten, busforbindelse inn til gamlebyen. Stellplassdelen åpen hele året (24/7); campingdelen åpen 25. mars–31. oktober.
-- **Booket: Nei — foreslått alternativ, ikke booket ennå**
-- Bookingref: —
-- Innsjekk: 14:00 · Utsjekk: 12:00 (ca. — verifisér ved booking)
+- **Booket: Ja — bekreftet 24.06.2026** (Reservia / FTG und PICAD Graz GnbR)
+- Bookingref: **D9590A9F** — Comfort Caravan Pitch, 13.–14. juli, 1 natt, 1 plass. Reservasjonsgebyr **7 € betales kontant på stedet**. Reg.nr. RA43955. Ved tidlig avreise belastes 15 €/dag for ubrukte døgn.
+- Innsjekk: **før kl. 20:00** (reservert plass holdes kun til kl. 20:00) · Utsjekk: 12:00 (ca.)
 - Balanse: Dag 1 ~312 km / 4 t 16 min, dag 2 ~246 km / 3 t 22 min — avvik kun ±27 min fra 50/50-deling (godt innenfor ±1 t).
 
 **Aktiviteter:**
@@ -298,8 +298,8 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 
 **Tips:**
 - **Østerriksk motorvei-vignett** kreves (~€12,40 per kjøretøy, 10 dager) — kjøp online på asfinag.at eller ved grensen. A9 Pyhrn har i tillegg bompliktige tunneler (Bosruck + Gleinalm)
-- Foreslått alternativ til Leibnitz. Reisemobil-Stellplatz Graz er åpen hele året; reserver gjerne ~3 virkedager før via reisemobilstellplatz-graz.at, men plassen er sjelden full
-- Campingvogn tas imot (~25 €/døgn, uten fortelt). Lekeplass og basseng i nærheten — fin avkjøling for William
+- **Booket og bekreftet** (Reservia, ref. D9590A9F) — Comfort Caravan Pitch, 1 natt. Reservasjonsgebyr 7 € betales kontant på stedet
+- **VIKTIG:** reservert plass holdes kun til kl. 20:00 — planlegg ankomst før det. Lekeplass og basseng i nærheten — fin avkjøling for William
 - Neste dag: ~246 km til Postojna (~3 t 22 min) via A9 → Spielfeld-grensa → Maribor → Ljubljana → E61 — grei kjøredag inn i Slovenia
 
 **Vurderte alternativer (alle tar imot campingvogn, ingen minstenetter, ≤15 min fra A9):**
@@ -543,6 +543,7 @@ Disse 10 campingplassene dekker ulike reisestiler langs hele den kroatiske ruten
 
 | Dato | Endring | Av |
 | --- | --- | --- |
+| 2026-06-25 | **Stopp 7 Graz booket**: Reisemobil-Stellplatz / Camping Central Graz bekreftet via Reservia — ref. **D9590A9F** (FTG und PICAD Graz GnbR). Comfort Caravan Pitch, 13.–14. juli, 1 natt, 1 plass. Reservasjonsgebyr **7 € kontant på stedet**, reg.nr. RA43955. NB: reservert plass holdes kun til **kl. 20:00** — ankomst før det. Bookingstatus Nei → Ja; innsjekk-/tipstekster oppdatert. | Claude |
 | 2026-06-25 | **Stopp 7 byttet: Leibnitz → Graz**: Städtisches Bad & Camping Leibnitz svarte ikke på e-post og hadde ingen ledige plasser — erstattet med **Reisemobil-Stellplatz / Camping Central Graz** (Martinhofstraße 3, 8054 Graz/Straßgang, GPS 47.0244/15.3972). Tar imot campingvogn (~25 €/døgn), lekeplass/basseng i nærheten, Stellplass åpen hele året (ingen bookingavhengighet). Best balanserte alternativ langs A9-korridoren: dag 1 **Český Krumlov → Graz 312 km / 4 t 16 min**, dag 2 **Graz → Postojna 246 km / 3 t 22 min** (avvik ±27 min fra 50/50, mot ±52 min for Leibnitz). Caravan-rute bekreftet via web (A9 Pyhrn er hovedkorridoren mot Slovenia). Aktiviteter byttet til Graz: Schlossberg/Uhrturm/Schlossbergrutsche (must-do), Graz gamleby UNESCO + Schloss Eggenberg (nice-to-have). Vurderte også Schwarzlsee Camping (±33 min) og Camp Sulmsee (±52 min). Avstander OSRM-verifisert, URL-er/GPS verifisert via Tavily/Nominatim. Oppdatert: stopptabell, totaler, §2-note, kjøreetapper, rutenote, stopp 6-tips og stopp 8-etappe. Ikke booket ennå. | Claude |
 | 2026-06-25 | **Stopp 13 Rübeland-lenke rettet + Harzdrenalin lagt til**: «Rübeland dryppsteinhuler» pekte feilaktig til harzdrenalin.de — rettet til den offisielle hulesiden **harzer-hoehlen.de** (Baumannshöhle/Hermannshöhle, verifisert via Tavily), avstand justert til ~23 km (OSRM). **harzdrenalin.de** lagt til som eget nice-to-have: eventyrareal ved Rappbodetalsperren (~26 km) med TITAN RT-gangbro, Megazipline, Gigaswing, 5D-kino m.m. | Claude |
 | 2026-06-25 | **Stopp 13 Braunlage booket**: Camping- und Wohnmobilstellplatz Braunlage bekreftet — bookingref. **OBP-AG-20260625005043**, 2 netter (26.–28. juli), pitch inkl. 2 personer + barn 1–5 år + kurtaks, totalt **84,70 €**, ingen depositum (betales ved avreise), gratis avbestilling inntil 14 dager før. Bookingstatus Nei → Ja. Aktiviteter omprioritert: **Harzer Schmalspurbahn (damptog)** nice-to-have → **must-do**, **Naturmythenpfad** must-do → nice-to-have. Ny nice-to-have lagt til: **Sommerrodelbahn Sankt Andreasberg** (nærmeste sommerrodelbane, ~10 km / 15 min, åpen i juli; URL verifisert via Tavily/braunlage.de, avstand via OSRM). | Claude |
