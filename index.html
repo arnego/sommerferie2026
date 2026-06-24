@@ -381,7 +381,7 @@ tailwind.config = {
                 <div>
                   <p class="text-xs text-muted uppercase tracking-wider font-medium mb-2">Aktiviteter</p>
                   <div class="space-y-2">
-                    <template x-for="activity in stop.activities" :key="activity.name">
+                    <template x-for="activity in [...stop.activities].sort((a, b) => (a.priority === 'must-do' ? 0 : 1) - (b.priority === 'must-do' ? 0 : 1))" :key="activity.name">
                       <div class="flex items-start gap-2 text-sm">
                         <span class="mt-1 w-2 h-2 rounded-full flex-shrink-0"
                               :class="activity.priority === 'must-do' ? 'bg-sunshine' : 'bg-muted/50'"></span>
