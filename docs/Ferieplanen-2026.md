@@ -49,7 +49,7 @@ William er 5 år og er en viktig del av planleggingen:
 | 4 | Berlin | DE | 5. juli | 9. juli | 4 | 27/28 |
 | 5 | Königstein (Saksisk Sveits) | DE | 9. juli | 11. juli | 2 | 28 |
 | 6 | Český Krumlov | CZ | 11. juli | 13. juli | 2* | 28 |
-| 7 | Leibnitz (transit) | AT | 13. juli | 14. juli | 1* | 29 |
+| 7 | Graz (transit) | AT | 13. juli | 14. juli | 1* | 29 |
 | 8 | Postojna | SI | 14. juli | 15. juli | 1* | 29 |
 | 9 | Rovinj, Istria (Maistra Vestar Campsite 🔒) | HR | 15. juli | 20. juli | 5 | 29 |
 | 10 | Lienz / Amlach, Osttirol (transit) | AT | 20. juli | 21. juli | 1* | 30 |
@@ -63,9 +63,9 @@ William er 5 år og er en viktig del av planleggingen:
 
 *Kortstopp — unntak fra 3-netter-regelen (transit eller prioritert destinasjon).
 
-**Totalt:** 29 netter borte — 5 i Kroatia (Rovinj 5, Maistra Vestar 🔒), 1 natt Slovenia (Postojna), 1 natt Leibnitz (AT, transit), 1 natt Lienz/Amlach (AT, transit), 3 netter Zugspitze, 4 netter Berlin, 2 netter Königstein (Saksisk Sveits), 2 netter Český Krumlov, 2 netter Bamberg, 2 netter Braunlage (Harz), 2 transittnetter (Hirtshals, Groß Buchwald), 2 netter Hamburg, 2 i Billund. Hjemme 2. august (kveldsavgang Hirtshals 1. august, ankomst Larvik natt til 2. august).
+**Totalt:** 29 netter borte — 5 i Kroatia (Rovinj 5, Maistra Vestar 🔒), 1 natt Slovenia (Postojna), 1 natt Graz (AT, transit), 1 natt Lienz/Amlach (AT, transit), 3 netter Zugspitze, 4 netter Berlin, 2 netter Königstein (Saksisk Sveits), 2 netter Český Krumlov, 2 netter Bamberg, 2 netter Braunlage (Harz), 2 transittnetter (Hirtshals, Groß Buchwald), 2 netter Hamburg, 2 i Billund. Hjemme 2. august (kveldsavgang Hirtshals 1. august, ankomst Larvik natt til 2. august).
 
-> **Merk:** Plitvice og Split er fjernet. Sørruten går nå via A9-motorveien (Liezen/Graz) med transittstopp i Leibnitz (1n) i Sør-Steiermark, Postojna/Slovenia (1n) og 5 netter i Rovinj (Maistra Vestar Campsite, booket PH28273444). På hjemveien er Klagenfurt/Wörthersee erstattet med Lienz / Amlach (1n) i Osttirol (Dolomiten Camping Amlacherhof, booket ref. 18998646), slik at vi kjører Brenner-ruten gjennom Pustertal til Zugspitze. Dag 1 (Rovinj → Amlach) går den campingvognvennlige Drautal-/Villach-dalruten ~392 km / ~5 t 22 min (unngår Plöckenpass), dag 2 ~217 km til Zugspitze. Berlin er utvidet til 4 netter (én natt flyttet fra Postojna). Zugspitze 3 netter, Braunlage og Hamburg 2 netter hver. Totalt 5 netter i Kroatia — under opprinnelig mål på 14 netter (§2), men bevisst valg. Alle kjøreetapper under 6 timer.
+> **Merk:** Plitvice og Split er fjernet. Sørruten går nå via A9-motorveien (Liezen/Graz) med transittstopp i Graz (1n) i Steiermark, Postojna/Slovenia (1n) og 5 netter i Rovinj (Maistra Vestar Campsite, booket PH28273444). På hjemveien er Klagenfurt/Wörthersee erstattet med Lienz / Amlach (1n) i Osttirol (Dolomiten Camping Amlacherhof, booket ref. 18998646), slik at vi kjører Brenner-ruten gjennom Pustertal til Zugspitze. Dag 1 (Rovinj → Amlach) går den campingvognvennlige Drautal-/Villach-dalruten ~392 km / ~5 t 22 min (unngår Plöckenpass), dag 2 ~217 km til Zugspitze. Berlin er utvidet til 4 netter (én natt flyttet fra Postojna). Zugspitze 3 netter, Braunlage og Hamburg 2 netter hver. Totalt 5 netter i Kroatia — under opprinnelig mål på 14 netter (§2), men bevisst valg. Alle kjøreetapper under 6 timer.
 
 ---
 
@@ -78,8 +78,8 @@ William er 5 år og er en viktig del av planleggingen:
 | Groß Buchwald | Berlin | ~350 km (verifisert, travelmath.com) | ~4 t 47 min | A7 sørover → Hamburg → A24 øst mot Berlin |
 | Berlin | Königstein (Saksisk Sveits) | 253 km (verifisert, OSRM) | 3 t 28 min | A13/A17 sørøst → Pirna → Königstein (Treidlerweg, ved Elben) |
 | Königstein | Český Krumlov (Camping Paradijs, Zlatá Koruna) | 299 km (verifisert, OSRM) | 4 t 06 min | Königstein → Dresden → D8/E442 sørover → Praha-omkjøring → D3/E55 sør mot České Budějovice → Zlatá Koruna/Rájov |
-| Český Krumlov | Leibnitz | 344 km (verifisert, OSRM) | 4 t 43 min | Zlatá Koruna → České Budějovice → Linz (A7) → A9 Pyhrn sørover → Liezen → Graz → Leibnitz |
-| Leibnitz | Postojna | 218 km (verifisert, OSRM) | 2 t 59 min | Leibnitz → E57 → Spielfeld-grensa → Maribor → E59/E61 → Ljubljana → Postojna |
+| Český Krumlov | Graz | 312 km (verifisert, OSRM) | 4 t 16 min | Zlatá Koruna → České Budějovice → Linz (A7) → A9 Pyhrn (Bosruck/Gleinalm) → Graz Webling/Straßgang |
+| Graz | Postojna | 246 km (verifisert, OSRM) | 3 t 22 min | Graz → A9 → Spielfeld-grensa → Maribor → E59/E61 → Ljubljana → Postojna |
 | Postojna | Rovinj | ~110 km (verifisert) | ~1 t 30 min | A1 → E70 → Koper → A9 Istria → Rovinj |
 | Rovinj | Lienz/Amlach (Osttirol) | ~392 km (verifisert, OSRM) | ~5 t 22 min | A9 Istria → Trieste → A4 → A23 → Tarvisio → A2 Villach → A10 → B100 Drautal (Spittal an der Drau) → Lienz/Amlach (campingvognvennlig dalrute, unngår Plöckenpass) |
 | Lienz/Amlach (Osttirol) | Zugspitze/Krün | 217 km (verifisert, OSRM) | 3 t 00 min | B100/SS49 Pustertal → Brixen → A22 Brenner → A13/A12 Innsbruck → Seefeld → Mittenwald → Krün |
@@ -91,7 +91,7 @@ William er 5 år og er en viktig del av planleggingen:
 | Hirtshals | Larvik (ferge) | — | 4 t 25 min | Color Line SuperSpeed — avgang kl. 22:15, ankomst Larvik ~02:40 (natt til 2. august) |
 | Larvik | Kongsberg | 91 km (verifisert) | 1 t 15 min | E18/E134 |
 
-Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorvei (gjennomsnittsfart ca. 73 km/t inkl. reduksjon for byggesoner, kryss og hvilepauser). ⚠️ **Etappen Hirtshals → Groß Buchwald (~451 km, ~6t 11min) overskrider 6-timersgrensen** — ta minst én lang pause underveis i Jylland. Den lengste av søretappene er nå Český Krumlov → Leibnitz (344 km, 4t 43min) via A9 gjennom Liezen og Graz — godt innenfor grensen. Den nye Brenner-ruten fra Rovinj via Lienz/Amlach kjører den campingvognvennlige Drautal-/Villach-dalruten (dag 1 ~392 km / ~5 t 22 min — turens lengste etappe, men under 6-timersgrensen) og deretter Pustertal/Brenner til Zugspitze (dag 2 ~217 km / ~3 t). Plöckenpass-ruten er ~80 km kortere, men velges bort pga. bratte stigninger med campingvogn — derfor blir dag 1 vesentlig lengre enn dag 2. Estimert total kjørelengde: ~4 160 km.
+Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorvei (gjennomsnittsfart ca. 73 km/t inkl. reduksjon for byggesoner, kryss og hvilepauser). ⚠️ **Etappen Hirtshals → Groß Buchwald (~451 km, ~6t 11min) overskrider 6-timersgrensen** — ta minst én lang pause underveis i Jylland. Den lengste av søretappene er nå Český Krumlov → Graz (312 km, 4t 16min) via A9 Pyhrn gjennom Liezen — godt innenfor grensen. Den nye Brenner-ruten fra Rovinj via Lienz/Amlach kjører den campingvognvennlige Drautal-/Villach-dalruten (dag 1 ~392 km / ~5 t 22 min — turens lengste etappe, men under 6-timersgrensen) og deretter Pustertal/Brenner til Zugspitze (dag 2 ~217 km / ~3 t). Plöckenpass-ruten er ~80 km kortere, men velges bort pga. bratte stigninger med campingvogn — derfor blir dag 1 vesentlig lengre enn dag 2. Estimert total kjørelengde: ~4 160 km.
 
 ---
 
@@ -267,43 +267,54 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 - Camping Paradijs er en rolig plass — nattero kl. 22–07, barn under 12 år under tilsyn, hunder gratis. Gjør gjerne online innsjekk på forhånd via alfred.previo.app (kode BDYEL4), men meld dere i resepsjonen ved ankomst med gyldig ID
 - Český Krumlov blir fullt av dagsturister midt på dagen — gå tidlig morgen eller om kvelden for å ha de smale gatene mest mulig for seg selv
 - Ta med kontanter i tsjekkiske kroner (CZK) — mange små steder tar ikke kort
-- Neste dag: ~344 km til Leibnitz (~4 t 43 min) via A9 gjennom Liezen og Graz — lengste søretappe, men godt innenfor 6-timersgrensen
+- Neste dag: ~312 km til Graz (~4 t 16 min) via A9 Pyhrn gjennom Liezen — Graz er et godt balansert midtveis-stopp, godt innenfor 6-timersgrensen
 
 ---
 
-### Stopp 7: Leibnitz, Østerrike (1 natt transit: 13.–14. juli)
+### Stopp 7: Graz, Østerrike (1 natt transit: 13.–14. juli)
 
-**Kjøring:** Český Krumlov → Leibnitz, 344 km, 4 t 43 min via České Budějovice → Linz (A7) → A9 Pyhrn sørover → Liezen → Graz → Leibnitz. (80 km/t med campingvogn.) (verifisert, OSRM)
+> **Merk:** Erstatter tidligere planlagte Leibnitz. Städtisches Bad & Camping Leibnitz svarte ikke på e-post og viste ingen ledige plasser i bookingsystemet. Graz er valgt som primæralternativ — bedre balansert kjøring og en plass som er åpen hele året (ingen bookingavhengighet).
 
-**Campingplass: Städtisches Bad & Camping Leibnitz**
-- Adresse: Rudolf-Hans-Bartsch-Gasse 33, 8430 Leibnitz, Østerrike
-- Nettside: https://citiesapps.com/pages/stadtisches-bad-and-camping-leibnitz
-- GPS: 46.7785, 15.5287
-- E-post/telefon: camping@leibnitz.at · +43 3452 82463
-- Fasiliteter: Ca. 60 stellplasser midt i byparken, rett ved byens Erlebnisbad (sports-, opplevelses- og barnebasseng, liggesletter, lekeplass, minigolf, sportsanlegg). Romslige sanitæranlegg, vaskemaskin, oppvaskplass, Wi-Fi (mot betaling). Sesongåpent ca. 15. mai–september.
-- **Booket: Forespørsel sendt på e-post – avventer svar**
+**Kjøring:** Český Krumlov → Graz, 312 km, 4 t 16 min via České Budějovice → Linz (A7) → A9 Pyhrn (Bosruck-/Gleinalmtunnel) → Graz Webling/Straßgang. (80 km/t med campingvogn.) (verifisert, OSRM)
+
+**Campingplass: Reisemobil-Stellplatz / Camping Central Graz**
+- Adresse: Martinhofstraße 3, 8054 Graz (Straßgang), Østerrike
+- Nettside: https://www.reisemobilstellplatz-graz.at
+- GPS: 47.0244, 15.3972
+- Telefon: +43 676 3785102
+- Fasiliteter: Bynær plass ved skogkanten i Straßgang, ~5 min fra A9 (avkjørsel Webling). Tar imot campingvogn (~25 €/døgn, uten fortelt), strøm, moderne sanitæranlegg, vaskemaskin/tørketrommel, Wi-Fi. Lekeplass og utendørsbasseng i nærheten, busforbindelse inn til gamlebyen. Stellplassdelen åpen hele året (24/7); campingdelen åpen 25. mars–31. oktober.
+- **Booket: Nei — foreslått alternativ, ikke booket ennå**
 - Bookingref: —
-- Innsjekk: 13:00 · Utsjekk: 11:00 (ca. — verifisér ved booking)
+- Innsjekk: 14:00 · Utsjekk: 12:00 (ca. — verifisér ved booking)
+- Balanse: Dag 1 ~312 km / 4 t 16 min, dag 2 ~246 km / 3 t 22 min — avvik kun ±27 min fra 50/50-deling (godt innenfor ±1 t).
 
 **Aktiviteter:**
 
 | Aktivitet | Type | Prioritet | Beskrivelse |
 |-----------|------|-----------|-------------|
-| Erlebnisbad Leibnitz | Friluft/bad | Must-do | Opplevelsesbad rett ved campingen med sportsbasseng, opplevelsesbasseng og eget barnebasseng, store liggesletter, lekeplass og minigolf. Åpent 15. mai–september kl. 08–20. Ideelt for William etter en lang kjøredag. https://citiesapps.com/pages/stadtisches-bad-and-camping-leibnitz |
-| Schloss Seggau | Kultur/historie | Nice-to-have | Slott på en skogkledd høyde over Leibnitz, med historiske vinkjellere, romersk lapidarium og vid utsikt over Sør-Steiermarks vinmarker. Kort kjøretur opp fra byen. https://www.seggau.com/ |
-| Leibnitz Altstadt & Hauptplatz | Kultur | Nice-to-have | Hyggelig steirisk småby langs Den sør-steiriske vinveien. Brosteinsbelagt Hauptplatz med kafeer og rådhus — fin kveldsspasertur etter bading. https://www.leibnitz.at/ |
+| Grazer Schlossberg, Uhrturm & Schlossbergrutsche | Opplevelse | Must-do | Byens grønne slottshøyde midt i sentrum: Schlossbergbahn-kabelbane eller heis opp, ikonisk Uhrturm-klokketårn og vid utsikt — pluss Schlossbergrutsche, en av verdens høyeste innendørs rutsjebaner (64 m fall). William vil elske både banen og rutsjen. https://www.graztourismus.at/ |
+| Graz gamleby (UNESCO) | Kultur | Nice-to-have | En av Sentral-Europas best bevarte gamlebyer, UNESCO-verdensarv siden 1999. Bilfri Hauptplatz, røde tak, smug og arkadegårder — fin kveldsspasertur. https://whc.unesco.org/en/list/931 |
+| Schloss Eggenberg | Kultur | Nice-to-have | Praktfullt barokkslott (også del av UNESCO-arven) ~4 km vest for sentrum, med prunkrom og en stor landskapspark der påfugler spankulerer fritt — barna elsker påfuglene. Park åpen 08–19. https://www.museum-joanneum.at/schloss-eggenberg-prunkraeume-und-gaerten |
 
 **Tips:**
-- **Østerriksk motorvei-vignett** kreves (~€12,40 per kjøretøy, 10 dager) — kjøp online på asfinag.at eller ved grensen
-- Erlebnisbad og campingplass har sesongåpent fra 15. mai til september — bekreft åpningstider ved booking
-- Booking er sendt på e-post (camping@leibnitz.at), men ennå ikke bekreftet
-- Neste dag: ~218 km til Postojna (~2 t 59 min) via E57 → Spielfeld-grensa → Maribor → Ljubljana → E61 — kort, grei kjøredag inn i Slovenia
+- **Østerriksk motorvei-vignett** kreves (~€12,40 per kjøretøy, 10 dager) — kjøp online på asfinag.at eller ved grensen. A9 Pyhrn har i tillegg bompliktige tunneler (Bosruck + Gleinalm)
+- Foreslått alternativ til Leibnitz. Reisemobil-Stellplatz Graz er åpen hele året; reserver gjerne ~3 virkedager før via reisemobilstellplatz-graz.at, men plassen er sjelden full
+- Campingvogn tas imot (~25 €/døgn, uten fortelt). Lekeplass og basseng i nærheten — fin avkjøling for William
+- Neste dag: ~246 km til Postojna (~3 t 22 min) via A9 → Spielfeld-grensa → Maribor → Ljubljana → E61 — grei kjøredag inn i Slovenia
+
+**Vurderte alternativer (alle tar imot campingvogn, ingen minstenetter, ≤15 min fra A9):**
+
+| Campingplass | Beliggenhet | Dag 1 (CK→) | Dag 2 (→Postojna) | Avvik 50/50 | URL |
+|--------------|-------------|-------------|-------------------|-------------|-----|
+| **Reisemobil-Stellplatz / Camping Central Graz** *(valgt)* | Straßgang, Graz | 312 km / 4 t 16 min | 246 km / 3 t 22 min | ±27 min | https://www.reisemobilstellplatz-graz.at |
+| Schwarzlsee Camping | Premstätten, sør for Graz | 318 km / 4 t 22 min | 238 km / 3 t 16 min | ±33 min | https://www.schwarzlsee.at/camping |
+| Camp Sulmsee | Leibnitz/Wildon | 345 km / 4 t 44 min | 220 km / 3 t 01 min | ±52 min | https://www.sulmsee.camp |
 
 ---
 
 ### Stopp 8: Postojna, Slovenia (1 natt: 14.–15. juli)
 
-**Kjøring:** Leibnitz → Postojna, 218 km, 2 t 59 min via E57 → Spielfeld-grensa → Maribor → E59/E61 → Ljubljana → Postojna. (80 km/t med campingvogn.) (verifisert, OSRM)
+**Kjøring:** Graz → Postojna, 246 km, 3 t 22 min via A9 → Spielfeld-grensa → Maribor → E59/E61 → Ljubljana → Postojna. (80 km/t med campingvogn.) (verifisert, OSRM)
 
 **Campingplass: Camping Pivka Jama**
 - Adresse: Veliki Otok 50, 6230 Postojna, Slovenia
@@ -532,6 +543,7 @@ Disse 10 campingplassene dekker ulike reisestiler langs hele den kroatiske ruten
 
 | Dato | Endring | Av |
 | --- | --- | --- |
+| 2026-06-25 | **Stopp 7 byttet: Leibnitz → Graz**: Städtisches Bad & Camping Leibnitz svarte ikke på e-post og hadde ingen ledige plasser — erstattet med **Reisemobil-Stellplatz / Camping Central Graz** (Martinhofstraße 3, 8054 Graz/Straßgang, GPS 47.0244/15.3972). Tar imot campingvogn (~25 €/døgn), lekeplass/basseng i nærheten, Stellplass åpen hele året (ingen bookingavhengighet). Best balanserte alternativ langs A9-korridoren: dag 1 **Český Krumlov → Graz 312 km / 4 t 16 min**, dag 2 **Graz → Postojna 246 km / 3 t 22 min** (avvik ±27 min fra 50/50, mot ±52 min for Leibnitz). Caravan-rute bekreftet via web (A9 Pyhrn er hovedkorridoren mot Slovenia). Aktiviteter byttet til Graz: Schlossberg/Uhrturm/Schlossbergrutsche (must-do), Graz gamleby UNESCO + Schloss Eggenberg (nice-to-have). Vurderte også Schwarzlsee Camping (±33 min) og Camp Sulmsee (±52 min). Avstander OSRM-verifisert, URL-er/GPS verifisert via Tavily/Nominatim. Oppdatert: stopptabell, totaler, §2-note, kjøreetapper, rutenote, stopp 6-tips og stopp 8-etappe. Ikke booket ennå. | Claude |
 | 2026-06-25 | **Stopp 13 Rübeland-lenke rettet + Harzdrenalin lagt til**: «Rübeland dryppsteinhuler» pekte feilaktig til harzdrenalin.de — rettet til den offisielle hulesiden **harzer-hoehlen.de** (Baumannshöhle/Hermannshöhle, verifisert via Tavily), avstand justert til ~23 km (OSRM). **harzdrenalin.de** lagt til som eget nice-to-have: eventyrareal ved Rappbodetalsperren (~26 km) med TITAN RT-gangbro, Megazipline, Gigaswing, 5D-kino m.m. | Claude |
 | 2026-06-25 | **Stopp 13 Braunlage booket**: Camping- und Wohnmobilstellplatz Braunlage bekreftet — bookingref. **OBP-AG-20260625005043**, 2 netter (26.–28. juli), pitch inkl. 2 personer + barn 1–5 år + kurtaks, totalt **84,70 €**, ingen depositum (betales ved avreise), gratis avbestilling inntil 14 dager før. Bookingstatus Nei → Ja. Aktiviteter omprioritert: **Harzer Schmalspurbahn (damptog)** nice-to-have → **must-do**, **Naturmythenpfad** must-do → nice-to-have. Ny nice-to-have lagt til: **Sommerrodelbahn Sankt Andreasberg** (nærmeste sommerrodelbane, ~10 km / 15 min, åpen i juli; URL verifisert via Tavily/braunlage.de, avstand via OSRM). | Claude |
 | 2026-06-25 | **Stopp 10 dag 1-rute endret**: Plöckenpass-ruten erstattet som primærrute med den campingvognvennlige **Drautal-/Villach-dalruten** uten høyfjellspass (Rovinj → Tarvisio → A2 Villach → A10 → B100 Drautal → Lienz/Amlach). Avstand/kjøretid oppdatert til **~392 km / ~5 t 22 min** (var 311 km / 4 t 15 min over Plöckenpass) — turens lengste etappe, men under 6-timersgrensen. Dag 1 krever nå østerriksk vignett (A2/A10). Plöckenpass beholdt som omtalt, men frarådet med campingvogn. Oppdatert: stopptabell, kjøreetapper, §2-note, stopp 9-tips og stopp 10 (kjøring, tips, Tristacher See). Verifisert via OSRM. | Claude |
