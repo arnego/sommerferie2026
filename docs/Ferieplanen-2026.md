@@ -65,7 +65,7 @@ William er 5 år og er en viktig del av planleggingen:
 
 **Totalt:** 29 netter borte — 5 i Kroatia (Rovinj 5, Maistra Vestar 🔒), 1 natt Slovenia (Postojna), 1 natt Leibnitz (AT, transit), 1 natt Lienz/Amlach (AT, transit), 3 netter Zugspitze, 4 netter Berlin, 2 netter Königstein (Saksisk Sveits), 2 netter Český Krumlov, 2 netter Bamberg, 2 netter Braunlage (Harz), 2 transittnetter (Hirtshals, Groß Buchwald), 2 netter Hamburg, 2 i Billund. Hjemme 2. august (kveldsavgang Hirtshals 1. august, ankomst Larvik natt til 2. august).
 
-> **Merk:** Plitvice og Split er fjernet. Sørruten går nå via A9-motorveien (Liezen/Graz) med transittstopp i Leibnitz (1n) i Sør-Steiermark, Postojna/Slovenia (1n) og 5 netter i Rovinj (Maistra Vestar Campsite, booket PH28273444). På hjemveien er Klagenfurt/Wörthersee erstattet med Lienz / Amlach (1n) i Osttirol (Dolomiten Camping Amlacherhof, booket ref. 18998646), slik at vi kjører den kortere og vakrere Brenner-ruten gjennom Pustertal til Zugspitze. Etappen er godt balansert (dag 1 ~311 km / dag 2 ~217 km). Berlin er utvidet til 4 netter (én natt flyttet fra Postojna). Zugspitze 3 netter, Braunlage og Hamburg 2 netter hver. Totalt 5 netter i Kroatia — under opprinnelig mål på 14 netter (§2), men bevisst valg. Alle kjøreetapper under 6 timer.
+> **Merk:** Plitvice og Split er fjernet. Sørruten går nå via A9-motorveien (Liezen/Graz) med transittstopp i Leibnitz (1n) i Sør-Steiermark, Postojna/Slovenia (1n) og 5 netter i Rovinj (Maistra Vestar Campsite, booket PH28273444). På hjemveien er Klagenfurt/Wörthersee erstattet med Lienz / Amlach (1n) i Osttirol (Dolomiten Camping Amlacherhof, booket ref. 18998646), slik at vi kjører Brenner-ruten gjennom Pustertal til Zugspitze. Dag 1 (Rovinj → Amlach) går den campingvognvennlige Drautal-/Villach-dalruten ~392 km / ~5 t 22 min (unngår Plöckenpass), dag 2 ~217 km til Zugspitze. Berlin er utvidet til 4 netter (én natt flyttet fra Postojna). Zugspitze 3 netter, Braunlage og Hamburg 2 netter hver. Totalt 5 netter i Kroatia — under opprinnelig mål på 14 netter (§2), men bevisst valg. Alle kjøreetapper under 6 timer.
 
 ---
 
@@ -81,7 +81,7 @@ William er 5 år og er en viktig del av planleggingen:
 | Český Krumlov | Leibnitz | 344 km (verifisert, OSRM) | 4 t 43 min | Zlatá Koruna → České Budějovice → Linz (A7) → A9 Pyhrn sørover → Liezen → Graz → Leibnitz |
 | Leibnitz | Postojna | 218 km (verifisert, OSRM) | 2 t 59 min | Leibnitz → E57 → Spielfeld-grensa → Maribor → E59/E61 → Ljubljana → Postojna |
 | Postojna | Rovinj | ~110 km (verifisert) | ~1 t 30 min | A1 → E70 → Koper → A9 Istria → Rovinj |
-| Rovinj | Lienz/Amlach (Osttirol) | ~311 km (verifisert, OSRM) | ~4 t 15 min | A9 Istria → Trieste → A4 → A23 (mot Tarvisio) → Carnia → SS52 → Plöckenpass → Kötschach-Mauthen → B100 Drautal → Lienz/Amlach |
+| Rovinj | Lienz/Amlach (Osttirol) | ~392 km (verifisert, OSRM) | ~5 t 22 min | A9 Istria → Trieste → A4 → A23 → Tarvisio → A2 Villach → A10 → B100 Drautal (Spittal an der Drau) → Lienz/Amlach (campingvognvennlig dalrute, unngår Plöckenpass) |
 | Lienz/Amlach (Osttirol) | Zugspitze/Krün | 217 km (verifisert, OSRM) | 3 t 00 min | B100/SS49 Pustertal → Brixen → A22 Brenner → A13/A12 Innsbruck → Seefeld → Mittenwald → Krün |
 | Zugspitze/Krün | Bamberg | 324 km (verifisert) | 4 t 26 min | Krün → Garmisch → A95/A8 nord → München → A9 nord → A73 mot Bamberg |
 | Bamberg | Braunlage (Harz) | ~280 km | ~3 t 50 min | A73 nord → Erfurt → A4/A38 → Nordhausen → B4 → Braunlage |
@@ -91,7 +91,7 @@ William er 5 år og er en viktig del av planleggingen:
 | Hirtshals | Larvik (ferge) | — | 4 t 25 min | Color Line SuperSpeed — avgang kl. 22:15, ankomst Larvik ~02:40 (natt til 2. august) |
 | Larvik | Kongsberg | 91 km (verifisert) | 1 t 15 min | E18/E134 |
 
-Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorvei (gjennomsnittsfart ca. 73 km/t inkl. reduksjon for byggesoner, kryss og hvilepauser). ⚠️ **Etappen Hirtshals → Groß Buchwald (~451 km, ~6t 11min) overskrider 6-timersgrensen** — ta minst én lang pause underveis i Jylland. Den lengste av søretappene er nå Český Krumlov → Leibnitz (344 km, 4t 43min) via A9 gjennom Liezen og Graz — godt innenfor grensen. Den nye Brenner-ruten fra Rovinj via Lienz/Amlach (dag 1 ~311 km over Plöckenpass, dag 2 ~217 km til Zugspitze) er godt balansert mellom de to dagene og kjører den vakre Pustertal-/Brenner-ruten. Estimert total kjørelengde: ~4 080 km.
+Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorvei (gjennomsnittsfart ca. 73 km/t inkl. reduksjon for byggesoner, kryss og hvilepauser). ⚠️ **Etappen Hirtshals → Groß Buchwald (~451 km, ~6t 11min) overskrider 6-timersgrensen** — ta minst én lang pause underveis i Jylland. Den lengste av søretappene er nå Český Krumlov → Leibnitz (344 km, 4t 43min) via A9 gjennom Liezen og Graz — godt innenfor grensen. Den nye Brenner-ruten fra Rovinj via Lienz/Amlach kjører den campingvognvennlige Drautal-/Villach-dalruten (dag 1 ~392 km / ~5 t 22 min — turens lengste etappe, men under 6-timersgrensen) og deretter Pustertal/Brenner til Zugspitze (dag 2 ~217 km / ~3 t). Plöckenpass-ruten er ~80 km kortere, men velges bort pga. bratte stigninger med campingvogn — derfor blir dag 1 vesentlig lengre enn dag 2. Estimert total kjørelengde: ~4 160 km.
 
 ---
 
@@ -358,13 +358,15 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 - Dinopark Funtana: kjøp billett online på forhånd i høysesong
 - Pula amfiteater: gå tidlig på morgenen for å unngå folkemengder og sommerheten
 - Kroatia bruker EUR siden januar 2023 — ingen valutaveksling nødvendig
-- Neste dag: ~311 km til Lienz/Amlach i Osttirol (~4 t 15 min) via Trieste → A4 → A23 → Carnia → SS52 → Plöckenpass — start tidlig morgen
+- Neste dag: ~392 km til Lienz/Amlach i Osttirol (~5 t 22 min) via Trieste → A4 → A23 → Tarvisio → Villach → B100 Drautal — lang etappe, start tidlig morgen
 
 ---
 
 ### Stopp 10: Lienz / Amlach, Osttirol, Østerrike (1 natt: 20.–21. juli)
 
-**Kjøring:** Rovinj → Amlach, ~311 km, ~4 t 15 min via A9 Istria → Trieste → A4 → A23 (mot Tarvisio) → Carnia → SS52 → Plöckenpass (Passo di Monte Croce Carnico, 1357 m) → Kötschach-Mauthen → B100 Drautal → Lienz/Amlach. Dag 1 går på bomfrie veier i Østerrike (SS52 + Plöckenpass + B100) — ingen østerriksk vignett nødvendig fram til Lienz; Italia bruker bompengebommer på A4/A23. (80 km/t med campingvogn.) (verifisert OSRM)
+**Kjøring:** Rovinj → Amlach, ~392 km, ~5 t 22 min via A9 Istria → Trieste → A4 → A23 → Tarvisio → (Østerrike) A2 Villach → A10 → B100 Drautal (Spittal an der Drau) → Lienz/Amlach. Campingvognvennlig dalrute uten høyfjellspass; dette er den lengste etappen på turen, så start tidlig. Dag 1 bruker østerriksk motorvei (A2/A10) — østerriksk vignett kreves; Italia bruker bompengebommer på A4/A23. (80 km/t med campingvogn.) (verifisert OSRM)
+
+> **Rutevalg:** Den ~80 km kortere ruten over Plöckenpass (SS52bis/Passo di Monte Croce Carnico, 1357 m) anbefales **ikke** med campingvogn pga. bratte stigninger. Vi velger derfor den lengre, men trygge Drautal-/Villach-dalruten som primærrute.
 
 **Campingplass: Dolomiten Camping Amlacherhof**
 - Adresse: Seestraße 20, 9908 Amlach/Lienz, Osttirol (Østerrike)
@@ -379,13 +381,14 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 
 | Aktivitet | Type | Prioritet | Beskrivelse |
 |-----------|------|-----------|-------------|
-| Tristacher See | Friluft/vann | Must-do | Osttirols eneste badesjø, ~1,5 km fra campingen, omkranset av skog og de stupbratte Lienzer Dolomitten. Mildt, klart vann — herlig avkjøling etter kjøreturen over Plöckenpass. https://www.osttirol.com/en/region-towns/all-places/amlach |
+| Tristacher See | Friluft/vann | Must-do | Osttirols eneste badesjø, ~1,5 km fra campingen, omkranset av skog og de stupbratte Lienzer Dolomitten. Mildt, klart vann — herlig avkjøling etter den lange kjøreturen. https://www.osttirol.com/en/region-towns/all-places/amlach |
 | Lienz Altstadt & Schloss Bruck | Kultur/by | Nice-to-have | Sjarmerende sørtirolsk-preget by ~2 km unna, med fotgjengervennlig hovedgate, fargerike fasader og middelalderborgen Schloss Bruck. Fin kveldsspasertur og middag. https://www.osttirol.com/en |
 | Lienzer Dolomiten & Dolomitenhütte | Natur | Nice-to-have | De stupbratte Lienzer Dolomitten reiser seg rett over Amlach. Dolomitenhütte byr på spektakulær utsikt og lokal mat — kort biltur eller vandring for de med tid om morgenen. |
 
 **Tips:**
 - Booking mottatt (18998646) — avventer bekreftelse fra plassen. Ingen trekk på kortet før plassen bekrefter; rest betales på stedet
-- Plöckenpass (SS52bis/B110) er en bratt, men lovlig og asfaltert campingvognrute — kjør i lavt gir og bruk motorbrems på nedkjøringen. Alternativ uten høyfjellspass: via Tarvisio → Villach → B100 Drautal (~392 km, ~1 t lengre, men da kreves østerriksk vignett på A2)
+- Primærrute er Drautal-/Villach-dalruten uten høyfjellspass (campingvognvennlig). Dag 1 er turens lengste etappe (~392 km, ~5 t 22 min) — start tidlig og legg inn pauser. Dag 1 bruker østerriksk motorvei (A2/A10) → kjøp østerriksk vignett før grensa ved Tarvisio
+- Den ~80 km kortere Plöckenpass-ruten (SS52bis) anbefales ikke med campingvogn pga. bratte stigninger
 - Neste dag: ~217 km til Zugspitze/Krün (~3 t) via Pustertal → Brixen → A22 Brenner → Innsbruck → Seefeld → Mittenwald → Krün. Krever østerriksk vignett + Brenner-bompenger for transitten
 
 ---
@@ -524,6 +527,7 @@ Disse 10 campingplassene dekker ulike reisestiler langs hele den kroatiske ruten
 
 | Dato | Endring | Av |
 | --- | --- | --- |
+| 2026-06-25 | **Stopp 10 dag 1-rute endret**: Plöckenpass-ruten erstattet som primærrute med den campingvognvennlige **Drautal-/Villach-dalruten** uten høyfjellspass (Rovinj → Tarvisio → A2 Villach → A10 → B100 Drautal → Lienz/Amlach). Avstand/kjøretid oppdatert til **~392 km / ~5 t 22 min** (var 311 km / 4 t 15 min over Plöckenpass) — turens lengste etappe, men under 6-timersgrensen. Dag 1 krever nå østerriksk vignett (A2/A10). Plöckenpass beholdt som omtalt, men frarådet med campingvogn. Oppdatert: stopptabell, kjøreetapper, §2-note, stopp 9-tips og stopp 10 (kjøring, tips, Tristacher See). Verifisert via OSRM. | Claude |
 | 2026-06-24 | **Stopp 10 byttet**: Lago di Santa Croce / Alpago (IT, ubooket) erstattet med **Dolomiten Camping Amlacherhof**, Seestraße 20, 9908 Amlach/Lienz, Osttirol (AT) — **booket ref. 18998646** (mottatt, avventer bekreftelse): campingvognplass 5×6 m m/strøm, 20.–21. juli, korttidstariff, totalt 65,50 € + kurtaks/miljøavgift, depositum 54,80 € betalt med kort. Ny Brenner-rute via Carnia/SS52 og Plöckenpass gir balansert kjøring (dag 1 ~311 km / ~4 t 15 min over Plöckenpass; dag 2 ~217 km / ~3 t til Zugspitze via Pustertal → A22 Brenner). Avstander, GPS (46.8129, 12.7642) og rute verifisert via OSRM; campingplass-URL verifisert via Tavily. Oppdatert: stopptabell, totaler, kjøreetapper, stopp 9-tips og stopp 11-etappe. | Claude |
 | 2026-06-23 | **Værvarsel**: temperatur vises nå sammen med værsymbolene overalt (samme Open-Meteo-kilde). Kompakte strips (kart-popup + kollapset bar) viser daglig totalvurdering med maks/min-temperatur (rød maks, blå min); den utvidede tabellen viser timestemperatur under hvert symbol. | Claude |
 | 2026-06-20 | **Stopp 11 Zugspitze**: Tennsee forkastet (for lang reisevei til aktivitetene). Byttet til **Happy Camp Lermoos** (Garmischer Straße 21, 6631 Lermoos, Tirol) på den tyrolske siden av Zugspitze — bookingforespørsel sendt, avventer svar. URL/GPS (47.4025, 10.8881) verifisert via Tavily/PiNCAMP. Mye bedre tilrettelagt for must-do: Tiroler Zugspitzbahn (Ehrwald) ~5 km, Neuschwanstein ~40 km (vesentlig nærmere), Eibsee ~23 km, Höllentalklamm ~20 km. Stopp 11 flyttet fra Tyskland (DE) til Østerrike (AT). Kjøreetapper via Fernpass (OSRM): Lago di Santa Croce→Lermoos 303 km / 4t 09min, Lermoos→Bamberg 343 km / 4t 42min (begge godt under 6t). | Claude |
