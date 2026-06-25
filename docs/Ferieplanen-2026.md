@@ -376,9 +376,9 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 - Nettside: https://www.amlacherhof.at
 - GPS: 46.8129, 12.7642
 - Fasiliteter: Helårsåpen Dolomitencamping ved foten av Lienzer Dolomitten, ~2 km fra Lienz og kort vei til Tristachersee. Svømmebasseng, sykkelutleie, sporttrampoline og rideanlegg som nabo. Campingvogn/bobil/telt + apartments. Drauradweg passerer rett forbi.
-- **Booket: Ja — booking mottatt 24.06.2026, avventer bekreftelse** (ref. 18998646). Campingvognplass 5×6 m m/strøm (korttidstariff «bis 2 nächte»), 2 voksne + William. Totalt 65,50 € + kurtaks 5,20 € + miljøavgift 3 €. Depositum 54,80 € betalt med kort; rest betales på stedet.
+- **Booket: Ja — bekreftet 25.06.2026** (ordrebekreftelse, ref. 18998646). Campingvognplass 5×6 m m/strøm (korttidstariff «bis 2 nächte»), 2 voksne + William. Totalt 65,50 € — depositum 54,80 € betalt med kort, rest betales på stedet + kurtaks 5,20 € + miljøavgift 3 €.
 - Bookingref: 18998646
-- Innsjekk: 13:00 · Utsjekk: 11:00 (ca. — verifisér ved booking)
+- Innsjekk: 11:00–22:00 · Utsjekk: 08:00–10:00 (bekreftet). Tips: fyll ut online Pre-Check-In (deskline-portal) på forhånd
 
 **Aktiviteter:**
 
@@ -467,7 +467,7 @@ Hjemreisen inkluderer opplevelsesstoppene Zugspitze, Braunlage (Harz), Hamburg o
 **Vignetter og bompenger:**
 - **Østerrike:** Motorvei-vignett kreves for hvert kjøretøy separat (bil + campingvogn regnes individuelt). 10-dagersvignett ~9,90 EUR. Kjøpes ved grenseovergangen eller på https://www.asfinag.at/
 - **Slovenia:** Vignett kreves. 7-dagersvignett ~15 EUR per kjøretøy. Kjøpes ved grensen.
-- **Kroatia:** Ingen vignett. Bompenger betales manuelt på A1 (Zagreb–Split ca. 24 EUR totalt).
+- **Kroatia:** Ingen vignett. På innreisen til Istria (Koper → grensa → A9 «Istarski ipsilon», drevet av BINA Istra) betales bompenger ved bom — ca. 0,10 €/km for bil med campingvogn (kategori II), betales kontant/kort/ENC. Ingen Učka-tunnel på denne ruten.
 - **Tyskland:** Umweltplakette (grønn sticker) kreves i Frankfurt og Hamburg — samme plaketten som Berlin.
 
 **Valuta:**
@@ -499,6 +499,7 @@ Hjemreisen inkluderer opplevelsesstoppene Zugspitze, Braunlage (Harz), Hamburg o
 
 | Dato | Endring | Av |
 | --- | --- | --- |
+| 2026-06-25 | **Stopp 10 bekreftet + Istria-bompenger**: (1) Dolomiten Camping Amlacherhof — ordrebekreftelse mottatt (ref. 18998646): status «mottatt, avventer bekreftelse» → **bekreftet**. Bekreftede tider: ankomst 11:00–22:00, avreise 08:00–10:00. Depositum 54,80 € betalt med kort; rest + kurtaks (5,20 €) + miljøavgift (3 €) på stedet. Pre-Check-In (deskline) anbefalt. Beskrivelsen rettet («~4t balansert» → turens lengste etappe ~5t 22min). (2) §4 «Praktisk info»: Kroatia-bompengelinja oppdatert til faktisk innreise via **A9 Istarski ipsilon** (BINA Istra, ~0,10 €/km kat. II med campingvogn) i stedet for den forkastede Zagreb–Split-ruten. | Claude |
 | 2026-06-25 | **Dok-opprydding (ikke-valgte campingplasser)**: (1) Stopp 7 — fjernet «Vurderte alternativer»-tabellen (Graz/Schwarzlsee/Camp Sulmsee) siden Graz er booket og bekreftet. (2) §4 «Foreslåtte campingplasser i Kroatia — 10 alternativer» — fjernet hele campingplasslisten; 9 av 10 hørte til den forkastede lengre Kroatia-ruten (Plitvice/Krka/Split/Trogir/Pula osv.), og Rovinj er allerede detaljert i eget stoppavsnitt. Beholdt den praktiske infoen (vignetter, valuta, fartsgrenser), nå omdøpt til §4 «Praktisk info». | Claude |
 | 2026-06-25 | **Stopp 7 Graz booket**: Reisemobil-Stellplatz / Camping Central Graz bekreftet via Reservia — ref. **D9590A9F** (FTG und PICAD Graz GnbR). Comfort Caravan Pitch, 13.–14. juli, 1 natt, 1 plass. Reservasjonsgebyr **7 € kontant på stedet**, reg.nr. RA43955. NB: reservert plass holdes kun til **kl. 20:00** — ankomst før det. Bookingstatus Nei → Ja; innsjekk-/tipstekster oppdatert. | Claude |
 | 2026-06-25 | **Stopp 7 byttet: Leibnitz → Graz**: Städtisches Bad & Camping Leibnitz svarte ikke på e-post og hadde ingen ledige plasser — erstattet med **Reisemobil-Stellplatz / Camping Central Graz** (Martinhofstraße 3, 8054 Graz/Straßgang, GPS 47.0244/15.3972). Tar imot campingvogn (~25 €/døgn), lekeplass/basseng i nærheten, Stellplass åpen hele året (ingen bookingavhengighet). Best balanserte alternativ langs A9-korridoren: dag 1 **Český Krumlov → Graz 312 km / 4 t 16 min**, dag 2 **Graz → Postojna 246 km / 3 t 22 min** (avvik ±27 min fra 50/50, mot ±52 min for Leibnitz). Caravan-rute bekreftet via web (A9 Pyhrn er hovedkorridoren mot Slovenia). Aktiviteter byttet til Graz: Schlossberg/Uhrturm/Schlossbergrutsche (must-do), Graz gamleby UNESCO + Schloss Eggenberg (nice-to-have). Vurderte også Schwarzlsee Camping (±33 min) og Camp Sulmsee (±52 min). Avstander OSRM-verifisert, URL-er/GPS verifisert via Tavily/Nominatim. Oppdatert: stopptabell, totaler, §2-note, kjøreetapper, rutenote, stopp 6-tips og stopp 8-etappe. Ikke booket ennå. | Claude |
