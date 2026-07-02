@@ -1451,15 +1451,24 @@ function ferieApp() {
     },
 
     getMapsUrl(stop) {
-      if (stop.camping && stop.camping.navUrl) return stop.camping.navUrl;
       const dest = stop.camping && stop.camping.address
         ? encodeURIComponent(stop.camping.address)
         : `${stop.lat},${stop.lng}`;
-      return `https://www.google.com/maps/dir/?api=1&destination=${dest}&travelmode=driving`;
+      if (this.mode === 'underveis') {
+        if (stop.camping && stop.camping.navUrl) return stop.camping.navUrl;
+        return `https://www.google.com/maps/dir/?api=1&destination=${dest}&travelmode=driving`;
+      }
+      // Planlegging: kun vis stedet i Google Maps, ikke start navigasjon
+      return `https://www.google.com/maps/search/?api=1&query=${dest}`;
     },
 
     getActivityMapsUrl(mapsQuery) {
-      return `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(mapsQuery)}&travelmode=driving`;
+      const q = encodeURIComponent(mapsQuery);
+      if (this.mode === 'underveis') {
+        return `https://www.google.com/maps/dir/?api=1&destination=${q}&travelmode=driving`;
+      }
+      // Planlegging: kun vis stedet i Google Maps, ikke start navigasjon
+      return `https://www.google.com/maps/search/?api=1&query=${q}`;
     },
 
     // ===== VÆRVARSEL =====
