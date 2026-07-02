@@ -1450,10 +1450,26 @@ function ferieApp() {
       return this.formatDate(stop.arrivalDate) + ' – ' + this.formatDate(stop.departureDate);
     },
 
+    // Bygg et Google Maps-søk som lander på selve virksomheten, ikke bare på
+    // en gateadresse. Bruk eksplisitt camping.mapsQuery når den finnes, ellers
+    // bedriftsnavn + ren adresse (uten parenteser/merknader som «(ved havet…)»
+    // eller «— avgang kl. 17:35», som ellers gjør at pinnen bommer på stedet).
+    campingMapsQuery(c) {
+      if (!c) return '';
+      if (c.mapsQuery) return c.mapsQuery;
+      const addr = (c.address || '')
+        .replace(/\s*\([^)]*\)\s*/g, ' ')   // fjern parenteser
+        .replace(/\s*[–—-]\s.*$/, '')         // fjern « – …»/« — …»/« - …»-merknader
+        .replace(/\s{2,}/g, ' ')
+        .trim();
+      const name = (c.name || '').trim();
+      if (name && addr) return `${name}, ${addr}`;
+      return name || addr;
+    },
+
     getMapsUrl(stop) {
-      const dest = stop.camping && stop.camping.address
-        ? encodeURIComponent(stop.camping.address)
-        : `${stop.lat},${stop.lng}`;
+      const query = this.campingMapsQuery(stop.camping);
+      const dest = query ? encodeURIComponent(query) : `${stop.lat},${stop.lng}`;
       if (this.mode === 'underveis') {
         if (stop.camping && stop.camping.navUrl) return stop.camping.navUrl;
         return `https://www.google.com/maps/dir/?api=1&destination=${dest}&travelmode=driving`;
@@ -2332,7 +2348,7 @@ function ferieApp() {
         week: 30,
         camping: {
           name: 'Camping Island Bamberg',
-          address: 'Campinginsel, 96052 Bamberg',
+          address: 'Am Campingplatz 1, 96049 Bamberg',
           url: 'http://www.campinginsel.de/',
           booked: true,
           bookingRef: 'Bekreftet på e-post 21.06.2026 — 2 netter m/strøm, 97 € (24.–26. juli)',
