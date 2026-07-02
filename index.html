@@ -1397,8 +1397,8 @@ function ferieApp() {
     get daysUntilDeparture() {
       const today = new Date();
       today.setHours(0,0,0,0);
-      const dep = new Date(this.stops[0].arrivalDate);
-      return Math.ceil((dep - today) / (1000 * 60 * 60 * 24));
+      const dep = new Date(this.stops[0].arrivalDate + 'T00:00:00');
+      return Math.round((dep - today) / (1000 * 60 * 60 * 24));
     },
     get currentStop() {
       const today = new Date().toISOString().slice(0, 10);
@@ -1470,17 +1470,19 @@ function ferieApp() {
     weatherHours: ['09', '12', '15', '18', '21'],
 
     datesForStop(stop) {
-      // Overnattingsdager: arrivalDate t.o.m. departureDate - 1
+      // Arrival t.o.m. departureDate (inkl. avreisedagen på destinasjonen)
       const out = [];
       if (!stop || !stop.arrivalDate) return out;
-      const start = new Date(stop.arrivalDate + 'T00:00:00');
-      const end = stop.departureDate
-        ? new Date(stop.departureDate + 'T00:00:00')
-        : new Date(stop.arrivalDate + 'T00:00:00');
-      const last = stop.departureDate ? end : new Date(start.getTime() + 24*3600*1000);
       const pad = n => String(n).padStart(2, '0');
-      for (let d = new Date(start); d < last; d.setDate(d.getDate() + 1)) {
-        out.push(`${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`);
+      const fmt = d => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+      const start = new Date(stop.arrivalDate + 'T00:00:00');
+      if (!stop.departureDate) {
+        out.push(fmt(start));
+        return out;
+      }
+      const end = new Date(stop.departureDate + 'T00:00:00');
+      for (let d = new Date(start); d <= end; d.setDate(d.getDate() + 1)) {
+        out.push(fmt(d));
       }
       return out;
     },
