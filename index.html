@@ -594,26 +594,8 @@ tailwind.config = {
         </div>
       </div>
 
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== SEKSJON: BUDSJETT & PRAKTISK ===== -->
-  <section id="budsjett" class="py-12 sm:py-16 bg-sand/30">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6">
-      <h2 class="font-heading text-2xl sm:text-3xl text-petrol mb-2">
-        <span x-show="mode === 'planlegging'">Budsjett &amp; Praktisk</span>
-        <span x-show="mode === 'underveis'">Praktisk info</span>
-      </h2>
-      <p class="text-sm text-muted mb-6">
-        <span x-show="mode === 'planlegging'">Klikk på en seksjon for å åpne den.</span>
-        <span x-show="mode === 'underveis'">Mest brukt underveis — valuta, nødnumre, fartsgrenser og bompenger.</span>
-      </p>
-
-      <div class="space-y-3">
-
-      <!-- Budsjett-grid (kun planlegging) -->
-      <div x-show="mode === 'planlegging'" class="bg-white rounded-xl border border-sand/50 overflow-hidden">
+      <!-- Estimert budsjett -->
+      <div class="bg-white rounded-xl border border-sand/50 overflow-hidden">
         <div role="button" tabindex="0"
              @click="toggleBudsjett('estimat')"
              @keydown.enter.prevent="toggleBudsjett('estimat')"
@@ -659,6 +641,17 @@ tailwind.config = {
           </div>
         </div>
       </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SEKSJON: PRAKTISK INFO ===== -->
+  <section id="budsjett" class="py-12 sm:py-16 bg-sand/30">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <h2 class="font-heading text-2xl sm:text-3xl text-petrol mb-6">Praktisk info</h2>
+
+      <div class="space-y-3">
 
       <!-- Valutakurser -->
       <div class="bg-white rounded-xl border border-sand/50 overflow-hidden">
@@ -1208,7 +1201,7 @@ function ferieApp() {
       { id: 'kart', label: 'Kart' },
       { id: 'reiseplan', label: 'Reiseplan' },
       { id: 'booking', label: 'Booking & Planlegging', planleggingOnly: true },
-      { id: 'budsjett', label: 'Budsjett & Praktisk' },
+      { id: 'budsjett', label: 'Praktisk info' },
       { id: 'pakkelister', label: 'Pakkelister' },
     ],
     get visibleSections() {
