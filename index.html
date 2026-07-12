@@ -435,7 +435,7 @@ tailwind.config = {
                       </thead>
                       <tbody>
                         <template x-for="date in datesForStop(stop)" :key="date">
-                          <tr class="border-b border-sand/30 last:border-b-0">
+                          <tr class="border-b border-sand/30 last:border-b-0" :class="date === todayStr && 'bg-sunshine/10'">
                             <td class="py-1.5 px-2 text-charcoal/80 whitespace-nowrap" x-text="formatDateWithWeekday(date)"></td>
                             <template x-for="h in weatherHours" :key="h">
                               <td class="py-1 px-1 text-center" x-html="weatherCellHtml(stop.id, date, h)"></td>
@@ -1494,6 +1494,13 @@ function ferieApp() {
     weatherStorageKey: 'sommerferie2026-weather-v3',
     weatherHours: ['09', '12', '15', '18', '21'],
 
+    get todayStr() {
+      // Lokal dato (YYYY-MM-DD), konsistent med fmt() i datesForStop/fetchWeatherForStop
+      const d = new Date();
+      const pad = n => String(n).padStart(2, '0');
+      return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+    },
+
     datesForStop(stop) {
       // Arrival t.o.m. departureDate (inkl. avreisedagen på destinasjonen)
       const out = [];
@@ -1740,7 +1747,11 @@ function ferieApp() {
       }
       const pad = n => String(n).padStart(2, '0');
       const fmt = d => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
-      const startDate = stopStart < today ? fmt(today) : fmt(stopStart);
+      // Hent også passerte reisedager: Open-Meteo forecast dekker ~92 dager tilbake.
+      // Klipp til trygg nedre grense (90 dager) for å unngå "out of allowed range"-feil.
+      const pastLimit = new Date(today.getTime() - 90 * 86400000);
+      const effStart = stopStart < pastLimit ? pastLimit : stopStart;
+      const startDate = fmt(effStart);
       const endDate = stopEnd > horizonEnd ? fmt(horizonEnd) : fmt(stopEnd);
 
       const url = new URL('https://api.open-meteo.com/v1/forecast');
