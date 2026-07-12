@@ -685,7 +685,7 @@ tailwind.config = {
              x-transition:enter-start="opacity-0 -translate-y-2"
              x-transition:enter-end="opacity-100 translate-y-0"
              class="border-t border-sand/50">
-          <table class="w-full text-sm">
+          <table class="w-full text-sm border-separate border-spacing-0">
             <thead class="bg-cream/70">
               <tr>
                 <th scope="col" class="text-left px-5 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Valuta</th>
@@ -701,14 +701,16 @@ tailwind.config = {
                     @keydown.space.prevent="fxSelected = row.code"
                     :aria-pressed="fxSelected === row.code"
                     :aria-label="'Velg ' + row.code + ' for valutakalkulator'"
-                    class="cursor-pointer hover:bg-cream/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-petrol/40 focus-visible:ring-inset transition-colors"
-                    :class="fxSelected === row.code && 'bg-petrol/5 ring-1 ring-inset ring-petrol/30'">
-                  <td class="px-5 py-3 font-medium">
-                    <span x-text="row.code + ' (' + row.name + ')'"></span>
-                    <span x-show="fxSelected === row.code" class="ml-1.5 text-[11px] text-petrol font-semibold uppercase tracking-wide">valgt</span>
-                  </td>
-                  <td class="px-5 py-3 text-right text-muted" x-text="fxRates ? ('1 ' + row.code + ' = ' + formatFx(1 / fxRates[row.code]) + ' NOK') : '–'"></td>
-                  <td class="px-5 py-3 text-right font-medium" x-text="fxRates ? (formatFx(100 * fxRates[row.code]) + ' ' + row.code) : '–'"></td>
+                    class="cursor-pointer hover:bg-cream/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-petrol/40 focus-visible:ring-inset transition-colors">
+                  <td class="px-5 py-3 font-medium transition-colors"
+                      :class="fxSelected === row.code && 'bg-petrol/10 text-petrol font-semibold rounded-l-full'"
+                      x-text="row.code + ' (' + row.name + ')'"></td>
+                  <td class="px-5 py-3 text-right transition-colors"
+                      :class="fxSelected === row.code ? 'bg-petrol/10 text-petrol' : 'text-muted'"
+                      x-text="fxRates ? ('1 ' + row.code + ' = ' + formatFx(1 / fxRates[row.code]) + ' NOK') : '–'"></td>
+                  <td class="px-5 py-3 text-right font-medium transition-colors"
+                      :class="fxSelected === row.code && 'bg-petrol/10 text-petrol rounded-r-full'"
+                      x-text="fxRates ? (formatFx(100 * fxRates[row.code]) + ' ' + row.code) : '–'"></td>
                 </tr>
               </template>
             </tbody>
@@ -737,14 +739,8 @@ tailwind.config = {
             </div>
           </div>
 
-          <div class="px-5 py-2.5 bg-cream/50 text-xs text-muted">
-            <template x-if="fxRates && fxDate">
-              <span x-text="'Dagskurser fra ECB (frankfurter.dev), oppdatert ' + fxDate + '. Caches 1 time.'"></span>
-            </template>
-            <template x-if="!fxRates">
-              <span x-text="fxError ? 'Kunne ikke hente oppdaterte kurser – sjekk kurser for avreise.' : 'Henter oppdaterte kurser …'"></span>
-            </template>
-          </div>
+          <div x-show="!fxRates" class="px-5 py-2.5 bg-cream/50 text-xs text-muted"
+               x-text="fxError ? 'Kunne ikke hente oppdaterte kurser – sjekk kurser for avreise.' : 'Henter oppdaterte kurser …'"></div>
         </div>
       </div>
 
