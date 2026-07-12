@@ -472,7 +472,23 @@ Hjemreisen inkluderer opplevelsesstoppene Zugspitze, Braunlage (Harz), Hamburg o
 
 **Valuta:**
 - Kroatia bruker EUR siden 1. januar 2023 — ingen valutaveksling nødvendig.
-- Østerrike og Slovenia: EUR. Danmark: DKK.
+- Østerrike og Slovenia: EUR. Danmark: DKK. Tsjekkia: CZK.
+- Valutakurser-kortet i `index.html` henter nå **live dagskurser** (ECB via frankfurter.dev, 1 times cache) og har en **kalkulator**: velg valuta ved å trykke på en rad, skriv inn beløp, og få det konvertert til NOK.
+
+**Promillegrenser (generell grense for erfarne førere):**
+
+| Land | Promillegrense |
+|------|----------------|
+| Norge | 0,2 ‰ |
+| Danmark | 0,5 ‰ |
+| Tyskland | 0,5 ‰ |
+| Tsjekkia | 0,0 ‰ |
+| Østerrike | 0,5 ‰ |
+| Slovenia | 0,5 ‰ |
+| Kroatia | 0,5 ‰ |
+| Italia | 0,5 ‰ |
+
+> Tsjekkia har nulltoleranse. Flere land har strengere grense (0,0–0,1 ‰) for ferske, unge og profesjonelle sjåfører — f.eks. Kroatia 0,0 ‰ for førere 18–24 år, og Italia/Slovenia 0,0 ‰ de tre første årene. Verifisert mot Wikipedia «Drunk driving law by country» (juli 2026). Kjør aldri i tvil.
 
 **Hastighetsbegrensninger med campingvogn** (for vår kombinasjon — Knaus Sport 400 LK over 750 kg tillatt totalvekt):
 
@@ -499,6 +515,7 @@ Hjemreisen inkluderer opplevelsesstoppene Zugspitze, Braunlage (Harz), Hamburg o
 
 | Dato | Endring | Av |
 | --- | --- | --- |
+| 2026-07-12 | **Praktisk info — to nye funksjoner**: (1) Nytt **Promillegrenser**-kort med tabell over tillatt promille i de 8 landene ruten går gjennom (Norge 0,2 ‰, Tsjekkia 0,0 ‰, øvrige 0,5 ‰), verifisert mot kilde. (2) **Valutakurser** viser nå **live dagskurser** (ECB via frankfurter.dev, med open.er-api.com som fallback, 1 times localStorage-cache i stedet for hardkodede kurser) og har fått en **valutakalkulator**: velg valuta ved å trykke på en tabellrad, skriv inn et beløp, og se det konvertert til NOK. | Claude |
 | 2026-06-25 | **Stopp 10 bekreftet + Istria-bompenger**: (1) Dolomiten Camping Amlacherhof — ordrebekreftelse mottatt (ref. 18998646): status «mottatt, avventer bekreftelse» → **bekreftet**. Bekreftede tider: ankomst 11:00–22:00, avreise 08:00–10:00. Depositum 54,80 € betalt med kort; rest + kurtaks (5,20 €) + miljøavgift (3 €) på stedet. Pre-Check-In (deskline) anbefalt. Beskrivelsen rettet («~4t balansert» → turens lengste etappe ~5t 22min). (2) §4 «Praktisk info»: Kroatia-bompengelinja oppdatert til faktisk innreise via **A9 Istarski ipsilon** (BINA Istra, ~0,10 €/km kat. II med campingvogn) i stedet for den forkastede Zagreb–Split-ruten. | Claude |
 | 2026-06-25 | **Dok-opprydding (ikke-valgte campingplasser)**: (1) Stopp 7 — fjernet «Vurderte alternativer»-tabellen (Graz/Schwarzlsee/Camp Sulmsee) siden Graz er booket og bekreftet. (2) §4 «Foreslåtte campingplasser i Kroatia — 10 alternativer» — fjernet hele campingplasslisten; 9 av 10 hørte til den forkastede lengre Kroatia-ruten (Plitvice/Krka/Split/Trogir/Pula osv.), og Rovinj er allerede detaljert i eget stoppavsnitt. Beholdt den praktiske infoen (vignetter, valuta, fartsgrenser), nå omdøpt til §4 «Praktisk info». | Claude |
 | 2026-06-25 | **Stopp 7 Graz booket**: Reisemobil-Stellplatz / Camping Central Graz bekreftet via Reservia — ref. **D9590A9F** (FTG und PICAD Graz GnbR). Comfort Caravan Pitch, 13.–14. juli, 1 natt, 1 plass. Reservasjonsgebyr **7 € kontant på stedet**, reg.nr. RA43955. NB: reservert plass holdes kun til **kl. 20:00** — ankomst før det. Bookingstatus Nei → Ja; innsjekk-/tipstekster oppdatert. | Claude |

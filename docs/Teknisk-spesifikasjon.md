@@ -54,7 +54,7 @@ Krav til kartvisning av reiseruten:
 
 ### 2.4 Budsjett og økonomi
 - Estimert kostnad per kategori (drivstoff, overnatting, mat, aktiviteter)
-- Valutainformasjon for ulike land med vekslingskurs mot NOK
+- Valutainformasjon for ulike land med vekslingskurs mot NOK — **live dagskurser** (se §2.7 Valutakurser og kalkulator), ikke hardkodet
 - Big Mac Index for ulike land (fra worldpopulationreview.com) for å lettere forstå kostnadsnivået i landet.
 
 ### 2.5 Praktisk informasjon
@@ -64,6 +64,7 @@ Referanseinformasjon som er nyttig underveis:
 - Forsikringsinformasjon
 - Bompenger, vignetter, miljøsoner
 - Fartsbegrensninger med henger per land
+- **Promillegrenser per land** — tabell over tillatt promille (‰) i de 8 landene ruten går gjennom. Eget accordion-kort etter Fartsgrenser, synlig i begge moduser.
 - Campingplass-regler og sjekk-inn/ut-tider
 
 ### 2.6 Værvarsel
@@ -88,6 +89,19 @@ Værvarsel for hvert overnattingssted, hentet ved sideåpning fra **Open-Meteo**
 - Ved nettverksfeil eller API-feil brukes eventuell eldre cache uavhengig av alder. Hvis ingen cache finnes, vises «ikke tilgjengelig» overalt. Ingen feilmelding vises til bruker.
 
 **Mock-modus:** En `weatherMock`-flagg på Alpine-komponenten kan settes til `true` for å bygge deterministisk mock-data som dekker alle 10 visningskategorier — brukes ved utvikling/UI-verifisering uten å treffe API-et.
+
+### 2.7 Valutakurser og kalkulator
+Valutakurser-kortet henter **live dagskurser** ved sideåpning i stedet for hardkodede verdier, etter samme hente-/cache-mønster som værvarselet (§2.6).
+
+**Datakilde:**
+- Primær: **frankfurter.dev** (`https://api.frankfurter.dev/v1/latest?base=NOK&symbols=EUR,DKK,CZK`) — ECB-dagskurser, gratis, ingen API-nøkkel, CORS-støtte. Returnerer `{ base, date, rates: { EUR, DKK, CZK } }` der hver kurs er utenlandsk valuta per 1 NOK.
+- Fallback ved feil: **open.er-api.com** (`https://open.er-api.com/v6/latest/NOK`) — samme retning (rates per NOK).
+
+**Hentestrategi (`loadFxRates()`):** Kurser lagres i `localStorage` (nøkkel `sommerferie2026-fx-v1`) med **1 times TTL** — ny henting kun hvis cachen er eldre. Ved nettverks-/API-feil brukes eventuell eldre cache; finnes ingen cache settes `fxError` og tabellen viser en diskret melding om å sjekke kurser før avreise. Ingen blokkerende feilmelding.
+
+**Tabell:** De tre radene (EUR/DKK/CZK) er datadrevet via `x-for` over `fxRows`. «Kurs»-kolonnen viser `1 X = (1/rate) NOK`, «100 NOK =»-kolonnen viser `100·rate X`. Tall formateres med `formatFx()` (norsk locale, 0 desimaler ≥ 100, ellers 2).
+
+**Kalkulator:** Under tabellen. Hver tabellrad er valgbar (`role=button`, tastaturstøtte, `aria-pressed`) og setter `fxSelected`. Inndatafelt (`type=number`, `x-model.number="fxAmount"`) til venstre; utdata til høyre viser `fxConverted` = `fxAmount / rate` (utenlandsk beløp → NOK) via computed getter. Tomt/ugyldig felt eller manglende kurser gir `–`.
 
 **Kreditering:** Datakilde nevnes diskret i tabellseksjonen («Værdata: Open-Meteo»).
 
@@ -275,6 +289,7 @@ Her kan vi legge idéer som kan vurderes senere, men som foreløpig ikke skal in
 | Dato | Endring | Av |
 | --- | --- | --- |
 | 2026-07-12 | §2.6 Værvarsel: cache-nøkkel bumpet `sommerferie2026-weather-v3` → `-v4`. Etter forrige endring (ekte vær for passerte dager) beholdt enheter med en under-1-time gammel v3-cache fortsatt den gamle blobben — skrevet av den forrige koden som klippet `start_date` til «i dag» — der passerte dager var `null` og viste strek. Siden datformen er uendret kunne ikke `loadWeather` skille gammelt fra nytt innhold, så cachen ble servert direkte uten ny henting. Bump til v4 tvinger fram én ny henting på alle enheter, som nå fyller passerte dager med ekte observert vær (samme mønster som tidligere v1→v2→v3-bumper ved utdatert cache-innhold). | Claude |
+| 2026-07-12 | **To nye funksjoner i Praktisk info.** (1) Nytt **Promillegrenser**-kort (§2.5) etter Fartsgrenser, synlig i begge moduser: enkel tabell over generell promillegrense i de 8 landene ruten går gjennom (Norge 0,2 ‰, Tsjekkia 0,0 ‰ nulltoleranse, øvrige 0,5 ‰), med footnote om strengere grenser for ferske/unge/profesjonelle sjåfører. Verdier verifisert mot kilde. (2) **Valutakurser** (ny §2.7) henter nå **live ECB-dagskurser** fra frankfurter.dev (fallback open.er-api.com) ved sideåpning med 1 times `localStorage`-cache (`sommerferie2026-fx-v1`) i stedet for hardkodede kurser — samme hente-/cache-mønster som værvarselet. Tabellen er datadrevet via `x-for` over `fxRows`, og under den ligger en **valutakalkulator**: velg valuta ved å klikke en rad (`fxSelected`, tastaturtilgjengelig), skriv inn beløp (`fxAmount`), og se det konvertert til NOK via computed getter `fxConverted` (`beløp / rate`). Nye hjelpere: `fetchFxRates`, `saveFxCache`, `loadFxCache`, `applyFxData`, `loadFxRates`, `formatFx`; `loadFxRates()` kalles i `init()`. | Claude |
 | 2026-07-12 | §2.6 Værvarsel, to forbedringer i detaljtabellen per stopp. (1) Raden for dagens dato utheves nå diskré med `bg-sunshine/10` (samme aksent som aktivt stopp-kort og «I dag»-markører) slik at blikket lettere finner i dag. Ny delt getter `todayStr` (lokal dato `YYYY-MM-DD`) erstatter inline-`toISOString()`-beregninger; radbindingen er `:class="date === todayStr && 'bg-sunshine/10'"`. (2) Passerte reisedager viste tidligere kun grå strek fordi `fetchWeatherForStop` klippet `start_date` til «i dag», så Open-Meteo aldri ble spurt om fortiden. Testing viste at forecast-endepunktet faktisk returnerer ekte observerte verdier ~92 dager tilbake — `start_date` settes nå til reisens første dag, klippet til en trygg nedre grense på 90 dager (`today − 90 dager`) for å holde seg innenfor API-ets tillatte vindu og unngå «out of allowed range»-feil. Passerte dager viser dermed ekte observert vær (ikon + temperatur) i stedet for strek. Ingen cache-endring nødvendig; eksisterende `sommerferie2026-weather-v3` beholdes. | Claude |
 | 2026-07-03 | Kvalitetssikring av alle kartpinner: campingplass-pinnene i stopp-headerne pekte tidligere kun på en gateadresse (uten bedriftsnavn) og traff derfor ofte feil sted i Google Maps — f.eks. landet Hirtshals-pinnen på boliger i gaten «Kystvejen» (uten husnummer) og Graz-pinnen på det offentlige badet «Bad Straßgang» i Martinhofstraße 3. Ny hjelper `campingMapsQuery(c)` bygger nå et søk som lander på selve virksomheten: bedriftsnavn + ren adresse, der parenteser («(ved havet …)») og tankestrek-merknader («— avgang kl. 17:35») strippes bort, med fallback til lat/lng. Brukes av `getMapsUrl` i begge moduser (forbedrer også navigasjonsnøyaktigheten underveis). Alle 15 campingplasser/ferger verifisert mot eksterne kilder (offisielle nettsteder, ADAC/PiNCAMP, promobil, park4night m.fl.). Rettet dataafeil: Camping Island Bamberg hadde feil adresse «Campinginsel, 96052 Bamberg» → korrigert til verifisert «Am Campingplatz 1, 96049 Bamberg» (vises også i stoppdetaljene). Aktivitetspinnene inneholdt allerede stedsnavn og var korrekte. | Claude |
 | 2026-07-03 | Kartikon-lenkene («Naviger i Google Maps») i stopp-headere og aktivitetsrader skiller nå på modus: i underveis-modus starter de fortsatt navigasjon direkte (`maps/dir/...&travelmode=driving`, evt. campingplassens `navUrl`), mens de i planleggingsmodus kun åpner Google Maps med stedet valgt (`maps/search/?api=1&query=...`) uten å starte navigasjon. `getMapsUrl` og `getActivityMapsUrl` er nå modusbevisste. | Claude |

@@ -694,24 +694,57 @@ tailwind.config = {
               </tr>
             </thead>
             <tbody class="divide-y divide-sand/30">
-              <tr class="hover:bg-cream/30">
-                <td class="px-5 py-3 font-medium">EUR (Euro)</td>
-                <td class="px-5 py-3 text-right text-muted">1 EUR = ~11,50 NOK</td>
-                <td class="px-5 py-3 text-right font-medium">~8,70 EUR</td>
-              </tr>
-              <tr class="hover:bg-cream/30">
-                <td class="px-5 py-3 font-medium">DKK (Danske kroner)</td>
-                <td class="px-5 py-3 text-right text-muted">1 DKK = ~1,55 NOK</td>
-                <td class="px-5 py-3 text-right font-medium">~64,50 DKK</td>
-              </tr>
-              <tr class="hover:bg-cream/30">
-                <td class="px-5 py-3 font-medium">CZK (Tsjekkiske koruna)</td>
-                <td class="px-5 py-3 text-right text-muted">1 CZK = ~0,47 NOK</td>
-                <td class="px-5 py-3 text-right font-medium">~213 CZK</td>
-              </tr>
+              <template x-for="row in fxRows" :key="row.code">
+                <tr role="button" tabindex="0"
+                    @click="fxSelected = row.code"
+                    @keydown.enter.prevent="fxSelected = row.code"
+                    @keydown.space.prevent="fxSelected = row.code"
+                    :aria-pressed="fxSelected === row.code"
+                    :aria-label="'Velg ' + row.code + ' for valutakalkulator'"
+                    class="cursor-pointer hover:bg-cream/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-petrol/40 focus-visible:ring-inset transition-colors"
+                    :class="fxSelected === row.code && 'bg-petrol/5 ring-1 ring-inset ring-petrol/30'">
+                  <td class="px-5 py-3 font-medium">
+                    <span x-text="row.code + ' (' + row.name + ')'"></span>
+                    <span x-show="fxSelected === row.code" class="ml-1.5 text-[11px] text-petrol font-semibold uppercase tracking-wide">valgt</span>
+                  </td>
+                  <td class="px-5 py-3 text-right text-muted" x-text="fxRates ? ('1 ' + row.code + ' = ' + formatFx(1 / fxRates[row.code]) + ' NOK') : '–'"></td>
+                  <td class="px-5 py-3 text-right font-medium" x-text="fxRates ? (formatFx(100 * fxRates[row.code]) + ' ' + row.code) : '–'"></td>
+                </tr>
+              </template>
             </tbody>
           </table>
-          <div class="px-5 py-2.5 bg-cream/50 text-xs text-muted">Omtrentlige kurser. Sjekk oppdaterte kurser for avreise.</div>
+
+          <!-- Valutakalkulator -->
+          <div class="border-t border-sand/50 px-5 py-4">
+            <div class="flex flex-col sm:flex-row gap-3 sm:items-end">
+              <div class="flex-1 min-w-0">
+                <label :for="'fx-amount-input'" class="block text-xs text-muted uppercase tracking-wider font-medium mb-1">
+                  <span x-text="'Beløp i ' + fxSelected"></span>
+                </label>
+                <input id="fx-amount-input" type="number" inputmode="decimal" min="0" step="any"
+                       x-model.number="fxAmount"
+                       placeholder="0"
+                       class="w-full border border-sand/60 rounded-lg px-3 py-2 text-sm text-charcoal bg-white focus:outline-none focus:ring-2 focus:ring-petrol/40 focus:border-petrol/40">
+                <p class="text-[11px] text-muted mt-1">Trykk på en rad i tabellen for å velge valuta.</p>
+              </div>
+              <svg class="hidden sm:block w-5 h-5 text-muted flex-shrink-0 mb-2.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+              </svg>
+              <div class="flex-1 min-w-0 bg-cream/40 rounded-lg px-4 py-2.5 border border-sand/40">
+                <p class="text-xs text-muted uppercase tracking-wider font-medium mb-0.5">Beløp i NOK</p>
+                <p class="font-heading text-xl text-petrol" x-text="fxConverted === null ? '–' : (formatFx(fxConverted) + ' NOK')"></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="px-5 py-2.5 bg-cream/50 text-xs text-muted">
+            <template x-if="fxRates && fxDate">
+              <span x-text="'Dagskurser fra ECB (frankfurter.dev), oppdatert ' + fxDate + '. Caches 1 time.'"></span>
+            </template>
+            <template x-if="!fxRates">
+              <span x-text="fxError ? 'Kunne ikke hente oppdaterte kurser – sjekk kurser for avreise.' : 'Henter oppdaterte kurser …'"></span>
+            </template>
+          </div>
         </div>
       </div>
 
@@ -878,6 +911,76 @@ tailwind.config = {
           </tbody>
         </table>
         <div class="px-5 py-2.5 bg-cream/50 text-xs text-muted">Alle hastigheter i km/t med campingvogn. *Østerrike/Slovenia: 80 km/t motorvei med henger. *Kroatia: 80 km/t motorvei med henger over 3,5 t totalvekt. *Italia: 80 km/t motorvei (autostrada) med henger. *Tyskland: Ingen generell fartsgrense uten henger, men 80 km/t med campingvogn.</div>
+        </div>
+      </div>
+
+      <!-- Promillegrenser -->
+      <div class="bg-white rounded-xl border border-sand/50 overflow-hidden">
+        <div role="button" tabindex="0"
+             @click="toggleBudsjett('promille')"
+             @keydown.enter.prevent="toggleBudsjett('promille')"
+             @keydown.space.prevent="toggleBudsjett('promille')"
+             :aria-expanded="expandedBudsjett === 'promille'"
+             aria-controls="budsjett-promille-content"
+             class="w-full flex items-center justify-between gap-3 px-5 py-4 cursor-pointer hover:bg-cream/50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-petrol/40 focus-visible:ring-inset">
+          <div class="flex-1 min-w-0">
+            <h3 class="font-heading text-lg text-petrol">Promillegrenser</h3>
+            <p class="text-xs text-muted mt-0.5">Tillatt promille per land</p>
+          </div>
+          <svg class="w-5 h-5 text-muted transition-transform duration-200 flex-shrink-0"
+               :class="expandedBudsjett === 'promille' && 'rotate-180'"
+               fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </div>
+        <div x-show="expandedBudsjett === 'promille'" id="budsjett-promille-content" role="region"
+             x-transition:enter="transition ease-out duration-200"
+             x-transition:enter-start="opacity-0 -translate-y-2"
+             x-transition:enter-end="opacity-100 translate-y-0"
+             class="border-t border-sand/50">
+        <table class="w-full text-sm">
+          <thead class="bg-cream/70">
+            <tr>
+              <th scope="col" class="text-left px-5 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Land</th>
+              <th scope="col" class="text-center px-5 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Promillegrense</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-sand/30">
+            <tr class="hover:bg-cream/30">
+              <td class="px-5 py-3 font-medium">Norge</td>
+              <td class="px-5 py-3 text-center">0,2 &permil;</td>
+            </tr>
+            <tr class="hover:bg-cream/30">
+              <td class="px-5 py-3 font-medium">Danmark</td>
+              <td class="px-5 py-3 text-center">0,5 &permil;</td>
+            </tr>
+            <tr class="hover:bg-cream/30">
+              <td class="px-5 py-3 font-medium">Tyskland</td>
+              <td class="px-5 py-3 text-center">0,5 &permil;</td>
+            </tr>
+            <tr class="hover:bg-cream/30">
+              <td class="px-5 py-3 font-medium">Tsjekkia</td>
+              <td class="px-5 py-3 text-center"><span class="font-semibold text-petrol">0,0 &permil;</span></td>
+            </tr>
+            <tr class="hover:bg-cream/30">
+              <td class="px-5 py-3 font-medium">Østerrike</td>
+              <td class="px-5 py-3 text-center">0,5 &permil;</td>
+            </tr>
+            <tr class="hover:bg-cream/30">
+              <td class="px-5 py-3 font-medium">Slovenia</td>
+              <td class="px-5 py-3 text-center">0,5 &permil;</td>
+            </tr>
+            <tr class="hover:bg-cream/30">
+              <td class="px-5 py-3 font-medium">Kroatia</td>
+              <td class="px-5 py-3 text-center">0,5 &permil;</td>
+            </tr>
+            <tr class="hover:bg-cream/30">
+              <td class="px-5 py-3 font-medium">Italia</td>
+              <td class="px-5 py-3 text-center">0,5 &permil;</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="px-5 py-2.5 bg-cream/50 text-xs text-muted">Generell grense for erfarne førere. Tsjekkia har nulltoleranse (0,0 &permil;). Flere land har strengere grense (ofte 0,0&ndash;0,1 &permil;) for ferske, unge og profesjonelle sjåfører &mdash; Kroatia 0,0 &permil; for førere 18&ndash;24 år, Italia/Slovenia 0,0 &permil; de tre første årene. Dobbeltsjekk før avreise. Kjør aldri i tvil.</div>
         </div>
       </div>
 
@@ -1493,6 +1596,100 @@ function ferieApp() {
     weatherTtlMs: 60 * 60 * 1000,
     weatherStorageKey: 'sommerferie2026-weather-v4',
     weatherHours: ['09', '12', '15', '18', '21'],
+
+    // ===== VALUTAKURSER / KALKULATOR =====
+    fxRows: [
+      { code: 'EUR', name: 'Euro' },
+      { code: 'DKK', name: 'Danske kroner' },
+      { code: 'CZK', name: 'Tsjekkiske koruna' },
+    ],
+    fxRates: null,        // { EUR, DKK, CZK } = utenlandsk valuta per 1 NOK
+    fxDate: null,         // dato for kursene (fra API)
+    fxFetchedAt: null,
+    fxError: false,
+    fxTtlMs: 60 * 60 * 1000,   // 1 time
+    fxStorageKey: 'sommerferie2026-fx-v1',
+    fxSelected: 'EUR',
+    fxAmount: null,
+
+    get fxConverted() {
+      // Utenlandsk beløp → NOK. fxRates[code] = valuta per NOK, så NOK = beløp / rate.
+      if (this.fxAmount === null || this.fxAmount === '' || Number.isNaN(this.fxAmount)) return null;
+      if (!this.fxRates || !this.fxRates[this.fxSelected]) return null;
+      return this.fxAmount / this.fxRates[this.fxSelected];
+    },
+
+    formatFx(value) {
+      if (value === null || value === undefined || Number.isNaN(value)) return '–';
+      const digits = Math.abs(value) >= 100 ? 0 : 2;
+      return value.toLocaleString('no-NO', { minimumFractionDigits: digits, maximumFractionDigits: digits });
+    },
+
+    async fetchFxRates() {
+      // Primær: frankfurter.dev (ECB, nøkkelfri). Returnerer { rates: { EUR, DKK, CZK }, date }.
+      try {
+        const url = new URL('https://api.frankfurter.dev/v1/latest');
+        url.searchParams.set('base', 'NOK');
+        url.searchParams.set('symbols', 'EUR,DKK,CZK');
+        const res = await fetch(url.toString());
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const json = await res.json();
+        if (!json.rates || !json.rates.EUR) throw new Error('mangler kurser');
+        return { rates: { EUR: json.rates.EUR, DKK: json.rates.DKK, CZK: json.rates.CZK }, date: json.date };
+      } catch (e) {
+        // Fallback: open.er-api.com (base NOK, rates-objekt med alle valutaer)
+        const res = await fetch('https://open.er-api.com/v6/latest/NOK');
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const json = await res.json();
+        if (!json.rates || !json.rates.EUR) throw new Error('mangler kurser (fallback)');
+        const date = json.time_last_update_utc ? json.time_last_update_utc.slice(5, 16) : null;
+        return { rates: { EUR: json.rates.EUR, DKK: json.rates.DKK, CZK: json.rates.CZK }, date };
+      }
+    },
+
+    saveFxCache(data) {
+      try {
+        localStorage.setItem(this.fxStorageKey, JSON.stringify({ fetchedAt: Date.now(), data }));
+      } catch (e) { /* ignorer kvotefeil */ }
+    },
+
+    loadFxCache() {
+      try {
+        const raw = localStorage.getItem(this.fxStorageKey);
+        if (!raw) return null;
+        return JSON.parse(raw);
+      } catch (e) { return null; }
+    },
+
+    applyFxData(data) {
+      this.fxRates = data.rates;
+      this.fxDate = data.date;
+    },
+
+    async loadFxRates() {
+      const cached = this.loadFxCache();
+      const fresh = cached && (Date.now() - cached.fetchedAt) < this.fxTtlMs;
+      if (fresh) {
+        this.applyFxData(cached.data);
+        this.fxFetchedAt = cached.fetchedAt;
+        return;
+      }
+      try {
+        const data = await this.fetchFxRates();
+        this.applyFxData(data);
+        this.fxFetchedAt = Date.now();
+        this.fxError = false;
+        this.saveFxCache(data);
+      } catch (e) {
+        console.warn('Valutahenting feilet', e);
+        if (cached) {
+          this.applyFxData(cached.data);
+          this.fxFetchedAt = cached.fetchedAt;
+        } else {
+          this.fxError = true;
+        }
+      }
+    },
 
     get todayStr() {
       // Lokal dato (YYYY-MM-DD), konsistent med fmt() i datesForStop/fetchWeatherForStop
@@ -2581,6 +2778,9 @@ function ferieApp() {
 
       // Last værvarsel (cache eller fetch)
       this.loadWeather();
+
+      // Last valutakurser (cache eller fetch, 1 times TTL)
+      this.loadFxRates();
 
       // Initialiser kartet etter DOM er klar
       this.$nextTick(() => {
