@@ -736,6 +736,87 @@ tailwind.config = {
         </div>
       </div>
 
+      <!-- Tipsekultur -->
+      <div class="bg-white rounded-xl border border-sand/50 overflow-hidden">
+        <div role="button" tabindex="0"
+             @click="toggleBudsjett('tips')"
+             @keydown.enter.prevent="toggleBudsjett('tips')"
+             @keydown.space.prevent="toggleBudsjett('tips')"
+             :aria-expanded="expandedBudsjett === 'tips'"
+             aria-controls="budsjett-tips-content"
+             class="w-full flex items-center justify-between gap-3 px-5 py-4 cursor-pointer hover:bg-cream/50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-petrol/40 focus-visible:ring-inset">
+          <div class="flex-1 min-w-0">
+            <h3 class="font-heading text-lg text-petrol">Tipsekultur</h3>
+            <p class="text-xs text-muted mt-0.5">Vanlig tips per land</p>
+          </div>
+          <svg class="w-5 h-5 text-muted transition-transform duration-200 flex-shrink-0"
+               :class="expandedBudsjett === 'tips' && 'rotate-180'"
+               fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </div>
+        <div x-show="expandedBudsjett === 'tips'" id="budsjett-tips-content" role="region"
+             x-transition:enter="transition ease-out duration-200"
+             x-transition:enter-start="opacity-0 -translate-y-2"
+             x-transition:enter-end="opacity-100 translate-y-0"
+             class="border-t border-sand/50">
+        <div class="relative overflow-x-auto scroll-fade-right">
+        <table class="w-full text-sm min-w-[620px]">
+          <thead class="bg-cream/70">
+            <tr>
+              <th scope="col" class="text-left px-5 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Land</th>
+              <th scope="col" class="text-center px-3 py-3 text-xs text-petrol uppercase tracking-wider font-semibold whitespace-nowrap">Prosentsats</th>
+              <th scope="col" class="text-left px-5 py-3 text-xs text-petrol uppercase tracking-wider font-semibold">Detaljer og spesielle hensyn</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-sand/30">
+            <tr class="hover:bg-cream/30 align-top">
+              <td class="px-5 py-3 font-medium whitespace-nowrap">Norge</td>
+              <td class="px-3 py-3 text-center whitespace-nowrap">5&ndash;10 %</td>
+              <td class="px-5 py-3 text-muted">Tips er frivillig og ikke forventet. Rund opp eller gi 5&ndash;10 % på restaurant ved god service. Ingen tips på kafé, bar eller taxi.</td>
+            </tr>
+            <tr class="hover:bg-cream/30 align-top">
+              <td class="px-5 py-3 font-medium whitespace-nowrap">Danmark</td>
+              <td class="px-3 py-3 text-center whitespace-nowrap">0 %</td>
+              <td class="px-5 py-3 text-muted">Service er inkludert i prisen ved lov &mdash; tips forventes ikke. Rund gjerne opp eller legg igjen småpenger ved ekstra god service.</td>
+            </tr>
+            <tr class="hover:bg-cream/30 align-top">
+              <td class="px-5 py-3 font-medium whitespace-nowrap">Tyskland</td>
+              <td class="px-3 py-3 text-center whitespace-nowrap">5&ndash;10 %</td>
+              <td class="px-5 py-3 text-muted">«Trinkgeld» er vanlig. Si totalbeløpet du vil betale (inkl. tips) til servitøren når du betaler &mdash; ikke la penger ligge igjen på bordet.</td>
+            </tr>
+            <tr class="hover:bg-cream/30 align-top">
+              <td class="px-5 py-3 font-medium whitespace-nowrap">Tsjekkia</td>
+              <td class="px-3 py-3 text-center whitespace-nowrap">10 %</td>
+              <td class="px-5 py-3 text-muted">Rund opp eller gi ~10 % på restaurant. Oppgi totalsummen inkl. tips når du betaler. Sjekk om «service» allerede står på regningen i turistområder.</td>
+            </tr>
+            <tr class="hover:bg-cream/30 align-top">
+              <td class="px-5 py-3 font-medium whitespace-nowrap">Østerrike</td>
+              <td class="px-3 py-3 text-center whitespace-nowrap">5&ndash;10 %</td>
+              <td class="px-5 py-3 text-muted">Som i Tyskland: rund opp eller gi 5&ndash;10 %. Gi tipset direkte til servitøren når du betaler, kontant er foretrukket.</td>
+            </tr>
+            <tr class="hover:bg-cream/30 align-top">
+              <td class="px-5 py-3 font-medium whitespace-nowrap">Slovenia</td>
+              <td class="px-3 py-3 text-center whitespace-nowrap">~10 %</td>
+              <td class="px-5 py-3 text-muted">Ikke obligatorisk, men verdsatt. Rund opp eller gi ~10 % ved god service. Kontant er tryggest &mdash; tips på kort blir ikke alltid videreført.</td>
+            </tr>
+            <tr class="hover:bg-cream/30 align-top">
+              <td class="px-5 py-3 font-medium whitespace-nowrap">Kroatia</td>
+              <td class="px-3 py-3 text-center whitespace-nowrap">10 %</td>
+              <td class="px-5 py-3 text-muted">I turistområder og langs kysten forventes ~10 % på restaurant. Kontant (helst euro) foretrekkes. Sjekk om «service» allerede er lagt til.</td>
+            </tr>
+            <tr class="hover:bg-cream/30 align-top">
+              <td class="px-5 py-3 font-medium whitespace-nowrap">Italia</td>
+              <td class="px-3 py-3 text-center whitespace-nowrap">0&ndash;10 %</td>
+              <td class="px-5 py-3 text-muted">«Coperto» (dekketøysavgift, ~1&ndash;3 € pr. person) er ikke tips. Tips er frivillig &mdash; rund opp eller gi 5&ndash;10 % ved god service. Er «servizio» oppført, er tips allerede inkludert.</td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+        <div class="px-5 py-2.5 bg-cream/50 text-xs text-muted">Prosentsatsene gjelder restaurantbesøk med bordservering og er omtrentlige. Tips er sjelden lovpålagt i disse landene, men verdsettes ved god service. Sjekk alltid regningen for «service»/«coperto»/«servizio» før du legger til tips, og ha litt kontanter tilgjengelig &mdash; kort-tips blir ikke alltid videreført til de ansatte.</div>
+        </div>
+      </div>
+
       <!-- Kostnadsnivå (kun planlegging) -->
       <div x-show="mode === 'planlegging'" class="bg-white rounded-xl border border-sand/50 overflow-hidden">
         <div role="button" tabindex="0"

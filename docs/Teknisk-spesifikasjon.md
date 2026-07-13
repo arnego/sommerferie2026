@@ -65,6 +65,7 @@ Referanseinformasjon som er nyttig underveis:
 - Bompenger, vignetter, miljøsoner
 - Fartsbegrensninger med henger per land
 - **Promillegrenser per land** — tabell over tillatt promille (‰) i de 8 landene ruten går gjennom. Eget accordion-kort etter Fartsgrenser, synlig i begge moduser.
+- **Tipsekultur per land** — tabell over vanlig tips i de 8 landene, med egen kolonne for prosentsats og egen kolonne for detaljer/spesielle hensyn. Eget accordion-kort rett under Valutakurser, synlig i begge moduser.
 - Campingplass-regler og sjekk-inn/ut-tider
 
 ### 2.6 Værvarsel
@@ -116,7 +117,7 @@ Toppmeny med fire seksjoner i rekkefølge:
 1. **Kart** — interaktivt rutekart (Leaflet + OpenStreetMap) med markører for alle stopp. Klikk på markør gir info-popup med kompakt værstrip per dag. GPS-posisjon vises på kartet.
 2. **Reiseplan** — dag/uke-plan der dagens plan fremheves basert på enhetens dato. Ukevis visning med etapper, kjøretid/avstand, aktiviteter, campingplass og værvarsel (kompakt strip i kollapset bar, full tabell i utvidet visning).
 3. **Pakkelister** — fire sjekklister (pakking, campingvogn, før avreise, daglig). Avkryssinger lagres i localStorage. Nullstill-knapp per liste.
-4. **Praktisk info** (samme tittel i begge moduser) — valutatabell med kalkulator (NOK ↔ EUR/DKK/CZK), promillegrenser, fartsgrenser med henger, nødnumre, bompenger/vignetter, miljøsoner. Kostnadsestimatet «Estimert budsjett» ligger i planleggings-seksjonen **Booking & Planlegging**.
+4. **Praktisk info** (samme tittel i begge moduser) — valutatabell med kalkulator (NOK ↔ EUR/DKK/CZK), tipsekultur, promillegrenser, fartsgrenser med henger, nødnumre, bompenger/vignetter, miljøsoner. Kostnadsestimatet «Estimert budsjett» ligger i planleggings-seksjonen **Booking & Planlegging**.
 
 ---
 
@@ -290,6 +291,7 @@ Her kan vi legge idéer som kan vurderes senere, men som foreløpig ikke skal in
 
 | Dato | Endring | Av |
 | --- | --- | --- |
+| 2026-07-13 | **Nytt Tipsekultur-kort (§2.5) i Praktisk info.** Accordion-kort rett under Valutakurser (`toggleBudsjett('tips')` / `expandedBudsjett === 'tips'`), synlig i begge moduser. Statisk tabell over vanlig tips i de 8 landene ruten går gjennom, med tre kolonner: Land, **Prosentsats** (restaurant med bordservering) og **Detaljer og spesielle hensyn**. Tabellen er horisontalt scrollbar på smal skjerm (`min-w-[620px]` + `scroll-fade-right`), med footnote om å sjekke regningen for service/coperto/servizio og ha kontanter tilgjengelig. Ingen ny JS — gjenbruker eksisterende `toggleBudsjett`-mekanikk. | Claude |
 | 2026-07-12 | §2.6 Værvarsel: cache-nøkkel bumpet `sommerferie2026-weather-v3` → `-v4`. Etter forrige endring (ekte vær for passerte dager) beholdt enheter med en under-1-time gammel v3-cache fortsatt den gamle blobben — skrevet av den forrige koden som klippet `start_date` til «i dag» — der passerte dager var `null` og viste strek. Siden datformen er uendret kunne ikke `loadWeather` skille gammelt fra nytt innhold, så cachen ble servert direkte uten ny henting. Bump til v4 tvinger fram én ny henting på alle enheter, som nå fyller passerte dager med ekte observert vær (samme mønster som tidligere v1→v2→v3-bumper ved utdatert cache-innhold). | Claude |
 | 2026-07-12 | **Valutakalkulator forhåndsvelger valuta.** Ved sideåpning settes `fxSelected` til valutaen for landet vi er i på dagens dato — men kun under turen (`todayStatus === 'during'`). Ny hjelper `countryToCurrency()` + getter `currentFxCurrency` mapper `currentStop.country` → valuta (Danmark → DKK, Tsjekkia → CZK, Tyskland/Østerrike/Slovenia/Kroatia → EUR, Norge → ingen). Før avreise og etter hjemkomst er ingen kurs valgt (`fxSelected = null`), labelen viser da «Beløp i valuta» og utdata «–». Standardverdien `fxSelected` endret fra `'EUR'` til `null`. | Claude |
 | 2026-07-12 | **Seksjonsomorganisering.** «Estimert budsjett»-kortet flyttet fra Praktisk info til planleggings-seksjonen **Booking & Planlegging** (som siste kort; kortets egne mode-guard fjernet siden seksjonen alt er planleggings-only). Seksjonstittelen «Budsjett & Praktisk / Praktisk info» er forenklet til alltid **«Praktisk info»** i begge moduser, og den forklarende underteksten («Klikk på en seksjon …» / «Mest brukt underveis …») er fjernet. Menyetiketten i `sections` (desktop + hamburger) endret tilsvarende til «Praktisk info». | Claude |
