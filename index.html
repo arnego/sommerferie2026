@@ -713,7 +713,7 @@ tailwind.config = {
             <div class="flex flex-col sm:flex-row gap-3 sm:items-end">
               <div class="flex-1 min-w-0">
                 <label :for="'fx-amount-input'" class="block text-xs text-muted uppercase tracking-wider font-medium mb-1">
-                  <span x-text="'Beløp i ' + fxSelected"></span>
+                  <span x-text="fxSelected ? ('Beløp i ' + fxSelected) : 'Beløp i valuta'"></span>
                 </label>
                 <input id="fx-amount-input" type="number" inputmode="decimal" min="0" step="any"
                        x-model.number="fxAmount"
@@ -1597,7 +1597,7 @@ function ferieApp() {
     fxError: false,
     fxTtlMs: 60 * 60 * 1000,   // 1 time
     fxStorageKey: 'sommerferie2026-fx-v1',
-    fxSelected: 'EUR',
+    fxSelected: null,
     fxAmount: null,
 
     get fxConverted() {
@@ -1605,6 +1605,20 @@ function ferieApp() {
       if (this.fxAmount === null || this.fxAmount === '' || Number.isNaN(this.fxAmount)) return null;
       if (!this.fxRates || !this.fxRates[this.fxSelected]) return null;
       return this.fxAmount / this.fxRates[this.fxSelected];
+    },
+
+    countryToCurrency(country) {
+      const c = country || '';
+      if (c.includes('Tsjekkia')) return 'CZK';
+      if (c.includes('Danmark')) return 'DKK';        // dekker også «Norge / Danmark»
+      if (/Tyskland|Østerrike|Slovenia|Kroatia/.test(c)) return 'EUR';
+      return null;                                     // Norge = NOK (basisvaluta, ingen rad)
+    },
+
+    get currentFxCurrency() {
+      // Forhåndsvalgt valuta = landet vi er i i dag, kun under turen.
+      if (this.todayStatus !== 'during' || !this.currentStop) return null;
+      return this.countryToCurrency(this.currentStop.country);
     },
 
     formatFx(value) {
@@ -2769,6 +2783,9 @@ function ferieApp() {
 
       // Last valutakurser (cache eller fetch, 1 times TTL)
       this.loadFxRates();
+
+      // Forhåndsvelg valutaen for landet vi er i i dag (kun under turen)
+      this.fxSelected = this.currentFxCurrency;
 
       // Initialiser kartet etter DOM er klar
       this.$nextTick(() => {
