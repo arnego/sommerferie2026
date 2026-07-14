@@ -1198,7 +1198,7 @@ tailwind.config = {
   <!-- ===== SEKSJON: PAKKELISTER ===== -->
   <section id="pakkelister" class="py-12 sm:py-16">
     <div class="max-w-3xl mx-auto px-4 sm:px-6">
-      <h2 class="font-heading text-2xl sm:text-3xl text-petrol mb-8">Pakkelister</h2>
+      <h2 class="font-heading text-2xl sm:text-3xl text-petrol mb-8">Sjekklister</h2>
 
       <!-- Tab-navigasjon -->
       <div class="flex gap-1 mb-6 bg-white rounded-xl p-1.5 border border-sand/50">
@@ -1283,7 +1283,7 @@ function ferieApp() {
       { id: 'reiseplan', label: 'Reiseplan' },
       { id: 'booking', label: 'Booking & Planlegging', planleggingOnly: true },
       { id: 'budsjett', label: 'Praktisk info' },
-      { id: 'pakkelister', label: 'Pakkelister' },
+      { id: 'pakkelister', label: 'Sjekklister' },
     ],
     get visibleSections() {
       return this.sections.filter(s => !s.planleggingOnly || this.mode === 'planlegging');
@@ -1308,7 +1308,8 @@ function ferieApp() {
       { id: 'pakkeliste', label: 'Pakkeliste', shortLabel: 'Pakking', planleggingOnly: true },
       { id: 'campingvogn', label: 'Campingvogn', shortLabel: 'Vogn', planleggingOnly: true },
       { id: 'foravreise', label: 'For avreise', shortLabel: 'Før', planleggingOnly: true },
-      { id: 'daglig', label: 'Daglig sjekkliste', shortLabel: 'Daglig sjekkliste', underveisOnly: true },
+      { id: 'ankomst', label: 'Ankomst', shortLabel: 'Ankomst', underveisOnly: true },
+      { id: 'avreise', label: 'Avreise', shortLabel: 'Avreise', underveisOnly: true },
     ],
     get visibleChecklistTabs() {
       return this.checklistTabs.filter(t => {
@@ -1438,16 +1439,18 @@ function ferieApp() {
         { label: 'Lad alle enheter (telefon, nettbrett, kamera)', done: false, category: 'Forberedelser' },
         { label: 'Pakk kjølebag til fergen', done: false, category: 'Forberedelser' },
       ],
-      daglig: [
-        // Ankomst
+      ankomst: [
         { label: 'Niveller campingvognen', done: false, category: 'Ankomst campingplass' },
         { label: 'Koble til strøm (sjekk spenning)', done: false, category: 'Ankomst campingplass' },
         { label: 'Koble til vann', done: false, category: 'Ankomst campingplass' },
         { label: 'Sjekk gassanlegg', done: false, category: 'Ankomst campingplass' },
+        { label: 'Skru på gassalarm', done: false, category: 'Ankomst campingplass' },
+        { label: 'Legg ut gråvannstank', done: false, category: 'Ankomst campingplass' },
         { label: 'Åpne markise', done: false, category: 'Ankomst campingplass' },
         { label: 'Sett ut campingstoler og bord', done: false, category: 'Ankomst campingplass' },
         { label: 'Registrer dere i resepsjonen', done: false, category: 'Ankomst campingplass' },
-        // Avreise
+      ],
+      avreise: [
         { label: 'Steng vanntilkobling', done: false, category: 'Avreise campingplass' },
         { label: 'Sikre skap og skuffer (lås dører)', done: false, category: 'Avreise campingplass' },
         { label: 'Lukk alle vinduer og takluke', done: false, category: 'Avreise campingplass' },
