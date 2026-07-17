@@ -1,0 +1,52 @@
+<!-- @dsCard group="Components" -->
+<title>Map panel — Feriekartet</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--petrol:#1B4F72;--petrol-deep:#123A56;--cream:#FBF5E6;--sand:#F5DEB3;--sunshine:#F4A621;
+        --ink:#2C3E50;--success:#27AE60;--muted:#607080;--danger:#C0392B}
+  body{margin:0;background:var(--cream);color:var(--ink);font:15px/1.55 Inter,system-ui,sans-serif;padding:40px}
+  h1{font:700 30px/1.15 "Playfair Display",Georgia,serif;margin:0 0 20px}
+  .map{position:relative;width:640px;height:420px;border-radius:16px;overflow:hidden;
+       background:linear-gradient(160deg,#dfe9df 0%,#e9efe2 45%,#cfe0e8 100%);box-shadow:0 2px 10px rgba(27,79,114,.08)}
+  .map svg{position:absolute;inset:0}
+  .pin{position:absolute;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;
+       font:700 12px Inter;color:#fff;transform:translate(-50%,-50%);box-shadow:0 2px 6px rgba(0,0,0,.25)}
+  .visited{background:var(--muted)} .upcoming{background:var(--petrol)}
+  .active{background:var(--sunshine);color:var(--ink)}
+  .active::after{content:"";position:absolute;inset:-7px;border-radius:50%;border:2px solid var(--sunshine);animation:ring 2s infinite}
+  @keyframes ring{to{transform:scale(1.5);opacity:0}} @media(prefers-reduced-motion:reduce){.active::after{animation:none}}
+  .gps{position:absolute;width:14px;height:14px;border-radius:50%;background:#2E86DE;border:3px solid #fff;transform:translate(-50%,-50%);box-shadow:0 0 0 4px rgba(46,134,222,.25)}
+  .pop{position:absolute;left:330px;top:56px;width:250px;background:#fff;border-radius:14px;box-shadow:0 10px 30px rgba(27,79,114,.2);padding:14px}
+  .pop h3{margin:0;font:600 15px Inter;color:var(--petrol);text-decoration:underline;cursor:pointer}
+  .pop p{margin:3px 0 8px;font:500 12px Inter;color:var(--muted)}
+  .pop .wx{display:flex;gap:10px;font:500 12px Inter;color:var(--muted)}
+  .pop .wx b{color:var(--danger)} .pop .wx i{font-style:normal;color:var(--petrol)}
+  .legend{position:absolute;left:12px;bottom:12px;background:rgba(255,255,255,.92);border-radius:10px;padding:9px 12px;display:grid;gap:5px;font:500 12px Inter}
+  .legend span{display:flex;align-items:center;gap:8px}
+  .legend i{width:11px;height:11px;border-radius:50%}
+</style>
+<body>
+  <h1>Map panel</h1>
+  <div class="map" role="img" aria-label="Rutekart med 5 stopp, dagens stopp markert">
+    <svg viewBox="0 0 640 420" fill="none">
+      <path d="M90 70 C 180 90, 240 140, 300 180 S 430 260, 520 330"
+            stroke="#1B4F72" stroke-width="3" stroke-dasharray="10 8" stroke-linecap="round" opacity=".85"/>
+    </svg>
+    <span class="pin visited" style="left:90px;top:70px">1</span>
+    <span class="pin visited" style="left:212px;top:124px">2</span>
+    <span class="pin active"  style="left:300px;top:180px">3</span>
+    <span class="pin upcoming" style="left:420px;top:256px">4</span>
+    <span class="pin upcoming" style="left:520px;top:330px">5</span>
+    <span class="gps" style="left:286px;top:196px" title="Din posisjon"></span>
+    <div class="pop">
+      <h3>Stopp 3 · Camping Pivka Jama</h3>
+      <p>ti 21. – fr 24. juli · 3 netter · booket</p>
+      <div class="wx"><span>ti ☀ <b>27°</b>/<i>14°</i></span><span>on ⛅ <b>24°</b>/<i>13°</i></span><span>to 🌧 <b>19°</b>/<i>12°</i></span></div>
+    </div>
+    <div class="legend">
+      <span><i style="background:var(--muted)"></i>Besøkt</span>
+      <span><i style="background:var(--sunshine)"></i>I dag</span>
+      <span><i style="background:var(--petrol)"></i>Kommende</span>
+    </div>
+  </div>
+</body>

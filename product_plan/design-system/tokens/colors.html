@@ -1,0 +1,53 @@
+<!-- @dsCard group="Tokens" -->
+<title>Colors — Feriekartet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --petrol:#1B4F72; --petrol-deep:#123A56; --sand:#F5DEB3; --cream:#FBF5E6;
+    --sunshine:#F4A621; --ink:#2C3E50; --success:#27AE60; --muted:#607080; --danger:#C0392B;
+    --card:#FFFFFF;
+  }
+  body{margin:0;background:var(--cream);color:var(--ink);font:15px/1.55 Inter,system-ui,sans-serif;padding:40px}
+  h1{font:700 30px/1.15 "Playfair Display",Georgia,serif;margin:0 0 6px}
+  .sub{color:var(--muted);margin:0 0 28px;max-width:56ch}
+  .route{height:14px;margin:0 0 28px;background:
+    radial-gradient(circle 4px at 8px 7px, var(--sunshine) 4px, transparent 5px),
+    radial-gradient(circle 3px at 50% 7px, var(--petrol) 3px, transparent 4px),
+    radial-gradient(circle 4px at calc(100% - 8px) 7px, var(--petrol) 4px, transparent 5px),
+    repeating-linear-gradient(90deg, var(--petrol) 0 10px, transparent 10px 18px) 0 6px/100% 2px no-repeat;}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
+  .swatch{background:var(--card);border-radius:14px;overflow:hidden;box-shadow:0 2px 10px rgba(27,79,114,.08)}
+  .chip{height:86px;position:relative}
+  .chip span{position:absolute;bottom:8px;left:12px;font:600 12px/1 Inter;letter-spacing:.04em;color:#fff;opacity:.92}
+  .chip.light span{color:var(--ink)}
+  .meta{padding:12px 14px}
+  .meta b{display:block;font-size:14px}
+  .meta code{font:12px/1.6 ui-monospace,Menlo,monospace;color:var(--muted)}
+  .meta small{display:block;color:var(--muted)}
+</style>
+<body>
+  <h1>Colors</h1>
+  <p class="sub">Evolved from the sommerferie2026 palette: map-petrol for structure, warm sand and cream for ground, sunshine for “today” and calls to action. Every text/background pair below is WCAG&nbsp;AA-checked in its stated role.</p>
+  <div class="route" role="presentation"></div>
+  <div class="grid">
+    <div class="swatch"><div class="chip" style="background:var(--petrol)"><span>#1B4F72</span></div>
+      <div class="meta"><b>Petrol — primary</b><code>--petrol</code><small>Navigation, links, map route, structure</small></div></div>
+    <div class="swatch"><div class="chip" style="background:var(--petrol-deep)"><span>#123A56</span></div>
+      <div class="meta"><b>Petrol deep</b><code>--petrol-deep</code><small>Hover states, map polyline shadow</small></div></div>
+    <div class="swatch"><div class="chip light" style="background:var(--sand)"><span>#F5DEB3</span></div>
+      <div class="meta"><b>Sand — secondary</b><code>--sand</code><small>Section backgrounds, highlighted rows</small></div></div>
+    <div class="swatch"><div class="chip light" style="background:var(--cream);box-shadow:inset 0 0 0 1px #eadfc4"><span>#FBF5E6</span></div>
+      <div class="meta"><b>Cream — background</b><code>--cream</code><small>Page ground, sunlight-readable</small></div></div>
+    <div class="swatch"><div class="chip" style="background:var(--sunshine)"><span>#F4A621</span></div>
+      <div class="meta"><b>Sunshine — accent</b><code>--sunshine</code><small>“Today” markers, primary CTA, active stop</small></div></div>
+    <div class="swatch"><div class="chip" style="background:var(--ink)"><span>#2C3E50</span></div>
+      <div class="meta"><b>Ink — text</b><code>--ink</code><small>Body text on cream/sand/white</small></div></div>
+    <div class="swatch"><div class="chip" style="background:var(--success)"><span>#27AE60</span></div>
+      <div class="meta"><b>Success</b><code>--success</code><small>Confirmed bookings, verified badge</small></div></div>
+    <div class="swatch"><div class="chip" style="background:var(--muted)"><span>#607080</span></div>
+      <div class="meta"><b>Muted</b><code>--muted</code><small>Meta text, visited stops (AA on cream)</small></div></div>
+    <div class="swatch"><div class="chip" style="background:var(--danger)"><span>#C0392B</span></div>
+      <div class="meta"><b>Danger</b><code>--danger</code><small>Errors, max temperature, destructive</small></div></div>
+  </div>
+</body>

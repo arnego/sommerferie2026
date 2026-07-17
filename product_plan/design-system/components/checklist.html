@@ -1,0 +1,51 @@
+<!-- @dsCard group="Components" -->
+<title>Checklist — Feriekartet</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--petrol:#1B4F72;--cream:#FBF5E6;--sand:#F5DEB3;--sunshine:#F4A621;--ink:#2C3E50;
+        --success:#27AE60;--muted:#607080}
+  body{margin:0;background:var(--cream);color:var(--ink);font:15px/1.55 Inter,system-ui,sans-serif;padding:40px;max-width:560px}
+  h1{font:700 30px/1.15 "Playfair Display",Georgia,serif;margin:0 0 20px}
+  .tabs{display:flex;gap:8px;margin-bottom:14px}
+  .tab{border:0;background:#fff;border-radius:999px;padding:10px 18px;font:600 14px Inter;color:var(--petrol);cursor:pointer;box-shadow:inset 0 0 0 1.5px var(--petrol)}
+  .tab.on{background:var(--petrol);color:#fff}
+  .tab:focus-visible{outline:3px solid var(--sunshine);outline-offset:2px}
+  .card{background:#fff;border-radius:16px;box-shadow:0 2px 10px rgba(27,79,114,.08);padding:8px 0}
+  .prog{display:flex;align-items:center;gap:12px;padding:14px 18px 8px}
+  .prog b{font:600 14px Inter}
+  .bar{flex:1;height:8px;border-radius:999px;background:var(--sand);overflow:hidden}
+  .bar i{display:block;height:100%;width:62%;background:var(--success);border-radius:999px}
+  .prog small{font:600 12px ui-monospace,monospace;color:var(--muted)}
+  ul{list-style:none;margin:0;padding:4px 8px 8px}
+  li{display:flex;align-items:center;gap:12px;min-height:44px;padding:2px 10px;border-radius:10px}
+  li:hover{background:var(--cream)}
+  .box{flex:none;width:22px;height:22px;border-radius:7px;border:2px solid var(--petrol);display:grid;place-items:center;cursor:pointer;background:#fff}
+  li.done .box{background:var(--success);border-color:var(--success)}
+  li.done .box svg{display:block}
+  .box svg{display:none}
+  li.done span{color:var(--muted);text-decoration:line-through}
+  .cat{font:600 11px/1 Inter;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding:14px 18px 4px}
+  .foot{display:flex;justify-content:flex-end;padding:6px 14px 10px}
+  .reset{border:0;background:none;font:500 13px Inter;color:var(--muted);cursor:pointer;text-decoration:underline}
+</style>
+<body>
+  <h1>Checklist — arrival at campsite</h1>
+  <div class="tabs" role="tablist">
+    <button class="tab on" role="tab" aria-selected="true">Ankomst</button>
+    <button class="tab" role="tab" aria-selected="false">Avreise</button>
+  </div>
+  <div class="card">
+    <div class="prog"><b>Ankomst campingplass</b><span class="bar"><i></i></span><small>5/8</small></div>
+    <ul>
+      <li class="done"><span class="box"><svg width="13" height="13" viewBox="0 0 12 12"><path d="M2 6.5 4.5 9 10 3.5" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/></svg></span><span>Vater og støtteben ned</span></li>
+      <li class="done"><span class="box"><svg width="13" height="13" viewBox="0 0 12 12"><path d="M2 6.5 4.5 9 10 3.5" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/></svg></span><span>Strøm tilkoblet (adapter i kassen)</span></li>
+      <li class="done"><span class="box"><svg width="13" height="13" viewBox="0 0 12 12"><path d="M2 6.5 4.5 9 10 3.5" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/></svg></span><span>Vann fylt</span></li>
+      <li><span class="box" role="checkbox" aria-checked="false" tabindex="0"></span><span>Skru på gassalarm</span></li>
+      <li><span class="box" role="checkbox" aria-checked="false" tabindex="0"></span><span>Legg ut gråvannstank</span></li>
+      <li class="done"><span class="box"><svg width="13" height="13" viewBox="0 0 12 12"><path d="M2 6.5 4.5 9 10 3.5" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/></svg></span><span>Fortelt opp</span></li>
+      <li class="done"><span class="box"><svg width="13" height="13" viewBox="0 0 12 12"><path d="M2 6.5 4.5 9 10 3.5" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/></svg></span><span>Wi-Fi-kode hentet i resepsjonen</span></li>
+      <li><span class="box" role="checkbox" aria-checked="false" tabindex="0"></span><span>Sykler av stativet</span></li>
+    </ul>
+    <div class="foot"><button class="reset">Nullstill listen</button></div>
+  </div>
+</body>

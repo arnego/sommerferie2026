@@ -1,0 +1,61 @@
+<!-- @dsCard group="Components" -->
+<title>Trip stop card — Feriekartet</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--petrol:#1B4F72;--cream:#FBF5E6;--sand:#F5DEB3;--sunshine:#F4A621;--ink:#2C3E50;
+        --success:#27AE60;--muted:#607080;--danger:#C0392B}
+  body{margin:0;background:var(--cream);color:var(--ink);font:15px/1.55 Inter,system-ui,sans-serif;padding:40px;max-width:640px}
+  h1{font:700 30px/1.15 "Playfair Display",Georgia,serif;margin:0 0 20px}
+  .leg{display:flex;align-items:center;gap:10px;color:var(--muted);font:500 13px/1 Inter;margin:14px 0 14px 6px}
+  .leg .line{flex:1;max-width:220px;height:2px;background:repeating-linear-gradient(90deg,var(--petrol) 0 8px,transparent 8px 14px)}
+  .leg b{font:600 14px ui-monospace,Menlo,monospace;color:var(--ink)}
+  .card{background:#fff;border-radius:16px;box-shadow:0 2px 10px rgba(27,79,114,.08);overflow:hidden}
+  .card.today{box-shadow:0 0 0 2px var(--sunshine),0 6px 18px rgba(244,166,33,.25)}
+  .head{display:flex;gap:14px;padding:16px 18px;align-items:center;cursor:pointer}
+  .dot{flex:none;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font:700 14px Inter;color:#fff;background:var(--petrol)}
+  .today .dot{background:var(--sunshine);color:var(--ink);animation:pulse 2.4s infinite}
+  @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(244,166,33,.5)}55%{box-shadow:0 0 0 9px rgba(244,166,33,0)}}
+  @media (prefers-reduced-motion: reduce){.today .dot{animation:none}}
+  .t{flex:1;min-width:0}
+  .t h3{margin:0;font:600 18px/1.25 Inter}
+  .t p{margin:2px 0 0;font:500 13px/1.4 Inter;color:var(--muted)}
+  .badges{display:flex;gap:6px;flex-wrap:wrap}
+  .badge{font:600 11px/1 Inter;border-radius:999px;padding:5px 9px}
+  .b-today{background:var(--sunshine);color:var(--ink)}
+  .b-booked{background:rgba(39,174,96,.14);color:#1d7a46}
+  .wx{display:flex;gap:12px;padding:0 18px 12px 66px;font:500 12px/1.4 Inter;color:var(--muted)}
+  .wx span b{color:var(--danger)} .wx span i{font-style:normal;color:var(--petrol)}
+  .body{border-top:1px solid #f0e8d5;padding:16px 18px;display:grid;gap:10px}
+  .act{display:flex;gap:10px;align-items:baseline}
+  .act .pri{flex:none;font:600 10px/1 Inter;letter-spacing:.08em;text-transform:uppercase;border-radius:5px;padding:4px 6px}
+  .must{background:var(--petrol);color:#fff}.nice{background:var(--sand);color:var(--ink)}
+  .act p{margin:0;font-size:14px}
+  .act small{color:var(--muted)}
+  .vbadge{font:600 11px/1 Inter;color:#1d7a46}
+</style>
+<body>
+  <h1>Trip stop card</h1>
+
+  <div class="leg"><span>fra Stopp 7 · Graz</span><span class="line"></span><b>178 km · 2 t 26 min</b><span class="vbadge">✓ verifisert</span></div>
+
+  <div class="card today">
+    <div class="head" role="button" tabindex="0" aria-expanded="true">
+      <span class="dot">8</span>
+      <div class="t">
+        <h3>Postojna — Camping Pivka Jama</h3>
+        <p>ti 21. – fr 24. juli · 3 netter · Slovenia</p>
+      </div>
+      <div class="badges"><span class="badge b-today">I dag</span><span class="badge b-booked">Booket</span></div>
+    </div>
+    <div class="wx" aria-label="Værvarsel">
+      <span>ti ☀ <b>27°</b>/<i>14°</i></span><span>on ⛅ <b>24°</b>/<i>13°</i></span><span>to 🌧 <b>19°</b>/<i>12°</i></span>
+    </div>
+    <div class="body">
+      <div class="act"><span class="pri must">Must</span><p>Postojnahulen — grottetog kl. 10:00 <small>· booket på forhånd</small></p></div>
+      <div class="act"><span class="pri must">Must</span><p>Predjama-slottet <small>· 9 km, kombibillett</small></p></div>
+      <div class="act"><span class="pri nice">Nice</span><p>Bade i Pivka-elven ved plassen</p></div>
+    </div>
+  </div>
+
+  <div class="leg"><span>til Stopp 9 · Rovinj</span><span class="line"></span><b>132 km · 1 t 49 min</b><span class="vbadge">✓ verifisert</span></div>
+</body>

@@ -1,0 +1,79 @@
+<!-- @dsCard group="Components" -->
+<title>Navigation — desktop & mobile — Feriekartet</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--petrol:#1B4F72;--petrol-deep:#123A56;--cream:#FBF5E6;--sand:#F5DEB3;--sunshine:#F4A621;--ink:#2C3E50;--muted:#607080}
+  body{margin:0;background:var(--cream);color:var(--ink);font:15px/1.55 Inter,system-ui,sans-serif;padding:40px;display:grid;gap:34px}
+  h1{font:700 30px/1.15 "Playfair Display",Georgia,serif;margin:0}
+  h2{font:600 13px/1 Inter;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
+
+  .top{background:var(--petrol);color:#fff;border-radius:16px;display:flex;align-items:center;gap:20px;padding:0 20px;height:60px}
+  .logo{font:700 19px "Playfair Display",Georgia,serif}
+  .logo i{font-style:italic;color:var(--sunshine)}
+  .trip{background:rgba(255,255,255,.12);border-radius:10px;padding:8px 12px;font:600 13px Inter;display:flex;gap:8px;align-items:center}
+  .trip small{font-weight:500;opacity:.75}
+  .mode{margin-left:auto;background:rgba(255,255,255,.12);border-radius:999px;padding:3px;display:flex}
+  .mode span{padding:7px 14px;border-radius:999px;font:600 13px Inter;cursor:pointer}
+  .mode .on{background:var(--sunshine);color:var(--ink)}
+  .quota{font:500 12px Inter;opacity:.85}
+  .avatar{width:34px;height:34px;border-radius:50%;background:var(--sand);color:var(--ink);display:grid;place-items:center;font-weight:700}
+
+  .rail{width:210px;background:#fff;border-radius:16px;box-shadow:0 2px 10px rgba(27,79,114,.08);padding:12px;display:grid;gap:2px;position:relative}
+  .rail::before{content:"";position:absolute;left:29px;top:22px;bottom:22px;width:2px;
+    background:repeating-linear-gradient(180deg,#d7e2ea 0 6px,transparent 6px 11px)}
+  .item{display:flex;gap:12px;align-items:center;padding:11px 12px;border-radius:10px;font:500 14px Inter;color:var(--ink);text-decoration:none;position:relative}
+  .item .pt{flex:none;width:12px;height:12px;border-radius:50%;background:#fff;border:2.5px solid var(--petrol);z-index:1}
+  .item.active{background:var(--sand);font-weight:600}
+  .item.active .pt{background:var(--sunshine);border-color:var(--sunshine)}
+  .item:hover{background:var(--cream)}
+
+  .mob{width:320px;border:10px solid var(--ink);border-radius:34px;overflow:hidden;background:var(--cream)}
+  .mbar{background:var(--petrol);color:#fff;display:flex;align-items:center;gap:10px;padding:12px 14px}
+  .mbar .logo{font-size:16px}
+  .mbar .ic{margin-left:auto;display:flex;gap:8px}
+  .mbar .ic span{width:34px;height:34px;border-radius:9px;background:rgba(255,255,255,.14);display:grid;place-items:center;font:600 13px Inter}
+  .pin{background:var(--sunshine);color:var(--ink);font:600 13px Inter;padding:9px 14px;display:flex;justify-content:space-between}
+  .msec{padding:12px 14px;display:grid;gap:8px}
+  .mrow{background:#fff;border-radius:12px;padding:14px;font:600 14px Inter;display:flex;justify-content:space-between;box-shadow:0 1px 6px rgba(27,79,114,.07)}
+  .mrow small{color:var(--muted);font-weight:500}
+</style>
+<body>
+  <h1>Navigation</h1>
+
+  <section>
+    <h2>Desktop top bar</h2>
+    <div class="top">
+      <span class="logo">Ferie<i>kartet</i></span>
+      <span class="trip">Kroatia-turen 2027 <small>▾</small></span>
+      <div class="mode"><span class="on">Planlegging</span><span>Underveis</span></div>
+      <span class="quota">AI: 463 igjen</span>
+      <span class="avatar">AG</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>Desktop nav rail — the route is the menu</h2>
+    <nav class="rail" aria-label="Trip sections">
+      <a class="item" href="#"><span class="pt"></span>Kart</a>
+      <a class="item active" href="#" aria-current="page"><span class="pt"></span>Reiseplan</a>
+      <a class="item" href="#"><span class="pt"></span>Sjekklister</a>
+      <a class="item" href="#"><span class="pt"></span>Budsjett</a>
+      <a class="item" href="#"><span class="pt"></span>Praktisk info</a>
+    </nav>
+  </section>
+
+  <section>
+    <h2>Mobile — mirrors sommerferie2026</h2>
+    <div class="mob">
+      <div class="mbar"><span class="logo">Ferie<i>kartet</i></span>
+        <div class="ic"><span>€</span><span>SOS</span><span>≡</span></div></div>
+      <div class="pin"><span>I dag · dag 14 av 29</span><span>→ dagens stopp</span></div>
+      <div class="msec">
+        <div class="mrow">Kart <small>11 stopp</small></div>
+        <div class="mrow">Reiseplan <small>i dag: Postojna</small></div>
+        <div class="mrow">Sjekklister <small>Ankomst · Avreise</small></div>
+        <div class="mrow">Praktisk info <small>Slovenia</small></div>
+      </div>
+    </div>
+  </section>
+</body>
