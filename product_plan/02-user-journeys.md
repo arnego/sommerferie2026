@@ -18,10 +18,10 @@ Frustration triggers: stale links, wrong distances, re-entering data the AI alre
 stop (passenger!) to see today's plan, the next leg and the arrival checklist. Mobile only.
 Success = zero learning curve: what he sees must resemble the plan Kristine showed him at home.
 
-### P3 — "Reidun" (curious free user)
-55, considers a campervan rental for the first time. Lands from a Facebook group link, wants to
-poke around before paying anything. Converts if the free experience shows a credible plan for *her*
-dream trip quickly.
+### P3 — "Sabine" (curious trial user)
+55, from Cologne, considers a campervan rental for the first time. Lands from a camping-forum
+link, wants to poke around before paying anything. The 7-day trial must show a credible plan for
+*her* dream trip quickly — conversion happens inside the first session or not at all.
 
 ### P4 — The owner (Arne)
 Controls structure, design, templates and community-data quality; monitors costs and metrics.
@@ -31,12 +31,12 @@ Not a persona in the consumer UI but has an admin journey (§6).
 
 ```mermaid
 flowchart LR
-    A[Discover<br/>landing page] --> B[Sign up<br/>+ accept terms]
+    A[Discover<br/>landing page] --> B[Start 7-day trial<br/>sign up + accept terms]
     B --> C[Onboarding<br/>guide: first trip]
     C --> D[Plan with AI<br/>desktop workbench]
-    D --> E{Happy with<br/>free tier?}
-    E -- upgrade --> F[Subscribe<br/>Stripe checkout]
-    E -- stays free --> D
+    D --> E{Trial ends /<br/>token budget low}
+    E -- subscribe --> F[Checkout<br/>monthly or yearly]
+    E -- lapses --> X[Read-only account<br/>win-back e-mail]
     F --> D
     D --> G[Travel<br/>mobile travel mode]
     G --> H[Return<br/>rate stops, next trip]
@@ -52,7 +52,7 @@ journey
       Reads landing page value prop: 4: Visitor
       Sees example trip (demo mode): 5: Visitor
     section Sign up
-      Creates account (email or Vipps/Google): 4: Visitor
+      Creates account (email or Google): 4: Visitor
       Accepts terms, confirms email: 3: Visitor
     section Onboard
       Guide asks destination, dates, family, vehicle: 5: User, AI Guide
@@ -144,4 +144,5 @@ family devices in near-real-time during the trip (target ≤ 5 s when online).
 
 | Date | Change | By |
 | --- | --- | --- |
+| 2026-07-17 | Trial funnel replaces freemium in the journey overview (subscribe / lapse-to-read-only); P3 recast as a European trial user (Europe-first, D-06/D-07); Vipps removed from J1 signup options | Claude + Arne |
 | 2026-07-16 | Document created — personas P1–P4, journeys J1–J4, onboarding interview, sync expectations | Claude + Arne |

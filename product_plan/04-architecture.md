@@ -10,10 +10,10 @@
 
 ```mermaid
 C4Context
-    title System context — Feriekartet (working title)
+    title System context — Roamly (working title)
     Person(user, "Traveler", "Plans on desktop, travels with mobile")
     Person(owner, "Owner/Admin", "Curates templates, monitors ops")
-    System(fk, "Feriekartet", "Vacation & road-trip planning service")
+    System(fk, "Roamly", "Vacation & road-trip planning service")
     System_Ext(claude, "Claude API", "AI travel guide (LLM + tool use)")
     System_Ext(stripe, "Stripe", "Subscriptions & payments")
     System_Ext(osm, "Map & geo services", "Map tiles, geocoding, routing")
@@ -51,7 +51,7 @@ services, one language and strong conventions above all; Postgres + RLS is the c
 | Web app | **Next.js (App Router, TypeScript)** | SSR landing page (SEO) + app shell; API route handlers for server logic |
 | Hosting | **Vercel** | Preview deploys per PR (pairs with [13](13-dev-workflow.md)); EU functions region |
 | Database | **Supabase Postgres (EU region)** | Schema in [05](05-data-model.md); Row-Level Security enforces ownership |
-| Auth | **Supabase Auth** | Email+password, Google `[MVP]`, Vipps via OIDC `[v1.x]` ([07](07-auth-security.md)) |
+| Auth | **Supabase Auth** | Email+password, Google `[MVP]`; per-market logins `[Later]` ([07](07-auth-security.md)) |
 | Realtime sync | **Supabase Realtime** | Postgres changes → subscribed family devices (NF-7) |
 | AI agent | **Claude API** (Messages + tool use; Agent SDK where it fits) | Runtime pattern in [06](06-ai-agent-spec.md); called only server-side |
 | Payments | **Stripe** Checkout + Billing + Customer Portal | Webhooks → entitlements ([08](08-subscription-payments.md)) |
@@ -67,7 +67,7 @@ services, one language and strong conventions above all; Postgres + RLS is the c
 C4Container
     title Container view
     Person(user, "Traveler")
-    System_Boundary(fk, "Feriekartet") {
+    System_Boundary(fk, "Roamly") {
         Container(web, "Next.js app", "Vercel", "Landing, planner UI (desktop/mobile modes), chat panel")
         Container(api, "API layer", "Next.js route handlers", "Trip CRUD, agent orchestration, Stripe webhooks, external-data proxy/cache")
         Container(agent, "Agent runtime", "Server-side module", "Claude sessions, tool dispatch, change-sets, quotas")
@@ -127,4 +127,5 @@ dependency that matters) is in [06 §8](06-ai-agent-spec.md).
 
 | Date | Change | By |
 | --- | --- | --- |
+| 2026-07-17 | Renamed to Roamly (D-05); auth row updated (per-market logins moved to Later, D-06) | Claude + Arne |
 | 2026-07-16 | Document created — context/container diagrams, stack decision (Option A: Next.js + Supabase + Vercel + Stripe + Claude API), boundaries, caching, environments | Claude + Arne |

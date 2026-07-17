@@ -40,8 +40,11 @@ terms:
 
 ## 3. Draft Terms & Conditions — structure and key clauses
 
-Full text to be drafted in Norwegian (binding) with English courtesy translation; structure and
-normative content of each clause:
+Full text to be drafted in **English (binding)** — the product is Europe-first and English-first
+(D-01/D-06); translations are courtesy versions. Note for the lawyer: under Rome I / the EU
+Consumer Rights framework, mandatory consumer protections of the customer's country of residence
+apply regardless of choice of law — the terms must acknowledge this. Structure and normative
+content of each clause:
 
 1. **Parties & definitions** — the service (working title, D-05), the operator (owner's entity —
    *decide sole proprietorship (ENK) vs AS before launch; AS recommended for liability isolation —
@@ -68,10 +71,14 @@ normative content of each clause:
    is what keeps the rest enforceable — lawyer to tune against forbrukerkjøpsloven/avtaleloven §36).
 9. **Availability & data** — reasonable-efforts uptime, maintenance windows, backup, export tool;
    no compensation for downtime beyond mandatory rights.
-10. **Subscription, payment, renewal** — prices incl. MVA; auto-renewal with pre-renewal notice
-    *(Norwegian law is strict on auto-renewal transparency — lawyer)*; cancel any time effective
-    at period end via self-service portal ([08 §4](08-subscription-payments.md)); price-change
-    notice ≥ 30 days before next renewal.
+10. **Trial, subscription, payment, renewal** — 7-day free trial terms (one trip, limited AI
+    token allowance, no card required, lapse to read-only); subscription prices incl. applicable
+    VAT; **AI token allowance terms**: tokens unlock per the paid plan (yearly grant vs monthly
+    grants), are consumed by actual AI usage shown in the usage bar, stop the AI guide at zero,
+    and are forfeited when the subscription ends (no cash value); auto-renewal with pre-renewal
+    notice *(several EU markets are strict on auto-renewal transparency — lawyer)*; cancel any
+    time effective at period end via self-service portal ([08 §4](08-subscription-payments.md));
+    price-change notice ≥ 30 days before next renewal.
 11. **Withdrawal right (angrerett)** — see §6 below.
 12. **IP** — we own the platform/design/templates; user owns their trip content and grants us the
     license needed to operate the service + (unless opted out) to produce anonymized aggregates
@@ -104,13 +111,16 @@ contact & complaint route (Datatilsynet).
 
 ## 6. Consumer-law notes (Norway/EEA)
 
-- **Angrerett (angrerettloven):** 14-day withdrawal for distance purchase of digital services.
-  Standard approach: at checkout the user expressly consents to immediate delivery and
-  acknowledges the withdrawal right is lost on full delivery / adjusted for partial use — exact
-  mechanism (and refund of unused period, which we may choose to offer as goodwill) **to be
-  settled with the lawyer**; Stripe Checkout supports the consent text.
-- **MVA:** digital service B2C — 25 % MVA from first krone; registration threshold and (for EU
-  customers later) OSS/MOSS handling — accountant task before Phase 2.
+- **Withdrawal right:** 14-day withdrawal for distance purchase of digital services across the
+  EEA (EU Consumer Rights Directive; angrerettloven is the Norwegian implementation). The 7-day
+  card-free trial reduces practical exposure (customers try before paying). Standard approach: at
+  checkout the user expressly consents to immediate delivery and acknowledges the withdrawal
+  right is lost on full delivery / adjusted for partial use — exact mechanism (and refund of
+  unused period as goodwill) **to be settled with the lawyer**; Stripe Checkout supports the
+  consent text.
+- **VAT:** B2C digital service sold Europe-wide from day one — **EU VAT via OSS (One Stop Shop)
+  from launch**, charged at each customer's local rate through Stripe automatic tax; Norwegian
+  MVA (25 %) for Norwegian customers; registration sequence is an accountant task before Phase 2.
 - **Marketing:** markedsføringsloven — no dark patterns in subscription flows (cancel as easy as
   subscribe — the Stripe portal satisfies this); e-mail marketing requires consent.
 - **Universal design (WCAG):** likestillings- og diskrimineringsloven/UU-tilsynet requirements for
@@ -133,4 +143,5 @@ contact & complaint route (Datatilsynet).
 
 | Date | Change | By |
 | --- | --- | --- |
+| 2026-07-17 | Europe-first ripple (D-06/D-07/D-08): binding T&C language changed to English with Rome I note; clause 10 extended with trial terms and AI token-allowance terms; withdrawal-right and VAT notes broadened from Norway to EEA-wide (OSS from launch) | Claude + Arne |
 | 2026-07-16 | Document created — legal posture, risk map, draft T&C structure (15 clauses), versioned acceptance mechanism, privacy outline, Norwegian consumer-law notes, lawyer checklist. Marked DRAFT / not legal advice | Claude + Arne |

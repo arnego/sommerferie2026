@@ -11,7 +11,7 @@
 | Level | Tooling | Scope | Target |
 | --- | --- | --- | --- |
 | Static | TypeScript strict, ESLint, Prettier, `tsc --noEmit` | Everything | Zero errors, blocking |
-| Unit | Vitest | Pure logic: date/leg recalculation, quota accounting, FX/weather parsing, entitlement gates, i18n keys | Fast (< 30 s), run on every commit |
+| Unit | Vitest | Pure logic: date/leg recalculation, token-budget accounting, FX/weather parsing, entitlement gates, i18n keys | Fast (< 30 s), run on every commit |
 | Integration | Vitest + local Supabase (CLI) + Stripe test mode | API routes, RLS policies, webhook handlers, agent tool handlers (Claude API mocked) | Every PR |
 | E2E | **Playwright** (Chromium preinstalled in Claude sessions — no download step) | Real browser flows against preview deploy or local stack | Every PR (smoke set) + nightly (full) |
 | Manual/beta | Closed beta households | Real-trip usage | Phase 1 exit criteria ([10](10-roadmap.md)) |
@@ -26,7 +26,7 @@ may not decrease on PRs touching them (ratchet).
 | Auth ([07](07-auth-security.md)) | Signup blocks without T&C checkbox; acceptance row written with version; re-acceptance gate on version bump; password reset; session revocation |
 | **RLS/authorization** | Automated check: every `app.*` table has RLS enabled + policy (fails CI otherwise); cross-user access attempts return zero rows — run as SQL tests against local Supabase |
 | Trip planner | Stop insert/move/delete recalculates dates + adjacent legs; mode auto-selection by date; checklist check-off syncs (two clients, realtime) |
-| AI agent ([06](06-ai-agent-spec.md)) | Tool handlers unit-tested with **mocked Claude API** (recorded tool-call fixtures); change-set apply + undo round-trip; quota decrement/exhaustion; `verify_url` verified/unverified paths; scoping: tools reject foreign trip ids; prompt-injection fixture (hostile fetched page must not alter another field). Scenario fixtures derived from sommerferie2026 history ([06 §7](06-ai-agent-spec.md)) |
+| AI agent ([06](06-ai-agent-spec.md)) | Tool handlers unit-tested with **mocked Claude API** (recorded tool-call fixtures); change-set apply + undo round-trip; token-balance decrement/hard-stop exhaustion + grant-ledger application; `verify_url` verified/unverified paths; scoping: tools reject foreign trip ids; prompt-injection fixture (hostile fetched page must not alter another field). Scenario fixtures derived from sommerferie2026 history ([06 §7](06-ai-agent-spec.md)) |
 | Payments ([08](08-subscription-payments.md)) | Stripe test-mode matrix: checkout success, 3DS challenge, card declined, `invoice.payment_failed` → past_due banner, dunning-exhausted downgrade, cancel-at-period-end, resume, webhook signature rejection, event replay idempotency |
 | External data | Weather/FX cache TTL + stale-on-error fallback; API-down renders "not available" without errors |
 | UX ([09](09-ux-design-spec.md)) | Playwright viewports 375/768/1280; keyboard navigation of accordion/tabs/chat; axe-core a11y scan with zero critical violations; token-pair contrast check (script) |
@@ -89,4 +89,5 @@ against ephemeral local Supabase; no test ever touches production data.
 
 | Date | Change | By |
 | --- | --- | --- |
+| 2026-07-17 | Quota tests replaced by token-budget tests: balance decrement, hard-stop exhaustion, grant-ledger application (D-08) | Claude + Arne |
 | 2026-07-16 | Document created — pyramid, per-module required coverage incl. RLS and Stripe matrices, AI canary, CI/CD pipeline diagram, Claude verify skill, seed strategy | Claude + Arne |

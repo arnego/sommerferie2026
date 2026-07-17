@@ -53,7 +53,7 @@ flowchart TB
 | --- | --- | --- |
 | AC-1 | Email + password signup with email verification | `[MVP]` |
 | AC-2 | OAuth login: Google | `[MVP]` |
-| AC-3 | OAuth login: Vipps (Norwegian market) | `[v1.x]` |
+| AC-3 | Additional per-market logins (e.g. Vipps for Norway, iDEAL-linked flows) | `[Later]` |
 | AC-4 | Mandatory versioned T&C acceptance at signup; re-acceptance on material change | `[MVP]` |
 | AC-5 | Password reset, session management, logout everywhere | `[MVP]` |
 | AC-6 | Account page: profile, trip profile defaults, data export (GDPR), delete account | `[MVP]` |
@@ -109,7 +109,7 @@ Each trip has **planning mode** and **travel mode** (auto-selected by date, manu
 | --- | --- | --- |
 | PR-1 | Country cards auto-assembled from the trip's route: emergency numbers, speed limits (rig-aware), alcohol limits, tolls/vignettes, environmental zones, tipping culture | `[MVP]` |
 | PR-2 | Per-stop practical details: gate codes, Wi-Fi, check-in/out times (private user data) | `[MVP]` |
-| PR-3 | Owner-maintained country dataset with agent-assisted refresh and verification | `[MVP]` (seed 8 route countries) → all Europe `[v1.x]` |
+| PR-3 | Owner-maintained country dataset with agent-assisted refresh and verification | `[MVP]` (seed ~20 key European camping countries) → full Europe `[v1.x]` |
 
 ## 5. AI travel guide (detail in [06](06-ai-agent-spec.md))
 
@@ -120,14 +120,16 @@ Each trip has **planning mode** and **travel mode** (auto-selected by date, manu
 | AI-3 | Research with verification: campsites, activities, distances, URLs — sources cited, unverified marked | `[MVP]` |
 | AI-4 | Visible change-sets with undo (pairs with IT-7) | `[MVP]` |
 | AI-5 | Proactive suggestions (weather-driven replanning, booking reminders) | `[v1.x]` |
-| AI-6 | Message quota per tier (D-08) with graceful "quota reached" UX | `[MVP]` |
+| AI-6 | **Token budget** per trial/subscription (D-08): visible usage bar, low-budget warnings, hard stop at zero with graceful UX | `[MVP]` |
+| AI-8 | Model-evaluation router: pick the cheapest adequate model per request to stretch the token budget (behind the scenes) | `[Later]` |
 | AI-7 | Feedback (thumbs up/down per agent action) feeding quality metrics | `[MVP]` |
 
 ## 6. Subscription & payments (detail in [08](08-subscription-payments.md))
 
 | ID | Feature | Phase |
 | --- | --- | --- |
-| PAY-1 | Free tier limits enforced (1 trip, AI quota) | `[MVP]` |
+| PAY-1 | 7-day free trial: full product, 1 trip, small fixed token budget; lapse → read-only account | `[MVP]` |
+| PAY-5 | Token-budget unlock schedule tied to amount paid (yearly → large immediate grant; monthly → monthly grants) | `[MVP]`* |
 | PAY-2 | Stripe Checkout subscribe/upgrade; customer portal for card, cancel, invoices | `[MVP]`* |
 | PAY-3 | Webhook-driven entitlement state (see lifecycle in 08 §4) | `[MVP]`* |
 | PAY-4 | Seasonal pass product | `[Later]` |
@@ -170,7 +172,7 @@ MVP note: the schema for community aggregates is designed in [05](05-data-model.
 
 | ID | Requirement | Phase |
 | --- | --- | --- |
-| NF-1 | Norwegian UI at launch; all copy behind an i18n layer so EN/SE/DK can follow | `[MVP]` |
+| NF-1 | English UI at launch (Europe-first, D-01/D-06); all copy behind an i18n layer so DE/FR/NL/NO/SE can follow | `[MVP]` |
 | NF-2 | Mobile travel mode usable on slow connections: cache-first reads for the active trip, ≤ 200 kB critical path | `[MVP]` |
 | NF-3 | WCAG 2.1 AA (contrast, keyboard, ARIA — continue sommerferie2026 practice) | `[MVP]` |
 | NF-4 | P95 interactive < 3 s on mid-range mobile; map tiles lazy | `[MVP]` |
@@ -184,4 +186,5 @@ MVP note: the schema for community aggregates is designed in [05](05-data-model.
 
 | Date | Change | By |
 | --- | --- | --- |
+| 2026-07-17 | Owner decisions applied: PAY-1 recast as 7-day trial with token budget + new PAY-5 unlock schedule; AI-6 changed from message quota to token budget with usage bar + new AI-8 model router `[Later]`; NF-1 English-first UI; PR-3 seeds ~20 European countries; AC-3 per-market logins moved to `[Later]` | Claude + Arne |
 | 2026-07-16 | Document created — module map and full feature catalogue LP/AC/MAP/IT/CHK/BUD/WX/PR/AI/PAY/CM/SH/AD/NF with phase tags | Claude + Arne |

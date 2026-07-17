@@ -8,7 +8,7 @@
 
 ## 1. Repository
 
-- **New dedicated repo** (e.g. `arnego/feriekartet` — name follows D-05), private. Structure
+- **New dedicated repo** (e.g. `arnego/roamly` — name follows D-05), private. Structure
   defined in [14 §4](14-claude-setup.md). The sommerferie2026 repo stays untouched.
 - `main` is protected: no direct pushes, PRs only, required checks = the blocking CI set
   ([12 §4](12-testing-verification.md)), linear history (squash merge).
@@ -30,8 +30,11 @@ flowchart LR
 - Branch naming: `claude/<topic>` for Claude sessions, `feat|fix|chore/<topic>` otherwise.
 - PRs stay small (one feature/fix; large features split behind flags). Draft PRs early for
   preview-deploy feedback.
-- Releases: continuous deployment from `main`; tag `vX.Y.Z` at milestones (beta, launch) for
-  reference and rollback points. No release branches at this scale.
+- Releases (D-03): continuous deployment from `main`, with **tagged internal releases `v0.x.y`**
+  marking each completed testable increment of the [10 §1](10-roadmap.md) release train — every
+  tag deployable, demoable and CI-green — culminating in the public MVP tag **`v1.0.0`**. Tags
+  give rollback points and measurement checkpoints (token-usage calibration). No release branches
+  at this scale.
 
 ## 3. The Claude loop
 
@@ -93,4 +96,5 @@ changes scope must update the spec + decision log in the same PR.
 
 | Date | Change | By |
 | --- | --- | --- |
+| 2026-07-17 | Repo name example → roamly (D-05); release strategy expanded to the internal v0.x release train ending in public v1.0.0 (D-03) | Claude + Arne |
 | 2026-07-16 | Document created — repo/branch protection, trunk-based flow, the Claude loop, commit conventions, Actions inventory, secrets discipline | Claude + Arne |

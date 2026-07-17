@@ -6,23 +6,27 @@
 
 ---
 
-## 1. Tiers & entitlements
+## 1. Trial, subscription & entitlements (D-07/D-08, confirmed)
 
-| | Free | Premium |
+| | Free trial (7 days) | Subscription |
 | --- | --- | --- |
-| Price | 0 | ≈ 99 NOK/mo or 799 NOK/yr *(working numbers, D-07)* |
+| Price | 0 — starts at signup, **no card required** | ≈ 99 NOK (~€9)/mo or 799 NOK (~€70)/yr *(working numbers; EUR-primary display via Stripe multi-currency)* |
 | Trips | 1 | Unlimited |
-| AI guide | ~20 msgs/mo | ~500 msgs/mo fair use (D-08) |
+| AI guide | Small fixed **token grant** at signup | **Token budget unlocked in proportion to payment**: yearly-upfront → one large immediate grant; monthly → a grant per paid month (12 monthly grants sum to more than the yearly grant — the flexibility premium). Usage bar; hard stop at zero |
 | Community data | Read | Read + contribute + full recommendations |
-| Export (PDF/offline) `[v1.x]` | — | ✓ |
-| Share links `[v1.x]` | — | ✓ |
+| Export (PDF/offline), share links `[v1.x]` | — | ✓ |
 
-Candidate add-on `[Later]`: **seasonal pass** (~249 NOK / 3 months) matching vacation rhythm —
-schema-compatible (an entitlement with fixed `current_period_end`, no renewal).
+Candidate add-on `[Later]`: **seasonal pass** — schema-compatible (an entitlement with fixed
+`current_period_end`, no renewal).
 
-Enforcement: single `ENTITLEMENT` row per user ([05 §2](05-data-model.md)) is the only source of
-truth read by the app and the agent quota accountant. Downgrade semantics: on losing premium,
-extra trips become **read-only** (never deleted); AI quota drops to free at next period.
+Enforcement: single `ENTITLEMENT` row per user with `token_balance` + the `TOKEN_GRANT` ledger
+([05 §2](05-data-model.md)) is the only source of truth read by the app and the agent's token
+accountant. Lapse semantics (trial expired or subscription ended): trips become **read-only**
+(never deleted), remaining token balance is forfeited, win-back e-mail sent.
+
+> **Decision needed:** card-free trial (assumed — lowest friction; trial managed app-side, Stripe
+> enters only at subscribe) vs. card-upfront trial via Stripe `trial_period_days` (auto-converts,
+> filters for serious users). — *Working assumption: card-free.*
 
 ## 2. Stripe integration shape
 
@@ -30,8 +34,9 @@ extra trips become **read-only** (never deleted); AI quota drops to free at next
   (SAQ-A scope).
 - **Stripe Customer Portal** for card update, plan switch, cancel, invoices (PAY-2) — buys the
   whole self-service billing UI for free.
-- **Stripe Billing** products/prices: `premium_monthly`, `premium_yearly` (NOK), automatic tax
-  (MVA) enabled — see [11 §6](11-legal-terms.md) for consumer-law notes.
+- **Stripe Billing** products/prices: `sub_monthly`, `sub_yearly` with **multi-currency prices
+  (EUR primary; GBP/NOK/SEK/DKK/CHF as needed)** and automatic tax (EU VAT via OSS) enabled — see
+  [11 §6](11-legal-terms.md) for consumer-law notes.
 - **Webhooks are the only writer of entitlements.** The app never assumes success from a redirect.
 
 ## 3. Checkout flow
@@ -44,7 +49,7 @@ sequenceDiagram
     participant S as Stripe
     participant DB as Postgres
 
-    U->>W: "Upgrade to Premium"
+    U->>W: "Subscribe" (from trial or lapsed)
     W->>API: create checkout session
     API->>S: checkout.sessions.create(customer, price, success/cancel URLs)
     S-->>API: session URL
@@ -54,9 +59,10 @@ sequenceDiagram
     S-->>W: redirect to success URL (provisional UI only)
     S->>API: webhook checkout.session.completed (signed)
     API->>API: verify signature
-    API->>DB: upsert ENTITLEMENT(tier=premium, sub ids, period end)
+    API->>DB: upsert ENTITLEMENT(status=active, plan, sub ids, period end)
+    API->>DB: insert TOKEN_GRANT (yearly: large grant / monthly: first month's grant)
     API-->>S: 200
-    W->>U: premium features live (realtime entitlement refresh)
+    W->>U: subscription live, token bar updated (realtime refresh)
 ```
 
 Webhook handling rules: verify signature; idempotent by event id (processed-events table);
@@ -67,8 +73,10 @@ process `checkout.session.completed`, `customer.subscription.updated`, `customer
 
 ```mermaid
 stateDiagram-v2
-    [*] --> free : signup
-    free --> active : checkout completed
+    [*] --> trialing : signup (7-day trial, token grant)
+    trialing --> active : checkout completed
+    trialing --> lapsed : trial ends without checkout
+    lapsed --> active : checkout completed
     active --> past_due : invoice.payment_failed
     past_due --> active : invoice.paid (retry succeeded)
     past_due --> canceled : Stripe dunning exhausted
@@ -76,7 +84,7 @@ stateDiagram-v2
     canceling --> canceled : period end reached
     canceling --> active : user resumes before period end
     canceled --> active : re-subscribe (new checkout)
-    canceled --> free : entitlement downgraded
+    canceled --> lapsed : entitlement downgraded (read-only)
 ```
 
 - **Dunning:** delegated to Stripe Smart Retries + its reminder e-mails; in `past_due` the app
@@ -85,13 +93,19 @@ stateDiagram-v2
   handling in [11 §6](11-legal-terms.md)); user keeps premium until then.
 - **Upgrades/downgrades** (monthly↔yearly): Stripe proration defaults.
 
-## 5. AI quota accounting
+## 5. Token accounting (PAY-5, D-08)
 
-- `ai_msgs_used_this_period` increments per user message that reaches the model; period resets on
-  `current_period_end` rollover (webhook-driven for premium, calendar-month for free).
-- Quota check happens **before** the model call; exhaustion returns the friendly quota screen
-  ([06 §3](06-ai-agent-spec.md)), offering upgrade (free) or reset date (premium).
-- Abuse guard: independent per-user daily cap and per-message output cap ([06 §8](06-ai-agent-spec.md)).
+- **Grants** are written as `TOKEN_GRANT` rows by webhook handlers only: trial grant at signup
+  (app-side), a large grant on `checkout.session.completed` for yearly, and a monthly grant on each
+  `invoice.paid` for monthly plans — the unlock schedule is thus driven by actual money received.
+- **Usage** decrements `token_balance` by the measured tokens of each agent message; balance check
+  happens **before** the model call; zero balance returns the friendly hard-stop screen
+  ([06 §3](06-ai-agent-spec.md)) — subscribe (trial/lapsed) or next-grant date / switch-to-yearly
+  (monthly subscribers).
+- The **usage bar** reads balance + rolling average cost/message to show "≈ N requests left".
+- Grant sizes are configuration, not code — recalibrated from v0.x usage data before public
+  launch ([06 §8](06-ai-agent-spec.md), [10 §1](10-roadmap.md)).
+- Abuse guards independent of budgets: per-user daily burst cap and per-message output cap.
 
 ## 6. Testing & operations
 
@@ -102,8 +116,8 @@ stateDiagram-v2
 - Launch-dark option: PAY-* ships code-complete but disabled during closed beta
   ([10 §3](10-roadmap.md)).
 
-> **Decision needed:** confirm price points and whether yearly billing ships at MVP or `[v1.x]` —
-> *working assumption: both monthly and yearly at payments launch; prices per D-07.*
+Both monthly and yearly ship at payments launch (the unlock schedule requires both); prices per
+D-07, finalized together with grant sizes after v0.x calibration.
 
 ---
 
@@ -111,4 +125,5 @@ stateDiagram-v2
 
 | Date | Change | By |
 | --- | --- | --- |
+| 2026-07-17 | D-07/D-08 applied: freemium replaced by 7-day card-free trial + single subscription; §5 rewritten as token accounting with webhook-driven TOKEN_GRANTs (yearly large upfront, monthly per invoice.paid) and hard stop; lifecycle gains trialing/lapsed states; EUR-primary multi-currency prices with EU VAT (OSS); yearly-at-launch decision resolved (both plans ship) | Claude + Arne |
 | 2026-07-16 | Document created — tiers/entitlements, Stripe Checkout+Portal shape, checkout sequence, lifecycle state machine, quota accounting, test matrix pointer | Claude + Arne |

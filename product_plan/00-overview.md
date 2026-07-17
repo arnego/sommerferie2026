@@ -1,4 +1,4 @@
-# 00 — Overview: Specification Set for "Feriekartet" (working title)
+# 00 — Overview: Specification Set for "Roamly" (working title)
 
 > **Purpose:** Entry point for the complete specification set of the online vacation & road-trip
 > planning service. Explains how the documents fit together, the conventions they follow, and the
@@ -46,7 +46,8 @@ project (see [09](09-ux-design-spec.md) §6).
 
 All specification documents in this folder follow these rules:
 
-1. **Language:** English prose. Product UI copy examples may be Norwegian (the launch market).
+1. **Language:** English prose. The product UI is English-first (D-01); UI copy examples in the
+   specs and design system are therefore English.
 2. **Numbered sections** (`## 1.`, `### 1.1`) so requirements can be referenced as `03 §2.4`.
 3. **Changelog table** at the bottom of every document (`| Date | Change | By |`), newest first —
    same discipline as `docs/Teknisk-spesifikasjon.md` in this repo.
@@ -69,20 +70,20 @@ All specification documents in this folder follow these rules:
 
 ## 4. Decision log
 
-Decisions D-01…D-08 were taken with recommended defaults because the interactive interview tool was
-unavailable during planning. Each stays open for the product owner to override; a change is recorded
-here and rippled to the affected docs.
+Decisions D-01…D-08 were first taken as recommended defaults, then reviewed by the product owner on
+2026-07-17. All are now **confirmed** in the form below; any later change is recorded here and
+rippled to the affected docs.
 
 | ID | Decision | Status | Where used |
 | --- | --- | --- | --- |
-| D-01 | Spec language is **English**; product UI is Norwegian-first | Assumed — confirm | All docs |
-| D-02 | Specs **prescribe a concrete stack**, argued in [04](04-architecture.md) | Assumed — confirm | 04, 05, 12, 13, 14 |
-| D-03 | **Phased scope with explicit MVP cut**; every feature tagged | Assumed — confirm | 03, 10 |
-| D-04 | **Evolve the sommerferie2026 visual identity** (petrol/sand/sunshine, Playfair + Inter) | Assumed — confirm | 09, design-system/ |
-| D-05 | Working name **"Feriekartet"** (working title only; trademark/domain check is a [10](10-roadmap.md) task) | Assumed — confirm | All docs |
-| D-06 | **Norway-first launch**: Norwegian UI, caravan/campervan families; Nordics/EU later | Assumed — confirm | 01, 02, 08, 11 |
-| D-07 | **Freemium + one paid tier**: Free (1 trip, limited AI) / Premium ≈ 99 NOK/mo or 799 NOK/yr | Assumed — confirm | 01, 03, 08 |
-| D-08 | **AI usage metered as a monthly message quota** (free ≈ 20, premium ≈ 500 msgs/mo, fair use) | Assumed — confirm | 03, 06, 08 |
+| D-01 | Spec language is **English**, and the product UI is **English-first** (other languages via the i18n layer later) | Confirmed 2026-07-17 | All docs |
+| D-02 | Specs **prescribe a concrete stack**, argued in [04](04-architecture.md) | Confirmed 2026-07-17 | 04, 05, 12, 13, 14 |
+| D-03 | **Phased scope with explicit MVP cut**, delivered as **several tagged internal releases (v0.x) of testable increments before the public MVP release v1.0.0** | Confirmed 2026-07-17 | 03, 10, 13 |
+| D-04 | **Evolve the sommerferie2026 visual identity** (petrol/sand/sunshine, Playfair + Inter) | Confirmed 2026-07-17 | 09, design-system/ |
+| D-05 | Working name **"Roamly"** (working title only; note: collides with an existing US RV-insurance brand at roamly.com — trademark/domain check before public launch is a [10](10-roadmap.md) gate) | Confirmed 2026-07-17 | All docs |
+| D-06 | **Europe-first launch**: the product addresses travel across the whole pan-European continent from day one; Norway alone is too small a market | Confirmed 2026-07-17 | 01, 02, 03, 08, 11 |
+| D-07 | **7-day free trial + one paid subscription** ≈ 99 NOK (~€9)/mo or 799 NOK (~€70)/yr; no permanent free tier | Confirmed 2026-07-17 | 01, 03, 08 |
+| D-08 | **AI usage metered as token budgets** (owner-side cost control): small fixed trial budget; subscription budget that **unlocks in proportion to the amount paid** (yearly-upfront → large immediate grant; monthly → smaller monthly grants); visible usage bar; hard stop at zero; budget sizes finalized only after token-usage-per-message data is collected in the v0.x releases; a behind-the-scenes **model-evaluation router** to stretch tokens is a later roadmap feature | Confirmed 2026-07-17 | 03, 05, 06, 08, 10 |
 
 ## 5. Glossary
 
@@ -96,7 +97,8 @@ here and rippled to the affected docs.
 | **Community data** | Anonymized, aggregated cross-user data: destination heatmap, campsite/activity recommendations, ratings |
 | **Owner content** | Structure, templates, design and curated seed content controlled by the product owner |
 | **User content** | Everything a user enters or the agent creates on their behalf — private by default |
-| **MVP** | The smallest releasable product: landing + auth + trip planner + AI guide (see [10](10-roadmap.md)) |
+| **MVP** | The smallest publicly releasable product (v1.0.0): landing + auth + trip planner + AI guide, preceded by tagged internal v0.x increments (see [10](10-roadmap.md)) |
+| **Token budget** | The metered allowance of AI usage (input+output tokens) a trial or subscription unlocks; tracked by the usage bar, hard stop at zero (D-08) |
 
 ## 6. Relationship to the sommerferie2026 repo
 
@@ -113,4 +115,5 @@ know-how (06 §7).
 
 | Date | Change | By |
 | --- | --- | --- |
+| 2026-07-17 | Owner review of the decision log: D-01 English-first UI; D-03 internal v0.x releases before public v1.0.0; D-05 working name "Roamly"; D-06 Europe-first launch; D-07 7-day trial + single subscription; D-08 token budgets with paid-proportional unlock, usage bar, hard stop, and later model-router. All decisions marked Confirmed; glossary + language convention updated | Claude + Arne |
 | 2026-07-16 | Document created — document map, conventions, decision log D-01…D-08, glossary | Claude + Arne |

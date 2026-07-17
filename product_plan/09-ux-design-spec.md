@@ -43,7 +43,7 @@ Three-column workspace (the key upgrade over the single-column site):
 
 ```
 ┌────────────────────────────────────────────────────────────────────┐
-│ Top bar: logo · trip switcher · mode toggle · quota · account      │
+│ Top bar: logo · trip switcher · mode toggle · token bar · account  │
 ├──────────────┬──────────────────────────────────┬──────────────────┤
 │ Nav rail     │  Main canvas                     │  AI guide panel  │
 │ Map          │  ┌────────────┬───────────────┐  │  (persistent,    │
@@ -52,7 +52,7 @@ Three-column workspace (the key upgrade over the single-column site):
 │ Budget       │  │ markers,   │ stop cards,   │  │  chat stream     │
 │ Practical    │  │ route      │ legs, weather │  │  change-set      │
 │              │  └────────────┴───────────────┘  │  cards w/ undo   │
-│              │  (other sections use full width) │  input + quota   │
+│              │  (other sections use full width) │  input + tokenbar│
 ├──────────────┴──────────────────────────────────┴──────────────────┤
 │ Status strip: today pin (during trip) · sync state                 │
 └────────────────────────────────────────────────────────────────────┘
@@ -100,7 +100,7 @@ Evolved from sommerferie2026's spec §5.5–5.7; tokens live as CSS variables an
 | Radius / spacing / shadows | 4-px spacing scale, `rounded-xl` cards, soft shadows | Defined in tokens files |
 
 New semantic components beyond the 2026 site: **verification badge** (verified/unverified),
-**change-set card** (agent edit + undo), **quota meter**, **tier badge**, **community heat layer**
+**change-set card** (agent edit + undo), **token usage bar**, **plan/trial badge**, **community heat layer**
 styling. Photography rules carry over (real destination photos, no emoji, flags for countries).
 
 Light mode only at launch (sunlight readability priority); dark mode `[Later]`.
@@ -111,7 +111,7 @@ Light mode only at launch (sunlight readability priority); dark mode `[Later]`.
   `<!-- @dsCard group="…" -->` markers. Structure: `tokens/` (colors, typography, spacing) and
   `components/` (buttons, cards, trip-stop-card, nav desktop/mobile, checklist, AI-chat panel,
   map panel).
-- Synced file-by-file to the Claude Design project **"Feriekartet Design System"** on
+- Synced file-by-file to the Claude Design project **"Roamly Design System"** on
   claude.ai/design via DesignSync — the visual gallery for reviewing and evolving components.
 - Change flow: edit HTML preview in repo → commit → sync → review in Claude Design pane.
   Components graduate into the app as React components implementing the same tokens.
@@ -128,4 +128,5 @@ tabs, chat; ARIA patterns as established in sommerferie2026 (role=button, aria-e
 
 | Date | Change | By |
 | --- | --- | --- |
+| 2026-07-17 | Quota meter replaced by token usage bar, tier badge by plan/trial badge (D-08); Claude Design project renamed to "Roamly Design System" (D-05); note: product UI copy is English-first (D-01) — design-system previews updated accordingly | Claude + Arne |
 | 2026-07-16 | Document created — IA, desktop workbench layout, mobile mirror of sommerferie2026, token set evolved from the 2026 palette, Claude Design workflow, a11y bars | Claude + Arne |

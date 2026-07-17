@@ -12,7 +12,7 @@
 | --- | --- | --- |
 | Email + password (verified email) | `[MVP]` | Supabase Auth; passwords argon2/bcrypt-hashed by the platform, never visible to us |
 | Google OAuth | `[MVP]` | Lowest-friction for the target group |
-| Vipps Login (OIDC) | `[v1.x]` | Strong fit for Norway-first launch; requires Vipps merchant agreement *(unverified — confirm requirements at implementation)* |
+| Per-market logins (e.g. Vipps for Norway) | `[Later]` | Re-prioritized after the Europe-first decision (D-06); evaluate per market with localization |
 | Magic link (email) | `[Later]` | Candidate to replace passwords entirely |
 
 Session model: short-lived JWT access token + rotating refresh token (Supabase default), httpOnly
@@ -104,4 +104,5 @@ Every table in `app.*` gets an RLS policy in the same migration that creates it 
 
 | Date | Change | By |
 | --- | --- | --- |
+| 2026-07-17 | Vipps demoted to a per-market `[Later]` option following the Europe-first decision (D-06) | Claude + Arne |
 | 2026-07-16 | Document created — auth methods, signup sequence with versioned T&C gate, authorization/RLS model, GDPR, security baseline | Claude + Arne |

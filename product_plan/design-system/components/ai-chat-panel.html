@@ -1,5 +1,5 @@
 <!-- @dsCard group="Components" -->
-<title>AI guide panel — Feriekartet</title>
+<title>AI guide panel — Roamly</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{--petrol:#1B4F72;--petrol-deep:#123A56;--cream:#FBF5E6;--sand:#F5DEB3;--sunshine:#F4A621;
@@ -36,33 +36,33 @@
   .send{border:0;border-radius:12px;background:var(--sunshine);font:600 14px Inter;padding:0 18px;cursor:pointer}
   .meter{display:flex;align-items:center;gap:8px;font:500 11px Inter;color:var(--muted)}
   .meter .bar{flex:1;height:5px;border-radius:999px;background:var(--cream);overflow:hidden}
-  .meter .bar i{display:block;height:100%;width:8%;background:var(--petrol)}
+  .meter .bar i{display:block;height:100%;width:82%;background:var(--petrol)}
 </style>
 <body>
   <h1>AI guide panel</h1>
-  <div class="panel" role="complementary" aria-label="AI-guide">
-    <div class="ph"><span class="dot"></span><b>Reiseguiden</b><small>Kroatia-turen 2027</small></div>
+  <div class="panel" role="complementary" aria-label="AI guide">
+    <div class="ph"><span class="dot"></span><b>Travel Guide</b><small>Croatia Trip 2027</small></div>
     <div class="log">
-      <div class="msg user">Finn en familievennlig campingplass nær Gardasjøen, 3 netter rundt 18. juli.</div>
-      <div class="status"><i></i> søker… verifiserer nettsider og avstand…</div>
-      <div class="msg ai">Jeg fant tre gode kandidater med basseng og plass for vogn på 8,5 m. Beste treff: <b>Camping Bella Italia</b> (Peschiera) — 400 m til stranda, verifisert ledig uke 29. Kilder: offisiell side, ADAC.</div>
-      <div class="cs" aria-label="Endring fra guiden">
-        <div class="cs-h"><span>Endring · nytt stopp</span><span>#12</span></div>
+      <div class="msg user">Find a family-friendly campsite near Lake Garda, 3 nights around 18 July.</div>
+      <div class="status"><i></i> searching… verifying websites and distances…</div>
+      <div class="msg ai">I found three strong candidates with a pool and room for an 8.5 m caravan. Best match: <b>Camping Bella Italia</b> (Peschiera) — 400 m to the beach, availability verified for week 29. Sources: official site, ADAC.</div>
+      <div class="cs" aria-label="Change from the guide">
+        <div class="cs-h"><span>Change · new stop</span><span>#12</span></div>
         <div class="cs-b">
-          <div class="r"><b>+ Stopp 9 · Peschiera del Garda</b><span class="v">✓ URL verifisert</span></div>
-          <div class="r">18.–21. juli · 3 netter · Camping Bella Italia</div>
-          <div class="r">Etappe fra Bolzano: 154 km · 2 t 07 min <span class="v">✓ verifisert</span></div>
-          <div class="r">Budsjett: +2 340 NOK (camping, 2 voksne + 2 barn)</div>
+          <div class="r"><b>+ Stop 9 · Peschiera del Garda</b><span class="v">✓ URL verified</span></div>
+          <div class="r">18–21 July · 3 nights · Camping Bella Italia</div>
+          <div class="r">Leg from Bolzano: 154 km · 2 h 07 min <span class="v">✓ verified</span></div>
+          <div class="r">Budget: +€205 (campsite, 2 adults + 2 kids)</div>
         </div>
         <div class="cs-f">
-          <button class="undo">Angre</button>
-          <div class="fb"><button aria-label="Bra forslag">👍</button><button aria-label="Dårlig forslag">👎</button></div>
+          <button class="undo">Undo</button>
+          <div class="fb"><button aria-label="Good suggestion">👍</button><button aria-label="Poor suggestion">👎</button></div>
         </div>
       </div>
     </div>
     <div class="input">
-      <div class="field"><input placeholder="Spør guiden …" aria-label="Melding til reiseguiden"><button class="send">Send</button></div>
-      <div class="meter"><span>AI-meldinger</span><span class="bar"><i></i></span><span>37 av 500 brukt</span></div>
+      <div class="field"><input placeholder="Ask the guide …" aria-label="Message the travel guide"><button class="send">Send</button></div>
+      <div class="meter"><span>Token budget</span><span class="bar"><i></i></span><span>82 % left · ≈ 120 requests</span></div>
     </div>
   </div>
 </body>

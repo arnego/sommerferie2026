@@ -21,7 +21,7 @@ Annotated tree for the new repo (Next.js App Router per [04](04-architecture.md)
 this shape from day one:
 
 ```
-feriekartet/                     # name per D-05 (working title)
+roamly/                          # name per D-05 (working title)
 ├── CLAUDE.md                    # §3 below — developer rules, command map, doc pointers
 ├── README.md                    # human quickstart: what, stack, how to run
 ├── .env.example                 # every env var, no values (13 §6)
@@ -35,14 +35,14 @@ feriekartet/                     # name per D-05 (working title)
 │   │   └── auth/                # signup/login/reset/accept-terms
 │   ├── components/              # React components; mirrors design-system/ components 1:1
 │   ├── lib/                     # domain logic (pure, unit-testable):
-│   │   │                        #   legs.ts (distance/time, ÷73 rule), dates.ts, quota.ts,
+│   │   │                        #   legs.ts (distance/time, ÷73 rule), dates.ts, tokens.ts,
 │   │   │                        #   entitlements.ts, weather.ts, fx.ts, i18n/
 │   │   └── db/                  # typed queries, RLS-aware client helpers
 │   └── styles/                  # tokens.css generated from design-system/tokens
 ├── agent/                       # AI travel guide (implements product_plan 06)
 │   ├── system-prompt.md         # the agent constitution (06 §4) — versioned prose
 │   ├── tools/                   # one file per tool: schema + handler + guard
-│   ├── runtime.ts               # tool-runner loop, streaming, change-sets, quota gate
+│   ├── runtime.ts               # tool-runner loop, streaming, change-sets, token-budget gate
 │   └── fixtures/                # recorded tool-call fixtures for tests (12 §2)
 ├── db/
 │   ├── migrations/              # numbered SQL, RLS policy in same file as table (07 §4)
@@ -87,7 +87,7 @@ The new CLAUDE.md must contain (and little else — link, don't duplicate):
    `docs/product_plan/06-ai-agent-spec.md` and are implemented in `agent/system-prompt.md` —
    change them there, never inline elsewhere."*
 7. **Secrets rule:** never write credentials into the repo; `.env.example` only ([13 §6](13-dev-workflow.md)).
-8. **Language rule:** code/identifiers/commits in English; UI copy Norwegian via i18n files.
+8. **Language rule:** code/identifiers/commits in English; UI copy English-first via i18n files.
 
 ## 4. Draft CLAUDE.md (appendix — ready to copy into the new repo)
 
@@ -95,7 +95,7 @@ The new CLAUDE.md must contain (and little else — link, don't duplicate):
 # CLAUDE.md
 
 ## Project
-Feriekartet (working title): online vacation & road-trip planning service — Next.js +
+Roamly (working title): online vacation & road-trip planning service — Next.js +
 Supabase + Stripe + Claude API. The specification set in `docs/product_plan/` is the
 source of truth; start at `docs/product_plan/00-overview.md`. Product decisions live in
 `docs/decisions.md`.
@@ -123,7 +123,7 @@ source of truth; start at `docs/product_plan/00-overview.md`. Product decisions 
 - **Secrets:** never in code, docs, or fixtures. `.env.example` documents variables.
   User secrets (gate codes, booking refs) are per-user DB data, never in the repo.
 - **Data access:** every new `app.*` table ships RLS policies in the same migration.
-- **Language:** code, identifiers and commits in English; user-facing copy in Norwegian
+- **Language:** code, identifiers and commits in English; user-facing English-first copy
   through `src/lib/i18n/`.
 - **UI:** design tokens from `design-system/tokens` only — no ad-hoc colors/fonts.
   WCAG 2.1 AA; no emoji in product UI.
@@ -148,4 +148,5 @@ source of truth; start at `docs/product_plan/00-overview.md`. Product decisions 
 
 | Date | Change | By |
 | --- | --- | --- |
+| 2026-07-17 | Renamed to Roamly (D-05); language rules English-first (D-01); quota.ts → tokens.ts and token-budget gate in the repo tree (D-08) | Claude + Arne |
 | 2026-07-16 | Document created — rule-scope split (dev vs agent), annotated repo tree, CLAUDE.md content requirements + ready-to-use draft, .claude extras and bootstrap list | Claude + Arne |

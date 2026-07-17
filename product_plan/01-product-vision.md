@@ -24,7 +24,10 @@ trip, assisted by the same kind of AI travel guide, on a platform the owner desi
 
 ## 3. Target users
 
-Primary launch market: **Norway** (D-06), expanding to the Nordics and Europe later.
+Primary launch market: **Europe** (D-06). The product is pan-European by nature — road trips cross
+borders, and the addressable market for caravan/campervan families is continental (strongholds:
+Germany, Netherlands, UK, France, Scandinavia). The UI is English-first (D-01) with an i18n layer
+so major market languages can follow ([03 NF-1](03-functional-spec.md)).
 
 | Segment | Description | Priority |
 | --- | --- | --- |
@@ -67,28 +70,28 @@ Competitive landscape (qualitative; detailed teardown is a roadmap task, [10](10
 
 ## 6. Business model
 
-Subscription SaaS (D-07):
+Subscription SaaS with a trial funnel (D-07, confirmed):
 
-| Tier | Price (working numbers) | Includes |
+| | Price (working numbers) | Includes |
 | --- | --- | --- |
-| **Free** | 0 | 1 trip, core planner, ~20 AI messages/month, community data read-only |
-| **Premium** | ≈ 99 NOK/mo or 799 NOK/yr | Unlimited trips, full AI guide (~500 msgs/mo fair use), contributing + full community features, offline/PDF export (v1.x) |
+| **Free trial (7 days)** | 0 | Full product; 1 trip; a small fixed AI **token budget**; community data read-only |
+| **Subscription** | ≈ 99 NOK (~€9)/mo or 799 NOK (~€70)/yr | Unlimited trips, AI guide with a **token budget that unlocks in proportion to the amount paid** (yearly-upfront → large immediate grant; monthly → monthly grants), full community features, offline/PDF export (v1.x) |
 
-> **Decision needed:** confirm tier structure and price points before implementing payments —
-> *working assumption: the table above (D-07). Alternatives considered: trial-then-paid,
-> two paid tiers, seasonal pass (249 NOK / 3 months) — the seasonal pass fits vacation rhythm and
-> is kept as a candidate add-on in [08](08-subscription-payments.md).*
+Pricing is displayed in the customer's currency (EUR-primary for the European market, NOK retained
+as working numbers) via Stripe multi-currency prices ([08](08-subscription-payments.md)).
+A seasonal pass remains a `[Later]` candidate add-on.
 
-Unit economics guardrail: AI cost per premium user must stay well under subscription revenue; the
-message quota (D-08) plus model routing keeps worst-case API cost bounded — modeled in
-[06 §8](06-ai-agent-spec.md).
+Unit economics guardrail: AI cost is bounded **by construction** — the token budget (D-08) is the
+cost ceiling per customer, sized against what they paid, with a hard stop at zero. Budget sizes are
+finalized only after real token-usage-per-message data is collected during the internal v0.x
+releases — modeled in [06 §8](06-ai-agent-spec.md).
 
 ## 7. Success metrics
 
 | Horizon | Metric | Target (working) |
 | --- | --- | --- |
 | MVP (first season) | Registered users | 500 |
-| | Free → Premium conversion | ≥ 4 % |
+| | Trial → paid conversion | ≥ 10 % |
 | | Trips that reach "travel mode" (actually used on the road) | ≥ 30 % of created trips |
 | | AI guide satisfaction (thumbs up on agent edits) | ≥ 80 % positive |
 | v1.x | Monthly churn (premium) | ≤ 3 % |
@@ -112,4 +115,5 @@ message quota (D-08) plus model routing keeps worst-case API cost bounded — mo
 
 | Date | Change | By |
 | --- | --- | --- |
+| 2026-07-17 | Owner decisions applied: Europe-first launch with English-first UI (D-06/D-01); business model changed to 7-day trial + single subscription with paid-proportional token budgets (D-07/D-08); trial→paid conversion metric replaces freemium conversion | Claude + Arne |
 | 2026-07-16 | Document created — vision, targets, problem, differentiation, business model (D-06/07/08), metrics, principles | Claude + Arne |

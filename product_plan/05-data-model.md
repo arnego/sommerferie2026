@@ -44,6 +44,7 @@ erDiagram
     USER ||--o{ TERMS_ACCEPTANCE : signed
     USER ||--o{ AGENT_CONVERSATION : has
     USER ||--|| ENTITLEMENT : has
+    USER ||--o{ TOKEN_GRANT : received
     TRIP ||--o{ STOP : contains
     TRIP ||--|| TRIP_PROFILE : "interview answers"
     TRIP ||--o{ CHECKLIST : has
@@ -145,13 +146,19 @@ erDiagram
            int feedback "-1|0|1"
            timestamptz applied_at }
     ENTITLEMENT { uuid user_id PK
-           text tier "free|premium"
+           text status "trialing|active|past_due|canceling|canceled|lapsed"
+           text plan "trial|monthly|yearly"
            text stripe_customer_id
            text stripe_subscription_id
-           text sub_status "active|past_due|canceled|none"
+           timestamptz trial_ends_at
            timestamptz current_period_end
-           int ai_msgs_used_this_period
-           int ai_msg_quota }
+           bigint token_balance "remaining AI tokens; hard stop at 0"
+           bigint tokens_used_total }
+    TOKEN_GRANT { uuid id PK
+           uuid user_id FK
+           bigint tokens
+           text reason "trial|monthly_grant|yearly_grant|goodwill"
+           timestamptz granted_at }
 ```
 
 Notes:
@@ -163,8 +170,12 @@ Notes:
 - Sensitive per-stop secrets (gate codes, Wi-Fi passwords) live inside the user's own `STOP.camping`
   jsonb — unlike sommerferie2026 they are per-user private rows, never in code (contrast:
   old repo's §6.4 private-repo exception).
-- `ENTITLEMENT` is the single read model for tier gating; it is written only by Stripe webhook
-  handlers and the quota accountant ([08](08-subscription-payments.md)).
+- `ENTITLEMENT` is the single read model for access gating; it is written only by Stripe webhook
+  handlers and the token accountant ([08](08-subscription-payments.md)). `token_balance` is the
+  live AI budget (D-08): increased by `TOKEN_GRANT` rows (trial grant at signup; yearly plans get a
+  large grant on payment, monthly plans a grant per paid month), decreased per agent message by the
+  actual tokens consumed (`AGENT_MESSAGE.tokens_in/out` is the audit trail and the dataset used to
+  calibrate budget sizes during the v0.x releases). Hard stop at zero.
 
 ## 3. Owner content (curated, world-readable)
 
@@ -253,4 +264,5 @@ Privacy rules (bind [07 §5](07-auth-security.md) and [11](11-legal-terms.md)):
 
 | Date | Change | By |
 | --- | --- | --- |
+| 2026-07-17 | ENTITLEMENT reworked for trial + token budgets (D-07/D-08): status incl. trialing/lapsed, plan, token_balance; new TOKEN_GRANT ledger; notes explain paid-proportional unlock and usage calibration from AGENT_MESSAGE token fields | Claude + Arne |
 | 2026-07-16 | Document created — user/owner/community domains, ER diagrams, verification-as-data, privacy rules, seed strategy | Claude + Arne |
