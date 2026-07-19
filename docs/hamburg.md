@@ -1,8 +1,9 @@
 # Alternativer til mellomstoppet i Hamburg (stopp 14, mellom Braunlage og Billund)
 
-> Notat/beslutningsgrunnlag. Ingen endringer er gjort i reiseplanen — dette er en lagret oversikt over
-> alternative mellomstopp til senere vurdering. Implementeringsdelen nederst er kun referanse for når/hvis
-> et alternativ velges.
+> **Status (2026-07-19): Alternativ C er implementert.** LEGOLAND-bekreftelsen (booking 20099088/2) fastsatte
+> ankomst til Billund 29. juli, så Hamburg er redusert til 1 natt (28.–29. juli) og Billund utvidet til 3 netter
+> (29. juli–1. august) — se `Ferieplanen-2026.md` og `index.html`. Resten av dette notatet er bevart som
+> beslutningsgrunnlag/historikk.
 
 ## Kontekst
 
