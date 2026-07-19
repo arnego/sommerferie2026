@@ -56,16 +56,16 @@ William er 5 år og er en viktig del av planleggingen:
 | 11 | Zugspitze (Krün) | DE | 21. juli | 24. juli | 3 | 30 |
 | 12 | Bamberg | DE | 24. juli | 26. juli | 2 | 30 |
 | 13 | Braunlage (Harz) | DE | 26. juli | 28. juli | 2* | 30/31 |
-| 14 | Hamburg | DE | 28. juli | 30. juli | 2* | 31 |
-| 15 | Billund (Legoland) | DK | 30. juli | 1. aug | 2 | 31 |
+| 14 | Hamburg | DE | 28. juli | 29. juli | 1* | 31 |
+| 15 | Billund (Legoland) | DK | 29. juli | 1. aug | 3 | 31 |
 | 16 | Hirtshals → Larvik (Color Line ferge, avgang 22:15) | DK/NO | 1. aug kv. | 2. aug | — | 31 |
 | 17 | Kongsberg | NO | 2. aug | — | Hjemme | 31 |
 
 *Kortstopp — unntak fra 3-netter-regelen (transit eller prioritert destinasjon).
 
-**Totalt:** 29 netter borte — 5 i Kroatia (Rovinj 5, Maistra Vestar 🔒), 1 natt Slovenia (Postojna), 1 natt Graz (AT, transit), 1 natt Lienz/Amlach (AT, transit), 3 netter Zugspitze, 4 netter Berlin, 2 netter Königstein (Saksisk Sveits), 2 netter Český Krumlov, 2 netter Bamberg, 2 netter Braunlage (Harz), 2 transittnetter (Hirtshals, Groß Buchwald), 2 netter Hamburg, 2 i Billund. Hjemme 2. august (kveldsavgang Hirtshals 1. august, ankomst Larvik natt til 2. august).
+**Totalt:** 29 netter borte — 5 i Kroatia (Rovinj 5, Maistra Vestar 🔒), 1 natt Slovenia (Postojna), 1 natt Graz (AT, transit), 1 natt Lienz/Amlach (AT, transit), 3 netter Zugspitze, 4 netter Berlin, 2 netter Königstein (Saksisk Sveits), 2 netter Český Krumlov, 2 netter Bamberg, 2 netter Braunlage (Harz), 2 transittnetter (Hirtshals, Groß Buchwald), 1 natt Hamburg, 3 netter i Billund. Hjemme 2. august (kveldsavgang Hirtshals 1. august, ankomst Larvik natt til 2. august).
 
-> **Merk:** Plitvice og Split er fjernet. Sørruten går nå via A9-motorveien (Liezen/Graz) med transittstopp i Graz (1n) i Steiermark, Postojna/Slovenia (1n) og 5 netter i Rovinj (Maistra Vestar Campsite, booket PH28273444). På hjemveien er Klagenfurt/Wörthersee erstattet med Lienz / Amlach (1n) i Osttirol (Dolomiten Camping Amlacherhof, booket ref. 18998646), slik at vi kjører Brenner-ruten gjennom Pustertal til Zugspitze. Dag 1 (Rovinj → Amlach) går den campingvognvennlige Drautal-/Villach-dalruten ~392 km / ~5 t 22 min (unngår Plöckenpass), dag 2 ~217 km til Zugspitze. Berlin er utvidet til 4 netter (én natt flyttet fra Postojna). Zugspitze 3 netter, Braunlage og Hamburg 2 netter hver. Totalt 5 netter i Kroatia — under opprinnelig mål på 14 netter (§2), men bevisst valg. Alle kjøreetapper under 6 timer.
+> **Merk:** Plitvice og Split er fjernet. Sørruten går nå via A9-motorveien (Liezen/Graz) med transittstopp i Graz (1n) i Steiermark, Postojna/Slovenia (1n) og 5 netter i Rovinj (Maistra Vestar Campsite, booket PH28273444). På hjemveien er Klagenfurt/Wörthersee erstattet med Lienz / Amlach (1n) i Osttirol (Dolomiten Camping Amlacherhof, booket ref. 18998646), slik at vi kjører Brenner-ruten gjennom Pustertal til Zugspitze. Dag 1 (Rovinj → Amlach) går den campingvognvennlige Drautal-/Villach-dalruten ~392 km / ~5 t 22 min (unngår Plöckenpass), dag 2 ~217 km til Zugspitze. Berlin er utvidet til 4 netter (én natt flyttet fra Postojna). Zugspitze 3 netter, Braunlage 2 netter. Hamburg er redusert fra 2 til 1 natt (28.–29. juli) og Billund utvidet fra 2 til 3 netter (29. juli–1. august), for å matche fastsatt ankomstdato i den bookede LEGOLAND-pakken (booking 20099088/2, bekreftet 19.07.2026). Totalt 5 netter i Kroatia — under opprinnelig mål på 14 netter (§2), men bevisst valg. Alle kjøreetapper under 6 timer.
 
 ---
 
@@ -435,24 +435,25 @@ Hjemreisen inkluderer opplevelsesstoppene Zugspitze, Braunlage (Harz), Hamburg o
 - Nice-to-have (~26 km): **Harzdrenalin (Rappbodetalsperre)** — eventyrareal med **TITAN RT** (en av verdens lengste gangbroer, 483 m, familievennlig), Megazipline, Gigaswing, 5D-kino, utsiktstårn og innendørs lekeplass. Zipline/Gigaswing har alders-/vektkrav; bro, kino og lekeplass passer William. https://harzdrenalin.de/
 - Tips: Braunlage er kursted — rolig og familievennlig, ingen Umweltzone. 2 netter gir tid til damptog/Wernigerode den ene dagen og Naturmythenpfad eller sommerrodelbane den andre. Neste dag: ~246 km til Hamburg (~3 t 22 min).
 
-**Hamburg (2 netter: 28.–30. juli)**
+**Hamburg (1 natt: 28.–29. juli)**
 - Kjøring: Braunlage (Harz) → Hamburg, ~246 km, ~3 t 22 min via B4 nord → A7 nord → Hamburg. Direkte på ruten mot Billund. (80 km/t med campingvogn.)
 - Campingplass: KNAUS Campingpark Hamburg, Wunderbrunnen 2, 22457 Hamburg
 - Nettside: https://www.knauscamp.de/hamburg/
 - Innsjekk: 14:00 · Utsjekk: 12:00 (ca. — verifisér ved booking)
-- Aktiviteter: **Miniatur Wunderland** (verdens største modelljernbane, perfekt for William — book billett online!), Speicherstadt (UNESCO-kanalkvarter), Hamburger Hafen
-- Tips: Book Miniatur Wunderland online på forhånd — veldig populær i juli. Med 2 netter er det god tid til å se mer av havnebyen. Neste dag: Hamburg → Billund via A7 nord → Flensburg → E45, ca. 280 km, 3 t 50 min (80 km/t med campingvogn i Danmark).
+- Aktiviteter: **Miniatur Wunderland** (verdens største modelljernbane, perfekt for William — book billett online!). Speicherstadt (UNESCO-kanalkvarter) og Hamburger Hafen som nice-to-have hvis tiden strekker til.
+- Tips: Redusert til 1 natt (fra 2) for å nå Billund til LEGOLAND-oppholdets fastsatte ankomstdato 29. juli — prioriter Miniatur Wunderland (book tidsluke om morgenen på forhånd). Neste dag: Hamburg → Billund via A7 nord → Flensburg → E45, ca. 280 km, 3 t 50 min (80 km/t med campingvogn i Danmark).
 
-**Billund, Danmark (2 netter: 30. juli–1. august)**
+**Billund, Danmark (3 netter: 29. juli–1. august)** ✅ BOOKET & BETALT (LEGOLAND Ultimate Experience-pakke)
 - Kjøring: Hamburg → Billund, 280 km, 3 t 50 min via A7 nord → Flensburg-grensa → E45 nord inn i Danmark → Billund (verifisert)
-- Campingplass: Billund Stellplatz, Grenevej 1, 7190 Billund (GPS 55.705632, 9.132133 — ~3 km til Legoland, LEGO House og Lalandia)
-- Nettside: http://www.billundstellplatz.dk/
-- **Booket: Ja — pladsgaranti** (det er alltid plass, reservasjon ikke nødvendig). 150 DKK/natt, el 35 DKK/døgn, gratis toaletter
-- Bookingref: Pladsgaranti — reservasjon ikke nødvendig
-- Innsjekk: 14:00 · Utsjekk: 11:00 (ca. — verifisér ved booking)
-- Aktiviteter dag 1 (31. juli): **Legoland® Billund** — verdens første Legoland (åpnet 1968), 8 tematiske verdener, Miniland og rides. Heldagsopplevelse. Bestill billett online: https://www.legoland.dk/
-- Aktiviteter dag 2 (1. august formiddag): **LEGO House** — ikonisk opplevelseshus i Billund sentrum (2017). Interaktive soner og kreative verksteder. https://legohouse.com/en-gb
-- Tips: Bestill Legoland-billett online — spar tid og penger. Billund Stellplatz har pladsgaranti, så ingen booking nødvendig. Start hjemreise mot Hirtshals senest kl. 11:00.
+- Campingplass: **LEGOLAND® Holiday Village Camping**, Ellehammers Allé 2, 7190 Billund (rett ved Legoland, LEGO House og Lalandia)
+- Nettside: https://www.legoland.dk/en/short-break/you-can-stay-here/legoland-holiday-village/camping/ *(uverifisert — legoland.dk blokkerte automatisert henting/WebFetch (503); adresse og innsjekk/utsjekk krysssjekket mot VisitDenmark og andre uavhengige kilder og stemmer med bekreftelsen)*
+- **Booket: Ja — bekreftet og betalt** — Booking nr. **20099088/2** (bookingdato 19.07.2026, Cust.No. 80100619). Pakke: **LEGOLAND Ultimate Experience** — standard pitch (LEGOLAND® Holiday Village Camping), 1-Day LEGOLAND® Ticket, 1 Day LEGO House Ticket. Totalpris **3.745,00 DKK — betalt i sin helhet** (0 DKK utestående).
+- Bookingref: 20099088/2
+- Innsjekk: etter kl. 15:00 · Utsjekk: innen kl. 11:00 (fra bekreftelsen — ikke estimert)
+- Aktiviteter dag 1 (29. juli): **Legoland® Billund** — verdens første Legoland (åpnet 1968), 8 tematiske verdener, Miniland og rides. Heldagsopplevelse (billett inkludert i pakken).
+- Aktiviteter dag 2 (30. juli): **LEGO House** — ikonisk opplevelseshus i Billund sentrum (2017). Interaktive soner og kreative verksteder (billett inkludert i pakken). https://legohouse.com/en-gb
+- Aktiviteter dag 3 (31. juli): Ekstra dag uten forhåndsbooket aktivitet — nice-to-have: **Givskud Zoo/Zootopia (Løveparken)**, ~13 km fra Billund — kjør-gjennom safaripark med løver, giraffer og over 700 dyr, pluss Danmarks største dinosaurpark. https://www.givskudzoo.dk/en/home/. Alternativer: **Lalandia Billund** (badeland) eller en rolig formiddag med lek ved Holiday Village og en ekstra runde i Legoland/LEGO House i eget tempo.
+- Tips: Legoland- og LEGO House-billetter er allerede booket og betalt — ingen ekstra billettkjøp nødvendig. Prebook gjerne bord på en av Legolands restauranter: https://www.legoland.dk/en/shortbreak/explore/restaurants-shops/. Start hjemreise mot Hirtshals senest kl. 11:00 (utsjekk) 1. august.
 
 **1.–2. august: Billund → Hirtshals → Larvik → Kongsberg**
 - Billund → Hirtshals: 250 km, 3 t 26 min via E45 nord gjennom Jutland (80 km/t med campingvogn i Danmark) — start senest kl. 18:30 for å rekke kveldsavgangen
@@ -515,6 +516,7 @@ Hjemreisen inkluderer opplevelsesstoppene Zugspitze, Braunlage (Harz), Hamburg o
 
 | Dato | Endring | Av |
 | --- | --- | --- |
+| 2026-07-19 | **Stopp 15 Billund oppdatert fra LEGOLAND-bekreftelse (booking 20099088/2)**: Campingplass byttet fra Billund Stellplatz til **LEGOLAND® Holiday Village Camping** (Ellehammers Allé 2, 7190 Billund), booket og betalt i full (LEGOLAND Ultimate Experience-pakke, 3.745,00 DKK, bekreftet 19.07.2026). Innsjekk/utsjekk satt til bekreftede tider (etter 15:00 / innen 11:00). Ankomstdato fastsatt av pakken til **29. juli** (mot tidligere 30. juli) — Billund utvidet fra 2 til **3 netter** (29. juli–1. august). Aktiviteter satt til pakkens inkluderte billetter: dag 1 (29. juli) 1-Day LEGOLAND-billett, dag 2 (30. juli) 1 Day LEGO House-billett, dag 3 (31. juli) rolig dag/Lalandia som nice-to-have. For å nå den fastsatte ankomstdatoen er **stopp 14 Hamburg redusert fra 2 til 1 natt** (28.–29. juli i stedet for 28.–30. juli) — totalt antall netter på turen (29) er uendret. Oppdatert i Ferieplanen-2026.md og index.html. | Claude |
 | 2026-07-13 | **Nytt Tipsekultur-kort i Praktisk info**: accordion-kort rett under Valutakurser med tabell over vanlig tips i de 8 landene ruten går gjennom. Egen kolonne for **prosentsats** (restaurant, bordservering) og egen kolonne for **detaljer og spesielle hensyn** (Danmark: service inkludert ved lov; Tyskland/Østerrike: si totalbeløpet til servitøren; Italia: «coperto» er ikke tips; kontant foretrekkes i Kroatia/Slovenia). Med footnote om å sjekke regningen for service/coperto/servizio. | Claude |
 | 2026-07-12 | **Praktisk info — to nye funksjoner**: (1) Nytt **Promillegrenser**-kort med tabell over tillatt promille i de 8 landene ruten går gjennom (Norge 0,2 ‰, Tsjekkia 0,0 ‰, øvrige 0,5 ‰), verifisert mot kilde. (2) **Valutakurser** viser nå **live dagskurser** (ECB via frankfurter.dev, med open.er-api.com som fallback, 1 times localStorage-cache i stedet for hardkodede kurser) og har fått en **valutakalkulator**: velg valuta ved å trykke på en tabellrad, skriv inn et beløp, og se det konvertert til NOK. | Claude |
 | 2026-06-25 | **Stopp 10 bekreftet + Istria-bompenger**: (1) Dolomiten Camping Amlacherhof — ordrebekreftelse mottatt (ref. 18998646): status «mottatt, avventer bekreftelse» → **bekreftet**. Bekreftede tider: ankomst 11:00–22:00, avreise 08:00–10:00. Depositum 54,80 € betalt med kort; rest + kurtaks (5,20 €) + miljøavgift (3 €) på stedet. Pre-Check-In (deskline) anbefalt. Beskrivelsen rettet («~4t balansert» → turens lengste etappe ~5t 22min). (2) §4 «Praktisk info»: Kroatia-bompengelinja oppdatert til faktisk innreise via **A9 Istarski ipsilon** (BINA Istra, ~0,10 €/km kat. II med campingvogn) i stedet for den forkastede Zagreb–Split-ruten. | Claude |
