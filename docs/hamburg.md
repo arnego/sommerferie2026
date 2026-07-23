@@ -1,9 +1,16 @@
 # Alternativer til mellomstoppet i Hamburg (stopp 14, mellom Braunlage og Billund)
 
-> **Status (2026-07-19): Alternativ C er implementert.** LEGOLAND-bekreftelsen (booking 20099088/2) fastsatte
-> ankomst til Billund 29. juli, så Hamburg er redusert til 1 natt (28.–29. juli) og Billund utvidet til 3 netter
-> (29. juli–1. august) — se `Ferieplanen-2026.md` og `index.html`. Resten av dette notatet er bevart som
-> beslutningsgrunnlag/historikk.
+> **Status (2026-07-23): Mellomstoppet er byttet fra Hamburg by til Soltau (Lüneburger Heide).** Familien fant et
+> foretrukket sted sør for Hamburg og booket **Campingplatz "Auf dem Simpel"**, Auf dem Simpel 1, 29614 Soltau
+> (booking OBP-AG-20260723225828, 1 natt 28.–29. juli, komfortstellplatz, 47,00 €). Kjøreetappene er reberegnet
+> (Braunlage → Soltau 201 km / 2 t 45 min; Soltau → Billund 346 km / 4 t 44 min — begge < 6 t). **Miniatur Wunderland**
+> i Hamburg beholdes som aktivitet (~1 t nord, på ruten mot Billund), og **Heide Park Resort** i Soltau er lagt til.
+> Se `Ferieplanen-2026.md` og `index.html`. Merk: dette bryter bevisst den tidligere ±1t-balanseregelen under
+> (dag-etter-etappen er ~2 t lengre enn dag-før), men var familiens foretrukne valg.
+>
+> **Status (2026-07-19): Alternativ C var implementert.** LEGOLAND-bekreftelsen (booking 20099088/2) fastsatte
+> ankomst til Billund 29. juli, så Hamburg ble redusert til 1 natt (28.–29. juli) og Billund utvidet til 3 netter
+> (29. juli–1. august). Resten av dette notatet er bevart som beslutningsgrunnlag/historikk.
 
 ## Kontekst
 
