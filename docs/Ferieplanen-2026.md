@@ -56,16 +56,16 @@ William er 5 år og er en viktig del av planleggingen:
 | 11 | Zugspitze (Krün) | DE | 21. juli | 24. juli | 3 | 30 |
 | 12 | Bamberg | DE | 24. juli | 26. juli | 2 | 30 |
 | 13 | Braunlage (Harz) | DE | 26. juli | 28. juli | 2* | 30/31 |
-| 14 | Hamburg | DE | 28. juli | 29. juli | 1* | 31 |
+| 14 | Soltau (Lüneburger Heide) | DE | 28. juli | 29. juli | 1* | 31 |
 | 15 | Billund (Legoland) | DK | 29. juli | 1. aug | 3 | 31 |
 | 16 | Hirtshals → Larvik (Color Line ferge, avgang 22:15) | DK/NO | 1. aug kv. | 2. aug | — | 31 |
 | 17 | Kongsberg | NO | 2. aug | — | Hjemme | 31 |
 
 *Kortstopp — unntak fra 3-netter-regelen (transit eller prioritert destinasjon).
 
-**Totalt:** 29 netter borte — 5 i Kroatia (Rovinj 5, Maistra Vestar 🔒), 1 natt Slovenia (Postojna), 1 natt Graz (AT, transit), 1 natt Lienz/Amlach (AT, transit), 3 netter Zugspitze, 4 netter Berlin, 2 netter Königstein (Saksisk Sveits), 2 netter Český Krumlov, 2 netter Bamberg, 2 netter Braunlage (Harz), 2 transittnetter (Hirtshals, Groß Buchwald), 1 natt Hamburg, 3 netter i Billund. Hjemme 2. august (kveldsavgang Hirtshals 1. august, ankomst Larvik natt til 2. august).
+**Totalt:** 29 netter borte — 5 i Kroatia (Rovinj 5, Maistra Vestar 🔒), 1 natt Slovenia (Postojna), 1 natt Graz (AT, transit), 1 natt Lienz/Amlach (AT, transit), 3 netter Zugspitze, 4 netter Berlin, 2 netter Königstein (Saksisk Sveits), 2 netter Český Krumlov, 2 netter Bamberg, 2 netter Braunlage (Harz), 2 transittnetter (Hirtshals, Groß Buchwald), 1 natt Soltau (Lüneburger Heide), 3 netter i Billund. Hjemme 2. august (kveldsavgang Hirtshals 1. august, ankomst Larvik natt til 2. august).
 
-> **Merk:** Plitvice og Split er fjernet. Sørruten går nå via A9-motorveien (Liezen/Graz) med transittstopp i Graz (1n) i Steiermark, Postojna/Slovenia (1n) og 5 netter i Rovinj (Maistra Vestar Campsite, booket PH28273444). På hjemveien er Klagenfurt/Wörthersee erstattet med Lienz / Amlach (1n) i Osttirol (Dolomiten Camping Amlacherhof, booket ref. 18998646), slik at vi kjører Brenner-ruten gjennom Pustertal til Zugspitze. Dag 1 (Rovinj → Amlach) går den campingvognvennlige Drautal-/Villach-dalruten ~392 km / ~5 t 22 min (unngår Plöckenpass), dag 2 ~217 km til Zugspitze. Berlin er utvidet til 4 netter (én natt flyttet fra Postojna). Zugspitze 3 netter, Braunlage 2 netter. Hamburg er redusert fra 2 til 1 natt (28.–29. juli) og Billund utvidet fra 2 til 3 netter (29. juli–1. august), for å matche fastsatt ankomstdato i den bookede LEGOLAND-pakken (booking 20099088/2, bekreftet 19.07.2026). Totalt 5 netter i Kroatia — under opprinnelig mål på 14 netter (§2), men bevisst valg. Alle kjøreetapper under 6 timer.
+> **Merk:** Plitvice og Split er fjernet. Sørruten går nå via A9-motorveien (Liezen/Graz) med transittstopp i Graz (1n) i Steiermark, Postojna/Slovenia (1n) og 5 netter i Rovinj (Maistra Vestar Campsite, booket PH28273444). På hjemveien er Klagenfurt/Wörthersee erstattet med Lienz / Amlach (1n) i Osttirol (Dolomiten Camping Amlacherhof, booket ref. 18998646), slik at vi kjører Brenner-ruten gjennom Pustertal til Zugspitze. Dag 1 (Rovinj → Amlach) går den campingvognvennlige Drautal-/Villach-dalruten ~392 km / ~5 t 22 min (unngår Plöckenpass), dag 2 ~217 km til Zugspitze. Berlin er utvidet til 4 netter (én natt flyttet fra Postojna). Zugspitze 3 netter, Braunlage 2 netter. Mellomstoppet er byttet fra Hamburg by til Campingplatz "Auf dem Simpel" i Soltau (Lüneburger Heide), sør for Hamburg — 1 natt (28.–29. juli, booking OBP-AG-20260723225828, bekreftet 23.07.2026). Billund er 3 netter (29. juli–1. august) for å matche fastsatt ankomstdato i den bookede LEGOLAND-pakken (booking 20099088/2, bekreftet 19.07.2026). Miniatur Wunderland i Hamburg beholdes som aktivitet (~1 t nord, på ruten mot Billund). Totalt 5 netter i Kroatia — under opprinnelig mål på 14 netter (§2), men bevisst valg. Alle kjøreetapper under 6 timer.
 
 ---
 
@@ -85,8 +85,8 @@ William er 5 år og er en viktig del av planleggingen:
 | Lienz/Amlach (Osttirol) | Zugspitze/Krün | 217 km (verifisert, OSRM) | 3 t 00 min | B100/SS49 Pustertal → Brixen → A22 Brenner → A13/A12 Innsbruck → Seefeld → Mittenwald → Krün |
 | Zugspitze/Krün | Bamberg | 324 km (verifisert) | 4 t 26 min | Krün → Garmisch → A95/A8 nord → München → A9 nord → A73 mot Bamberg |
 | Bamberg | Braunlage (Harz) | ~280 km | ~3 t 50 min | A73 nord → Erfurt → A4/A38 → Nordhausen → B4 → Braunlage |
-| Braunlage (Harz) | Hamburg | ~246 km | ~3 t 22 min | B4 nord → A7 nord → Hamburg |
-| Hamburg | Billund | 280 km (verifisert) | 3 t 50 min | A7 nord → Flensburg-grensa → E45 nord inn i Danmark → Billund |
+| Braunlage (Harz) | Soltau (Lüneburger Heide) | 201 km (verifisert) | 2 t 45 min | B4 nord → Goslar → A7 nord → Soltau |
+| Soltau (Lüneburger Heide) | Billund | 346 km (verifisert) | 4 t 44 min | A7 nord → Hamburg → Flensburg-grensa → E45 nord inn i Danmark → Billund |
 | Billund | Hirtshals | 250 km (verifisert) | 3 t 26 min | E45 nord gjennom Jutland til Hirtshals |
 | Hirtshals | Larvik (ferge) | — | 4 t 25 min | Color Line SuperSpeed — avgang kl. 22:15, ankomst Larvik ~02:40 (natt til 2. august) |
 | Larvik | Kongsberg | 91 km (verifisert) | 1 t 15 min | E18/E134 |
@@ -398,7 +398,7 @@ Alle kjøretider er beregnet med campingvogn med 80 km/t fartsgrense på motorve
 
 ### Hjemreise — stopp og transittdager (21. juli – 1. august)
 
-Hjemreisen inkluderer opplevelsesstoppene Zugspitze, Braunlage (Harz), Hamburg og Billund (Legoland) — i tillegg til to kulturnetter i Bamberg. Lienz / Amlach i Osttirol (stopp 10) er en egen transittovernatting (se over).
+Hjemreisen inkluderer opplevelsesstoppene Zugspitze, Braunlage (Harz), Soltau (Lüneburger Heide) og Billund (Legoland) — i tillegg til to kulturnetter i Bamberg. Lienz / Amlach i Osttirol (stopp 10) er en egen transittovernatting (se over).
 
 **Zugspitze, Bayern (3 netter: 21.–24. juli)**
 - Kjøring: Lienz/Amlach → Zugspitze/Krün, 217 km, 3 t 00 min via B100/SS49 Pustertal → Brixen → A22 Brenner → A13/A12 Innsbruck → Seefeld → Mittenwald → Krün. (80 km/t med campingvogn; kort, vakker Brenner-etappe.) (verifisert OSRM)
@@ -433,18 +433,19 @@ Hjemreisen inkluderer opplevelsesstoppene Zugspitze, Braunlage (Harz), Hamburg o
 - Nice-to-have (dagtur ~25 km): **Wernigerode** — fargerik bindingsverksby med slott (utgangspunkt for Harzer Schmalspurbahn).
 - Nice-to-have (~23 km): **Rübeland dryppsteinhuler** (Baumannshöhle/Hermannshöhle) — Tysklands eldste skuehuler, dryppsteiner, Goethesalen og Tysklands eneste grottesalamandere. Gøy og kjølig utflukt for barn. https://www.harzer-hoehlen.de/
 - Nice-to-have (~26 km): **Harzdrenalin (Rappbodetalsperre)** — eventyrareal med **TITAN RT** (en av verdens lengste gangbroer, 483 m, familievennlig), Megazipline, Gigaswing, 5D-kino, utsiktstårn og innendørs lekeplass. Zipline/Gigaswing har alders-/vektkrav; bro, kino og lekeplass passer William. https://harzdrenalin.de/
-- Tips: Braunlage er kursted — rolig og familievennlig, ingen Umweltzone. 2 netter gir tid til damptog/Wernigerode den ene dagen og Naturmythenpfad eller sommerrodelbane den andre. Neste dag: ~246 km til Hamburg (~3 t 22 min).
+- Tips: Braunlage er kursted — rolig og familievennlig, ingen Umweltzone. 2 netter gir tid til damptog/Wernigerode den ene dagen og Naturmythenpfad eller sommerrodelbane den andre. Neste dag: ~201 km til Soltau (~2 t 45 min).
 
-**Hamburg (1 natt: 28.–29. juli)**
-- Kjøring: Braunlage (Harz) → Hamburg, ~246 km, ~3 t 22 min via B4 nord → A7 nord → Hamburg. Direkte på ruten mot Billund. (80 km/t med campingvogn.)
-- Campingplass: KNAUS Campingpark Hamburg, Wunderbrunnen 2, 22457 Hamburg
-- Nettside: https://www.knauscamp.de/hamburg/
-- Innsjekk: 14:00 · Utsjekk: 12:00 (ca. — verifisér ved booking)
-- Aktiviteter: **Miniatur Wunderland** (verdens største modelljernbane, perfekt for William — book billett online!). Speicherstadt (UNESCO-kanalkvarter) og Hamburger Hafen som nice-to-have hvis tiden strekker til.
-- Tips: Redusert til 1 natt (fra 2) for å nå Billund til LEGOLAND-oppholdets fastsatte ankomstdato 29. juli — prioriter Miniatur Wunderland (book tidsluke om morgenen på forhånd). Neste dag: Hamburg → Billund via A7 nord → Flensburg → E45, ca. 280 km, 3 t 50 min (80 km/t med campingvogn i Danmark).
+**Soltau (Lüneburger Heide) (1 natt: 28.–29. juli)** ✅ BOOKET
+- Kjøring: Braunlage (Harz) → Soltau, 201 km, 2 t 45 min via B4 nord → Goslar → A7 nord → Soltau (verifisert). Direkte på ruten mot Billund. (80 km/t med campingvogn.)
+- Campingplass: **Campingplatz "Auf dem Simpel"**, Auf dem Simpel 1, 29614 Soltau (Wolterdingen) — familieanlegg i Lüneburger Heide med utendørs svømmebasseng, lekeplass og selvbetjent restaurant/butikk. Tlf. +49 5191 3651.
+- Nettside: https://auf-dem-simpel.de/en/ (verifisert)
+- **Booket: Ja — bekreftet 23.07.2026** — Booking nr. **OBP-AG-20260723225828**. Komfortstellplatz, 1 natt, 2 voksne + 1 barn (4–13 år). Totalpris **47,00 €** (17 € plass + 24 € voksne + 6 € barn). Delbetaling **23,50 €** med MasterCard; resten betales ved ankomst. Cynox innsjekk-kode **FB83EF38**.
+- Innsjekk: fra kl. 12:00 (komfortstellplatz) · Utsjekk: ca. 12:00 (utsjekktid ikke oppgitt i bekreftelsen). Resepsjon: lør–tor 08:00–18:00, fre 08:00–20:00 (til 22:00 i høysesong).
+- Aktiviteter: **Heide Park Resort** (~11 km — Nord-Tysklands største fornøyelsespark, 30+ attraksjoner for barn under 10 inkl. Peppa Pig Land, perfekt for William). **Miniatur Wunderland** (verdens største modelljernbane i Hamburg, ~73 km / ~1 t nord — beholdt fra Hamburg-planen; ligger ved A7-ruten mot Billund, fint stopp på avreisedagen — book billett online!). **Weltvogelpark Walsrode** (~29 km — verdens største fuglepark) som rolig nice-to-have.
+- Tips: Vi byttet fra Hamburg by til dette roligere stedet sør for Hamburg. Kort etappe fra Braunlage gir god tid til Heide Park eller campingbassenget samme dag. Neste dag: Soltau → Billund via A7 nord → Hamburg → Flensburg → E45, ca. 346 km, 4 t 44 min — lengre enn før, så start tidlig (LEGOLAND-innsjekk fra kl. 15:00 29. juli).
 
 **Billund, Danmark (3 netter: 29. juli–1. august)** ✅ BOOKET & BETALT (LEGOLAND Ultimate Experience-pakke)
-- Kjøring: Hamburg → Billund, 280 km, 3 t 50 min via A7 nord → Flensburg-grensa → E45 nord inn i Danmark → Billund (verifisert)
+- Kjøring: Soltau → Billund, 346 km, 4 t 44 min via A7 nord → Hamburg → Flensburg-grensa → E45 nord inn i Danmark → Billund (verifisert)
 - Campingplass: **LEGOLAND® Holiday Village Camping**, Ellehammers Allé 2, 7190 Billund (rett ved Legoland, LEGO House og Lalandia)
 - Nettside: https://www.legoland.dk/en/short-break/you-can-stay-here/legoland-holiday-village/camping/ *(uverifisert — legoland.dk blokkerte automatisert henting/WebFetch (503); adresse og innsjekk/utsjekk krysssjekket mot VisitDenmark og andre uavhengige kilder og stemmer med bekreftelsen)*
 - **Booket: Ja — bekreftet og betalt** — Booking nr. **20099088/2** (bookingdato 19.07.2026, Cust.No. 80100619). Pakke: **LEGOLAND Ultimate Experience** — standard pitch (LEGOLAND® Holiday Village Camping), 1-Day LEGOLAND® Ticket, 1 Day LEGO House Ticket. Totalpris **3.745,00 DKK — betalt i sin helhet** (0 DKK utestående).
@@ -516,6 +517,7 @@ Hjemreisen inkluderer opplevelsesstoppene Zugspitze, Braunlage (Harz), Hamburg o
 
 | Dato | Endring | Av |
 | --- | --- | --- |
+| 2026-07-23 | **Stopp 14 byttet fra Hamburg by til Soltau (Lüneburger Heide) — booket (OBP-AG-20260723225828)**: Mellomstoppet mellom Braunlage og Billund flyttet til et foretrukket sted sør for Hamburg: **Campingplatz "Auf dem Simpel"**, Auf dem Simpel 1, 29614 Soltau (Wolterdingen). Komfortstellplatz, 1 natt (28.–29. juli), 2 voksne + 1 barn, totalt 47,00 € (23,50 € forskuddsbetalt med MasterCard, rest ved ankomst), Cynox-kode FB83EF38, bekreftet 23.07.2026. Innsjekk fra kl. 12:00. Kjøreetapper reberegnet og verifisert (OSRM): Braunlage → Soltau **201 km / 2 t 45 min** (kortere), Soltau → Billund **346 km / 4 t 44 min** (lengre, fortsatt < 6 t). Aktiviteter: **Heide Park Resort** (~11 km) lagt til som must-do; **Miniatur Wunderland** i Hamburg (~1 t nord) beholdt fra Hamburg-planen som stopp på avreisedagen; **Weltvogelpark Walsrode** (~29 km) som nice-to-have. Nettside verifisert (auf-dem-simpel.de). Datoer og totalt antall netter (29) uendret. Oppdatert i Ferieplanen-2026.md og index.html. | Claude |
 | 2026-07-19 | **Stopp 15 Billund oppdatert fra LEGOLAND-bekreftelse (booking 20099088/2)**: Campingplass byttet fra Billund Stellplatz til **LEGOLAND® Holiday Village Camping** (Ellehammers Allé 2, 7190 Billund), booket og betalt i full (LEGOLAND Ultimate Experience-pakke, 3.745,00 DKK, bekreftet 19.07.2026). Innsjekk/utsjekk satt til bekreftede tider (etter 15:00 / innen 11:00). Ankomstdato fastsatt av pakken til **29. juli** (mot tidligere 30. juli) — Billund utvidet fra 2 til **3 netter** (29. juli–1. august). Aktiviteter satt til pakkens inkluderte billetter: dag 1 (29. juli) 1-Day LEGOLAND-billett, dag 2 (30. juli) 1 Day LEGO House-billett, dag 3 (31. juli) rolig dag/Lalandia som nice-to-have. For å nå den fastsatte ankomstdatoen er **stopp 14 Hamburg redusert fra 2 til 1 natt** (28.–29. juli i stedet for 28.–30. juli) — totalt antall netter på turen (29) er uendret. Oppdatert i Ferieplanen-2026.md og index.html. | Claude |
 | 2026-07-13 | **Nytt Tipsekultur-kort i Praktisk info**: accordion-kort rett under Valutakurser med tabell over vanlig tips i de 8 landene ruten går gjennom. Egen kolonne for **prosentsats** (restaurant, bordservering) og egen kolonne for **detaljer og spesielle hensyn** (Danmark: service inkludert ved lov; Tyskland/Østerrike: si totalbeløpet til servitøren; Italia: «coperto» er ikke tips; kontant foretrekkes i Kroatia/Slovenia). Med footnote om å sjekke regningen for service/coperto/servizio. | Claude |
 | 2026-07-12 | **Praktisk info — to nye funksjoner**: (1) Nytt **Promillegrenser**-kort med tabell over tillatt promille i de 8 landene ruten går gjennom (Norge 0,2 ‰, Tsjekkia 0,0 ‰, øvrige 0,5 ‰), verifisert mot kilde. (2) **Valutakurser** viser nå **live dagskurser** (ECB via frankfurter.dev, med open.er-api.com som fallback, 1 times localStorage-cache i stedet for hardkodede kurser) og har fått en **valutakalkulator**: velg valuta ved å trykke på en tabellrad, skriv inn et beløp, og se det konvertert til NOK. | Claude |
