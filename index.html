@@ -304,7 +304,7 @@ tailwind.config = {
                   <h3 class="font-semibold text-sm sm:text-base text-charcoal" x-text="stop.name"></h3>
                   <p class="text-xs text-muted mt-0.5"
                      x-text="stop.isHome ? formatDate(stop.arrivalDate) + ' \u00b7 Hjemme\u0021' : formatDate(stop.arrivalDate) + ' \u2013 ' + formatDate(stop.departureDate) + ' \u00b7 ' + stop.nights + (stop.nights === 1 ? ' natt' : ' netter')"></p>
-                  <div x-show="!stop.isHome && hasAnyForecast(stop.id)"
+                  <div x-show="!stop.isHome && hasAnyForecast(stop)"
                        class="flex flex-wrap items-center gap-1 mt-1.5"
                        :aria-label="'Værvarsel kl. 12 for ' + stop.name"
                        x-html="dayStripHtml(stop, 18)"></div>
@@ -421,9 +421,12 @@ tailwind.config = {
                 </div>
 
                 <!-- Værvarsel -->
-                <div x-show="!stop.isHome && weather[stop.id]">
+                <div x-show="!stop.isHome">
                   <p class="text-xs text-muted uppercase tracking-wider font-medium mb-2">Værvarsel</p>
-                  <div class="overflow-x-auto -mx-1">
+                  <!-- Uten data vises en kort forklaring i stedet for en tabell full av streker -->
+                  <p x-show="!hasAnyForecast(stop)" class="text-xs text-muted italic"
+                     x-text="isBeyondForecastHorizon(stop) ? 'Værvarsel kommer nærmere reisen' : 'Værvarsel ikke tilgjengelig'"></p>
+                  <div x-show="hasAnyForecast(stop)" class="overflow-x-auto -mx-1">
                     <table class="w-full text-xs border-collapse">
                       <thead>
                         <tr class="text-muted border-b border-sand/50">
@@ -438,7 +441,7 @@ tailwind.config = {
                           <tr class="border-b border-sand/30 last:border-b-0" :class="date === todayStr && 'bg-sunshine/10'">
                             <td class="py-1.5 px-2 text-charcoal/80 whitespace-nowrap" x-text="formatDateWithWeekday(date)"></td>
                             <template x-for="h in weatherHours" :key="h">
-                              <td class="py-1 px-1 text-center" x-html="weatherCellHtml(stop.id, date, h)"></td>
+                              <td class="py-1 px-1 text-center" x-html="weatherCellHtml(stop, date, h)"></td>
                             </template>
                           </tr>
                         </template>
@@ -1654,10 +1657,17 @@ function ferieApp() {
     },
 
     // ===== VÆRVARSEL =====
+    // Værdata nøkles på (sted, dato) — aldri på stopp-ID. Se §2.6 i Teknisk-spesifikasjon.
+    // Flat tabell: { "55.73,9.13|2026-07-30": { hours, temps, daily } }
     weather: {},
     weatherMock: false,
     weatherTtlMs: 60 * 60 * 1000,
-    weatherStorageKey: 'sommerferie2026-weather-v5',
+    weatherStorageKey: 'sommerferie2026-weather',
+    weatherSchema: 6,
+    weatherLegacyKeys: [
+      'sommerferie2026-weather-v2', 'sommerferie2026-weather-v3',
+      'sommerferie2026-weather-v4', 'sommerferie2026-weather-v5',
+    ],
     weatherHours: ['09', '12', '15', '18', '21'],
 
     // ===== VALUTAKURSER / KALKULATOR =====
@@ -1768,29 +1778,71 @@ function ferieApp() {
       }
     },
 
-    get todayStr() {
-      // Lokal dato (YYYY-MM-DD), konsistent med fmt() i datesForStop/fetchWeatherForStop
-      const d = new Date();
+    // Lokal dato (YYYY-MM-DD). Delt av todayStr, datesForStop og værhentingen.
+    fmtDate(d) {
       const pad = n => String(n).padStart(2, '0');
       return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+    },
+
+    get todayStr() {
+      return this.fmtDate(new Date());
+    },
+
+    // Open-Meteos tillatte vindu, som YYYY-MM-DD (strengsammenligning er trygt på dette formatet).
+    // Kalenderaritmetikk, ikke millisekunder: `t + 16*86400000` bommer med én dag over en
+    // sommertidsovergang (24. okt 2026 + 16 d gir 8. nov, ikke 9. nov).
+    forecastWindow() {
+      const n = new Date();
+      const y = n.getFullYear(), m = n.getMonth(), d = n.getDate();
+      return {
+        start: this.fmtDate(new Date(y, m, d - 90)),
+        end: this.fmtDate(new Date(y, m, d + 16)),
+      };
     },
 
     datesForStop(stop) {
       // Arrival t.o.m. departureDate (inkl. avreisedagen på destinasjonen)
       const out = [];
       if (!stop || !stop.arrivalDate) return out;
-      const pad = n => String(n).padStart(2, '0');
-      const fmt = d => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
       const start = new Date(stop.arrivalDate + 'T00:00:00');
       if (!stop.departureDate) {
-        out.push(fmt(start));
+        out.push(this.fmtDate(start));
         return out;
       }
       const end = new Date(stop.departureDate + 'T00:00:00');
       for (let d = new Date(start); d <= end; d.setDate(d.getDate() + 1)) {
-        out.push(fmt(d));
+        out.push(this.fmtDate(d));
       }
       return out;
+    },
+
+    // Stopp som skal ha vær. Ett felles filter — brukes av både henting, mock og fingeravtrykk,
+    // slik at de tre aldri kan dekke ulike sett. Merk at hjemstoppet har gyldige koordinater
+    // og bare skilles ut av isHome.
+    weatherTargets() {
+      return this.stops.filter(s => !s.isHome && s.lat != null && s.lng != null);
+    },
+
+    // Værnøkkelen utledes av sted + dato — aldri av stopp-ID. Det er hele poenget: en
+    // omnummerering kan da bare gi bom (tomt), aldri treff på feil sted.
+    // 2 desimaler ≈ 1,1 km; Open-Meteo har 1–11 km modelloppløsning.
+    locKey(lat, lng) {
+      return `${Number(lat).toFixed(2)},${Number(lng).toFixed(2)}`;
+    },
+
+    weatherKey(stop, date) {
+      return `${this.locKey(stop.lat, stop.lng)}|${date}`;
+    },
+
+    // Fingeravtrykk av alt som påvirker hvilke værdata vi trenger. Endres det, er cachen
+    // ugyldig. Stopp-ID er bevisst IKKE med — en ren omnummerering endrer ikke været.
+    weatherFingerprint() {
+      const parts = this.weatherTargets().map(s =>
+        `${this.locKey(s.lat, s.lng)}:${s.arrivalDate}:${s.departureDate || ''}`
+      );
+      parts.sort();
+      parts.push(`h=${this.weatherHours.join(',')}`);
+      return parts.join('|');
     },
 
     formatDateWithWeekday(dateStr) {
@@ -1856,33 +1908,30 @@ function ferieApp() {
       return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="${size}" height="${size}" style="display:inline-block;vertical-align:middle;flex-shrink:0;" role="img" aria-label="${title}"><title>${title}</title>${inner[cat]}</svg>`;
     },
 
-    getHourCode(stopId, dateStr, hour) {
-      const w = this.weather[stopId];
-      if (!w || !w.days) return null;
-      const day = w.days.find(d => d.date === dateStr);
-      if (!day) return null;
-      const v = day.hours[hour];
+    // VIKTIG: alle lesere under må røre this.weather FØR en eventuell tidlig return.
+    // Alpine registrerer avhengigheten først når egenskapen faktisk leses; returnerer en
+    // hjelper uten å ha lest den, blir cellen stående tom etter at hentingen er ferdig.
+    getDayEntry(stop, dateStr) {
+      const all = this.weather;
+      if (!stop || stop.lat == null || stop.lng == null || !dateStr) return null;
+      return all[this.weatherKey(stop, dateStr)] || null;
+    },
+
+    getHourCode(stop, dateStr, hour) {
+      const e = this.getDayEntry(stop, dateStr);
+      const v = (e && e.hours) ? e.hours[hour] : null;
       return (v === null || v === undefined) ? null : v;
     },
 
-    getMiddayCode(stopId, dateStr) {
-      return this.getHourCode(stopId, dateStr, '12');
-    },
-
-    getHourTemp(stopId, dateStr, hour) {
-      const w = this.weather[stopId];
-      if (!w || !w.days) return null;
-      const day = w.days.find(d => d.date === dateStr);
-      if (!day || !day.temps) return null;
-      const v = day.temps[hour];
+    getHourTemp(stop, dateStr, hour) {
+      const e = this.getDayEntry(stop, dateStr);
+      const v = (e && e.temps) ? e.temps[hour] : null;
       return (v === null || v === undefined) ? null : v;
     },
 
-    getDaily(stopId, dateStr) {
-      const w = this.weather[stopId];
-      if (!w || !w.days) return null;
-      const day = w.days.find(d => d.date === dateStr);
-      return (day && day.daily) ? day.daily : null;
+    getDaily(stop, dateStr) {
+      const e = this.getDayEntry(stop, dateStr);
+      return (e && e.daily) ? e.daily : null;
     },
 
     formatTemp(t) {
@@ -1904,7 +1953,7 @@ function ferieApp() {
       const dates = this.datesForStop(stop);
       if (dates.length === 0) return '';
       return dates.map(d => {
-        const day = this.getDaily(stop.id, d);
+        const day = this.getDaily(stop, d);
         const code = day ? day.code : null;
         const icon = this.weatherIconSvg(code, px || 18);
         const range = day ? this.formatTempRange(day.tMax, day.tMin) : ''; // allerede farget HTML
@@ -1913,20 +1962,31 @@ function ferieApp() {
       }).join('');
     },
 
-    weatherCellHtml(stopId, date, hour) {
-      const icon = this.weatherIconSvg(this.getHourCode(stopId, date, hour), 26);
-      const temp = this.formatTemp(this.getHourTemp(stopId, date, hour));
+    weatherCellHtml(stop, date, hour) {
+      const icon = this.weatherIconSvg(this.getHourCode(stop, date, hour), 26);
+      const temp = this.formatTemp(this.getHourTemp(stop, date, hour));
       const tempHtml = temp ? `<div class="text-[10px] text-charcoal/60 leading-none mt-0.5">${temp}</div>` : '';
       return `<div class="flex flex-col items-center">${icon}${tempHtml}</div>`;
     },
 
-    hasAnyForecast(stopId) {
-      const w = this.weather[stopId];
-      if (!w || !w.days || w.days.length === 0) return false;
-      return w.days.some(day =>
-        Object.values(day.hours).some(v => v !== null && v !== undefined)
-        || (day.daily && day.daily.code !== null && day.daily.code !== undefined)
-      );
+    hasAnyForecast(stop) {
+      const all = this.weather; // les før tidlig return (se kommentar over getDayEntry)
+      if (!stop) return false;
+      return this.datesForStop(stop).some(d => {
+        const e = all[this.weatherKey(stop, d)];
+        if (!e) return false;
+        return Object.values(e.hours || {}).some(v => v !== null && v !== undefined)
+          || (e.daily && e.daily.code !== null && e.daily.code !== undefined);
+      });
+    },
+
+    // Skiller «for langt fram i tid» fra «vi mangler data». Uten dette ville et hvilket som
+    // helst hull gitt teksten «kommer nærmere reisen» — også for datoer som ligger bak oss.
+    isBeyondForecastHorizon(stop) {
+      const dates = this.datesForStop(stop);
+      if (dates.length === 0) return false;
+      const end = this.forecastWindow().end;
+      return dates.every(d => d > end);
     },
 
     buildMockWeather() {
@@ -1954,134 +2014,125 @@ function ferieApp() {
         [17, 24, 26, 23, 19],
       ];
       const dailyCode = { '0':0,'1':1,'2':2,'3':3,'45':45,'51':51,'61':61,'63':63,'71':71,'73':73,'80':80,'95':95 };
+      // Samme flate (sted, dato)-nøkler som ekte data, og samme målfilter som hentingen.
       const out = {};
-      this.stops.forEach((stop, idx) => {
-        if (stop.isHome) return;
-        const dates = this.datesForStop(stop);
-        out[stop.id] = {
-          fetchedAt: Date.now(),
-          days: dates.map((date, di) => {
-            const pi = (idx + di) % samplePatterns.length;
-            const pattern = samplePatterns[pi];
-            const tpattern = tempPatterns[pi];
-            // Daglig totalvurdering: mest signifikant (høyeste) værkode + maks/min av timestemp
-            const codeVals = pattern.filter(v => v !== null && v !== undefined);
-            const tVals = tpattern.filter(v => v !== null && v !== undefined);
-            const dCode = codeVals.length ? dailyCode[String(Math.max(...codeVals))] ?? Math.max(...codeVals) : null;
-            return {
-              date,
-              hours: {
-                '09': pattern[0], '12': pattern[1], '15': pattern[2], '18': pattern[3], '21': pattern[4],
-              },
-              temps: {
-                '09': tpattern[0], '12': tpattern[1], '15': tpattern[2], '18': tpattern[3], '21': tpattern[4],
-              },
-              daily: {
-                code: dCode,
-                tMax: tVals.length ? Math.max(...tVals) : null,
-                tMin: tVals.length ? Math.min(...tVals) : null,
-              },
-            };
-          }),
-        };
+      this.weatherTargets().forEach((stop, idx) => {
+        this.datesForStop(stop).forEach((date, di) => {
+          const key = this.weatherKey(stop, date);
+          if (out[key]) return; // stopp som deler stedsbøtte deler også mock-oppføring
+          const pi = (idx + di) % samplePatterns.length;
+          const pattern = samplePatterns[pi];
+          const tpattern = tempPatterns[pi];
+          // Daglig totalvurdering: mest signifikant (høyeste) værkode + maks/min av timestemp
+          const codeVals = pattern.filter(v => v !== null && v !== undefined);
+          const tVals = tpattern.filter(v => v !== null && v !== undefined);
+          const dCode = codeVals.length ? dailyCode[String(Math.max(...codeVals))] ?? Math.max(...codeVals) : null;
+          out[key] = {
+            hours: this.weatherHours.reduce((o, h, i) => (o[h] = pattern[i] ?? null, o), {}),
+            temps: this.weatherHours.reduce((o, h, i) => (o[h] = tpattern[i] ?? null, o), {}),
+            daily: {
+              code: dCode,
+              tMax: tVals.length ? Math.max(...tVals) : null,
+              tMin: tVals.length ? Math.min(...tVals) : null,
+            },
+          };
+        });
       });
       return out;
     },
 
+    // Henter per unikt sted, ikke per stopp: stopp som deler stedsbøtte (f.eks. de to
+    // Billund-hotellene) deler ett kall. Datoene klippes til prognosevinduet allerede når
+    // gruppene bygges, slik at et gruppeintervall aldri kan bli videre enn API-et tillater.
     async fetchWeatherForAllStops() {
-      const out = {};
-      const targets = this.stops.filter(s => !s.isHome && s.lat && s.lng);
+      const win = this.forecastWindow();
+      const groups = new Map();
+      this.weatherTargets().forEach(stop => {
+        const key = this.locKey(stop.lat, stop.lng);
+        let g = groups.get(key);
+        if (!g) {
+          // Første stopp i bøtta bestemmer koordinatene som sendes — deterministisk.
+          g = { lat: stop.lat, lng: stop.lng, dates: new Set() };
+          groups.set(key, g);
+        }
+        this.datesForStop(stop).forEach(d => {
+          if (d >= win.start && d <= win.end) g.dates.add(d);
+        });
+      });
+
+      const list = [...groups.entries()].filter(([, g]) => g.dates.size > 0);
+      const entries = {};
       const results = await Promise.allSettled(
-        targets.map(stop => this.fetchWeatherForStop(stop))
+        list.map(([key, g]) => this.fetchWeatherForLocation(key, g))
       );
       results.forEach((res, i) => {
-        const stop = targets[i];
         if (res.status === 'fulfilled' && res.value) {
-          out[stop.id] = res.value;
+          Object.assign(entries, res.value);
         } else {
-          console.warn('Værdata feilet for', stop.name, res.reason);
-          out[stop.id] = { fetchedAt: Date.now(), days: [] };
+          console.warn('Værdata feilet for sted', list[i][0], res.reason);
         }
       });
-      return out;
+      return entries;
     },
 
-    async fetchWeatherForStop(stop) {
-      const dates = this.datesForStop(stop);
-      if (dates.length === 0) return { fetchedAt: Date.now(), days: [] };
-
-      // Open-Meteo støtter prognose ~16 dager fram. Hopp over kall som ligger utenfor.
-      const now = new Date();
-      const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-      const horizonEnd = new Date(today.getTime() + 16 * 86400000);
-      const stopStart = new Date(dates[0] + 'T00:00:00');
-      const stopEnd = new Date(dates[dates.length - 1] + 'T00:00:00');
-      if (stopStart > horizonEnd) {
-        return { fetchedAt: Date.now(), days: [] };
-      }
-      const pad = n => String(n).padStart(2, '0');
-      const fmt = d => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
-      // Hent også passerte reisedager: Open-Meteo forecast dekker ~92 dager tilbake.
-      // Klipp til trygg nedre grense (90 dager) for å unngå "out of allowed range"-feil.
-      const pastLimit = new Date(today.getTime() - 90 * 86400000);
-      const effStart = stopStart < pastLimit ? pastLimit : stopStart;
-      const startDate = fmt(effStart);
-      const endDate = stopEnd > horizonEnd ? fmt(horizonEnd) : fmt(stopEnd);
-
+    async fetchWeatherForLocation(key, group) {
+      const dates = [...group.dates].sort();
       const url = new URL('https://api.open-meteo.com/v1/forecast');
-      url.searchParams.set('latitude', stop.lat);
-      url.searchParams.set('longitude', stop.lng);
+      url.searchParams.set('latitude', group.lat);
+      url.searchParams.set('longitude', group.lng);
       url.searchParams.set('hourly', 'weathercode,temperature_2m');
       url.searchParams.set('daily', 'weather_code,temperature_2m_max,temperature_2m_min');
       url.searchParams.set('timezone', 'auto');
-      url.searchParams.set('start_date', startDate);
-      url.searchParams.set('end_date', endDate);
+      url.searchParams.set('start_date', dates[0]);
+      url.searchParams.set('end_date', dates[dates.length - 1]);
 
       const res = await fetch(url.toString());
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const json = await res.json();
-      const times = (json.hourly && json.hourly.time) || [];
-      const codes = (json.hourly && json.hourly.weathercode) || [];
-      const temps = (json.hourly && json.hourly.temperature_2m) || [];
+
+      // Materialiser en oppføring for hver FORESPURTE dato, uansett hva API-et returnerte.
+      // «Oppføring finnes, men er tom» og «oppføring mangler» må forbli to ulike tilstander.
+      const blank = () => this.weatherHours.reduce((o, h) => (o[h] = null, o), {});
+      const out = {};
+      dates.forEach(d => {
+        out[`${key}|${d}`] = { hours: blank(), temps: blank(), daily: { code: null, tMax: null, tMin: null } };
+      });
 
       // Daglig totalvurdering (mest signifikant værkode + maks/min-temp)
-      const dailyByDate = {};
       const dTimes = (json.daily && json.daily.time) || [];
       const dCodes = (json.daily && json.daily.weather_code) || [];
       const dMax = (json.daily && json.daily.temperature_2m_max) || [];
       const dMin = (json.daily && json.daily.temperature_2m_min) || [];
       dTimes.forEach((t, i) => {
-        dailyByDate[t] = {
+        const e = out[`${key}|${t}`];
+        if (!e) return;
+        e.daily = {
           code: dCodes[i] === undefined ? null : dCodes[i],
           tMax: dMax[i] === undefined ? null : dMax[i],
           tMin: dMin[i] === undefined ? null : dMin[i],
         };
       });
 
-      const byDate = {};
-      dates.forEach(d => {
-        byDate[d] = {
-          date: d,
-          hours: { '09': null, '12': null, '15': null, '18': null, '21': null },
-          temps: { '09': null, '12': null, '15': null, '18': null, '21': null },
-          daily: dailyByDate[d] || { code: null, tMax: null, tMin: null },
-        };
-      });
+      const times = (json.hourly && json.hourly.time) || [];
+      const codes = (json.hourly && json.hourly.weathercode) || [];
+      const temps = (json.hourly && json.hourly.temperature_2m) || [];
       times.forEach((t, i) => {
-        const date = t.slice(0, 10);
+        const e = out[`${key}|${t.slice(0, 10)}`];
         const hour = t.slice(11, 13);
-        if (byDate[date] && this.weatherHours.includes(hour)) {
-          byDate[date].hours[hour] = codes[i];
-          byDate[date].temps[hour] = (temps[i] === undefined ? null : temps[i]);
-        }
+        if (!e || !this.weatherHours.includes(hour)) return;
+        e.hours[hour] = codes[i] === undefined ? null : codes[i];
+        e.temps[hour] = temps[i] === undefined ? null : temps[i];
       });
-      return { fetchedAt: Date.now(), days: dates.map(d => byDate[d]) };
+      return out;
     },
 
-    saveWeatherCache(data) {
+    saveWeatherCache(entries) {
       try {
         localStorage.setItem(this.weatherStorageKey, JSON.stringify({
-          fetchedAt: Date.now(), data,
+          schema: this.weatherSchema,
+          fingerprint: this.weatherFingerprint(),
+          fetchedAt: Date.now(),
+          entries,
         }));
       } catch (e) { /* ignorer kvotefeil */ }
     },
@@ -2090,31 +2141,50 @@ function ferieApp() {
       try {
         const raw = localStorage.getItem(this.weatherStorageKey);
         if (!raw) return null;
-        return JSON.parse(raw);
+        const p = JSON.parse(raw);
+        if (!p || typeof p !== 'object') return null;
+        // Formendring (schema) eller endret reiseplan (fingerprint) gjør cachen ugyldig.
+        // Fingeravtrykket er det som fanger den feilklassen som har bitt oss fem ganger:
+        // nye datoer, flyttede koordinater, splittede stopp. Ingen manuell nøkkelbump.
+        if (p.schema !== this.weatherSchema) return null;
+        if (p.fingerprint !== this.weatherFingerprint()) return null;
+        if (!p.entries || typeof p.entries !== 'object') return null;
+        return p;
       } catch (e) { return null; }
     },
 
+    // Rydder bort cache-nøkler fra tidligere versjoner (v2–v5) som ellers blir liggende
+    // for alltid i localStorage på hver enhet.
+    purgeLegacyWeatherCaches() {
+      try {
+        this.weatherLegacyKeys.forEach(k => localStorage.removeItem(k));
+      } catch (e) { /* ignorer */ }
+    },
+
     async loadWeather() {
+      this.purgeLegacyWeatherCaches();
       if (this.weatherMock) {
         this.weather = this.buildMockWeather();
+        this.refreshMapPopups();
         return;
       }
       const cached = this.loadWeatherCache();
-      const fresh = cached && (Date.now() - cached.fetchedAt) < this.weatherTtlMs;
-      if (fresh) {
-        this.weather = cached.data;
+      if (cached && (Date.now() - cached.fetchedAt) < this.weatherTtlMs) {
+        this.weather = cached.entries;
+        this.refreshMapPopups();
         return;
       }
       try {
-        const data = await this.fetchWeatherForAllStops();
-        this.weather = data;
-        this.saveWeatherCache(data);
-        // Oppdater popups så strip vises uten reload
-        this.refreshMapPopups();
+        // Hel utskifting, ikke fletting: da svarer den ene fetchedAt-verdien for alle
+        // oppføringer. Et sted som feiler blir tomt (ærlig), ikke gammelt-men-friskt-merket.
+        const entries = await this.fetchWeatherForAllStops();
+        this.weather = entries;
+        this.saveWeatherCache(entries);
       } catch (e) {
         console.warn('Værhenting feilet, bruker eventuell gammel cache', e);
-        if (cached) this.weather = cached.data;
+        if (cached) this.weather = cached.entries;
       }
+      this.refreshMapPopups();
     },
 
     refreshMapPopups() {
@@ -2156,9 +2226,11 @@ function ferieApp() {
       const dateInfo = stop.departureDate
         ? `${stop.arrivalDate.slice(5)} – ${stop.departureDate.slice(5)} &middot; ${stop.nights} netter`
         : stop.arrivalDate.slice(5);
-      const strip = this.hasAnyForecast(stop.id)
+      const strip = this.hasAnyForecast(stop)
         ? `<div style="display:flex;flex-wrap:wrap;gap:3px;margin:6px 0 2px;" aria-label="Værvarsel for ${stop.name}">${this.dayStripHtml(stop, 18)}</div>`
-        : `<div style="margin:6px 0 2px;font-size:11px;color:#999;font-style:italic;">Værvarsel kommer nærmere reisen</div>`;
+        : `<div style="margin:6px 0 2px;font-size:11px;color:#999;font-style:italic;">${
+            this.isBeyondForecastHorizon(stop) ? 'Værvarsel kommer nærmere reisen' : 'Værvarsel ikke tilgjengelig'
+          }</div>`;
       const titleLink = stop.isHome
         ? `<strong>${stop.name}</strong> (${stop.countryCode})`
         : `<a href="#stop-${stop.id}" data-stop-id="${stop.id}" class="popup-stop-link" style="color:#1B4F72;text-decoration:none;font-weight:bold;border-bottom:1px dotted #1B4F72;">${stop.name}</a> (${stop.countryCode})`;
