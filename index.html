@@ -2065,13 +2065,22 @@ function ferieApp() {
       const results = await Promise.allSettled(
         list.map(([key, g]) => this.fetchWeatherForLocation(key, g))
       );
+      let anySucceeded = false;
       results.forEach((res, i) => {
         if (res.status === 'fulfilled' && res.value) {
           Object.assign(entries, res.value);
+          anySucceeded = true;
         } else {
           console.warn('Værdata feilet for sted', list[i][0], res.reason);
         }
       });
+      // Alle steder feilet (f.eks. API nede): kast i stedet for å returnere et tomt
+      // resultat. Ellers ville loadWeather() lest det som en vellykket henting og
+      // cachet det tomme resultatet som "friskt" i en hel TTL-periode, og dermed
+      // overskrevet en eventuell god, eldre cache med blanke data.
+      if (list.length > 0 && !anySucceeded) {
+        throw new Error('Alle værkall feilet');
+      }
       return entries;
     },
 
